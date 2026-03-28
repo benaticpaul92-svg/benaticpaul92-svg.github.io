@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JEBN Engineering | Pool Hydraulic Design & Landscape Consulting</title>
+  <meta name="description" content="Remote pool hydraulic design, pump room layouts, plumbing schematics, landscape drawings and BOQ for contractors in the USA, Australia and Canada.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: #1a1a2e; background: #f9f9f9; }
+
+    /* NAV */
+    nav { background: #0d1b2a; padding: 18px 48px; display: flex; align-items: center; justify-content: space-between; }
+    nav .logo { color: #fff; font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; }
+    nav .logo span { color: #4fc3f7; }
+    nav a { color: #cdd; text-decoration: none; margin-left: 28px; font-size: 0.92rem; transition: color .2s; }
+    nav a:hover { color: #4fc3f7; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #0d1b2a 0%, #1a3a5c 100%); color: #fff; padding: 90px 48px 80px; }
+    .hero-inner { max-width: 900px; margin: 0 auto; }
+    .hero h1 { font-size: 2.6rem; line-height: 1.2; margin-bottom: 20px; }
+    .hero h1 span { color: #4fc3f7; }
+    .hero p { font-size: 1.1rem; color: #b0c4d8; max-width: 620px; margin-bottom: 36px; line-height: 1.7; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+    .tag { background: rgba(79,195,247,0.15); color: #4fc3f7; border: 1px solid rgba(79,195,247,0.3); border-radius: 20px; padding: 6px 16px; font-size: 0.85rem; }
+    .btn { display: inline-block; background: #4fc3f7; color: #0d1b2a; padding: 14px 32px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 1rem; transition: background .2s; }
+    .btn:hover { background: #81d4fa; }
+    .btn-outline { background: transparent; color: #4fc3f7; border: 2px solid #4fc3f7; margin-left: 14px; }
+    .btn-outline:hover { background: #4fc3f7; color: #0d1b2a; }
+
+    /* SECTION */
+    section { padding: 72px 48px; }
+    section:nth-child(even) { background: #fff; }
+    .section-inner { max-width: 960px; margin: 0 auto; }
+    h2 { font-size: 1.9rem; margin-bottom: 12px; color: #0d1b2a; }
+    .sub { color: #5a7a96; margin-bottom: 44px; font-size: 1rem; }
+
+    /* SERVICES GRID */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .card { background: #f0f6fb; border-radius: 10px; padding: 28px 24px; border-top: 4px solid #4fc3f7; }
+    .card h3 { font-size: 1.05rem; margin-bottom: 10px; color: #0d1b2a; }
+    .card p { color: #4a6278; font-size: 0.9rem; line-height: 1.6; }
+    .card .price { margin-top: 14px; font-weight: 700; color: #1a3a5c; font-size: 0.95rem; }
+
+    /* WHY */
+    .why-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .why-item { display: flex; gap: 14px; align-items: flex-start; }
+    .why-item .icon { font-size: 1.6rem; flex-shrink: 0; }
+    .why-item h4 { font-size: 0.95rem; font-weight: 700; color: #0d1b2a; margin-bottom: 4px; }
+    .why-item p { font-size: 0.88rem; color: #5a7a96; line-height: 1.5; }
+
+    /* CONTACT */
+    .contact-box { background: linear-gradient(135deg, #0d1b2a, #1a3a5c); color: #fff; border-radius: 12px; padding: 48px; text-align: center; }
+    .contact-box h2 { color: #fff; margin-bottom: 12px; }
+    .contact-box p { color: #b0c4d8; margin-bottom: 28px; }
+    .contact-box a { color: #4fc3f7; text-decoration: none; }
+
+    /* FOOTER */
+    footer { background: #0d1b2a; color: #6a8a9a; text-align: center; padding: 24px 48px; font-size: 0.85rem; }
+
+    @media(max-width: 600px) {
+      nav { padding: 16px 20px; flex-direction: column; gap: 12px; }
+      .hero { padding: 56px 20px 48px; }
+      .hero h1 { font-size: 1.8rem; }
+      section { padding: 48px 20px; }
+      .contact-box { padding: 32px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">JEBN <span>Engineering</span></div>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Pool & Landscape Engineering<br><span>Built for US Contractors</span></h1>
+    <p>Remote hydraulic design, pump room layouts, plumbing schematics, landscape plans and full BOQ packages — delivered fast, at 30–40% less than local US engineering rates.</p>
+    <div class="hero-tags">
+      <span class="tag">Pool Hydraulic Design</span>
+      <span class="tag">Pump Room Layouts</span>
+      <span class="tag">Plumbing Schematics</span>
+      <span class="tag">Landscape Master Plans</span>
+      <span class="tag">Irrigation Design</span>
+      <span class="tag">BOQ &amp; Specifications</span>
+    </div>
+    <a href="#contact" class="btn">Get a Free Quote</a>
+    <a href="#services" class="btn btn-outline">See Services</a>
+  </div>
+</div>
+
+<section id="services">
+  <div class="section-inner">
+    <h2>What I Deliver</h2>
+    <p class="sub">Complete technical drawing packages so your team can pull permits and build with confidence.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Pool Hydraulic Design Package</h3>
+        <p>Hydraulic calculations, pump room layout and full plumbing schematic — everything needed for permit submission.</p>
+        <div class="price">$350 – $500 per project</div>
+      </div>
+      <div class="card">
+        <h3>Full Pool Drawing Set</h3>
+        <p>Hydraulic package plus electrical layout, plumbing details and construction notes.</p>
+        <div class="price">$600 – $900 per project</div>
+      </div>
+      <div class="card">
+        <h3>Landscape Master Plan</h3>
+        <p>Site plan, softscape design, hardscape layout — ready for contractor execution.</p>
+        <div class="price">$400 – $700 per project</div>
+      </div>
+      <div class="card">
+        <h3>Irrigation Design</h3>
+        <p>Full irrigation layout with specifications and zone schedules.</p>
+        <div class="price">$250 – $400 per project</div>
+      </div>
+      <div class="card">
+        <h3>BOQ + Specification</h3>
+        <p>Complete bill of quantities with material specs — accurate takeoffs for bidding and procurement.</p>
+        <div class="price">$200 – $350 per project</div>
+      </div>
+      <div class="card">
+        <h3>Full Project Package</h3>
+        <p>All drawings, BOQ and full technical specifications in one complete deliverable.</p>
+        <div class="price">$1,200 – $2,000 per project</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="section-inner">
+    <h2>Why Contractors Choose JEBN</h2>
+    <p class="sub">10+ years delivering for clients in the USA, Australia and Canada via Upwork and direct engagements.</p>
+    <div class="why-list">
+      <div class="why-item">
+        <div class="icon">💰</div>
+        <div><h4>30–40% Below Local Rates</h4><p>Same quality drawings at a fraction of what US engineering firms charge.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="icon">⚡</div>
+        <div><h4>Fast Turnaround</h4><p>Most packages delivered within 3–5 business days. Rush turnaround available.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="icon">🏊</div>
+        <div><h4>Pool + Landscape Specialist</h4><p>A rare combination — hydraulic engineering and landscape design under one roof.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="icon">🔄</div>
+        <div><h4>Monthly Retainer Option</h4><p>Send work as it comes without new agreements each time. From $400/month.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="icon">📋</div>
+        <div><h4>Permit-Ready Drawings</h4><p>All packages formatted and detailed for smooth permit submissions.</p></div>
+      </div>
+      <div class="why-item">
+        <div class="icon">🌎</div>
+        <div><h4>Remote, Reliable</h4><p>Fully remote process — send your brief, receive professional drawings via email.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-box">
+      <h2>Ready to Get Started?</h2>
+      <p>Send your project brief and I'll respond within a few hours with scope and pricing.</p>
+      <a href="mailto:martin@jebengineering.com" class="btn">Email martin@jebengineering.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 JEBN Engineering &nbsp;|&nbsp; Remote Pool &amp; Landscape Engineering &nbsp;|&nbsp; <a href="mailto:martin@jebengineering.com" style="color:#4fc3f7;">martin@jebengineering.com</a>
+</footer>
+
+</body>
+</html>
