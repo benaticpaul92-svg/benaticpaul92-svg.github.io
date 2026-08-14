@@ -1,186 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JEBN Engineering | Pool Hydraulic Design & Landscape Consulting</title>
-  <meta name="description" content="Remote pool hydraulic design, pump room layouts, plumbing schematics, landscape drawings and BOQ for contractors in the USA, Australia and Canada.">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Arial, sans-serif; color: #1a1a2e; background: #f9f9f9; }
-
-    /* NAV */
-    nav { background: #0d1b2a; padding: 18px 48px; display: flex; align-items: center; justify-content: space-between; }
-    nav .logo { color: #fff; font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; }
-    nav .logo span { color: #4fc3f7; }
-    nav a { color: #cdd; text-decoration: none; margin-left: 28px; font-size: 0.92rem; transition: color .2s; }
-    nav a:hover { color: #4fc3f7; }
-
-    /* HERO */
-    .hero { background: linear-gradient(135deg, #0d1b2a 0%, #1a3a5c 100%); color: #fff; padding: 90px 48px 80px; }
-    .hero-inner { max-width: 900px; margin: 0 auto; }
-    .hero h1 { font-size: 2.6rem; line-height: 1.2; margin-bottom: 20px; }
-    .hero h1 span { color: #4fc3f7; }
-    .hero p { font-size: 1.1rem; color: #b0c4d8; max-width: 620px; margin-bottom: 36px; line-height: 1.7; }
-    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
-    .tag { background: rgba(79,195,247,0.15); color: #4fc3f7; border: 1px solid rgba(79,195,247,0.3); border-radius: 20px; padding: 6px 16px; font-size: 0.85rem; }
-    .btn { display: inline-block; background: #4fc3f7; color: #0d1b2a; padding: 14px 32px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 1rem; transition: background .2s; }
-    .btn:hover { background: #81d4fa; }
-    .btn-outline { background: transparent; color: #4fc3f7; border: 2px solid #4fc3f7; margin-left: 14px; }
-    .btn-outline:hover { background: #4fc3f7; color: #0d1b2a; }
-
-    /* SECTION */
-    section { padding: 72px 48px; }
-    section:nth-child(even) { background: #fff; }
-    .section-inner { max-width: 960px; margin: 0 auto; }
-    h2 { font-size: 1.9rem; margin-bottom: 12px; color: #0d1b2a; }
-    .sub { color: #5a7a96; margin-bottom: 44px; font-size: 1rem; }
-
-    /* SERVICES GRID */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-    .card { background: #f0f6fb; border-radius: 10px; padding: 28px 24px; border-top: 4px solid #4fc3f7; }
-    .card h3 { font-size: 1.05rem; margin-bottom: 10px; color: #0d1b2a; }
-    .card p { color: #4a6278; font-size: 0.9rem; line-height: 1.6; }
-    .card .price { margin-top: 14px; font-weight: 700; color: #1a3a5c; font-size: 0.95rem; }
-
-    /* WHY */
-    .why-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .why-item { display: flex; gap: 14px; align-items: flex-start; }
-    .why-item .icon { font-size: 1.6rem; flex-shrink: 0; }
-    .why-item h4 { font-size: 0.95rem; font-weight: 700; color: #0d1b2a; margin-bottom: 4px; }
-    .why-item p { font-size: 0.88rem; color: #5a7a96; line-height: 1.5; }
-
-    /* CONTACT */
-    .contact-box { background: linear-gradient(135deg, #0d1b2a, #1a3a5c); color: #fff; border-radius: 12px; padding: 48px; text-align: center; }
-    .contact-box h2 { color: #fff; margin-bottom: 12px; }
-    .contact-box p { color: #b0c4d8; margin-bottom: 28px; }
-    .contact-box a { color: #4fc3f7; text-decoration: none; }
-
-    /* FOOTER */
-    footer { background: #0d1b2a; color: #6a8a9a; text-align: center; padding: 24px 48px; font-size: 0.85rem; }
-
-    @media(max-width: 600px) {
-      nav { padding: 16px 20px; flex-direction: column; gap: 12px; }
-      .hero { padding: 56px 20px 48px; }
-      .hero h1 { font-size: 1.8rem; }
-      section { padding: 48px 20px; }
-      .contact-box { padding: 32px 20px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pool Engineering Drawings | PE-Sealed in All 50 States</title>
+<meta name="description" content="Complete pool engineering drawing sets for US contractors — structural, hydraulic, MEP and shop drawings, sealed by a Professional Engineer licensed in your state. Permit-ready in five days.">
+<link rel="canonical" href="https://www.jebnengineering.com/">
+<meta name="author" content="JEBN Engineering Studio">
+<meta property="og:title" content="Pool Engineering Drawings | PE-Sealed in All 50 States">
+<meta property="og:description" content="Permit-ready pool drawing sets for US contractors, sealed by a Professional Engineer licensed in your state.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.jebnengineering.com/">
+<meta property="og:image" content="https://www.jebnengineering.com/images/pool-beachfront-villa.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pool Engineering Drawings | PE-Sealed in All 50 States">
+<meta name="twitter:description" content="Permit-ready pool drawing sets for US contractors, sealed by a licensed PE in your state.">
+<meta name="twitter:image" content="https://www.jebnengineering.com/images/pool-beachfront-villa.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@graph":[
+  {
+   "@type":"Organization",
+   "@id":"https://www.jebnengineering.com/#org",
+   "name":"JEBN Engineering Studio",
+   "url":"https://www.jebnengineering.com/",
+   "email":"martin@jebnengineering.com",
+   "description":"Pool engineering drawing packages for US contractors — structural, hydraulic, MEP and shop drawings, sealed by licensed Professional Engineers.",
+   "areaServed":{"@type":"Country","name":"United States"}
+  },
+  {
+   "@type":"Service",
+   "name":"PE-Sealed Pool Engineering Drawings",
+   "serviceType":"Pool engineering and drafting",
+   "provider":{"@id":"https://www.jebnengineering.com/#org"},
+   "areaServed":{"@type":"Country","name":"United States"},
+   "description":"Complete pool drawing packages — structural, hydraulic, MEP, barrier compliance and shop drawings — sealed by a Professional Engineer licensed in the project state."
+  },
+  {
+   "@type":"FAQPage",
+   "mainEntity":[
+    {"@type":"Question","name":"Are your drawings actually sealed, or do I need to find my own engineer?","acceptedAnswer":{"@type":"Answer","text":"Sealed. A Professional Engineer licensed in your state reviews the package, takes responsible charge, and applies their seal. You receive a submission-ready set — you don't need to source a local engineer separately."}},
+    {"@type":"Question","name":"Which states can you seal in?","acceptedAnswer":{"@type":"Answer","text":"All 50, through licensed engineers in each state. Florida, Texas, Arizona and California carry dedicated code coverage given the volume of pool work in those markets."}},
+    {"@type":"Question","name":"How long does sealing add to turnaround?","acceptedAnswer":{"@type":"Answer","text":"Typically two to three business days on top of drafting. Standard residential sets run about five business days end to end from approved markup."}},
+    {"@type":"Question","name":"What if plan review comes back with comments?","acceptedAnswer":{"@type":"Answer","text":"We address them and reissue the sealed set. Revisions arising from plan-review comments are included in the original scope."}},
+    {"@type":"Question","name":"Who is legally responsible for the sealed drawings?","acceptedAnswer":{"@type":"Answer","text":"The sealing engineer. They review the package, take responsible charge under their state licence, and carry professional liability for the sealed documents. JEBN produces the drawings and calculations that go into that review."}},
+    {"@type":"Question","name":"Do you provide digital or wet seals?","acceptedAnswer":{"@type":"Answer","text":"Digital seals where the jurisdiction accepts them, which is now most. Wet-sealed hard copies are available on request."}}
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
-<nav>
-  <div class="logo">JEBN <span>Engineering</span></div>
-  <div>
-    <a href="#services">Services</a>
-    <a href="#why">Why Us</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+<!-- ============ GATEWAY HERO (original split, now scrollable) ============ -->
+<div class="gw-scope">
+  <div class="choose-hint" style="top:6.2rem">Choose your studio</div>
 
-<div class="hero">
-  <div class="hero-inner">
-    <h1>Pool & Landscape Engineering<br><span>Built for US Contractors</span></h1>
-    <p>Remote hydraulic design, pump room layouts, plumbing schematics, landscape plans and full BOQ packages — delivered fast, at 30–40% less than local US engineering rates.</p>
-    <div class="hero-tags">
-      <span class="tag">Pool Hydraulic Design</span>
-      <span class="tag">Pump Room Layouts</span>
-      <span class="tag">Plumbing Schematics</span>
-      <span class="tag">Landscape Master Plans</span>
-      <span class="tag">Irrigation Design</span>
-      <span class="tag">BOQ &amp; Specifications</span>
-    </div>
-    <a href="#contact" class="btn">Get a Free Quote</a>
-    <a href="#services" class="btn btn-outline">See Services</a>
+  <div class="gateway">
+    <a aria-label="Enter Pool Engineering" class="panel panel-pool" href="/pool">
+      <div class="panel-content">
+        <span class="panel-eyebrow">01 — Pools</span>
+        <div class="panel-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 30 H66 V58 H14 Z" stroke="currentColor" stroke-width="2" opacity="0.9"/>
+            <path d="M14 44 H66" stroke="#c4a35a" stroke-width="1.5" stroke-dasharray="5 5"/>
+            <path d="M10 64 q5 -5 10 0 t10 0 t10 0 t10 0 t10 0" stroke="#c4a35a" stroke-width="2" fill="none"/>
+            <circle cx="28" cy="50" r="6" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M28 45 V55 M23 50 H33" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+        </div>
+        <h2>Pool Engineering</h2>
+        <p>Remote hydraulic design, full drawing sets &amp; engineering for pool contractors.</p>
+        <span class="panel-proof">10+ years &middot; clients in the USA, UK &amp; Canada</span>
+        <span class="enter">Enter Studio <span class="gw-arrow">&rarr;</span></span>
+      </div>
+    </a>
+    <a aria-label="Enter Landscape Design" class="panel panel-land" href="/landscape">
+      <div class="panel-content">
+        <span class="panel-eyebrow">02 — Landscape</span>
+        <div class="panel-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 64 V36" stroke="currentColor" stroke-width="2"/>
+            <path d="M40 42 C40 26 26 20 16 20 C16 36 28 42 40 42Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M40 36 C40 22 53 17 63 17 C63 31 51 36 40 36Z" stroke="#8a9a64" stroke-width="2"/>
+            <path d="M26 64 H54" stroke="#c4a35a" stroke-width="2"/>
+          </svg>
+        </div>
+        <h2>Landscape Studio</h2>
+        <p>Hardscape, softscape &amp; planting — climate-adaptive design, drawings worldwide.</p>
+        <span class="panel-proof">Private villas to 40-acre commercial sites</span>
+        <span class="enter">Enter Studio <span class="gw-arrow">&rarr;</span></span>
+      </div>
+    </a>
+  </div>
+
+  <div class="scroll-cue">PE-sealed in all 50 states<span></span></div>
+
+  <div class="gateway-foot">
+    <span>USA, UK &amp; Worldwide</span>
+    <span class="dot"></span>
+    <a href="mailto:martin@jebnengineering.com">martin@jebnengineering.com</a>
   </div>
 </div>
 
+<!-- ============ STICKY HEADER (appears past the hero) ============ -->
+<header id="siteHeader">
+  <div class="header-container">
+    <a aria-label="JEBN Engineering Studio home" class="logo" href="/">
+      <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="16" height="16" fill="#c4a35a" opacity="0.85"/>
+        <rect x="20" y="4" width="16" height="16" fill="#14233a"/>
+        <rect x="4" y="20" width="16" height="16" fill="#14233a"/>
+        <rect x="20" y="20" width="16" height="16" fill="#c4a35a" opacity="0.85"/>
+        <path d="M10 10L30 30" stroke="#8a8578" stroke-width="1.5" opacity="0.6"/>
+      </svg>
+      <div>
+        <div class="logo-text">JEBN</div>
+        <div class="logo-subtext">Engineering Studio</div>
+      </div>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav id="navMenu">
+      <a href="/services/pe-stamped-pool-plans">PE-Sealed Plans</a>
+      <a href="#services">Services</a>
+      <a href="#states">States</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-switch" href="/pool">Pool Studio &#8599;</a>
+      <a href="#contact" class="nav-cta">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ INTRO / H1 ============ -->
+<section id="intro">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">For US Pool Contractors</span>
+      <h1>Pool Engineering Drawings, Sealed for Permit in Your State</h1>
+      <p class="lead">Complete drawing sets — structural, hydraulic, MEP and shop drawings — produced to your state's code and sealed by a licensed Professional Engineer. One deliverable, ready to submit, not a set of drawings and a separate problem to solve.</p>
+    </div>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn btn-primary">Get a Sealed Plan Quote</a>
+      <a href="/services/pe-stamped-pool-plans" class="btn btn-secondary">How Sealing Works</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PE SEALING BAND ============ -->
+<section class="seal-band" id="sealing">
+  <div class="container seal-layout">
+    <div>
+      <span class="eyebrow">The Permit Bottleneck</span>
+      <h2>Plans sealed by a licensed engineer in your state</h2>
+      <p>Most permit offices will not accept a pool plan set without a professional engineer's seal. That requirement is where a lot of contractors lose two or three weeks — chasing down a local engineer, waiting on their queue, then paying a premium for a review of drawings someone else already produced.</p>
+      <p>We close that gap. JEBN produces your complete drawing package, and a Professional Engineer licensed in the state of record reviews it, takes responsible charge, and applies their seal and signature.</p>
+      <p style="margin-top:1.8rem"><a href="/services/pe-stamped-pool-plans" class="btn btn-secondary">See How It Works</a></p>
+    </div>
+    <div>
+      <span class="eyebrow">From Markup to Sealed Set</span>
+      <ul class="seal-steps">
+        <li><b>01</b><span>Send your brief — sketch, markup, survey or site plan. Scope and code path confirmed within 24 hours.</span></li>
+        <li><b>02</b><span>We draft the full set to the governing code for your state and county.</span></li>
+        <li><b>03</b><span>A Professional Engineer licensed in your state reviews, takes responsible charge, and seals.</span></li>
+        <li><b>04</b><span>You submit. Revisions from plan-review comments are included.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
 <section id="services">
-  <div class="section-inner">
-    <h2>What I Deliver</h2>
-    <p class="sub">Complete technical drawing packages so your team can pull permits and build with confidence.</p>
-    <div class="grid">
-      <div class="card">
-        <h3>Pool Hydraulic Design Package</h3>
-        <p>Hydraulic calculations, pump room layout and full plumbing schematic — everything needed for permit submission.</p>
-        <div class="price">$350 – $500 per project</div>
-      </div>
-      <div class="card">
-        <h3>Full Pool Drawing Set</h3>
-        <p>Hydraulic package plus electrical layout, plumbing details and construction notes.</p>
-        <div class="price">$600 – $900 per project</div>
-      </div>
-      <div class="card">
-        <h3>Landscape Master Plan</h3>
-        <p>Site plan, softscape design, hardscape layout — ready for contractor execution.</p>
-        <div class="price">$400 – $700 per project</div>
-      </div>
-      <div class="card">
-        <h3>Irrigation Design</h3>
-        <p>Full irrigation layout with specifications and zone schedules.</p>
-        <div class="price">$250 – $400 per project</div>
-      </div>
-      <div class="card">
-        <h3>BOQ + Specification</h3>
-        <p>Complete bill of quantities with material specs — accurate takeoffs for bidding and procurement.</p>
-        <div class="price">$200 – $350 per project</div>
-      </div>
-      <div class="card">
-        <h3>Full Project Package</h3>
-        <p>All drawings, BOQ and full technical specifications in one complete deliverable.</p>
-        <div class="price">$1,200 – $2,000 per project</div>
-      </div>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What We Produce</span>
+      <h2>Drawing packages built for permit review</h2>
+      <p>Every set is produced to the governing code for your jurisdiction, with calculations documented so plan review has nothing to send back.</p>
+    </div>
+    <div class="services-grid">
+      <a class="service-card" href="/services/pe-stamped-pool-plans">
+        <span class="service-num">01</span>
+        <h3>PE-Sealed Pool Plans</h3>
+        <p>Full sets reviewed and sealed by a Professional Engineer licensed in your state, ready for permit submission.</p>
+      </a>
+      <a class="service-card" href="/services/pool-structural-engineering">
+        <span class="service-num">02</span>
+        <h3>Structural Engineering</h3>
+        <p>Shell design, reinforcement schedules, soil-bearing assumptions and details to the governing code.</p>
+      </a>
+      <a class="service-card" href="/services/pool-hydraulic-design">
+        <span class="service-num">03</span>
+        <h3>Hydraulic Design</h3>
+        <p>Pipe sizing, velocity compliance, TDH calculations, equipment and pump-room schematics.</p>
+      </a>
+      <a class="service-card" href="/services/pool-permit-drawings">
+        <span class="service-num">04</span>
+        <h3>Permit Drawing Sets</h3>
+        <p>Site plans, setbacks, barrier and safety compliance packaged to your county's submittal checklist.</p>
+      </a>
+      <a class="service-card" href="/services/pool-shop-drawings">
+        <span class="service-num">05</span>
+        <h3>Shop Drawings</h3>
+        <p>Fabrication and installation detail for tile, coping, gutters, steel and equipment sets.</p>
+      </a>
+      <a class="service-card" href="/services/outsourced-pool-drafting">
+        <span class="service-num">06</span>
+        <h3>Overflow &amp; White-Label Drafting</h3>
+        <p>Capacity for builders whose in-house drafting is backed up. Delivered under your title block.</p>
+      </a>
     </div>
   </div>
 </section>
 
-<section id="why">
-  <div class="section-inner">
-    <h2>Why Contractors Choose JEBN</h2>
-    <p class="sub">10+ years delivering for clients in the USA, Australia and Canada via Upwork and direct engagements.</p>
-    <div class="why-list">
-      <div class="why-item">
-        <div class="icon">💰</div>
-        <div><h4>30–40% Below Local Rates</h4><p>Same quality drawings at a fraction of what US engineering firms charge.</p></div>
-      </div>
-      <div class="why-item">
-        <div class="icon">⚡</div>
-        <div><h4>Fast Turnaround</h4><p>Most packages delivered within 3–5 business days. Rush turnaround available.</p></div>
-      </div>
-      <div class="why-item">
-        <div class="icon">🏊</div>
-        <div><h4>Pool + Landscape Specialist</h4><p>A rare combination — hydraulic engineering and landscape design under one roof.</p></div>
-      </div>
-      <div class="why-item">
-        <div class="icon">🔄</div>
-        <div><h4>Monthly Retainer Option</h4><p>Send work as it comes without new agreements each time. From $400/month.</p></div>
-      </div>
-      <div class="why-item">
-        <div class="icon">📋</div>
-        <div><h4>Permit-Ready Drawings</h4><p>All packages formatted and detailed for smooth permit submissions.</p></div>
-      </div>
-      <div class="why-item">
-        <div class="icon">🌎</div>
-        <div><h4>Remote, Reliable</h4><p>Fully remote process — send your brief, receive professional drawings via email.</p></div>
-      </div>
+<!-- ============ STATES ============ -->
+<section id="states">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Coverage</span>
+      <h2>Sealed for submission nationwide</h2>
+      <p>Licensed engineers in all 50 states, with dedicated code coverage in the four largest pool markets.</p>
+    </div>
+    <div class="state-grid">
+      <a class="state-card" href="/states/florida"><h3>Florida</h3><p>Florida Building Code including HVHZ for Miami-Dade and Broward. Wind loads to 180 mph, Environmental Resource Permit support, and 64E-9 approval for public pools.</p></a>
+      <a class="state-card" href="/states/texas"><h3>Texas</h3><p>IRC-adopted municipal codes, TDLR and DSHS review for public pools, SWPPP documentation, and city plan-review checklists.</p></a>
+      <a class="state-card" href="/states/arizona"><h3>Arizona</h3><p>ARS §36-1681 barrier and enclosure compliance, ROC classification requirements, and Phoenix and Tucson site-plan standards.</p></a>
+      <a class="state-card" href="/states/california"><h3>California</h3><p>Swimming Pool Safety Act and Residential Code Appendix V, Title 22 and CBC Chapter 31B, and VGB suction-outlet compliance.</p></a>
+    </div>
+    <p class="portfolio-note" style="margin-top:2rem">Building outside these four? Send the jurisdiction and we'll confirm the code path and sealing engineer before you commit.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Questions</span>
+      <h2>What contractors ask first</h2>
+    </div>
+    <div class="faq-list">
+      <details open><summary>Are your drawings actually sealed, or do I need to find my own engineer?</summary><p>Sealed. A Professional Engineer licensed in your state reviews the package, takes responsible charge, and applies their seal. You receive a submission-ready set — you don't need to source a local engineer separately.</p></details>
+      <details><summary>Which states can you seal in?</summary><p>All 50, through licensed engineers in each state. Florida, Texas, Arizona and California carry dedicated code coverage given the volume of pool work in those markets.</p></details>
+      <details><summary>How long does sealing add to turnaround?</summary><p>Typically two to three business days on top of drafting. Standard residential sets run about five business days end to end from approved markup.</p></details>
+      <details><summary>What if plan review comes back with comments?</summary><p>We address them and reissue the sealed set. Revisions arising from plan-review comments are included in the original scope.</p></details>
+      <details><summary>Who is legally responsible for the sealed drawings?</summary><p>The sealing engineer. They review the package, take responsible charge under their state licence, and carry professional liability for the sealed documents. JEBN produces the drawings and calculations that go into that review.</p></details>
+      <details><summary>Do you provide digital or wet seals?</summary><p>Digital seals where the jurisdiction accepts them, which is now most. Wet-sealed hard copies are available on request.</p></details>
+      <details><summary>Can you seal commercial and public pools?</summary><p>Yes. Commercial work carries additional review — Chapter 31B and Title 22 in California, FAC 64E-9 in Florida, TDLR and DSHS in Texas. Send the project type and we'll confirm the path.</p></details>
     </div>
   </div>
 </section>
 
+<!-- ============ CONTACT ============ -->
 <section id="contact">
-  <div class="section-inner">
-    <div class="contact-box">
-      <h2>Ready to Get Started?</h2>
-      <p>Send your project brief and I'll respond within a few hours with scope and pricing.</p>
-      <a href="mailto:martin@jebnengineering.com" class="btn">Email martin@jebnengineering.com</a>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Start Here</span>
+      <h2>Send your markup. Get scope back in 24 hours.</h2>
+      <p>Sketch, survey, site plan or a photo of a napkin drawing — whatever you have. We'll confirm the code path, the sealing engineer for your state, and a fixed price before you commit to anything.</p>
+    </div>
+    <div class="cta-buttons">
+      <a href="mailto:martin@jebnengineering.com?subject=Sealed%20Plan%20Quote" class="btn btn-primary">Email martin@jebnengineering.com</a>
+      <a href="/pool" class="btn btn-secondary">See the Pool Studio</a>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
-  &copy; 2026 JEBN Engineering &nbsp;|&nbsp; Remote Pool &amp; Landscape Engineering &nbsp;|&nbsp; <a href="mailto:martin@jebnengineering.com" style="color:#4fc3f7;">martin@jebnengineering.com</a>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="4" width="16" height="16" fill="#c4a35a" opacity="0.85"/>
+          <rect x="20" y="4" width="16" height="16" fill="#ffffff" opacity="0.9"/>
+          <rect x="4" y="20" width="16" height="16" fill="#ffffff" opacity="0.9"/>
+          <rect x="20" y="20" width="16" height="16" fill="#c4a35a" opacity="0.85"/>
+        </svg>
+        <div class="logo-text">JEBN</div>
+      </div>
+      <div class="footer-links">
+        <a href="/services/pe-stamped-pool-plans">PE-Sealed Plans</a>
+        <a href="/states/florida">Florida</a>
+        <a href="/states/texas">Texas</a>
+        <a href="/states/arizona">Arizona</a>
+        <a href="/states/california">California</a>
+        <a href="/pool">Pool Studio</a>
+        <a href="/landscape">Landscape Studio</a>
+        <a href="mailto:martin@jebnengineering.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 JEBN Engineering Studio. All rights reserved.</p>
+      <p class="footer-motto">// Built on a solid foundation.</p>
+    </div>
+  </div>
 </footer>
+
+<script>
+  // sticky header shadow state (matches the inner pages)
+  var h = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function () {
+    if (h) h.classList.toggle('scrolled', window.scrollY > 40);
+  });
+  var mt = document.getElementById('menuToggle'), nm = document.getElementById('navMenu');
+  if (mt && nm) mt.addEventListener('click', function () {
+    nm.classList.toggle('menu-open'); mt.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
