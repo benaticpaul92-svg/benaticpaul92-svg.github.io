@@ -126,6 +126,21 @@ footer { padding-bottom: 6rem; }
 .quote-attrib .attrib-name { color: #545b67; }
 .hero .hero-eyebrow { color: #d9b96f; }
 .hero-stats .stat-label { color: #d0d6df; }
+.consent-panel { background: #f7f4ef; color: #14233a; border-bottom: 1px solid #b6aa93; padding: 1.25rem 0; scroll-margin-top: 100px; }
+.consent-panel .consent-layout { display: flex; align-items: center; gap: 1.5rem; }
+.consent-panel h2 { color: #14233a; font-size: 1.25rem; margin: 0 0 0.5rem; }
+.consent-panel p { color: #303b4b; font-size: 0.95rem; line-height: 1.6; margin: 0.4rem 0; }
+.consent-panel a { color: #285d78; text-decoration: underline; }
+.consent-actions { display: flex; flex-direction: column; flex: 0 0 230px; gap: 0.65rem; }
+.consent-actions button { font: inherit; font-size: 0.95rem; line-height: 1.4; min-height: 46px; border: 1px solid #14233a; padding: 0.7rem 1rem; border-radius: 3px; background: #fff; color: #14233a; cursor: pointer; }
+.consent-actions button:hover { background: #ede5d5; }
+.consent-actions button:disabled { color: #626b78; border-color: #626b78; cursor: not-allowed; }
+.cookie-settings { display: inline-flex; align-items: center; padding: 0.3rem 0; min-height: 44px; border: 0; background: transparent; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
+@media (max-width: 700px) {
+  .consent-panel .consent-layout { display: block; }
+  .consent-actions { margin-top: 0.9rem; flex-direction: row; flex-wrap: wrap; }
+  .consent-actions button { flex: 1 1 140px; }
+}
 
 @media (max-width: 1000px) {
   #siteHeader .header-container { flex-wrap: wrap; padding: 0.6rem 1.2rem; }

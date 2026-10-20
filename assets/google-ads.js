@@ -3,8 +3,8 @@
   const settings = window.JEBN_CONFIG?.googleAds;
   const production = ["www.jebnengineering.com", "jebnengineering.com"].includes(location.hostname);
   if (!settings?.enabled || !production || !/^AW-\d+$/.test(settings.tagId)) return;
-  // This adapter is not a consent banner/CMP. Until the configured consent
-  // solution supplies a permitted state, no Google script is requested.
+  // consent.js supplies the visitor's choice. Until it permits measurement,
+  // no Google script is requested.
   if (window.JEBN_GOOGLE_ADS) return;
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
@@ -15,6 +15,7 @@
     analytics_storage: "denied"
   };
   window.gtag("consent", "default", denied);
+  window.gtag("set", "ads_data_redaction", true);
   let permitted = false;
   let initialized = false;
   const recorded = new Set();
@@ -45,8 +46,8 @@
     recorded.add(reference);
   }
 
-  // The account's chosen consent solution must call this with the visitor's
-  // actual saved/current choice on every page, including withdrawal updates.
+  // consent.js calls this with the visitor's actual saved/current choice
+  // on every page, including withdrawal updates.
   // Events before permission are discarded, not replayed after permission.
   window.JEBN_GOOGLE_ADS = Object.freeze({ setConsent, recordEnquiry });
 })();

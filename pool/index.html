@@ -52,7 +52,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@500;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
 
 <noscript></noscript>
-<link href="/assets/pool.css" rel="stylesheet"/><link href="/assets/improvements.css" rel="stylesheet"/><script defer="" src="/assets/site-config.js"></script><script defer="" src="/assets/google-ads.js"></script><script defer="" src="/assets/site.js"></script><script defer="" src="/assets/gallery.js"></script><script defer="" src="/assets/adsense.js"></script><meta content="strict-origin-when-cross-origin" name="referrer"/></head>
+<link href="/assets/pool.css" rel="stylesheet"/><link href="/assets/improvements.css" rel="stylesheet"/><script defer="" src="/assets/site-config.js"></script><script defer="" src="/assets/google-ads.js"></script><script defer="" src="/assets/consent.js"></script><script defer="" src="/assets/site.js"></script><script defer="" src="/assets/gallery.js"></script><script defer="" src="/assets/adsense.js"></script><meta content="strict-origin-when-cross-origin" name="referrer"/></head>
 <body><a class="skip-link" href="#main-content">Skip to content</a>
 <!-- Header & Navigation -->
 <header class="scrolled" id="siteHeader">
@@ -85,7 +85,20 @@
 </div>
 </header>
 <!-- Hero Section -->
-<main id="main-content" tabindex="-1"><section class="hero">
+<section aria-labelledby="consent-heading" class="consent-panel" hidden="" id="privacy-choices">
+<div class="container consent-layout">
+<div>
+<h2 id="consent-heading" tabindex="-1">Allow Google Ads measurement?</h2>
+<p>With your permission, Google uses cookies and receives page and device information to measure our advertising. Personalized advertising stays off. You can change your choice in Cookie settings. <a href="/privacy/#advertising-choices">Privacy notice</a>.</p>
+<p data-consent-note="">Optional advertising measurement is off until you allow it.</p>
+</div>
+<div class="consent-actions">
+<button data-consent-allow="" type="button">Allow measurement</button>
+<button data-consent-reject="" type="button">Reject optional cookies</button>
+<button data-consent-close="" hidden="" type="button">Keep current choice</button>
+</div>
+</div>
+</section><main id="main-content" tabindex="-1"><section class="hero">
 <div class="container hero-inner">
 <div class="hero-text">
 <span class="hero-eyebrow">Pool Hydraulics · Engineering · Landscape</span>
@@ -545,14 +558,14 @@
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
 <a href="mailto:benatic@jebnengineering.com">Email</a>
-<a href="/privacy/">Privacy</a></div>
+<a href="/privacy/">Privacy</a><button aria-controls="privacy-choices" class="cookie-settings" data-consent-settings="" hidden="" type="button">Cookie settings</button></div>
 </div>
 <div class="footer-bottom">
 <p>© 2026 JEBN Engineering Studio. All rights reserved.</p>
 <p class="footer-motto">// Built on a solid foundation.</p>
 </div>
 </div>
-</footer>
+<p aria-live="polite" class="sr-only" id="consent-status" role="status"></p></footer>
 <!-- Lightbox Overlay -->
 
 <!-- JavaScript -->

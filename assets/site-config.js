@@ -9,10 +9,10 @@ window.JEBN_CONFIG = Object.freeze({
   formTimeoutMs: 20000,
   googleAds: Object.freeze({
     // Base tag supplied by Martin's Google Ads screenshot, 20 October 2026.
-    enabled: false,
+    enabled: true,
     tagId: "AW-18526767007",
     conversionLabel: "" // Pending: the part after "/" in the event's send_to.
-    // A consent solution must call JEBN_GOOGLE_ADS.setConsent after setup.
+    // consent.js applies the visitor's saved/current measurement choice.
   }),
   adsense: Object.freeze({
     enabled: false,

@@ -4,7 +4,7 @@
 <link rel="canonical" href="https://www.jebnengineering.com/privacy/">
 
 <link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/improvements.css">
-<script defer src="/assets/site-config.js"></script><script defer src="/assets/google-ads.js"></script><script defer src="/assets/site.js"></script>
+<script defer src="/assets/site-config.js"></script><script defer src="/assets/google-ads.js"></script><script defer src="/assets/consent.js"></script><script defer src="/assets/site.js"></script>
 </head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="scrolled" id="siteHeader">
 <div class="header-container">
 <a aria-label="JEBN Engineering Studio home" class="logo" href="/">
@@ -31,8 +31,23 @@
 </nav>
 </div>
 </header>
+
+<section id="privacy-choices" class="consent-panel" aria-labelledby="consent-heading" hidden>
+  <div class="container consent-layout">
+    <div>
+      <h2 id="consent-heading" tabindex="-1">Allow Google Ads measurement?</h2>
+      <p>With your permission, Google uses cookies and receives page and device information to measure our advertising. Personalized advertising stays off. You can change your choice in Cookie settings. <a href="/privacy/#advertising-choices">Privacy notice</a>.</p>
+      <p data-consent-note>Optional advertising measurement is off until you allow it.</p>
+    </div>
+    <div class="consent-actions">
+      <button type="button" data-consent-allow>Allow measurement</button>
+      <button type="button" data-consent-reject>Reject optional cookies</button>
+      <button type="button" data-consent-close hidden>Keep current choice</button>
+    </div>
+  </div>
+</section>
 <main id="main-content" tabindex="-1" class="container prose">
-<h1>Privacy notice</h1><p>Last updated: 20 October 2026</p>
+<h1>Privacy notice</h1><p>Last updated: 21 October 2026</p>
 <p>This notice explains how JEBN Engineering Studio uses information provided through this website. For questions, contact Benatic Paul Martin at <a href="mailto:benatic@jebnengineering.com">benatic@jebnengineering.com</a>.</p>
 <h2>Project enquiries</h2>
 <p>The enquiry form asks for your name, email address and project description. Project location, company and timeline are optional. These details are used to respond to your request and discuss the work. Do not include payment-card details, identity documents or other sensitive personal information.</p>
@@ -40,10 +55,14 @@
 <p>If you choose the email option, your email application handles the message. Opening a draft does not send it. You can also copy your message and send it using your preferred email service.</p>
 <h2>Website operation and measurement</h2>
 <p>The site is hosted on GitHub Pages. Hosting and font providers may receive technical information when your browser requests pages or fonts. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a> and <a href="https://policies.google.com/privacy">Google privacy policy</a>.</p>
-<p>When present on the current page, campaign source, medium and campaign-name labels may be included with an enquiry so we can understand how the request reached us. Form entries are not placed in page URLs or sent to advertising analytics by the enquiry code. This version does not load Google Ads conversion tracking.</p>
-<h2>Advertising</h2>
+<p>When present on the current page, campaign source, medium and campaign-name labels may be included with an enquiry so we can understand how the request reached us. Form entries are not placed in page URLs or sent to advertising analytics by the enquiry code. Enquiry conversion events are not enabled.</p>
+<h2 id="advertising-choices">Google Ads measurement and your choices</h2>
+<p>We use the Google Ads base tag to measure our advertising only if you select Allow measurement. Before you choose, or if you reject optional cookies, this website does not load the Google Ads tag. Allowing measurement permits Google advertising cookies and sharing page, device and advertising interaction information with Google. Personalized advertising is disabled. We do not send your enquiry name, email address or message to Google Ads.</p>
+<p>Choose Cookie settings in the footer on any page to change or withdraw your choice. We store only your measurement choice, a version number and its date in this browser's local storage for up to 180 days. This preference storage remembers your choice; it is not used for advertising. If storage is blocked, the choice applies only to the current page. A Global Privacy Control signal keeps measurement off.</p>
+<p>Withdrawing consent updates the loaded Google tag to denied and removes accessible Google Ads first-party cookies on this site. The tag will not load on subsequent pages while measurement is off. A tag already loaded on the current page may send limited consent-status information to Google; information already sent is not recalled. Google's own data handling is described in its <a href="https://policies.google.com/privacy">privacy policy</a> and <a href="https://business.safety.google/privacy/">information about business partner data</a>.</p>
+<h2>Display advertising</h2>
 <p>Display advertising is not active in this version. If Google AdSense is enabled, this notice and the available privacy choices will be updated to match that setup.</p>
-<p>When Google advertising is active, third-party vendors, including Google, may use cookies to serve ads based on earlier visits to this and other websites. Google's advertising cookies allow Google and its partners to personalize ads. You can manage personalized advertising through <a href="https://myadcenter.google.com/">Google My Ad Center</a> and learn about participating providers at <a href="https://www.aboutads.info/choices/">YourAdChoices</a>.</p>
+<p>If display advertising is enabled in future, third-party vendors may use cookies to serve ads based on earlier visits to this and other websites, depending on your choices. You can manage Google's personalized advertising through <a href="https://myadcenter.google.com/">Google My Ad Center</a> and learn about participating providers at <a href="https://www.aboutads.info/choices/">YourAdChoices</a>.</p>
 <h2>Your information</h2>
 <p>You can contact us to ask about information you have submitted or to request a correction or deletion. Information may need to be kept for an ongoing project or applicable recordkeeping requirements. Contact <a href="mailto:benatic@jebnengineering.com">benatic@jebnengineering.com</a> with your request.</p>
 </main><footer>
@@ -67,11 +86,11 @@
 <a href="/pool/">Pool Studio</a>
 <a href="/landscape/">Landscape Studio</a>
 <a href="mailto:benatic@jebnengineering.com">Email</a>
-<a href="/privacy/">Privacy</a><a href="/#contact">Enquire</a></div>
+<a href="/privacy/">Privacy</a><button aria-controls="privacy-choices" class="cookie-settings" data-consent-settings="" hidden="" type="button">Cookie settings</button><a href="/#contact">Enquire</a></div>
 </div>
 <div class="footer-bottom">
 <p>© 2026 JEBN Engineering Studio. All rights reserved.</p>
 <p class="footer-motto">// Built on a solid foundation.</p>
 </div>
 </div>
-</footer></body></html>
+<p aria-live="polite" class="sr-only" id="consent-status" role="status"></p></footer></body></html>

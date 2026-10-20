@@ -4,7 +4,7 @@
 <link rel="canonical" href="https://www.jebnengineering.com/404.html">
 <meta name="robots" content="noindex,follow">
 <link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/improvements.css">
-<script defer src="/assets/site-config.js"></script><script defer src="/assets/google-ads.js"></script><script defer src="/assets/site.js"></script>
+<script defer src="/assets/site-config.js"></script><script defer src="/assets/google-ads.js"></script><script defer src="/assets/consent.js"></script><script defer src="/assets/site.js"></script>
 </head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="scrolled" id="siteHeader">
 <div class="header-container">
 <a aria-label="JEBN Engineering Studio home" class="logo" href="/">
@@ -31,6 +31,21 @@
 </nav>
 </div>
 </header>
+
+<section id="privacy-choices" class="consent-panel" aria-labelledby="consent-heading" hidden>
+  <div class="container consent-layout">
+    <div>
+      <h2 id="consent-heading" tabindex="-1">Allow Google Ads measurement?</h2>
+      <p>With your permission, Google uses cookies and receives page and device information to measure our advertising. Personalized advertising stays off. You can change your choice in Cookie settings. <a href="/privacy/#advertising-choices">Privacy notice</a>.</p>
+      <p data-consent-note>Optional advertising measurement is off until you allow it.</p>
+    </div>
+    <div class="consent-actions">
+      <button type="button" data-consent-allow>Allow measurement</button>
+      <button type="button" data-consent-reject>Reject optional cookies</button>
+      <button type="button" data-consent-close hidden>Keep current choice</button>
+    </div>
+  </div>
+</section>
 <main id="main-content" tabindex="-1" class="container prose">
 <h1>This page could not be found</h1><p>The address may have changed. You can return to a studio or tell us about your project.</p>
 <p><a href="/">Home</a> · <a href="/pool/">Pool Studio</a> · <a href="/landscape/">Landscape Studio</a></p>
@@ -56,11 +71,11 @@
 <a href="/pool/">Pool Studio</a>
 <a href="/landscape/">Landscape Studio</a>
 <a href="mailto:benatic@jebnengineering.com">Email</a>
-<a href="/privacy/">Privacy</a><a href="/#contact">Enquire</a></div>
+<a href="/privacy/">Privacy</a><button aria-controls="privacy-choices" class="cookie-settings" data-consent-settings="" hidden="" type="button">Cookie settings</button><a href="/#contact">Enquire</a></div>
 </div>
 <div class="footer-bottom">
 <p>© 2026 JEBN Engineering Studio. All rights reserved.</p>
 <p class="footer-motto">// Built on a solid foundation.</p>
 </div>
 </div>
-</footer></body></html>
+<p aria-live="polite" class="sr-only" id="consent-status" role="status"></p></footer></body></html>
