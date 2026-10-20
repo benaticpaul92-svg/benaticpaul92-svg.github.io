@@ -81,7 +81,7 @@ section[id], main[id] { scroll-margin-top: 0; }
 .optional-fields[open] summary { margin-bottom: 0.5rem; }
 .form-privacy, .form-fallback { color: #e2e6ed; font-size: 0.88rem; line-height: 1.65; margin: 1rem 0 0; }
 .form-privacy a, .form-fallback a { text-decoration: underline; text-underline-offset: 3px; }
-.form-fallback { border-top: 1px solid #758091; padding-top: 1rem; }
+.form-fallback { margin-top: 0.25rem; }
 .form-fallback a, .copy-button { display: inline-block; padding: 0.6rem 0; min-height: 44px; }
 .copy-button { border: 0; background: transparent; color: #ecd198; font: inherit; text-decoration: underline; cursor: pointer; margin-left: 1rem; }
 .copy-text { width: 100%; min-height: 200px; margin-top: 1rem; color: #14233a; background: #fff; padding: 0.8rem; font-size: 16px; }
@@ -172,7 +172,6 @@ footer { padding-bottom: 6rem; }
   .cta-buttons { flex-direction: column; align-items: stretch; }
   .cta-buttons .btn { justify-content: center; }
   .enquiry-dock { bottom: 0; right: 0; left: 0; border-radius: 0; border-width: 2px 0 0; text-align: center; padding-bottom: calc(0.9rem + env(safe-area-inset-bottom)); }
-  .copy-button { margin-left: 0; display: block; }
   .project-viewer { padding: 1rem; }
   .ad-placement { margin: 3rem 1.2rem; padding: 1rem; }
 }
