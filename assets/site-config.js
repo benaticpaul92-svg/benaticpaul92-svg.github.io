@@ -4,9 +4,10 @@
  * See SETUP.md outside site-for-astra for the private recipient configuration.
  */
 window.JEBN_CONFIG = Object.freeze({
-  // Example shape: https://formspree.io/f/FORM_ID
+  // Paste the Google Apps Script Web app URL ending in /exec after activation.
+  // Recipients live only in the private Apps Script project, never in this file.
   formEndpoint: "",
-  formTimeoutMs: 20000,
+  formTimeoutMs: 45000,
   googleAds: Object.freeze({
     // Base tag supplied by Martin's Google Ads screenshot, 20 October 2026.
     enabled: true,

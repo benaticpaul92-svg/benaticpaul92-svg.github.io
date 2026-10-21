@@ -56,8 +56,8 @@
 
   function endpointIsReady(value) {
     return typeof value === "string" &&
-      /^https:\/\/formspree\.io\/f\/[a-z0-9]+$/i.test(value) &&
-      !/YOUR|PLACEHOLDER|FORM_ID/i.test(value);
+      /^https:\/\/script\.google\.com\/macros\/s\/[a-z0-9_-]{20,200}\/exec$/i.test(value) &&
+      !/YOUR|PLACEHOLDER|DEPLOYMENT_ID/i.test(value);
   }
 
   document.querySelectorAll("[data-enquiry-form]").forEach(form => {
@@ -72,6 +72,7 @@
     let sending = false;
     let completed = false;
     let reference = "";
+    let previousPayload = "";
 
     function setStatus(message, kind) {
       status.textContent = message;
@@ -129,6 +130,7 @@
       fields.disabled = false;
       completed = false;
       reference = "";
+      previousPayload = "";
       form.reset();
       restart.hidden = true;
       copyText.hidden = true;
@@ -156,18 +158,24 @@
         focusStatus();
         return;
       }
-      const data = new FormData(form);
+      // URL-encoded POST is a simple CORS request; no preflight or no-cors mode.
+      // A readable, matching receipt is required before showing success.
+      const data = new URLSearchParams(new FormData(form));
       data.set("page", location.pathname); // Never forward a full URL/query to analytics.
       data.set("page_title", document.title);
       data.set("subject", "JEBN website project enquiry");
-      reference ||= window.crypto?.randomUUID?.() || `enquiry-${Date.now()}`;
-      data.set("enquiry_reference", reference);
       const query = new URLSearchParams(location.search);
       // Current-page campaign labels only; no cookies, click IDs or cross-page storage.
       for (const key of ["utm_source", "utm_medium", "utm_campaign"]) {
         const value = query.get(key);
         if (value && /^[a-z0-9_. -]{1,100}$/i.test(value)) data.set(key, value);
       }
+      const payload = data.toString();
+      if (!reference || payload !== previousPayload) {
+        reference = window.crypto?.randomUUID?.() || `enquiry-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+        previousPayload = payload;
+      }
+      data.set("enquiry_reference", reference);
       sending = true;
       fields.disabled = true;
       submit.disabled = true;
@@ -175,26 +183,29 @@
       form.setAttribute("aria-busy", "true");
       setStatus("Submitting your enquiry…", "sending");
       const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), config.formTimeoutMs || 20000);
+      const timeout = setTimeout(() => controller.abort(), config.formTimeoutMs || 45000);
       try {
         const response = await fetch(config.formEndpoint, {
           method: "POST",
           body: data,
           headers: { Accept: "application/json" },
+          redirect: "follow",
           signal: controller.signal,
           credentials: "omit"
         });
         const result = await response.json().catch(() => null);
-        // Formspree's current client recognizes a string "next" as acceptance.
-        // Also accept an explicit ok:true, but never an arbitrary JSON payload,
-        // an error object, a pending payment/challenge, or a followed redirect.
+        // Apps Script ContentService redirects to Google's response host.
+        // Only an acknowledgement of this exact stored enquiry counts.
+        const responseURL = new URL(response.url);
+        const trustedResponse = responseURL.href === config.formEndpoint ||
+          (responseURL.protocol === "https:" && responseURL.hostname === "script.googleusercontent.com");
         const accepted = result && typeof result === "object" && !Array.isArray(result) &&
-          (result.ok === true || (typeof result.next === "string" && result.next.trim() !== "")) &&
-          result.ok !== false && !("error" in result) && !("errors" in result) &&
-          !("stripe" in result) && !("challenge" in result);
-        if (!response.ok || response.redirected || !accepted) {
+          result.service === "jebn-enquiries" && result.version === 1 &&
+          result.ok === true && result.stored === true && result.reference === reference &&
+          !("error" in result) && !("errors" in result) && !("challenge" in result);
+        if (!response.ok || !trustedResponse || !accepted) {
           const error = new Error("Form was not accepted");
-          error.status = response.status;
+          error.status = ["BUSY", "RATE_LIMITED"].includes(result?.code) ? 429 : response.status;
           throw error;
         }
         completed = true;
@@ -203,7 +214,7 @@
         fields.disabled = true;
         submit.textContent = "Enquiry submitted";
         restart.hidden = false;
-        setStatus("Thank you. Your enquiry has been submitted. We will reply to the email address you provided.", "success");
+        setStatus("Thank you. Your enquiry has been received. We’ll reply by email.", "success");
         // Only accepted submissions emit this event. The optional Google Ads
         // adapter also requires enabled settings, consent and a conversion label.
         // Field values and email addresses never enter dataLayer.
