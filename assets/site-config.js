@@ -12,7 +12,7 @@ window.JEBN_CONFIG = Object.freeze({
     // Base tag supplied by Martin's Google Ads screenshot, 20 October 2026.
     enabled: true,
     tagId: "AW-18526767007",
-    conversionLabel: "" // Pending: the part after "/" in the event's send_to.
+    conversionLabel: "HTqpCJHD-qMdEJ-PoIJF" // "Submit lead form" conversion action (ID 7860035985).
     // consent.js applies the visitor's saved/current measurement choice.
   }),
   adsense: Object.freeze({
