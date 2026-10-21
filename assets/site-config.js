@@ -4,7 +4,7 @@
  * See SETUP.md outside site-for-astra for the private recipient configuration.
  */
 window.JEBN_CONFIG = Object.freeze({
-  // Paste the Google Apps Script Web app URL ending in /exec after activation.
+  // Active Google Apps Script Web app; only the public endpoint belongs here.
   // Recipients live only in the private Apps Script project, never in this file.
   formEndpoint: "https://script.google.com/macros/s/AKfycbwMn4UD2xAbhB7b9x8Lr6p5sa7M62Wbn5iZyYzMGOkcTh8yXV3g1BmcQcgKmDcfahc/exec",
   formTimeoutMs: 45000,
