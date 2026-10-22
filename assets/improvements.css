@@ -179,3 +179,21 @@ footer { padding-bottom: 6rem; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* ===== State pages: breadcrumbs, facts, nearby links, all-states index ===== */
+.crumbs { font-size: .8rem; color: var(--text-soft); margin-bottom: 1.2rem; }
+.crumbs a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--line); }
+.crumbs a:hover { border-color: var(--gold); }
+#state-facts { padding: 4rem 0; }
+.state-facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem 2rem; margin: 0; }
+.state-facts > div { border-top: 2px solid var(--gold); padding-top: .9rem; }
+.state-facts dt { font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--navy); margin-bottom: .4rem; }
+.state-facts dd { margin: 0; font-size: .95rem; line-height: 1.6; color: var(--text-soft); }
+.nearby { margin-top: 2rem; font-size: .9rem; color: var(--text-soft); }
+.nearby a, .state-links a { color: var(--navy); }
+.state-links { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-top: 1.6rem; font-size: .9rem; }
+.state-grid-all { grid-template-columns: repeat(4, 1fr); }
+.state-grid-all .state-card { padding: 1.4rem 1.3rem; }
+.state-grid-all .state-card h3 { font-size: 1.15rem; margin-bottom: .4rem; }
+@media (max-width: 900px) { .state-facts { grid-template-columns: 1fr; } .state-grid-all { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .state-grid-all { grid-template-columns: 1fr; } #state-facts { padding: 2.5rem 0; } }
