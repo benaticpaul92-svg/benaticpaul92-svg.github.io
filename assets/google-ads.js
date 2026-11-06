@@ -41,7 +41,9 @@
     if (!permitted || !initialized || !/^[A-Za-z0-9_-]+$/.test(settings.conversionLabel || "") ||
         typeof reference !== "string" || !reference || recorded.has(reference)) return;
     window.gtag("event", "conversion", {
-      send_to: `${settings.tagId}/${settings.conversionLabel}`
+      send_to: `${settings.tagId}/${settings.conversionLabel}`,
+      // Stable, non-personal receipt enables Google to deduplicate retries across loads.
+      transaction_id: reference
     });
     recorded.add(reference);
   }
