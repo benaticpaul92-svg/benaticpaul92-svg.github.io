@@ -1,0 +1,25 @@
+<form action="#contact" aria-describedby="form-privacy" aria-label="Project enquiry" class="contact-form" data-enquiry-form="" method="post" name="project-enquiry">
+<p class="form-intro">Start with your name, email and a short project description.</p>
+<p aria-atomic="true" aria-live="polite" class="form-status" data-form-status="" role="status" tabindex="-1">Online enquiries are not connected yet. Please email <a href="mailto:benatic@jebnengineering.com">benatic@jebnengineering.com</a>.</p>
+<fieldset>
+<legend class="sr-only">Your project enquiry</legend>
+<div aria-hidden="true" class="hp-field"><label for="enquiry-website">Leave this field empty</label><input autocomplete="off" id="enquiry-website" name="_gotcha" tabindex="-1" type="text"/></div>
+<div class="form-row">
+<div class="form-group"><label for="enquiry-name">Your name (required)</label><input autocomplete="name" id="enquiry-name" maxlength="120" name="name" required="" type="text"/></div>
+<div class="form-group"><label for="enquiry-email">Email address (required)</label><input autocomplete="email" id="enquiry-email" inputmode="email" maxlength="254" name="email" required="" type="email"/></div>
+</div>
+<div class="form-group"><label for="enquiry-location">Project city and state (optional)</label><input id="enquiry-location" maxlength="160" name="location" placeholder="For example: Tampa, Florida" type="text"/></div>
+<div class="form-group"><label for="enquiry-message">What do you need? (required)</label><textarea id="enquiry-message" maxlength="6000" name="message" placeholder="Describe your project, the drawings you need and your target date." required="" rows="5"></textarea></div>
+<details class="optional-fields">
+<summary>Add company and timeline (optional)</summary>
+<div class="form-group"><label for="enquiry-company">Company</label><input autocomplete="organization" id="enquiry-company" maxlength="160" name="company" type="text"/></div>
+<div class="form-group"><label for="enquiry-timeline">Target timeline</label><select id="enquiry-timeline" name="timeline"><option value="">Select if known</option><option>As soon as possible</option><option>Within a month</option><option>1–3 months</option><option>Exploring options</option></select></div>
+</details>
+</fieldset>
+<button class="btn btn-primary" disabled="" type="submit">Online sending unavailable</button>
+<p class="form-privacy" id="form-privacy">Details help us reply. <a href="/privacy/">Privacy</a>.</p>
+<p class="form-fallback"><a data-email-draft="" href="mailto:benatic@jebnengineering.com?subject=JEBN%20project%20enquiry">Open email draft</a><button class="copy-button" data-copy-message="" hidden="" type="button">Copy message</button></p>
+<textarea aria-label="Message to copy into your email app" class="copy-text" data-copy-text="" hidden="" readonly=""></textarea>
+<button class="btn btn-secondary new-enquiry" data-new-enquiry="" hidden="" type="button">Start another enquiry</button>
+<noscript><p class="form-privacy">Online submission needs JavaScript. Please use the email link above.</p></noscript>
+</form>
