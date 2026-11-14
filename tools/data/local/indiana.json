@@ -1,0 +1,48 @@
+{
+  "state": "Indiana",
+  "slug": "indiana",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Carmel",
+      "kind": "city",
+      "office": "Building and Code Services, Community Services Department",
+      "portal_name": "Online Permitting, with plan upload through Project Dox",
+      "portal_url": "https://www.carmel.in.gov/292/Residential-Permits",
+      "notes": [
+        "Carmel applicants file a residential permit online, then get an email to upload plans to the Project Dox submittal system once a permit number is assigned.",
+        "The city says residential projects must meet the 2020 Indiana Residential Code, which is the 2018 IRC with the 2020 Indiana amendments.",
+        "Carmel's pool inspection procedures list bonding and grounding and final inspections, with the equipotential bonding grid checked against NEC Section 680.26.",
+        "For pools without a cover, the same document requires a fence at least 5 feet high with self-closing, self-latching, lockable gates, under a separate fence permit."
+      ],
+      "sources": [
+        {"title": "Residential Permits - City of Carmel", "url": "https://www.carmel.in.gov/292/Residential-Permits"},
+        {"title": "Swimming Pool Inspection Procedures - City of Carmel Building and Code Services", "url": "https://www.carmel.in.gov/DocumentCenter/View/2760"}
+      ]
+    },
+    {
+      "name": "Westfield",
+      "kind": "city",
+      "office": "Community Development Department",
+      "portal_name": "City of Westfield Citizens Portal",
+      "portal_url": "https://www.westfield.in.gov/519/Pool-Permits",
+      "notes": [
+        "Westfield lists a Residential Pool (RP) permit for in-ground pools, submitted through its Citizens Portal after registering an account.",
+        "Required documents include a site or plot plan showing property lines, existing structures, right-of-way and all easements, with scale, north arrow and address or lot number.",
+        "The pool page lists a State Construction Design Release (CDR) and an Erosion Control Application among the documents to prepare.",
+        "Construction documents must include a pool plan and a cross-section drawing of the pool, and review does not guarantee full compliance with the Indiana Building Code."
+      ],
+      "sources": [
+        {"title": "Pool Permits - City of Westfield", "url": "https://www.westfield.in.gov/519/Pool-Permits"},
+        {"title": "Apply for a Permit - City of Westfield", "url": "https://www.westfield.in.gov/179/Apply-for-a-Permit"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Only 2 jurisdictions verified. Indianapolis (indy.gov pages load only a script shell), Fort Wayne (Cloudflare/403), Fishers (Cloudflare), Evansville (403) and Bloomington (Cloudflare) could not be read.",
+    "Lafayette's residential projects page was opened but does not mention pools, so it was not used.",
+    "Carmel and Westfield: the code edition for pool barriers was not stated on the opened pages beyond the 2020 Indiana Residential Code (Carmel); Westfield does not name an edition.",
+    "Carmel's inspection document says the 5 ft fence rule, which is stricter than the state R326 4 ft figure on the existing JEBN page; the source was a city inspection procedure, so check with the city before relying on it."
+  ]
+}

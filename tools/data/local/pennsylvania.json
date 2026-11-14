@@ -1,0 +1,107 @@
+{
+  "state": "Pennsylvania",
+  "slug": "pennsylvania",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Philadelphia",
+      "kind": "city",
+      "office": "Philadelphia Department of Licenses & Inspections",
+      "portal_name": "eCLIPSE",
+      "portal_url": "https://www.phila.gov/services/permits-violations-licenses/apply-for-a-permit/building-and-repair-permits/get-permits-without-plans-ez-permits/",
+      "notes": [
+        "Above-ground and in-ground pools and spas are listed among the projects that may qualify for an EZ permit, which is filed without plans.",
+        "The work must still follow the EZ Standard, and the city page says the permit can be revoked if it does not.",
+        "Applications can be filed online in eCLIPSE or in person at the Permit and License Center."
+      ],
+      "sources": [
+        {
+          "title": "Get permits without plans (EZ permits) (City of Philadelphia)",
+          "url": "https://www.phila.gov/services/permits-violations-licenses/apply-for-a-permit/building-and-repair-permits/get-permits-without-plans-ez-permits/"
+        }
+      ]
+    },
+    {
+      "name": "Pittsburgh",
+      "kind": "city",
+      "office": "City of Pittsburgh Department of Permits, Licenses, and Inspections",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The residential pool form requires drawings by a PA licensed architect or engineer for all custom built pools and spas and any in-ground pool deeper than 4 feet.",
+        "A site plan must show the location and type of barriers in relation to the pool and property lines.",
+        "The form requires a barrier 48 inches above grade for the full perimeter, openings that do not pass a 4 inch sphere, and self-closing, self-latching gates.",
+        "The form states that all pools and spas need an electrical permit to ground and bond them."
+      ],
+      "sources": [
+        {
+          "title": "City of Pittsburgh Residential Pool Form",
+          "url": "https://www.pittsburghpa.gov/files/assets/city/v/1/pli/documents/6719_residential_pool_form.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Bethlehem (Lehigh Valley)",
+      "kind": "city",
+      "office": "City of Bethlehem Bureau of Code Enforcement",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "For an in-ground pool, Bethlehem asks for a boundary and topographical survey, construction drawings, and the permit application.",
+        "The pool must be at least 6 feet from property lines and 10 feet from power lines.",
+        "An in-ground pool needs a fence at least 48 inches high, and the pool must have an alarmed door or self-locking gate.",
+        "The checklist asks for bonding of the walkway and an anti-suction drain device, and a licensed electrician must pull the electrical permit."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool Requirements (City of Bethlehem Bureau of Code Enforcement)",
+          "url": "https://bethlehem-pa.gov/CityOfBethlehem/media/COBfiles/oldbeth/construction/pdf/Swimming-Pool-Requirements.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Newtown Township (Bucks County)",
+      "kind": "township",
+      "office": "Newtown Township Code Enforcement / Zoning",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The township lists swimming pools among the projects that need a permit and offers a separate In-ground Swimming Pool Application.",
+        "In-ground pool permits require the Professional Services Agreement supplement, which also applies to any permit needing stormwater management review of 1,000 sq ft or more of impervious surface.",
+        "Earth disturbance over 2,000 sq ft for a swimming pool requires plan review by the Bucks County Conservation District.",
+        "Plans larger than 11 x 17 must also be submitted as a PDF in addition to hard copies."
+      ],
+      "sources": [
+        {
+          "title": "Permit Applications & Forms (Newtown Township)",
+          "url": "https://newtownpa.gov/newtown-township-department-of-codes-zoning/newtown-township-permit-applications-forms/"
+        }
+      ]
+    },
+    {
+      "name": "Upper Moreland Township (Montgomery County)",
+      "kind": "township",
+      "office": "Upper Moreland Township Code Enforcement",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The township's FAQ says installing a pool requires a building permit and links to pool permit requirements.",
+        "The FAQ says residential applications need two sets of plans, and permits are required even when the homeowner does the work.",
+        "A registered Master Plumber must do all plumbing work, while owners may do their own electrical work with a permit."
+      ],
+      "sources": [
+        {
+          "title": "Code Enforcement FAQs (Upper Moreland Township)",
+          "url": "https://www.uppermoreland.org/Faq.aspx?QID=99"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Philadelphia's EZ pool standard PDF and zoning page, Allentown, Lancaster and Lower Merion pages were blocked or not opened, so Philadelphia has only 3 notes and no siting or barrier numbers.",
+    "Pittsburgh's pool form is dated 8/2019 and the city's OneStopPGH portal page was not opened, so no portal is listed.",
+    "The state-level UCC and 2018 ISPSC claims on the existing state page were not re-verified.",
+    "No local page opened states which code edition the municipality enforces."
+  ]
+}

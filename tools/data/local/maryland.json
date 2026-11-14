@@ -1,0 +1,49 @@
+{
+  "state": "Maryland",
+  "slug": "maryland",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Howard County",
+      "kind": "county",
+      "office": "Howard County Department of Inspections, Licenses and Permits",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "A plan review memo effective September 7, 2025 applies to all residential swimming pool applications. It states that all plans must be signed and sealed by an engineer.",
+        "In-ground pool applications need a plot/site plan and verification of compliance with the county checklist based on Chapter 8 of the International Swimming Pool & Spa Code. A certificate of compliance is required at inspection.",
+        "Above-ground pools need a plot/site plan and the manufacturer's installation guidelines, and also a certificate of compliance at inspection.",
+        "The county checklist asks for pool shape, wall cross section, floor slope, diving equipment and diving envelope where applicable. Construction plans should reference the current International Swimming Pool & Spa Code."
+      ],
+      "sources": [
+        {"title": "Requirements for submittal of all residential swimming pool applications (Howard County memo, 2 Sept 2025)", "url": "https://www.howardcountymd.gov/sites/default/files/2025-09/Swimming%20Pool%20Code%20Requirements%202024.pdf"},
+        {"title": "Checklist for Residential Swimming Pool Submittal (Howard County)", "url": "https://www.howardcountymd.gov/sites/default/files/2025-09/CHECKLIST%20FOR%20RESIDENTIAL%20SWIMMING%20POOL%20SUBMITTALS.pdf"},
+        {"title": "Residential Building Permits (Howard County)", "url": "https://www.howardcountymd.gov/resource/residential-building-permits"}
+      ]
+    },
+    {
+      "name": "Anne Arundel County",
+      "kind": "county",
+      "office": "Anne Arundel County Inspections and Permits",
+      "portal_name": "Land Use Navigator",
+      "portal_url": "https://www.aacounty.org/inspections-and-permits/permits/residential-permits/accessory-structure",
+      "notes": [
+        "The county lists a pool among residential accessory structures that may need a building permit.",
+        "Applications, status checks and inspection requests run through the Land Use Navigator system.",
+        "Submittals include a building permit application, construction plans to a recognized architectural scale, and a site plan at an engineered scale. The site plan must mark easements, property lines, rights of way and any grinder pump, well or septic system.",
+        "Other attachments, such as a Critical Area Worksheet and a Standard Grading Plan Application, are listed on the page and may not apply to every project."
+      ],
+      "sources": [
+        {"title": "Residential Accessory Structure (Anne Arundel County)", "url": "https://www.aacounty.org/inspections-and-permits/permits/residential-permits/accessory-structure"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Montgomery County: DPS pages load as a script-rendered shell with no readable text through curl or WebFetch; no pool page could be read.",
+    "Baltimore County: baltimorecountymd.gov returned 403; nothing verified.",
+    "Anne Arundel County has no dedicated pool page that could be found; its notes come from the general accessory structure page, which only says a pool 'may' need a permit.",
+    "Howard County: the online portal name was not confirmed on a page I opened, so it is left blank.",
+    "Only two Maryland jurisdictions are verified; the web search quota ran out."
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "state": "South Dakota",
+  "slug": "south-dakota",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Sioux Falls",
+      "kind": "city",
+      "office": "Planning & Development Services (Building Services)",
+      "portal_name": "Customer Self Service (CSS)",
+      "portal_url": "https://www.siouxfalls.gov/business-permits/permits-licenses-inspections/permits/building-permits",
+      "notes": [
+        "Residential permit applications are filed online through the Customer Self Service portal, or on paper at the City Center counter with an 11x17 plan set.",
+        "Residential permits are issued only to licensed residential contractors, owners who live in the structure, or owners of registered residential rentals.",
+        "Plan review can involve Building, Planning, Zoning, Flood Plain, Historic Preservation and Engineering staff, depending on the project.",
+        "The city lists the 2024 IBC, IRC and ISPSC as adopted, with local amendments, plus the 2023 NEC and the 2024 Uniform Plumbing Code.",
+        "The city's residential pool guide requires a barrier at least 48 inches high, with no gaps over 4 inches, installed, inspected and approved before the pool is filled.",
+        "Barrier gates must be self-closing and self-latching, and the guide treats swim spas as swimming pools for permitting and barrier rules."
+      ],
+      "sources": [
+        {
+          "title": "Building Permits - City of Sioux Falls",
+          "url": "https://www.siouxfalls.gov/business-permits/permits-licenses-inspections/permits/building-permits"
+        },
+        {
+          "title": "HOW TO: Apply for Residential Plan Review & Permit Issuance",
+          "url": "https://www.siouxfalls.gov/files/assets/public/v/1/business-and-permits/planning-amp-development/building-planning-services/building-plan-review/residential-plan-review/how-to-apply-residential-permit-issuance.pdf"
+        },
+        {
+          "title": "Adopted Building Codes - City of Sioux Falls",
+          "url": "https://www.siouxfalls.gov/planning-dev/building/adopted-codes"
+        },
+        {
+          "title": "Residential Swimming Pools, Hot Tubs, and Spas Guide",
+          "url": "https://www.siouxfalls.gov/files/assets/public/v/2/business-and-permits/ordinances/homeowner-construction/residential-swimming-pool-hot-tubs-and-spas-guide.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Minnehaha County (unincorporated areas around Sioux Falls)",
+      "kind": "county",
+      "office": "Minnehaha County Planning & Zoning",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Planning & Zoning handles zoning and building permits and inspects new construction in the unincorporated part of the county.",
+        "The county adopted the 2021 International Residential Code by Ordinance MC 62-22, with local amendments.",
+        "The county's amended code counts any structure holding water more than 18 inches deep as a swimming pool, including in-ground pools and hot tubs.",
+        "Its pool barrier must be at least 42 inches above grade and be installed, inspected and approved before the pool is filled with water."
+      ],
+      "sources": [
+        {
+          "title": "Planning & Zoning - Minnehaha County",
+          "url": "https://www.minnehahacounty.gov/dept/pl/pl.php"
+        },
+        {
+          "title": "Ordinance MC 62-22, 2021 International Residential Code",
+          "url": "https://minnehahacounty.gov/residents/countyOrdinances/international_building_codes/2021IRCOrdinance_UA.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Aberdeen",
+      "kind": "city",
+      "office": "City of Aberdeen Building Inspection Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The Building Inspection Department is on the third floor of City Hall at 123 South Lincoln Street.",
+        "The city requires a permit to construct, enlarge, alter or move a building, structure or property, and all fencing needs a permit.",
+        "Prefabricated swimming pools holding no more than 5,000 gallons are listed as not needing a city permit.",
+        "Electrical permit questions go to the South Dakota Electrical Commission, not the city, according to the city's permit handout."
+      ],
+      "sources": [
+        {
+          "title": "Permit Requirements (City of Aberdeen)",
+          "url": "https://www.aberdeen.sd.us/DocumentCenter/View/10651/Permit-Requirements"
+        }
+      ]
+    },
+    {
+      "name": "Pennington County (Rapid City area, unincorporated)",
+      "kind": "county",
+      "office": "Pennington County Planning & Zoning",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The county's development process ends with a Building Permit and Certificate of Compliance.",
+        "The county requires a pre-development meeting with county staff to learn which steps and submittals apply to a project.",
+        "The county posts a Building Permit Application (Residential) as a downloadable form."
+      ],
+      "sources": [
+        {
+          "title": "Development Guide - Pennington County",
+          "url": "https://www.pennco.org/services/planning/development_guide.php"
+        },
+        {
+          "title": "Permits & Forms - Pennington County",
+          "url": "https://www.pennco.org/services/planning/permits_forms.php"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Rapid City: rcgov.org blocks automated access (HTTP 403), so no official Rapid City page could be opened; the city is not included.",
+    "Sioux Falls: the official pages opened do not say outright that an in-ground pool needs its own building permit or what plans it needs; only the barrier guide and general residential process were confirmed.",
+    "Minnehaha County: no online permit portal and no pool-specific submittal list found on the pages opened.",
+    "Aberdeen: the building inspection page itself timed out (HTTP 522), so the city's adopted code editions were not confirmed; the permit handout does not describe in-ground pool plan requirements.",
+    "Pennington County: zoning ordinance (pool setbacks) could not be opened.",
+    "No state-level pool barrier or contractor licence facts were researched."
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "state": "California",
+  "slug": "california",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "City of San Diego",
+      "kind": "city",
+      "office": "City of San Diego Development Services Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Information Bulletin 712 (June 2021) covers private pools, spas and hot tubs at single-family homes and duplexes. Public pools go to County Environmental Health.",
+        "Pools may use a city pre-approved master plan or be a custom pool. A custom pool needs construction plans, specifications and structural calculations.",
+        "The site plan must be signed and stamped by a California registered civil or structural engineer, or a California licensed architect of record.",
+        "Custom pool plan sheets and the first page of the structural calculations must be stamped by the California civil or structural engineer in responsible charge.",
+        "Depending on pool depth and design, a geotechnical report by a California registered geotechnical or soils engineer may be required.",
+        "The bulletin cites SDMC Section 145.3110 for pool setbacks, with a three-foot minimum yard where the pool projects three feet or less above grade."
+      ],
+      "sources": [
+        {
+          "title": "Information Bulletin 712: How to Obtain a Permit for Private Swimming Pools, Spas, Hot Tubs (City of San Diego)",
+          "url": "https://www.sandiego.gov/sites/default/files/dsdib712.pdf"
+        }
+      ]
+    },
+    {
+      "name": "City of San Jose",
+      "kind": "city",
+      "office": "City of San Jose Development Services Permit Center",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Any pool or structure holding water over 18 inches deep and meant for swimming or bathing needs a building permit. This includes in-ground pools, above-ground pools, spas and wading pools.",
+        "The city page cites Municipal Code Chapter 20.30.500 and California Residential Code Appendix AX for single-family and duplex pools.",
+        "New or remodeled pools at single-family properties need a full enclosure at least 60 inches high plus at least two more drowning-prevention features.",
+        "Pool setbacks are measured from the property line to the water edge: 30 feet front, 5 feet rear, 5 feet interior side, and 9 feet on a street-facing corner side.",
+        "Remodels with a building permit must upgrade suction outlets to anti-entrapment grates meeting ANSI/APSP-16 or its successor.",
+        "The page lists seven inspections, including underground electrical, underground plumbing, pre-gunite, potting, pre-deck, pre-plaster and final."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools, Spas & Hot Tubs (City of San Jose, updated 04/15/2026)",
+          "url": "https://www.sanjoseca.gov/businesses/development-services-permit-center/start-your-project/single-family-duplex-properties/swimming-pools-spas-hot-tubs"
+        }
+      ]
+    },
+    {
+      "name": "City of Sacramento",
+      "kind": "city",
+      "office": "City of Sacramento Community Development Department, Building Division",
+      "portal_name": "Accela Citizen Access (City of Sacramento)",
+      "portal_url": "https://aca-prod.accela.com/sacramento/Default.aspx",
+      "notes": [
+        "Residential pool plan review submittals and resubmittals for one- and two-family dwellings must be made electronically through the city's Accela portal.",
+        "A complete submittal is three files: application documents, supporting documents and plans. Forms include the CDD-0200 application and the CDD-0213 electrical load worksheet.",
+        "The plans must include a scaled site plan showing the pool and equipment against the house, property lines and the landside toe of any flood control levee.",
+        "The CDD-0257 Swimming Pool Requirements must be placed on a plan sheet. Gunite pools need a structural steel schedule and details; fiberglass pools need the prefabricated pool specification.",
+        "The city requires a 20-foot minimum setback from the landside toe of any flood control levee, and no pool within a public water or sewer easement or within six feet of city water, sewer or drainage pipe.",
+        "No pool may sit in the required front setback, and no pool may be within three feet of a property line, building or other structure."
+      ],
+      "sources": [
+        {
+          "title": "CDD-0282 Residential Swimming Pool Plan Review Submittal Requirements (rev. 01-01-2026)",
+          "url": "https://www.cityofsacramento.gov/content/dam/portal/cdd/Building/Forms/CDD-0282_Swimming-Pool-Plan-Review-Guidelines-Residential.pdf"
+        },
+        {
+          "title": "CDD-0257 Private Swimming Pool Requirements (rev. 03-11-2026)",
+          "url": "https://www.cityofsacramento.gov/content/dam/portal/cdd/Building/Forms/CDD-0257_Swimming-Pool-Requirements.pdf"
+        },
+        {
+          "title": "Accela Citizen Access, City of Sacramento",
+          "url": "https://aca-prod.accela.com/sacramento/Default.aspx"
+        }
+      ]
+    },
+    {
+      "name": "Riverside County (unincorporated)",
+      "kind": "county",
+      "office": "Riverside County Transportation and Land Management Agency (TLMA), Building and Safety",
+      "portal_name": "PLUS Online",
+      "portal_url": "https://rivcoplus.org/EnerGov_Prod/SelfService#/home",
+      "notes": [
+        "Residential pool plans need a site plan showing property lines, easements, overhead utilities, structures, the pool shape and all pool equipment, dimensioned to property lines and structures.",
+        "The county requires a signed Barrier Agreement Letter and at least two compliant barriers, installed, inspected and approved before plastering or filling with water. It cites SB 442 and Riverside County Ordinance 421.",
+        "The primary barrier option includes a wall or fence at least 5 feet high around the property, with compliant gates and exit door alarms.",
+        "The Pool Permits page lists a four-stage inspection sequence, with someone required to be home for both barrier inspections to verify alarms."
+      ],
+      "sources": [
+        {
+          "title": "Residential Swimming Pool, Spa, Hot Tub, and Barrier Plan Check Requirements, form 284-004 rev. 5/2024 (Riverside County)",
+          "url": "https://building.rctlma.org/sites/g/files/aldnop406/files/2024-05/284-004_Pool%20Barrier%20Letter%20Update%20(rev.%205-24).pdf"
+        },
+        {
+          "title": "Pool Permits (Riverside County Building and Safety)",
+          "url": "https://building.rctlma.org/pool-permits"
+        },
+        {
+          "title": "Online Submittal (Riverside County Building and Safety)",
+          "url": "https://building.rctlma.org/online-submittal"
+        }
+      ]
+    },
+    {
+      "name": "San Diego County (unincorporated)",
+      "kind": "county",
+      "office": "County of San Diego Planning & Development Services, Building Division",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "PDS 379 (rev. 02/09/2026), Swimming Pool and Spa Requirements, is formatted as a plan sheet labelled PS.",
+        "It applies to new or modified pools at one- or two-dwelling properties in the unincorporated area. Public pools are regulated by the Department of Environmental Health.",
+        "Pools need an enclosure at least 60 inches high, plus at least one safety feature accepted by the county and one accepted by the State of California, with entrapment avoidance.",
+        "The document says all enclosure, safety and entrapment measures must be installed, inspected and approved before plastering or filling with water.",
+        "New or remodeled pools and spas heated for the first time may not use gas heating as the primary source, with listed exceptions."
+      ],
+      "sources": [
+        {
+          "title": "PDS 379 Swimming Pool and Spa Requirements (County of San Diego, rev. 02/09/2026)",
+          "url": "https://www.sandiegocounty.gov/content/dam/sdc/pds/docs/pds379.pdf"
+        }
+      ]
+    },
+    {
+      "name": "City of Fresno",
+      "kind": "city",
+      "office": "City of Fresno Planning & Development Department, Development Services Division",
+      "portal_name": "Accela Citizen Access",
+      "portal_url": "",
+      "notes": [
+        "The single-family residential submittal checklist lists swimming pools among the project types it covers.",
+        "Where a Planning Zone Clearance is required, the application goes in through the Accela Citizen Access portal.",
+        "Projects that do not need a Zone Clearance get an Ok to Submit stamp from Planning (Planning@fresno.gov) before going to the Building Division for plan check.",
+        "The checklist asks for a site plan with scope of work, project data, structures with dimensions, setbacks from property lines and easements, and fence height and material."
+      ],
+      "sources": [
+        {
+          "title": "Submittal Requirements for Single Family Residential Projects (City of Fresno)",
+          "url": "https://www.fresno.gov/wp-content/uploads/2023/03/Single-Family-Residential-Project-Checklist.pdf"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "City of Los Angeles (LADBS): dbs.lacity.gov blocked access (HTTP 403), so no LADBS page could be opened. Not included.",
+    "San Bernardino County, Irvine / Orange County, Bakersfield, Long Beach and Sacramento County: official pages unreachable or not opened (connection refused or 403) and the web search budget ran out. Not included. Only 6 of 8 jurisdictions delivered.",
+    "San Diego city and San Jose online portal names/URLs not verified from an opened page; left blank. San Jose page names SJPermits.org but the site did not load.",
+    "Fresno: the checklist PDF does not clearly show which items apply to pools, and the fresno.gov pool page returned 403; Accela URL not opened.",
+    "Engineer-seal requirements for residential pools were confirmed only for San Diego city; other sources did not state them."
+  ]
+}

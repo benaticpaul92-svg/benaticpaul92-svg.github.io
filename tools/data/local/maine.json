@@ -1,0 +1,51 @@
+{
+  "state": "Maine",
+  "slug": "maine",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Scarborough",
+      "kind": "town",
+      "office": "Town of Scarborough Planning & Codes",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "A pool permit is required for any swimming or wading pool more than 24 inches deep, including seasonal pools. Pools must meet the zoning district setbacks.",
+        "The submittal list includes proof of title or interest, the pool permit application, a site plan, a scaled pool drawing with dimensions and manufacturer information.",
+        "Plans can be emailed to SUBMITTALS@SCARBOROUGHMAINE.ORG. An electrical permit application is required with the pool application.",
+        "In-ground pools require fencing. Inspections and the fence or safety barrier must be in place before the pool is used."
+      ],
+      "sources": [
+        {"title": "Pool Permit Package (Town of Scarborough)", "url": "https://resources.finalsite.net/images/v1744312651/scarboroughmaineorg/ifzlezg4q4yoh3snbms2/PoolPermitPackage.pdf"},
+        {"title": "Building Permits (Town of Scarborough)", "url": "https://www.scarboroughmaine.org/departments/planning-codes/codes/permits-applications"}
+      ]
+    },
+    {
+      "name": "South Portland",
+      "kind": "city",
+      "office": "City of South Portland Planning & Development, Code Enforcement",
+      "portal_name": "South Portland online application portal",
+      "portal_url": "https://www.southportland.gov/207/Applications-Information",
+      "notes": [
+        "The city has a Swimming Pool Permit Application. Applications can go through its online portal, by email to code@southportland.gov, or in person.",
+        "The application asks for a Class A or at least a Class D survey, a plot plan showing existing fences or walls, and a drainage plan meeting Sec. 27-1536(3) of the city code.",
+        "The application states fences must be 4 to 6 feet high with self-closing, self-latching devices.",
+        "Under Sec. 25-8, pool location is staked by a Maine-licensed surveyor or similar professional and verified before final inspection. Setbacks include 50 ft from the street and 10 ft from side or rear lines in residential districts."
+      ],
+      "sources": [
+        {"title": "Swimming Pool Permit Application (City of South Portland)", "url": "https://www.southportland.gov/DocumentCenter/View/328/Swimming-Pool-Permit-Application-PDF"},
+        {"title": "Applications & Information (City of South Portland Code Enforcement)", "url": "https://www.southportland.gov/207/Applications-Information"}
+      ]
+    }
+  ],
+  "state_level": [
+    {"note": "Maine law (22 M.R.S. section 1632) requires a fence around every swimming pool, except portable above-ground pools with sidewalls at least 24 inches high. A house or accessory building can form part of the enclosure, and gates and doors must be securely fastenable.", "source": {"title": "Title 22, section 1632: Enclosure of swimming pool required", "url": "https://legislature.maine.gov/statutes/22/title22sec1632.html"}}
+  ],
+  "gaps": [
+    "Portland: portlandmaine.gov showed no readable permit or pool links (one fetch failed a certificate check); nothing verified.",
+    "Bangor: bangormaine.gov exposed no permit links and the page URLs I tried returned 404; nothing verified.",
+    "The existing Maine state page says there is no state pool barrier statute, but 22 M.R.S. section 1632 (above) requires a pool fence. That page should be reviewed.",
+    "Only two Maine jurisdictions are verified; the web search quota ran out.",
+    "South Portland: the Sec. 25-8 setbacks quoted are from the application form, which states them as of ordinance 18-19/20; the current code was not checked."
+  ]
+}

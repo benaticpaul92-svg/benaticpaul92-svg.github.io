@@ -1,0 +1,101 @@
+{
+  "state": "Minnesota",
+  "slug": "minnesota",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Saint Paul / Ramsey County",
+      "kind": "city",
+      "office": "Department of Safety and Inspections (DSI)",
+      "portal_name": "Online Permit System (Tyler Portico)",
+      "portal_url": "https://cityofstpaulmn.tylerportico.com/TIM/Portal/portal-home",
+      "notes": [
+        "DSI's When Is a Permit Required guide says in-ground and above-ground pools over 5000 gallons need a building permit, and grading or filling for an in-ground pool needs a grading permit.",
+        "DSI's pool handout under Zoning Code Section 65.923 sets in-ground pools at least 5 feet from the adjoining property line and 4 feet from any building on the lot.",
+        "The same handout requires yards with a pool at a one- or two-family home to have an obscuring fence at least 4 feet high, with gaps no larger than 4 inches and self-closing, self-latching gates.",
+        "New pool wiring needs a separate electrical permit and must meet National Electrical Code Article 680."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools and Hot Tubs (DSI handout)",
+          "url": "https://www.stpaul.gov/sites/default/files/Media%20Root/Safety%20&%20Inspections/DSI.bldg_.PoolsHotTubs.pdf"
+        },
+        {
+          "title": "When Is a Permit Required? (DSI)",
+          "url": "https://www.stpaul.gov/sites/default/files/2022-06/DSI.Bldg_WhenIsPermitRequired_2021_2.pdf"
+        },
+        {
+          "title": "Building Permits & Inspections (DSI)",
+          "url": "https://www.stpaul.gov/departments/safety-inspections/building-and-construction/construction-permits-and-inspections/building-permits-inspections?NID=216"
+        }
+      ]
+    },
+    {
+      "name": "Maple Grove / Hennepin County",
+      "kind": "city",
+      "office": "Building Department, City of Maple Grove",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Maple Grove's residential pool handout says a permit is required for pools and hot tubs valued over $500, and any pool over 18 inches deep or 150 square feet must follow its rules regardless.",
+        "Plans must include a site plan showing the pool relative to structures, lot lines, easements and wetland buffers, plus fence and gate design details.",
+        "The handout says pools must be at least 5 feet from lot lines, may not extend into the front yard setback, and must be engineered to withstand the expected forces.",
+        "Permanent fences must be at least 4 feet high with self-closing, self-latching gates, and a fence is required as soon as the pool can hold water."
+      ],
+      "sources": [
+        {
+          "title": "Residential Swimming Pools and Hot Tubs (Maple Grove Building Department)",
+          "url": "https://www.maplegrovemn.gov/DocumentCenter/View/165/Swimming-pools-and-hot-tubs-PDF"
+        }
+      ]
+    },
+    {
+      "name": "Lakeville / Dakota County",
+      "kind": "city",
+      "office": "Building Inspections, City of Lakeville",
+      "portal_name": "BS&A Online",
+      "portal_url": "https://bsaonline.com/?uid=3059",
+      "notes": [
+        "Lakeville requires a swimming pool permit for pools with a depth of 24 inches at any point and a surface area over 150 square feet.",
+        "The submittal checklist asks for a certificate of survey showing lot dimensions, existing structures, the pool location and setback, the fence and equipment locations, and self-closing gates.",
+        "The fence needs a separate zoning permit, a heater needs a separate mechanical permit and a deck needs a separate building permit.",
+        "Pools must be at least 10 feet from adjoining lots and other structures and cannot be in a front yard. The city lists pool footing and final inspections, and the fence must pass inspection before filling."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools Zoning Requirements (Lakeville, revised 5/21/2024)",
+          "url": "https://www.lakevillemn.gov/DocumentCenter/View/205/Pool-PDF"
+        }
+      ]
+    },
+    {
+      "name": "Minneapolis / Hennepin County",
+      "kind": "city",
+      "office": "Minneapolis Development Review",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Minneapolis lists only prefabricated swimming pools that meet its size guidelines among construction work exempt from a permit.",
+        "The city's permit pages direct applicants to review the code and confirm with the city that a project does not need a permit."
+      ],
+      "sources": [
+        {
+          "title": "Work Exempt from Permit (City of Minneapolis)",
+          "url": "https://www.minneapolismn.gov/business-services/licenses-permits-inspections/construction-permits/exempt-from-permit/"
+        },
+        {
+          "title": "Construction permits overview (City of Minneapolis)",
+          "url": "https://www.minneapolismn.gov/business-services/licenses-permits-inspections/construction-permits/permits-overview/"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Minneapolis: the private residential pool code handout returned 404 and no pool-specific page or online permit portal was confirmed; only two notes.",
+    "Woodbury (Washington County) pages returned 403 (Cloudflare block) to automated fetches; skipped, so no Washington County entry.",
+    "Saint Paul: the pool zoning handout is dated 7/20/2017; confirm current setbacks.",
+    "Maple Grove: the handout cites the 2020 Minnesota State Building Code and no online portal was confirmed.",
+    "Saint Paul portal URL is the Online Permit System link on DSI's Building Permits page; the portal itself was only checked for a 200 response."
+  ]
+}

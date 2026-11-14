@@ -1,0 +1,82 @@
+{
+  "state": "Oklahoma",
+  "slug": "oklahoma",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Oklahoma City",
+      "kind": "city",
+      "office": "City of Oklahoma City Development Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The city's pool submittal checklist says to submit permits and PDF files online at www.okc.gov/access or in person at 420 W. Main Street, 1st floor.",
+        "For an outdoor residential pool, the checklist asks for a site plan showing the pool, property lines, distances to lot lines and structures, and all easements and rights-of-way.",
+        "The checklist also asks for the pool's estimated cost, maximum depth and square footage, and whether it is heated.",
+        "The residential checklist asks the plans to show the fence enclosure's location, type and height, with a 4 ft minimum height and self-closing, self-latching gates."
+      ],
+      "sources": [
+        {"title": "Swimming Pool Submittal Requirements (City of Oklahoma City)", "url": "https://www.okc.gov/files/assets/city/v/1/development-services/documents/swimming-pool-1.pdf"}
+      ]
+    },
+    {
+      "name": "Tulsa",
+      "kind": "city",
+      "office": "City of Tulsa Development Services (Permit Center)",
+      "portal_name": "Citizen Self-Service Portal (CSS)",
+      "portal_url": "https://www.cityoftulsa.org/government/departments/development-services/permit-center/self-service-portal-faq/",
+      "notes": [
+        "Online applicants choose either Pool (Residential): Pool: In Ground or Pool: Above Ground in the Citizen Self-Service Portal.",
+        "The residential guidebook asks for a pool wall cross section, the type of construction, drain type and number of drains, pool size and depth, a grading and drainage plan, and an erosion control plan.",
+        "If the property is on a septic system, a perc test is required, and approval from the City/County Health Department, Environmental Protection, is also required.",
+        "The guidebook exempts prefabricated pools less than two feet deep from permit requirements, and its site plan affidavit is meant to keep new structures such as pools off easements and rights-of-way."
+      ],
+      "sources": [
+        {"title": "Residential Building Guidelines / Site Plan Guidebook, January 2025 (City of Tulsa)", "url": "https://www.cityoftulsa.org/media/26898/residential-site-plan-guidebook-january-2025.pdf"},
+        {"title": "Citizen Self Service Portal FAQ (City of Tulsa)", "url": "https://www.cityoftulsa.org/government/departments/development-services/permit-center/self-service-portal-faq/"}
+      ]
+    },
+    {
+      "name": "Edmond",
+      "kind": "city",
+      "office": "City of Edmond Department of Building & Safety",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Edmond's miscellaneous permits page lists a dimensioned site plan showing distances from property lines to the pool and pool equipment.",
+        "Edmond's barrier handout cites the 2015 International Swimming Pool and Spa Code and applies to water over 24 inches deep.",
+        "The handout requires a barrier at least 48 inches above grade, openings that do not pass a 4 inch sphere, and self-closing, self-latching pedestrian gates that open away from the pool.",
+        "The homeowner acknowledgment says a residential pool cannot be occupied until final inspections are done and a Certificate of Occupancy is issued."
+      ],
+      "sources": [
+        {"title": "Miscellaneous Permits (City of Edmond)", "url": "https://www.edmondok.gov/2065/Miscellaneous-Permits"},
+        {"title": "Swimming Pool Barrier (City of Edmond)", "url": "https://edmondok.gov/DocumentCenter/View/150/swimming_pool_barrier"}
+      ]
+    },
+    {
+      "name": "Stillwater",
+      "kind": "city",
+      "office": "City of Stillwater Development Services Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "A building permit is required for pools, spas or hot tubs 24 inches or more deep, or any pool with a filter system, heater or electrical lighting.",
+        "The pool permit includes the required fence enclosure, and separate fence permits are not issued for it.",
+        "The plot plan must show distances to property lines, easements, the house, septic lines where there is no public sewer, overhead or underground electric lines, and the enclosure.",
+        "Pools and decks may not be placed over a platted easement, and pool setbacks follow the accessory structure rules of the zoning district.",
+        "Decks that support spas or hot tubs must be designed by an engineer, and a bonding inspection is required before concrete is poured."
+      ],
+      "sources": [
+        {"title": "Informational Guide: Residential Swimming Pools, Hot Tubs and Spas (City of Stillwater)", "url": "https://stillwaterok.gov/DocumentCenter/View/526/Residential-Swimming-Pools-Hot-Tub-and-Spa-Informational-Guide-PDF"},
+        {"title": "Residential FAQs for Development Services (City of Stillwater)", "url": "https://stillwaterok.gov/FAQ.aspx?QID=202"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Norman, Broken Arrow, Moore and Oklahoma County official pool pages returned 403 or bot checks to curl/WebFetch, so none were used; Stillwater was used as the fourth jurisdiction.",
+    "Edmond's online portal name and the code edition for Oklahoma City and Tulsa were not confirmed from an opened official page.",
+    "OKC's checklist names www.okc.gov/access for online submittal, but that page was not opened, so no portal name or URL is given.",
+    "The statewide OAC 748:20-6 barrier rule on the existing state page was not re-verified here."
+  ]
+}

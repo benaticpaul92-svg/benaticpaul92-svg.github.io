@@ -1,0 +1,81 @@
+{
+  "state": "Wyoming",
+  "slug": "wyoming",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Cheyenne (Laramie County)",
+      "kind": "city",
+      "office": "City of Cheyenne Building Permitting and Licensing Division",
+      "portal_name": "OpenGov Permits & Licensing",
+      "portal_url": "https://cheyennewy.portal.opengov.com/",
+      "notes": [
+        "The city says its Building Division is fully online: all permit applications and inspection requests go through the OpenGov portal.",
+        "The city lists the 2024 IBC, 2024 IRC and 2024 IPC among its adopted ICC codes, with the 2018 IECC and 2023 NEC.",
+        "The city will adopt the 2026 NEC on January 1, 2027, and accepts plans under either the 2023 or 2026 NEC until then."
+      ],
+      "sources": [
+        {
+          "title": "Building Permitting & Licensing (City of Cheyenne)",
+          "url": "https://www.cheyennecity.org/Services/Building-Safety"
+        },
+        {
+          "title": "ICC 2024 Building Codes (City of Cheyenne)",
+          "url": "https://www.cheyennecity.org/Your-Government/Departments/Compliance-Department/Building-Permitting-Licensing/ICC-2024-Building-Codes"
+        },
+        {
+          "title": "Plan Review Information (City of Cheyenne, 2026)",
+          "url": "https://www.cheyennecity.org/files/sharedassets/public/v/1/departments/compliance-division/building/building-handouts/updated-handouts/plan-review-information-2026.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Laramie (Albany County)",
+      "kind": "city",
+      "office": "City of Laramie Building Department (Code Administration)",
+      "portal_name": "Civic Access web portal",
+      "portal_url": "https://cityoflaramiewy-energovweb.tylerhost.net/apps/selfservice#/home",
+      "notes": [
+        "The city requires building permits for most residential projects and publishes a short list of exceptions; it tells applicants to contact Code Administration if unsure.",
+        "Building, electrical, mechanical, plumbing and sign permits must all be applied for through the Civic Access web portal.",
+        "The city publishes informational bulletins on adopted codes and design criteria, plan and drawing standards, and site plan requirements."
+      ],
+      "sources": [
+        {
+          "title": "Building Permits and Informational Bulletins (City of Laramie)",
+          "url": "https://cityoflaramie.org/432/Building-Permits-and-Inspections"
+        }
+      ]
+    },
+    {
+      "name": "Jackson (Teton County)",
+      "kind": "town",
+      "office": "Town of Jackson Planning & Building Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The town's one and two family building permit application is submitted by email to townbuilding@jacksonwy.gov.",
+        "That application says separate permits are required for plumbing, mechanical and electrical work.",
+        "Grading information is submitted with the building permit; plan-level grading information must be prepared by a Wyoming-registered professional engineer or landscape architect unless exempted."
+      ],
+      "sources": [
+        {
+          "title": "One and Two Family Building Permit Application (Town of Jackson, effective June 2026)",
+          "url": "https://www.jacksonwy.gov/DocumentCenter/View/140/Residential-Building-Permit-PDF"
+        },
+        {
+          "title": "Permits and Applications (Town of Jackson)",
+          "url": "https://www.jacksonwy.gov/325/Permits-Applications"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "No Wyoming page opened gave pool-specific residential permit rules; notes are about the general building permit process in each place.",
+    "Casper and Natrona County: casperwy.gov and natronacounty-wy.gov returned 403 to automated fetch, so Casper is not included.",
+    "Sheridan and Teton County were not verified; only 3 jurisdictions are included.",
+    "Cheyenne pool handout not found; the plan review sheet only mentions Environmental Health for swimming pools.",
+    "Web search budget ran out, so jurisdictions were found by browsing city sites directly."
+  ]
+}

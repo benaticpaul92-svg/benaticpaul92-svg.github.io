@@ -1,0 +1,62 @@
+{
+  "state": "Hawaii",
+  "slug": "hawaii",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Honolulu (City and County of Honolulu, Oahu)",
+      "kind": "city-county",
+      "office": "Department of Planning and Permitting (DPP)",
+      "portal_name": "HNL Build (permit application) and ePlans (plan upload)",
+      "portal_url": "https://www.honolulu.gov/dpp/permitting/building-permits-home/building-permit-requriements/",
+      "notes": [
+        "Applicants apply for the building permit online through HNL Build, then upload plans to DPP through ePlans using a link emailed after the application.",
+        "The DPP requirements page says plans must be stamped and signed by a licensed professional when work is in a special management area, flood hazard area or special design district.",
+        "The same page also requires a licensed professional's stamp when principal structural members are reinforced concrete or structural steel.",
+        "Any project that does not qualify for an Instant Online Permit needs plans that meet DPP's Building Permit Plan Format Checklist."
+      ],
+      "sources": [
+        {"title": "Building Permit Requirements - Department of Planning and Permitting, City and County of Honolulu", "url": "https://www.honolulu.gov/dpp/permitting/building-permits-home/building-permit-requriements/"}
+      ]
+    },
+    {
+      "name": "Kauai County",
+      "kind": "county",
+      "office": "Department of Public Works, Building Division",
+      "portal_name": "Electronic Plan Review (ePlan) and Building Permits Online",
+      "portal_url": "https://www.kauai.gov/Government/Departments-Agencies/Public-Works/Building-Division/Electronic-Plan-Review",
+      "notes": [
+        "The County's building permit application form lists Swimming Pool as a type of work.",
+        "The application form says the separate zoning permit application is submitted through the County's connect.kauai.gov site, which requires an account.",
+        "Plans are submitted electronically through the Electronic Plan Review system after the application request is accepted and an email invitation is sent.",
+        "The Building Division's single-family plan review checklist says plans must comply with the 2018 IRC and 2018 IECC as adopted by the State of Hawaii, and the 2018 UPC and 2017 NEC as adopted by the County."
+      ],
+      "sources": [
+        {"title": "Building Permit Guide - Kauai County Building Division", "url": "https://www.kauai.gov/Government/Departments-Agencies/Public-Works/Building-Division/Permitting"},
+        {"title": "Electronic Plan Review - Kauai County Building Division", "url": "https://www.kauai.gov/Government/Departments-Agencies/Public-Works/Building-Division/Electronic-Plan-Review"},
+        {"title": "County of Kauai Department of Public Works Building Division - Building Permit Application", "url": "https://www.kauai.gov/files/assets/public/v/1/public-works/building-division/documents/bp-application-2025.03.18-pln.pdf"},
+        {"title": "DPW/Building Division SFR/Duplex Plan Review Checklist 08/08/2023", "url": "https://www.kauai.gov/files/assets/public/v/1/public-works/building-division/documents/sfr-duplex-plan-review-checklist-2023.08.08.pdf"}
+      ]
+    },
+    {
+      "name": "Maui County",
+      "kind": "county",
+      "office": "Department of Public Works, Development Services Administration",
+      "portal_name": "MAPPS (Maui's Automated Planning and Permitting System)",
+      "portal_url": "https://mapps.mauicounty.gov/",
+      "notes": [
+        "The County's MAPPS site lets applicants apply for permits and plans online and use a Customer Self Service portal to check status and request inspections."
+      ],
+      "sources": [
+        {"title": "Maui County MAPPS", "url": "https://mapps.mauicounty.gov/"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Hawaii County (Hilo/Kona): all official pages (hawaiicounty.gov, records.hawaiicounty.gov) refused or blocked automated access, so nothing was verified.",
+    "Honolulu: no official page opened that states pool-specific rules (barrier, setbacks); the codelibrary.amlegal.com ROH pages returned 403.",
+    "Maui County: the residential checklist and DSA pages returned 403; only the MAPPS home page was verified, no pool-specific rules.",
+    "Kauai: the opened checklist and application PDFs did not state a pool barrier rule; none recorded."
+  ]
+}

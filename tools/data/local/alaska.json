@@ -1,0 +1,114 @@
+{
+  "state": "Alaska",
+  "slug": "alaska",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Anchorage (Municipality of Anchorage)",
+      "kind": "city-borough",
+      "office": "Municipality of Anchorage Development Services, Permit Management",
+      "portal_name": "Dynamic Portal",
+      "portal_url": "https://permitcenter.muni.org",
+      "notes": [
+        "Development Services handles permits and inspections, and applicants use the Dynamic Portal at permitcenter.muni.org.",
+        "Permit status and inspections can be tracked through a separate Check Permit Status page at bsd.muni.org."
+      ],
+      "sources": [
+        {
+          "title": "Municipality of Anchorage Development Services - Policies",
+          "url": "https://www.muni.org/Departments/OCPD/development/BSD/Pages/Policies.aspx"
+        },
+        {
+          "title": "Municipality of Anchorage Development Services - Permits",
+          "url": "https://www.muni.org/Departments/OCPD/development/BSD/Pages/Permits.aspx"
+        }
+      ]
+    },
+    {
+      "name": "Fairbanks / Fairbanks North Star Borough",
+      "kind": "city-borough",
+      "office": "City of Fairbanks Building Department and Fairbanks North Star Borough Community Planning",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The City of Fairbanks page lists no online permit portal; the building permit application is completed and signed, then submitted with two sets of plans.",
+        "Plans must include the items on the city's Residential Plan Submittal Checklist, and the applicant names an energy compliance method.",
+        "A zoning permit from the Fairbanks North Star Borough Planning Department must be included with the city building permit application.",
+        "The city reviews plans against the codes and local amendments it has adopted; the page does not name an edition.",
+        "The borough's Community Planning office offers a zoning permit that checks setbacks and use for the zoning district; applications go to planning@fnsb.gov."
+      ],
+      "sources": [
+        {
+          "title": "City of Fairbanks - How to Obtain a Permit",
+          "url": "https://fairbanks.gov/building/how-to-obtain-a-permit"
+        },
+        {
+          "title": "Fairbanks North Star Borough - Community Planning",
+          "url": "https://www.fnsb.gov/177/Community-Planning"
+        }
+      ]
+    },
+    {
+      "name": "Juneau (City and Borough of Juneau)",
+      "kind": "city-borough",
+      "office": "CBJ Community Development Department, Building and Permit Center",
+      "portal_name": "CBJ Energov self-service portal (Civic Access)",
+      "portal_url": "https://cityandboroughofjuneauak-energovweb.tylerhost.net/apps/selfservice#/home",
+      "notes": [
+        "CBJ Building reviews permit applications and inspects construction against the International Building Code, with Juneau's local changes in Title 19.",
+        "Building, land use, engineering and fire permits can all be applied for at the Permit Center, and applications are filed through the online self-service portal.",
+        "Residential new construction applications need a to-scale site plan showing dimensions and property lines, per the city's residential new construction page.",
+        "The city's fence page requires a building permit for fences over seven feet tall, with a to-scale site plan and an engineer-designed structural plan; that page does not mention pools."
+      ],
+      "sources": [
+        {
+          "title": "CBJ Community Development - What We Do",
+          "url": "https://juneau.org/community-development/what-we-do"
+        },
+        {
+          "title": "CBJ Community Development - Residential New Construction",
+          "url": "https://juneau.org/community-development/residential-new-construction"
+        },
+        {
+          "title": "CBJ Community Development - Fences",
+          "url": "https://juneau.org/community-development/project-fences"
+        }
+      ]
+    },
+    {
+      "name": "Mat-Su Borough (outside Palmer, Wasilla and Houston)",
+      "kind": "borough",
+      "office": "Matanuska-Susitna Borough Permit Center, Development Services",
+      "portal_name": "MSB Permit Portal",
+      "portal_url": "https://matsu.gov/services/plan-review-permitting",
+      "notes": [
+        "Building permit applications are submitted online through the borough's permit portal.",
+        "The borough has adopted the 2021 IBC, IFC, IMC and IEBC under Title 13 of the Alaska Administrative Code, effective October 28, 2022.",
+        "The borough page says the State of Alaska and the borough have not adopted the International Residential Code; the 2021 IRC is listed for reference only.",
+        "A Mandatory Land Use Permit is required outside Palmer, Wasilla and Houston for any structure within 75 feet of a watercourse or waterbody, with a site plan showing setbacks and nearby waterbodies."
+      ],
+      "sources": [
+        {
+          "title": "MSB - Plan Review and Permitting",
+          "url": "https://matsu.gov/services/plan-review-permitting"
+        },
+        {
+          "title": "MSB - Building Codes, 2021 Code Cycle",
+          "url": "https://matsu.gov/adopted-building-codes-2021-code-cycle"
+        },
+        {
+          "title": "MSB - Mandatory Land Use Permit",
+          "url": "https://matsu.gov/services/mandatory-land-use-permit"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Anchorage: no official page opened that states residential pool permit submittals, barrier rules or the adopted code edition (muni.org code pages and ecode360 returned only landing pages or 403).",
+    "Fairbanks: city exemption list PDF returned 404, so pool exemption wording was not verified; city code edition not named on opened page.",
+    "Juneau: no official page found that addresses private swimming pools; Title 19 on municode was not opened.",
+    "Mat-Su: opened borough pages do not mention residential swimming pools, so whether a private pool needs a building permit is unconfirmed; the Mat-Su portal URL listed is the permitting page that links to it.",
+    "Fairbanks North Star Borough: residential zoning application PDF was unreadable, so setbacks and pool-specific zoning rules were not verified."
+  ]
+}

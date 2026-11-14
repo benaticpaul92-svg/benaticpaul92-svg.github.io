@@ -1,0 +1,73 @@
+{
+  "state": "New Hampshire",
+  "slug": "new-hampshire",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Portsmouth",
+      "kind": "city",
+      "office": "City of Portsmouth Inspection Department",
+      "portal_name": "Viewpoint Permitting",
+      "portal_url": "",
+      "notes": [
+        "The Inspection Department lists pools, above and below ground, among new structures that need a building permit.",
+        "Applications need plans or sketches of the scope of work and a site plan showing setbacks.",
+        "The city says most residential projects do not need stamped structural plans, and the code official decides when engineered plans are required.",
+        "Electric, plumbing and mechanical permits are submitted online; a project in a Historic District that changes the exterior needs a separate Historic District Commission application."
+      ],
+      "sources": [
+        {
+          "title": "Inspection Department - City of Portsmouth",
+          "url": "https://www.portsmouthnh.gov/inspection"
+        }
+      ]
+    },
+    {
+      "name": "Manchester",
+      "kind": "city",
+      "office": "City of Manchester Planning and Community Development Department, Building",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Effective July 1, 2024, the department enforces the 2021 International Residential Code and 2021 International Swimming Pool and Spa Code, with state and local amendments.",
+        "It also lists the 2018 International Energy Conservation Code and the 2020 National Electrical Code.",
+        "Electrical and plumbing permit applications can be filled out online but must be printed, signed and mailed in with fees.",
+        "The city's Health Department has separate Pool and Spa Permits pages under Recreational Water Quality."
+      ],
+      "sources": [
+        {
+          "title": "Building Codes - City of Manchester",
+          "url": "https://www.manchesternh.gov/Departments/Planning-and-Comm-Dev/Building/Building-Codes"
+        },
+        {
+          "title": "Permit Applications - City of Manchester",
+          "url": "https://www.manchesternh.gov/Departments/Planning-and-Comm-Dev/Building/Permit-Applications"
+        }
+      ]
+    },
+    {
+      "name": "Concord",
+      "kind": "city",
+      "office": "City of Concord Permits & Fees (Code Administration)",
+      "portal_name": "Permit Portal (EnerGov Self Service)",
+      "portal_url": "",
+      "notes": [
+        "The city lists Building, Fire Prevention, Mechanical, Plumbing, Electrical, Demolition and Change of Occupancy permits.",
+        "The online Permit Portal handles applications, saved templates, inspection viewing and invoice payment."
+      ],
+      "sources": [
+        {
+          "title": "Permits & Fees - City of Concord",
+          "url": "https://www.concordnh.gov/963/Permits-Fees"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Nashua: the building permit page could not be reached from the city site, so Nashua is not included; only 3 of 4 jurisdictions.",
+    "Manchester's building FAQ answer 'What do I need to get a pool permit?' is hidden in the page and could not be read, so no Manchester submittal list is given.",
+    "Portal URLs for Manchester, Concord were not opened, so portal_url is empty; no New Hampshire city page with a pool-specific checklist or barrier rule was found.",
+    "State-level RSA 155-A and Building Code Review Board facts were not re-verified on a state site."
+  ]
+}

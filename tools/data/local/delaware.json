@@ -1,0 +1,62 @@
+{
+  "state": "Delaware",
+  "slug": "delaware",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Kent County (Dover area, unincorporated)",
+      "kind": "county",
+      "office": "Kent County Department of Planning Services, Building Permits",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "A permit is required for above-ground and in-ground pools, hot tubs and spas.",
+        "The county publishes a pool permit guide and a Pool Barrier Requirements Brochure on its building permit information page.",
+        "Kent County lists the 2018 International Residential Code with county amendments as adopted, and its page names no swimming pool code edition.",
+        "Fences over 7 feet need a permit except when enclosing a swimming pool area; zoning rules still apply."
+      ],
+      "sources": [
+        {"title": "What Information Do I Need for a Building Permit - Kent County", "url": "https://www.kentcountyde.gov/Residents/Permits/Building-Permits/What-Information-Do-I-Need-for-a-Building-Permit"},
+        {"title": "Permitting Requirements and Adopted Codes - Kent County", "url": "https://www.kentcountyde.gov/Residents/Permits/Building-Permits/Permitting-Requirements-Adopted-Codes"}
+      ]
+    },
+    {
+      "name": "Milford",
+      "kind": "city",
+      "office": "City of Milford Building Inspections & Permitting",
+      "portal_name": "Civic Access portal",
+      "portal_url": "https://www.cityofmilford.com/15/Building-Inspections-Permitting",
+      "notes": [
+        "The division handles building permits and inspections for residential work, and its page lists fee schedules and guidelines for pools among other project types.",
+        "Building permits, inspection scheduling and licences are handled through the city's Civic Access portal.",
+        "The page references the 2018 International Building Code, International Residential Code and International Swimming Pool and Spa Code."
+      ],
+      "sources": [
+        {"title": "Building Inspections & Permitting - Milford", "url": "https://www.cityofmilford.com/15/Building-Inspections-Permitting"}
+      ]
+    },
+    {
+      "name": "Newark",
+      "kind": "city",
+      "office": "City of Newark Code Enforcement Division",
+      "portal_name": "City self-service portal (EnerGov)",
+      "portal_url": "https://www.newarkde.gov/1021/Forms-and-Applications",
+      "notes": [
+        "The city's Forms and Applications page directs building permit applicants to its online self-service portal.",
+        "The page lists a downloadable Building Permit Application under the Code Enforcement Division; it has no pool-specific permit page."
+      ],
+      "sources": [
+        {"title": "Forms and Applications - Newark, Delaware", "url": "https://www.newarkde.gov/1021/Forms-and-Applications"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Sussex County, New Castle County and Wilmington sites returned 403 to automated fetches; nothing verified.",
+    "Rehoboth Beach returned 429 (too many requests); nothing verified.",
+    "Kent County's pool permit guide and barrier brochure PDFs were not opened, so no barrier numbers are given.",
+    "Newark's page has no pool-specific content; only the portal is verified.",
+    "None of the opened pages state whether pool plans must be engineer-sealed.",
+    "Only 3 jurisdictions delivered."
+  ]
+}

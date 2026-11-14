@@ -1,0 +1,126 @@
+{
+  "state": "Arizona",
+  "slug": "arizona",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Phoenix",
+      "kind": "city",
+      "office": "City of Phoenix Planning & Development Department",
+      "portal_name": "Electronic Plan Review (EPR) web portal and ProjectDox",
+      "portal_url": "https://www.phoenix.gov/pdd/onlineservices/electronic-plan-review",
+      "notes": [
+        "Phoenix separates residential pools into standard pools (an approved engineered plan on file with the city) and custom pools (an engineered design for one site).",
+        "A pool submittal needs a pool/spa application and two scaled plot plans showing property lines, easements, setbacks, equipment locations and the fence or barrier around the pool.",
+        "A custom pool also needs two original sets of site-specific structural engineering for the pool and two sets of calculations where applicable; the guideline says sealed calculations are acceptable but not required.",
+        "Custom pools can be submitted through the EPR system, by email to plotplan.submittals@phoenix.gov, or at the 200 West Washington Street counter.",
+        "A land survey is required when a pool is built less than two feet from, or into, a required setback; an owner or contractor survey waiver can be submitted instead."
+      ],
+      "sources": [
+        {"title": "Pool Spa Permit Guidelines, Residential Submittals", "url": "https://www.phoenix.gov/content/dam/phoenix/pddsite/documents/trt/external/dsd_trt_pdf_00914.pdf"},
+        {"title": "Pool, Property Survey Requirements", "url": "https://www.phoenix.gov/content/dam/phoenix/pddsite/documents/trt/external/dsd_trt_pdf_00278.pdf"},
+        {"title": "Electronic Plan Review (Phoenix Planning & Development)", "url": "https://www.phoenix.gov/pdd/onlineservices/electronic-plan-review"}
+      ]
+    },
+    {
+      "name": "Tucson",
+      "kind": "city",
+      "office": "City of Tucson Planning & Development Services",
+      "portal_name": "Tucson Development Center (TDC) Online",
+      "portal_url": "https://tdc-online.tucsonaz.gov/#/home",
+      "notes": [
+        "Tucson requires a Swimming Pool permit to construct any in-ground pool, spa, hot tub or pond designed to hold standing water.",
+        "An above-ground structure holding standing water needs a permit if it exceeds 5,000 gallons or is deeper than 18 inches.",
+        "Demolishing, filling in or removing an existing pool or spa needs a Swimming Pool Demolition permit, and a filled pool must include structural modification for positive drainage.",
+        "Residential permit applications go through TDC Online, and pool construction falls under the city's Fast Lane review.",
+        "Owners who act as their own builder must sign an Owner/Builder Affidavit and be listed as the owner on the permit."
+      ],
+      "sources": [
+        {"title": "Do I Need a Permit? (Exemptions), City of Tucson", "url": "https://www.tucsonaz.gov/Departments/Planning-Development-Services/Permits/Tucson-Permit-Exemptions"},
+        {"title": "Residential Permits, City of Tucson", "url": "https://www.tucsonaz.gov/Departments/Planning-Development-Services/Permits/Residential-Permits"}
+      ]
+    },
+    {
+      "name": "Mesa",
+      "kind": "city",
+      "office": "City of Mesa Development Services",
+      "portal_name": "DIMES (Accela)",
+      "portal_url": "https://aca-prod.accela.com/MESA/Default.aspx",
+      "notes": [
+        "Mesa requires a construction permit to build or fill in an in-ground swimming pool, applied for online through the DIMES system.",
+        "The city's pool document list asks for a contractor licensure verification form, a fully dimensioned site plan, architectural, structural and engineer-sealed drawings, and electrical, plumbing and mechanical plans.",
+        "The pool checklist states 2024 International Swimming Pool and Spa Code, 2024 International Residential Code and 2023 NEC, with Mesa amendments.",
+        "The checklist requires the water's edge at least 4 feet from property lines, a barrier at least 60 inches high, and no pool or equipment in a public utility easement.",
+        "If the property is in a flood zone, approval from the Maricopa County Flood Control District is needed before applying for the Mesa permit."
+      ],
+      "sources": [
+        {"title": "Residential Construction, City of Mesa", "url": "https://www.mesaaz.gov/Business-Development/Development-Services/Building-Permit-Plan-Review/Residential-Construction"},
+        {"title": "Swimming Pool and Spa Plan Submittal Checklist", "url": "https://www.mesaaz.gov/files/assets/public/v/3/business-development/devsvcs/checklists/residential-poolspa.pdf"}
+      ]
+    },
+    {
+      "name": "Scottsdale",
+      "kind": "city",
+      "office": "City of Scottsdale Planning and Development Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Scottsdale needs a pool permit for a new pool, and the permit covers the pool and related electrical and plumbing work.",
+        "A standard pool submittal needs two sets of structural plans, two sets of structural calculations and a completed Pool & Spa Permit Application; custom pools submit full plans, details and calculations.",
+        "The site plan must show the whole lot to scale, with setbacks, easements, utilities, equipment screening and flood zones, and pools and pool equipment are not allowed in any Public Utility Easement.",
+        "Pool plan approval waits until the accompanying fence or wall plan is approved, and a separate fence permit is needed.",
+        "The city's page cites the 2021 pool codes, Section 305, with local amendments for barriers."
+      ],
+      "sources": [
+        {"title": "Swimming Pools, Hot Tubs and Spas, City of Scottsdale", "url": "https://www.scottsdaleaz.gov/codes-and-ordinances/swimming-pools"},
+        {"title": "Swimming Pools and Spa Requirements (site plan, rev. 8/1/2025)", "url": "https://www.scottsdaleaz.gov/docs/default-source/scottsdaleaz/building/pool-site-plan-requirements.pdf?sfvrsn=c66b8c85_3"}
+      ]
+    },
+    {
+      "name": "Chandler",
+      "kind": "city",
+      "office": "City of Chandler Development Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Chandler requires a permit for all pools and spas, above or below ground, and defines a pool as water deeper than 18 inches.",
+        "Stamped and sealed engineering plans are required for all custom in-ground pools and spas.",
+        "Pools may not occupy a front yard, and an engineered surcharge design is required for in-ground pools built closer than 5 feet to a building foundation.",
+        "Pool equipment must be 5 feet from the water's edge, and easements must be cleared by the utility companies before construction.",
+        "The pool barrier top must be at least 6 feet above grade on the outside, or at least 6 and no more than 7 feet for the perimeter fence per the fencing page, and wood fencing is not allowed for new pool fences."
+      ],
+      "sources": [
+        {"title": "Homeowner Building Permit Manual (Swimming Pools and Spas)", "url": "https://www.chandleraz.gov/sites/default/files/departments/development-services/City-of-Chandler-Home-Owners-Building-Permit-Manual.pdf"},
+        {"title": "Chandler Pool Fencing Requirements", "url": "https://www.chandleraz.gov/government/departments/development-services/building-safety-plan-review-permits-and-inspections/pool-fencing-requirements"}
+      ]
+    },
+    {
+      "name": "Tucson area / Pima County (unincorporated)",
+      "kind": "county",
+      "office": "Pima County Public Works, Development Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Pima County's custom pool submittal calls for construction drawings, sealed structural calculations, a scaled site plan with setbacks and equipment locations, and a cover sheet stating the code edition.",
+        "The custom pool page also lists the barrier type, an electrical plan with panel schedule and equipotential bonding grid, and equipment and heater details.",
+        "The county page says prior approval may be required from the Regional Flood Control District, Regional Wastewater Reclamation Department, Department of Environmental Quality or Department of Transportation.",
+        "The residential barrier page cites Chapter 3 of the 2018 International Swimming Pool and Spa Code and requires a barrier top at least 48 inches above grade.",
+        "Pedestrian gates in a Pima County pool barrier must open outward, away from the pool, and be self-closing and self-latching."
+      ],
+      "sources": [
+        {"title": "Custom Pools, Pima County", "url": "https://www.pima.gov/custom-pools"},
+        {"title": "Barriers for Residential Pools / Spas, Pima County", "url": "https://www.pima.gov/1022/Barriers-for-Residential-Pools-Spas"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Gilbert's pool permit pages returned HTTP 403 and could not be opened, so Gilbert was dropped.",
+    "Maricopa County unincorporated pool page was opened but mixes older guidance (2018 code addenda) with a notice about a new permitting system; not used pending confirmation of the current process and portal.",
+    "No online portal name could be confirmed from the opened pages for Scottsdale, Chandler or Pima County pool permits, so portal fields are blank.",
+    "Chandler's own documents disagree on barrier height (manual: 6 ft exterior barrier; fencing page: 6 to 7 ft perimeter fence); older barrier guideline cites a 5 ft barrier and was not used.",
+    "Phoenix guideline PDF is Rev. 5/16; current fee and form details were not verified. Phoenix code edition was not found on opened pages.",
+    "Tucson and Pima County code editions were not stated on the opened Tucson pages; Pima barrier page cites the 2018 ISPSC while county pages mention 2024 amendments.",
+    "Only 6 jurisdictions are included; the Chandler and Scottsdale pages did not state the portal used."
+  ]
+}

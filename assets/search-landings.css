@@ -3,3 +3,33 @@
 @media(max-width:1000px){.search-grid,.package-editorial,.input-grid{gap:2rem}.quote-panel{padding:1.3rem}.quote-panel .form-row{grid-template-columns:1fr;gap:0}.search-copy h1{font-size:2.8rem}.search-landing #navMenu{gap:1rem}.search-landing #navMenu>a:not(.button){font-size:.8rem}}
 @media(max-width:760px){.search-grid,.package-editorial,.input-grid{grid-template-columns:1fr}.search-hero{padding:1.5rem 0 2rem}.search-copy{padding:0}.search-copy h1{font-size:clamp(2.3rem,8vw,3rem)}.search-copy .eyebrow{font-size:.62rem}.search-copy .lead{font-size:1rem;margin-top:1rem}.search-copy .actions{margin-top:1.2rem}.delivery-facts{margin-top:1.5rem;gap:2rem}.search-contact{margin-top:1rem!important}.quote-panel{padding:1.3rem}.quote-panel .form-row{grid-template-columns:1fr 1fr;gap:.8rem}.landing-nav .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}.landing-nav a{padding:.7rem 0}.delivery-steps{grid-template-columns:1fr;gap:1.5rem}.coverage-line .wrap{display:block}.coverage-line a{display:inline-block;margin-top:.5rem}.package-editorial h2 br{display:none}}
 @media(max-width:400px){.quote-panel .form-row{grid-template-columns:1fr;gap:0}.delivery-facts{gap:1.5rem}.delivery-facts dd{font-size:1.15rem}.quote-panel{padding:1rem}.search-landing .wrap{width:calc(100% - 2rem)}}
+/* State pages: breadcrumb, city and county permit notes, state rules, questions, state links. */
+.crumbs{font-size:.75rem;margin-bottom:1rem}.crumbs a{display:inline-block;padding:.5rem 0}
+.local-section,.req-section,.faq-section{border-top:1px solid var(--line)}
+.local-head{display:grid;grid-template-columns:1fr 1.15fr;gap:5rem;align-items:start}
+.local-head h2,.req-grid h2,.search-landing .faq-layout h2{font:500 clamp(2rem,3.2vw,3.1rem)/1.12 Georgia,serif;letter-spacing:-.04em;max-width:none}
+.local-head p{max-width:38rem;margin-top:0}.local-head p+p{margin-top:1rem}
+.local-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+.local-card{border:1px solid var(--line);border-radius:.3rem;padding:1.4rem 1.5rem}
+.local-card h3{font-size:1.2rem;margin:0}
+.local-office{font-size:.85rem;margin-top:.5rem}.local-portal{display:block;margin-top:.2rem}
+.local-card ul,.state-level ul{padding-left:1.1rem;margin:.9rem 0 0}
+.local-card li,.state-level li{font-size:.95rem;padding:.3rem 0}
+.local-src{font-size:.78rem;margin-top:.9rem;overflow-wrap:anywhere}
+.local-card a,.state-level a,.nearby-line a,.package-links a{text-decoration:underline}
+.state-level{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.5rem}.state-level h3{font-size:1.2rem;margin:0}
+.req-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}.req-grid.single{grid-template-columns:1fr;max-width:48rem}
+.req-grid p{margin-top:1.2rem;max-width:36rem}
+.req-list{list-style:none;padding:0;margin:1.5rem 0 0}
+.req-list li{display:grid;grid-template-columns:2rem 1fr;gap:1rem;padding:.9rem 0;border-top:1px solid var(--line);font-size:.95rem}
+.req-list b{font-size:.75rem;font-weight:400;padding-top:.2rem}
+.facts-title{font-size:1.2rem;margin:0}
+.state-facts{margin:1.2rem 0 0}
+.state-facts dt{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding-top:1rem;border-top:1px solid var(--line)}
+.state-facts dd{margin:.4rem 0 1rem;font-size:.95rem}
+.search-landing .faq-list details{border-top:1px solid var(--line)}.search-landing .faq-list details:last-child{border-bottom:1px solid var(--line)}
+.package-links{font-size:.85rem;margin-top:1rem}
+.coverage-line .coverage-more{display:block;margin-top:.5rem}.nearby-line{font-size:.85rem;margin:0 0 .5rem}.nearby-line a{display:inline-block;padding:.5rem 0}
+.coverage-line .state-directory{margin-top:.5rem}
+@media(max-width:1000px){.local-head,.req-grid{gap:2rem}}
+@media(max-width:760px){.local-head,.req-grid,.local-grid{grid-template-columns:1fr}.local-card{padding:1.1rem 1.1rem}.landing-nav a{font-size:.8rem}}

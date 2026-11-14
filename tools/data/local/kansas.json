@@ -1,0 +1,52 @@
+{
+  "state": "Kansas",
+  "slug": "kansas",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Johnson County (unincorporated areas)",
+      "kind": "county",
+      "office": "Johnson County Building Codes",
+      "portal_name": "MGO Connect",
+      "portal_url": "https://www.jocogov.org/department/building-codes/building-permits/swimming-pool-permit",
+      "notes": [
+        "Any pool 24 inches deep or more needs a permit. The county page covers unincorporated Johnson County only; addresses inside a city go to that city. Applications and plan uploads go through the MGO Connect portal.",
+        "Required uploads include a site plan, the Land Disturbance Certification and the Residential Swimming Pool APSP-15 Compliance Information Sheet.",
+        "Concrete and gunite pools need plans designed and sealed by a design professional registered in Kansas. Pre-manufactured liner pools need the manufacturer cut sheet to check lateral loads.",
+        "The barrier must be shown on the site plan with dimensions, fence type and gates. It must pass final inspection before the pool is filled with water."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool Permit - Johnson County Kansas",
+          "url": "https://www.jocogov.org/department/building-codes/building-permits/swimming-pool-permit"
+        }
+      ]
+    },
+    {
+      "name": "Lawrence / Douglas County",
+      "kind": "city",
+      "office": "City of Lawrence Planning & Development Services, Building Safety Division",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The city has adopted the International Swimming Pool and Spa Code (ISPSC) for in-ground, above-ground and on-ground pools, hot tubs and spas.",
+        "The Douglas County Health Department must issue a letter of review and approval before the city issues a pool building permit.",
+        "The application needs a scaled plot plan (pool, equipment, structures, property lines, easements, setbacks, power lines, barrier) plus pool plans or manufacturer specifications and barrier details.",
+        "Pools must be in the rear yard, at least 5 feet from all property lines, and not in an easement. The minimum barrier height is 4 feet."
+      ],
+      "sources": [
+        {
+          "title": "Residential Pools, Hot Tubs and Spas (Lawrence Building Safety guideline)",
+          "url": "https://assets.lawrenceks.org/pds/devservices/bsd/swimming-pool-hot-tub-spa-guidelines-03-2021.pdf"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Overland Park: opkansas.gov pool and building-code pages open only as empty shells (script-rendered) and the older opkansas.org files were blocked; nothing verified.",
+    "Olathe: olatheks.gov pages returned 403 to WebFetch and curl; nothing verified.",
+    "Wichita / Sedgwick County: wichita.gov document pages blocked (Cloudflare/403) and the sedgwickcounty.org code PDF would not load; nothing verified.",
+    "Topeka / Lenexa: not opened (Lenexa blocked; the web search quota ran out before Topeka could be checked)."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "state": "Nebraska",
+  "slug": "nebraska",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Lincoln / Lancaster County",
+      "kind": "city-county",
+      "office": "Lincoln Planning and Development Services, Building and Safety",
+      "portal_name": "Lincoln/Lancaster County Citizen Access Portal (Accela)",
+      "portal_url": "https://aca-prod.accela.com/LINCOLN",
+      "notes": [
+        "Building permit applications are made through the Citizen Access portal."
+      ],
+      "sources": [
+        {
+          "title": "Lincoln/Lancaster County Citizen Access Portal",
+          "url": "https://aca-prod.accela.com/LINCOLN"
+        },
+        {
+          "title": "Residential Building - City of Lincoln",
+          "url": "https://www.lincoln.ne.gov/City/Departments/Building-Safety/Residential-Building"
+        },
+        {
+          "title": "Permit Applications - City of Lincoln",
+          "url": "https://www.lincoln.ne.gov/City/Departments/Building-Safety/Permit-Applications"
+        }
+      ]
+    },
+    {
+      "name": "Sarpy County (unincorporated areas)",
+      "kind": "county",
+      "office": "Sarpy County Planning & Building",
+      "portal_name": "Sarpy County Online Permitting System (SmartGov)",
+      "portal_url": "",
+      "notes": [
+        "Sarpy County handles zoning and building outside municipal limits and extraterritorial jurisdiction.",
+        "Projects inside Papillion, Gretna, Bellevue, Springfield or La Vista go to that city instead.",
+        "Building permits are applied for online in the county's permitting system, which is powered by SmartGov.",
+        "The county lists a separate operating permit for public swimming pools and spas; the permit page reviewed has no residential pool detail."
+      ],
+      "sources": [
+        {
+          "title": "Building Permit - Sarpy County",
+          "url": "https://www.sarpy.gov/745/Building-Permit"
+        },
+        {
+          "title": "Online Permitting - Sarpy County",
+          "url": "https://www.sarpy.gov/276/Online-Permitting"
+        },
+        {
+          "title": "Site map - Sarpy County",
+          "url": "https://www.sarpy.gov/sitemap"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Omaha and Douglas County official sites returned 403 to automated fetches, so nothing was verified for them.",
+    "Papillion, Bellevue and Grand Island pages were blocked or gave no permit content.",
+    "No Nebraska city page with a residential pool-specific checklist, barrier rule or sealed-plan requirement was found; only 2 jurisdictions are included.",
+    "Neb. Rev. Stat. 71-6403 on nebraskalegislature.gov could not be opened.",
+    "Sarpy County portal URL was not opened, so portal_url is empty."
+  ]
+}

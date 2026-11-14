@@ -1,0 +1,67 @@
+{
+  "state": "Oregon",
+  "slug": "oregon",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Portland",
+      "kind": "city",
+      "office": "Portland Permitting & Development",
+      "portal_name": "Development Hub PDX",
+      "portal_url": "https://www.portland.gov/ppd/residential-permitting/residential-projects/pool-hot-tub-pond",
+      "notes": [
+        "The city's pool page says a building permit is needed before installing a swimming pool, defined as a structure holding water over 24 inches deep, unless the pool is prefabricated with walls entirely above adjacent grade.",
+        "An electrical permit is required for in-ground pools, and the permit application forms listed are the building, electrical and mechanical permit applications.",
+        "The page calls for a barrier at least 4 ft high, a maximum 2 inch gap under it, openings that do not pass a 4 inch sphere, and a self-closing, latching gate that opens outward.",
+        "The pool must be at least 3 feet from any lot line, set back from adjacent slopes, and may face extra zoning limits in an overlay zone or plan district."
+      ],
+      "sources": [
+        {"title": "Hot Tubs, Ponds, Swimming Pools, and Water Features (Portland.gov)", "url": "https://www.portland.gov/ppd/residential-permitting/residential-projects/pool-hot-tub-pond"}
+      ]
+    },
+    {
+      "name": "Medford",
+      "kind": "city",
+      "office": "City of Medford Building Safety Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The pool submittal guidelines ask for a building permit application, a Pool Barrier Acknowledgement form, and a to-scale site plan showing utility easements, setbacks and mechanical equipment location.",
+        "Site and pool construction documents must be at least 11x17, while engineering calculations and geotechnical reports may be 8.5x11.",
+        "The plans must state pool type (in-ground or above ground), depth, sand or cartridge filter, whether heated, and the auto fill and backflow device.",
+        "The final inspection checks a barrier at least 48 inches high, openings that stop a 4 inch sphere, and outward-opening self-latching, self-closing gates.",
+        "Medford requires a 4-foot high temporary or permanent fence around swimming pool excavations."
+      ],
+      "sources": [
+        {"title": "Swimming Pool Submittal Guidelines and Swimming Pool Safety (City of Medford)", "url": "https://www.medfordoregon.gov/files/assets/public/v/3/building-safety/documents/pool-submittal-guidelines.pdf"}
+      ]
+    },
+    {
+      "name": "Gresham",
+      "kind": "city",
+      "office": "City of Gresham Building Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Gresham's list of work not needing a permit exempts prefabricated pools in R-3 occupancies where the pool walls are entirely above the adjacent grade.",
+        "The same list says the barrier requirements in Appendix G are not exempt, so barriers around swimming pools still need a permit.",
+        "The list excludes pool barriers from its exemption for fences not over 7 feet high."
+      ],
+      "sources": [
+        {"title": "Projects That Do Not Require Permits (City of Gresham)", "url": "https://www.greshamoregon.gov/services/building-permits-and-inspections/projects-that-do-not-require-permits/"}
+      ]
+    }
+  ],
+  "state_level": [
+    {
+      "note": "Oregon Building Codes Division says a fence serving as a barrier around a swimming pool, hot tub or spa needs a residential building permit, and barriers around prefabricated above-grade pools are not exempt.",
+      "source": {"title": "About Oregon residential building permits (Building Codes Division)", "url": "https://www.oregon.gov/bcd/lbdd/pages/oregon-permits.aspx"}
+    }
+  ],
+  "gaps": [
+    "Salem, Eugene, Bend, Tigard, Redmond and Hillsboro official pages returned 403 to curl and WebFetch, so only 3 jurisdictions are covered.",
+    "Portland's Development Hub PDX link was not opened directly; the portal_url points to the pool page that names it.",
+    "Whether Portland and Medford require engineered plans was not stated on the pages opened.",
+    "Local code edition (2023 or 2026 ORSC) was not confirmed on any opened local page."
+  ]
+}

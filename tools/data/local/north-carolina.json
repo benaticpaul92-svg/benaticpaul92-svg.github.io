@@ -1,0 +1,100 @@
+{
+  "state": "North Carolina",
+  "slug": "north-carolina",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Raleigh",
+      "kind": "city",
+      "office": "City of Raleigh Planning and Development (Development Services)",
+      "portal_name": "Permit and Development Portal",
+      "portal_url": "https://raleighnc.gov/permits/services/installing-pool-or-spa",
+      "notes": [
+        "Building and electrical permits are required for any pool, spa or hot tub that can hold more than 24 in. of water.",
+        "A plumbing permit and backflow device are also needed if the pool connects to the home's water supply.",
+        "Applicants submit a survey of existing conditions and the proposed work, the fence (barrier) elevation, and an Owner Exemption Affidavit if the owner acts as contractor, all as PDFs through the Permit and Development Portal.",
+        "Pools, decks, equipment and fences may not sit in a public sewer easement or a public or private drainage easement, and pools and decks may not be built over septic systems or their repair areas.",
+        "The city's pool guide gives a barrier at least 48 in. above grade, self-closing and self-latching gates, and door alarms or a powered cover where the house wall is part of the barrier."
+      ],
+      "sources": [
+        {
+          "title": "Installing a Pool or Spa - City of Raleigh",
+          "url": "https://raleighnc.gov/permits/services/installing-pool-or-spa"
+        },
+        {
+          "title": "ABCs of Installing a Pool or Spa - City of Raleigh",
+          "url": "https://raleighnc.gov/permits/services/abcs-installing-pool-or-spa"
+        }
+      ]
+    },
+    {
+      "name": "New Hanover County (Wilmington area)",
+      "kind": "county",
+      "office": "New Hanover County Building Safety and Planning & Land Use (Zoning)",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The county's residential permit chart lists a pool as needing building and electrical permits, with its permit application links on the chart.",
+        "Pools under 600 sq ft may sit as close as 5 ft to side and rear property lines.",
+        "Pools of 600 sq ft and larger must meet setbacks based on the property's zoning classification.",
+        "The setback is measured to the pool depression of an in-ground pool, not to the surrounding concrete slab."
+      ],
+      "sources": [
+        {
+          "title": "Residential Permits chart - New Hanover County",
+          "url": "https://www.nhcgov.com/DocumentCenter/View/446/Do-I-Need-a-Permit-PDF"
+        },
+        {
+          "title": "FAQ: Do I need a permit for a swimming pool? - New Hanover County",
+          "url": "https://www.nhcgov.com/Faq.aspx?QID=478"
+        }
+      ]
+    },
+    {
+      "name": "Concord (Cabarrus County)",
+      "kind": "city",
+      "office": "City of Concord Planning & Development Services",
+      "portal_name": "Accela Citizen Access",
+      "portal_url": "https://accela1.cabarruscounty.us/CitizenAccess/",
+      "notes": [
+        "The permits page groups pools with accessory structures, sheds, decks and covered porches under one residential application.",
+        "Applicants fill in and digitally sign the application, save it as a PDF, and upload it to the Accela application.",
+        "All documents uploaded in the Accela system must be in PDF format."
+      ],
+      "sources": [
+        {
+          "title": "Permits - City of Concord Planning & Development Services",
+          "url": "https://concordnc.gov/Departments/Planning-Development-Services/Permits"
+        }
+      ]
+    },
+    {
+      "name": "Asheville (Buncombe County)",
+      "kind": "city",
+      "office": "City of Asheville Development Services Department, Permit Application Center",
+      "portal_name": "Development Portal",
+      "portal_url": "https://www.ashevillenc.gov/service/build-a-deck/",
+      "notes": [
+        "The city's residential permits page lists swimming pools under the guide for building a detached structure or deck.",
+        "Residential applications for these structures can be submitted online through the Development Portal or in person at the Permit Application Center at 161 South Charlotte Street."
+      ],
+      "sources": [
+        {
+          "title": "Residential property and permits - City of Asheville",
+          "url": "https://www.ashevillenc.gov/services/residential-property-permits/"
+        },
+        {
+          "title": "Build a detached structure or deck - City of Asheville",
+          "url": "https://www.ashevillenc.gov/service/build-a-deck/"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Only 4 of the 6 jurisdictions delivered: Charlotte/Mecklenburg, Durham, Cary, Greensboro, Wilmington, Wake Forest sites returned 403 or had no pool page, and the shared web search budget ran out before replacements could be searched. Mecklenburg, Durham, Cary and Greensboro need a re-run.",
+    "Raleigh plan/engineer requirements not stated on pages opened; code edition years not stated.",
+    "New Hanover chart columns are ambiguous for zoning and plan review on the pool row, so only building and electrical are stated.",
+    "Concord and Asheville pages do not give pool-specific barrier, plan or engineer rules."
+  ]
+}

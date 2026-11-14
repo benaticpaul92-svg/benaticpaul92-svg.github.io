@@ -1,0 +1,49 @@
+{
+  "state": "Utah",
+  "slug": "utah",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Utah County (unincorporated areas)",
+      "kind": "county",
+      "office": "Utah County Community Development, Building Division",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The Building Division handles permit applications, plan reviews and inspections only in the unincorporated parts of Utah County; properties inside a city use that city's office.",
+        "Every building permit needs the county's Building Permit Application (All Projects), and applications can be submitted in person or electronically.",
+        "The county lists the 2021 International Residential Code, the 2024 International Building Code and the 2023 National Electrical Code under Utah Code Title 15A.",
+        "The county's page lists frost depth as 30 in. or an engineer's design if deeper."
+      ],
+      "sources": [
+        {"title": "Utah County Community Development", "url": "https://codev.utahcounty.gov/"},
+        {"title": "Utah County Community Development, Building", "url": "https://codev.utahcounty.gov/building"}
+      ]
+    },
+    {
+      "name": "West Jordan (Salt Lake County)",
+      "kind": "city",
+      "office": "West Jordan Community Development, Building & Safety",
+      "portal_name": "West Jordan Development Public Portal",
+      "portal_url": "https://permit.westjordan.utah.gov/CityworksPortal-LIVE/login",
+      "notes": [
+        "Building permit applications are submitted online through the West Jordan Public Portal, which requires a registered account.",
+        "The Building & Safety page offers online submittal instructions, a site plan information handout, a Codes & Design Criteria sheet and an owner/builder certification form.",
+        "A property owner affidavit must be downloaded and submitted with the permit application."
+      ],
+      "sources": [
+        {"title": "West Jordan Building & Safety", "url": "https://www.westjordan.utah.gov/community-development/building-and-safety/"},
+        {"title": "West Jordan Development Application and Permits", "url": "https://www.westjordan.utah.gov/community-development/development-application-and-permits/"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Salt Lake County (slco.org): connection refused from this network, nothing verified.",
+    "Provo (provo.gov): HTTP 403, nothing verified.",
+    "St. George (sgcityutah.gov): HTTP 403, nothing verified.",
+    "Ogden: city site opened but no building services or pool page found; Weber County site unreachable; Davis County building page not found.",
+    "No official page opened for any of the four planned jurisdictions states a pool-specific permit rule; web search budget was exhausted, so notes cover general building permit facts only.",
+    "Utah state code (le.utah.gov, dopl.utah.gov, rules.utah.gov) unreachable, so no state-level notes added."
+  ]
+}

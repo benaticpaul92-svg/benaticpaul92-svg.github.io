@@ -1,0 +1,86 @@
+{
+  "state": "Vermont",
+  "slug": "vermont",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Burlington",
+      "kind": "city",
+      "office": "Burlington Department of Permitting & Inspections (Zoning Division and Building & Trades Division)",
+      "portal_name": "OpenGov",
+      "portal_url": "https://burlingtonvt.portal.opengov.com/",
+      "notes": [
+        "Under Sec. 3.1.2(a) on exterior work, a zoning permit is required to install or remove a swimming pool.",
+        "Burlington says most projects that need a zoning permit also need building, electrical, plumbing or mechanical permits, and that zoning approval comes first.",
+        "Zoning, building and trade permits can be applied for together in the city's online OpenGov permit system.",
+        "The Trades Division, at 802-863-9094, is the contact for what construction permits a project needs."
+      ],
+      "sources": [
+        {"title": "Burlington Department of Permitting & Inspections", "url": "https://www.burlingtonvt.gov/DPI"},
+        {"title": "When Do I Need to Apply for a Zoning Permit?", "url": "https://www.burlingtonvt.gov/691/When-Do-I-Need-to-Apply-for-a-Zoning-Per"},
+        {"title": "Construction Permits", "url": "https://www.burlingtonvt.gov/701/Construction-Permits"}
+      ]
+    },
+    {
+      "name": "South Burlington",
+      "kind": "city",
+      "office": "South Burlington Planning & Zoning (zoning); Fire Marshal and Electrical Inspection (building and electrical code inspections)",
+      "portal_name": "Permitting & Registration Portal",
+      "portal_url": "https://app.oncamino.com/southburlingtonvt",
+      "notes": [
+        "South Burlington says Planning and Zoning review is required for all land development projects.",
+        "City permit forms and applications can be submitted through the online Permitting & Registration Portal.",
+        "The Fire Marshal and Electrical Inspection service handles fire, building and electrical code compliance inspections.",
+        "Issued decisions, site plans and permits from earlier projects are archived online and can be searched by address."
+      ],
+      "sources": [
+        {"title": "City Permits, Licenses, and Registrations", "url": "https://www.southburlingtonvt.gov/502/City-Permits-Licenses-and-Registrations"}
+      ]
+    },
+    {
+      "name": "Rutland City",
+      "kind": "city",
+      "office": "Rutland City Planning & Zoning Department and Building Department",
+      "portal_name": "GovPilot eForms (Building & Zoning / DPW Permits)",
+      "portal_url": "https://eforms-main.govpilot.com/VT/rutlandcityvt",
+      "notes": [
+        "Rutland's Land Development Regulations list a swimming pool within the definition of a structure.",
+        "Zoning permit applications require an uploaded attachment such as a site plan or building plans, or the application is treated as incomplete.",
+        "Most zoning permits also need a separate building permit, which the Building Department handles.",
+        "The Building Department says both State and City building permits are required for most renovation projects in the city."
+      ],
+      "sources": [
+        {"title": "Rutland City home page", "url": "https://www.rutlandcity.org/"},
+        {"title": "Planning & Zoning Permit Applications", "url": "https://www.rutlandcity.org/departments/planning-zoning-department/permit-applications/"},
+        {"title": "Building Department", "url": "https://www.rutlandcity.org/departments/building-department/"},
+        {"title": "Land Development Regulations (adopted 9-21-26)", "url": "https://www.rutlandcity.org/wp-content/uploads/2026/10/Land-Development-Regulations-Adopted-9-21-26.pdf"}
+      ]
+    },
+    {
+      "name": "Stowe",
+      "kind": "town",
+      "office": "Town of Stowe Planning & Zoning",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Stowe Planning & Zoning reviews and issues zoning permits under the Stowe Zoning and Subdivision Regulations.",
+        "An application is a Development Application form plus the checklist for the project type, emailed to pandz@stowevt.gov or dropped off at the office.",
+        "The zoning regulations define a structure to include swimming pools greater than 100 sq. ft.",
+        "In the Ridgelines/Hillsides Overlay District, Section 9.4(2) exempts ponds and swimming pools that require no site clearing from the overlay review."
+      ],
+      "sources": [
+        {"title": "Stowe Planning & Zoning", "url": "https://www.stowevt.gov/departments/planning-zoning"},
+        {"title": "Apply for a Zoning Permit", "url": "https://www.stowevt.gov/Departments/Planning-Zoning/Apply-for-a-Zoning-Permit"},
+        {"title": "Stowe Zoning Regulations 2024", "url": "https://www.stowevt.gov/files/assets/town/v/1/planningzoning/documents/stowe_zoning_2024_with_clerks_certificate.pdf"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "WebSearch budget was exhausted, so only directly fetched official pages were used.",
+    "No state-level Vermont pool barrier or building code source was opened.",
+    "South Burlington, Rutland and Stowe pages do not state pool-specific permit, barrier or engineer-seal rules; South Burlington's pool page link was not found.",
+    "Building code editions enforced by each jurisdiction not verified.",
+    "Burlington pool barrier rules and Stowe online portal not found."
+  ]
+}

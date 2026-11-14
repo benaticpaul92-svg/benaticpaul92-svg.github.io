@@ -1,0 +1,97 @@
+{
+  "state": "Wisconsin",
+  "slug": "wisconsin",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Madison (Dane County)",
+      "kind": "city",
+      "office": "City of Madison Building Inspection / Development Services Center",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The city's permit chart lists a swimming pool, above or in ground, as needing a building permit from Building Inspection.",
+        "The city's pool page says a pool must be at least 3 feet from the house or other structures and at least 3 feet from rear or side lot lines, and a side-yard pool needs a larger side setback.",
+        "In-ground pools must be enclosed by a fence at least 4 feet high with a locking gate; above-ground pools need controlled access such as a removable ladder.",
+        "A scaled site plan is required, and lakefront lots need a survey by a registered land surveyor; the city advises a zoning review of the site plan before submitting."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools (above or in-ground) (City of Madison Development Services Center)",
+          "url": "https://www.cityofmadison.com/development-services-center/1-2-family-residential/additions/swimming-pools-above-or-in-ground"
+        },
+        {
+          "title": "Permits (City of Madison Development Services Center)",
+          "url": "https://www.cityofmadison.com/development-services-center/permits"
+        }
+      ]
+    },
+    {
+      "name": "Racine",
+      "kind": "city",
+      "office": "City of Racine Department of City Development, Division of Building Inspection",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The city has a dedicated Pool Permit Application for above-ground and in-ground pools.",
+        "Applications must include the completed form, a site plan of the pool location with dimensions, a construction plan and payment.",
+        "The application says work done without permits may result in double permit fees."
+      ],
+      "sources": [
+        {
+          "title": "Pool Permit Application (City of Racine)",
+          "url": "https://media.cityofracinewi.gov/media/wp-content/uploads/2026/03/26103212/Pool-Permit-Application-1.pdf"
+        },
+        {
+          "title": "Building Inspection (City of Racine)",
+          "url": "https://cityofracinewi.gov/citydevelopment/building-inspection/"
+        }
+      ]
+    },
+    {
+      "name": "Menomonee Falls (Waukesha County)",
+      "kind": "village",
+      "office": "Village of Menomonee Falls Building Inspection / Engineering and Development",
+      "portal_name": "Village permit portal (General Building Permit Application)",
+      "portal_url": "https://www.menomonee-falls.org/656/Swimming-Pools",
+      "notes": [
+        "Pool permits can be applied for in person, by mail or through the village permit portal using the General Building Permit Application.",
+        "The application needs a property survey showing existing structures, the proposed pool, decking, fencing and overhead or underground wiring, plus two copies of pool construction data and depth.",
+        "An electrical permit is required for all pool installations, and properties on a private sewage system need a Waukesha County Preliminary Site Evaluation first.",
+        "In-ground pools get an electrical bonding inspection and a final inspection of wiring and fencing (location, height, self-closing and self-latching)."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools (Village of Menomonee Falls)",
+          "url": "https://www.menomonee-falls.org/656/Swimming-Pools"
+        }
+      ]
+    },
+    {
+      "name": "Brookfield (Waukesha County)",
+      "kind": "city",
+      "office": "City of Brookfield (permit applications page)",
+      "portal_name": "OpenGov online permitting portal",
+      "portal_url": "https://brookfieldwi.portal.opengov.com/categories/1071/record-types/6450",
+      "notes": [
+        "The city's permit applications page links a dedicated online Pool Permit.",
+        "Plumbing, HVAC and other trade permits are listed as separate online applications."
+      ],
+      "sources": [
+        {
+          "title": "Permit Applications (City of Brookfield)",
+          "url": "https://www.ci.brookfield.wi.us/290/Permit-Applications"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Milwaukee: city.milwaukee.gov returned 403 to automated fetch, so Milwaukee is not included.",
+    "Green Bay: greenbaywi.gov returned 404/429/522 errors, so Green Bay is not included.",
+    "Madison portal name not confirmed on an opened page.",
+    "Racine's older Swimming Pool Information sheet (rev. 2009) was not used because it may be out of date.",
+    "Brookfield has only two notes; no pool requirements page was found.",
+    "Web search budget ran out, so jurisdictions were found by browsing city sites directly."
+  ]
+}

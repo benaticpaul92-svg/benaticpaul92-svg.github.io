@@ -1,0 +1,85 @@
+{
+  "state": "Iowa",
+  "slug": "iowa",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Ankeny",
+      "kind": "city",
+      "office": "Community Planning & Building Department",
+      "portal_name": "Online permit application (Apply For Permit link)",
+      "portal_url": "https://www.ankenyiowa.gov/366/Building-Permits",
+      "notes": [
+        "Ankeny's pool handout requires a building permit for all swimming pools, a site plan showing the pool, decks, the barrier, easements, drainage, well and septic, and one set of pool construction drawings or manufacturer specifications.",
+        "The handout requires a detailed drawing of the pool barrier, and separate permits for the fence, electrical, mechanical and plumbing work.",
+        "Under the city code section quoted in the handout, residential pools go in the side or rear yard, at least 4 ft from any property line, and outdoor pools must be enclosed by a barrier.",
+        "Ankeny lists the 2024 I-codes with amendments effective July 1, 2025, including its own 2024 Swimming Pool and Spa Code (Municipal Code Chapter 183)."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools - Residential Guidelines, City of Ankeny",
+          "url": "https://www.ankenyiowa.gov/DocumentCenter/View/971/Swimming-Pool-and-Hot-Tub-Handout-PDF"
+        },
+        {
+          "title": "Building Codes - City of Ankeny",
+          "url": "https://www.ankenyiowa.gov/367/Building-Codes"
+        },
+        {
+          "title": "Building Information - City of Ankeny",
+          "url": "https://www.ankenyiowa.gov/366/Building-Permits"
+        }
+      ]
+    },
+    {
+      "name": "Davenport",
+      "kind": "city",
+      "office": "Building & Land Development",
+      "portal_name": "E-Plan",
+      "portal_url": "https://www.davenportiowa.com/our_community/building_land_development/electronic_plan_review",
+      "notes": [
+        "Davenport takes plans and applications through its E-Plan portal and accepts only unsecured PDF files, with drawings uploaded as individual vector-based PDFs.",
+        "The city's permit guide exempts prefabricated pools accessory to a Group R-3 occupancy only if they are less than 24 inches deep and not over 5,000 gallons; they must still meet fencing and enclosure rules.",
+        "Other pools fall under general building improvements and need a building permit."
+      ],
+      "sources": [
+        {
+          "title": "Electronic Plan Review - City of Davenport",
+          "url": "https://www.davenportiowa.com/our_community/building_land_development/electronic_plan_review"
+        },
+        {
+          "title": "What Does/Does Not Require a Permit? - City of Davenport",
+          "url": "https://www.davenportiowa.com/our_community/building_land_development/what_does_does_not_requires_a_permit__"
+        }
+      ]
+    },
+    {
+      "name": "Urbandale",
+      "kind": "city",
+      "office": "Community Development (Building Services)",
+      "portal_name": "Permit Portal",
+      "portal_url": "https://www.urbandale.org/497/Permits---Other-Residential",
+      "notes": [
+        "Urbandale applicants create an account in its cloud-based Permit Portal to apply, follow the review and track the permit through final inspection.",
+        "The city's Building Codes page lists the 2018 International Building Code and 2018 International Residential Code."
+      ],
+      "sources": [
+        {
+          "title": "Permits - Other Residential - City of Urbandale",
+          "url": "https://www.urbandale.org/497/Permits---Other-Residential"
+        },
+        {
+          "title": "Building Codes - City of Urbandale",
+          "url": "https://www.urbandale.org/484/Building-Codes"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Only 3 jurisdictions verified. Des Moines (dsm.city, dmgov.org), West Des Moines, Cedar Rapids, Iowa City and Polk County sites returned 403 or Access Denied to automated access.",
+    "Urbandale: no pool-specific page was found on the opened pages; only the portal and code editions are recorded.",
+    "Davenport: the Building Codes page naming the adopted editions was not opened, so no code edition is recorded.",
+    "Ankeny's handout cites zoning section 191.09 for the 4 ft setback and fence height; the handout is not dated, so confirm against the current municipal code.",
+    "The Iowa state-level facts on the existing JEBN page were not re-verified here."
+  ]
+}

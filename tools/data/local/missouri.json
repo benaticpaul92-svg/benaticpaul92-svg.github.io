@@ -1,0 +1,85 @@
+{
+  "state": "Missouri",
+  "slug": "missouri",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "St. Charles County (unincorporated)",
+      "kind": "county",
+      "office": "Community Development, Building and Code Enforcement Division",
+      "portal_name": "Citizenserve Citizen Access Portal",
+      "portal_url": "https://www2.citizenserve.com/stcharles",
+      "notes": [
+        "St. Charles County's Residential Building Permit covers swimming pools, hot tubs and pool barriers on residentially zoned property, applied for in the Citizenserve portal.",
+        "Applicants submit the contractor names, building plans (PDF preferred) and a detailed plot plan showing the structure on the lot with distances to property lines.",
+        "The county says structures may not be located over easements or septic systems, and at least one inspection is required.",
+        "The county separately licenses pool installers through the Citizenserve portal, with a bond and liability insurance certificate."
+      ],
+      "sources": [
+        {"title": "Residential Building Permit (St. Charles County)", "url": "https://www.sccmo.org/1826/Residential-Building-Permit"},
+        {"title": "Pool Installers License Application/Renewal (St. Charles County)", "url": "https://www.sccmo.org/1551/Pool-Installers-License-ApplicationRenew"},
+        {"title": "Community Development (St. Charles County)", "url": "https://www.sccmo.org/203/Community-Development"}
+      ]
+    },
+    {
+      "name": "Springfield / Greene County",
+      "kind": "city",
+      "office": "Building Development Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Springfield's swimming pool page covers outdoor private pools, including in-ground pools, hot tubs and spas, and says the pool barrier rules come from the International Building Code.",
+        "The city lists a barrier at least 48 inches above finished ground level, with no opening that passes a 4 inch sphere.",
+        "Pedestrian gates must open outward away from the pool and be self-closing and self-latching.",
+        "Springfield requires an approved building permit before any new one- or two-family house or accessory building is built, and the plans must include a site plan drawn to scale."
+      ],
+      "sources": [
+        {"title": "Swimming Pools (City of Springfield)", "url": "https://www.springfieldmo.gov/243/Swimming-Pools"},
+        {"title": "1 & 2 Family Permits (City of Springfield)", "url": "https://www.springfieldmo.gov/183/1-2-Family-Permits"}
+      ]
+    },
+    {
+      "name": "Wentzville / St. Charles County",
+      "kind": "city",
+      "office": "Community Development, Building Division",
+      "portal_name": "SmartGov Permit Portal",
+      "portal_url": "https://www.wentzvillemo.gov/permit-center/",
+      "notes": [
+        "Wentzville lists a Swimming Pool/Hot Tub Permit among the work that needs a building permit.",
+        "Since 23 February 2026 all building permit applications go through the SmartGov Permit Portal, and the city no longer accepts paper plan submittals.",
+        "The city says it has adopted the 2021 IBC, 2021 IRC and 2021 IPC, plus the 2020 National Electrical Code, with local amendments.",
+        "Contractors, general and sub, must hold a city-issued contractor's license."
+      ],
+      "sources": [
+        {"title": "Building Permits (City of Wentzville)", "url": "https://www.wentzvillemo.gov/departments/community-development/building-division/building-permits/"},
+        {"title": "SmartGov Permit Portal (City of Wentzville)", "url": "https://www.wentzvillemo.gov/permit-center/"},
+        {"title": "Building Codes (City of Wentzville)", "url": "https://www.wentzvillemo.gov/departments/community-development/building-codes/"}
+      ]
+    },
+    {
+      "name": "Lake Saint Louis / St. Charles County",
+      "kind": "city",
+      "office": "Building Division, City of Lake Saint Louis",
+      "portal_name": "Citizenserve Online Portal",
+      "portal_url": "https://www.citizenserve.com/Portal/PortalController?Action=showHomePage&ctzPagePrefix=Portal_&installationID=253",
+      "notes": [
+        "Lake Saint Louis takes building permit applications and plans through its Citizenserve portal and publishes a pool requirement checklist.",
+        "The checklist asks for a site plan at 1 inch = 20 feet prepared by a licensed engineer or surveyor, with easements, elevations, proposed pool rim elevation and drainage contours.",
+        "The checklist also asks for the proposed pool barrier details, self-closing outward-swinging gates, door alarms, an erosion control plan, and equipment location with screening.",
+        "Contractors must hold a City Business License before doing construction work in the city."
+      ],
+      "sources": [
+        {"title": "Building Permits (City of Lake Saint Louis)", "url": "https://www.lakesaintlouis.com/1318/Building-Permits"},
+        {"title": "Swimming Pool Requirement Checklist (City of Lake Saint Louis)", "url": "https://www.lakesaintlouis.com/DocumentCenter/View/96/Pool-Requirement-Checklist-PDF"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Kansas City (kcmo.gov) and St. Louis County (stlouiscountymo.gov) returned 403 to automated fetches, and the search budget ran out, so neither is covered.",
+    "Three of four entries are in St. Charles County because those sites were reachable; no St. Louis County or Kansas City metro entry beyond that.",
+    "Springfield: no online permit portal name or URL confirmed.",
+    "Lake Saint Louis: the pool checklist PDF is marked 06132017, so confirm it is current.",
+    "St. Charles County: the pool installer license page names a Citizenserve portal; plan requirements on the residential permit page are general, not pool-specific beyond naming pools."
+  ]
+}

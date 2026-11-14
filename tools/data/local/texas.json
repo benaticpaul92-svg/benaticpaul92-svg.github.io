@@ -1,0 +1,195 @@
+{
+  "state": "Texas",
+  "slug": "texas",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Houston / Harris County",
+      "kind": "city",
+      "office": "Houston Health Department and Houston Permitting Center",
+      "portal_name": "Houston Permit Portal",
+      "portal_url": "https://permits.houstontx.gov/",
+      "notes": [
+        "The Houston Health Department says it reviews and regulates all new residential swimming pool and spa construction in the city.",
+        "New residential pools must meet the Texas State standards for public pools and spas, according to the Houston Health Department.",
+        "Applicants submit the city's Minimum Standards for Residential Pool/Spa Plan Submission document with their plans, taken to the Houston Permitting Center at 1002 Washington Avenue.",
+        "To close out a project, the owner emails pools@houstontx.gov with the project number and address, after the Structural group has approved the project."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool (Residential) Standards - Houston Health Department",
+          "url": "https://www.houstonhealth.org/services/permits/pool-permits/residential-pools"
+        }
+      ]
+    },
+    {
+      "name": "Dallas / Dallas County",
+      "kind": "city",
+      "office": "Dallas Planning and Development Department",
+      "portal_name": "DallasNow",
+      "portal_url": "https://dallascityhall.com/departments/sustainabledevelopment/guide/Pages/default.aspx",
+      "notes": [
+        "The Dallas Planning and Development guide says in-ground pools and spas always need a Residential Pool/Spa Permit.",
+        "A pool barrier fence needs its own Residential Accessory Structure Permit, and all pool electrical work needs a separate Electrical Permit.",
+        "Applications are submitted through DallasNow, the city's online permitting system.",
+        "Dallas Chapter 62 adopts the 2021 International Swimming Pool and Spa Code, effective June 13, 2022."
+      ],
+      "sources": [
+        {
+          "title": "Dallas Planning & Development Guide",
+          "url": "https://dallascityhall.com/departments/sustainabledevelopment/guide/Pages/default.aspx"
+        }
+      ]
+    },
+    {
+      "name": "Austin / Travis County",
+      "kind": "city",
+      "office": "City of Austin Development Services Department, Residential Plan Review",
+      "portal_name": "Austin Build + Connect (AB+C) Portal",
+      "portal_url": "https://www.austintexas.gov/development-services/residential-plan-review",
+      "notes": [
+        "Residential pools are applied for through the Pool/Uncovered Deck (Pool is Small Project) Web Form on the Residential Plan Review page.",
+        "Application status is checked, and approved permits are activated, through the Austin Build + Connect (AB+C) Portal.",
+        "Extra reviews can apply: floodplain review if the lot is in or within 100 feet of the 100-year floodplain, and on-site sewage review if the lot has a septic system.",
+        "Austin exempts a prefabricated residential pool less than 24 inches deep from a building permit, but a pool in a floodplain may still need one."
+      ],
+      "sources": [
+        {
+          "title": "Residential Plan Review - City of Austin",
+          "url": "https://www.austintexas.gov/development-services/residential-plan-review"
+        },
+        {
+          "title": "Work Exempt from Building Permits - City of Austin",
+          "url": "https://www.austintexas.gov/development-services/work-exempt-building-permits"
+        }
+      ]
+    },
+    {
+      "name": "San Antonio / Bexar County",
+      "kind": "city",
+      "office": "City of San Antonio Development Services Department",
+      "portal_name": "BuildSA Customer Portal",
+      "portal_url": "https://docsonline.sanantonio.gov/FileUploads/dsd/IB170.pdf",
+      "notes": [
+        "Residential pools are filed in the BuildSA Customer Portal as a Residential Improvements Permit Application with the Swimming Pool or Spa subtype.",
+        "The submittal is a to-scale site plan showing the lot, existing structures, easements, the pool and the barrier, plus the signed Swimming Pool/Spa Barriers and Safety Devices Compliance Agreement.",
+        "A plat is not required, but the pool waterline must be at least 5 feet from the property line.",
+        "San Antonio requires compliance with the 2024 International Swimming Pool and Spa Code and the 2024 IECC as amended by the city; outdoor residential pools need a barrier at least 48 inches high."
+      ],
+      "sources": [
+        {
+          "title": "Information Bulletin 170, Swimming Pool and Spa Permits (May 2025)",
+          "url": "https://docsonline.sanantonio.gov/FileUploads/dsd/IB170.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Fort Worth / Tarrant County",
+      "kind": "city",
+      "office": "City of Fort Worth Development Services",
+      "portal_name": "Accela (City of Fort Worth permit portal)",
+      "portal_url": "https://www.fortworthtexas.gov/departments/development-services/permits/residential-information",
+      "notes": [
+        "Fort Worth lists swimming pools among the accessory structures that need a residential building permit, and permits may be applied for online.",
+        "The pool packet asks for a recorded plat, a survey or site plan showing setbacks, lot lines and easements with a north arrow and scale, and construction plans.",
+        "Pools must meet the 2018 International Swimming Pool and Spa Code, with sections of the 2021 International Plumbing Code, the 2023 National Electrical Code and Fort Worth amendments.",
+        "Private residential pools must submit an entrapment form, and plans must be stamped and signed off by Oncor Electric before submittal."
+      ],
+      "sources": [
+        {
+          "title": "Residential Permitting - Fort Worth Development Services",
+          "url": "https://www.fortworthtexas.gov/departments/development-services/permits/residential-information"
+        },
+        {
+          "title": "Residential Pools Checklist and Packet (Pools Only)",
+          "url": "https://www.fortworthtexas.gov/files/assets/public/v/3/development-services/documents/residential-pools-checklist-and-packet.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Frisco / Collin and Denton Counties",
+      "kind": "city",
+      "office": "City of Frisco Health & Food Safety",
+      "portal_name": "City of Frisco Online Application System",
+      "portal_url": "https://www.friscotexas.gov/211/Pools-Pool-Enclosures",
+      "notes": [
+        "Frisco requires a pool construction permit for in-ground and above-ground pools, spas holding more than 24 inches of water, and splash pads, applied for online.",
+        "The drawing package includes a plot plan with setbacks and equipment location, a pool profile, and a utility provider stamp; all files are uploaded as PDFs.",
+        "A Professional Engineer letter is required if the pool beam encroaches the 1:1 ratio to the nearest foundation, and engineer drawings are required for piers, retaining walls and structures over 36 inches high.",
+        "Frisco's checklist prohibits pool construction in a floodway or 100-year floodplain and requires the water's edge to be at least 3 feet from any property line.",
+        "The barrier must be 48 to 96 inches high, chain link is prohibited, and the enclosure follows the 2018 International Swimming Pool and Spa Code with amendments."
+      ],
+      "sources": [
+        {
+          "title": "Pools & Pool Enclosures - City of Frisco",
+          "url": "https://www.friscotexas.gov/211/Pools-Pool-Enclosures"
+        },
+        {
+          "title": "Residential Pools, Spas, Fountains and Splashpads Submittal Requirements & Inspection Checklist (July 2026)",
+          "url": "https://www.friscotexas.gov/DocumentCenter/View/107/Residential-Pools-Spas-Fountains-Splashpad-Submittal-Requirements-and-Inspection-ChecklistPDF"
+        },
+        {
+          "title": "Swimming Pool & Spa Enclosure / Specific Code Requirements",
+          "url": "https://www.friscotexas.gov/DocumentCenter/View/36340/Residential-Pools-Spas-Fountains-Splashpad-Enclosure-Requirements"
+        }
+      ]
+    },
+    {
+      "name": "Sugar Land / Fort Bend County",
+      "kind": "city",
+      "office": "City of Sugar Land Permits and Inspections",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Sugar Land's residential pool page lists a survey showing the pool location and its distances to property lines, setbacks and easements.",
+        "A licensed Professional Engineer's sealed plans are required if the pool or spa is 5 feet or closer to a structure.",
+        "Other listed items include an HOA approval letter, drain and VGB compliance information, overflow and drainage details, and an electrical load analysis from a Master Electrician.",
+        "The page asks for plans to note the 2024 International Residential Code, the 2024 International Swimming Pool and Spa Code and the 2023 National Electrical Code.",
+        "Pools cannot be located within recorded easements or within 3 feet of a lot line, and plumbing and electrical contractors pull separate permits after the pool permit is issued."
+      ],
+      "sources": [
+        {
+          "title": "Residential Permit Categories - City of Sugar Land",
+          "url": "https://www.sugarlandtx.gov/2382/Residential-Permit-Categories"
+        },
+        {
+          "title": "General Residential Swimming Pool Guidelines - City of Sugar Land",
+          "url": "https://www.sugarlandtx.gov/DocumentCenter/View/6567/Residential-Swimming-Pool-Guidelines"
+        }
+      ]
+    },
+    {
+      "name": "Round Rock / Williamson County",
+      "kind": "city",
+      "office": "City of Round Rock Building Inspection Division",
+      "portal_name": "Round Rock Permit Portal",
+      "portal_url": "https://www.roundrocktexas.gov/city-departments/planning-and-development-services/building-inspection/homeowner-projects/",
+      "notes": [
+        "Round Rock takes pool permit applications through its online Permit Portal at permits.roundrocktexas.gov, where inspections are also scheduled.",
+        "Required documents are a full set of construction plans, a property survey showing the pool location and its distance to each property line, and electrical or plumbing details where applicable.",
+        "Pool plans must comply with the 2024 International Swimming Pool and Spa Code, which the city calls the Pool Code.",
+        "The general contractor and any electrical or plumbing subcontractors must confirm their assignments in the portal before the permit is issued."
+      ],
+      "sources": [
+        {
+          "title": "Homeowner Projects - City of Round Rock",
+          "url": "https://www.roundrocktexas.gov/city-departments/planning-and-development-services/building-inspection/homeowner-projects/"
+        },
+        {
+          "title": "Other Building Permits - City of Round Rock",
+          "url": "https://www.roundrocktexas.gov/city-departments/planning-and-development-services/building-inspection/miscellaneous-building-permits/"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Houston Permitting Center pool permit pages (hpwcode1141, hpwfmo1026) and Houston's ISPSC amendments returned HTTP 403 (Cloudflare block), so Houston's permit steps and code edition are unverified; Houston notes rest on the Houston Health Department page.",
+    "Dallas: no current pool-specific page found; the only pool checklist found is dated 2007 and was not used. Dallas portal URL not opened directly (guide page names DallasNow).",
+    "San Antonio BuildSA, Fort Worth Accela, Frisco online system and Round Rock portal login pages were not opened directly; portal_url points to the official page that names the portal.",
+    "McKinney, Plano and Arlington were looked at but not used: McKinney pool packets returned HTTP 403, Plano pool pages had no residential content, and Arlington's opened pages only list a Swimming Pools permit category and state that its public pool rules do not govern residential pools.",
+    "Sugar Land's guidelines PDF cites the 2021 codes while the permit categories page cites 2024 codes; only the newer page was used for code editions. No Sugar Land portal named on the opened pages.",
+    "Austin: pool-specific submittal list lives in Building Criteria Manual 4.4.0, which was not opened.",
+    "Re-verification 15 Nov 2026 (WebFetch/curl only): Fort Worth pages return HTTP 403 to curl and were read via WebFetch; permits.houstontx.gov opens but is a script-driven shell with no readable pool text, so it is kept as portal_url only."
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "state": "Florida",
+  "slug": "florida",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Miami-Dade County",
+      "kind": "county",
+      "office": "Miami-Dade County Permitting and Inspection Center",
+      "portal_name": "Permit Submission Portal",
+      "portal_url": "https://www.miamidade.gov/global/economy/building/permits/swimming-pool.page",
+      "notes": [
+        "An in-ground pool permit application is filed under Category 55 and lists the pool's total square footage, along with a contact sheet.",
+        "Design drawings must show the site plan, pool dimensions, electrical and plumbing connections and calculations, and must be signed and sealed by an architect or engineer.",
+        "Electrical and plumbing or gas subsidiary permits are required after the pool permit is issued and must cite the pool permit number.",
+        "Owner-builder pool permits need an additional form."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool Permits - Miami-Dade County",
+          "url": "https://www.miamidade.gov/global/economy/building/permits/swimming-pool.page"
+        }
+      ]
+    },
+    {
+      "name": "Palm Beach County",
+      "kind": "county",
+      "office": "Palm Beach County Planning, Zoning & Building, Building Division",
+      "portal_name": "ePZB Admin Portal",
+      "portal_url": "https://discover.pbc.gov/pzb/building/Pages/default.aspx",
+      "notes": [
+        "Every pool or spa is issued as a primary permit, with sub-permits for the barrier, electric and any other trade.",
+        "An Affidavit of Understanding, signed by owner and contractor to confirm a 360-degree barrier, must be submitted with the pool application.",
+        "If a neighbor's wall or fence is used as part of the barrier, a Pool Barrier Agreement must be recorded in the Official Records of Palm Beach County and submitted with the application."
+      ],
+      "sources": [
+        {
+          "title": "Pool Barrier Requirements/Process PPM# PB-O-104",
+          "url": "https://discover.pbc.gov/pzb/building/Forms/Residential%20Swimming%20Pool%20Safety%20Requirements.pdf"
+        },
+        {
+          "title": "Building Division - Palm Beach County PZB",
+          "url": "https://discover.pbc.gov/pzb/building/Pages/default.aspx"
+        }
+      ]
+    },
+    {
+      "name": "Tampa (Hillsborough County)",
+      "kind": "city",
+      "office": "City of Tampa Construction Services Division",
+      "portal_name": "Accela Citizens Access",
+      "portal_url": "https://www.tampa.gov/construction-services/residential-permits/pool-and-spa/plan-review",
+      "notes": [
+        "A residential pool submittal includes a site plan, structural plans, and plumbing piping and water supply calculations; the APSP-15 information sheet may be used for the calculations.",
+        "Structural plans must be signed and sealed, and engineered pool structural plans can be placed on file through a separate process.",
+        "The site plan must show easements, trees within 20 feet of the work, and a property-line-to-property-line cross section.",
+        "A signed and sealed topographic survey is required if the deck exceeds 1,000 square feet."
+      ],
+      "sources": [
+        {
+          "title": "Residential Pool and Spa - Plan Review (City of Tampa)",
+          "url": "https://www.tampa.gov/construction-services/residential-permits/pool-and-spa/plan-review"
+        }
+      ]
+    },
+    {
+      "name": "Orange County (unincorporated)",
+      "kind": "county",
+      "office": "Orange County Division of Building Safety",
+      "portal_name": "Fast Track Online Services",
+      "portal_url": "https://www.ocfl.net/PermitsLicenses/Permits/ResidentialSwimmingPoolPermit/tabid/914/Default.aspx",
+      "notes": [
+        "In-ground pool construction plans must be prepared by a Florida-licensed Professional Engineer or Registered Architect.",
+        "Submittals include a site plan or survey, a lot grading and drainage plan with finished floor elevation, and ANSI/APSP 7 (TDH) and ANSI/APSP 15 worksheets or equivalent plan information.",
+        "A site-specific Swimming Pool Safety Affirmation is required, and fiberglass pools need hydrostatic pressure engineering and backfill methods.",
+        "The county cites the current Residential Florida Building Code, including Section 4501.17 for pool barriers."
+      ],
+      "sources": [
+        {
+          "title": "Residential Swimming Pool Permit - Orange County",
+          "url": "https://www.ocfl.net/PermitsLicenses/Permits/ResidentialSwimmingPoolPermit/tabid/914/Default.aspx"
+        }
+      ]
+    },
+    {
+      "name": "Orlando",
+      "kind": "city",
+      "office": "City of Orlando Building & Development, Permits & Inspections",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The pool checklist asks for a topographic survey, a dimensioned site plan and a grading and drainage plan, plus floodplain items if the lot is in the 1% annual chance flood zone.",
+        "The topographic survey must be sealed by a Florida-licensed Professional Surveyor, and plans involving any re-grading must be sealed by a Florida-registered Professional Engineer or Architect.",
+        "A permitted fence is required for a pool 2 feet or more deep with an area of 36 square feet or more, generally 4 to 6 feet tall.",
+        "The checklist lists the building permit, electrical permit, pool safety act form, plan submission and a recorded Notice of Commencement as the application steps."
+      ],
+      "sources": [
+        {
+          "title": "Residential Swimming Pool and Spa Checklist - City of Orlando",
+          "url": "https://www.orlando.gov/Building-Development/Permits-Inspections/Get-a-Permit/Permitting-Checklists/Residential-Swimming-Pool-and-Spa-Checklist"
+        }
+      ]
+    },
+    {
+      "name": "Jacksonville (Duval County)",
+      "kind": "city-county",
+      "office": "City of Jacksonville Public Works, Building Inspection Division",
+      "portal_name": "JaxEPICS",
+      "portal_url": "https://www.jacksonville.gov/departments/public-works/building-inspection-division/checklists,-forms-and-documents",
+      "notes": [
+        "The division publishes a Swimming Pool/SPA 1 & 2 Family checklist and a Private Swimming Pool Safety Affirmation form.",
+        "Permit applications are submitted online through JaxEPICS, which is also used to request inspections.",
+        "Most jobs over $5,000 need a Notice of Commencement, and the permit and notice must be posted on site before any inspection."
+      ],
+      "sources": [
+        {
+          "title": "Checklists, Forms and Documents - Jacksonville Building Inspection Division",
+          "url": "https://www.jacksonville.gov/departments/public-works/building-inspection-division/checklists,-forms-and-documents"
+        },
+        {
+          "title": "FAQs - Jacksonville Building Inspection Division",
+          "url": "https://www.jacksonville.gov/departments/public-works/building-inspection-division/faqs"
+        }
+      ]
+    },
+    {
+      "name": "Pinellas County (unincorporated and listed cities)",
+      "kind": "county",
+      "office": "Pinellas County Building and Development Review Services Department",
+      "portal_name": "Pinellas County Access Portal",
+      "portal_url": "https://pinellas.gov/residential-permits/",
+      "notes": [
+        "The county handles permits for unincorporated Pinellas and for Belleair Beach, Belleair Shore, Indian Rocks Beach, Kenneth City, Safety Harbor and Oldsmar.",
+        "Pools and spas are a permit type with separate in-ground and above-ground subtypes, all applied for through the Access Portal.",
+        "A Safety Act Letter is required for pool permits, and pools also need a no-objection letter from the electric company.",
+        "All structural work requires building plans digitally signed and sealed by an architect or engineer."
+      ],
+      "sources": [
+        {
+          "title": "Residential Permits - Pinellas County",
+          "url": "https://pinellas.gov/residential-permits/"
+        },
+        {
+          "title": "Permitting Guide - Pinellas County",
+          "url": "https://pinellas.gov/permitting-guide/"
+        }
+      ]
+    }
+  ],
+  "state_level": [
+    {
+      "note": "Florida Statute 515.29 requires a residential pool barrier to be at least 4 feet high on the outside, with options for a perimeter barrier or a house wall with no door or window opening to the pool.",
+      "source": {
+        "title": "Florida Statutes s. 515.29",
+        "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0515/Sections/0515.29.html"
+      }
+    }
+  ],
+  "gaps": [
+    "Broward County removed: its pool page and division page returned 403/404 to WebFetch and curl, and earlier facts came from a shared browser pane, so none are verified.",
+    "Jacksonville pool checklist PDF returned 503 on every attempt; sealing and code edition for pools not verified.",
+    "Lee County and Hillsborough County (unincorporated) were not included: leegov.com / leefl.gov returned 403 and no Hillsborough page was opened. Tampa and Orlando were used instead.",
+    "Palm Beach County: the portal page and the pool permit forms were verified, but the Application Submittal Checklist was not opened.",
+    "Portal URLs for Miami-Dade, Tampa, Orange, Jacksonville and Pinellas point to the official page that links the portal; the direct portal addresses were not opened."
+  ]
+}

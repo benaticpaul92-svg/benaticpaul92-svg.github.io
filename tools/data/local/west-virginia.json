@@ -1,0 +1,68 @@
+{
+  "state": "West Virginia",
+  "slug": "west-virginia",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Berkeley County (Martinsburg area)",
+      "kind": "county",
+      "office": "Berkeley County Building Permits and Inspections",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The county's pool checklist requires an application, scaled drawings showing the pool, fence and gates and distances from property lines, and a manufacturer's manual for above-ground pools.",
+        "In-ground pool plans must be signed and sealed by a West Virginia registered professional and show reinforcement size and spacing, wall thickness, concrete type, depth limits, steps and footings.",
+        "Bottom-drain and in-ground pools need drain piping details, entrapment-protection device specs, a vacuum-relief method, and flow calculations from a licensed pool installer.",
+        "The county lists the 2018 International Residential Code and 2018 International Swimming Pool and Spa Code among its adopted codes.",
+        "Required in-ground pool inspections include excavation, electrical bonding, the in-ground panel before concrete, final electrical and final."
+      ],
+      "sources": [
+        {"title": "Swimming Pool Requirements and Checklist (Berkeley County Building Permits and Inspections)", "url": "https://www.berkeleywv.org/DocumentCenter/View/173/Building-Permit---Swimming-Pool-PDF"},
+        {"title": "Building Codes (Berkeley County)", "url": "https://www.berkeleywv.org/582/Building-Codes"}
+      ]
+    },
+    {
+      "name": "Morgantown",
+      "kind": "city",
+      "office": "City of Morgantown Code Enforcement / Building Permits",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The city's swimming pool permit guidance asks for a site plan showing property lines, setbacks and the pool location, plus construction plans and manufacturer installation instructions.",
+        "A Morgantown Utility Board storm water permit application should be submitted with the pool permit application.",
+        "Separate plumbing, mechanical and electrical permits may be needed, and a variance from the Board of Zoning Appeals may be needed if the project does not meet zoning rules.",
+        "A city pool checklist says pool water may not drain to the storm drain and must connect to the sewer, and asks for a barrier detail and electrical supply detail."
+      ],
+      "sources": [
+        {"title": "Swimming Pool Permit Guidance (City of Morgantown)", "url": "https://www.morgantownwv.gov/DocumentCenter/View/6784/Swimming-Pool-Permit-Guidance"},
+        {"title": "Pools (City of Morgantown checklist)", "url": "https://morgantownwv.gov/DocumentCenter/View/83/Pools-PDF"},
+        {"title": "Building & Construction (City of Morgantown)", "url": "https://morgantownwv.gov/740/Building-Construction"}
+      ]
+    },
+    {
+      "name": "Huntington",
+      "kind": "city",
+      "office": "City of Huntington Inspections and Permits / Planning and Zoning",
+      "portal_name": "Online building permits (city ePermits)",
+      "portal_url": "https://www.cityofhuntington.com/assets/pdf/ePermits_Contractor_Instructions_City_of_Huntington_WV_4.29.25.pdf",
+      "notes": [
+        "The zoning ordinance defines a household pool as one holding water at least 30 inches deep and serving the residents of one dwelling unit.",
+        "Household pools may not be in a required front yard, and a pool or elevated deck must meet the accessory-building setback.",
+        "Enclosure around in-ground household pools must meet the Building Code; above-ground pools need an enclosure at least four feet high.",
+        "The ordinance requires a drainage method that will not overload a septic system or flood neighboring property.",
+        "Permits are applied for and paid online, and some permit types need plan review, with status handled by permits@huntingtonwv.gov."
+      ],
+      "sources": [
+        {"title": "Huntington Zoning Ordinance (revised 9/14/2020)", "url": "https://www.cityofhuntington.com/assets/pdf/Huntington_Zoning_Ordinance_1998_REVISED_09-14-2020.pdf"},
+        {"title": "ePermits Contractor Instructions (City of Huntington, 4/29/25)", "url": "https://www.cityofhuntington.com/assets/pdf/ePermits_Contractor_Instructions_City_of_Huntington_WV_4.29.25.pdf"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Charleston: charlestonwv.gov timed out on every fetch, so it is not included; only 3 jurisdictions were verified.",
+    "The web search budget ran out before a fourth jurisdiction could be located.",
+    "Portal names for Berkeley County and Morgantown were not confirmed on an opened page and are left blank.",
+    "Huntington's ordinance version is dated 2020; current edition not checked."
+  ]
+}

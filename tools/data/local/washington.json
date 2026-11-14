@@ -1,0 +1,83 @@
+{
+  "state": "Washington",
+  "slug": "washington",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "King County (unincorporated areas)",
+      "kind": "county",
+      "office": "King County Department of Local Services, Permitting Division",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Pools accessory to single-family homes and duplexes are exempt from a building permit only if prefabricated, entirely above ground, under 24 inches deep and 5,000 gallons or less, or used temporarily under three months a year.",
+        "A pool permit submittal needs a site plan, structural working drawings with engineering calculations or an approved ICC-ES report, and the pool and barrier layout at 1/4 inch = 1 ft.",
+        "Energy code information on pool heaters, controls, covers and pumps must be provided with the submittal.",
+        "Properties on a septic system need Public Health approval of the pool location before the building permit application.",
+        "Single-family residence pools for the family's own use are exempt from Public Health plan review and permits."
+      ],
+      "sources": [
+        {"title": "Private Swimming Pools or Spas (King County Permitting, Aug 2023)", "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/local-services/permits/building-land-use-permits/r/private-swimming-pool-or-spa.pdf?rev=bcf7be83b94846c192826b0d1f74a19d&hash=0E4FD61F5A0DEBFF5E9A240875F9C74C"},
+        {"title": "Plan review and operating permits for water recreation facilities (King County)", "url": "https://kingcounty.gov/depts/health/environmental-health/healthy-communities/water-recreation/forms.aspx"}
+      ]
+    },
+    {
+      "name": "Seattle",
+      "kind": "city",
+      "office": "Seattle Department of Construction and Inspections (SDCI)",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Seattle has adopted the 2021 International Residential Code with local amendments, published as the Seattle Residential Code.",
+        "The 2021 Seattle Residential Code exempts prefabricated pools with walls entirely above adjacent grade and capacity of 5,000 gallons or less from permits.",
+        "SDCI lists accessory swimming pools among standard-plan types and says those plans must be stamped by a Washington state structural engineer with structural notes, soil assumptions and calculations.",
+        "The Seattle Residential Code lists Appendix G, Swimming Pools, Spas and Hot Tubs, among its appendices."
+      ],
+      "sources": [
+        {"title": "Residential Code (Seattle SDCI)", "url": "https://www.seattle.gov/construction-and-inspections/codes/codes-we-enforce-(a-z)/residential-code"},
+        {"title": "2021 Seattle Residential Code, Chapter 1 Administration", "url": "https://seattle.gov/documents/Departments/SDCI/Codes/SeattleResidentialCode/2021SRCChapter1.pdf"},
+        {"title": "SDCI Tip 310 Standard Plans", "url": "https://seattle.gov/DPD/Publications/CAM/cam310.pdf"}
+      ]
+    },
+    {
+      "name": "Kennewick (Tri-Cities)",
+      "kind": "city",
+      "office": "City of Kennewick Building Safety Division",
+      "portal_name": "Customer Self Service",
+      "portal_url": "https://www.go2kennewick.com/DocumentCenter/View/10997/Express-Permit---Swimming--Pool",
+      "notes": [
+        "Pool permits include an application, a scaled site plan showing pool, fence and heater, and a mechanical permit application if the pool is heated.",
+        "The city asks for an ICC-ES report for liner or fiberglass pools, or engineering for a poured-in-place pool.",
+        "The city's express checklist for pools is online-only; it also asks for plot plan details such as slopes, easements, setbacks, barrier and equipment locations.",
+        "Addresses on septic need an approval letter and stamped plot plan from the Benton Franklin Health Department before applying.",
+        "The city's pool requirements sheet cites the 2015 ISPSC for barrier rules, so the edition should be confirmed with the city."
+      ],
+      "sources": [
+        {"title": "Residential Swimming Pool Requirements (Kennewick Building Safety Division)", "url": "https://www.go2kennewick.com/DocumentCenter/View/9509/Residential-Swimming-Pool-Requirements"},
+        {"title": "EXPRESS Residential Permit Submittal Checklist, Swimming Pools and Spas (Kennewick)", "url": "https://www.go2kennewick.com/DocumentCenter/View/10997/Express-Permit---Swimming--Pool"}
+      ]
+    },
+    {
+      "name": "Vancouver",
+      "kind": "city",
+      "office": "City of Vancouver Community Development Department",
+      "portal_name": "Avolve ePlans",
+      "portal_url": "https://www.cityofvancouver.us/business/building-construction/residential-building-permits/",
+      "notes": [
+        "Residential building permits (RES) are required for construction, alteration, addition, repair or demolition of residential buildings and structures.",
+        "Plans are uploaded through the city's plan submittal site, Avolve ePlans, after the application form is sent to the permit specialists.",
+        "The city publishes a Swimming Pool Enclosures and Safety Devices Requirements document among its residential permit forms."
+      ],
+      "sources": [
+        {"title": "Residential Building Permits (City of Vancouver, WA)", "url": "https://www.cityofvancouver.us/business/building-construction/residential-building-permits/"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Spokane (city and county) pages returned 403 or bot-check to automated fetch; Spokane not included.",
+    "Seattle: no SDCI page specific to residential in-ground pool permits and no portal name was confirmed on an opened page.",
+    "King County: portal name not confirmed on an opened page.",
+    "Kennewick requirements sheet cites the 2015 ISPSC and may be outdated; current edition not confirmed."
+  ]
+}

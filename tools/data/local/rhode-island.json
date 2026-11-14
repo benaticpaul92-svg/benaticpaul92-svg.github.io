@@ -1,0 +1,64 @@
+{
+  "state": "Rhode Island",
+  "slug": "rhode-island",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Providence",
+      "kind": "city",
+      "office": "City of Providence Department of Inspection and Standards",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Providence publishes a Rhode Island Pool Barrier Checklist and says a permit is required for a pool or spa that can hold 24 inches or more of water.",
+        "The checklist says it incorporates the 2018 edition of the International Swimming Pool and Spa Code.",
+        "It lists a barrier at least 48 inches tall, no openings that pass a 4 inch sphere, a 36 inch clear zone around pumps and filters, and self-closing, self-latching gates that open away from the pool.",
+        "Under the zoning section it cites, no private pool or hot tub, including aprons and walks, may be in a front yard or a required corner or interior side setback.",
+        "The pool and its impervious apron count toward the rear yard and total impervious maximums."
+      ],
+      "sources": [
+        {
+          "title": "Rhode Island Pool Barrier Checklist (City of Providence), 10.21.25",
+          "url": "https://www.providenceri.gov/wp-content/uploads/2025/10/Rhode-Island-Pool-Barrier-Checklist-10.21.25.pdf"
+        },
+        {
+          "title": "Brochures, Applications and FAQ (City of Providence Inspection & Standards)",
+          "url": "https://www.providenceri.gov/inspection/brochures-applications/"
+        }
+      ]
+    },
+    {
+      "name": "Cranston",
+      "kind": "city",
+      "office": "Cranston Department of Building Inspections & Zoning",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The city's Building Inspection page says its department enforces the current edition of the Rhode Island State Building Code, the International Codes and the National Electrical Code as amended.",
+        "It says any contractor working on another person's home must be licensed or registered by the State of Rhode Island.",
+        "The department moved to 155 Gansett Avenue (rear) on March 23, 2026."
+      ],
+      "sources": [
+        {
+          "title": "Building Inspection (City of Cranston)",
+          "url": "https://www.cranstonri.gov/departments/building-and-public-works/building-inspection/"
+        }
+      ]
+    }
+  ],
+  "state_level": [
+    {
+      "note": "The Rhode Island Swimming Pool and Spa Code (510-RICR-00-00-14) adopts the 2021 edition of the International Swimming Pool and Spa Code, with state amendments.",
+      "source": {
+        "title": "Rhode Island Swimming Pool and Spa Code, 510-RICR-00-00-14 (RI Department of State)",
+        "url": "https://rules.sos.ri.gov/regulations/part/510-00-00-14"
+      }
+    }
+  ],
+  "gaps": [
+    "Only 2 jurisdictions, and Cranston has no pool-specific facts: Warwick's site rate-limited (HTTP 429) and its building pages were not reached; Newport's pages had no pool content.",
+    "The web search budget ran out before Warwick, Newport or South County towns could be searched.",
+    "Providence's checklist cites the 2018 ISPSC while the state regulation adopts the 2021 edition; the difference was not resolved.",
+    "No portal name could be confirmed for Providence from an opened page."
+  ]
+}

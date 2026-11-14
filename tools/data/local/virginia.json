@@ -1,0 +1,81 @@
+{
+  "state": "Virginia",
+  "slug": "virginia",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Fairfax County",
+      "kind": "county",
+      "office": "Fairfax County Land Development Services",
+      "portal_name": "Planning and Land Use System (PLUS)",
+      "portal_url": "https://www.fairfaxcounty.gov/health/permits/pools",
+      "notes": [
+        "Residential pool permits come from Land Development Services; the Health Department does not issue permits for or inspect private residential pools, spas and hot tubs.",
+        "The county lists pools and spas under its residential miscellaneous building permit.",
+        "A fence used as a barrier around a swimming pool needs a permit, even though most residential fences do not.",
+        "Permit applications are made in PLUS, the county's online Planning and Land Use System."
+      ],
+      "sources": [
+        {"title": "Swimming Pool Codes and Permits (Fairfax County Health Department)", "url": "https://www.fairfaxcounty.gov/health/permits/pools"},
+        {"title": "Permit Library: Residential Building", "url": "https://www.fairfaxcounty.gov/landdevelopment/permit-library/residential"},
+        {"title": "When a Permit is Required", "url": "https://www.fairfaxcounty.gov/landdevelopment/when-permit-required"}
+      ]
+    },
+    {
+      "name": "Loudoun County",
+      "kind": "county",
+      "office": "Loudoun County Building and Development",
+      "portal_name": "LandMARC",
+      "portal_url": "https://www.loudoun.gov/5382/Pools",
+      "notes": [
+        "A pool needs both a building permit and a zoning permit, plus a plat showing the pool, its distances to side and rear lines, and the equipment location.",
+        "The county requires a pool fence under the 2021 International Swimming Pool and Spa Code and a signed Pool Fence Acknowledgement Form.",
+        "A grading permit is needed if more than 5,000 square feet is disturbed; electrical and gas permits may also be required.",
+        "In an incorporated town, an approved town zoning permit must be submitted; lots on well and septic need Health Department approval first.",
+        "Required building inspections are steel, perimeter bonding and final; applications and inspection scheduling are in LandMARC."
+      ],
+      "sources": [
+        {"title": "Pool Permits (Loudoun County)", "url": "https://www.loudoun.gov/5382/Pools"}
+      ]
+    },
+    {
+      "name": "Virginia Beach",
+      "kind": "city",
+      "office": "Permits and Inspections Division, Department of Planning and Community Development",
+      "portal_name": "Accela Citizen Access (Permits & Inspections online permitting)",
+      "portal_url": "https://aca-prod.accela.com/cvb/Default.aspx",
+      "notes": [
+        "A building permit is required for in-ground and above-ground pools and hot tubs or spas able to hold at least 24 inches of water.",
+        "In-ground pools have setback/footing and final building inspections; above-ground pools have a final inspection.",
+        "New structures in the Chesapeake Bay Preservation Area, flood zones or Southern Rivers Watershed Area may need extra environmental approvals before the building permit.",
+        "The city enforces the Virginia Construction, Residential and Property Maintenance Codes for new pools and barriers."
+      ],
+      "sources": [
+        {"title": "Residential Building Permits (Virginia Beach)", "url": "https://planning.virginiabeach.gov/permits/building/residential-building-permits"},
+        {"title": "Swimming Pool Safety (Virginia Beach Housing and Neighborhood Preservation)", "url": "https://housing.virginiabeach.gov/code-enforcement/swimming-pool-safety"}
+      ]
+    },
+    {
+      "name": "Chesterfield County",
+      "kind": "county",
+      "office": "Chesterfield County Building Inspection Department",
+      "portal_name": "Accela Citizen Access",
+      "portal_url": "https://aca-prod.accela.com/CHESTERFIELD/",
+      "notes": [
+        "The county's December 2021 pool guide says the state building code requires a permit for pools over 150 square feet, over 5,000 gallons, or 24 inches or more deep.",
+        "Applications need a plot plan with distances from the pool to all property lines and the house, plus two sets of construction drawings.",
+        "In-ground pool drawings must show wall sections with reinforcing steel size and spacing and be sealed by a Virginia registered design professional.",
+        "The pool, barrier, electrical and (if gas-heated) gas work are permitted separately, and the guide tells applicants to check setbacks and easements with the Planning Department."
+      ],
+      "sources": [
+        {"title": "Requirements for Outdoor Residential Swimming Pools (Chesterfield County, Dec 2021)", "url": "https://www.chesterfield.gov/DocumentCenter/View/1532/Requirements-for-Outdoor-Residential-Swimming-Pools-PDF"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Fairfax County's main Pools, Spas and Hot Tubs page returned HTTP 403 to automated fetch, so plan-content and sealing requirements were not verified.",
+    "Henrico County and Richmond not researched; Chesterfield used instead.",
+    "Chesterfield guide is dated December 2021; current code edition not confirmed there."
+  ]
+}

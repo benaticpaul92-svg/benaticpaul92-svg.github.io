@@ -1,0 +1,64 @@
+{
+  "state": "South Carolina",
+  "slug": "south-carolina",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Charleston",
+      "kind": "city",
+      "office": "City of Charleston Permit Center (Development Services)",
+      "portal_name": "Customer Self Service Portal (CSS)",
+      "portal_url": "https://www.charleston-sc.gov/856/Permit-Center",
+      "notes": [
+        "Residential and commercial swimming pool permits can be submitted online through the Customer Self Service Portal (CSS).",
+        "The May 2026 residential pool guidance requires a separate electrical sub permit, and a gas sub permit for a pool heater, and says the city prohibits additional electrical meters for a pool or spa.",
+        "The site plan must show pool dimensions, equipment location, distances to lot lines, barrier locations and grand trees of 24 inch D.B.H. or larger; Daniel Island plans also need ARB approval.",
+        "Pool and spa structural plans must be signed and sealed by a licensed South Carolina structural engineer and address buoyancy from the high seasonal water table.",
+        "The city's express in-person pool review applies only to in-ground pools outside a flood zone and outside BAR or DRB areas."
+      ],
+      "sources": [
+        {"title": "General Permitting Guidance: Residential Swimming Pools and Spas, May 2026 (City of Charleston)", "url": "https://www.charleston-sc.gov/DocumentCenter/View/40995"},
+        {"title": "Permit Center (City of Charleston)", "url": "https://www.charleston-sc.gov/856/Permit-Center"},
+        {"title": "Applications & Guidelines (City of Charleston)", "url": "https://www.charleston-sc.gov/2483/Applications-Guidelines"}
+      ]
+    },
+    {
+      "name": "Charleston County (unincorporated)",
+      "kind": "county",
+      "office": "Charleston County Building Inspection Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The county publishes a V-Zone Design Certificate for Pools and Spas in V-Zones and Coastal A Zones, with pre-construction and as-built versions.",
+        "The certificate must be signed and sealed by a registered professional engineer or architect, and construction plans must match it.",
+        "It cites ASCE 24-14 Section 9.6.2 and requires the pool to be structurally independent of nearby buildings and not subject to flotation that damages foundations.",
+        "It asks for base and design flood elevations in NAVD 88 and scour and embedment depths for the pool and equipment stand."
+      ],
+      "sources": [
+        {"title": "Charleston County V-Zone Design Certificate for Pools and Spas", "url": "https://www.charlestoncounty.gov/departments/building-inspection-services/forms/VZone-Design-Cert-pool-and-spas.pdf?v=631"},
+        {"title": "Forms (Charleston County Building Inspection Services)", "url": "https://www.charlestoncounty.gov/departments/building-inspection-services/forms.php"}
+      ]
+    },
+    {
+      "name": "Mount Pleasant",
+      "kind": "town",
+      "office": "Town of Mount Pleasant Building Inspections (Planning, Land Use, and Neighborhoods)",
+      "portal_name": "OPAL",
+      "portal_url": "https://www.tompsc.com/1568/Apply-for-Permits-and-Boards-Commissions",
+      "notes": [
+        "The town takes planning, building, code enforcement and business license applications through its online OPAL portal, and applicants must register first.",
+        "Tree removals tied to residential construction, including pools, are reviewed as part of the building permit application rather than a separate tree permit."
+      ],
+      "sources": [
+        {"title": "Apply for Permits and Boards and Commissions (Town of Mount Pleasant)", "url": "https://www.tompsc.com/1568/Apply-for-Permits-and-Boards-Commissions"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Only 3 of 6 jurisdictions: Greenville, Columbia, Myrtle Beach and Horry County pages were blocked (403), unreachable, or rendered by script; North Charleston and Summerville pool pages were blocked or had no pool content.",
+    "The web search budget ran out, so no further jurisdictions could be searched for.",
+    "Mount Pleasant has no pool-specific page opened, so it has only 2 notes.",
+    "No local page opened states which code edition is enforced, and the state-level contractor licence and barrier statements on the existing state page were not re-verified."
+  ]
+}

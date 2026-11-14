@@ -1,0 +1,76 @@
+{
+  "state": "Ohio",
+  "slug": "ohio",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Lakewood (Cuyahoga County)",
+      "kind": "city",
+      "office": "City of Lakewood Department of Housing and Building",
+      "portal_name": "CitizenServe",
+      "portal_url": "https://www.citizenserve.com/lakewoodoh",
+      "notes": [
+        "The city's permit table marks swimming pools, hot tubs and saunas as needing a permit, construction drawings and zoning review.",
+        "The planning guide says plans must be approved and a construction permit issued before work begins, and the application needs a site plan showing the pool, equipment, fences, gates, receptacles and buildings.",
+        "The guide cites Chapter 1722 (Family Swimming Pools) of the Lakewood Codified Ordinances, with a fence at least 4 ft high and a self-closing, self-latching gate.",
+        "The guide asks for pool and circulation capacity, filtration and sanitizer type, and backflow protection under Ohio Plumbing Code Section 608.13.",
+        "The guide's site plan notes set pool distance to rear and side property lines by zoning district, such as 10 ft in R1 districts, and bonding with a solid No. 8 AWG or larger copper conductor."
+      ],
+      "sources": [
+        {
+          "title": "Building Permits - City of Lakewood",
+          "url": "https://lakewoodoh.gov/housing-and-building/building-permits/"
+        },
+        {
+          "title": "Permit Requirements - City of Lakewood",
+          "url": "https://www.lakewoodoh.gov/wp-content/uploads/2026/05/Permit-Requirements-2025_111225.pdf"
+        },
+        {
+          "title": "Swimming Pool and Hot Tub Planning Guide - City of Lakewood",
+          "url": "https://www.lakewoodoh.gov/wp-content/uploads/2026/04/Swimming-Pool-and-Hot-Tub-Planning-Guide-Fillable-2025_rev111825.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Dublin (Franklin County)",
+      "kind": "city",
+      "office": "City of Dublin Building Standards and Review Services",
+      "portal_name": "Accela Citizen Access",
+      "portal_url": "https://aca-prod.accela.com/dublinoh/default.aspx",
+      "notes": [
+        "The city lists swimming pools and hot tubs among residential projects that need a building permit.",
+        "All planning and permit applications are processed online through the Accela Citizen Access portal, with drawings submitted through ProjectDox electronic plan review.",
+        "The city says to ask Planning whether a zoning permit is also required for a project."
+      ],
+      "sources": [
+        {
+          "title": "Building Permits & Applications - City of Dublin",
+          "url": "https://dublinohiousa.gov/applications-permits/building-permits-applications/"
+        }
+      ]
+    },
+    {
+      "name": "Cleveland (Cuyahoga County)",
+      "kind": "city",
+      "office": "City of Cleveland Department of Building & Housing",
+      "portal_name": "Permit Portal (Accela)",
+      "portal_url": "https://coc-prod-publicportal.accela.com",
+      "notes": [
+        "Residential permits are searched, applied for and paid through the city's Permit Portal.",
+        "Electrical, plumbing and HVAC contractors must first hold a State of Ohio license and then complete the city's contractor packet."
+      ],
+      "sources": [
+        {
+          "title": "Building & Housing - City of Cleveland",
+          "url": "https://www.clevelandohio.gov/city-hall/departments/building-housing"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Only 3 of 4 jurisdictions, and Cleveland's page does not mention pools specifically, so its notes are general residential permit facts only.",
+    "Columbus (403), Cincinnati (connection refused), Akron and Westerville (403) could not be opened; Toledo's pages had no pool content; the shared web search budget ran out so no replacements could be searched. Columbus and Cincinnati need a re-run.",
+    "No state-level fact added; none was opened from a state source."
+  ]
+}

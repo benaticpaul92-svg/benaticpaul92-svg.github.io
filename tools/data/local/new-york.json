@@ -1,0 +1,116 @@
+{
+  "state": "New York",
+  "slug": "new-york",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "New York City",
+      "kind": "city",
+      "office": "NYC Department of Buildings",
+      "portal_name": "DOB NOW",
+      "portal_url": "https://www.nyc.gov/site/buildings/property-or-business-owner/project-requirements-owner-outdoor-pool.page",
+      "notes": [
+        "The Department of Buildings requires work permits to install a pool, with limited exceptions such as some above-ground and shallow wading pools.",
+        "Pool construction requirements are in section 3109 of the NYC Building Code.",
+        "A permit is not required for an outdoor pool at a one- or two-family home that is limited to 400 sq ft and set back farther than its deepest depth, subject to a plumbing condition.",
+        "If the work goes beyond the exempt items, a Registered Design Professional must submit construction plans to the Department for approval before the permit is issued.",
+        "NYC311 lists a 4 ft fence with a self-closing gate around in-ground pools, and 5 ft from the lot line on lots 25 ft wide or more."
+      ],
+      "sources": [
+        {"title": "Decks, Porches & Swimming Pools - NYC Department of Buildings", "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/decks-porches-swimming-pools.page"},
+        {"title": "Project Requirements for Owner - Outdoor Swimming Pool - NYC Department of Buildings", "url": "https://www.nyc.gov/site/buildings/property-or-business-owner/project-requirements-owner-outdoor-pool.page"},
+        {"title": "Swimming Pool Installation Rules - NYC311", "url": "https://portal.311.nyc.gov/article/?kanumber=KA-01375"}
+      ]
+    },
+    {
+      "name": "Town of Huntington (Suffolk County)",
+      "kind": "town",
+      "office": "Town of Huntington Building & Housing Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "A building permit is required for a swimming pool in the unincorporated Town; the villages of Asharoken, Huntington Bay, Lloyd Harbor and Northport handle their own permits.",
+        "The filing list includes two notarized pool permit applications, two surveys, two plot plans showing fence and setbacks, and two sets of pool plans showing size, depth and construction type.",
+        "The pool and its equipment must be at least 5 ft from the property line, and a fence enclosure with gates is required under Appendix G of the state code.",
+        "Electrical work must follow NEC Article 680, and an electrical inspection certificate is needed before a Certificate of Completion."
+      ],
+      "sources": [
+        {"title": "Requirements for Swimming Pool Permit - Town of Huntington", "url": "https://www.huntingtonny.gov/311/knowledgebase/article/276524"}
+      ]
+    },
+    {
+      "name": "Town of Oyster Bay (Nassau County)",
+      "kind": "town",
+      "office": "Town of Oyster Bay Department of Planning and Development, Building Division",
+      "portal_name": "Building Division Portal (eTRAKiT)",
+      "portal_url": "https://oysterbaytown.com/departments/planning-and-development/building-portal/",
+      "notes": [
+        "The Building Division lists in-ground and above-ground pools 18 in. deep or more among projects needing a building permit.",
+        "The Town code requires a permit application with plans showing width, length and depth, plus a survey showing the pool location, for pools over 5,000 gallons.",
+        "The Town code sets pools at least 5 ft from any lot line, with a fence of 4 to 6 ft and self-closing, self-latching gates.",
+        "Pools with only required fencing, and related pool heaters, are listed as portal permit types."
+      ],
+      "sources": [
+        {"title": "Building Division - Town of Oyster Bay", "url": "https://oysterbaytown.com/departments/planning-and-development/building/"},
+        {"title": "Building Portal - Town of Oyster Bay", "url": "https://oysterbaytown.com/departments/planning-and-development/building-portal/"},
+        {"title": "Town of Oyster Bay Code Chapter 246 (swimming pools)", "url": "https://oysterbaytown.com/wp-content/uploads/TOB-Pool-Code.pdf"}
+      ]
+    },
+    {
+      "name": "Town of Greenburgh (Westchester County)",
+      "kind": "town",
+      "office": "Town of Greenburgh Department of Buildings",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The building permit instructions list extra submittals for pools and hot tubs: approved slope and wetlands clearance forms, pool specifications, and a site plan with distances to property lines.",
+        "A zoning compliance form completed by a NYS licensed architect or engineer is required for any new pool or deck.",
+        "If decking is proposed around the pool, a NYS licensed architect or engineer must prepare the drawings, and details of NYS pool barrier compliance must be provided.",
+        "Septic or well systems need Westchester County Health Department approval with the application."
+      ],
+      "sources": [
+        {"title": "Building Permit Application and Instructions - Town of Greenburgh", "url": "https://www.greenburghny.com/DocumentCenter/View/213/Building-Permit-Application-PDF"}
+      ]
+    },
+    {
+      "name": "Town of Amherst (Erie County)",
+      "kind": "town",
+      "office": "Town of Amherst Building Department",
+      "portal_name": "Amherst Permits, Inspections & Inquiries",
+      "portal_url": "https://www.amherst.ny.us/content/departments.php?dept_id=dept_04&div_id=div_04&menu_id=menu_14",
+      "notes": [
+        "The Town recommends applying through its online permit portal, which requires a registered user account.",
+        "In-ground pool applications need a survey, stamped drawings by a design professional, a signed Pool Regulations Letter, a National Grid pool clearance letter, a pool alarm brochure and an electrical subcontractor statement.",
+        "The check sheet says in-ground pool plans must bear a NYS professional engineer or architect seal if capacity exceeds 2,000 cu ft, and must include grade and drainage plans and soils test information.",
+        "Plumbing needs a separate permit, and electrical and plumbing work must be done by Town of Amherst licensed contractors."
+      ],
+      "sources": [
+        {"title": "Pool Permits - Town of Amherst Building Department", "url": "https://www.amherst.ny.us/content/departments.php?dept_id=dept_04&div_id=div_04&menu_id=menu_14"},
+        {"title": "Building Permit Application Check Sheet: Swimming Pools & Hot Tubs - Town of Amherst", "url": "https://amherst.ny.us/pdf/building/pa/pa_poolchecksheet.pdf"}
+      ]
+    },
+    {
+      "name": "Town of Greece (Monroe County)",
+      "kind": "town",
+      "office": "Town of Greece Technical Services Department / Building Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Any new swimming pool or spa deeper than 24 in. needs a permit.",
+        "The submittal needs a site plan or current survey with the pool location and setbacks to property lines and structures.",
+        "Pool enclosures must follow Appendix G of the Residential Code of New York State.",
+        "Electrical work is inspected by one of three listed inspection agencies, and the Building Department does the final inspection."
+      ],
+      "sources": [
+        {"title": "Swimming Pools/Spas & Pool Enclosures - Town of Greece", "url": "https://greeceny.gov/departments/building/swimming-pools-and-spas/"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Rochester, Buffalo, Brookhaven and Yonkers official sites returned 403 to automated fetch, so no verified facts; replaced with Greece, Amherst, Huntington and Greenburgh.",
+    "Town of Hempstead and Suffolk County (Brookhaven) not covered for the same reason or no pool page found.",
+    "Huntington online permit portal name not confirmed from a page opened; direct NYC DOB NOW portal URL not opened (project requirements page used instead).",
+    "Amherst check sheet cites the 2016 NYS supplement code section numbers; current edition not confirmed."
+  ]
+}

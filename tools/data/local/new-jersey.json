@@ -1,0 +1,116 @@
+{
+  "state": "New Jersey",
+  "slug": "new-jersey",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Paramus (Bergen County)",
+      "kind": "borough",
+      "office": "Borough of Paramus Building Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The borough's pool permit checklist lists a zoning review application, a site work application if there is a concrete walkway, patio or equipment pad, and a pool permit application covering small construction, building, electric, plumbing and soil.",
+        "The checklist asks for a survey showing pool, walkway, patio and filter locations with setbacks, plus spec sheets for heater, filter, pump, drains and fence and lock, a gas riser diagram, and an electrical diagram that must comply with 2020 NEC 680.",
+        "Borough handout: in-ground and above-ground pools must be 10 ft from rear and side yard setbacks and at least 5 ft from any house, shed or garage; filter equipment must be 10 ft from those lot lines.",
+        "Borough handout: an in-ground pool fence must be at least 4 ft high with self-closing, latching gates that swing outward; pools need building, electric and plumbing permits and a survey no more than 20 years old."
+      ],
+      "sources": [
+        {
+          "title": "Checklist for Pool Permit Submittals (revised 2/19/25) - Borough of Paramus",
+          "url": "https://www.paramusborough.gov/DocumentCenter/View/4690/CHECKLIST-FOR-POOL-PERMIT-SUBMITTALS"
+        },
+        {
+          "title": "Requirements for Sheds, Fences, Pools, Hot Tub/Spa, Patios, Decks and Driveways - Borough of Paramus",
+          "url": "https://www.paramusborough.gov/DocumentCenter/View/95/Sheds-Fences-Pools-Patios-Decks-and-Driveways-Handout-Sheet-PDF"
+        },
+        {
+          "title": "Licenses & Permits - Borough of Paramus",
+          "url": "http://www.paramusborough.gov/289/Licenses-Permits"
+        }
+      ]
+    },
+    {
+      "name": "Edison (Middlesex County)",
+      "kind": "township",
+      "office": "Edison Township Code Enforcement (Construction Department)",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The township says a permit is generally required to construct decks or pools, additions and fences.",
+        "Applications need two copies of plans, prepared by the homeowner for a single-family dwelling or by a New Jersey licensed architect or engineer.",
+        "Additions, fences, sheds and pools require a plot plan showing existing and proposed structures, distances to lot lines and any easements.",
+        "Process steps are zoning review, then building, electrical, plumbing and fire subcode review, then submission of prior approvals and permit issuance."
+      ],
+      "sources": [
+        {
+          "title": "Code Enforcement - Edison Township",
+          "url": "https://www.edisonnj.org/departments/engineering_department/code_enforcement.php"
+        }
+      ]
+    },
+    {
+      "name": "Jersey City (Hudson County)",
+      "kind": "city",
+      "office": "Jersey City Division of the Construction Code Official",
+      "portal_name": "Online Permitting and Licensing System",
+      "portal_url": "",
+      "notes": [
+        "Pools need zoning approval first; after that, pools over 24 inches need a permit application with the building and technical sections attached.",
+        "In-ground pools need a Bonding and Grounding Certificate and an annual city inspection.",
+        "Construction applications are made on the city's online permit portal; plans and plumbing and electrical technical forms must also be submitted in person at the Construction Code Official's Office.",
+        "Plans must carry the seal and signature of the registered architect or licensed engineer, with an exception for a homeowner preparing their own single-family plans under affidavit."
+      ],
+      "sources": [
+        {
+          "title": "Permit Specific FAQ - Jersey City Construction Code",
+          "url": "https://www.jerseycitynj.gov/cityhall/HousingAndDevelopment/constructioncode/permit_specific_f_a_q/"
+        },
+        {
+          "title": "Application & Review Process - Jersey City Construction Code",
+          "url": "https://www.jerseycitynj.gov/cityhall/HousingAndDevelopment/constructioncode/application___review_process/"
+        },
+        {
+          "title": "Online Permitting and Licensing - Jersey City",
+          "url": "https://www.jerseycitynj.gov/cityhall/HousingAndDevelopment/onlinepermittinglicensing"
+        },
+        {
+          "title": "Construction Code - Jersey City",
+          "url": "https://www.jerseycitynj.gov/cityhall/HousingAndDevelopment/constructioncode"
+        }
+      ]
+    },
+    {
+      "name": "Wall Township (Monmouth County)",
+      "kind": "township",
+      "office": "Wall Township Construction Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The Construction Department posts the Uniform Construction Code Construction Permit Application with separate building, electrical, plumbing and fire protection subcode applications."
+      ],
+      "sources": [
+        {
+          "title": "Township Forms & Applications - Wall Township",
+          "url": "http://www.wallnj.gov/422/Township-Forms-Applications"
+        }
+      ]
+    }
+  ],
+  "state_level": [
+    {
+      "note": "State Uniform Construction Code permit forms (F100 plus subcode technical sections) are submitted to the local enforcing office as one original plus three photocopies; project type decides which subcode sections apply.",
+      "source": {
+        "title": "Construction Permit Forms - NJ Department of Community Affairs",
+        "url": "https://www.nj.gov/dca/codes/resources/constructionpermitforms.shtml"
+      }
+    }
+  ],
+  "gaps": [
+    "Only 4 of 6 requested jurisdictions. Newark, Morris County towns, Brick, Toms River and Middletown pages were blocked, unreachable or showed no pool permit content.",
+    "New Jersey issues pool permits at municipal level, so county offices were not used.",
+    "Wall Township has no pool-specific form or checklist on the page reviewed; its entry is thin.",
+    "Edison and Wall have no verified online permit portal; Jersey City portal URL was not opened directly, so portal_url is empty.",
+    "The ISPSC 2021/2024 edition and the UCC R326 pool provision were not re-verified on a state site."
+  ]
+}

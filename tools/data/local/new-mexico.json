@@ -1,0 +1,82 @@
+{
+  "state": "New Mexico",
+  "slug": "new-mexico",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Albuquerque",
+      "kind": "city",
+      "office": "City of Albuquerque Planning Department, Building Safety Division",
+      "portal_name": "ABQ-PLAN",
+      "portal_url": "https://www.cabq.gov/planning/abq-plan",
+      "notes": [
+        "The city's building safety FAQ lists building a swimming pool among the projects that need a permit.",
+        "Building permits are applied for, tracked and paid through the ABQ-PLAN online permitting portal.",
+        "The homeowner guide asks for a site plan showing the pool at least 5 ft from adjacent property lines and the dwelling, with dimensions that allow square footage and gallons to be checked.",
+        "The same guide (dated 2018) says the plan must show barrier compliance, with walls at least 4 ft high with an automatic cover or 6 ft without one, labeled gates, and UL 2017 alarms on dwelling doors opening to the pool.",
+        "The same guide (dated 2018) asks for a current architect or engineer seal on gunite pools, or an ICC-ES report for fiberglass pools."
+      ],
+      "sources": [
+        {"title": "Building Safety & Permits FAQs - City of Albuquerque", "url": "https://www.cabq.gov/planning/planning-faqs/building-safety-faqs"},
+        {"title": "Permits - City of Albuquerque", "url": "https://www.cabq.gov/planning/building-safety-division/permits"},
+        {"title": "ABQ-PLAN - City of Albuquerque", "url": "https://www.cabq.gov/planning/abq-plan"},
+        {"title": "Home Owner's Building Permit Guide - City of Albuquerque", "url": "https://documents.cabq.gov/planning/BuildingSafety/HOBfinal%209-5-18.pdf"}
+      ]
+    },
+    {
+      "name": "Rio Rancho",
+      "kind": "city",
+      "office": "City of Rio Rancho Development Services",
+      "portal_name": "Click2Gov",
+      "portal_url": "https://rrnm.gov/4344/Get-a-Permit",
+      "notes": [
+        "The city lists swimming pools, hot tubs and spas among the projects that need a permit.",
+        "The pool permit packet asks for a site plan, a building permit and plan review application, plumbing or mechanical permits, an electrical permit, and a floor plan showing plumbing, mechanical and electrical layouts.",
+        "Applications go in through the Click2Gov portal or by email to permits@rrnm.gov; the form says paper documents are not accepted.",
+        "The packet reproduces the city fence rule: a pool deeper than 3 ft or over 5,000 gallons needs a barrier of at least 6 ft, with self-closing gates."
+      ],
+      "sources": [
+        {"title": "Swimming Pool Permit Packet - City of Rio Rancho", "url": "https://rrnm.gov/DocumentCenter/View/82051/Swimming-Pool-Permit"},
+        {"title": "Get a Permit - City of Rio Rancho", "url": "https://rrnm.gov/4344/Get-a-Permit"}
+      ]
+    },
+    {
+      "name": "City of Santa Fe",
+      "kind": "city",
+      "office": "City of Santa Fe Land Use Department, Building Division",
+      "portal_name": "Citizen Self-Service (CSS) portal",
+      "portal_url": "https://santafenm-energovpub.tylerhost.net/Apps/selfservice#/home",
+      "notes": [
+        "The Building Permits page lists New Residential permits, including pools, as a permit type with its own submittal instructions.",
+        "Trade and secondary permits are applied for online through the Citizen Self-Service portal; the Building Division counter is by appointment.",
+        "The city lists the 2021 NM Residential Building Code and the 2012 NM Swimming Pool, Spa, and Hot Tub Code among its adopted codes."
+      ],
+      "sources": [
+        {"title": "Building Permits - City of Santa Fe", "url": "https://santafenm.gov/land-use/building-permits"},
+        {"title": "Adopted Construction Codes - City of Santa Fe", "url": "https://santafenm.gov/land-use/building-permits/adopted-construction-codes"}
+      ]
+    },
+    {
+      "name": "Santa Fe County (unincorporated)",
+      "kind": "county",
+      "office": "Santa Fe County Growth Management, Building and Development Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The county publishes development permit packets for residential projects, available online or at its office at 240 Grant Avenue.",
+        "County Ordinance 2007-1 says a person building a swimming pool must apply to the Water Resources Department and the Land Use Department, describing the water supply.",
+        "That ordinance also requires an automatic cover on each outdoor pool and a fire-marshal-approved draft hydrant for each new pool."
+      ],
+      "sources": [
+        {"title": "Residential Development - Santa Fe County", "url": "https://www.santafecountynm.gov/growth-management/building-development/residential-development"},
+        {"title": "Ordinance 2007-1 - Santa Fe County", "url": "https://www.santafecountynm.gov/documents/ordinances/Ordinance2007-1.pdf"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Las Cruces: official site returned 403 to automated fetch, so no verified facts.",
+    "Santa Fe County: could not confirm Ordinance 2007-1 has not been superseded by the later land development code, and the county's online permit system name was not stated on the page opened.",
+    "Rio Rancho Click2Gov direct URL and Albuquerque current (post-2018) pool submittal checklist not confirmed; Albuquerque 2018 guide items are dated."
+  ]
+}

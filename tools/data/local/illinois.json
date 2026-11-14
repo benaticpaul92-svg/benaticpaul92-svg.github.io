@@ -1,0 +1,82 @@
+{
+  "state": "Illinois",
+  "slug": "illinois",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Naperville",
+      "kind": "city",
+      "office": "Building Permits & Inspections",
+      "portal_name": "Permitting, Plans and Licensing Portal (Civic Access)",
+      "portal_url": "https://www.naperville.il.us/181/Building-Permits",
+      "notes": [
+        "Naperville requires a permit for every in-ground swimming pool and for most above-ground pools.",
+        "A pool, hot tub or spa must be surrounded by a barrier that meets the International Swimming Pool and Spa Code as adopted and amended by the city, and the rule applies to existing fences too.",
+        "Plans submitted on or after April 1, 2026 are reviewed against the 2024 IBC, 2024 IRC and 2024 International Swimming Pool and Spa Code, with the 2023 National Electrical Code.",
+        "Projects with several features, such as a pool, patio and fence, need a permit for each feature; applicants file for the main feature and staff enter the others."
+      ],
+      "sources": [
+        {"title": "Swimming Pool Permit - City of Naperville", "url": "https://www.naperville.il.us/482/Swimming-Pool-Permit"},
+        {"title": "Building Permits - City of Naperville", "url": "https://www.naperville.il.us/181/Building-Permits"}
+      ]
+    },
+    {
+      "name": "Joliet",
+      "kind": "city",
+      "office": "Building & Inspectional Services, Community Development (with Planning & Zoning review)",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Joliet's pool permit page requires a plat of survey marking the pool location, and building plans for in-ground pools.",
+        "Both a building permit and an electrical permit are required for in-ground and above-ground pools; the page cites NEC 2014 Article 680 for the electrical work.",
+        "Pools holding over 24 inches of water must be fenced at least 4 ft. high, and proof of a fence contract is required before the permit is issued.",
+        "The page gives minimum placement distances: 3 ft. from the property line, 6 ft. from the house, 5 ft. from underground power lines and 10 ft. from overhead lines, and no pools in front yards or required corner side yards."
+      ],
+      "sources": [
+        {"title": "Pool Permit - City of Joliet", "url": "https://www.joliet.gov/Government/Departments/Community-Development/Planning-Zoning/Residential-Building-Permit-Information/Pool-Permit"},
+        {"title": "Residential Building Permit Information - City of Joliet", "url": "https://www.joliet.gov/Government/Departments/Community-Development/Building-Inspections/Residential-Building-Permit-Information"}
+      ]
+    },
+    {
+      "name": "Aurora",
+      "kind": "city",
+      "office": "Development Services Department, Division of Building and Permits",
+      "portal_name": "eTRAKiT Online Portal",
+      "portal_url": "https://www.aurora.il.us/Property-Business/Permits/Permit-List",
+      "notes": [
+        "Aurora's pool permit list directs applicants to its eTRAKiT online portal.",
+        "The city's pool application asks for manufacturer specifications for equipment and a proposed plat of survey with topographical and setback information.",
+        "The application lists the 2024 International Pool and Spa Code, 2024 IRC, 2024 IBC, 2023 National Electrical Code and 2014 State of Illinois Plumbing Code as applicable codes.",
+        "The owner's safety affidavit states the pool must be set outside all easements and 5 feet from property lines or fences, or 10 feet from alleys and exterior side lines on corner lots."
+      ],
+      "sources": [
+        {"title": "Permit List - City of Aurora", "url": "https://www.aurora.il.us/Property-Business/Permits/Permit-List"},
+        {"title": "Pools application (commercial or residential) - City of Aurora Division of Building and Permits", "url": "https://www.aurora.il.us/files/sharedassets/mainsite/v/1/development-services/documents/permits/residentialcommercial/2026-app-updates/pools.pdf"}
+      ]
+    },
+    {
+      "name": "Peoria",
+      "kind": "city",
+      "office": "Community Development Department, Building Safety",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Peoria's Building Safety page asks applicants to email permit applications to the Community Development Department.",
+        "The page says Peoria has adopted the 2018 International Building, Residential and related codes and the 2017 National Electrical Code, effective May 1, 2021.",
+        "The city's pool permit application says an electrical permit is required before or with the pool permit, and the applicant is responsible for barrier requirements."
+      ],
+      "sources": [
+        {"title": "Building Safety - City of Peoria", "url": "https://www.peoriagov.org/168/Building-Safety"},
+        {"title": "Application for Pool Permit - City of Peoria", "url": "https://www.peoriagov.org/DocumentCenter/View/261/Pool-Permit-PDF"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Chicago: chicago.gov blocks automated access (403/Access Denied), so nothing was verified for Chicago.",
+    "Aurora: the eTRAKiT portal page itself was not opened; its listing page and the application that names it were.",
+    "Naperville: the Civic Access portal host was not opened; the city's Building Permits page that describes it was.",
+    "Peoria's pool application form is dated 1/26/09 on its face and the 2018 code adoption is from the 2021 notice; confirm current editions.",
+    "The Illinois state-level facts on the existing page (Public Act 103-0510, IDPH swimming facility code) were not re-verified here."
+  ]
+}

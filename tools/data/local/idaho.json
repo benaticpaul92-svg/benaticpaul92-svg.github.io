@@ -1,0 +1,61 @@
+{
+  "state": "Idaho",
+  "slug": "idaho",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Boise",
+      "kind": "city",
+      "office": "Planning and Development Services, Building",
+      "portal_name": "Permitting and Licensing System",
+      "portal_url": "https://www.cityofboise.org/departments/planning-and-development-services/building/homeowners-guide/",
+      "notes": [
+        "The city lists separate building, plumbing, electrical, mechanical and erosion and sediment control permits, and homeowners can apply for several of them through its Permitting and Licensing System.",
+        "Boise's residential construction brochure says an erosion and sediment control permit is needed for work over 500 sq. ft. of disturbance and/or excavating over 10 cubic yards, and it names swimming pools as included.",
+        "The homeowner's guide says some projects, such as taller retaining walls, need an Idaho-licensed engineer."
+      ],
+      "sources": [
+        {"title": "Homeowner's Guide - City of Boise Planning and Development Services", "url": "https://www.cityofboise.org/departments/planning-and-development-services/building/homeowners-guide/"},
+        {"title": "PDS Residential Construction Brochure 2023 - City of Boise", "url": "https://www.cityofboise.org/media/4932/pds-residentialconstructionbrochure-2023.pdf"}
+      ]
+    },
+    {
+      "name": "Meridian",
+      "kind": "city",
+      "office": "Community Development Department, Building",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Meridian's handout says prefabricated swimming pools not deeper than 4 feet need no building permit, while all other swimming pools do.",
+        "Pools needing a permit cannot encroach into property easements; the handout gives typical easements as 10 ft rear and 5 ft side and says to check the recorded plat.",
+        "The handout tells applicants to verify setbacks with Meridian Planning and to check homeowner's association requirements before placing a structure.",
+        "Meridian's handout states that any electrical work needs an electrical permit."
+      ],
+      "sources": [
+        {"title": "Residential Detached Accessory Structures - City of Meridian Community Development", "url": "https://planning.meridiancity.org/media/5gudvfgq/residentialdetachedaccessorystructureshandout.pdf"}
+      ]
+    },
+    {
+      "name": "Coeur d'Alene",
+      "kind": "city",
+      "office": "Building Services Department",
+      "portal_name": "Online Permits Access (building.cdaid.org)",
+      "portal_url": "https://www.cdaid.org/government/departments/building-services/online-permits-access/",
+      "notes": [
+        "Residential building, plumbing, mechanical and re-roof permits can be applied for through the city's Online Permits Access site, which needs a separate account.",
+        "Residential building permit applications need one set of drawings and specifications in PDF format, and the plan review fee is due at submittal."
+      ],
+      "sources": [
+        {"title": "Online Permits Access - City of Coeur d'Alene", "url": "https://www.cdaid.org/government/departments/building-services/online-permits-access/"},
+        {"title": "Residential Applications - City of Coeur d'Alene Building Services", "url": "https://www.cdaid.org/government/departments/building-services/residential-applications/"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Only 3 jurisdictions verified. Nampa and Ada County pages (Cloudflare block, 403) could not be opened; Nampa and Ada County have pool-specific applications according to search listings, but nothing was confirmed.",
+    "Idaho Falls, Eagle and other cities were not reached because the shared web search limit ran out and the pages tried did not mention pools.",
+    "Boise, Meridian and Coeur d'Alene: no official page opened that states a pool barrier rule or the code edition enforced for pools.",
+    "Meridian's separate Residential Pool Barrier Requirements handout (Forms and Handouts page) could not be opened (403)."
+  ]
+}

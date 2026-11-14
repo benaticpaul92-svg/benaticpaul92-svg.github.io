@@ -1,0 +1,51 @@
+{
+  "state": "Louisiana",
+  "slug": "louisiana",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "New Orleans (Orleans Parish)",
+      "kind": "city-parish",
+      "office": "City of New Orleans Department of Safety & Permits",
+      "portal_name": "One Stop App",
+      "portal_url": "https://onestopapp.nola.gov/",
+      "notes": [
+        "A swimming pool permit is required to build or alter any type of pool in the city. Applications are made online through the One Stop App.",
+        "Residential submittals include a plot plan with all lot and structure dimensions and setbacks, a signed contract or estimate, contractor licence information, and the Residential Swimming Pool Acknowledgment.",
+        "Commercial and public pools need two sets of plans with live seals from a Louisiana licensed architect or civil engineer. The page lists that seal requirement for commercial permits only.",
+        "Plan review checks the city's amendments to the International Building Code and its zoning ordinance. Pools in the Vieux Carré need Vieux Carré Commission approval, and other historic districts need Historic Districts Landmark Commission approval."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool Permit - City of New Orleans",
+          "url": "https://nola.gov/swimming-pool-permit/"
+        }
+      ]
+    },
+    {
+      "name": "Lafayette (Lafayette Consolidated Government)",
+      "kind": "city-parish",
+      "office": "Lafayette Consolidated Government, Planning, Zoning and Development",
+      "portal_name": "MGO Connect",
+      "portal_url": "https://www.mgoconnect.org/cp?JID=250&PID=3&AID=4760",
+      "notes": [
+        "The consolidated government's planning, zoning and development applications page lists a Swimming Pool Permit Application, separate from the Residential Permit Application."
+      ],
+      "sources": [
+        {
+          "title": "Planning, Zoning and Development Applications - Lafayette Consolidated Government",
+          "url": "https://www.lafayettela.gov/business-development/planning-and-development/planning-zoning-and-development-applications/"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Baton Rouge / East Baton Rouge Parish: brla.gov permit pages could not be located without search (the permit page URLs I tried returned 403) and nothing was verified.",
+    "Shreveport / Caddo Parish: shreveportla.gov home page exposed no permit links; nothing verified.",
+    "Jefferson Parish: jpla.org and jeffparish.gov returned 403.",
+    "Lafayette: the MGO Connect application itself is script-driven and was not read, so no submittal list is given.",
+    "New Orleans: the checklists and the Residential Swimming Pool Acknowledgment PDFs were not opened; notes come from the service page only.",
+    "Only two Louisiana jurisdictions are verified; the web search quota ran out."
+  ]
+}

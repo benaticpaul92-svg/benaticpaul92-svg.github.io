@@ -1,0 +1,95 @@
+{
+  "state": "Alabama",
+  "slug": "alabama",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Birmingham",
+      "kind": "city",
+      "office": "City of Birmingham Planning, Engineering & Permits, Permitting & Inspection Division",
+      "portal_name": "Online Permit Center (Accela Citizen Access)",
+      "portal_url": "https://aca-prod.accela.com/BIRMINGHAM/customization/common/home.aspx",
+      "notes": [
+        "The Permitting & Inspection Division takes permit applications through the Online Permit Center, where applicants upload documents and track the application.",
+        "The city offers an interactive Permit Guide that asks questions to work out which permits a project needs.",
+        "The city's building codes page lists a 2024 Technical Code effective 10/1/2024 and the earlier Technical Code under Ordinance 15-164."
+      ],
+      "sources": [
+        {
+          "title": "Online Permit Center Introduction",
+          "url": "https://www.birminghamal.gov/government/city-departments/pep/permitting-inspection-division/permitting/online-permit-center"
+        },
+        {
+          "title": "City of Birmingham Permitting",
+          "url": "https://www.birminghamal.gov/government/city-departments/pep/permitting-inspection-division/city-birmingham-permitting"
+        },
+        {
+          "title": "Building Codes",
+          "url": "https://www.birminghamal.gov/work/building-codes"
+        }
+      ]
+    },
+    {
+      "name": "Huntsville / Madison County",
+      "kind": "city",
+      "office": "City of Huntsville Inspection Department",
+      "portal_name": "ePlans Review",
+      "portal_url": "https://www.huntsvilleal.gov/development/building-construction/building-license-permits/",
+      "notes": [
+        "The city's residential permit page says plans are submitted online through ePlans Review as PDF files, and approved permits are picked up in person.",
+        "The city lists the 2018 International Swimming Pool and Spa Code, 2018 International Residential Code and 2017 NEC among its adopted codes.",
+        "Projects in a FEMA Special Flood Hazard Area must be submitted in person, and most building permits need a Flood Development Permit first.",
+        "For commercial pools, the city says Madison County Health Department approval and City Engineering sign-off on the site drawing are required."
+      ],
+      "sources": [
+        {
+          "title": "Residential permits - City of Huntsville",
+          "url": "https://www.huntsvilleal.gov/development/building-construction/building-license-permits/"
+        },
+        {
+          "title": "Commercial Building Inspection Requirements - City of Huntsville",
+          "url": "https://www.huntsvilleal.gov/development/building-construction/inspections/requirements/"
+        },
+        {
+          "title": "Commercial Construction Permitting Process - City of Huntsville",
+          "url": "https://www.huntsvilleal.gov/development/building-construction/building-license-permits/6815-2/"
+        }
+      ]
+    },
+    {
+      "name": "Mobile",
+      "kind": "city",
+      "office": "Build Mobile, Permitting and Predevelopment",
+      "portal_name": "CSS Online Permitting (Tyler EnerGov self-service)",
+      "portal_url": "https://mobileal-energovpub.tylerhost.net/apps/selfservice#/home",
+      "notes": [
+        "Build Mobile's permitting page says its Permitting Department handles permits for swimming pools, fences and other construction types.",
+        "Permits are managed through the online self-service portal, and Build Mobile is on the third floor of the South Tower at 205 Government Street.",
+        "Build Mobile lists adopted 2021 IBC and 2021 IRC editions with local amendments, effective January 7, 2023, plus the 2020 NEC.",
+        "Build Mobile publishes a Residential Plan Review Checklist and a Residential Project Plan Review Application."
+      ],
+      "sources": [
+        {
+          "title": "Permitting - Build Mobile",
+          "url": "https://www.buildmobile.org/permitting/"
+        },
+        {
+          "title": "Forms, Applications and Codes - Build Mobile",
+          "url": "https://www.buildmobile.org/forms-and-applications/"
+        },
+        {
+          "title": "Permitting - City of Mobile",
+          "url": "https://www.cityofmobile.gov/departments/permitting/"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Baldwin County Building Department and Madison County Inspection pages returned HTTP 403 (Cloudflare) to automated fetches, so none of their pool pages could be opened and they are not included.",
+    "Montgomery city inspections page also returned 403, so a fourth jurisdiction could not be verified.",
+    "Birmingham, Huntsville and Mobile pages opened did not describe residential pool submittal requirements (barrier, engineer seal, site plan) specifically; none are stated.",
+    "Huntsville code list is on a page titled for commercial inspection requirements; whether it applies identically to residential pools is not stated on that page.",
+    "Mobile: which pool code edition applies was not found; only general IBC/IRC/NEC editions are listed."
+  ]
+}

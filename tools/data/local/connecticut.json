@@ -1,0 +1,77 @@
+{
+  "state": "Connecticut",
+  "slug": "connecticut",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "West Hartford (Hartford County)",
+      "kind": "town",
+      "office": "West Hartford Building Department",
+      "portal_name": "CityView Permit Online Portal",
+      "portal_url": "https://www.westhartfordct.gov/town-departments/building/permits",
+      "notes": [
+        "The town requires all permit applications, including building permits, to go through its CityView online portal; paper applications are no longer accepted.",
+        "The town's Building FAQ says it follows the State Building Code, which includes the 2021 International Swimming Pool and Spa Code.",
+        "Depending on the project, approval may also be needed from Planning/Zoning, Engineering, Health or the Fire Marshal."
+      ],
+      "sources": [
+        {"title": "Building Permits - West Hartford", "url": "https://www.westhartfordct.gov/town-departments/building/permits"},
+        {"title": "Building FAQs - West Hartford", "url": "https://www.westhartfordct.gov/town-departments/building/faqs"}
+      ]
+    },
+    {
+      "name": "Norwalk (Fairfield County)",
+      "kind": "city",
+      "office": "Norwalk Planning and Zoning",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Swimming pools are treated as accessory structures that need a Zoning Permit first, then a Building Permit after zoning approval.",
+        "The application needs a site plan showing the pool's location relative to property lines at a legible scale, plus dimensionally accurate plans of current and proposed conditions.",
+        "Pools in a flood zone need extra documentation, and a flood-zone application may apply.",
+        "The page asks for three paper copies of plans, delivered in person or by mail; no online portal is named."
+      ],
+      "sources": [
+        {"title": "Apply for a Zoning Permit - Norwalk", "url": "https://norwalkct.gov/2638/Apply-for-a-Zoning-Permit"}
+      ]
+    },
+    {
+      "name": "Darien (Fairfield County)",
+      "kind": "town",
+      "office": "Darien Building Department",
+      "portal_name": "ViewPoint Online Permitting System",
+      "portal_url": "https://www.darienct.gov/157/Building-Department",
+      "notes": [
+        "The town says all permit applications are submitted electronically through its ViewPoint online permitting system.",
+        "Its Work Requiring a Permit page says a permit is needed to install a pool or spa, in-ground or above ground.",
+        "Its online-permitting document list includes a Pool Water Alarm Affidavit and a Swimming Pool Fence Agreement."
+      ],
+      "sources": [
+        {"title": "Building Department - Darien", "url": "https://www.darienct.gov/157/Building-Department"},
+        {"title": "Work Requiring a Permit - Darien", "url": "https://www.darienct.gov/1501/Work-Requiring-a-Permit"},
+        {"title": "Frequently Used Documents for Online Permitting - Darien", "url": "https://www.darienct.gov/1506/Frequently-Used-Documents-for-Online-Per"}
+      ]
+    },
+    {
+      "name": "Shelton (Fairfield County)",
+      "kind": "city",
+      "office": "Shelton Building Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The city's building permit procedure covers all construction and lists swimming pools among the permits the Building Official issues.",
+        "Listed steps include site plan approval through Planning and Zoning and Inland Wetlands where applicable, a zoning compliance application, and a copy of the contractor's licence and insurance certificate."
+      ],
+      "sources": [
+        {"title": "Building Department - Shelton", "url": "https://www.shelton-ct.gov/p/building-department"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Greenwich, Stamford, Westport, Fairfield, New Haven and Hartford sites returned 403 to automated fetches; nothing verified for them.",
+    "None of the opened pages state whether residential pool plans must be engineer-sealed or give pool barrier dimensions.",
+    "Web search budget ran out, so Danbury and Trumbull pool pages could not be located.",
+    "Shelton's online permitting page was not opened, so no portal is listed."
+  ]
+}

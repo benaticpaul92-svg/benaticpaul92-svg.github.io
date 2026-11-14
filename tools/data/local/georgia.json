@@ -1,0 +1,121 @@
+{
+  "state": "Georgia",
+  "slug": "georgia",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Cobb County (unincorporated)",
+      "kind": "county",
+      "office": "Cobb County Community Development, Development and Inspections Division",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "All in-ground and above-ground pools in unincorporated Cobb County must be permitted and inspected by Cobb County Community Development.",
+        "The residential checklist requires a proposed pool design signed and sealed by a land surveyor, professional engineer or landscape architect registered in Georgia.",
+        "Septic approval from Environmental Health is required when the property is on septic, and incomplete packages are not accepted.",
+        "The permit package is emailed to PoolPermits@cobbcounty.gov rather than filed through an online portal.",
+        "From 1 January 2026 the pool builder must hold a Georgia general contractor licence or a recognized pool-builder certification."
+      ],
+      "sources": [
+        {"title": "Pool and Spa Inspections - Cobb County", "url": "https://www.cobbcounty.gov/community-development/building-development/pool-spa-inspections"},
+        {"title": "Pool Permits - Residential Required Documents Checklist (01/2026)", "url": "https://assets.cobbcounty.gov/files/2026-01/POOL_PERMITS_CHECKLIST_RESIDENTIAL_01-2026.pdf"}
+      ]
+    },
+    {
+      "name": "Gwinnett County",
+      "kind": "county",
+      "office": "Gwinnett County Department of Planning and Development",
+      "portal_name": "Gwinnett County ZIP Portal (Accela Citizen Access)",
+      "portal_url": "https://aca-prod.accela.com/GWINNETT/Welcome.aspx",
+      "notes": [
+        "The county's residential pool guidance (revised August 2012) requires a scaled Swimming Pool Location Plan approved by the Development Review Section before the building permit is issued.",
+        "The location plan does not have to be drawn by a surveyor or engineer, but it must be legible and drawn to an engineer's or architect's scale.",
+        "Pools and equipment must sit in the rear yard, at least 5 feet from side and rear property lines, and may not be in easements; the plan must show 100-year floodplain limits where they apply.",
+        "Homes on a private septic system need Gwinnett Environmental Health approval of the pool location before the permit can be issued.",
+        "The guidance requires a barrier at least 4 feet high with self-closing, self-latching, lockable gates and no openings that pass a 4 inch sphere."
+      ],
+      "sources": [
+        {"title": "Swimming Pool (Residential) Building Permit Requirements (BPS-15)", "url": "https://www.gwinnettcounty.com/static/departments/planning/pdf/BPS-15_swimming_pool_building_permit_requirements.pdf"},
+        {"title": "Swimming Pool Location Plan (SPLP)", "url": "https://www.gwinnettcounty.com/static/departments/planning/pdf/swimming_pool_location_plan.pdf"},
+        {"title": "Gwinnett County ZIP Portal", "url": "https://aca-prod.accela.com/GWINNETT/Welcome.aspx"}
+      ]
+    },
+    {
+      "name": "DeKalb County (unincorporated)",
+      "kind": "county",
+      "office": "DeKalb County Department of Planning and Sustainability",
+      "portal_name": "e-Permitting Portal",
+      "portal_url": "https://epermits.dekalbcountyga.gov/",
+      "notes": [
+        "Pool permits are filed through the county's e-Permitting Portal, and plans are submitted separately through ProjectDox.",
+        "A pool permit needs a building permit application and a site plan prepared by an engineer or surveyor registered in Georgia.",
+        "The county says the site plan may be up to ten years old if it still reflects current site conditions.",
+        "The county's guide says a pool needs Board of Health approval, appropriate fencing and an electrical permit.",
+        "Properties inside one of DeKalb's incorporated cities are not covered by the county; the guide applies to unincorporated DeKalb."
+      ],
+      "sources": [
+        {"title": "Permits, Plan Review & Inspections - DeKalb County", "url": "https://dekalbcountyga.gov/departments/planning-and-sustainability/permits-plan-review-and-inspections"},
+        {"title": "Residential Additions Permit Guide (revised 03/2025)", "url": "https://dekalbcountyga.gov/sites/default/files/2026-01/Residential%20Additions%20Guide%20-%202025.pdf"}
+      ]
+    },
+    {
+      "name": "Fulton County (unincorporated)",
+      "kind": "county",
+      "office": "Fulton County Planning and Community Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The county's swimming pool permit application states that private pools must be fully enclosed by a fence, wall or building at least 5 feet high with self-closing, positive-latching gates.",
+        "The same form says pools must be in the side or rear yard, and the pool, equipment and deck must be 10 feet from all property lines.",
+        "A separate fence permit is not required when the fence is included in the pool permit application.",
+        "Pools in or next to a Special Flood Hazard Area need an as-built lowest floor elevation certificate from a Georgia professional engineer or surveyor."
+      ],
+      "sources": [
+        {"title": "Fulton County Swimming Pool Permit Application", "url": "https://www.fultoncountyga.gov/-/media/Departments/Public-Works/Planning-Zoning-and-Permits/Permits-and-plan-review/MiscSwimming-Pool-Permit-App-Final.ashx"}
+      ]
+    },
+    {
+      "name": "Savannah area / Chatham County",
+      "kind": "county",
+      "office": "Chatham County Department of Building Safety and Regulatory Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "A building permit is required for pools involving structural work or supports and for all pools with a permanently equipped water circulating system.",
+        "The county posts a Pool & Spa Permit Application and accepts applications in person at its Eisenhower Drive office; fax and email submissions are not accepted.",
+        "Chatham County's permit application guidance excludes pools from the homeowner-performed-work option."
+      ],
+      "sources": [
+        {"title": "When are Building Permits Required - Chatham County", "url": "https://buildingsafety.chathamcountyga.gov/PermitsInspections/WhenPermitsRequired"},
+        {"title": "Building Permit Applications - Chatham County", "url": "https://buildingsafety.chathamcountyga.gov/PermitsInspections/ApplyForPermit"},
+        {"title": "Applying for a permit - Chatham County", "url": "https://cms.chathamcountyga.gov/api/assets/buildingsafety/b19ee12e-0505-43c6-aea3-5bc8cbcfc7a0?download=0"}
+      ]
+    },
+    {
+      "name": "Augusta-Richmond County",
+      "kind": "city-county",
+      "office": "Augusta License and Inspection Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The residential permit requirements sheet lists a pool permit package of a signed application, plans showing the scope of work and a plot or site plan.",
+        "The License and Inspection Department must approve the pool barrier before any water is put in the pool.",
+        "The city's pool page links a Swimming Pool Memorandum and a Swimming Pool Responsibility Agreement for contractors.",
+        "Inspections can be requested through the city's online Inspection Request form."
+      ],
+      "sources": [
+        {"title": "Swimming Pools - Augusta, GA", "url": "https://www.augustaga.gov/1164/Swimming-Pools"},
+        {"title": "Residential Building Permit Requirements - Augusta, GA", "url": "https://www.augustaga.gov/DocumentCenter/View/19426/RESIDENTIAL-BUILDING-PERMIT-REQUIREMENTS"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "City of Atlanta: atlantaga.gov blocked automated access (HTTP 403), so no Atlanta page could be opened; Atlanta was left out and DeKalb used as the sixth jurisdiction.",
+    "Cobb, Fulton, Chatham: no online application portal was confirmed on the pages opened.",
+    "Augusta: the residential requirements sheet names a CityView portal (cityview.augustaga.gov) but the site would not connect, so no portal URL is listed. The pool page cites the 2012 ISPSC, which looks out of date against Georgia's 2026 codes; not used.",
+    "Gwinnett: the pool guidance documents are dated 2012 and 2004; the current UDO text was not opened. Verify details before relying on them.",
+    "Fulton: the application form is undated and still shows older department details; confirm it is current.",
+    "Savannah city, Alpharetta, Roswell and other pool-heavy cities were not researched."
+  ]
+}

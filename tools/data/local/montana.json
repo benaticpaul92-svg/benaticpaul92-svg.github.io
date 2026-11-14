@@ -1,0 +1,60 @@
+{
+  "state": "Montana",
+  "slug": "montana",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Billings",
+      "kind": "city",
+      "office": "City of Billings Building Division",
+      "portal_name": "City View",
+      "portal_url": "",
+      "notes": [
+        "The Building Division is on the 5th floor of City Hall at 316 N. 26th Street.",
+        "Permit applications are submitted and tracked online through the City View portal; plans go in electronically, so only one set is required.",
+        "The city lists the 2021 International Residential Code and the 2021 International Swimming Pool & Spa Code, last adopted September 1, 2022 under Administrative Order #150.",
+        "For single-family homes, plumbing and electrical detail may be left off the plans if the mechanical equipment location is shown."
+      ],
+      "sources": [
+        {"title": "Building Division FAQs - City of Billings", "url": "https://billingsmt.gov/521/FAQs"}
+      ]
+    },
+    {
+      "name": "Helena",
+      "kind": "city",
+      "office": "City of Helena Building Division",
+      "portal_name": "Civic Access",
+      "portal_url": "",
+      "notes": [
+        "The Building Division handles building permits, applied for through the Civic Access online portal.",
+        "For one- and two-family dwellings, prefabricated pools less than 24 inches deep are listed as exempt from a building permit.",
+        "The page says an exemption does not authorize work that violates the code or other local ordinances."
+      ],
+      "sources": [
+        {"title": "Building Permit Types - City of Helena", "url": "https://www.helenamt.gov/Departments/Community-Development/Building/Building-Permitting-Applications/Permit-Types"}
+      ]
+    },
+    {
+      "name": "Kalispell",
+      "kind": "city",
+      "office": "City of Kalispell Building Department",
+      "portal_name": "Apply for Any Permit Here (online permit application)",
+      "portal_url": "",
+      "notes": [
+        "The Building Department lists permits for building, electrical, plumbing, mechanical, tenant improvements and fire suppression.",
+        "The city lists the 2021 International Residential Code and the 2021 International Swimming Pool and Spa Code as adopted codes.",
+        "Public Works may also require a Right-of-Way Permit or a Construction Stormwater Permit before a building permit is approved."
+      ],
+      "sources": [
+        {"title": "Building - City of Kalispell", "url": "https://www.kalispell.com/614/Building"},
+        {"title": "Permits & Electronic Plan Review - City of Kalispell", "url": "https://www.kalispell.com/268/Permits"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Bozeman/Gallatin County, Missoula city and Flathead County official sites refused or timed out from this machine (403 or connection errors), so nothing was verified for them.",
+    "Online portal URLs for Billings, Helena and Kalispell could not be opened (blocked or not a real page), so portal_url is left empty.",
+    "No Montana city page describing a pool-specific submittal checklist was found."
+  ]
+}

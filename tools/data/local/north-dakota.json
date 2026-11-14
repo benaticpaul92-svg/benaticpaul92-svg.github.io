@@ -1,0 +1,50 @@
+{
+  "state": "North Dakota",
+  "slug": "north-dakota",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Fargo",
+      "kind": "city",
+      "office": "City of Fargo Inspections Department",
+      "portal_name": "Fargo online permit portal",
+      "portal_url": "http://permits.fargond.gov",
+      "notes": [
+        "Residential permit applications are submitted through the city's online permit portal, where plan reviewers send status updates by email.",
+        "The city's FAQ says private pools holding more than 24 in. of water must be surrounded by a fence or barrier at least 48 in. tall, set at least 4 ft from the outside of the pool.",
+        "Gates in the pool barrier must be self-closing and self-latching, and the FAQ cites City of Fargo Ordinance No 5425.",
+        "The city lists local amendments to the 2024 International Building Code on its code requirements page."
+      ],
+      "sources": [
+        {"title": "Inspections FAQs - City of Fargo", "url": "https://fargond.gov/city-government/departments/inspections/faqs"},
+        {"title": "Residential Permit & Fees - City of Fargo", "url": "https://fargond.gov/city-government/departments/inspections/residential-permits-fees"},
+        {"title": "Residential Permit Application - City of Fargo", "url": "https://download.fargond.gov/2/residential_permit_application.pdf"},
+        {"title": "Code Requirements - City of Fargo", "url": "https://fargond.gov/city-government/departments/inspections/code-requirements"}
+      ]
+    },
+    {
+      "name": "West Fargo",
+      "kind": "city",
+      "office": "City of West Fargo Building Inspections",
+      "portal_name": "West Fargo online permit portal (iWorQ)",
+      "portal_url": "https://westfargo.portal.iworq.net/portalhome/westfargo",
+      "notes": [
+        "A building permit is required before building or placing a pool, spa or hot tub with water deeper than 2 ft, and an inspection is required when the installation is finished.",
+        "The pool guideline says applicants apply in the online portal using the Residential - New Accessory Structure / Shed sub type and upload a digital site plan.",
+        "The site plan must show lot lines and easements, existing buildings, pool dimensions and distances to property lines, fence and gate locations, and any new paving.",
+        "The city adopts a local amendment of International Property Maintenance Code section 303 for pool barriers, with the top at least 48 in. above grade for pools deeper than 24 in."
+      ],
+      "sources": [
+        {"title": "Guideline for Installing Swimming Pools - City of West Fargo", "url": "https://www.westfargond.gov/DocumentCenter/View/11320"},
+        {"title": "Residential Building Permits - City of West Fargo", "url": "https://www.westfargond.gov/201/Residential-Building-Permits"},
+        {"title": "Building Inspections - City of West Fargo", "url": "https://www.westfargond.gov/190/Building-Inspections"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Only 2 of the 4 requested jurisdictions delivered: Bismarck (Cloudflare challenge/429) and Grand Forks (403) blocked automated access; Minot's pages gave no pool-specific content; web search budget was exhausted. Bismarck, Grand Forks need a re-run.",
+    "Fargo pages opened do not state a pool-specific permit or plan submittal list, only the general permit portal and the pool fence FAQ.",
+    "No state-level fact added; none was opened from a state source."
+  ]
+}

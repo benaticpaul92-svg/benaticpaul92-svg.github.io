@@ -1,0 +1,84 @@
+{
+  "state": "Michigan",
+  "slug": "michigan",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Grand Rapids / Kent County",
+      "kind": "city",
+      "office": "Development Center (City of Grand Rapids)",
+      "portal_name": "Citizen Access (Accela)",
+      "portal_url": "https://aca-prod.accela.com/GRANDRAPIDS",
+      "notes": [
+        "Grand Rapids requires a building permit for a pool or hot tub that can reach 24 inches of water depth or more.",
+        "The pool permit page asks for a pool installation plan and a site plan showing the pool location on the lot, uploaded with the application.",
+        "A non-owner applicant needs a Residential Builders License issued by the State of Michigan, or written authorization from a license holder.",
+        "The city points applicants to its Residential Pool Guide and its zoning rules for placement."
+      ],
+      "sources": [
+        {"title": "Pool Permit (City of Grand Rapids)", "url": "https://www.grandrapidsmi.gov/grow-and-thrive/development-center/permits/residential-building-permits/pool-permit/"},
+        {"title": "Overview on Zoning and Permits for Home Renovation Projects", "url": "https://www.grandrapidsmi.gov/grow-and-thrive/development-center/permits/overview-on-zoning-and-permits-for-home-renovation-projects/"},
+        {"title": "Residential Building Permits (City of Grand Rapids)", "url": "https://www.grandrapidsmi.gov/grow-and-thrive/development-center/permits/residential-building-permits/"}
+      ]
+    },
+    {
+      "name": "Sterling Heights / Macomb County",
+      "kind": "city",
+      "office": "Office of Building, City of Sterling Heights",
+      "portal_name": "Online Permits (Building)",
+      "portal_url": "https://www.sterlingheights.gov/1922/Online-Permits",
+      "notes": [
+        "Sterling Heights' pool guide covers pools and hot tubs with side walls over 24 inches. It lists a building permit application, plus electrical and mechanical permits where that work applies.",
+        "Pool plans must show the location on the property, with the water's edge at least 6 feet from side and rear lot lines and easements.",
+        "The plans must also show overhead wires, the electric meter and service line, barrier or enclosure details, and entrapment protection for a pool with a floor drain.",
+        "Inspections listed for an in-ground pool include a building open hole inspection and a final building inspection, with electrical inspections if electric is installed."
+      ],
+      "sources": [
+        {"title": "Pool Permit Packet and Pool & Hot Tub Guide (Sterling Heights)", "url": "https://www.sterlingheights.gov/DocumentCenter/View/11118/Pool-Packet"},
+        {"title": "Online Permits (Sterling Heights)", "url": "https://www.sterlingheights.gov/1922/Online-Permits"}
+      ]
+    },
+    {
+      "name": "Detroit / Wayne County",
+      "kind": "city",
+      "office": "Buildings, Safety Engineering and Environmental Department (BSEED)",
+      "portal_name": "eLAPS (Accela Citizen Access)",
+      "portal_url": "https://aca-prod.accela.com/DETROIT/Default.aspx",
+      "notes": [
+        "BSEED says building permits are applied for in the Accela portal, with scope of work and plans submitted through the ProjectDox portal.",
+        "BSEED's FAQ says single-family and duplex residential structures may apply in the office.",
+        "The Detroit Property Maintenance Code (Sec. 9-1-109) says pools must be fully enclosed by a fence at least 4 feet high with a self-latching gate.",
+        "The same section says pools must be installed consistent with the Michigan Construction Codes and have a working water filtration device."
+      ],
+      "sources": [
+        {"title": "BSEED Frequently Asked Questions", "url": "https://detroitmi.gov/departments/buildings-safety-engineering-and-environmental-department-bseed/buildings-safety-engineering-and-environmental-department-frequently-asked-questions"},
+        {"title": "Detroit Property Maintenance Code, Chapter 9 (Sec. 9-1-109 Swimming pools)", "url": "https://detroitmi.gov/Portals/0/docs/BSEE/PropMaintenanceChapter9.pdf"}
+      ]
+    },
+    {
+      "name": "Ann Arbor / Washtenaw County",
+      "kind": "city",
+      "office": "Building, Rental and Inspection Services; Planning and Development Services",
+      "portal_name": "STREAM",
+      "portal_url": "https://stream.a2gov.org",
+      "notes": [
+        "Ann Arbor takes building permit applications through its STREAM online portal, which handles applications filed since March 2022.",
+        "Electrical, mechanical and plumbing trade permits are also applied for in STREAM and are not released until the related building permit is approved.",
+        "The city's accessory building handout lists pools among accessory structures. Zoning compliance permits for such structures must be submitted online in STREAM."
+      ],
+      "sources": [
+        {"title": "Applications (Ann Arbor Building, Rental and Inspection Services)", "url": "https://www.a2gov.org/building-rental-and-inspection-services/construction-and-building/permits/applications/"},
+        {"title": "Permits (Ann Arbor Building, Rental and Inspection Services)", "url": "https://www.a2gov.org/building-rental-and-inspection-services/construction-and-building/permits/"},
+        {"title": "Zoning Compliance Permits (Ann Arbor)", "url": "https://www.a2gov.org/planning/general-zoning-information/zoning-compliance-permits/"},
+        {"title": "Accessory Buildings handout (Ann Arbor Planning)", "url": "https://www.a2gov.org/media/zk3jhggm/accessory-buildings-handout-41817.pdf"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Troy and Rochester Hills (Oakland County) pool pages and guidebook returned 403 to automated fetches; skipped, so Oakland County has no entry.",
+    "Ann Arbor: no pool-specific residential checklist, setback or barrier rules found.",
+    "Detroit: no residential pool permit checklist found on the pages opened.",
+    "Grand Rapids: the city's Residential Pool Guide PDF excerpts an older Michigan Residential Code edition, so no code edition was recorded."
+  ]
+}

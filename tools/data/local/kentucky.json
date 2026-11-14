@@ -1,0 +1,33 @@
+{
+  "state": "Kentucky",
+  "slug": "kentucky",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Lexington / Fayette County",
+      "kind": "city-county",
+      "office": "Lexington-Fayette Urban County Government, Division of Building Inspection",
+      "portal_name": "Lexington online permit portal",
+      "portal_url": "https://lexingtonky.gov/permits",
+      "notes": [
+        "An in-ground pool needs a Swimming Pool Permit from the Division of Building Inspection. Fayette County Health Department approval is also required before the permit is issued.",
+        "The online application needs a site plan showing lot, fence, easements, existing structures, the proposed pool, walkways and distances to property lines, plus a subdivision plat or mortgage survey.",
+        "The fence must be shown on the site plan: at least 4 ft high, no openings over 4 inches, with self-closing, self-latching gates that open outward.",
+        "Residential pools are regulated under the 2018 Kentucky Residential Code. Easements need encroachment agreements, and floodplain sites need a special permit from the Division of Engineering."
+      ],
+      "sources": [
+        {
+          "title": "Permit Guide For Swimming Pools (Lexington Building Inspection, 2026)",
+          "url": "https://content.lexingtonky.gov/sites/default/files/2026-03/2026%20Permit%20Guide%20pools.pdf"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Louisville Metro: louisvilleky.gov blocked WebFetch and curl (403/Cloudflare); nothing verified.",
+    "Bowling Green: bgky.org pages did not respond to WebFetch or curl; nothing verified.",
+    "A fourth Kentucky jurisdiction (for example Boone or Kenton County) was not researched because the web search quota ran out.",
+    "Only one Kentucky jurisdiction is verified."
+  ]
+}

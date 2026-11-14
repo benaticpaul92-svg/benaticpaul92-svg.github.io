@@ -1,0 +1,83 @@
+{
+  "state": "Massachusetts",
+  "slug": "massachusetts",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Boston / Suffolk County",
+      "kind": "city",
+      "office": "Inspectional Services Department (ISD), Building Division",
+      "portal_name": "Inspectional Services Permit Portal",
+      "portal_url": "https://onlinepermitsandlicenses.boston.gov/isdpermits/",
+      "notes": [
+        "Boston requires a Use of Premises Permit to add a pool to a property. The application starts in the ISD online permitting application.",
+        "The Use of Premises application needs a certified plot plan showing how the land will be used, brought to the Building Division counter.",
+        "ISD's Swimming Pool Affidavit has the owner certify the pool conforms to the Boston Zoning Code, the Massachusetts State Building Code, IRC Appendix G and IBC Section 3109.",
+        "The affidavit states the pool must be at least 4 feet from every lot line and fenced at least 6 feet high with a gate locked from the outside."
+      ],
+      "sources": [
+        {"title": "How to get a use of premises permit (boston.gov)", "url": "https://www.boston.gov/departments/inspectional-services/how-get-use-premises-permit"},
+        {"title": "Swimming Pool Affidavit (ISD)", "url": "https://www.boston.gov/sites/default/files/file/2020/07/Swimming%20Pool%20Affidavit.pdf"},
+        {"title": "Construction and Development (boston.gov)", "url": "https://www.boston.gov/boston-permitting/construction-and-development"}
+      ]
+    },
+    {
+      "name": "Framingham / Middlesex County",
+      "kind": "city",
+      "office": "Building and Wire Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Framingham requires a building permit for any structure holding water deeper than 24 inches, including in-ground pools, and a separate electrical permit.",
+        "The pool guidelines ask for a completed pool permit application, a certified site plan showing the pool, fences and setbacks, and pool elevations and grades.",
+        "The guidelines call for a barrier at least 48 inches above finished grade, with outward-opening, self-closing and self-latching gates and no opening that passes a 4 inch sphere.",
+        "Pools may not be used until the Building Department issues an occupancy permit; the guidelines cite 780 CMR and the 2009 IRC Appendix G."
+      ],
+      "sources": [
+        {"title": "Application for Permit to Install a Swimming Pool (with Swimming Pool Guidelines)", "url": "https://www.framinghamma.gov/DocumentCenter/View/12083/Pool-Permit-Application"},
+        {"title": "Swimming Pools (Inspectional Services Division)", "url": "https://framinghamma.gov/DocumentCenter/View/4201/Swimming-pools-press-release"}
+      ]
+    },
+    {
+      "name": "Plymouth / Plymouth County",
+      "kind": "town",
+      "office": "Division of Inspectional Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Plymouth's residential pool packet has applicants file a fence affidavit plus zoning, wiring and building applications together. Zoning is processed first, then wiring, then the building permit.",
+        "The zoning application needs two copies of a site plan showing the pool and its distances from property lines.",
+        "The packet states the pool must be at least 10 feet from side and rear lines and 20 feet from front lines.",
+        "The wiring application must be filled out by a licensed electrician, and the building application must describe the pool type, size and fence."
+      ],
+      "sources": [
+        {"title": "Procedures to Apply for Permits to Erect a Residential Swimming Pool", "url": "https://plymouth-ma.gov/DocumentCenter/View/1042/Residential-Pool-Packet-PDF"},
+        {"title": "Permit & License Applications (Plymouth)", "url": "https://www.plymouth-ma.gov/525/Permit-License-Applications"}
+      ]
+    },
+    {
+      "name": "Worcester / Worcester County",
+      "kind": "city",
+      "office": "Inspectional Services Department, Building & Zoning Division",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Worcester's Building and Zoning Division issues permits for new construction, repairs, additions, alterations and demolition.",
+        "The Inspectional Services fee schedule lists separate permit lines for above-ground and in-ground pools, so a pool is a permit category there.",
+        "Worcester's property owner page lists pools among the projects homeowners may need permits for."
+      ],
+      "sources": [
+        {"title": "Inspectional Services (Worcester)", "url": "https://www.worcesterma.gov/inspections"},
+        {"title": "Information for Property Owners (Worcester)", "url": "https://www.worcesterma.gov/inspections/property-owners"},
+        {"title": "Department of Inspectional Services Schedule of Fees", "url": "https://www.worcesterma.gov/inspections/document-center/schedule-of-fees.pdf"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Newton (Middlesex) pages returned 403 to automated fetches; skipped.",
+    "Worcester: no pool-specific residential requirements page found and the building permit portal name/URL was not confirmed.",
+    "Plymouth and Framingham: no online building permit portal confirmed on the pages opened.",
+    "Boston: no residential pool plan checklist found beyond the Use of Premises page and the pool affidavit; ISD's pool plan review form is for public and semi-public pools."
+  ]
+}

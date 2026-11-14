@@ -1,0 +1,99 @@
+{
+  "state": "Mississippi",
+  "slug": "mississippi",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "DeSoto County (Hernando, Southaven and Olive Branch area)",
+      "kind": "county",
+      "office": "Planning and Building Department, DeSoto County",
+      "portal_name": "DeSoto County Citizen Self Service Portal",
+      "portal_url": "https://energovweb.desotocountyms.gov/energov_prod/selfservice#/home",
+      "notes": [
+        "DeSoto County's Building office processes building permits and inspects residential, commercial and industrial buildings, and it licenses the county's general contractors, plumbers, electricians and mechanical contractors.",
+        "The county's Citizen Self Service Portal is used to submit applications, permits and plans to the Building and Planning Department and to track them.",
+        "Electrical, mechanical and plumbing permit applications can be downloaded and mailed or brought to the Planning and Building Department at 365 Losher Street, Suite 200, Hernando."
+      ],
+      "sources": [
+        {
+          "title": "Permits (DeSoto County)",
+          "url": "https://www.desotocountyms.gov/536/Permits"
+        },
+        {
+          "title": "Planning & Building (DeSoto County)",
+          "url": "https://www.desotocountyms.gov/102/Planning-Building"
+        }
+      ]
+    },
+    {
+      "name": "Gulfport / Harrison County",
+      "kind": "city",
+      "office": "Urban Development, Building Code Services",
+      "portal_name": "Online Drop Box for Application Submissions",
+      "portal_url": "https://www.gulfport-ms.gov/departments/urban_development/building_code_services/index.php",
+      "notes": [
+        "Gulfport's Building Code Services handles plan reviews, permitting and inspections, and publishes separate general, electrical, plumbing and HVAC permit applications.",
+        "Applications are submitted as PDF files through the city's online drop box, or in person or by mail to 1410 24th Avenue.",
+        "The city's residential submission criteria ask for a site plan showing property dimensions, structure distances from property lines, special flood hazard areas with elevation certificates where required, and a drainage plan."
+      ],
+      "sources": [
+        {
+          "title": "Building Code Services (City of Gulfport)",
+          "url": "https://www.gulfport-ms.gov/departments/urban_development/building_code_services/index.php"
+        },
+        {
+          "title": "Minimum Submission Criteria for Residential Building Development Permit (City of Gulfport)",
+          "url": "https://www.gulfport-ms.gov/Documents/Departments/Urban%20Development/cogscanner_20250319_095245.pdf?t=202504151500400"
+        }
+      ]
+    },
+    {
+      "name": "Ridgeland / Madison County",
+      "kind": "city",
+      "office": "Community Development, City of Ridgeland",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Ridgeland posts a single Application for Building Permit covering new construction, alterations, excavation or site work and other structures.",
+        "The form asks whether the site is inside the 100 year floodplain and, if so, for the flood map panel number, base flood elevation and lowest floor elevation.",
+        "Ridgeland's permit page does not list a pool-specific application."
+      ],
+      "sources": [
+        {
+          "title": "Licenses, Forms, and Permits (City of Ridgeland)",
+          "url": "https://www.ridgelandms.org/licenses-forms-permits/"
+        },
+        {
+          "title": "Application for Building Permit (City of Ridgeland)",
+          "url": "https://www.ridgelandms.org/wp-content/uploads/Building-Permit-App.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Jackson / Hinds County",
+      "kind": "city",
+      "office": "City of Jackson permitting office",
+      "portal_name": "Jackson OpenGov permit portal",
+      "portal_url": "https://jacksonms.portal.opengov.com/",
+      "notes": [
+        "Jackson says permits are required for many residential projects, including permits for accessory structures such as garages, decks and sheds, and that requirements vary with project scope.",
+        "The city says residential applications are reviewed for building code, zoning and safety compliance, with inspections at stages of the work and final approval required.",
+        "Jackson's residential page does not mention pools specifically and refers residents to the permitting office for application requirements."
+      ],
+      "sources": [
+        {
+          "title": "Residential Building and Permits (City of Jackson)",
+          "url": "https://jacksonms.gov/residents/residential-building-and-permits/"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "No Mississippi city or county page opened gave pool-specific residential requirements (plans, barrier, setbacks, code edition); notes are about the general permit process only.",
+    "Search budget ran out before Madison, Flowood, Brandon, Rankin County, Southaven and Olive Branch could be researched; their sites were not found to have a pool page.",
+    "Gulfport's residential submission criteria PDF is a scanned image and was read by OCR; it covers dwellings, not pools.",
+    "Gulfport portal_url points to the Building Code Services page that holds the online drop box link, not a separate permit system.",
+    "Mississippi state page names Madison and Rankin Counties; Ridgeland (Madison County) is included, Rankin County has no entry."
+  ]
+}

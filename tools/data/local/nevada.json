@@ -1,0 +1,65 @@
+{
+  "state": "Nevada",
+  "slug": "nevada",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Reno",
+      "kind": "city",
+      "office": "City of Reno Development Services (Building and Safety)",
+      "portal_name": "ONE Regional Licensing and Permits (Accela Citizen Access)",
+      "portal_url": "https://aca-prod.accela.com/one",
+      "notes": [
+        "Reno publishes a Residential Pool Submittal Guidelines sheet; plans must show barriers, fences and gates, including height, openings and latches.",
+        "The same sheet asks for pool equipment spec sheets, pipe and conduit installation depth, an equipotential bonding detail, and gas piping sizing calculations.",
+        "It also asks for electrical load calculations, circuits and GFCI protection, structural calculations for a cast-in-place pool, and manufacturer installation instructions for a fiberglass pool.",
+        "All building permit applications go in electronically through the ONE portal; since January 1, 2026 plans are accepted only under the 2024 edition of the building codes."
+      ],
+      "sources": [
+        {"title": "Residential Pool Submittal Guidelines (updated 07/01/2025) - City of Reno", "url": "https://www.reno.gov/Documents/Business%20and%20Development/Development%20Services/Building%20Permits/Resources%20to%20Assist%20with%20The%20Application%20Process%20and%20Plan%20Submission/Residential%20Pool%20Permit%20Guidelines%2007012025.pdf"},
+        {"title": "Building Permits - City of Reno Development Services", "url": "https://www.reno.gov/business-development/development-services/building-permits.php"},
+        {"title": "ONE Regional Licensing and Permits portal", "url": "https://aca-prod.accela.com/one"}
+      ]
+    },
+    {
+      "name": "Las Vegas",
+      "kind": "city",
+      "office": "City of Las Vegas Building and Safety",
+      "portal_name": "Citizen Portal (Dashboard)",
+      "portal_url": "",
+      "notes": [
+        "Permits that need plans are applied for through the Dashboard (Citizen Portal); permits without plans use the Online Building Permits page.",
+        "The city requires all new commercial, residential and civil building plans to be submitted electronically.",
+        "The city says it adopted the 2021 International Building Code and International Fire Code, effective March 23, 2023.",
+        "The building permits page does not mention pools, so pool-specific questions go to Customer Service."
+      ],
+      "sources": [
+        {"title": "Building & Offsite Permits - City of Las Vegas", "url": "https://www.lasvegasnevada.gov/Business/Permits-Licenses/Building-Permits/"}
+      ]
+    },
+    {
+      "name": "Clark County (unincorporated Las Vegas Valley)",
+      "kind": "county",
+      "office": "Clark County Building & Fire Prevention",
+      "portal_name": "Citizen Access Portal (Accela)",
+      "portal_url": "https://aca-prod.accela.com/CLARKCO",
+      "notes": [
+        "Building & Fire Prevention takes permit applications through the Citizen Access Portal.",
+        "The plan submittal section lists 'Do I Need a Permit?', how-to guides, application forms and a plan submittal FAQ.",
+        "An owner who intends to construct, enlarge, alter or repair a structure must first apply for a permit; exemptions are in Building Administrative Code section 22.02.190."
+      ],
+      "sources": [
+        {"title": "Building Plan Submittal - Clark County", "url": "https://www.clarkcountynv.gov/government/departments/building___fire_prevention/plan_submittal/index.php"},
+        {"title": "Building Permit Issuance - Clark County", "url": "https://www.clarkcountynv.gov/government/departments/building___fire_prevention/permit_issuance/index.php"},
+        {"title": "Do I Need a Permit - Clark County", "url": "https://www.clarkcountynv.gov/government/departments/building___fire_prevention/plan_submittal/do_i_need_a_permit_.php"},
+        {"title": "Clark County Citizen Access Portal", "url": "https://aca-prod.accela.com/CLARKCO"}
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Henderson and North Las Vegas official sites returned 403 to automated fetches, so nothing was verified for them. Washoe County and Sparks pages gave no pool content; only 3 of the 6 requested jurisdictions are included.",
+    "The Clark County 2024 ISPSC adoption date (January 11, 2026) from the existing state page was not re-verified here.",
+    "Las Vegas dashboard portal URL returned 403, so portal_url is empty; no Las Vegas or Clark County pool-specific checklist was found."
+  ]
+}

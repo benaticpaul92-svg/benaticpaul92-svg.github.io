@@ -1,0 +1,91 @@
+{
+  "state": "Colorado",
+  "slug": "colorado",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Denver",
+      "kind": "city-county",
+      "office": "Denver Community Planning and Development",
+      "portal_name": "Denver e-permits",
+      "portal_url": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Single-Family-and-Duplex-Projects/Swimming-Pools-Spas-and-Water-Features",
+      "notes": [
+        "A permanent pool needs zoning, building and sewer use and drainage (SUDP) permits, applied for through the city's online e-permits system.",
+        "The site plan must be to scale with a north arrow and show lot lines, structures, pool dimensions, distances to lot lines, and fences or barriers.",
+        "A boundary survey is required if the pool or any equipment is within 3 feet of the property line.",
+        "Electrical, plumbing or mechanical permits are separate quick permits when the pool adds lighting, a heater or piping."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools, Spas, and Water Features - Denver",
+          "url": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Single-Family-and-Duplex-Projects/Swimming-Pools-Spas-and-Water-Features"
+        }
+      ]
+    },
+    {
+      "name": "Lakewood",
+      "kind": "city",
+      "office": "City of Lakewood Building",
+      "portal_name": "eTRAKiT",
+      "portal_url": "",
+      "notes": [
+        "A building permit is required for any pool, hot tub or spa on a residential property.",
+        "Lakewood says pools must meet its local amendments to the 2021 International Swimming Pool and Spa Code, 2021 International Plumbing Code and 2021 International Residential Code.",
+        "The application and plans are uploaded through eTRAKiT; the plot plan must be at 1 inch = 30 feet or a larger scale.",
+        "Properties with a pool need a lockable cover or a fenced yard; the handout sets the fence at a minimum of 48 inches high."
+      ],
+      "sources": [
+        {
+          "title": "2023 Residential Pool and Hot Tub Requirements - Lakewood",
+          "url": "https://www.lakewoodco.gov/files/assets/public/v/2/public-works/pdfs/engineering/2023-residential-pool-and-hot-tub-requirements.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Fort Collins",
+      "kind": "city",
+      "office": "Fort Collins Building Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The pool, pond or in-ground hot tub permit needs a building permit application, a scaled site plan and either manufacturer specifications or custom design details.",
+        "In-ground designs must include engineered foundation details, and plans must show safety barrier or cover details.",
+        "The page directs applicants to email the application to buildingservices@fortcollins.gov and does not name a portal for pool permits."
+      ],
+      "sources": [
+        {
+          "title": "Building Permits - Fort Collins",
+          "url": "https://fortcollins.gov/Business/Permits-and-Licensing/Building-Permits"
+        }
+      ]
+    },
+    {
+      "name": "Aurora",
+      "kind": "city",
+      "office": "City of Aurora Building Division",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Aurora lists the 2021 International Residential Code and the 2021 International Swimming Pool and Spa Code among its adopted codes.",
+        "The city's Building Division page says permits are applied for online."
+      ],
+      "sources": [
+        {
+          "title": "Adopted Building Codes - City of Aurora",
+          "url": "https://www.auroragov.org/business_services/building_division/adopted_building_codes"
+        },
+        {
+          "title": "Permits - City of Aurora",
+          "url": "https://www.auroragov.org/business_services/building_division/permits"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Pikes Peak Regional Building Department (pprbd.org) refused connections; no pool facts verified.",
+    "Aurora's own pool permit checklist was not found on auroragov.org; only code editions and the online-permit note are verified, and the portal page was not opened.",
+    "Denver's page does not say whether residential pool plans must be engineer-sealed, nor the barrier rules or code edition.",
+    "Adams County, Douglas County, Arapahoe County and Boulder not verified (Adams PDFs returned 403/404)."
+  ]
+}

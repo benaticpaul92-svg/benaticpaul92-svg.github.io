@@ -1,0 +1,124 @@
+{
+  "state": "Tennessee",
+  "slug": "tennessee",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Nashville / Davidson County",
+      "kind": "city-county",
+      "office": "Metro Nashville Department of Codes & Building Safety",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Metro Codes publishes a list of projects that need a permit, and it marks swimming pools above or below grade as requiring a permit for one- and two-family dwellings.",
+        "The same Metro Codes list says a new fence does not need a permit but must comply with the zoning code.",
+        "The Department of Codes & Building Safety is based in the Metro Office Building at 800 2nd Avenue South, 3rd floor."
+      ],
+      "sources": [
+        {
+          "title": "Department of Codes & Building Safety: list of building projects which may or may not require a permit",
+          "url": "https://filetransfer.nashville.gov/portals/0/sitecontent/Codes/docs/Building%20Permit%20Required.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Memphis / Shelby County",
+      "kind": "city-county",
+      "office": "Memphis and Shelby County Office of Construction Enforcement",
+      "portal_name": "Accela Citizen Access (Shelby County)",
+      "portal_url": "https://aca3.accela.com/SHELBYCO/Default.aspx",
+      "notes": [
+        "The Office of Construction Enforcement serves Memphis, Arlington, Germantown, Lakeland, Millington and unincorporated Shelby County.",
+        "Its page lists permit fee schedules for building, electrical, mechanical and plumbing permits and a link to search permit activity online."
+      ],
+      "sources": [
+        {
+          "title": "Construction Enforcement | Develop901",
+          "url": "https://www.develop901.com/construction-enforcement"
+        }
+      ]
+    },
+    {
+      "name": "Knoxville / Knox County",
+      "kind": "city",
+      "office": "City of Knoxville Plans Review & Inspections",
+      "portal_name": "Knoxville Citizen Access (Accela)",
+      "portal_url": "https://aca-prod.accela.com/KNOXVILLE/welcome.aspx",
+      "notes": [
+        "The city's pool barrier guidelines call for a fence at least 48 inches high and gates that open out from the pool and are self-closing and self-latching.",
+        "Those guidelines also call for a 36-inch clear zone between the barrier and any permanent object that could be used to climb it."
+      ],
+      "sources": [
+        {
+          "title": "Residential Swimming Pool Barrier Guidelines",
+          "url": "https://permits.knoxvilletn.gov/files/assets/building/v/1/building-code-faq/residential-swimming-pool-barriers-guidelines.pdf"
+        }
+      ]
+    },
+    {
+      "name": "Chattanooga / Hamilton County",
+      "kind": "city-county",
+      "office": "Hamilton County Building Inspection Department",
+      "portal_name": "Hamilton County Building Permit online application",
+      "portal_url": "https://buildinginspection.hamiltontn.gov",
+      "notes": [
+        "Hamilton County Building Inspection enforces the 2018 International Swimming Pool and Spa Code, in effect since January 1, 2022.",
+        "The county says a building permit is needed for any new structure, alteration, addition or repair.",
+        "The county exempts only prefabricated pools that are under 24 inches deep, hold no more than 5,000 gallons and sit entirely above ground.",
+        "Municipalities in the county have their own inspection offices, and Red Bank handles its own permits.",
+        "The City of Chattanooga takes residential building permit applications through an OpenGov portal run by its Land Development Office."
+      ],
+      "sources": [
+        {
+          "title": "Building Inspection Department | Hamilton County",
+          "url": "https://hamiltontn.gov/Department_BuildingInspections.aspx"
+        },
+        {
+          "title": "Inspection Requirements | Hamilton County",
+          "url": "https://www.hamiltontn.gov/Department_BuildingInspections.aspx/pdf/inspect/docs/Inspection Requirements.pdf"
+        },
+        {
+          "title": "Request a Residential Building Permit | Chattanooga.gov",
+          "url": "https://chattanooga.gov/pay-and-apply/permits-applications/residential-building-permit"
+        }
+      ]
+    },
+    {
+      "name": "Franklin / Williamson County",
+      "kind": "city-county",
+      "office": "City of Franklin Building and Neighborhood Services",
+      "portal_name": "Franklin electronic plan review (IDT Plans)",
+      "portal_url": "https://franklin.idtplans.com/secure/",
+      "notes": [
+        "In unincorporated Williamson County, the Codes Compliance Department handles swimming pool fence inspections, and electrical permits come from the State of Tennessee."
+      ],
+      "sources": [
+        {
+          "title": "Codes Compliance | Williamson County",
+          "url": "https://www.williamsoncounty-tn.gov/101/Codes-Compliance"
+        },
+        {
+          "title": "Building Codes | Williamson County",
+          "url": "https://www.williamsoncounty-tn.gov/100/Building-Codes"
+        }
+      ]
+    }
+  ],
+  "state_level": [
+    {
+      "note": "Tennessee law requires a pool alarm on residential swimming pools holding 36 inches or more of water, according to Rutherford County's barrier and alarm agreement form.",
+      "source": {
+        "title": "Swimming Pool Barrier and Alarm Agreement, Rutherford County Building Codes",
+        "url": "https://rutherfordcountytn.gov/vertical/sites/%7B0DE57B3C-95FA-46CF-BF78-CE4E5703EB9C%7D/uploads/REV_-_2024_IRC_-AFFIDAVIT_-_SP_BARRIER_AND_ALARM_AGREEMENT.pdf"
+      }
+    }
+  ],
+  "gaps": [
+    "Nashville: the Metro Codes pool permitting page and portal name were blocked (403) from my session; the only fact is from an undated Metro Codes list, so confirm current requirements and portal.",
+    "Memphis/Shelby: the Shelby County residential permit procedures and code PDFs could not be opened; no pool-specific submittals verified.",
+    "Chattanooga: the city's residential permit page does not mention pools; pool submittals and code edition for the city itself not verified.",
+    "Knoxville: city pages (Plans Review, Permits, My Project Portal, Construction Codes) returned 403 to curl and WebFetch, so permit steps, KnoxPlans and code editions were removed; only the barrier guideline PDF (opened by WebFetch) is used.",
+    "Franklin: city permitting and adopted-codes pages returned 403, so city notes were removed; only the Williamson County note remains.",
+    "Murfreesboro: all city pages returned 403 to curl and WebFetch, so the jurisdiction was dropped."
+  ]
+}
