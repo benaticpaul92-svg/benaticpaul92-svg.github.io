@@ -77,7 +77,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Birmingham, Huntsville and Mobile and Baldwin County."
  },
  "alaska": {
   "slug": "alaska",
@@ -153,7 +154,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Anchorage, Fairbanks and Juneau."
  },
  "arizona": {
   "slug": "arizona",
@@ -210,7 +212,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "ARS §36-1681 barrier and enclosure compliance, ROC classification requirements, and Phoenix and Tucson site-plan standards."
  },
  "arkansas": {
   "slug": "arkansas",
@@ -294,7 +297,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Little Rock, Northwest Arkansas (Fayetteville, Bentonville, Rogers) and Fort Smith."
  },
  "california": {
   "slug": "california",
@@ -346,7 +350,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Swimming Pool Safety Act and Residential Code Appendix V, Title 22 and CBC Chapter 31B, and VGB suction-outlet compliance."
  },
  "colorado": {
   "slug": "colorado",
@@ -430,7 +435,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Denver metro, Colorado Springs and Fort Collins."
  },
  "connecticut": {
   "slug": "connecticut",
@@ -510,7 +516,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Fairfield County (Greenwich, Stamford, Westport), Hartford County and New Haven County."
  },
  "delaware": {
   "slug": "delaware",
@@ -590,7 +597,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Sussex County (Rehoboth Beach, Lewes), New Castle County (Wilmington) and Kent County (Dover)."
  },
  "florida": {
   "slug": "florida",
@@ -642,7 +650,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Florida Building Code including HVHZ for Miami-Dade and Broward. Wind loads to 180 mph, Environmental Resource Permit support, and 64E-9 approval for public pools."
  },
  "georgia": {
   "slug": "georgia",
@@ -726,7 +735,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Atlanta metro (Fulton, Cobb, Gwinnett), Savannah and Augusta."
  },
  "hawaii": {
   "slug": "hawaii",
@@ -802,7 +812,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Honolulu (Oahu), Maui County and Hawaii County (Kona and Hilo)."
  },
  "idaho": {
   "slug": "idaho",
@@ -886,7 +897,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Boise, Meridian and Nampa."
  },
  "illinois": {
   "slug": "illinois",
@@ -970,7 +982,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Chicago, Naperville and Joliet."
  },
  "indiana": {
   "slug": "indiana",
@@ -1054,7 +1067,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Indianapolis, Carmel and Fort Wayne."
  },
  "iowa": {
   "slug": "iowa",
@@ -1138,7 +1152,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Des Moines, Cedar Rapids and Davenport."
  },
  "kansas": {
   "slug": "kansas",
@@ -1218,7 +1233,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Overland Park, Olathe and Wichita."
  },
  "kentucky": {
   "slug": "kentucky",
@@ -1302,7 +1318,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Louisville, Lexington and Bowling Green."
  },
  "louisiana": {
   "slug": "louisiana",
@@ -1382,7 +1399,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for New Orleans, Baton Rouge and Lafayette."
  },
  "maine": {
   "slug": "maine",
@@ -1458,7 +1476,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Portland, South Portland and Bangor."
  },
  "maryland": {
   "slug": "maryland",
@@ -1542,7 +1561,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Montgomery County, Anne Arundel County and Howard County."
  },
  "massachusetts": {
   "slug": "massachusetts",
@@ -1626,7 +1646,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Middlesex County (Greater Boston), Worcester County and Plymouth County."
  },
  "michigan": {
   "slug": "michigan",
@@ -1706,7 +1727,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Oakland County, Macomb County and Kent County (Grand Rapids)."
  },
  "minnesota": {
   "slug": "minnesota",
@@ -1790,7 +1812,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Hennepin County (Minneapolis), Ramsey County (St. Paul) and Dakota County."
  },
  "mississippi": {
   "slug": "mississippi",
@@ -1874,7 +1897,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Madison County, Rankin County and DeSoto County."
  },
  "missouri": {
   "slug": "missouri",
@@ -1958,7 +1982,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for St. Louis County, Kansas City metro and St. Charles County."
  },
  "montana": {
   "slug": "montana",
@@ -2042,7 +2067,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Gallatin County (Bozeman), Billings and Missoula."
  },
  "nebraska": {
   "slug": "nebraska",
@@ -2126,7 +2152,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Douglas County (Omaha), Sarpy County and Lancaster County (Lincoln)."
  },
  "nevada": {
   "slug": "nevada",
@@ -2210,7 +2237,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Las Vegas, Henderson and North Las Vegas."
  },
  "new-hampshire": {
   "slug": "new-hampshire",
@@ -2290,7 +2318,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Manchester, Nashua and Concord."
  },
  "new-jersey": {
   "slug": "new-jersey",
@@ -2370,7 +2399,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Bergen County, Monmouth County and Ocean County."
  },
  "new-mexico": {
   "slug": "new-mexico",
@@ -2454,7 +2484,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Albuquerque, Las Cruces and Santa Fe."
  },
  "new-york": {
   "slug": "new-york",
@@ -2538,7 +2569,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Long Island (Nassau and Suffolk), Westchester County and Rochester."
  },
  "north-carolina": {
   "slug": "north-carolina",
@@ -2622,7 +2654,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Charlotte, Raleigh and Wilmington."
  },
  "north-dakota": {
   "slug": "north-dakota",
@@ -2698,7 +2731,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Fargo, Bismarck and Grand Forks."
  },
  "ohio": {
   "slug": "ohio",
@@ -2782,7 +2816,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Columbus, Cincinnati and Cleveland."
  },
  "oklahoma": {
   "slug": "oklahoma",
@@ -2866,7 +2901,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Oklahoma City, Tulsa and Edmond."
  },
  "oregon": {
   "slug": "oregon",
@@ -2950,7 +2986,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Portland metro, Bend and Salem."
  },
  "pennsylvania": {
   "slug": "pennsylvania",
@@ -3034,7 +3071,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Philadelphia suburbs (Bucks, Montgomery, Chester), Pittsburgh (Allegheny County) and Lehigh Valley."
  },
  "rhode-island": {
   "slug": "rhode-island",
@@ -3110,7 +3148,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Providence, Warwick and Cranston."
  },
  "south-carolina": {
   "slug": "south-carolina",
@@ -3186,7 +3225,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Charleston, Myrtle Beach (Horry County) and Greenville."
  },
  "south-dakota": {
   "slug": "south-dakota",
@@ -3266,7 +3306,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Sioux Falls, Rapid City and Aberdeen."
  },
  "tennessee": {
   "slug": "tennessee",
@@ -3350,7 +3391,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Nashville (Davidson and Williamson), Knoxville and Memphis (Shelby County)."
  },
  "texas": {
   "slug": "texas",
@@ -3406,7 +3448,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "IRC-adopted municipal codes, TDLR and DSHS review for public pools, SWPPP documentation, and city plan-review checklists."
  },
  "utah": {
   "slug": "utah",
@@ -3490,7 +3533,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Salt Lake County, Utah County (Provo) and St. George (Washington County)."
  },
  "vermont": {
   "slug": "vermont",
@@ -3562,7 +3606,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Burlington, South Burlington and Rutland."
  },
  "virginia": {
   "slug": "virginia",
@@ -3646,7 +3691,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Fairfax County, Loudoun County and Virginia Beach."
  },
  "washington": {
   "slug": "washington",
@@ -3722,7 +3768,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for King County (Seattle, Bellevue), Spokane and Tri-Cities (Kennewick, Richland, Pasco)."
  },
  "west-virginia": {
   "slug": "west-virginia",
@@ -3806,7 +3853,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Charleston, Morgantown and Huntington."
  },
  "wisconsin": {
   "slug": "wisconsin",
@@ -3890,7 +3938,8 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Milwaukee and Waukesha County, Madison (Dane County) and Green Bay."
  },
  "wyoming": {
   "slug": "wyoming",
@@ -3974,6 +4023,7 @@
     "/states/",
     "All 50 states"
    ]
-  ]
+  ],
+  "index_blurb": "Pool permit drawing sets for Cheyenne, Casper and Jackson (Teton County)."
  }
 }

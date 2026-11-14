@@ -306,6 +306,41 @@ def build_state(slug, rec):
     return shell(f'states/{slug}', title, description, body, schema)
 
 
+def build_states_index():
+    title = 'Pool Permit Drawings by State | All 50 States'
+    description = 'Pool engineering plans and permit drawings in all 50 states. Choose your state for city and county permit notes, state pool rules and a drawing quote.'
+    cards = []
+    for slug, rec in sorted(STATES.items()):
+        state = name_of(slug)
+        local = load_local(slug)
+        places = []
+        if local:
+            for j in local['jurisdictions']:
+                n = short_place(j['name'])
+                if n and n not in places:
+                    places.append(n)
+        line = clean(rec.get('index_blurb') or f'Pool permit drawing sets for {state}.')
+        notes = f'<span class="state-places">Local permit notes: {clean(", ".join(places[:4]))}</span>' if places else ''
+        cards.append(f'<a class="state-card" href="/states/{slug}/"><strong>{state}</strong><span>{line}</span>{notes}</a>')
+    crumbs = '<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">States</span></nav>'
+    lead = 'Pool engineering plans, permit drawings and construction details for homeowners, pool contractors and builders in all 50 states. Each state page lists city and county permit notes with links to the official sources.'
+    pe = 'Engineering and PE review arrangements are confirmed for your project state and scope before work is accepted. Ask which services are available for your location.'
+    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#all-states">All 50 states</a><a href="#package">Drawing package</a><a href="#delivery">Delivery & PE review</a><a href="#contact">Request a quote ↗</a></div></nav>'
+    grid = f'''<section class="section local-section" id="all-states" aria-labelledby="states-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · ALL 50 STATES</span><h2 id="states-heading">Choose your state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties, and the quote form. Your city or county is not listed? Name the permit office in your enquiry.</p></div></div><nav class="state-cards" aria-label="State pages">{"".join(cards)}</nav></div></section>'''
+    body = (hero('USA / POOL PERMIT DRAWINGS BY STATE', 'Pool permit drawings.<br><span>State by state.</span>', lead, form('Pool Permit Drawings by State'), crumbs) + nav
+            + grid + package_section(pe) + delivery_section(pe)
+            + '''<section class="coverage-line" id="coverage" aria-label="USA coverage"><div class="wrap"><p><strong>JEBN Engineering · USA enquiries, all 50 states.</strong> Project-specific engineering and PE arrangements are confirmed before acceptance.</p><a href="/services/pool-engineering/">Pool engineering plans</a></div></section>''')
+    canonical = f'{SITE}/states/'
+    schema = {'@context': 'https://schema.org', '@graph': [
+        {'@type': 'CollectionPage', '@id': canonical+'#page', 'name': title, 'description': description, 'url': canonical, 'isPartOf': {'@type': 'WebSite', 'name': 'JEBN Engineering', 'url': SITE+'/'}},
+        {'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i, 'name': name_of(s), 'url': f'{SITE}/states/{s}/'} for i, s in enumerate(sorted(STATES), 1)]},
+        {'@type': 'BreadcrumbList', 'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE+'/'},
+            {'@type': 'ListItem', 'position': 2, 'name': 'States', 'item': canonical}]},
+    ]}
+    return shell('states', title, description, body, schema)
+
+
 def update_sitemap(urls):
     p = ROOT/'sitemap.xml'
     xml = p.read_text()
@@ -322,5 +357,6 @@ def update_sitemap(urls):
 if __name__ == '__main__':
     built = [build_national(p) for p in NATIONAL]
     built += [build_state(slug, rec) for slug, rec in sorted(STATES.items())]
+    built.append(build_states_index())
     update_sitemap(built)
     print('Built', len(built), 'pages')
