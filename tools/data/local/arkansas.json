@@ -1,0 +1,141 @@
+{
+  "state": "Arkansas",
+  "slug": "arkansas",
+  "researched": "2026-11-15",
+  "jurisdictions": [
+    {
+      "name": "Little Rock",
+      "kind": "city",
+      "office": "City of Little Rock Planning and Development, Building Codes Division",
+      "portal_name": "Interactive Building-Construction Permit Program",
+      "portal_url": "https://permitpayment.littlerock.gov/ips_PD/Views/Login.aspx",
+      "notes": [
+        "The Building Codes Division issues construction permits and provides plan review and inspections for building, plumbing, mechanical and electrical work in the city.",
+        "The city's list of enforced construction codes, dated January 7, 2023, includes the 2021 International Swimming Pool & Spa Code with Appendix A.",
+        "The same list gives the 2021 AR Fire Prevention Code Vol. 3 as the residential code and the 2020 National Electrical Code with the city's Chapter 8 revisions.",
+        "The Civil Engineering Division page lists dechlorinated swimming pool discharges among allowable non-stormwater discharges to the municipal storm sewer system, citing Municipal Code Sec. 29.45."
+      ],
+      "sources": [
+        {
+          "title": "Planning and Development Divisions - City of Little Rock",
+          "url": "https://littlerock.gov/government/city-departments/planning-and-development/divisions/"
+        },
+        {
+          "title": "City of Little Rock Enforced Construction Codes, January 7, 2023 (PDF)",
+          "url": "https://www.littlerock.gov/media/18644/enforced-construction-codes-2023-c-sized-sheet.pdf"
+        },
+        {
+          "title": "Civil Engineering Division - City of Little Rock",
+          "url": "https://littlerock.gov/government/city-departments/public-works/civil-engineering-division/"
+        }
+      ]
+    },
+    {
+      "name": "Fayetteville",
+      "kind": "city",
+      "office": "City of Fayetteville Development Services, Building Safety Division",
+      "portal_name": "Civic Access Portal",
+      "portal_url": "https://www.fayetteville-ar.gov/3942/About-the-Civic-Access-Portal",
+      "notes": [
+        "The pool checklist asks for a scaled site plan with a north arrow, property lines, setbacks and easements, plus the pool's dimensions and distances from property lines and structures.",
+        "Plans must carry notes that the pool will comply with the barrier requirements of the 2021 ISPSC, Section 305, and that electrical work needs a separate electrical permit.",
+        "The checklist covers in-ground and above-ground pools and spas, and also asks for a signed Owner's Affidavit or a contractor's license.",
+        "Building Safety's current codes list includes the 2021 International Swimming Pool and Spa Code, the 2021 Arkansas Fire Prevention Code and the 2026 National Electrical Code."
+      ],
+      "sources": [
+        {
+          "title": "Pool S.D.P. Checklist (PDF) - City of Fayetteville Building Safety",
+          "url": "https://www.fayetteville-ar.gov/DocumentCenter/View/39299/SDP---Checklist---Swim"
+        },
+        {
+          "title": "Current Codes - City of Fayetteville",
+          "url": "https://www.fayetteville-ar.gov/558/Current-Codes"
+        },
+        {
+          "title": "About the Civic Access Portal - City of Fayetteville",
+          "url": "https://www.fayetteville-ar.gov/3942/About-the-Civic-Access-Portal"
+        }
+      ]
+    },
+    {
+      "name": "Bentonville",
+      "kind": "city",
+      "office": "Bentonville Fire Department, Building & Fire Safety Division (Building Inspection)",
+      "portal_name": "eTrakit",
+      "portal_url": "https://www.bentonville.ar.gov/183/Residential-Applications",
+      "notes": [
+        "The Building & Fire Safety Division of the Bentonville Fire Department issues pool permits, and applications go through the eTrakit online portal with attachments as PDF files.",
+        "The pool checklist asks for a scaled site plan showing the pool's distances to structures, setbacks and property lines, fences and gates, easements and any retaining walls.",
+        "The site plan must also show pool shell conductivity and bonding connections per NFPA 70, and a Rainfall Mitigation Worksheet is required for pools.",
+        "A fence used as the pool enclosure must be at least 48 inches high, with gates that swing away from the pool and are self-closing and self-latching.",
+        "Codes listed as enforced include the 2021 Arkansas Fire Prevention Code Vol III (Residential) and the 2020 National Electrical Code."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool Permit Submittal Checklist (PDF) - City of Bentonville",
+          "url": "https://www.bentonville.ar.gov/DocumentCenter/View/21058/Pools-Permit-Submittal-Checklist"
+        },
+        {
+          "title": "Residential Applications - City of Bentonville",
+          "url": "https://www.bentonville.ar.gov/183/Residential-Applications"
+        },
+        {
+          "title": "Building Inspections - Building & Fire Safety - City of Bentonville",
+          "url": "https://www.bentonville.ar.gov/149/Building-Inspection"
+        },
+        {
+          "title": "Building Codes - City of Bentonville",
+          "url": "https://www.bentonville.ar.gov/734/Building-Codes"
+        }
+      ]
+    },
+    {
+      "name": "Rogers",
+      "kind": "city",
+      "office": "Rogers Fire Department, Community Risk Reduction Division",
+      "portal_name": "Online Permitting Portal (Cityworks)",
+      "portal_url": "https://www.rogersar.gov/1494/Online-Permitting-Portal",
+      "notes": [
+        "Swimming pools are on the city's list of work that needs a permit; the Fire Department's Community Risk Reduction Division reviews residential plans before permits are issued.",
+        "The pool contractor, or a homeowner building their own pool, applies on the online portal with a site plan, pool and equipment layout and structural diagram of the pool.",
+        "A master electrician must pull the electric permit and do the pool and deck bonding and grounding; adding gas for a pool heater needs a master plumber's plumbing permit.",
+        "Adopted codes include the 2021 International Pool & Spa Code, the 2021 Arkansas Fire Prevention Code Vol. III - Residential and the 2020 National Electrical Code (NEC).",
+        "The city's listed design requirements include an 18 in. frost line depth and Seismic Design Category B."
+      ],
+      "sources": [
+        {
+          "title": "Residential Projects - City of Rogers",
+          "url": "https://www.rogersar.gov/772/Residential-Projects"
+        },
+        {
+          "title": "FAQ: When is a permit required? - City of Rogers",
+          "url": "https://www.rogersar.gov/Faq.aspx?QID=373"
+        },
+        {
+          "title": "Adopted Codes - City of Rogers",
+          "url": "https://www.rogersar.gov/135/Codes-Ordinances"
+        },
+        {
+          "title": "Community Risk Reduction Division - Fire Department - City of Rogers",
+          "url": "https://www.rogersar.gov/132/Community-Risk-Reduction-Division"
+        },
+        {
+          "title": "Online Permitting Portal - City of Rogers",
+          "url": "https://www.rogersar.gov/1494/Online-Permitting-Portal"
+        }
+      ]
+    }
+  ],
+  "state_level": [],
+  "gaps": [
+    "Fort Smith (403), Benton County (403), Springdale (bot check) and Hot Springs (522) could not be opened. Conway and Pulaski County pages opened but say nothing specific about pools.",
+    "Web search budget was used up, so pages were found only by following links on official sites.",
+    "Little Rock: no pool-specific permit page found on littlerock.gov; the municipal code host (Municode) returned a bot check, so pool setbacks and barrier rules are not verified. The codes list is dated January 7, 2023 and may have been updated.",
+    "The live portals for Fayetteville (Civic Access Portal), Bentonville (eTrakit) and Rogers (Cityworks) refused or timed out; portal_url for those three is the city page that names and links to the portal.",
+    "Fayetteville's checklist is the Same Day Permit pool checklist; a separate document list for pools routed to regular review (floodplain, H.H.O.D. and similar) was not found.",
+    "No page opened says whether pool plans must be sealed by an engineer. Rogers asks for a structural diagram but does not say who prepares it.",
+    "Numeric pool setbacks were not stated on any page opened.",
+    "Bentonville's checklist exempts equipment gates over 5 ft wide from self-closing if kept locked; this exception is left out of the note.",
+    "State contractor licence class for residential pool work not verified: the Contractors Licensing Board application page does not name swimming pools."
+  ]
+}
