@@ -23,6 +23,26 @@
       ]
     },
     {
+      "name": "Baton Rouge (East Baton Rouge Parish)",
+      "kind": "city-parish",
+      "office": "East Baton Rouge City-Parish Permit & Inspection Division, Department of Development",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "A residential pool permit needs a site or plot plan showing pool location, dimensions, depth, equipment location, servitudes, and setbacks from property lines, streets, alleys and the house.",
+        "The contractor and homeowner must sign a Pool Barrier Affidavit, which can be submitted with the permit application documents. Depths over 5 ft need a secondary entry and exit.",
+        "Separate plumbing and electrical permits are required. Electrical inspections cover pool bonding and pool deck bonding before concrete is poured.",
+        "Pools in Urban Design Overlay Districts need Planning Commission staff approval. Locally designated historic districts need a Certificate of Appropriateness. The parish does not enforce private subdivision restrictions."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool Permit Information and Requirements - East Baton Rouge Department of Development",
+          "url": "https://www.brla.gov/DocumentCenter/View/14978"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
       "name": "Lafayette (Lafayette Consolidated Government)",
       "kind": "city-parish",
       "office": "Lafayette Consolidated Government, Planning, Zoning and Development",
@@ -37,6 +57,34 @@
           "url": "https://www.lafayettela.gov/business-development/planning-and-development/planning-zoning-and-development-applications/"
         }
       ]
+    },
+    {
+      "name": "Mandeville",
+      "kind": "city",
+      "office": "City of Mandeville Planning and Development",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The city says permits are needed so construction complies with the current edition of the Louisiana State Uniform Construction Code.",
+        "The city's permit forms include a Swimming Pool Permit application, and applications are submitted digitally by email to the permits office.",
+        "That application's checklist asks for a surveyor-certified boundary survey and a fully dimensioned site plan showing setbacks and existing structures.",
+        "The same checklist asks for a drainage plan stamped by a Louisiana licensed civil engineer or land surveyor, and an elevation certificate in FEMA flood zones AE or V."
+      ],
+      "sources": [
+        {
+          "title": "Building Permit Information - City of Mandeville",
+          "url": "https://www.cityofmandeville.com/planning/page/building-permit-information"
+        },
+        {
+          "title": "Forms, Permits, and Applications - City of Mandeville",
+          "url": "https://www.cityofmandeville.com/forms"
+        },
+        {
+          "title": "Residential Building Permit Application (Rev. 03.18.20) - City of Mandeville",
+          "url": "https://www.cityofmandeville.com/sites/default/files/fileattachments/planning_and_development/page/2493/swimming_pool_permit.pdf"
+        }
+      ],
+      "checked": "2026-11-18"
     }
   ],
   "state_level": [],

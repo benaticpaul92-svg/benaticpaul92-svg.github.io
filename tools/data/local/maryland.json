@@ -4,6 +4,47 @@
   "researched": "2026-11-15",
   "jurisdictions": [
     {
+      "name": "Montgomery County",
+      "kind": "county",
+      "office": "Montgomery County Department of Permitting Services",
+      "portal_name": "DPS eServices",
+      "portal_url": "",
+      "notes": [
+        "A building permit is required to build, alter or enlarge any residential swimming pool, above or below ground. An electrical permit is also required.",
+        "Plans are submitted electronically through the DPS eServices system. They must be drawn to scale and include a site plan, the pool layout with all equipment, the piping layout, structural sections and a finish schedule.",
+        "Pools installed after January 1, 1990 must be protected by a barrier 60 inches tall. Older pools need a fence at least 42 inches tall or an automatic pool cover.",
+        "Properties with an individual well and septic system have additional requirements. The county does not enforce private covenants and deed restrictions."
+      ],
+      "sources": [
+        {
+          "title": "Residential Swimming Pool (Montgomery County Department of Permitting Services)",
+          "url": "https://www.montgomerycountymd.gov/department-permitting-services/all-permits/residential-permits/residential-swimming-pool"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
+      "name": "Baltimore County",
+      "kind": "county",
+      "office": "Baltimore County Department of Permits, Approvals and Inspections",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "All in-ground pools need a permit and a fence built to code. Above-ground pools over 250 square feet with a water depth of 24 inches or more also need a permit.",
+        "If the pool is in a CBCA, flood plain or historical property, a permit is required regardless of size.",
+        "Residential applications need a pool letter signed by the property owner and site plans. Where the property has a well and septic system, the site plan must follow the county's Ground Water Site Plan Requirements.",
+        "A plumbing permit is also needed when a permanent water line will fill the pool. Applications are made through the county's online permit portal."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools Building Permit (Baltimore County Government)",
+          "url": "https://www.baltimorecountymd.gov/departments/pai/application/swimming-pools",
+          "as_of": "2025-12-24"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
       "name": "Howard County",
       "kind": "county",
       "office": "Howard County Department of Inspections, Licenses and Permits",
@@ -16,9 +57,18 @@
         "The county checklist asks for pool shape, wall cross section, floor slope, diving equipment and diving envelope where applicable. Construction plans should reference the current International Swimming Pool & Spa Code."
       ],
       "sources": [
-        {"title": "Requirements for submittal of all residential swimming pool applications (Howard County memo, 2 Sept 2025)", "url": "https://www.howardcountymd.gov/sites/default/files/2025-09/Swimming%20Pool%20Code%20Requirements%202024.pdf"},
-        {"title": "Checklist for Residential Swimming Pool Submittal (Howard County)", "url": "https://www.howardcountymd.gov/sites/default/files/2025-09/CHECKLIST%20FOR%20RESIDENTIAL%20SWIMMING%20POOL%20SUBMITTALS.pdf"},
-        {"title": "Residential Building Permits (Howard County)", "url": "https://www.howardcountymd.gov/resource/residential-building-permits"}
+        {
+          "title": "Requirements for submittal of all residential swimming pool applications (Howard County memo, 2 Sept 2025)",
+          "url": "https://www.howardcountymd.gov/sites/default/files/2025-09/Swimming%20Pool%20Code%20Requirements%202024.pdf"
+        },
+        {
+          "title": "Checklist for Residential Swimming Pool Submittal (Howard County)",
+          "url": "https://www.howardcountymd.gov/sites/default/files/2025-09/CHECKLIST%20FOR%20RESIDENTIAL%20SWIMMING%20POOL%20SUBMITTALS.pdf"
+        },
+        {
+          "title": "Residential Building Permits (Howard County)",
+          "url": "https://www.howardcountymd.gov/resource/residential-building-permits"
+        }
       ]
     },
     {
@@ -34,8 +84,31 @@
         "Other attachments, such as a Critical Area Worksheet and a Standard Grading Plan Application, are listed on the page and may not apply to every project."
       ],
       "sources": [
-        {"title": "Residential Accessory Structure (Anne Arundel County)", "url": "https://www.aacounty.org/inspections-and-permits/permits/residential-permits/accessory-structure"}
+        {
+          "title": "Residential Accessory Structure (Anne Arundel County)",
+          "url": "https://www.aacounty.org/inspections-and-permits/permits/residential-permits/accessory-structure"
+        }
       ]
+    },
+    {
+      "name": "Carroll County",
+      "kind": "county",
+      "office": "Carroll County Bureau of Permits and Inspections",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The county says a swimming pool needs both a building permit and an electrical permit. A hot tub or spa needs only an electrical permit.",
+        "Pools must comply with the 2021 International Swimming Pool and Spa Code (ISPSC) and Carroll County amendments.",
+        "The pool site must be approved by the Carroll County Zoning Administration and the Health Department, to keep it far enough from septic systems and water infrastructure.",
+        "The plot plan of the whole parcel, drawn to scale, must show the well or septic area, drywell, road name and all easements (floodplain, forest conservation, utilities), plus the area of disturbance. The pool contractor signs a Pool Enclosure Affidavit."
+      ],
+      "sources": [
+        {
+          "title": "Installing a Swimming Pool, Spa, or Hot Tub (Carroll County)",
+          "url": "https://carrollcountymd.gov/government/directory/public-works/permits-inspections/residential-projects/installing-a-swimming-pool-spa-or-hot-tub"
+        }
+      ],
+      "checked": "2026-11-18"
     }
   ],
   "state_level": [],

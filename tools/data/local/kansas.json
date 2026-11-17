@@ -4,6 +4,25 @@
   "researched": "2026-11-15",
   "jurisdictions": [
     {
+      "name": "Overland Park",
+      "kind": "city",
+      "office": "City of Overland Park",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "A swimming pool permit from Overland Park must be obtained before constructing a new pool.",
+        "The Johnson County Department of Health and Environment permits and inspects public and semi-public pools in the city, and new commercial pools need its plan approval."
+      ],
+      "sources": [
+        {
+          "title": "Pool + Spa Permits (City of Overland Park)",
+          "url": "https://www.opkansas.org/city-services/permits-licenses-inspections-directory/pool-spa-permits/",
+          "as_of": "2026-01-17"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
       "name": "Johnson County (unincorporated areas)",
       "kind": "county",
       "office": "Johnson County Building Codes",
@@ -23,6 +42,58 @@
       ]
     },
     {
+      "name": "Lenexa",
+      "kind": "city",
+      "office": "City of Lenexa Community Development Department",
+      "portal_name": "Lenexa Licensing and Permitting Portal (Accela Citizen Access)",
+      "portal_url": "https://aca-prod.accela.com/LENEXA/Default.aspx",
+      "notes": [
+        "Lenexa requires a building permit for pools, hot tubs and spas, except prefabricated pools under 30 inches deep installed entirely above ground. Pool permits are applied for through the city's online permit portal.",
+        "The plot plan must show lot dimensions, the distance from the pool and deck to buildings, easements and property lines, the fence location, the equipment pad with its screening, and any retaining walls.",
+        "Pools are not allowed in the front yard or in easements and engineered swales. The city also sets minimum distances to overhead and underground power lines.",
+        "Pools must be built to the International Swimming Pool and Spa Code. The required barrier is at least 48 inches high, with self-closing, self-latching gates that open outward."
+      ],
+      "sources": [
+        {
+          "title": "Residential Pool and Spas Guideline (one- and two-family dwellings), Lenexa",
+          "url": "https://www.lenexa.com/files/sharedassets/city/v/6/business-development/design-construction/documents/residential-pool-and-spas-guideline.pdf"
+        },
+        {
+          "title": "Building a Pool - City of Lenexa",
+          "url": "https://www.lenexa.com/Your-Residence/Home-Improvement/Building-a-Pool"
+        },
+        {
+          "title": "Lenexa Licensing and Permitting Portal",
+          "url": "https://aca-prod.accela.com/LENEXA/Default.aspx"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
+      "name": "Shawnee",
+      "kind": "city",
+      "office": "City of Shawnee Community Development Department, Building Codes Division",
+      "portal_name": "Citizenserve Portal",
+      "portal_url": "",
+      "notes": [
+        "A permit is required for any swimming pool, spa or hot tub 24 inches or more deep. Applications can be made at City Hall or through the city's Citizenserve online portal.",
+        "The submittal needs a scaled plot plan showing buildings, the pool, setbacks and the barrier, a notarized barrier compliance form, and the manufacturer's specifications and installation instructions.",
+        "In-ground pools also need a Low Impact Land Disturbance Permit, with an erosion control plan showing the construction entrance and erosion control measures.",
+        "Pools go in the rear yard, at least 10 feet from all property lines and outside utility easements. The barrier follows Chapter 45 of the 2018 IRC as modified by Shawnee's code, and must be installed before filling."
+      ],
+      "sources": [
+        {
+          "title": "Residential Pool, Spa & Hot Tub Permit Guidelines (Shawnee Building Codes Division)",
+          "url": "https://www.cityofshawnee.org/DocumentCenter/View/234/Swimming-Pools-and-Hot-Tubs-PDF"
+        },
+        {
+          "title": "Building Permits & Inspections - Shawnee, KS",
+          "url": "https://www.cityofshawnee.org/212/Building-Permits-Inspections"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
       "name": "Lawrence / Douglas County",
       "kind": "city",
       "office": "City of Lawrence Planning & Development Services, Building Safety Division",
@@ -40,6 +111,25 @@
           "url": "https://assets.lawrenceks.org/pds/devservices/bsd/swimming-pool-hot-tub-spa-guidelines-03-2021.pdf"
         }
       ]
+    },
+    {
+      "name": "Kansas City, KS / Wyandotte County (Unified Government)",
+      "kind": "county",
+      "office": "Unified Government Neighborhood Resource Center, Building Inspection",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Building permits for swimming pools go through the Building Inspection division of the Unified Government's Neighborhood Resource Center.",
+        "Sealed plot plans of the property are required for swimming pools, as for new homes, room additions and accessory structures.",
+        "All residential applications must include scaled drawings of the project. Applications are submitted by email to the Building Inspection division rather than through an online portal."
+      ],
+      "sources": [
+        {
+          "title": "Building Inspection Permits & Requirements (Unified Government of Wyandotte County / Kansas City, KS)",
+          "url": "https://www.wycokck.org/Departments/Neighborhood-Resource-Center/Building-Inspection/Building-Inspection-Permits"
+        }
+      ],
+      "checked": "2026-11-18"
     }
   ],
   "state_level": [],

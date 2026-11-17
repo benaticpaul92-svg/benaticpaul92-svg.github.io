@@ -21,6 +21,70 @@
           "url": "https://content.lexingtonky.gov/sites/default/files/2026-03/2026%20Permit%20Guide%20pools.pdf"
         }
       ]
+    },
+    {
+      "name": "Warren County",
+      "kind": "county",
+      "office": "Warren County Public Works, Building Services",
+      "portal_name": "Warren County Online Portal",
+      "portal_url": "https://co-warren-ky.smartgovcommunity.com/",
+      "notes": [
+        "Warren County says all swimming pools, above-ground and in-ground, need a building permit, and every pool needs a barrier.",
+        "A pool permit application must include a set of building plans and a professionally drawn plot plan.",
+        "Since September 15, 2026, in-ground pool applications also need a detailed pool layout showing items such as the electrical panel, equipment, ladders, lights, depth and fence.",
+        "The county says applications without a detailed plan will not be accepted, and final inspections of pools are required."
+      ],
+      "sources": [
+        {
+          "title": "Building Services - Warren County Kentucky",
+          "url": "https://www.warrencountyky.gov/departments/public-works/building-services/"
+        },
+        {
+          "title": "Requirements for all inground swimming pool building permit applications (memo, 15 Sept 2026)",
+          "url": "https://www.warrencountyky.gov/wp-content/uploads/2026/10/Swimming-Pool-Layout-Requirement-2026.pdf"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
+      "name": "Boone County",
+      "kind": "county",
+      "office": "Boone County Building Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Boone County's pool application needs a plot plan approved by the Boone County Planning Commission, plus the contractor's county occupational license.",
+        "The pool enclosure drawing must show fence type, height and openings, and comply with section R326.8 of the 2018 Kentucky Residential Code.",
+        "Applicants must submit a pool layout and cross section with water depths, plus circulation plans meeting ANSI/NSPI-5 2003 and ANSI/APSP-7 2006 suction entrapment standards.",
+        "Electrical work needs an electrical permit from the county's third-party electrical inspection agency, and retaining walls built with the pool need a separate permit."
+      ],
+      "sources": [
+        {
+          "title": "Acknowledgment of Residential swimming pool/hot tub requirements (Boone County Building Department)",
+          "url": "https://cms7files.revize.com/boonecountyky/document_center/Building/SwimmingPool.pdf"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
+      "name": "Covington",
+      "kind": "city",
+      "office": "City of Covington Department of Development, Zoning",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Covington handles pools through a zoning permit application, with the pool checked under Site Improvements, and it asks for current exterior photos and a site plan.",
+        "No pool may sit forward of the principal structure or in the front yard of any lot.",
+        "Pools need a fence or wall four to six feet high with self-closing or self-latching gates, and openings may not pass a four-inch sphere.",
+        "Water from a non-public source must be approved by the Northern Kentucky District Health Department."
+      ],
+      "sources": [
+        {
+          "title": "Applying for a Zoning Permit - Pools (City of Covington)",
+          "url": "https://thecovky.gov/wp-content/uploads/2022/12/Pools.pdf"
+        }
+      ],
+      "checked": "2026-11-18"
     }
   ],
   "state_level": [],

@@ -16,8 +16,14 @@
         "In-ground pools require fencing. Inspections and the fence or safety barrier must be in place before the pool is used."
       ],
       "sources": [
-        {"title": "Pool Permit Package (Town of Scarborough)", "url": "https://resources.finalsite.net/images/v1744312651/scarboroughmaineorg/ifzlezg4q4yoh3snbms2/PoolPermitPackage.pdf"},
-        {"title": "Building Permits (Town of Scarborough)", "url": "https://www.scarboroughmaine.org/departments/planning-codes/codes/permits-applications"}
+        {
+          "title": "Pool Permit Package (Town of Scarborough)",
+          "url": "https://resources.finalsite.net/images/v1744312651/scarboroughmaineorg/ifzlezg4q4yoh3snbms2/PoolPermitPackage.pdf"
+        },
+        {
+          "title": "Building Permits (Town of Scarborough)",
+          "url": "https://www.scarboroughmaine.org/departments/planning-codes/codes/permits-applications"
+        }
       ]
     },
     {
@@ -33,13 +39,87 @@
         "Under Sec. 25-8, pool location is staked by a Maine-licensed surveyor or similar professional and verified before final inspection. Setbacks include 50 ft from the street and 10 ft from side or rear lines in residential districts."
       ],
       "sources": [
-        {"title": "Swimming Pool Permit Application (City of South Portland)", "url": "https://www.southportland.gov/DocumentCenter/View/328/Swimming-Pool-Permit-Application-PDF"},
-        {"title": "Applications & Information (City of South Portland Code Enforcement)", "url": "https://www.southportland.gov/207/Applications-Information"}
+        {
+          "title": "Swimming Pool Permit Application (City of South Portland)",
+          "url": "https://www.southportland.gov/DocumentCenter/View/328/Swimming-Pool-Permit-Application-PDF"
+        },
+        {
+          "title": "Applications & Information (City of South Portland Code Enforcement)",
+          "url": "https://www.southportland.gov/207/Applications-Information"
+        }
       ]
+    },
+    {
+      "name": "Raymond",
+      "kind": "town",
+      "office": "Town of Raymond Code Enforcement",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "An in-ground pool needs a building permit before installation. The application needs a plot plan with the pool location and distances to property lines and nearby structures, plus a copy of the pool design plans.",
+        "A separate electrical permit is required for the pool, and extension cords are not allowed. A final inspection is required for the building permit and for the electrical permit.",
+        "All in-ground pools must be enclosed by a fence. The town says no permit is needed for the fence itself.",
+        "Above-ground pools do not need a fence in Raymond. A building permit is required for aluminum frame or siding pools, and inflatable pools need only an electrical permit."
+      ],
+      "sources": [
+        {
+          "title": "In-Ground Swimming Pool Requirements (Town of Raymond)",
+          "url": "https://www.raymondmaine.gov/uploads/in-ground-swiming-pool-packet.pdf"
+        },
+        {
+          "title": "Above-Ground Swimming Pool Requirements (Town of Raymond)",
+          "url": "https://www.raymondmaine.gov/uploads/above-ground-swimming-pool-packet.pdf"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
+      "name": "Rockport",
+      "kind": "town",
+      "office": "Town of Rockport Code Enforcement",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "A building permit is required for swimming pools over 24 inches deep. Prefabricated pools less than 24 inches deep do not need a permit.",
+        "A building permit application needs a plot plan or lot sketch showing distances to property lines, other structures, the water source and the sewage disposal system.",
+        "The town lists a swimming pool inspection at finished installation. An in-ground pool must have a fence installed per State statute."
+      ],
+      "sources": [
+        {
+          "title": "Code Enforcement (Town of Rockport)",
+          "url": "https://rockportmaine.gov/codes"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
+      "name": "Greene",
+      "kind": "town",
+      "office": "Town of Greene Code Enforcement Office",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The permit form states that setback distances apply, with 25 feet to side and rear property boundaries.",
+        "The form says all local covenants must be adhered to.",
+        "The form reproduces Maine's pool fence law, 22 M.R.S. section 1632, and the 4-foot minimum fence height from section 1631."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool Permit (Town of Greene Code Enforcement Office)",
+          "url": "https://webgen1files1.revize.com/greeneme/Documents/Government/Forms/greene_swimming_pool_permit.pdf"
+        }
+      ],
+      "checked": "2026-11-18"
     }
   ],
   "state_level": [
-    {"note": "Maine law (22 M.R.S. section 1632) requires a fence around every swimming pool, except portable above-ground pools with sidewalls at least 24 inches high. A house or accessory building can form part of the enclosure, and gates and doors must be securely fastenable.", "source": {"title": "Title 22, section 1632: Enclosure of swimming pool required", "url": "https://legislature.maine.gov/statutes/22/title22sec1632.html"}}
+    {
+      "note": "Maine law (22 M.R.S. section 1632) requires a fence around every swimming pool, except portable above-ground pools with sidewalls at least 24 inches high. A house or accessory building can form part of the enclosure, and gates and doors must be securely fastenable.",
+      "source": {
+        "title": "Title 22, section 1632: Enclosure of swimming pool required",
+        "url": "https://legislature.maine.gov/statutes/22/title22sec1632.html"
+      }
+    }
   ],
   "gaps": [
     "Portland: portlandmaine.gov showed no readable permit or pool links (one fetch failed a certificate check); nothing verified.",

@@ -16,10 +16,22 @@
         "The city lists local amendments to the 2024 International Building Code on its code requirements page."
       ],
       "sources": [
-        {"title": "Inspections FAQs - City of Fargo", "url": "https://fargond.gov/city-government/departments/inspections/faqs"},
-        {"title": "Residential Permit & Fees - City of Fargo", "url": "https://fargond.gov/city-government/departments/inspections/residential-permits-fees"},
-        {"title": "Residential Permit Application - City of Fargo", "url": "https://download.fargond.gov/2/residential_permit_application.pdf"},
-        {"title": "Code Requirements - City of Fargo", "url": "https://fargond.gov/city-government/departments/inspections/code-requirements"}
+        {
+          "title": "Inspections FAQs - City of Fargo",
+          "url": "https://fargond.gov/city-government/departments/inspections/faqs"
+        },
+        {
+          "title": "Residential Permit & Fees - City of Fargo",
+          "url": "https://fargond.gov/city-government/departments/inspections/residential-permits-fees"
+        },
+        {
+          "title": "Residential Permit Application - City of Fargo",
+          "url": "https://download.fargond.gov/2/residential_permit_application.pdf"
+        },
+        {
+          "title": "Code Requirements - City of Fargo",
+          "url": "https://fargond.gov/city-government/departments/inspections/code-requirements"
+        }
       ]
     },
     {
@@ -35,10 +47,95 @@
         "The city adopts a local amendment of International Property Maintenance Code section 303 for pool barriers, with the top at least 48 in. above grade for pools deeper than 24 in."
       ],
       "sources": [
-        {"title": "Guideline for Installing Swimming Pools - City of West Fargo", "url": "https://www.westfargond.gov/DocumentCenter/View/11320"},
-        {"title": "Residential Building Permits - City of West Fargo", "url": "https://www.westfargond.gov/201/Residential-Building-Permits"},
-        {"title": "Building Inspections - City of West Fargo", "url": "https://www.westfargond.gov/190/Building-Inspections"}
+        {
+          "title": "Guideline for Installing Swimming Pools - City of West Fargo",
+          "url": "https://www.westfargond.gov/DocumentCenter/View/11320"
+        },
+        {
+          "title": "Residential Building Permits - City of West Fargo",
+          "url": "https://www.westfargond.gov/201/Residential-Building-Permits"
+        },
+        {
+          "title": "Building Inspections - City of West Fargo",
+          "url": "https://www.westfargond.gov/190/Building-Inspections"
+        }
       ]
+    },
+    {
+      "name": "Bismarck",
+      "kind": "city",
+      "office": "City of Bismarck Community Development Department, Building Inspections Division",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The city's Building Inspections Division, not Environmental Health, handles barrier protection for residential swimming pools.",
+        "Bismarck lists pools among the projects that need a permit, and it publishes a Residential Inground Swimming Pool permit form.",
+        "The form asks the applicant to choose a barrier type, a 6-foot fence or a powered safety cover, and to give the pool dimensions and its distances to the side and rear property lines.",
+        "Required documents listed on the form are the pool installation manual and an overview of the property showing where the pool will sit; a powered cover also needs proof it meets ASTM F 1346-91."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool Establishments - City of Bismarck",
+          "url": "https://bismarcknd.gov/1082/Swimming-Pool-Establishments"
+        },
+        {
+          "title": "Permits Are Required For - City of Bismarck",
+          "url": "https://bismarcknd.gov/124/Permits-Are-Required-For"
+        },
+        {
+          "title": "Residential Inground Swimming Pool permit form (Building Inspections Division, rev. 4/21/2022)",
+          "url": "https://www.bismarcknd.gov/DocumentCenter/View/41795/swimming-pool-permit"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
+      "name": "Mandan",
+      "kind": "city",
+      "office": "City of Mandan Building Inspections",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Mandan's own permit guide and FAQ list swimming pools among the work that does not need a city building permit.",
+        "The same lists say fences up to 8.5 feet high do not need a permit.",
+        "The city says it adopts the current North Dakota State Building Code, with its own amendments for the city and its extraterritorial area.",
+        "The guide reminds owners that North Dakota Century Code 49-23 requires calling 811 before any excavation."
+      ],
+      "sources": [
+        {
+          "title": "Building Guide - City of Mandan Building Department",
+          "url": "https://www.cityofmandan.com/vertical/sites/%7B38C3EFDC-F4D8-4D02-9E13-0987A081A7A4%7D/uploads/Building_Guide_2020_-_updated_1st_page_05_01_2024.pdf"
+        },
+        {
+          "title": "Frequently Asked Questions - Mandan, ND",
+          "url": "https://www.cityofmandan.com/index.asp?SEC=DE377695-4E69-4826-8AAF-BC39BE106ECA"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
+      "name": "Williston",
+      "kind": "city",
+      "office": "City of Williston Building Safety / Development Services",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "As of January 1, 2026, Williston follows the North Dakota State Building Code, which includes the 2024 International Building Code, 2024 International Residential Code and 2018 Uniform Plumbing Code.",
+        "The city lists NFPA 70 2026 edition (National Electrical Code) among the codes it follows.",
+        "Applications need the property address and legal description, the estimated construction cost, and a site plan showing existing buildings and the proposed project.",
+        "Applications and plans are sent to the building safety office by email, and incomplete applications are rejected. The city's pages do not have a pool-specific checklist."
+      ],
+      "sources": [
+        {
+          "title": "Building Safety Frequently Asked Questions - City of Williston",
+          "url": "https://www.cityofwilliston.com/departments/building_safety/frequently_asked_questions.php"
+        },
+        {
+          "title": "Building Permit Applications - City of Williston",
+          "url": "https://www.cityofwilliston.com/departments/building_safety/building_permit_applications.php"
+        }
+      ],
+      "checked": "2026-11-18"
     }
   ],
   "state_level": [],

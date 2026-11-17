@@ -4,6 +4,26 @@
   "researched": "2026-11-15",
   "jurisdictions": [
     {
+      "name": "Indianapolis (Marion County)",
+      "kind": "city-county",
+      "office": "Department of Business and Neighborhood Services",
+      "portal_name": "Accela Citizens Access",
+      "portal_url": "",
+      "notes": [
+        "In-ground and above-ground pools, and hot tubs, need structural, improvement location and drainage permits, like any other structure.",
+        "An above-ground pool 30 inches or less deep and 15 feet or less across does not need a structural permit. One 18 inches or less deep and 15 feet or less in diameter does not need an improvement location permit.",
+        "A pool may not sit in a front yard, closer to a side lot line than the district's minimum side yard setback, or closer than five feet to a rear lot line.",
+        "The pool area must be enclosed by a safety pool cover meeting 675 IAC 20-4-27(c), or by a fence or other barrier with a self-closing, self-latching gate."
+      ],
+      "sources": [
+        {
+          "title": "Residential Development Permits (indy.gov)",
+          "url": "https://www.indy.gov/activity/residential-development-permits"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
       "name": "Carmel",
       "kind": "city",
       "office": "Building and Code Services, Community Services Department",
@@ -16,8 +36,14 @@
         "For pools without a cover, the same document requires a fence at least 5 feet high with self-closing, self-latching, lockable gates, under a separate fence permit."
       ],
       "sources": [
-        {"title": "Residential Permits - City of Carmel", "url": "https://www.carmel.in.gov/292/Residential-Permits"},
-        {"title": "Swimming Pool Inspection Procedures - City of Carmel Building and Code Services", "url": "https://www.carmel.in.gov/DocumentCenter/View/2760"}
+        {
+          "title": "Residential Permits - City of Carmel",
+          "url": "https://www.carmel.in.gov/292/Residential-Permits"
+        },
+        {
+          "title": "Swimming Pool Inspection Procedures - City of Carmel Building and Code Services",
+          "url": "https://www.carmel.in.gov/DocumentCenter/View/2760"
+        }
       ]
     },
     {
@@ -33,9 +59,78 @@
         "Construction documents must include a pool plan and a cross-section drawing of the pool, and review does not guarantee full compliance with the Indiana Building Code."
       ],
       "sources": [
-        {"title": "Pool Permits - City of Westfield", "url": "https://www.westfield.in.gov/519/Pool-Permits"},
-        {"title": "Apply for a Permit - City of Westfield", "url": "https://www.westfield.in.gov/179/Apply-for-a-Permit"}
+        {
+          "title": "Pool Permits - City of Westfield",
+          "url": "https://www.westfield.in.gov/519/Pool-Permits"
+        },
+        {
+          "title": "Apply for a Permit - City of Westfield",
+          "url": "https://www.westfield.in.gov/179/Apply-for-a-Permit"
+        }
       ]
+    },
+    {
+      "name": "Lawrence (Marion County)",
+      "kind": "city",
+      "office": "City of Lawrence Department of Public Works",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Lawrence's Department of Public Works says every in-ground pool needs a permit, and above-ground pools need one if over 18 inches deep or over 15 feet across with an electrical connection.",
+        "The city handout says pool owners must also get an Improvement Location Permit from the Department of Business and Neighborhood Services in Marion County.",
+        "Pool permit applications must include a site plan showing the pool against structures, lot lines, easements and wetland buffers, plus the fence design with gate details.",
+        "The handout, based in part on the 2020 Indiana Residential Code, bars pools from front yards or within 5 feet of a rear lot line and says the structural design must be engineered."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools and Hot Tubs - City of Lawrence Department of Public Works",
+          "url": "https://www.cityoflawrence.org/sites/default/files/document-group/SWIMMING%20POOLS%20AND%20HOT%20TUBS_0.pdf"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
+      "name": "South Bend / St. Joseph County",
+      "kind": "city-county",
+      "office": "St. Joseph County / City of South Bend Building Department",
+      "portal_name": "City and County Swimming Pool Permit Application (online form)",
+      "portal_url": "https://southbendin.jotform.com/260285802086963",
+      "notes": [
+        "South Bend's Building Department lists a City and County Swimming Pool Permit Application among its residential permit forms, submitted through an online form.",
+        "The department's permits page says the 2020 Indiana Residential Code, based on the 2018 International Code, is in effect by state adoption.",
+        "Contractors must be registered or licensed with the Building Department. A residential owner-occupant may do their own work on their dwelling."
+      ],
+      "sources": [
+        {
+          "title": "Building Permits & Contractor Registrations - South Bend, Indiana",
+          "url": "https://southbendin.gov/department/community-investment/building/building-permits/"
+        },
+        {
+          "title": "Building - South Bend, Indiana",
+          "url": "https://southbendin.gov/department/community-investment/building/"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
+      "name": "Cicero (Hamilton County)",
+      "kind": "town",
+      "office": "Cicero / Jackson Township Plan Commission",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Cicero and Jackson Township use a joint Plan Commission Swimming Pool/Spa Permit Application for residential and commercial pools, in-ground and above-ground.",
+        "The application says all pool and spa installations must follow Title 675 of the Indiana Administrative Code, 675 IAC 20-1 through 20-4.",
+        "The town asks for one copy of the pool construction plans, showing the required 5-foot wall, fence or barrier around the pool, and a site plan with property line dimensions and site improvements.",
+        "The form lists bonding, electrical and final inspections, and says detached fences, decks and accessory structures need their own permits."
+      ],
+      "sources": [
+        {
+          "title": "Cicero / Jackson Township Plan Commission Swimming Pool/Spa Permit Application",
+          "url": "https://www.ciceroin.org/wp-content/uploads/2023/02/Pool-Permit-Application-1.pdf"
+        }
+      ],
+      "checked": "2026-11-18"
     }
   ],
   "state_level": [],

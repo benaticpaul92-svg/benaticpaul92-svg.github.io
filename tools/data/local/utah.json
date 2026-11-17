@@ -4,21 +4,28 @@
   "researched": "2026-11-15",
   "jurisdictions": [
     {
-      "name": "Utah County (unincorporated areas)",
-      "kind": "county",
-      "office": "Utah County Community Development, Building Division",
+      "name": "Salt Lake City",
+      "kind": "city",
+      "office": "Salt Lake City Building Services & Civil Enforcement",
       "portal_name": "",
       "portal_url": "",
       "notes": [
-        "The Building Division handles permit applications, plan reviews and inspections only in the unincorporated parts of Utah County; properties inside a city use that city's office.",
-        "Every building permit needs the county's Building Permit Application (All Projects), and applications can be submitted in person or electronically.",
-        "The county lists the 2021 International Residential Code, the 2024 International Building Code and the 2023 National Electrical Code under Utah Code Title 15A.",
-        "The county's page lists frost depth as 30 in. or an engineer's design if deeper."
+        "Residential pools and spas deeper than 24 inches are regulated by the 2024 International Swimming Pool and Spa Code (ISPSC) and need a Salt Lake City permit.",
+        "The pool permit plans must show the barrier requirements, even if the pool contractor is not building the barrier.",
+        "A pool permit is not closed until all barrier requirements are met.",
+        "The pool checklist is uploaded as a PDF to the City Required Forms folder in ProjectDox. The site plan must show how backwash and drain water is discharged, under ISPSC Section 321 as amended by Utah."
       ],
       "sources": [
-        {"title": "Utah County Community Development", "url": "https://codev.utahcounty.gov/"},
-        {"title": "Utah County Community Development, Building", "url": "https://codev.utahcounty.gov/building"}
-      ]
+        {
+          "title": "Salt Lake City Building Services, Private Residential Pool/Spa Login Checklist",
+          "url": "https://www.slc.gov/buildingservices/2026/04/10/private-residential-pool-spa-login-checklist/"
+        },
+        {
+          "title": "Salt Lake City Building Services, Applicable Building and Fire Codes",
+          "url": "https://www.slc.gov/buildingservices/current-building-codes/"
+        }
+      ],
+      "checked": "2026-11-18"
     },
     {
       "name": "West Jordan (Salt Lake County)",
@@ -32,9 +39,82 @@
         "A property owner affidavit must be downloaded and submitted with the permit application."
       ],
       "sources": [
-        {"title": "West Jordan Building & Safety", "url": "https://www.westjordan.utah.gov/community-development/building-and-safety/"},
-        {"title": "West Jordan Development Application and Permits", "url": "https://www.westjordan.utah.gov/community-development/development-application-and-permits/"}
+        {
+          "title": "West Jordan Building & Safety",
+          "url": "https://www.westjordan.utah.gov/community-development/building-and-safety/"
+        },
+        {
+          "title": "West Jordan Development Application and Permits",
+          "url": "https://www.westjordan.utah.gov/community-development/development-application-and-permits/"
+        }
       ]
+    },
+    {
+      "name": "Herriman",
+      "kind": "city",
+      "office": "Herriman City Building Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "A permit is required for a pool or spa 24 inches deep or more, requested through the city's online Permit Application Form.",
+        "The application needs a pool site plan and complete construction plans that follow the city's Residential Swimming Pool Checklist.",
+        "A gas pool heater needs a gas line diagram. An electric pool heater needs a one-line diagram or total electrical load calculations.",
+        "A pool in a public utility easement needs easement waivers from all utilities, with copies submitted with the application, and the pool needs a final inspection before use."
+      ],
+      "sources": [
+        {
+          "title": "Herriman City, Swimming Pools and Spas",
+          "url": "https://www.herriman.gov/swimming-pools-and-spas"
+        }
+      ],
+      "checked": "2026-11-18"
+    },
+    {
+      "name": "Utah County (unincorporated areas)",
+      "kind": "county",
+      "office": "Utah County Community Development, Building Division",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The Building Division handles permit applications, plan reviews and inspections only in the unincorporated parts of Utah County; properties inside a city use that city's office.",
+        "Every building permit needs the county's Building Permit Application (All Projects), and applications can be submitted in person or electronically.",
+        "The county lists the 2021 International Residential Code, the 2024 International Building Code and the 2023 National Electrical Code under Utah Code Title 15A.",
+        "The county's page lists frost depth as 30 in. or an engineer's design if deeper."
+      ],
+      "sources": [
+        {
+          "title": "Utah County Community Development",
+          "url": "https://codev.utahcounty.gov/"
+        },
+        {
+          "title": "Utah County Community Development, Building",
+          "url": "https://codev.utahcounty.gov/building"
+        }
+      ]
+    },
+    {
+      "name": "Eagle Mountain",
+      "kind": "city",
+      "office": "Eagle Mountain City Building Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "A building permit is required for pools 24 inches or deeper, or pools with a filter system, heater or electrical lighting.",
+        "The city lists these pool submittals: permit application, site plan with dimensions and pool location, detailed plans, required engineering documents, and electrical and gas diagrams.",
+        "For residential pools over 24 inches deep, the city's barrier checklist calls for a barrier at least 48 inches high with self-closing, self-latching gates that open outward.",
+        "The city's barrier checklist refers to Section 3109 of the 2021 International Building Code for detailed requirements."
+      ],
+      "sources": [
+        {
+          "title": "Eagle Mountain City Building Department",
+          "url": "https://eaglemountain.gov/government/building/"
+        },
+        {
+          "title": "Eagle Mountain Swimming Pool Enclosure Requirements (PDF)",
+          "url": "https://eaglemountain.gov/building-swimming-pool-enclosure"
+        }
+      ],
+      "checked": "2026-11-18"
     }
   ],
   "state_level": [],
