@@ -29,24 +29,25 @@ SERVICE_LINKS = [
     ('/services/pool-hydraulic-design/', 'Hydraulic design & TDH', 'Pipe sizing, total dynamic head calculations and equipment schematics.'),
     ('/services/pe-stamped-pool-plans/', 'PE-stamped pool plans', 'Plans sealed by a Professional Engineer licensed in the project state.'),
     ('/services/pool-shop-drawings/', 'Pool shop drawings', 'Tile, coping, gutter, steel and equipment details for fabrication and installation.'),
-    ('/services/outsourced-pool-drafting/', 'Outsourced pool drafting', 'Overflow drafting for builders and designers, drawn on your standards.'),
+    ('/services/outsourced-pool-drafting/', 'Outsourced pool drafting', 'Extra drafting capacity for builders and designers, drawn on your standards.'),
 ]
 
 # Largest or best-known city, used only as the form placeholder example.
 CITY = {'alabama':'Birmingham','alaska':'Anchorage','arizona':'Phoenix','arkansas':'Little Rock','california':'San Diego','colorado':'Denver','connecticut':'Stamford','delaware':'Wilmington','florida':'Tampa','georgia':'Atlanta','hawaii':'Honolulu','idaho':'Boise','illinois':'Naperville','indiana':'Carmel','iowa':'Des Moines','kansas':'Overland Park','kentucky':'Lexington','louisiana':'New Orleans','maine':'Portland','maryland':'Annapolis','massachusetts':'Boston','michigan':'Grand Rapids','minnesota':'Minneapolis','mississippi':'Jackson','missouri':'St. Louis','montana':'Billings','nebraska':'Omaha','nevada':'Las Vegas','new-hampshire':'Manchester','new-jersey':'Paramus','new-mexico':'Albuquerque','new-york':'Huntington','north-carolina':'Charlotte','north-dakota':'Fargo','ohio':'Columbus','oklahoma':'Oklahoma City','oregon':'Portland','pennsylvania':'Pittsburgh','rhode-island':'Providence','south-carolina':'Charleston','south-dakota':'Sioux Falls','tennessee':'Nashville','texas':'Houston','utah':'Salt Lake City','vermont':'Burlington','virginia':'Virginia Beach','washington':'Seattle','west-virginia':'Charleston','wisconsin':'Madison','wyoming':'Cheyenne'}
 
 NATIONAL = [
- dict(path='pool', title='Pool Construction Drawings & Engineering Plans',
+ dict(path='pool', title='Swimming Pool Construction Drawings & Details', shows=True,
       h1='Pool construction drawings.<br><span>From layout to detail.</span>',
       kicker='USA / RESIDENTIAL POOL DRAWING PACKAGES',
-      description='Coordinated pool plans, sections, construction details and equipment layouts for residential projects. Send your sketch or existing plans for a drawing-package quote.'),
- dict(path='services/pool-permit-drawings', title='Swimming Pool Plans & Permit Drawings',
-      h1='Swimming pool plans.<br><span>Built around your permit scope.</span>',
+      description='Coordinated pool plans, sections, construction details and equipment layouts for residential projects. Send your sketch or existing plans for a drawing-package quote.',
+      meta='Swimming pool construction drawings for residential pools: plans, sections, structural details, plumbing diagram and equipment layout. Free quote.'),
+ dict(path='services/pool-permit-drawings', title='Pool Permit Drawings & Swimming Pool Plans',
+      h1='Pool permit drawings.<br><span>Built around your permit scope.</span>',
       kicker='USA / RESIDENTIAL POOL PERMIT DRAWINGS',
       description='Site layouts, pool plans, sections and supporting calculations for your residential pool permit package. We confirm the project requirements and drawing scope before work begins.',
       meta='Site layouts, pool plans, sections and supporting calculations for your residential pool permit package. Send your sketch for a drawing scope and quote.'),
- dict(path='services/pool-engineering', title='Pool Engineering Plans & Structural Design',
-      h1='Pool engineering plans.<br><span>Structural design for your permit.</span>',
+ dict(path='services/pool-engineering', title='Swimming Pool Engineering & Structural Plans',
+      h1='Pool engineering plans.<br><span>Structural engineering for your permit.</span>',
       kicker='USA / RESIDENTIAL POOL ENGINEERING',
       description='Residential pool engineering for homeowners, pool contractors and builders: structural plans, reinforcement details, hydraulic calculations and PE review for your permit. Send your layout for a scope and quote.',
       meta='Pool engineering for your permit: structural plans, reinforcement details, hydraulic calculations and PE review. Send your layout for a scope and quote.',
@@ -79,24 +80,35 @@ def ext_link(url, label):
     return f'<a href="{escape(url)}" target="_blank" rel="noopener">{clean(label)}</a>'
 
 
-def form(title, state=None, city=None, notes_placeholder=None):
+def form(title, state=None, city=None, notes_placeholder=None, pool=True):
     doc = BeautifulSoup((ROOT/'tools/enquiry-form.html').read_text(), 'html.parser')
     f = doc.form
     f['data-search-enquiry'] = title
-    doc.select_one('.form-intro').string = 'Name and email are enough to start. Add project details if you have them.'
+    f['aria-label'] = 'Quote request'
+    doc.select_one('legend').string = 'Your quote request'
+    doc.select_one('.form-intro').string = 'Name and email are enough to start. Your free quote lists the sheets, the revisions included and the delivery date before you commit.'
+    # Shown for the instant before the form script runs; the script then sets the live status and enables the button.
+    doc.select_one('[data-form-status]').string = 'Fields marked required are needed.'
+    doc.select_one('button[type="submit"]').string = 'Get my quote'
     notes = doc.select_one('[name="message"]')
     notes['name'] = 'project_notes'; notes['id'] = 'enquiry-notes'; notes['rows'] = '2'; notes.attrs.pop('required', None)
-    notes['placeholder'] = notes_placeholder or 'Pool dimensions, existing plans or permit comments…'
-    label = doc.select_one('label[for="enquiry-message"]'); label['for'] = 'enquiry-notes'; label.string = 'Project details (optional)'
+    notes['placeholder'] = notes_placeholder or 'e.g. permit office asks for sealed plans, 15 x 30 ft pool, builder’s sketch'
+    label = doc.select_one('label[for="enquiry-message"]'); label['for'] = 'enquiry-notes'; label.string = 'What do you need? (optional)'
     hidden = doc.new_tag('input', attrs={'type': 'hidden', 'name': 'message', 'value': title+' quote request.'})
     doc.fieldset.append(hidden)
+    doc.select_one('label[for="enquiry-location"]').string = ('Where is the pool?' if pool else 'Where is the site?')+' City and state (optional)'
     loc = doc.select_one('[name="location"]')
-    loc['placeholder'] = f'For example: {city}, {state}' if state else 'Project city and state'
+    loc['placeholder'] = f'e.g. {city}, {state}' if state else 'e.g. Tampa, FL'
     if state:
         loc['value'] = state
+    doc.select_one('.optional-fields summary').string = ('Pool builder? ' if pool else '')+'Add company and timeline (optional)'
     privacy = doc.select_one('.form-privacy')
-    privacy.clear(); privacy.append('We use your details to reply to this enquiry. ')
+    privacy.clear(); privacy.append('We use your details only to reply to this request. ')
     a = doc.new_tag('a', href='/privacy/'); a.string = 'Privacy policy'; privacy.append(a)
+    reply = doc.new_tag('p', attrs={'class': 'form-reply'}); reply.string = 'We reply by email within 24 hours.'
+    privacy.insert_before(reply)
+    doc.select_one('[data-email-draft]').string = 'Prefer email? Open an email draft'
+    doc.select_one('[data-new-enquiry]').string = 'Send another request'
     return str(doc)
 
 
@@ -117,29 +129,57 @@ def package_rows(pe, engineering=False):
     return ''.join(f'<li><span class="sheet-number" aria-hidden="true">{i:02d}</span><div><h3>{label}</h3><p>{text}</p></div></li>' for i, (label, text) in enumerate(rows, 1))
 
 
-HERO_FACTS = [('Drawing preparation', '2 business days'), ('File delivery', 'DWG + PDF')]
-HERO_SMALL = 'Two business days starts after we receive all project inputs for residential pool drawings. PE review, sealing and permit approval have separate timelines.'
+HERO_FACTS = [('Drawing preparation', '2 business days'), ('File delivery', 'DWG + PDF'), ('PE review and seal', 'Licensed in your state')]
+HERO_STRIP = '2 business days · DWG + PDF · PE seal when required'
+HERO_SMALL = 'The 2 business days start when we have all project inputs for residential pool drawings. PE review, sealing and permit approval have separate timelines.'
 
 
-def hero(kicker, h1, lead, form_html, crumbs='', facts=None, small=None):
+def panel_quote_html():
+    """One complete client comment under the form (Aaron Baribeau, a US pool client)."""
+    q, who, _ = CLIENT_QUOTES[5]
+    return f'<figure class="panel-quote"><blockquote><p>“{escape(q)}”</p></blockquote><figcaption>{escape(who)}</figcaption></figure>'
+
+
+def hero(kicker, h1, lead, form_html, crumbs='', facts=None, small=None, second=('See sample sheets ↓', '#samples'), form_heading='Get your pool plan quote.', panel_quote=True, picture='', strip=None):
     facts_html = ''.join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k, v in (facts or HERO_FACTS))
-    return f'''<section class="search-hero blue" aria-labelledby="hero-heading"><div class="wrap search-grid"><div class="search-copy">{crumbs}<span class="eyebrow">{kicker}</span><h1 id="hero-heading">{h1}</h1><p class="lead">{lead}</p><div class="actions"><a class="button primary" href="#contact">Get a drawing quote <span aria-hidden="true">↗</span></a><a class="text-link" href="#package">See the drawing package ↓</a></div><dl class="delivery-facts">{facts_html}</dl><p class="small">{small or HERO_SMALL}</p><p class="search-contact">Your contact: <strong>Benatic Paul Martin</strong><br>JEBN Engineering · <a href="mailto:benatic@jebnengineering.com">benatic@jebnengineering.com</a></p></div>
-<aside class="quote-panel" id="contact" aria-labelledby="contact-heading"><span class="eyebrow">PROJECT ENQUIRY · NO PAYMENT REQUIRED</span><h2 id="contact-heading" tabindex="-1">Get your drawing quote.</h2>{form_html}</aside></div></section>'''
+    quote = panel_quote_html() if panel_quote else ''
+    strip = HERO_STRIP if strip is None and not facts else (strip or '')
+    strip_html = f'<p class="hero-strip">{strip}</p>' if strip else ''
+    return f'''<section class="search-hero blue{' hero-'+picture if picture else ''}" aria-labelledby="hero-heading"><div class="wrap search-grid"><div class="search-copy">{crumbs}<span class="eyebrow">{kicker}</span><h1 id="hero-heading">{h1}</h1><p class="lead">{lead}</p>{strip_html}<div class="actions"><a class="button primary" href="#contact">Get my quote <span aria-hidden="true">→</span></a><a class="text-link" href="{second[1]}">{second[0]}</a></div></div>
+<aside class="quote-panel" id="contact" aria-labelledby="contact-heading"><span class="eyebrow">FREE QUOTE · NO PAYMENT REQUIRED</span><h2 id="contact-heading" tabindex="-1">{form_heading}</h2>{form_html}{quote}</aside>
+<div class="search-facts"><dl class="delivery-facts">{facts_html}</dl><p class="small">{small or HERO_SMALL}</p><p class="search-contact">Your contact: <strong>Benatic Paul Martin</strong><br>JEBN Engineering · <a href="mailto:benatic@jebnengineering.com">benatic@jebnengineering.com</a></p></div></div></section>'''
 
 
 def sheet_rows(rows):
     return ''.join(f'<li><span class="sheet-number" aria-hidden="true">{i:02d}</span><div><h3>{label}</h3><p>{text}</p></div></li>' for i, (label, text) in enumerate(rows, 1))
 
 
+SET_SHEETS = [
+    'Cover sheet with general notes',
+    'Site plan with setbacks and barrier',
+    'Pool plan with dimensions and depths',
+    'Long section and cross sections',
+    'Reinforcement and structural details',
+    'Steps, benches and raised features',
+    'Hydraulic schematic and pipe sizes',
+    'TDH calculation and equipment schedule',
+]
+
+
 def package_section(pe, engineering=False, links='', rows=None, heading=None, lead=None, sid='services'):
-    heading = heading or 'Know what you’re<br>asking us to deliver.'
-    lead = lead or 'One project-specific scope, with the drawings, calculations and review responsibilities identified before you commit.'
+    heading = (heading or 'What a pool permit<br>drawing set includes.').replace('<br>', ' <br>')   # the space keeps words apart where the break is hidden on phones
+    lead = lead or 'Your quote lists every sheet, the calculations, the revisions included and the delivery date before you commit.'
     body = sheet_rows(rows) if rows else package_rows(pe, engineering)
-    return f'''<section class="section" id="{sid}" aria-labelledby="package-heading"><div class="wrap package-editorial" id="package"><div><span class="eyebrow">YOUR DRAWING PACKAGE</span><h2 id="package-heading">{heading}</h2><p class="lead">{lead}</p><p class="package-note">Request a full package or help with existing plans. Your quote identifies the included sheets, PE review where applicable, revision scope and delivery date.</p><a class="text-link" href="#contact">Discuss your drawing set ↗</a>{links}</div><ol class="sheet-list">{body}</ol></div></section>'''
+    typical = ''
+    if not rows:
+        typical = ('<div class="set-list"><p class="set-title">Typical sheets in a residential permit set</p><ul>'
+                   + ''.join(f'<li>{t}</li>' for t in SET_SHEETS)
+                   + '</ul><p class="set-note">Your quote lists the sheets for your project.</p></div>')
+    return f'''<section class="section" id="{sid}" aria-labelledby="package-heading"><div class="wrap package-editorial{' has-set' if typical else ''}" id="package"><div><span class="eyebrow">YOUR DRAWING PACKAGE</span><h2 id="package-heading">{heading}</h2><p class="lead">{lead}</p><p class="package-note">Request a full package or help with existing plans.</p>{typical}<a class="text-link" href="#contact">Get a quote for this set →</a>{links}</div><ol class="sheet-list">{body}</ol></div></section>'''
 
 
 INPUT_ITEMS = [
-    ('Project location', 'City, state and permitting authority, if known.'),
+    ('Project location', 'City, state and permit office, if known.'),
     ('Site information', 'Survey or site plan and known site constraints.'),
     ('Pool layout', 'Sketch, dimensions, depths and proposed features.'),
     ('Existing work', 'Plans, equipment preferences and permit review comments.'),
@@ -151,8 +191,19 @@ def inputs_section(heading, para, items=None):
     return f'''<section class="section inputs-section" id="inputs" aria-labelledby="inputs-heading"><div class="wrap input-grid"><div><span class="eyebrow">WHAT TO SEND</span><h2 id="inputs-heading">{heading}</h2><p>{para}</p><p>You do not need every document to request a quote. After the first reply, you can share files by email.</p><a class="text-link" href="/resources/pool-project-checklist/">Open the project input checklist ↗</a></div><ul class="input-list">{lis}</ul></div></section>'''
 
 
+def step_items(steps):
+    return ''.join(f'<li><span class="step-n" aria-hidden="true">{i}</span><h3>{k}</h3><p>{v}</p></li>' for i, (k, v) in enumerate(steps, 1))
+
+
+DELIVERY_STEPS = [
+    ('Confirm the scope', 'We review your request and reply by email within 24 hours with questions or a scoped quote. We identify missing inputs and the project’s review requirements.'),
+    ('Prepare the drawings', 'Residential drawing preparation takes 2 business days after all project inputs are received. PE review and sealing have a separate timeline.'),
+    ('Deliver', 'You receive the PDF set for your permit submission and the DWG files. Your quote states the revisions included. Your permit office decides approval and timing.'),
+]
+
+
 def delivery_section(pe):
-    return f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">FROM ENQUIRY TO DELIVERY</span><h2 id="delivery-heading">A clear scope.<br>A clear next step.</h2><ol class="delivery-steps"><li><h3>1. Confirm the scope</h3><p>We review your enquiry and reply with questions or a scoped quote. We identify missing inputs and the project’s review requirements.</p></li><li><h3>2. Prepare the drawings</h3><p>Residential drawing preparation takes 2 business days after all project inputs are received. PE review and sealing have a separate timeline.</p></li><li><h3>3. Review & deliver</h3><p>Receive the agreed DWG and PDF package. We confirm revision support in your quote. The local authority decides permit approval and timing.</p></li></ol><div class="review-note"><h3>Engineering & PE review</h3><p>{pe} A quote request does not guarantee permit approval.</p></div><details class="optional-concept"><summary>Optional: 3D pool visualization</summary><p>A 3D view can help you explore the proposed layout and materials. Ask to include it as a separate item alongside the drawing package.</p></details><div class="actions"><a class="button primary" href="#contact">Request your drawing quote ↗</a></div></div></section>'''
+    return f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">FROM QUOTE TO DELIVERY</span><h2 id="delivery-heading">Three steps to your drawing set.</h2><ol class="delivery-steps">{step_items(DELIVERY_STEPS)}</ol><div class="review-note"><h3>Engineering & PE review</h3><p>{pe} The permit office decides approval. If it sends comments, send them to us. Your quote states the revisions included.</p></div><details class="optional-concept"><summary>Optional: 3D pool visualization</summary><p>A 3D view can help you explore the proposed layout and materials. Ask to include it as a separate item alongside the drawing package.</p></details><div class="actions"><a class="button primary" href="#contact">Get my quote <span aria-hidden="true">→</span></a></div></div></section>'''
 
 
 def state_directory(summary='Choose your state for local permit notes'):
@@ -161,7 +212,7 @@ def state_directory(summary='Choose your state for local permit notes'):
 
 
 def coverage_section(extra=''):
-    return f'''<section class="coverage-line" id="coverage" aria-label="USA coverage"><div class="wrap"><p><strong>JEBN Engineering · USA enquiries, all 50 states.</strong> Project-specific engineering and PE arrangements are confirmed before acceptance.</p><a href="/states/">View state coverage</a></div><div class="wrap coverage-more">{extra}{state_directory()}</div></section>'''
+    return f'''<section class="coverage-line" id="coverage" aria-label="USA coverage"><div class="wrap"><p><strong>JEBN Engineering.</strong> We take residential pool projects in all 50 states.</p><a href="/states/">View state coverage</a></div><div class="wrap coverage-more">{extra}{state_directory()}</div></section>'''
 
 
 def service_links(current=''):
@@ -182,8 +233,8 @@ CLIENT_QUOTES = [
 ]
 CLIENT_RATED = ['5.0★ Cold-water pool design', '5.0★ Pool MEP engineering', '4.9★ Lawrence Residence', '4.7★ Pool design · 5-day turnaround']
 
-# Pool pages show the US clients first and fold the rest under "Show more".
-POOL_QUOTE_ORDER = [4, 5, 3, 6, 2, 1, 0]
+# Pool pages: Aaron Baribeau's comment sits under the quote form; the section shows the other six, two open and four folded.
+POOL_QUOTE_ORDER = [3, 4, 6, 2, 1, 0]
 STARS = '<span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>'
 
 
@@ -191,16 +242,98 @@ def quote_cards(items):
     return ''.join(f'<figure class="client-quote"><blockquote><p>{escape(q)}</p></blockquote><figcaption>{STARS if stars else ""}{escape(who)}</figcaption></figure>' for q, who, stars in items)
 
 
-def clients_section(lead, order=None, visible=None):
+def clients_section(lead, order=None, visible=None, rated=True):
     items = [CLIENT_QUOTES[i] for i in order] if order else CLIENT_QUOTES
     shown, more = (items[:visible], items[visible:]) if visible else (items, [])
     extra = f'<details class="more-quotes"><summary>Show {len(more)} more client comments</summary><div class="quote-grid">{quote_cards(more)}</div></details>' if more else ''
-    rated = ''.join(f'<li>{escape(r)}</li>' for r in CLIENT_RATED)
-    return f'''<section class="section quotes-section" id="clients" aria-labelledby="clients-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">CLIENT FEEDBACK</span><h2 id="clients-heading">What clients say.</h2></div><div><p>{lead}</p></div></div><div class="quote-grid">{quote_cards(shown)}</div>{extra}<p class="rated-label">Recent rated projects</p><ul class="rated-list">{rated}</ul></div></section>'''
+    chips = ''
+    if rated:
+        chips = '<p class="rated-label">Recent rated projects</p><ul class="rated-list">'+''.join(f'<li>{escape(r)}</li>' for r in CLIENT_RATED)+'</ul>'
+    return f'''<section class="section quotes-section" id="clients" aria-labelledby="clients-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">CLIENT FEEDBACK</span><h2 id="clients-heading">What clients say.</h2></div><div><p>{lead}</p></div></div><div class="quote-grid">{quote_cards(shown)}</div>{extra}{chips}</div></section>'''
 
 
 def pool_clients():
-    return clients_section('Feedback from clients on pool and water feature drawing work.', POOL_QUOTE_ORDER, visible=4)
+    return clients_section('Feedback from clients on pool and water feature drawing work.', POOL_QUOTE_ORDER, visible=2, rated=False)
+
+
+# Sample sheets from past pool projects (images already published on the site). Shown under the hero.
+SAMPLE_SHEETS = [
+    ('pool-hotel-shop-drawings', 'Swimming pool drawing sheet with plan, sections and step detail', 'Plan and sections', 'Pool plan, long section, cross-section and step detail on one sheet.'),
+    ('pool-approval-technical', 'Sample pool layout plan drawing with layout dimensions', 'Pool layout plan', 'Pool position and layout dimensions on the layout plan.'),
+    ('pool-resort-construction', 'Sample swimming pool construction drawing: upper and lower pool with steps and levels', 'Construction plan', 'Upper and lower pool with steps, levels and dimensions.'),
+    ('pool-highrise-kids', 'Sample pool site plan: main pool and splash pool with barrier notes', 'Pool on the site plan', 'Main pool and splash pool on a building floor plan, with barrier and safety notes.'),
+]
+
+
+def pool_section_art():
+    """Decorative line drawing of a pool long section (not a design; no values)."""
+    dots = []
+    x = 172
+    while x <= 340:
+        dots.append((x, 94+(x-156)*26/190+6.5)); x += 22
+    x = 358
+    while x <= 480:
+        dots.append((x, 126)); x += 22
+    dots += [(91, y) for y in range(48, 104, 18)] + [(493, y) for y in range(50, 122, 18)]
+    circles = ''.join(f'<circle cx="{cx:.0f}" cy="{cy:.1f}" r="1.7"/>' for cx, cy in dots)
+    return ('<svg class="section-art" viewBox="0 0 560 150" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">'
+            '<path d="M4 40H86M498 40h58"/><path d="M96 40v14h20v14h20v14h20v12l190 26h142V40"/><path d="M86 40v70l258 22h154V40"/>'
+            '<path d="M97 52h390" stroke-dasharray="10 4 2 4"/><path d="M286 44l6 8 6-8z"/>'
+            '<path d="M96 22h392M96 15v14M488 15v14"/><path d="M516 52v68M509 52h14M509 120h14"/><path d="M400 120v6h26v-6"/></g>'
+            f'<g fill="currentColor">{circles}</g>'
+            '<g fill="currentColor" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="9" letter-spacing=".8">'
+            '<text x="292" y="12" text-anchor="middle">LENGTH</text><text x="528" y="89">DEPTH</text><text x="304" y="47">WATER LEVEL</text><text x="170" y="76">STEPS</text><text x="386" y="146">MAIN DRAIN</text></g></svg>')
+
+
+def viewer_dialog(first):
+    """Picture preview used by assets/gallery.js (bundled in studio.min.js)."""
+    return f'''<dialog class="project-viewer" id="project-viewer" aria-labelledby="viewer-heading"><div class="viewer-top"><h2 id="viewer-heading">Project preview</h2><button class="viewer-close" type="button" data-close-viewer autofocus>Close</button></div><p data-image-status role="status"></p><img src="/images/{first}" alt="" width="1000" height="750" loading="lazy" decoding="async" hidden><p data-description></p><a href="/images/{first}" data-full-image target="_blank" rel="noopener">Open full image in a new tab</a></dialog>'''
+
+
+def preview_cards(items, tag='View larger'):
+    return ''.join(f'''<div class="portfolio-card"><a class="project-preview-link" href="/images/{img}" data-project-preview aria-label="{tag}: {escape(name)}"><div class="portfolio-image"><img src="/images/{img}" alt="{escape(alt)}" width="1000" height="750" loading="lazy" decoding="async"><span class="view-tag">{tag}</span></div></a><div class="portfolio-content"><h3>{name}</h3><p>{text}</p></div></div>''' for img, alt, name, text in items)
+
+
+def sheet_card(i, item, feature=False):
+    img, alt, name, text = item
+    src = f'/images/{img}-feature.webp' if feature else f'/images/{img}-thumb.webp'
+    size = (f'srcset="/images/{img}-thumb.webp 640w, /images/{img}-feature.webp 1000w" sizes="(max-width:760px) 92vw, 720px" width="1000" height="750"'
+            if feature else 'width="640" height="480"')
+    cls = 'feature' if feature else 'small'
+    return f'''<div class="portfolio-card sheet-card {cls}"><a class="project-preview-link" href="/images/{img}.jpg" data-project-preview aria-label="View larger: {escape(name)}"><img src="{src}" alt="{escape(alt)}" {size}{'' if feature else ' loading="lazy"'} decoding="async"><span class="view-tag">View larger</span></a><div class="portfolio-content"><span class="sheet-tag">SHEET {i:02d}</span><h3>{name}</h3><p>{text}</p></div></div>'''
+
+
+AUDIENCE_ICONS = (
+    '<path d="M3 11.5l9-7.5 9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5.5h4V20"/>',
+    '<path d="M3 17L17 3l4 4L7 21z"/><path d="M14 6l1.6 1.6M11 9l1.6 1.6M8 12l1.6 1.6"/>',
+)
+
+
+def audience_section(state=None):
+    """Two entry points: the homeowner with a permit to get, and the pool builder who needs drafting capacity."""
+    office = f'your {state} permit office' if state else 'your permit office'
+    where = f' in {state}' if state else ''
+    return f'''<section class="section audience-section" id="who" aria-labelledby="who-heading"><div class="wrap"><h2 class="sr-only" id="who-heading">Who we work with</h2><div class="audience-grid"><div class="audience-card">{ICON(AUDIENCE_ICONS[0])}<span class="eyebrow">HOMEOWNERS{where.upper()}</span><h3>Your permit office asked for engineered pool plans.</h3><p>Send your layout or your builder’s sketch and the name of {office}. We prepare the drawings and calculations its checklist asks for. If it requires a seal, a Professional Engineer licensed in {state or 'your state'} reviews and seals the set.</p><a class="text-link" href="#contact">Get my quote →</a></div><div class="audience-card">{ICON(AUDIENCE_ICONS[1])}<span class="eyebrow">POOL BUILDERS AND CONTRACTORS{where.upper()}</span><h3>Send us the jobs your drafting team cannot fit in.</h3><p>Plans, sections and details drawn on your title block and CAD standards, delivered as DWG and PDF files, job by job. Priced per set or per sheet, agreed before work starts.</p><a class="text-link" href="/services/outsourced-pool-drafting/">Drafting for pool builders →</a></div></div></div></section>'''
+
+
+def samples_section():
+    feature = sheet_card(1, SAMPLE_SHEETS[0], True)
+    side = ''.join(sheet_card(i, item) for i, item in enumerate(SAMPLE_SHEETS[1:], 2))
+    return f'''<section class="section samples-section" id="samples" aria-labelledby="samples-heading"><div class="wrap"><div class="samples-head"><div><span class="eyebrow">SAMPLE SHEETS</span><h2 id="samples-heading">Sample sheets from past pool projects.</h2><p>Your set is drawn for your site, the code edition your state enforces and the checklist from your permit office. Select a sheet to see it larger.</p></div>{pool_section_art()}</div><div class="sheet-grid">{feature}<div class="sheet-side">{side}</div></div></div></section>{viewer_dialog(SAMPLE_SHEETS[0][0]+'.jpg')}'''
+
+
+ICON = lambda d: f'<svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{d}</svg>'
+SERVICE_ICONS = {
+    '/services/pool-engineering/': '<rect x="3" y="4" width="18" height="16" rx="1.5"/><rect x="7" y="8.5" width="10" height="7" rx="3.5"/>',
+    '/services/pool-permit-drawings/': '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 14.5l2 2 3.5-4"/>',
+    '/pool/': '<path d="M2 7h4v10h12V7h4"/><path d="M6 10.5c2 1.2 4-1.2 6 0s4-1.2 6 0"/>',
+    '/services/pool-structural-engineering/': '<path d="M4 8h16M4 12h16M4 16h16M8 4v16M12 4v16M16 4v16"/>',
+    '/services/pool-hydraulic-design/': '<circle cx="10" cy="14" r="5"/><path d="M10 9V4h8M15 14h6M10 14l2.2-2.2"/>',
+    '/services/pe-stamped-pool-plans/': '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><path d="M9.8 12.2l1.6 1.6 3-3.4"/>',
+    '/services/pool-shop-drawings/': '<circle cx="10" cy="10" r="6"/><path d="M14.5 14.5L20 20M7.5 10h5M10 7.5v5"/>',
+    '/services/outsourced-pool-drafting/': '<path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/>',
+    '/resources/pool-project-checklist/': '<path d="M10 6h10M10 12h10M10 18h10"/><path d="M3.5 6l1.2 1.2L7 5M3.5 12l1.2 1.2L7 11M3.5 18l1.2 1.2L7 17"/>',
+}
 
 
 def faq_block(eyebrow, heading, items):
@@ -220,15 +353,27 @@ def shell(path, title, description, body, schema, head_extra='', home=False, nav
     if nav_home:
         # The page has no quote form or package section, so the menu points at the home page sections.
         header, footer = (re.sub(r'href="#(services|package|coverage|contact)"', r'href="/#\1"', x) for x in (header, footer))
-    elif not home:
-        header = header.replace('Engineering services', 'Drawing services')
-    full_title = title+' | JEBN Engineering'
+    header = header.replace('Engineering services', 'Services')
+    header = header.replace('Request a quote', 'Get my quote')
+    footer = footer.replace('Request your engineering quote', 'Get my quote')
+    footer = footer.replace('Engineering plans for your next residential pool.', 'Get a quote for your pool plans.')
+    has_form = 'id="contact"' in body
+    # Phones: a quote bar that appears once the form is out of view (assets/search-landings.js shows and hides it).
+    sticky = '<a class="sticky-cta" href="#contact" data-sticky-cta hidden>Get my quote <span aria-hidden="true">→</span></a>' if has_form else ''
+    preload = ''
+    if 'search-hero' in body:
+        pic = 'landscape-hero' if 'hero-landscape' in body else 'pool-villa-hero'
+        preload = (f'<link rel="preload" as="image" href="/images/{pic}.webp" type="image/webp" media="(min-width:761px)">'
+                   f'<link rel="preload" as="image" href="/images/{pic}-720.webp" type="image/webp" media="(max-width:760px)">')
+    # Search results cut titles at about 60 characters, so long titles carry the short brand.
+    full_title = title+(' | JEBN Engineering' if len(title) <= 41 else ' | JEBN')
     canonical = f'{SITE}/{path}/' if path else f'{SITE}/'
     ld = f'<script type="application/ld+json">{json.dumps(schema, ensure_ascii=False).replace("</", "<\\/")}</script>' if schema else ''
     # A noindex page (the 404 page) is served at any address, so it gets no canonical or og:url.
     index_meta = '<meta name="robots" content="noindex,follow">' if noindex else f'<link rel="canonical" href="{canonical}">'
     og_url = '' if noindex else f'<meta property="og:url" content="{canonical}">'
-    html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(full_title)}</title><meta name="description" content="{escape(description)}">{index_meta}<meta name="theme-color" content="#0c5488"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="{escape(full_title)}"><meta property="og:description" content="{escape(description)}"><meta property="og:type" content="website">{og_url}<meta property="og:image" content="{SITE}/images/pool-beachfront-villa.jpg"><meta name="twitter:card" content="summary_large_image">{head_extra}<link rel="stylesheet" href="{asset('studio.min.css')}"><link rel="stylesheet" href="{asset('search-landings.min.css')}"><script src="{asset('search-landings.min.js')}" defer></script><script src="{asset('studio.min.js')}" defer></script>{ld}</head><body class="search-landing">{header}<main id="main-content" tabindex="-1">{body}</main>{footer}</body></html>'''
+    html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(full_title)}</title><meta name="description" content="{escape(description)}">{index_meta}<meta name="theme-color" content="#072338"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="{escape(full_title)}"><meta property="og:description" content="{escape(description)}"><meta property="og:type" content="website">{og_url}<meta property="og:image" content="{SITE}/images/pool-beachfront-villa.jpg"><meta name="twitter:card" content="summary_large_image">{head_extra}{preload}<link rel="stylesheet" href="{asset('studio.min.css')}"><link rel="stylesheet" href="{asset('search-landings.min.css')}"><script src="{asset('search-landings.min.js')}" defer></script><script src="{asset('studio.min.js')}" defer></script>{ld}</head><body class="search-landing">{header}<main id="main-content" tabindex="-1">{body}</main>{sticky}{footer}</body></html>'''
+    html = html.replace('↗', '→')
     out = ROOT/out if out else ROOT/path/'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)
@@ -236,20 +381,28 @@ def shell(path, title, description, body, schema, head_extra='', home=False, nav
 
 
 def organization():
-    return {'@type': 'Organization', 'name': 'JEBN Engineering', 'url': SITE+'/'}
+    return {'@type': 'Organization', '@id': SITE+'/#organization', 'name': 'JEBN Engineering', 'url': SITE+'/', 'logo': SITE+'/icon-512.png',
+            'email': 'benatic@jebnengineering.com', 'areaServed': {'@type': 'Country', 'name': 'United States'}}
 
 
 # ---------------------------------------------------------------- national pages
 
 def build_national(p):
-    pe = 'Engineering and PE review arrangements are confirmed for your project state and scope before work is accepted. Ask which services are available for your location.'
+    pe = PE_NATIONAL
     engineering = p.get('engineering', False)
     extra = ''
     if engineering:
-        extra = '''<section class="section inputs-section" id="when" aria-labelledby="when-heading"><div class="wrap input-grid"><div><span class="eyebrow">WHEN YOU NEED A POOL ENGINEER</span><h2 id="when-heading">When a pool permit calls for engineering.</h2><p>Many permit offices ask for engineered structural plans before they issue a pool permit. These are the common reasons. The checklist from your permit office decides what applies to your project.</p><a class="text-link" href="#contact">Ask about your project ↗</a></div><ul class="input-list"><li><strong>Sealed plans requested</strong>The checklist asks for structural plans or calculations sealed by a Professional Engineer licensed in your state.</li><li><strong>Close to a structure or slope</strong>The pool sits near a house footing, a retaining wall, a property-line wall or a slope.</li><li><strong>Difficult ground</strong>High groundwater, expansive clay, fill, or a soils report with design recommendations.</li><li><strong>Non-standard shells</strong>Raised walls, vanishing edges, attached spas, deep ends or a pool on a structure.</li></ul></div></section>'''
-    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">Drawing package</a><a href="#inputs">What to send</a><a href="#delivery">Delivery & PE review</a><a href="#contact">Request a quote ↗</a></div></nav>'
-    body = (hero(p['kicker'], p['h1'], p['description'], form(p['title'])) + nav
-            + package_section(pe, engineering, links=service_links('/'+p['path']+'/')) + pool_clients() + extra
+        extra = '''<section class="section inputs-section" id="when" aria-labelledby="when-heading"><div class="wrap input-grid"><div><span class="eyebrow">WHEN A PERMIT CALLS FOR ENGINEERING</span><h2 id="when-heading">When you need a pool engineer.</h2><p>Many permit offices ask for engineered structural plans before they issue a pool permit. These are the common reasons. The checklist from your permit office decides what applies to your project.</p><a class="text-link" href="#contact">Ask about your project ↗</a></div><ul class="input-list"><li><strong>Sealed plans requested</strong>The checklist asks for structural plans or calculations sealed by a Professional Engineer licensed in your state.</li><li><strong>Close to a structure or slope</strong>The pool sits near a house footing, a retaining wall, a property-line wall or a slope.</li><li><strong>Difficult ground</strong>High groundwater, expansive clay, fill, or a soils report with design recommendations.</li><li><strong>Non-standard shells</strong>Raised walls, vanishing edges, attached spas, deep ends or a pool on a structure.</li></ul></div></section>'''
+    if p.get('shows'):
+        items = [('Pool plan and sections', 'Dimensions, depths, steps and benches.'),
+                 ('Structural details', 'Shell, wall and floor reinforcement.'),
+                 ('Plumbing diagram', 'Piping schematic with pipe sizes, valves and the equipment pad layout.'),
+                 ('Site layout', 'Pool position, setbacks and barrier.')]
+        lis = ''.join(f'<li><strong>{k}</strong>{v}</li>' for k, v in items)
+        extra = f'''<section class="section inputs-section" id="shows" aria-labelledby="shows-heading"><div class="wrap input-grid"><div><span class="eyebrow">CONSTRUCTION DRAWINGS</span><h2 id="shows-heading">What a pool construction drawing set shows.</h2><p>The drawings your builder and trades work from, coordinated with the permit set. Your quote lists the sheets for your project.</p><a class="text-link" href="#contact">Get my quote →</a></div><ul class="input-list">{lis}</ul></div></section>'''
+    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">Drawing package</a><a href="#inputs">What to send</a><a href="#delivery">Delivery & PE review</a><a href="#contact">Get my quote ↗</a></div></nav>'
+    body = (hero(p['kicker'], p['h1'], p['description'], form(p['title'])) + nav + samples_section() + audience_section() + pool_clients()
+            + package_section(pe, engineering, links=service_links('/'+p['path']+'/')) + extra
             + inputs_section('Start with the plans you have.', 'A sketch is enough to begin the conversation. If you already have a survey, drawings or permit comments, tell us what is ready. We identify the missing inputs before drawing work starts.')
             + delivery_section(pe) + coverage_section())
     canonical = f"{SITE}/{p['path']}/"
@@ -262,14 +415,14 @@ def build_national(p):
 
 # ---------------------------------------------------------------- service pages
 
-PE_NATIONAL = 'Engineering and PE review arrangements are confirmed for your project state and scope before work is accepted. Ask which services are available for your location.'
+PE_NATIONAL = 'When your permit office requires a seal, a Professional Engineer licensed in the project state reviews the package, takes responsible charge and seals it. We confirm the responsible engineer before work begins.'
 TURNAROUND = 'Residential drawing preparation takes 2 business days after we receive all project inputs. PE review and sealing, and the permit office’s own review, have separate timelines.'
 
 SERVICES = [
  dict(path='services/pool-structural-engineering', title='Pool Structural Engineering Plans & Details',
       h1='Pool structural engineering.<br><span>Shell, steel and details.</span>',
       kicker='USA / POOL STRUCTURAL ENGINEERING',
-      meta='Pool structural plans for your permit: shell design, reinforcement schedules, raised walls, vanishing edges and soil basis. Send your layout for a scope and quote.',
+      meta='Pool structural plans for your permit: shell design, reinforcement schedules, raised walls, vanishing edges and soil basis. Send your layout for a quote.',
       lead='Structural plans for residential pools: shell sections, reinforcement schedules and details for raised walls, special edges and attached spas. For homeowners, pool contractors and builders, with PE review and sealing where your permit office asks for it.',
       package_heading='What the structural<br>set covers.',
       package_lead='Structural drawings and calculations matched to your pool, your site and the checklist from your permit office.',
@@ -312,8 +465,8 @@ SERVICES = [
       faq_heading='Questions about PE-stamped plans.',
       faq=[
         ('Do I need to find my own engineer?', 'No. Where sealing is part of your agreed package, the responsible Professional Engineer is confirmed with your quote. If you already work with an engineer, we can prepare the drawings for that engineer instead.'),
-        ('Which states do you cover?', 'We take enquiries from all 50 states. The engineer must be licensed in the project state, and we confirm that arrangement for your project before work is accepted.'),
-        ('Who is responsible for the sealed drawings?', 'The sealing engineer, who takes responsible charge of the engineering under their state licence. Your quote names the scope the seal covers.'),
+        ('Which states do you cover?', 'We take projects in all 50 states. The engineer must be licensed in the project state, and we confirm that arrangement for your project before work is accepted.'),
+        ('Who is responsible for the sealed drawings?', 'The sealing engineer, who takes responsible charge of the engineering under their state license. Your quote names the scope the seal covers.'),
         ('How long does sealing take?', 'Residential drawing preparation takes 2 business days after we receive all project inputs. The engineer’s review and sealing have a separate timeline, which we confirm in your quote.'),
         ('What if plan review comes back with comments?', 'Send us the comments. Your quote states the revision support included, and we identify the sheets and calculations each comment affects.'),
         ('Do you provide digital seals?', 'Digital seals are supplied where your permit office accepts them. Tell us if your office asks for wet-sealed prints so we can confirm that before work begins.')]),
@@ -337,7 +490,7 @@ SERVICES = [
         ('Permit forms', 'Any hydraulic or TDH worksheet your permit office requires.')]),
       faq_heading='Questions about pool hydraulics.',
       faq=[
-        ('Do you complete the TDH worksheet my permit office requires?', 'Yes. Some permit offices publish their own hydraulic or TDH worksheet. Send it with your enquiry and we complete it as part of the hydraulic package.'),
+        ('Do you complete the TDH worksheet my permit office requires?', 'Yes. Some permit offices publish their own hydraulic or TDH worksheet. Send it with your request and we complete it as part of the hydraulic package.'),
         ('What velocity limits do you design to?', 'A common basis is 6 feet per second on suction piping and 8 feet per second on return piping. We use the limits in the code your jurisdiction enforces and any tighter limit from the equipment maker.'),
         ('Can you size the pump for an existing pool?', 'Yes. Send the pipe sizes and runs, the equipment on the pad and what you want to change. We calculate the system head and identify a pump that suits it.'),
         ('Is the hydraulic design sealed by an engineer?', 'Where your permit office asks for sealed hydraulic calculations, PE review and sealing can be included in your agreed package. We confirm the responsible engineer before work begins.'),
@@ -345,14 +498,14 @@ SERVICES = [
  dict(path='services/pool-shop-drawings', title='Pool Shop Drawings for Fabrication & Installation',
       h1='Pool shop drawings.<br><span>Details your crew can build from.</span>',
       kicker='USA / POOL SHOP DRAWINGS',
-      meta='Pool shop drawings for builders and fabricators: tile and coping setting-out, gutter and overflow details, steel, embeds and equipment layouts. DWG and PDF files.',
-      lead='Fabrication and installation drawings for pool builders: setting-out dimensions, edge and gutter details, steel and embeds, and equipment layouts, coordinated with your permit set.',
+      meta='Pool shop drawings for builders and fabricators: tile and coping layout, gutter and overflow details, steel, embeds and equipment layouts. DWG and PDF files.',
+      lead='Fabrication and installation drawings for pool builders: layout dimensions, edge and gutter details, steel and embeds, and equipment layouts, coordinated with your permit set.',
       facts=[('Sheet list', 'Agreed before work starts'), ('File delivery', 'DWG + PDF')],
       small='Residential pool drawing preparation takes 2 business days after we receive all project inputs. Larger shop drawing packages are scheduled in your quote.',
       package_heading='What the shop<br>drawings cover.',
       package_lead='The details your fabricators and installation crew need, drawn to an agreed sheet list and your drawing standards.',
       rows=[
-        ('Tile, coping & waterline', 'Setting-out dimensions and details for tile, coping and the waterline.'),
+        ('Tile, coping & waterline', 'Layout dimensions and details for tile, coping and the waterline.'),
         ('Gutters & overflow edges', 'Gutter, grating, vanishing-edge and perimeter-overflow details for fabrication.'),
         ('Steel, embeds & penetrations', 'Reinforcement placing details, embedded items and pipe penetrations through the shell.'),
         ('Equipment & plumbing', 'Equipment pad layout and plumbing schematics for the installation crew.'),
@@ -413,9 +566,9 @@ def build_service(p):
         lis = ''.join(f'<li><strong>{k}</strong>{v}</li>' for k, v in items)
         extra = f'<section class="section inputs-section" id="how" aria-labelledby="how-heading"><div class="wrap input-grid"><div><span class="eyebrow">{eyebrow}</span><h2 id="how-heading">{heading}</h2><p>{para}</p><a class="text-link" href="#contact">Ask about your project ↗</a></div><ul class="input-list">{lis}</ul></div></section>'
     heading, para, items = p.get('inputs') or ('Start with the plans you have.', 'A sketch is enough to begin the conversation. If you already have a survey, drawings or permit comments, tell us what is ready. We identify the missing inputs before drawing work starts.', None)
-    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What it covers</a><a href="#inputs">What to send</a><a href="#faq">Questions</a><a href="#contact">Request a quote ↗</a></div></nav>'
+    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What it covers</a><a href="#inputs">What to send</a><a href="#faq">Questions</a><a href="#contact">Get my quote ↗</a></div></nav>'
     crumbs = crumbs_html([('/', 'Home'), ('/#services', 'Services'), ('', short)])
-    body = (hero(p['kicker'], p['h1'], p['lead'], form(p['title']), crumbs, p.get('facts'), p.get('small')) + nav
+    body = (hero(p['kicker'], p['h1'], p['lead'], form(p['title']), crumbs, p.get('facts'), p.get('small')) + nav + samples_section() + ('' if p['path'].endswith('outsourced-pool-drafting') else audience_section()) + pool_clients()
             + package_section(PE_NATIONAL, rows=p['rows'], heading=p['package_heading'], lead=p['package_lead'], links=service_links(path)) + extra
             + inputs_section(heading, para, items)
             + delivery_section(PE_NATIONAL)
@@ -433,33 +586,39 @@ def build_service(p):
 
 # ---------------------------------------------------------------- home page
 
+PLAN_REVIEW_ANSWER = 'Send us the comments. Your quote states the revision support included, and we identify the sheets and calculations each comment affects.'
+
 HOME_FAQ = [
     ('When does the two-business-day turnaround start?', 'Once we have received all project inputs. It covers preparation of residential pool drawings. PE review and sealing, where required, and the permit office’s review have separate timelines.'),
     ('What should I send to get started?', 'Your project city and state, a site plan or sketch, pool dimensions if known, and the services you need. Include existing plans and any permit review comments if you have them.'),
     ('Will I receive editable files?', 'Yes. You receive both DWG and PDF files for the agreed drawing package.'),
     ('Do you work with pool contractors and builders?', 'Yes. We work with homeowners, pool contractors and builders on engineering plans, permit drawings, calculations and drawing updates within an agreed scope.'),
-    ('How are PE review and permit approval handled?', 'PE review and sealing can be included in your agreed package, by a Professional Engineer licensed in the project state. We confirm the responsible engineer before work begins. The permit office decides approval.'),
-    ('Do you know my city or county’s permit rules?', 'Each state page lists permit notes for named cities and counties, with links to the official sources. Send your permit office’s checklist with your enquiry and we draw to it.'),
+    ('How are PE review and permit approval handled?', 'When your permit office requires a seal, a Professional Engineer licensed in the project state reviews the package, takes responsible charge and seals it. We confirm the responsible engineer before work begins. The permit office decides approval.'),
+    ('What if plan review comes back with comments?', PLAN_REVIEW_ANSWER),
+    ('Do you know my city or county’s permit rules?', 'Each state page lists permit notes for named cities and counties, with links to the official sources. Send your permit office’s checklist with your request and we draw to it.'),
+    ('How is drafting for pool builders priced?', 'Per set or per sheet, agreed before work starts. Your quote lists the sheets, file formats and revision allowance.'),
+    ('Can you match our drawing standards?', 'Yes. Send a sample set and we adopt your layer naming, title block, sheet numbering and detail conventions.'),
 ]
 
 
 def build_home():
-    title = 'USA Pool Engineering Plans & PE-Sealed Drawings'
-    description = 'Residential pool engineering plans, permit drawings, structural details, hydraulics, TDH calculations and PE review. USA project enquiries from all 50 states.'
-    lead = 'Engineering plans, permit drawings and calculations for homeowners, pool contractors and builders. Send what you have and get a scope and quote for your project.'
-    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#services">Services</a><a href="#coverage">Find your state</a><a href="#package">Drawing package</a><a href="#contact">Request a quote ↗</a></div></nav>'
-    cards = ''.join(f'<a class="state-card" href="{href}"><strong>{label}</strong><span>{text}</span></a>' for href, label, text in SERVICE_LINKS)
-    cards += '<a class="state-card" href="/resources/pool-project-checklist/"><strong>Project input checklist</strong><span>What to send before drawing work starts. No signup needed.</span></a>'
-    services = f'''<section class="section local-section" id="services" aria-labelledby="services-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">RESIDENTIAL POOL ENGINEERING SERVICES</span><h2 id="services-heading">One coordinated scope.<br>Every technical detail.</h2></div><div><p>Engineering plans, calculations and permit drawings for homeowners, pool contractors and builders. Choose a complete package or the technical support your team needs.</p><a class="text-link" href="#contact">Request an engineering quote ↗</a></div></div><nav class="state-cards" aria-label="Services">{cards}</nav></div></section>'''
+    title = 'Pool Engineering Plans & Permit Drawings | 50 States'
+    description = 'Pool engineering plans and permit drawings for US homeowners and builders. Drawings in 2 business days after all inputs. PE seal available. Free quote.'
+    lead = 'Structural plans, permit drawings and hydraulic calculations for homeowners and pool builders in any US city or county. When your permit office requires a seal, a Professional Engineer licensed in your state reviews the package, takes responsible charge and seals it.'
+    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#services">Services</a><a href="#coverage">Find your state</a><a href="#package">Drawing package</a><a href="#contact">Get my quote ↗</a></div></nav>'
+    home_cards = SERVICE_LINKS
+    cards = ''.join(f'<a class="state-card service-card" href="{href}">{ICON(SERVICE_ICONS[href])}<strong>{label}</strong><span>{text}</span><span class="card-go" aria-hidden="true">Open →</span></a>' for href, label, text in home_cards)
+    services = f'''<section class="section local-section" id="services" aria-labelledby="services-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">RESIDENTIAL POOL ENGINEERING SERVICES</span><h2 id="services-heading">Pool engineering and drafting services.</h2></div><div><p>Engineering plans, calculations and permit drawings for homeowners, pool contractors and builders. Choose a complete package or the technical support your team needs.</p><a class="text-link" href="#contact">Get my quote ↗</a></div></div><nav class="state-cards four" aria-label="Services">{cards}</nav></div></section>'''
     state_links = ''.join(f'<a href="/states/{s}/">{name_of(s)}</a>' for s in sorted(STATES))
-    states = f'''<section class="section local-section" id="coverage" aria-labelledby="coverage-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · ALL 50 STATES</span><h2 id="coverage-heading">Find your state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties with links to the official sources, and the quote form.</p><p>Your city or county is not listed? Name the permit office in your enquiry. We draw to the checklist it publishes.</p><a class="text-link" href="/states/">Browse all state pages ↗</a></div></div><nav class="state-grid wide" aria-label="State pages">{state_links}</nav></div></section>'''
-    line = '''<section class="coverage-line" aria-label="USA coverage"><div class="wrap"><p><strong>JEBN Engineering · USA enquiries, all 50 states.</strong> Project-specific engineering and PE arrangements are confirmed before acceptance.</p><a href="/states/">View state coverage</a></div></section>'''
-    body = (hero('USA / ALL 50 STATES / RESIDENTIAL POOLS', 'Residential pool engineering.<br><span>For your next build.</span>', lead, form('Residential Pool Engineering')) + nav
-            + services + states
-            + package_section(PE_NATIONAL, engineering=True, sid='package-section') + pool_clients()
+    state_options = ''.join(f'<option value="/states/{s}/">{name_of(s)}</option>' for s in sorted(STATES))
+    states = f'''<section class="section local-section" id="coverage" aria-labelledby="coverage-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · ALL 50 STATES</span><h2 id="coverage-heading">Pool permit drawings by state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties with links to the official sources, and the quote form.</p><p>Your city or county is not listed? Name the permit office in your request. We draw to the checklist it publishes.</p><a class="text-link" href="/states/">Browse all state pages ↗</a></div></div><div class="state-jump"><label for="state-jump">Go to your state</label><select id="state-jump" data-state-jump><option value="">Choose a state…</option>{state_options}</select></div><noscript><style>.state-jump{{display:none}}</style></noscript><details class="state-fold" data-open-wide><summary>Show all 50 states</summary><nav class="state-grid wide" aria-label="State pages">{state_links}</nav></details></div></section>'''
+    line = '''<section class="coverage-line" aria-label="USA coverage"><div class="wrap"><p><strong>JEBN Engineering.</strong> We take residential pool projects in all 50 states.</p><a href="/states/">View state coverage</a></div></section>'''
+    body = (hero('USA / ALL 50 STATES / RESIDENTIAL POOLS', 'Pool engineering plans<br><span>for your permit.</span>', lead, form('Residential Pool Engineering')) + nav
+            + samples_section() + audience_section() + pool_clients() + services
+            + package_section(PE_NATIONAL, engineering=True, sid='package-section') + states
             + inputs_section('Start with the plans you have.', 'A sketch is enough to begin the conversation. If you already have a survey, drawings or permit comments, tell us what is ready. We identify the missing inputs before drawing work starts.')
             + delivery_section(PE_NATIONAL)
-            + faq_block('BEFORE WE BEGIN', 'Clear scope.<br>Clear expectations.', HOME_FAQ)
+            + faq_block('QUESTIONS', 'Common pool engineering questions.', HOME_FAQ)
             + line)
     canonical = SITE+'/'
     org = dict(organization(), **{'@id': canonical+'#organization', 'description': 'Residential pool engineering plans, permit drawings, hydraulics, TDH calculations and PE review coordination for US projects.'})
@@ -475,6 +634,37 @@ def build_home():
 
 
 # ---------------------------------------------------------------- privacy notice
+
+CHECKLIST = [
+    ('1. The project', ['Project city, state and permit office, if known.',
+                        'Residential or commercial use; new pool or renovation.',
+                        'Your role: owner, pool contractor, builder or designer.']),
+    ('2. The starting information', ['Site plan or survey showing the property and proposed pool location.',
+                                     'Sketch, dimensions, depths and preferred features.',
+                                     'Existing drawings and permit review comments, if available.',
+                                     'Equipment preferences and known site constraints.']),
+    ('3. The package you need', ['Engineering plans, permit drawings, structural details, hydraulics or shop drawings.',
+                                 'Engineering review or sealing requirements to confirm.',
+                                 'Your target date and project contact.']),
+]
+
+
+def build_checklist():
+    """The project input checklist, in the shared layout. Same list as before; the download file is unchanged."""
+    title = 'Pool Project Input Checklist'
+    description = 'Prepare your pool project brief with this free checklist of site information, drawings and scope. No email signup required.'
+    crumbs = crumbs_html([('/', 'Home'), ('', 'Project checklist')])
+    blocks = ''.join(f'<h2>{h}</h2><ul>{"".join(f"<li>{i}</li>" for i in items)}</ul>' for h, items in CHECKLIST)
+    body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose">{crumbs}<span class="eyebrow">PROJECT RESOURCE · NO SIGNUP NEEDED</span><h1 id="page-heading">Before we draw: your pool project checklist.</h1><p class="lead">Use this list to put your project brief together. You do not need every answer to start a conversation. We identify any missing inputs before drawing work begins.</p><div class="actions"><a class="text-link" href="/resources/pool-project-checklist/checklist.txt" download>Download checklist (.txt) ↓</a></div>{blocks}<h2>Ready to discuss it?</h2><p>{TURNAROUND}</p><div class="actions"><a class="button primary" href="/#contact">Get my quote <span aria-hidden="true">→</span></a></div></div></div></section>'''
+    canonical = f'{SITE}/resources/pool-project-checklist/'
+    schema = {'@context': 'https://schema.org', '@graph': [
+        {'@type': 'WebPage', '@id': canonical+'#page', 'name': title, 'description': description, 'url': canonical, 'isPartOf': {'@type': 'WebSite', 'name': 'JEBN Engineering', 'url': SITE+'/'}},
+        {'@type': 'BreadcrumbList', 'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE+'/'},
+            {'@type': 'ListItem', 'position': 2, 'name': 'Project checklist', 'item': canonical}]},
+    ]}
+    return shell('resources/pool-project-checklist', title, description, body, schema, nav_home=True)
+
 
 def build_privacy():
     """Wraps the notice text in tools/data/privacy-notice.html in the shared layout. The wording is not changed here."""
@@ -504,7 +694,7 @@ def build_404():
              ('/pool/', 'Pool construction drawings'), ('/states/', 'All 50 state pages'), ('/landscape/', 'Landscape design'),
              ('/resources/pool-project-checklist/', 'Project input checklist')]
     lis = ''.join(f'<li><a href="{h}">{t}</a></li>' for h, t in links)
-    body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose"><span class="eyebrow">PAGE NOT FOUND</span><h1 id="page-heading">This page could not be found.</h1><p>The address may have changed or the page may have moved. Use one of these links, or send us your project details.</p><ul class="not-found-links">{lis}</ul><div class="actions"><a class="button primary" href="/#contact">Request a quote <span aria-hidden="true">↗</span></a></div>{state_directory('Or choose your state')}</div></div></section>'''
+    body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose"><span class="eyebrow">PAGE NOT FOUND</span><h1 id="page-heading">This page could not be found.</h1><p>The address may have changed or the page may have moved. Use one of these links, or send us your project details.</p><ul class="not-found-links">{lis}</ul><div class="actions"><a class="button primary" href="/#contact">Get my quote <span aria-hidden="true">→</span></a></div>{state_directory('Or choose your state')}</div></div></section>'''
     shell('', 'Page Not Found', 'Find JEBN Engineering pool engineering services, state pages and the project enquiry form.', body, None, nav_home=True, out='404.html', noindex=True)
 
 
@@ -514,7 +704,7 @@ LANDSCAPE_ROWS = [
     ('Landscape master plans', 'Full site design that brings softscape, hardscape, levels and drainage into one buildable master plan.'),
     ('Hardscape design', 'Paving, walls, pergolas, water features and outdoor living areas, detailed to last in the climate they are built in.'),
     ('Softscape & planting design', 'Climate-adaptive, water-wise planting plans and schedules. Native and adapted species matched to your site, from US hardiness zones to hot, arid regions.'),
-    ('Technical & construction drawings', 'Setting-out plans, sections, details and specifications for your contractor, and for permit submission where your office asks for landscape drawings.'),
+    ('Technical & construction drawings', 'Layout plans, sections, details and specifications for your contractor, and for permit submission where your office asks for landscape drawings.'),
     ('Irrigation & water-wise design', 'Irrigation layouts for hot, dry climates that keep planting healthy and limit water use.'),
     ('3D visuals', 'Renders and concept visuals that show the design before it is built. Ask to include them alongside the drawing set.'),
 ]
@@ -536,7 +726,7 @@ LANDSCAPE_WORK = [
     ('landscape-soft-hardscape-plan.jpg', '2D softscape planting plan and hardscape layout', 'Softscape and hardscape plan', 'Coordinated 2D softscape planting plan and hardscape layout.'),
 ]
 
-LANDSCAPE_SEAL = 'If your permit office asks for sealed landscape or site drawings, send its checklist with your enquiry. Review and sealing arrangements are confirmed for your project state and scope before work is accepted.'
+LANDSCAPE_SEAL = 'If your permit office asks for sealed landscape or site drawings, send its checklist with your request. Review and sealing arrangements are confirmed for your project state and scope before work is accepted.'
 
 LANDSCAPE_FAQ = [
     ('What do I receive?', 'DWG and PDF drawing sets, planting plans and schedules, irrigation layouts, bills of quantities and 3D renders, depending on the scope you choose.'),
@@ -549,31 +739,30 @@ LANDSCAPE_FAQ = [
 
 def build_landscape():
     title = 'Landscape Design Drawings & Master Plans'
-    description = 'Landscape master plans, hardscape layouts and planting drawings for homeowners, pool contractors and builders. DWG and PDF sets with 3D visuals. Request a quote.'
+    description = 'Landscape master plans, hardscape layouts and planting drawings for homeowners, pool contractors and builders. DWG and PDF sets with 3D visuals. Free quote.'
     lead = 'Landscape master plans, hardscape layouts and planting drawings for homeowners, pool contractors and builders. Build-ready construction drawings and 3D visuals, with planting matched to your climate.'
     crumbs = crumbs_html([('/', 'Home'), ('', 'Landscape design')])
-    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What we draw</a><a href="#work">Sample work</a><a href="#faq">Questions</a><a href="#contact">Request a quote ↗</a></div></nav>'
+    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What we draw</a><a href="#work">Sample work</a><a href="#faq">Questions</a><a href="#contact">Get my quote ↗</a></div></nav>'
     links = '<p class="package-links"><strong>Pool work:</strong> <a href="/services/pool-engineering/">Pool engineering plans</a> · <a href="/services/pool-permit-drawings/">Permit drawings</a> · <a href="/pool/">Construction drawings</a></p>'
     points = ''.join(f'<li><strong>{k}</strong>{v}</li>' for k, v in LANDSCAPE_POINTS)
     about = f'''<section class="section inputs-section" id="about" aria-labelledby="about-heading"><div class="wrap input-grid"><div><span class="eyebrow">ABOUT THE LANDSCAPE WORK</span><h2 id="about-heading">Designed for the climate.<br>Drawn to be built.</h2><p>JEBN Engineering prepares landscape design drawings alongside its pool engineering work: hardscape, softscape and planting design, with 3D visuals and build-ready technical drawings.</p><p>Benatic Paul Martin, founder and principal designer, has more than 10 years of experience across private villas, residential developments and commercial projects, for clients in the USA, the UK and the Gulf.</p><a class="text-link" href="#contact">Ask about your project ↗</a></div><ul class="input-list">{points}</ul></div></section>'''
-    cards = ''.join(f'''<div class="portfolio-card"><a class="project-preview-link" href="/images/{img}" data-project-preview aria-label="View preview: {escape(name)}"><div class="portfolio-image"><img src="/images/{img}" alt="{escape(alt)}" width="1000" height="750" loading="lazy" decoding="async"><span class="view-tag">View preview</span></div></a><div class="portfolio-content"><h3>{name}</h3><p>{text}</p></div></div>''' for img, alt, name, text in LANDSCAPE_WORK)
-    first = LANDSCAPE_WORK[0][0]
-    work = f'''<section class="section local-section" id="work" aria-labelledby="work-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">SAMPLE WORK</span><h2 id="work-heading">Landscape, hardscape and planting projects.</h2></div><div><p>A selection of landscape, hardscape and planting projects, from private villas to commercial sites.</p><p class="work-note">Produced in AutoCAD, SketchUp, Lumion, Revit and Photoshop. Deliverables include DWG and PDF drawings, planting schedules, irrigation layouts, BOQs and 3D renders.</p></div></div><div class="work-grid">{cards}</div></div></section>
-<dialog class="project-viewer" id="project-viewer" aria-labelledby="viewer-heading"><div class="viewer-top"><h2 id="viewer-heading">Project preview</h2><button class="viewer-close" type="button" data-close-viewer autofocus>Close</button></div><p data-image-status role="status"></p><img src="/images/{first}" alt="" width="1000" height="750" loading="lazy" decoding="async" hidden><p data-description></p><a href="/images/{first}" data-full-image target="_blank" rel="noopener">Open full image in a new tab</a></dialog>'''
+    cards = preview_cards(LANDSCAPE_WORK, 'View preview')
+    work = f'''<section class="section local-section" id="work" aria-labelledby="work-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">SAMPLE WORK</span><h2 id="work-heading">Landscape, hardscape and planting projects.</h2></div><div><p>A selection of landscape, hardscape and planting projects, from private villas to commercial sites.</p><p class="work-note">Produced in AutoCAD, SketchUp, Lumion, Revit and Photoshop. Deliverables include DWG and PDF drawings, planting schedules, irrigation layouts, BOQs and 3D renders.</p></div></div><div class="work-grid">{cards}</div></div></section>''' + viewer_dialog(LANDSCAPE_WORK[0][0])
     steps = [
         ('1. Share your project', 'Send your site plan or photos, style preferences and scope through the form. We reply within 24 hours with questions or a quote.'),
         ('2. Design and visuals', 'Planting design, hardscape detailing and 3D visuals, prepared in AutoCAD, SketchUp and Lumion.'),
         ('3. Review and refine', 'You review the design and we revise it to fit your site, climate and budget. Your quote states the revision allowance.'),
         ('4. Build-ready handoff', 'DWG and PDF drawings, planting schedules, irrigation layouts and BOQs for your contractor.'),
     ]
-    step_html = ''.join(f'<li><h3>{k}</h3><p>{v}</p></li>' for k, v in steps)
-    process = f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">FROM BRIEF TO BUILD-READY</span><h2 id="delivery-heading">A clear scope.<br>A clear next step.</h2><ol class="delivery-steps four">{step_html}</ol><div class="review-note"><h3>Permits and sealed drawings</h3><p>{LANDSCAPE_SEAL} The local authority decides permit approval.</p></div><div class="actions"><a class="button primary" href="#contact">Request your drawing quote ↗</a></div></div></section>'''
+    step_html = step_items([(k.split('. ', 1)[1], v) for k, v in steps])
+    process = f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">FROM BRIEF TO BUILD-READY</span><h2 id="delivery-heading">A clear scope.<br>A clear next step.</h2><ol class="delivery-steps four">{step_html}</ol><div class="review-note"><h3>Permits and sealed drawings</h3><p>{LANDSCAPE_SEAL} The permit office decides permit approval.</p></div><div class="actions"><a class="button primary" href="#contact">Get my quote <span aria-hidden="true">→</span></a></div></div></section>'''
     feedback = clients_section('Feedback from clients on pool, water feature and outdoor-space drawing work.')
     line = '''<section class="coverage-line" id="coverage" aria-label="Coverage"><div class="wrap"><p><strong>JEBN Engineering · Landscape design drawings, delivered remotely.</strong> Need pool plans as well? Pool engineering plans and permit drawings are available for all 50 states.</p><a href="/services/pool-engineering/">Pool engineering plans</a></div></section>'''
     facts = [('Timeline', 'Agreed in your quote'), ('File delivery', 'DWG + PDF')]
     small = 'Delivery time depends on the scope and is confirmed before work starts. Review and sealing, where a permit office asks for it, has a separate timeline.'
     body = (hero('LANDSCAPE DESIGN DRAWINGS', 'Landscape design drawings.<br><span>Planting, hardscape and master plans.</span>', lead,
-                 form(title, notes_placeholder='Site size, style, planting or hardscape needs…'), crumbs, facts, small) + nav
+                 form(title, notes_placeholder='e.g. backyard with pool, planting plan and paving layout, about 60 x 40 ft', pool=False), crumbs, facts, small,
+                 second=('See sample work ↓', '#work'), form_heading='Get your landscape drawing quote.', panel_quote=False, picture='landscape', strip='') + nav
             + package_section(None, rows=LANDSCAPE_ROWS, heading='What we draw<br>for your site.', lead='Planting, paving and structures designed together, then drawn as one coordinated set a contractor can build from.', links=links)
             + about + work + process + feedback
             + faq_block('BEFORE YOU ASK', 'Questions about landscape drawings.', LANDSCAPE_FAQ)
@@ -609,15 +798,26 @@ def load_local(slug):
 def date_words(iso):
     months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     y, m, d = (int(x) for x in iso.split('-'))
-    return f'{d} {months[m-1]} {y}'
+    return f'{months[m-1]} {d}, {y}'
 
 
 def local_section(state, local):
-    head = f'<span class="eyebrow">{state.upper()} · CITY AND COUNTY PERMIT NOTES</span><h2 id="local-heading">Local permit notes for {state}.</h2>'
-    other = f'<p>Your city or county is not listed? Name the permit office in the enquiry form. We draw to the checklist it publishes.</p>'
+    names = []
+    for j in (local or {}).get('jurisdictions', []):
+        n = short_place(j['name'])
+        if n and n not in names:
+            names.append(n)
+    if len(names) > 3:
+        h2 = f'Pool permit notes for {", ".join(names[:3])} and more in {state}.'
+    elif names:
+        h2 = f'Pool permit notes for {names[0] if len(names) == 1 else ", ".join(names[:-1])+" and "+names[-1]}, {state}.'
+    else:
+        h2 = f'Local pool permit notes for {state}.'
+    head = f'<span class="eyebrow">{state.upper()} · CITY AND COUNTY PERMIT NOTES</span><h2 id="local-heading">{h2}</h2>'
+    other = f'<p>Your city or county is not listed? Name the permit office in the quote form. We draw to the checklist it publishes.</p>'
     if not local or not local['jurisdictions']:
-        return f'''<section class="section local-section" id="local" aria-labelledby="local-heading"><div class="wrap local-head"><div>{head}</div><div><p>Each city and county in {state} runs its own pool permit review. Send the name of your permit office and its submittal checklist with your enquiry. We identify the drawings and calculations it asks for before work starts.</p><a class="text-link" href="#contact">Send your permit office ↗</a></div></div></section>'''
-    cards, used = [], set()
+        return f'''<section class="section local-section" id="local" aria-labelledby="local-heading"><div class="wrap local-head"><div>{head}</div><div><p>Each city and county in {state} runs its own pool permit review. Send the name of your permit office and its submittal checklist with your request. We identify the drawings and calculations it asks for before work starts.</p><a class="text-link" href="#contact">Send your permit office ↗</a></div></div></section>'''
+    cards, used, jumps = [], set(), []
     state_date = local.get('researched') or BUILD_DATE
     saved_copy = False
     for j in local['jurisdictions']:
@@ -631,7 +831,11 @@ def local_section(state, local):
             portal = f'<span class="local-portal">Online portal: {ext_link(j["portal_url"], j["portal_name"])}</span>'
         elif j.get('portal_name'):
             portal = f'<span class="local-portal">Online portal: {clean(j["portal_name"])}</span>'
-        notes = ''.join(f'<li>{clean(n)}</li>' for n in j['notes'])
+        rest = j['notes'][2:]
+        more = ''
+        if rest:
+            more = f'<details class="more-notes"><summary>{len(rest)} more permit note{"s" if len(rest) != 1 else ""}</summary><ul>{"".join(f"<li>{clean(n)}</li>" for n in rest)}</ul></details>'
+        notes = '<ul>'+''.join(f'<li>{clean(n)}</li>' for n in j['notes'][:2])+'</ul>'+more
         srcs = []
         for s in j.get('sources', []):
             if not safe_url(s.get('url')):
@@ -644,7 +848,11 @@ def local_section(state, local):
             srcs.append(link)
         checked_on = f' · Checked {date_words(j["checked"])}' if j.get('checked') and j['checked'] != state_date else ''
         src = f'<p class="local-src">Source: {" · ".join(srcs)}{checked_on}</p>' if srcs else ''
-        cards.append(f'<article class="local-card" id="{jid}"><h3>{clean(j["name"])}</h3><p class="local-office">{office}{portal}</p><ul>{notes}</ul>{src}</article>')
+        place, _, county = j['name'].partition(' / ')
+        h3 = f'{clean(place)} pool permit notes ({clean(county)})' if county else f'{clean(j["name"])} pool permit notes'
+        portal_line = f'<p class="local-office">{portal}</p>' if portal else ''
+        jumps.append(f'<a href="#{jid}">{clean(short_place(j["name"]))}</a>')
+        cards.append(f'<details class="local-card" id="{jid}" data-open-wide><summary><h3>{h3}</h3><span class="local-office">{office}</span></summary>{portal_line}{notes}{src}</details>')
     state_level = ''
     if local.get('state_level'):
         items = ''.join(f'<li>{clean(s.get("note"))} <span class="local-src">Source: {ext_link((s.get("source") or {}).get("url"), (s.get("source") or {}).get("title") or "Official page")}</span></li>' for s in local['state_level'] if s.get('note'))
@@ -653,7 +861,7 @@ def local_section(state, local):
     checked = date_words(state_date)
     copy_note = ' Where a source says “copy saved”, the note was read from a dated copy of that official page.' if saved_copy else ''
     later = ' unless a card gives a later date' if any(j.get('checked') and j['checked'] != state_date for j in local['jurisdictions']) else ''
-    return f'''<section class="section local-section" id="local" aria-labelledby="local-heading"><div class="wrap"><div class="local-head"><div>{head}</div><div><p>Each city and county runs its own pool permit review. These notes come from the pages each office publishes, checked on {checked}{later}. Rules change, so open the linked source or send us the current checklist with your enquiry.{copy_note}</p>{other}</div></div><div class="local-grid">{''.join(cards)}</div>{state_level}</div></section>'''
+    return f'''<section class="section local-section" id="local" aria-labelledby="local-heading"><div class="wrap"><div class="local-head"><div>{head}</div><div><p>Each city and county runs its own pool permit review. These notes come from the pages each office publishes, checked on {checked}{later}. Rules change, so open the linked source or send us the current checklist with your request.{copy_note}</p>{other}</div></div><p class="local-jump"><span>Jump to:</span> {' '.join(jumps)}</p><div class="local-grid">{''.join(cards)}</div>{state_level}</div></section>'''
 
 
 def requirements_section(state, rec):
@@ -665,20 +873,27 @@ def requirements_section(state, rec):
         text = s.span.get_text(' ', strip=True) if s.span else s.get_text(' ', strip=True)
         steps.append(f'<li><b aria-hidden="true">{clean(num)}</b><span>{clean(text)}</span></li>')
     paras = rec['seal_paras']
-    intro = f'<p>{clean(paras[0])}</p>' if paras else ''
-    seal = f'<p class="small">{clean(paras[-1])}</p>' if len(paras) > 1 else ''
-    left = f'<div><span class="eyebrow">{state.upper()} REQUIREMENTS</span><h2 id="req-heading">What {article} {state} set has to satisfy.</h2>{intro}<ol class="req-list">{"".join(steps)}</ol>{seal}</div>'
+    intro = '<p>Each city and county reviews pool plans against its own checklist. These are the items we draw to.</p>'
+    seal = f'<p class="small">When your permit office requires a seal, a Professional Engineer licensed in {state} reviews the package, takes responsible charge and applies the seal.</p>'
+    left = f'<div><span class="eyebrow">{state.upper()} REQUIREMENTS</span><h2 id="req-heading">What {state} permit offices check.</h2>{intro}<ol class="req-list">{"".join(steps)}</ol>{seal}</div>'
     right = ''
     if rec['facts']:
         facts = ''.join(f'<dt>{clean(k)}</dt><dd>{clean(v)}</dd>' for k, v in rec['facts'])
-        fi = clean(rec['facts_intro'][0]) if rec['facts_intro'] else 'The state-level rules your drawings are checked against. Cities and counties can add local amendments, so send the jurisdiction with your enquiry.'
+        fi = clean(rec['facts_intro'][0]) if rec['facts_intro'] else 'The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request.'
         right = f'<div><h3 class="facts-title">{state} state-level rules</h3><p class="small">{fi}</p><dl class="state-facts">{facts}</dl></div>'
     cls = 'req-grid' if right else 'req-grid single'
     return f'<section class="section req-section" id="requirements" aria-labelledby="req-heading"><div class="wrap {cls}">{left}{right}</div></section>'
 
 
 def faq_items(state, rec):
-    items = [(q, a) for q, a in rec['faq']]
+    items = []
+    for q, a in rec['faq']:
+        if re.match(r'Are your .+ pool plans sealed by an? .+-licensed engineer\?$', q):
+            q = f'Can my {state} pool plans be sealed by an engineer licensed in {state}?'
+            a = (f'Yes. When your permit office requires a seal, a Professional Engineer licensed in {state} reviews the package, takes responsible charge '
+                 'and applies the seal. PE review and sealing is quoted as part of your package, and we confirm the responsible engineer before work begins.')
+        items.append((q, a))
+    items.append(('What if plan review comes back with comments?', PLAN_REVIEW_ANSWER))
     items.append((f'How fast can you prepare {state} pool drawings?', 'Residential drawing preparation takes 2 business days after we receive all project inputs. PE review and sealing, and the permit office’s own review, have separate timelines.'))
     items.append((f'Do you work to my city or county’s checklist in {state}?', 'Yes. Send the submittal checklist or the review comments from your permit office. Your quote lists the drawings and calculations that respond to it.'))
     return items
@@ -698,35 +913,35 @@ def build_state(slug, rec):
             n = short_place(j['name'])
             if n and n not in places:
                 places.append(n)
-    title = f'{state} Pool Plans & Permit Drawings'
-    base = f'{state} pool engineering plans and permit drawings for homeowners, contractors and builders.'
-    tail = ' Request a scope and quote.'
+    title = f'{state} Pool Permit Drawings & Engineering Plans'
+    base = f'{state} pool permit drawings and engineering plans.'
+    tail = ' Free quote, reply by email in 24 hours.'
     description = base+tail
-    for k in (3, 2, 1):
+    for k in (4, 3, 2, 1):
         if len(places) >= k:
-            listed = places[0] if k == 1 else ', '.join(places[:k-1])+' and '+places[k-1]
-            cand = f'{base} Local permit notes for {listed}.{tail}'
-            if len(cand) <= 165:
+            listed = ', '.join(places[:k])
+            more = ' and more' if len(places) > k else ''
+            cand = f'{base} Permit notes for {listed}{more}.{tail}'
+            if len(cand) <= 155:
                 description = cand
                 break
-    if places:
-        listed = places[0] if len(places) == 1 else (', '.join(places[:min(len(places), 3)-1])+' and '+places[min(len(places), 3)-1])
-        lead = f'Pool engineering plans, permit drawings and construction details for {state} homeowners, pool contractors and builders. This page has local permit notes for {escape(listed)}. Get a scope and quote for your project.'
-    else:
-        lead = f'Pool engineering plans, permit drawings and construction details for {state} homeowners, pool contractors and builders. Get a scope and quote for your project.'
-    pe = f'{state} PE review and sealing can be included in your agreed package. We confirm the responsible engineer and review requirements before work begins.'
+    where = f'pools in {", ".join(places[:3])} and across {state}' if len(places) >= 3 else f'pools across {state}'
+    lead = (f'Permit drawings and engineering plans for {where}, drawn to your permit office’s checklist. If it requires a seal, '
+            f'a Professional Engineer licensed in {state} reviews the set, takes responsible charge and seals it.')
+    pe = f'When your permit office requires a seal, a Professional Engineer licensed in {state} reviews the package, takes responsible charge and seals it. We confirm the responsible engineer before work begins.'
+    facts = HERO_FACTS[:2] + [('PE review and seal', f'Licensed in {state}')]
     crumbs = f'<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/states/">States</a> <span aria-hidden="true">/</span> <span aria-current="page">{state}</span></nav>'
-    h1 = f'{state} pool plans.<br><span>Permit drawings for your project.</span>'
-    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#local">Local permit notes</a><a href="#requirements">State requirements</a><a href="#package">Drawing package</a><a href="#contact">Request a quote ↗</a></div></nav>'
+    h1 = f'{state} pool permit drawings<br><span>and engineering plans.</span>'
+    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#local">Local permit notes</a><a href="#requirements">State requirements</a><a href="#package">Drawing package</a><a href="#contact">Get my quote ↗</a></div></nav>'
     links = '<p class="package-links"><a href="/services/pool-engineering/">Pool engineering plans</a> · <a href="/services/pool-permit-drawings/">Permit drawings</a> · <a href="/pool/">Construction drawings</a></p>'
     faqs = faq_items(state, rec)
     nearby = ''
     if rec.get('nearby'):
         nearby = '<p class="nearby-line"><strong>Nearby states:</strong> '+' · '.join(f'<a href="{escape(h)}">{clean(t)}</a>' for h, t in rec['nearby'])+'</p>'
-    body = (hero(f'{state.upper()} / RESIDENTIAL POOL ENGINEERING', h1, lead, form(title, state, CITY[slug]), crumbs) + nav
-            + local_section(state, local)
+    body = (hero(f'{state.upper()} / RESIDENTIAL POOL ENGINEERING', h1, lead, form(title, state, CITY[slug]), crumbs, facts, strip=HERO_STRIP) + nav + samples_section()
+            + local_section(state, local) + audience_section(state) + pool_clients()
+            + package_section(pe, links=links)
             + requirements_section(state, rec)
-            + package_section(pe, links=links) + pool_clients()
             + inputs_section(f'Planning a pool in {state}?', 'Start with your project address and the city or county reviewing the permit. Send its submittal checklist or review comments if you have them, so we can identify the drawings and calculations needed.')
             + delivery_section(pe)
             + faq_section(state, faqs)
@@ -761,12 +976,12 @@ def build_states_index():
         cards.append(f'<a class="state-card" href="/states/{slug}/"><strong>{state}</strong><span>{line}</span>{notes}</a>')
     crumbs = '<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">States</span></nav>'
     lead = 'Pool engineering plans, permit drawings and construction details for homeowners, pool contractors and builders in all 50 states. Each state page lists city and county permit notes with links to the official sources.'
-    pe = 'Engineering and PE review arrangements are confirmed for your project state and scope before work is accepted. Ask which services are available for your location.'
-    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#all-states">All 50 states</a><a href="#package">Drawing package</a><a href="#delivery">Delivery & PE review</a><a href="#contact">Request a quote ↗</a></div></nav>'
-    grid = f'''<section class="section local-section" id="all-states" aria-labelledby="states-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · ALL 50 STATES</span><h2 id="states-heading">Choose your state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties, and the quote form. Your city or county is not listed? Name the permit office in your enquiry.</p></div></div><nav class="state-cards" aria-label="State pages">{"".join(cards)}</nav></div></section>'''
-    body = (hero('USA / POOL PERMIT DRAWINGS BY STATE', 'Pool permit drawings.<br><span>State by state.</span>', lead, form('Pool Permit Drawings by State'), crumbs) + nav
+    pe = PE_NATIONAL
+    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#all-states">All 50 states</a><a href="#package">Drawing package</a><a href="#delivery">Delivery & PE review</a><a href="#contact">Get my quote ↗</a></div></nav>'
+    grid = f'''<section class="section local-section" id="all-states" aria-labelledby="states-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · ALL 50 STATES</span><h2 id="states-heading">Choose your state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties, and the quote form. Your city or county is not listed? Name the permit office in your request.</p></div></div><nav class="state-cards" aria-label="State pages">{"".join(cards)}</nav></div></section>'''
+    body = (hero('USA / POOL PERMIT DRAWINGS BY STATE', 'Pool permit drawings.<br><span>State by state.</span>', lead, form('Pool Permit Drawings by State'), crumbs, second=('See all 50 states ↓', '#all-states')) + nav
             + grid + package_section(pe) + delivery_section(pe)
-            + '''<section class="coverage-line" id="coverage" aria-label="USA coverage"><div class="wrap"><p><strong>JEBN Engineering · USA enquiries, all 50 states.</strong> Project-specific engineering and PE arrangements are confirmed before acceptance.</p><a href="/services/pool-engineering/">Pool engineering plans</a></div></section>''')
+            + '''<section class="coverage-line" id="coverage" aria-label="USA coverage"><div class="wrap"><p><strong>JEBN Engineering.</strong> We take residential pool projects in all 50 states.</p><a href="/services/pool-engineering/">Pool engineering plans</a></div></section>''')
     canonical = f'{SITE}/states/'
     schema = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'CollectionPage', '@id': canonical+'#page', 'name': title, 'description': description, 'url': canonical, 'isPartOf': {'@type': 'WebSite', 'name': 'JEBN Engineering', 'url': SITE+'/'}},
@@ -797,7 +1012,7 @@ if __name__ == '__main__':
     built += [build_service(p) for p in SERVICES]
     built += [build_state(slug, rec) for slug, rec in sorted(STATES.items())]
     built.append(build_states_index())
-    built += [build_privacy(), build_landscape()]
+    built += [build_privacy(), build_landscape(), build_checklist()]
     build_404()   # served for any missing address; not listed in the sitemap
     update_sitemap(built)
     print('Built', len(built), 'pages')

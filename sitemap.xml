@@ -244,9 +244,12 @@
     <loc>https://www.jebnengineering.com/states/wyoming/</loc>
     <lastmod>2026-11-19</lastmod>
   </url>
-<url><loc>https://www.jebnengineering.com/resources/pool-project-checklist/</loc></url>
   <url>
     <loc>https://www.jebnengineering.com/services/pool-engineering/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://www.jebnengineering.com/resources/pool-project-checklist/</loc>
     <lastmod>2026-11-19</lastmod>
   </url>
 </urlset>
