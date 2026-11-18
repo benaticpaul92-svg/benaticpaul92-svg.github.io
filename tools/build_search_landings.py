@@ -1,5 +1,5 @@
 """Site pages: home, eight service pages, the 50 state pages, the states index,
-the privacy notice and the landscape page.
+the privacy notice, the landscape page and the 404 page.
 
 Shared header, consent panel and footer come from tools/site-chrome.html.
 Data:
@@ -170,6 +170,39 @@ def service_links(current=''):
     return f'<p class="package-links"><strong>Related services:</strong> {links}</p>'
 
 
+# Client feedback, kept word for word from the earlier landscape page. Do not edit the quotes.
+CLIENT_QUOTES = [
+    ("JEBN did a great job on my pool and landscape project. As a main contractor in Dubai, they're now my go-to for all our pool and landscape solutions.", 'Abdellaziz · Main contractor · Dubai, UAE', False),
+    ("We build hotels and chose JEBN for our pool and outdoor-space design. The pool area had tough constraints — pump-room placement and a tricky overflow — but their experience brought practical solutions and we finished successfully. They're our go-to for pool and landscape technical work.", 'Judy Lee · Hotel developer · Taiwan', False),
+    ("I came to JEBN with an idea for a custom cold-plunge pool and they nailed the technical design from the first concept. With their full solution, I'm now producing custom cold-plunge pools across Europe.", 'Oliver T. · Cold-plunge pools · United Kingdom', False),
+    ("Martin was such a pleasure to work with. His work is professional and detailed, and he was able to accommodate any of my requests and features. He even went out of his way to help with parts of the project that were outside the scope we originally agreed on, making my life easier.", 'Nathan · 5.0★ · Design & drawings', True),
+    ("A wonderful team. They handled the MEP design and engineering for our vanishing-edge water feature with real professionalism — the drawings were spot-on and made construction far easier to execute.", 'Curt Brannon · Vanishing-edge water feature · USA', False),
+    ("We chose JEBN for our swimming-pool technical and construction drawings, and the work was highly professional throughout.", 'Aaron Baribeau · Pool construction drawings · USA', False),
+    ("Easy to work with and did a great job!", 'Charles · Pool MEP · British Columbia, Canada', False),
+]
+CLIENT_RATED = ['5.0★ Cold-water pool design', '5.0★ Pool MEP engineering', '4.9★ Lawrence Residence', '4.7★ Pool design · 5-day turnaround']
+
+# Pool pages show the US clients first and fold the rest under "Show more".
+POOL_QUOTE_ORDER = [4, 5, 3, 6, 2, 1, 0]
+STARS = '<span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>'
+
+
+def quote_cards(items):
+    return ''.join(f'<figure class="client-quote"><blockquote><p>{escape(q)}</p></blockquote><figcaption>{STARS if stars else ""}{escape(who)}</figcaption></figure>' for q, who, stars in items)
+
+
+def clients_section(lead, order=None, visible=None):
+    items = [CLIENT_QUOTES[i] for i in order] if order else CLIENT_QUOTES
+    shown, more = (items[:visible], items[visible:]) if visible else (items, [])
+    extra = f'<details class="more-quotes"><summary>Show {len(more)} more client comments</summary><div class="quote-grid">{quote_cards(more)}</div></details>' if more else ''
+    rated = ''.join(f'<li>{escape(r)}</li>' for r in CLIENT_RATED)
+    return f'''<section class="section quotes-section" id="clients" aria-labelledby="clients-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">CLIENT FEEDBACK</span><h2 id="clients-heading">What clients say.</h2></div><div><p>{lead}</p></div></div><div class="quote-grid">{quote_cards(shown)}</div>{extra}<p class="rated-label">Recent rated projects</p><ul class="rated-list">{rated}</ul></div></section>'''
+
+
+def pool_clients():
+    return clients_section('Feedback from clients on pool and water feature drawing work.', POOL_QUOTE_ORDER, visible=4)
+
+
 def faq_block(eyebrow, heading, items):
     body = ''.join(f'<details><summary>{clean(q)}</summary><p>{clean(a)}</p></details>' for q, a in items)
     return f'<section class="section faq-section" id="faq" aria-labelledby="faq-heading"><div class="wrap faq-layout"><div><span class="eyebrow">{eyebrow}</span><h2 id="faq-heading">{heading}</h2></div><div class="faq-list">{body}</div></div></section>'
@@ -179,7 +212,7 @@ def faq_schema(canonical, items):
     return {'@type': 'FAQPage', '@id': canonical+'#faq', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in items]}
 
 
-def shell(path, title, description, body, schema, head_extra='', home=False, nav_home=False):
+def shell(path, title, description, body, schema, head_extra='', home=False, nav_home=False, out=None, noindex=False):
     header = ''.join(str(BASE.select_one(s)) for s in ['.skip-link', '.utility-bar', '.site-header', '#privacy-choices'])
     footer_links = ''.join(f'<a href="{href}">{label}</a>' for href, label, _ in SERVICE_LINKS)
     footer_links += '<a href="/landscape/">Landscape design</a>'
@@ -191,9 +224,12 @@ def shell(path, title, description, body, schema, head_extra='', home=False, nav
         header = header.replace('Engineering services', 'Drawing services')
     full_title = title+' | JEBN Engineering'
     canonical = f'{SITE}/{path}/' if path else f'{SITE}/'
-    ld = json.dumps(schema, ensure_ascii=False).replace('</', '<\\/')
-    html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(full_title)}</title><meta name="description" content="{escape(description)}"><link rel="canonical" href="{canonical}"><meta name="theme-color" content="#0c5488"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="{escape(full_title)}"><meta property="og:description" content="{escape(description)}"><meta property="og:type" content="website"><meta property="og:url" content="{canonical}"><meta property="og:image" content="{SITE}/images/pool-beachfront-villa.jpg"><meta name="twitter:card" content="summary_large_image">{head_extra}<link rel="stylesheet" href="{asset('studio.min.css')}"><link rel="stylesheet" href="{asset('search-landings.min.css')}"><script src="{asset('search-landings.min.js')}" defer></script><script src="{asset('studio.min.js')}" defer></script><script type="application/ld+json">{ld}</script></head><body class="search-landing">{header}<main id="main-content" tabindex="-1">{body}</main>{footer}</body></html>'''
-    out = ROOT/path/'index.html'
+    ld = f'<script type="application/ld+json">{json.dumps(schema, ensure_ascii=False).replace("</", "<\\/")}</script>' if schema else ''
+    # A noindex page (the 404 page) is served at any address, so it gets no canonical or og:url.
+    index_meta = '<meta name="robots" content="noindex,follow">' if noindex else f'<link rel="canonical" href="{canonical}">'
+    og_url = '' if noindex else f'<meta property="og:url" content="{canonical}">'
+    html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(full_title)}</title><meta name="description" content="{escape(description)}">{index_meta}<meta name="theme-color" content="#0c5488"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="{escape(full_title)}"><meta property="og:description" content="{escape(description)}"><meta property="og:type" content="website">{og_url}<meta property="og:image" content="{SITE}/images/pool-beachfront-villa.jpg"><meta name="twitter:card" content="summary_large_image">{head_extra}<link rel="stylesheet" href="{asset('studio.min.css')}"><link rel="stylesheet" href="{asset('search-landings.min.css')}"><script src="{asset('search-landings.min.js')}" defer></script><script src="{asset('studio.min.js')}" defer></script>{ld}</head><body class="search-landing">{header}<main id="main-content" tabindex="-1">{body}</main>{footer}</body></html>'''
+    out = ROOT/out if out else ROOT/path/'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)
     return canonical
@@ -213,7 +249,7 @@ def build_national(p):
         extra = '''<section class="section inputs-section" id="when" aria-labelledby="when-heading"><div class="wrap input-grid"><div><span class="eyebrow">WHEN YOU NEED A POOL ENGINEER</span><h2 id="when-heading">When a pool permit calls for engineering.</h2><p>Many permit offices ask for engineered structural plans before they issue a pool permit. These are the common reasons. The checklist from your permit office decides what applies to your project.</p><a class="text-link" href="#contact">Ask about your project ↗</a></div><ul class="input-list"><li><strong>Sealed plans requested</strong>The checklist asks for structural plans or calculations sealed by a Professional Engineer licensed in your state.</li><li><strong>Close to a structure or slope</strong>The pool sits near a house footing, a retaining wall, a property-line wall or a slope.</li><li><strong>Difficult ground</strong>High groundwater, expansive clay, fill, or a soils report with design recommendations.</li><li><strong>Non-standard shells</strong>Raised walls, vanishing edges, attached spas, deep ends or a pool on a structure.</li></ul></div></section>'''
     nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">Drawing package</a><a href="#inputs">What to send</a><a href="#delivery">Delivery & PE review</a><a href="#contact">Request a quote ↗</a></div></nav>'
     body = (hero(p['kicker'], p['h1'], p['description'], form(p['title'])) + nav
-            + package_section(pe, engineering, links=service_links('/'+p['path']+'/')) + extra
+            + package_section(pe, engineering, links=service_links('/'+p['path']+'/')) + pool_clients() + extra
             + inputs_section('Start with the plans you have.', 'A sketch is enough to begin the conversation. If you already have a survey, drawings or permit comments, tell us what is ready. We identify the missing inputs before drawing work starts.')
             + delivery_section(pe) + coverage_section())
     canonical = f"{SITE}/{p['path']}/"
@@ -420,7 +456,7 @@ def build_home():
     line = '''<section class="coverage-line" aria-label="USA coverage"><div class="wrap"><p><strong>JEBN Engineering · USA enquiries, all 50 states.</strong> Project-specific engineering and PE arrangements are confirmed before acceptance.</p><a href="/states/">View state coverage</a></div></section>'''
     body = (hero('USA / ALL 50 STATES / RESIDENTIAL POOLS', 'Residential pool engineering.<br><span>For your next build.</span>', lead, form('Residential Pool Engineering')) + nav
             + services + states
-            + package_section(PE_NATIONAL, engineering=True, sid='package-section')
+            + package_section(PE_NATIONAL, engineering=True, sid='package-section') + pool_clients()
             + inputs_section('Start with the plans you have.', 'A sketch is enough to begin the conversation. If you already have a survey, drawings or permit comments, tell us what is ready. We identify the missing inputs before drawing work starts.')
             + delivery_section(PE_NATIONAL)
             + faq_block('BEFORE WE BEGIN', 'Clear scope.<br>Clear expectations.', HOME_FAQ)
@@ -461,6 +497,17 @@ def build_privacy():
     return shell('privacy', title, description, body, schema, nav_home=True)
 
 
+# ---------------------------------------------------------------- 404 page
+
+def build_404():
+    links = [('/', 'Home'), ('/services/pool-engineering/', 'Pool engineering plans'), ('/services/pool-permit-drawings/', 'Pool permit drawings'),
+             ('/pool/', 'Pool construction drawings'), ('/states/', 'All 50 state pages'), ('/landscape/', 'Landscape design'),
+             ('/resources/pool-project-checklist/', 'Project input checklist')]
+    lis = ''.join(f'<li><a href="{h}">{t}</a></li>' for h, t in links)
+    body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose"><span class="eyebrow">PAGE NOT FOUND</span><h1 id="page-heading">This page could not be found.</h1><p>The address may have changed or the page may have moved. Use one of these links, or send us your project details.</p><ul class="not-found-links">{lis}</ul><div class="actions"><a class="button primary" href="/#contact">Request a quote <span aria-hidden="true">↗</span></a></div>{state_directory('Or choose your state')}</div></div></section>'''
+    shell('', 'Page Not Found', 'Find JEBN Engineering pool engineering services, state pages and the project enquiry form.', body, None, nav_home=True, out='404.html', noindex=True)
+
+
 # ---------------------------------------------------------------- landscape page
 
 LANDSCAPE_ROWS = [
@@ -489,18 +536,6 @@ LANDSCAPE_WORK = [
     ('landscape-soft-hardscape-plan.jpg', '2D softscape planting plan and hardscape layout', 'Softscape and hardscape plan', 'Coordinated 2D softscape planting plan and hardscape layout.'),
 ]
 
-# Client feedback, kept word for word from the earlier landscape page. Do not edit the quotes.
-LANDSCAPE_QUOTES = [
-    ("JEBN did a great job on my pool and landscape project. As a main contractor in Dubai, they're now my go-to for all our pool and landscape solutions.", 'Abdellaziz · Main contractor · Dubai, UAE', False),
-    ("We build hotels and chose JEBN for our pool and outdoor-space design. The pool area had tough constraints — pump-room placement and a tricky overflow — but their experience brought practical solutions and we finished successfully. They're our go-to for pool and landscape technical work.", 'Judy Lee · Hotel developer · Taiwan', False),
-    ("I came to JEBN with an idea for a custom cold-plunge pool and they nailed the technical design from the first concept. With their full solution, I'm now producing custom cold-plunge pools across Europe.", 'Oliver T. · Cold-plunge pools · United Kingdom', False),
-    ("Martin was such a pleasure to work with. His work is professional and detailed, and he was able to accommodate any of my requests and features. He even went out of his way to help with parts of the project that were outside the scope we originally agreed on, making my life easier.", 'Nathan · 5.0★ · Design & drawings', True),
-    ("A wonderful team. They handled the MEP design and engineering for our vanishing-edge water feature with real professionalism — the drawings were spot-on and made construction far easier to execute.", 'Curt Brannon · Vanishing-edge water feature · USA', False),
-    ("We chose JEBN for our swimming-pool technical and construction drawings, and the work was highly professional throughout.", 'Aaron Baribeau · Pool construction drawings · USA', False),
-    ("Easy to work with and did a great job!", 'Charles · Pool MEP · British Columbia, Canada', False),
-]
-LANDSCAPE_RATED = ['5.0★ Cold-water pool design', '5.0★ Pool MEP engineering', '4.9★ Lawrence Residence', '4.7★ Pool design · 5-day turnaround']
-
 LANDSCAPE_SEAL = 'If your permit office asks for sealed landscape or site drawings, send its checklist with your enquiry. Review and sealing arrangements are confirmed for your project state and scope before work is accepted.'
 
 LANDSCAPE_FAQ = [
@@ -509,11 +544,8 @@ LANDSCAPE_FAQ = [
     ('Do you work with clients in other time zones?', 'Yes. We deliver for clients across the USA, UK, Canada and the Gulf, and work around your time zone with digital delivery.'),
     ('How fast can you deliver?', 'It depends on the scope. Smaller residential plans can be delivered within days. We confirm the timeline with you before work starts.'),
     ('Can the drawings be sealed for a permit?', LANDSCAPE_SEAL),
-    ('How do we start?', 'Send your scope through the form on this page. We reply with questions or a quote. No payment is needed to ask.'),
+    ('How do we start?', 'Send your scope through the form on this page. We reply within 24 hours with questions or a quote. No payment is needed to ask.'),
 ]
-
-STARS = '<span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>'
-
 
 def build_landscape():
     title = 'Landscape Design Drawings & Master Plans'
@@ -529,16 +561,14 @@ def build_landscape():
     work = f'''<section class="section local-section" id="work" aria-labelledby="work-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">SAMPLE WORK</span><h2 id="work-heading">Landscape, hardscape and planting projects.</h2></div><div><p>A selection of landscape, hardscape and planting projects, from private villas to commercial sites.</p><p class="work-note">Produced in AutoCAD, SketchUp, Lumion, Revit and Photoshop. Deliverables include DWG and PDF drawings, planting schedules, irrigation layouts, BOQs and 3D renders.</p></div></div><div class="work-grid">{cards}</div></div></section>
 <dialog class="project-viewer" id="project-viewer" aria-labelledby="viewer-heading"><div class="viewer-top"><h2 id="viewer-heading">Project preview</h2><button class="viewer-close" type="button" data-close-viewer autofocus>Close</button></div><p data-image-status role="status"></p><img src="/images/{first}" alt="" width="1000" height="750" loading="lazy" decoding="async" hidden><p data-description></p><a href="/images/{first}" data-full-image target="_blank" rel="noopener">Open full image in a new tab</a></dialog>'''
     steps = [
-        ('1. Share your project', 'Send your site plan or photos, style preferences and scope through the form. We reply with questions or a quote.'),
+        ('1. Share your project', 'Send your site plan or photos, style preferences and scope through the form. We reply within 24 hours with questions or a quote.'),
         ('2. Design and visuals', 'Planting design, hardscape detailing and 3D visuals, prepared in AutoCAD, SketchUp and Lumion.'),
         ('3. Review and refine', 'You review the design and we revise it to fit your site, climate and budget. Your quote states the revision allowance.'),
         ('4. Build-ready handoff', 'DWG and PDF drawings, planting schedules, irrigation layouts and BOQs for your contractor.'),
     ]
     step_html = ''.join(f'<li><h3>{k}</h3><p>{v}</p></li>' for k, v in steps)
     process = f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">FROM BRIEF TO BUILD-READY</span><h2 id="delivery-heading">A clear scope.<br>A clear next step.</h2><ol class="delivery-steps four">{step_html}</ol><div class="review-note"><h3>Permits and sealed drawings</h3><p>{LANDSCAPE_SEAL} The local authority decides permit approval.</p></div><div class="actions"><a class="button primary" href="#contact">Request your drawing quote ↗</a></div></div></section>'''
-    quotes = ''.join(f'<figure class="client-quote"><blockquote><p>{escape(q)}</p></blockquote><figcaption>{STARS if stars else ""}{escape(who)}</figcaption></figure>' for q, who, stars in LANDSCAPE_QUOTES)
-    rated = ''.join(f'<li>{escape(r)}</li>' for r in LANDSCAPE_RATED)
-    feedback = f'''<section class="section quotes-section" id="clients" aria-labelledby="clients-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">CLIENT FEEDBACK</span><h2 id="clients-heading">What clients say.</h2></div><div><p>Feedback from clients on pool, water feature and outdoor-space drawing work.</p></div></div><div class="quote-grid">{quotes}</div><p class="rated-label">Recent rated projects</p><ul class="rated-list">{rated}</ul></div></section>'''
+    feedback = clients_section('Feedback from clients on pool, water feature and outdoor-space drawing work.')
     line = '''<section class="coverage-line" id="coverage" aria-label="Coverage"><div class="wrap"><p><strong>JEBN Engineering · Landscape design drawings, delivered remotely.</strong> Need pool plans as well? Pool engineering plans and permit drawings are available for all 50 states.</p><a href="/services/pool-engineering/">Pool engineering plans</a></div></section>'''
     facts = [('Timeline', 'Agreed in your quote'), ('File delivery', 'DWG + PDF')]
     small = 'Delivery time depends on the scope and is confirmed before work starts. Review and sealing, where a permit office asks for it, has a separate timeline.'
@@ -696,7 +726,7 @@ def build_state(slug, rec):
     body = (hero(f'{state.upper()} / RESIDENTIAL POOL ENGINEERING', h1, lead, form(title, state, CITY[slug]), crumbs) + nav
             + local_section(state, local)
             + requirements_section(state, rec)
-            + package_section(pe, links=links)
+            + package_section(pe, links=links) + pool_clients()
             + inputs_section(f'Planning a pool in {state}?', 'Start with your project address and the city or county reviewing the permit. Send its submittal checklist or review comments if you have them, so we can identify the drawings and calculations needed.')
             + delivery_section(pe)
             + faq_section(state, faqs)
@@ -768,5 +798,6 @@ if __name__ == '__main__':
     built += [build_state(slug, rec) for slug, rec in sorted(STATES.items())]
     built.append(build_states_index())
     built += [build_privacy(), build_landscape()]
+    build_404()   # served for any missing address; not listed in the sitemap
     update_sitemap(built)
     print('Built', len(built), 'pages')
