@@ -52,3 +52,30 @@
 .footer-services+.footer-bottom{margin-top:1.2rem}
 @media(max-width:1000px){.state-grid.wide{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:600px){.state-grid.wide{grid-template-columns:1fr 1fr}}
+/* Privacy notice: one readable column */
+.prose-page{padding-top:2.5rem}
+.prose{max-width:46rem}
+.prose h1{font:500 clamp(2.2rem,3.6vw,3.4rem)/1.1 Georgia,serif;letter-spacing:-.04em}
+.prose h2{font-size:1.45rem;letter-spacing:-.02em;margin-top:2.6rem}
+.prose p{margin-top:1rem}
+.prose a{text-decoration:underline;overflow-wrap:anywhere}
+/* Landscape page: sample work, four-step process and client feedback */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem 1.5rem;margin-top:2.5rem}
+.work-grid .portfolio-content{padding-top:1rem}
+.work-grid .portfolio-content h3{font-size:1.15rem;letter-spacing:-.02em;margin:0 0 .5rem}
+.work-note{font-size:.85rem}
+.delivery-steps.four{grid-template-columns:repeat(4,1fr);gap:2rem}
+.quotes-section{border-top:1px solid var(--line)}
+.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+.client-quote{margin:0;border:1px solid var(--line);border-radius:.3rem;padding:1.4rem 1.5rem}
+.client-quote blockquote{margin:0;font:400 1.05rem/1.55 Georgia,serif}
+.client-quote figcaption{font-size:.8rem;font-weight:700;margin-top:1rem}
+.client-quote .stars{display:block;letter-spacing:.1em;margin-bottom:.2rem}
+.rated-label{font-size:.75rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;margin-top:2.2rem}
+.rated-list{list-style:none;padding:0;margin:.8rem 0 0;display:flex;flex-wrap:wrap;gap:.6rem;font-size:.8rem}
+.rated-list li{border:1px solid var(--line);border-radius:2rem;padding:.35rem .8rem}
+.viewer-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.viewer-top h2{font-size:1.4rem}
+@media(max-width:1000px){.work-grid{grid-template-columns:1fr 1fr}.delivery-steps.four{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.quote-grid{grid-template-columns:1fr}.delivery-steps.four{grid-template-columns:1fr}}
+@media(max-width:600px){.work-grid{grid-template-columns:1fr}}

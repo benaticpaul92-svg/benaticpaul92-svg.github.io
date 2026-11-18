@@ -1,22 +1,24 @@
-"""Site pages: home, eight service pages, the 50 state pages and the states index.
+"""Site pages: home, eight service pages, the 50 state pages, the states index,
+the privacy notice and the landscape page.
 
 Shared header, consent panel and footer come from tools/site-chrome.html.
 Data:
   tools/data/states.json        state-level content for each state page
   tools/data/local/<slug>.json  city and county permit notes with official sources
+  tools/data/privacy-notice.html  the privacy notice wording
 Run after build-assets.sh (that script's older generator overwrites the home page
 and the Florida page; this one puts them back). Does not alter Ads settings or submit forms.
 """
 from pathlib import Path
 from html import escape
 import hashlib, json, re
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Comment
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://www.jebnengineering.com'
 BASE = BeautifulSoup((ROOT/'tools/site-chrome.html').read_text(), 'html.parser')
 STATES = json.loads((ROOT/'tools/data/states.json').read_text())
-BUILD_DATE = '2026-11-18'
+BUILD_DATE = '2026-11-19'
 
 # Every service page, in the order used for the home page cards and the footer links.
 SERVICE_LINKS = [
@@ -77,14 +79,14 @@ def ext_link(url, label):
     return f'<a href="{escape(url)}" target="_blank" rel="noopener">{clean(label)}</a>'
 
 
-def form(title, state=None, city=None):
+def form(title, state=None, city=None, notes_placeholder=None):
     doc = BeautifulSoup((ROOT/'tools/enquiry-form.html').read_text(), 'html.parser')
     f = doc.form
     f['data-search-enquiry'] = title
     doc.select_one('.form-intro').string = 'Name and email are enough to start. Add project details if you have them.'
     notes = doc.select_one('[name="message"]')
     notes['name'] = 'project_notes'; notes['id'] = 'enquiry-notes'; notes['rows'] = '2'; notes.attrs.pop('required', None)
-    notes['placeholder'] = 'Pool dimensions, existing plans or permit comments…'
+    notes['placeholder'] = notes_placeholder or 'Pool dimensions, existing plans or permit comments…'
     label = doc.select_one('label[for="enquiry-message"]'); label['for'] = 'enquiry-notes'; label.string = 'Project details (optional)'
     hidden = doc.new_tag('input', attrs={'type': 'hidden', 'name': 'message', 'value': title+' quote request.'})
     doc.fieldset.append(hidden)
@@ -177,12 +179,16 @@ def faq_schema(canonical, items):
     return {'@type': 'FAQPage', '@id': canonical+'#faq', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in items]}
 
 
-def shell(path, title, description, body, schema, head_extra='', home=False):
+def shell(path, title, description, body, schema, head_extra='', home=False, nav_home=False):
     header = ''.join(str(BASE.select_one(s)) for s in ['.skip-link', '.utility-bar', '.site-header', '#privacy-choices'])
-    if not home:
-        header = header.replace('Engineering services', 'Drawing services')
     footer_links = ''.join(f'<a href="{href}">{label}</a>' for href, label, _ in SERVICE_LINKS)
+    footer_links += '<a href="/landscape/">Landscape design</a>'
     footer = str(BASE.select_one('.site-footer')).replace('<!--SERVICE_LINKS-->', footer_links)
+    if nav_home:
+        # The page has no quote form or package section, so the menu points at the home page sections.
+        header, footer = (re.sub(r'href="#(services|package|coverage|contact)"', r'href="/#\1"', x) for x in (header, footer))
+    elif not home:
+        header = header.replace('Engineering services', 'Drawing services')
     full_title = title+' | JEBN Engineering'
     canonical = f'{SITE}/{path}/' if path else f'{SITE}/'
     ld = json.dumps(schema, ensure_ascii=False).replace('</', '<\\/')
@@ -432,6 +438,127 @@ def build_home():
     return shell('', title, description, body, schema, head_extra, home=True)
 
 
+# ---------------------------------------------------------------- privacy notice
+
+def build_privacy():
+    """Wraps the notice text in tools/data/privacy-notice.html in the shared layout. The wording is not changed here."""
+    doc = BeautifulSoup((ROOT/'tools/data/privacy-notice.html').read_text(), 'html.parser')
+    for c in doc.find_all(string=lambda t: isinstance(t, Comment)):
+        c.extract()
+    doc.h1['id'] = 'page-heading'
+    doc.h1.find_next_sibling('p')['class'] = 'small'
+    title = 'Privacy Notice'
+    description = 'How JEBN Engineering handles project enquiries, website information and Google Ads measurement choices.'
+    crumbs = crumbs_html([('/', 'Home'), ('', 'Privacy notice')])
+    body = f'<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose">{crumbs}{str(doc).strip()}</div></div></section>'
+    canonical = f'{SITE}/privacy/'
+    schema = {'@context': 'https://schema.org', '@graph': [
+        {'@type': 'WebPage', '@id': canonical+'#page', 'name': title, 'description': description, 'url': canonical, 'isPartOf': {'@type': 'WebSite', 'name': 'JEBN Engineering', 'url': SITE+'/'}},
+        {'@type': 'BreadcrumbList', 'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE+'/'},
+            {'@type': 'ListItem', 'position': 2, 'name': 'Privacy notice', 'item': canonical}]},
+    ]}
+    return shell('privacy', title, description, body, schema, nav_home=True)
+
+
+# ---------------------------------------------------------------- landscape page
+
+LANDSCAPE_ROWS = [
+    ('Landscape master plans', 'Full site design that brings softscape, hardscape, levels and drainage into one buildable master plan.'),
+    ('Hardscape design', 'Paving, walls, pergolas, water features and outdoor living areas, detailed to last in the climate they are built in.'),
+    ('Softscape & planting design', 'Climate-adaptive, water-wise planting plans and schedules. Native and adapted species matched to your site, from US hardiness zones to hot, arid regions.'),
+    ('Technical & construction drawings', 'Setting-out plans, sections, details and specifications for your contractor, and for permit submission where your office asks for landscape drawings.'),
+    ('Irrigation & water-wise design', 'Irrigation layouts for hot, dry climates that keep planting healthy and limit water use.'),
+    ('3D visuals', 'Renders and concept visuals that show the design before it is built. Ask to include them alongside the drawing set.'),
+]
+
+LANDSCAPE_POINTS = [
+    ('Planting matched to the site', 'US hardiness zones, HOA-friendly layouts, or heat-, drought- and salt-tolerant species where the site calls for them.'),
+    ('Soft and hard landscape together', 'Planting, paving and structures are designed as one layout, so the drawings agree with each other.'),
+    ('Visuals and construction drawings', 'The 3D visuals and the build set are prepared by the same designer, from concept to handoff.'),
+    ('Villas to commercial sites', 'Private villas, residential developments and commercial properties, including a planting plan for a 40-acre site.'),
+    ('Remote delivery', 'Drawings and visuals are prepared remotely and delivered as DWG and PDF files.'),
+]
+
+LANDSCAPE_WORK = [
+    ('landscape-frontyard-villa.jpg', 'Front yard landscape design for a private villa', 'Front yard landscape, private villa', 'Full front-yard design integrating planting, hardscape and the entry approach into one buildable plan.'),
+    ('landscape-villa-backyard.jpg', 'Private villa backyard landscape design', 'Private villa backyard', 'Complete backyard design with pergola, planting and outdoor living for a private villa.'),
+    ('landscape-backyard-kids-pool.jpg', 'Backyard landscape with kids play area and pool', 'Backyard, kids’ play area and pool', 'Family backyard integrating a kids’ play area, lawn, planting and a swimming pool.'),
+    ('landscape-hardscape-pool-villa.jpg', 'Hardscape and swimming pool design for a private villa', 'Hardscape and pool, private villa', 'Integrated hardscape and swimming-pool design with water features for a private villa.'),
+    ('landscape-planting-commercial.jpg', 'Planting plan for a 40-acre commercial property', 'Planting plan, 40-acre commercial site', 'Large-scale planting plan and plant palette for a 40-acre commercial property.'),
+    ('landscape-soft-hardscape-plan.jpg', '2D softscape planting plan and hardscape layout', 'Softscape and hardscape plan', 'Coordinated 2D softscape planting plan and hardscape layout.'),
+]
+
+# Client feedback, kept word for word from the earlier landscape page. Do not edit the quotes.
+LANDSCAPE_QUOTES = [
+    ("JEBN did a great job on my pool and landscape project. As a main contractor in Dubai, they're now my go-to for all our pool and landscape solutions.", 'Abdellaziz · Main contractor · Dubai, UAE', False),
+    ("We build hotels and chose JEBN for our pool and outdoor-space design. The pool area had tough constraints — pump-room placement and a tricky overflow — but their experience brought practical solutions and we finished successfully. They're our go-to for pool and landscape technical work.", 'Judy Lee · Hotel developer · Taiwan', False),
+    ("I came to JEBN with an idea for a custom cold-plunge pool and they nailed the technical design from the first concept. With their full solution, I'm now producing custom cold-plunge pools across Europe.", 'Oliver T. · Cold-plunge pools · United Kingdom', False),
+    ("Martin was such a pleasure to work with. His work is professional and detailed, and he was able to accommodate any of my requests and features. He even went out of his way to help with parts of the project that were outside the scope we originally agreed on, making my life easier.", 'Nathan · 5.0★ · Design & drawings', True),
+    ("A wonderful team. They handled the MEP design and engineering for our vanishing-edge water feature with real professionalism — the drawings were spot-on and made construction far easier to execute.", 'Curt Brannon · Vanishing-edge water feature · USA', False),
+    ("We chose JEBN for our swimming-pool technical and construction drawings, and the work was highly professional throughout.", 'Aaron Baribeau · Pool construction drawings · USA', False),
+    ("Easy to work with and did a great job!", 'Charles · Pool MEP · British Columbia, Canada', False),
+]
+LANDSCAPE_RATED = ['5.0★ Cold-water pool design', '5.0★ Pool MEP engineering', '4.9★ Lawrence Residence', '4.7★ Pool design · 5-day turnaround']
+
+LANDSCAPE_SEAL = 'If your permit office asks for sealed landscape or site drawings, send its checklist with your enquiry. Review and sealing arrangements are confirmed for your project state and scope before work is accepted.'
+
+LANDSCAPE_FAQ = [
+    ('What do I receive?', 'DWG and PDF drawing sets, planting plans and schedules, irrigation layouts, bills of quantities and 3D renders, depending on the scope you choose.'),
+    ('Can you design for my climate?', 'Yes. Planting is matched to your site, whether that means US hardiness zones and HOA-friendly layouts or hot, arid conditions. We choose species that perform where you build.'),
+    ('Do you work with clients in other time zones?', 'Yes. We deliver for clients across the USA, UK, Canada and the Gulf, and work around your time zone with digital delivery.'),
+    ('How fast can you deliver?', 'It depends on the scope. Smaller residential plans can be delivered within days. We confirm the timeline with you before work starts.'),
+    ('Can the drawings be sealed for a permit?', LANDSCAPE_SEAL),
+    ('How do we start?', 'Send your scope through the form on this page. We reply with questions or a quote. No payment is needed to ask.'),
+]
+
+STARS = '<span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span>'
+
+
+def build_landscape():
+    title = 'Landscape Design Drawings & Master Plans'
+    description = 'Landscape master plans, hardscape layouts and planting drawings for homeowners, pool contractors and builders. DWG and PDF sets with 3D visuals. Request a quote.'
+    lead = 'Landscape master plans, hardscape layouts and planting drawings for homeowners, pool contractors and builders. Build-ready construction drawings and 3D visuals, with planting matched to your climate.'
+    crumbs = crumbs_html([('/', 'Home'), ('', 'Landscape design')])
+    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What we draw</a><a href="#work">Sample work</a><a href="#faq">Questions</a><a href="#contact">Request a quote ↗</a></div></nav>'
+    links = '<p class="package-links"><strong>Pool work:</strong> <a href="/services/pool-engineering/">Pool engineering plans</a> · <a href="/services/pool-permit-drawings/">Permit drawings</a> · <a href="/pool/">Construction drawings</a></p>'
+    points = ''.join(f'<li><strong>{k}</strong>{v}</li>' for k, v in LANDSCAPE_POINTS)
+    about = f'''<section class="section inputs-section" id="about" aria-labelledby="about-heading"><div class="wrap input-grid"><div><span class="eyebrow">ABOUT THE LANDSCAPE WORK</span><h2 id="about-heading">Designed for the climate.<br>Drawn to be built.</h2><p>JEBN Engineering prepares landscape design drawings alongside its pool engineering work: hardscape, softscape and planting design, with 3D visuals and build-ready technical drawings.</p><p>Benatic Paul Martin, founder and principal designer, has more than 10 years of experience across private villas, residential developments and commercial projects, for clients in the USA, the UK and the Gulf.</p><a class="text-link" href="#contact">Ask about your project ↗</a></div><ul class="input-list">{points}</ul></div></section>'''
+    cards = ''.join(f'''<div class="portfolio-card"><a class="project-preview-link" href="/images/{img}" data-project-preview aria-label="View preview: {escape(name)}"><div class="portfolio-image"><img src="/images/{img}" alt="{escape(alt)}" width="1000" height="750" loading="lazy" decoding="async"><span class="view-tag">View preview</span></div></a><div class="portfolio-content"><h3>{name}</h3><p>{text}</p></div></div>''' for img, alt, name, text in LANDSCAPE_WORK)
+    first = LANDSCAPE_WORK[0][0]
+    work = f'''<section class="section local-section" id="work" aria-labelledby="work-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">SAMPLE WORK</span><h2 id="work-heading">Landscape, hardscape and planting projects.</h2></div><div><p>A selection of landscape, hardscape and planting projects, from private villas to commercial sites.</p><p class="work-note">Produced in AutoCAD, SketchUp, Lumion, Revit and Photoshop. Deliverables include DWG and PDF drawings, planting schedules, irrigation layouts, BOQs and 3D renders.</p></div></div><div class="work-grid">{cards}</div></div></section>
+<dialog class="project-viewer" id="project-viewer" aria-labelledby="viewer-heading"><div class="viewer-top"><h2 id="viewer-heading">Project preview</h2><button class="viewer-close" type="button" data-close-viewer autofocus>Close</button></div><p data-image-status role="status"></p><img src="/images/{first}" alt="" width="1000" height="750" loading="lazy" decoding="async" hidden><p data-description></p><a href="/images/{first}" data-full-image target="_blank" rel="noopener">Open full image in a new tab</a></dialog>'''
+    steps = [
+        ('1. Share your project', 'Send your site plan or photos, style preferences and scope through the form. We reply with questions or a quote.'),
+        ('2. Design and visuals', 'Planting design, hardscape detailing and 3D visuals, prepared in AutoCAD, SketchUp and Lumion.'),
+        ('3. Review and refine', 'You review the design and we revise it to fit your site, climate and budget. Your quote states the revision allowance.'),
+        ('4. Build-ready handoff', 'DWG and PDF drawings, planting schedules, irrigation layouts and BOQs for your contractor.'),
+    ]
+    step_html = ''.join(f'<li><h3>{k}</h3><p>{v}</p></li>' for k, v in steps)
+    process = f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">FROM BRIEF TO BUILD-READY</span><h2 id="delivery-heading">A clear scope.<br>A clear next step.</h2><ol class="delivery-steps four">{step_html}</ol><div class="review-note"><h3>Permits and sealed drawings</h3><p>{LANDSCAPE_SEAL} The local authority decides permit approval.</p></div><div class="actions"><a class="button primary" href="#contact">Request your drawing quote ↗</a></div></div></section>'''
+    quotes = ''.join(f'<figure class="client-quote"><blockquote><p>{escape(q)}</p></blockquote><figcaption>{STARS if stars else ""}{escape(who)}</figcaption></figure>' for q, who, stars in LANDSCAPE_QUOTES)
+    rated = ''.join(f'<li>{escape(r)}</li>' for r in LANDSCAPE_RATED)
+    feedback = f'''<section class="section quotes-section" id="clients" aria-labelledby="clients-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">CLIENT FEEDBACK</span><h2 id="clients-heading">What clients say.</h2></div><div><p>Feedback from clients on pool, water feature and outdoor-space drawing work.</p></div></div><div class="quote-grid">{quotes}</div><p class="rated-label">Recent rated projects</p><ul class="rated-list">{rated}</ul></div></section>'''
+    line = '''<section class="coverage-line" id="coverage" aria-label="Coverage"><div class="wrap"><p><strong>JEBN Engineering · Landscape design drawings, delivered remotely.</strong> Need pool plans as well? Pool engineering plans and permit drawings are available for all 50 states.</p><a href="/services/pool-engineering/">Pool engineering plans</a></div></section>'''
+    facts = [('Timeline', 'Agreed in your quote'), ('File delivery', 'DWG + PDF')]
+    small = 'Delivery time depends on the scope and is confirmed before work starts. Review and sealing, where a permit office asks for it, has a separate timeline.'
+    body = (hero('LANDSCAPE DESIGN DRAWINGS', 'Landscape design drawings.<br><span>Planting, hardscape and master plans.</span>', lead,
+                 form(title, notes_placeholder='Site size, style, planting or hardscape needs…'), crumbs, facts, small) + nav
+            + package_section(None, rows=LANDSCAPE_ROWS, heading='What we draw<br>for your site.', lead='Planting, paving and structures designed together, then drawn as one coordinated set a contractor can build from.', links=links)
+            + about + work + process + feedback
+            + faq_block('BEFORE YOU ASK', 'Questions about landscape drawings.', LANDSCAPE_FAQ)
+            + line)
+    canonical = f'{SITE}/landscape/'
+    schema = {'@context': 'https://schema.org', '@graph': [
+        {'@type': 'Service', '@id': canonical+'#service', 'name': title, 'serviceType': 'Landscape design drawings', 'description': description, 'url': canonical, 'provider': organization()},
+        faq_schema(canonical, LANDSCAPE_FAQ),
+        {'@type': 'BreadcrumbList', 'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE+'/'},
+            {'@type': 'ListItem', 'position': 2, 'name': 'Landscape design', 'item': canonical}]},
+    ]}
+    return shell('landscape', title, description, body, schema)
+
+
 # ---------------------------------------------------------------- state pages
 
 def short_place(name):
@@ -640,5 +767,6 @@ if __name__ == '__main__':
     built += [build_service(p) for p in SERVICES]
     built += [build_state(slug, rec) for slug, rec in sorted(STATES.items())]
     built.append(build_states_index())
+    built += [build_privacy(), build_landscape()]
     update_sitemap(built)
     print('Built', len(built), 'pages')
