@@ -8,17 +8,44 @@ Data:
   tools/data/privacy-notice.html  the privacy notice wording
 Run after build-assets.sh (that script's older generator overwrites the home page
 and the Florida page; this one puts them back). Does not alter Ads settings or submit forms.
+
+Sitemap dates: a page gets BUILD_DATE when it differs from its last committed version, and
+keeps the committed date when it does not, so set BUILD_DATE to the day of the build first.
 """
 from pathlib import Path
 from html import escape
-import hashlib, json, re
+import hashlib, json, re, subprocess
 from bs4 import BeautifulSoup, Comment
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://www.jebnengineering.com'
 BASE = BeautifulSoup((ROOT/'tools/site-chrome.html').read_text(), 'html.parser')
-STATES = json.loads((ROOT/'tools/data/states.json').read_text())
-BUILD_DATE = '2026-11-19'
+ALL_STATES = json.loads((ROOT/'tools/data/states.json').read_text())
+# State pages held offline. While a slug is listed here no page is built for that state,
+# nothing links to it and its address is taken out of the sitemap, so the address answers
+# with the 404 page. To restore a page: put its record back in tools/data/states.json and its
+# notes back in tools/data/local/ (both are in this repository's history), take the slug out
+# of this set, put the state back in assets/geo-route.js and rebuild.
+OFFLINE = {'north-carolina'}
+STATES = {slug: rec for slug, rec in ALL_STATES.items() if slug not in OFFLINE}
+BUILD_DATE = '2026-11-20'   # sitemap date given to pages whose content changed in this build
+CHANGED = set()             # addresses of the pages that differ from their last committed version; filled by shell()
+_GIT = None
+
+
+def last_committed(rel):
+    """Text of a file as last committed, which is what the live site serves after a publish.
+    '' when that commit has no such file, None when git cannot be asked (then the copy on disk is the reference)."""
+    global _GIT
+    if _GIT is None:
+        try:
+            _GIT = subprocess.run(['git', '-C', str(ROOT), 'rev-parse', '-q', '--verify', 'HEAD'], capture_output=True).returncode == 0
+        except OSError:
+            _GIT = False
+    if not _GIT:
+        return None
+    r = subprocess.run(['git', '-C', str(ROOT), 'show', f'HEAD:{rel}'], capture_output=True)
+    return r.stdout.decode('utf-8') if r.returncode == 0 else ''
 
 # Every service page, in the order used for the home page cards and the footer links.
 SERVICE_LINKS = [
@@ -256,13 +283,10 @@ def pool_clients():
     return clients_section('Feedback from clients on pool and water feature drawing work.', POOL_QUOTE_ORDER, visible=2, rated=False)
 
 
-# Sample sheets from past pool projects (images already published on the site). Shown under the hero.
-SAMPLE_SHEETS = [
-    ('pool-hotel-shop-drawings', 'Swimming pool drawing sheet with plan, sections and step detail', 'Plan and sections', 'Pool plan, long section, cross-section and step detail on one sheet.'),
-    ('pool-approval-technical', 'Sample pool layout plan drawing with layout dimensions', 'Pool layout plan', 'Pool position and layout dimensions on the layout plan.'),
-    ('pool-resort-construction', 'Sample swimming pool construction drawing: upper and lower pool with steps and levels', 'Construction plan', 'Upper and lower pool with steps, levels and dimensions.'),
-    ('pool-highrise-kids', 'Sample pool site plan: main pool and splash pool with barrier notes', 'Pool on the site plan', 'Main pool and splash pool on a building floor plan, with barrier and safety notes.'),
-]
+# Sample drawing sets, shown under the hero: every sheet of each set opens in the viewer.
+# The sets, their sheet names and the close-up crops are listed in tools/data/sample-sets.json.
+# The pictures in images/samples/ are made from the owner's VOID-marked PDF sets by tools/build_sample_sheets.py.
+SAMPLE_SETS = json.loads((ROOT/'tools/data/sample-sets.json').read_text())
 
 
 def pool_section_art():
@@ -285,22 +309,37 @@ def pool_section_art():
             '<text x="292" y="12" text-anchor="middle">LENGTH</text><text x="528" y="89">DEPTH</text><text x="304" y="47">WATER LEVEL</text><text x="170" y="76">STEPS</text><text x="386" y="146">MAIN DRAIN</text></g></svg>')
 
 
-def viewer_dialog(first):
-    """Picture preview used by assets/gallery.js (bundled in studio.min.js)."""
-    return f'''<dialog class="project-viewer" id="project-viewer" aria-labelledby="viewer-heading"><div class="viewer-top"><h2 id="viewer-heading">Project preview</h2><button class="viewer-close" type="button" data-close-viewer autofocus>Close</button></div><p data-image-status role="status"></p><img src="/images/{first}" alt="" width="1000" height="750" loading="lazy" decoding="async" hidden><p data-description></p><a href="/images/{first}" data-full-image target="_blank" rel="noopener">Open full image in a new tab</a></dialog>'''
+def viewer_dialog(first, size=(1000, 750), steps=False):
+    """Picture preview used by assets/gallery.js (bundled in studio.min.js). With steps, the viewer moves through a drawing set."""
+    step_row = '<div class="viewer-steps" data-viewer-steps hidden><button type="button" data-viewer-previous aria-label="Previous sheet">← Previous<span> sheet</span></button><span data-viewer-position aria-live="polite"></span><button type="button" data-viewer-next aria-label="Next sheet">Next<span> sheet</span> →</button></div>' if steps else ''
+    return f'''<dialog class="project-viewer{' has-steps' if steps else ''}" id="project-viewer" aria-labelledby="viewer-heading"><div class="viewer-top"><h2 id="viewer-heading">Project preview</h2><button class="viewer-close" type="button" data-close-viewer autofocus>Close</button></div>{step_row}<p data-image-status role="status"></p><img src="/images/{first}" alt="" width="{size[0]}" height="{size[1]}" loading="lazy" decoding="async" hidden><p data-description></p><a href="/images/{first}" data-full-image target="_blank" rel="noopener">Open full image in a new tab</a></dialog>'''
 
 
 def preview_cards(items, tag='View larger'):
     return ''.join(f'''<div class="portfolio-card"><a class="project-preview-link" href="/images/{img}" data-project-preview aria-label="{tag}: {escape(name)}"><div class="portfolio-image"><img src="/images/{img}" alt="{escape(alt)}" width="1000" height="750" loading="lazy" decoding="async"><span class="view-tag">{tag}</span></div></a><div class="portfolio-content"><h3>{name}</h3><p>{text}</p></div></div>''' for img, alt, name, text in items)
 
 
-def sheet_card(i, item, feature=False):
-    img, alt, name, text = item
-    src = f'/images/{img}-feature.webp' if feature else f'/images/{img}-thumb.webp'
-    size = (f'srcset="/images/{img}-thumb.webp 640w, /images/{img}-feature.webp 1000w" sizes="(max-width:760px) 92vw, 720px" width="1000" height="750"'
-            if feature else 'width="640" height="480"')
-    cls = 'feature' if feature else 'small'
-    return f'''<div class="portfolio-card sheet-card {cls}"><a class="project-preview-link" href="/images/{img}.jpg" data-project-preview aria-label="View larger: {escape(name)}"><img src="{src}" alt="{escape(alt)}" {size}{'' if feature else ' loading="lazy"'} decoding="async"><span class="view-tag">View larger</span></a><div class="portfolio-content"><span class="sheet-tag">SHEET {i:02d}</span><h3>{name}</h3><p>{text}</p></div></div>'''
+def sample_set_card(s, first=False):
+    """One drawing set: a large close-up, three small ones, the description and the list of the sheets shown."""
+    key, sheets = s['key'], s['sheets']
+    src = lambda n: f'/images/samples/{key}-{n:02d}.webp'
+    title = lambda n: f'{sheets[n-1][0]} · {sheets[n-1][1]}'
+
+    def opener(n, inner):
+        return (f'<a class="project-preview-link" href="{src(n)}" data-project-preview data-set="{key}" '
+                f'aria-label="View larger: sheet {escape(title(n))}">{inner}</a>')
+
+    lazy = '' if first else ' loading="lazy"'
+    lead = s['lead']
+    lead_img = (f'<img src="/images/samples/{key}-lead-720.webp" srcset="/images/samples/{key}-lead-720.webp 720w, /images/samples/{key}-lead-1200.webp 1200w" '
+                f'sizes="(max-width:760px) 92vw, 580px" alt="{escape(lead["alt"])}" width="1200" height="750"{lazy} decoding="async">')
+    details = ''.join('<li>' + opener(d['sheet'], f'<img src="/images/samples/{key}-detail-{i}.webp" alt="{escape(d["alt"])}" width="440" height="275" loading="lazy" decoding="async">') + '</li>'
+                      for i, d in enumerate(s['details'], 1))
+    rows = ''.join(f'<li><a href="{src(n)}" data-project-preview data-set="{key}" data-title="{escape(title(n))}"><b>{escape(no)}</b> {escape(name)}</a></li>'
+                   for n, (no, name) in enumerate(sheets, 1))
+    count = len(sheets)
+    set_text = f'{s["tag"].capitalize()}. {s["note"]}'
+    return f'''<article class="sample-set" aria-labelledby="set-{key}"><div class="set-lead">{opener(lead['sheet'], lead_img + '<span class="view-tag">View larger</span>')}</div><ul class="set-details">{details}</ul><div class="set-text"><span class="sheet-tag">{s['tag']} · {count} SHEETS</span><h3 id="set-{key}">{escape(s['title'])}</h3><p>{escape(s['text'])} <strong>{escape(s['note'])}</strong></p><a class="text-link" href="{src(1)}" data-project-preview data-set="{key}">View all {count} sheets →</a><details class="sheet-index"><summary>Sheet list</summary><ol data-sheet-list="{key}" data-set-text="{escape(set_text)}">{rows}</ol></details></div></article>'''
 
 
 AUDIENCE_ICONS = (
@@ -317,9 +356,9 @@ def audience_section(state=None):
 
 
 def samples_section():
-    feature = sheet_card(1, SAMPLE_SHEETS[0], True)
-    side = ''.join(sheet_card(i, item) for i, item in enumerate(SAMPLE_SHEETS[1:], 2))
-    return f'''<section class="section samples-section" id="samples" aria-labelledby="samples-heading"><div class="wrap"><div class="samples-head"><div><span class="eyebrow">SAMPLE SHEETS</span><h2 id="samples-heading">Sample sheets from past pool projects.</h2><p>Your set is drawn for your site, the code edition your state enforces and the checklist from your permit office. Select a sheet to see it larger.</p></div>{pool_section_art()}</div><div class="sheet-grid">{feature}<div class="sheet-side">{side}</div></div></div></section>{viewer_dialog(SAMPLE_SHEETS[0][0]+'.jpg')}'''
+    cards = ''.join(sample_set_card(s, first=(i == 0)) for i, s in enumerate(SAMPLE_SETS))
+    first = SAMPLE_SETS[0]
+    return f'''<section class="section samples-section" id="samples" aria-labelledby="samples-heading"><div class="wrap"><div class="samples-head"><div><span class="eyebrow">SAMPLE DRAWINGS</span><h2 id="samples-heading">Sample drawing sets.</h2><p>Sheets from two drawing sets. Client and site names are removed and each sheet is marked VOID. Select a picture to see the sheet larger, then step through the set.</p></div>{pool_section_art()}</div><div class="set-grid">{cards}</div></div></section>{viewer_dialog(f"samples/{first['key']}-01.webp", first['sheet_px'], steps=True)}'''
 
 
 ICON = lambda d: f'<svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{d}</svg>'
@@ -376,6 +415,15 @@ def shell(path, title, description, body, schema, head_extra='', home=False, nav
     html = html.replace('↗', '→')
     out = ROOT/out if out else ROOT/path/'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
+    # The sitemap date moves only when the page itself differs from its last committed version;
+    # a new asset stamp (?v=...) alone does not count. Comparing with the commit, not with the copy
+    # on disk, gives the same answer when a build is repeated or when another tool rewrote the page.
+    unstamped = lambda s: re.sub(r'\?v=[0-9a-f]{12}', '', s)
+    before = last_committed(out.relative_to(ROOT).as_posix())
+    if before is None:
+        before = out.read_text() if out.exists() else ''
+    if not noindex and unstamped(before) != unstamped(html):
+        CHANGED.add(canonical)
     out.write_text(html)
     return canonical
 
@@ -456,20 +504,17 @@ SERVICES = [
         ('Hydraulics & equipment', 'Pipe sizing, TDH calculations, equipment schedules and the equipment layout.'),
         ('Site & layout', 'Pool position, setbacks, easements, elevations and drainage as your permit office requires.'),
         ('Barrier & electrical details', 'Barrier, bonding and clearance details drawn to the code edition your jurisdiction enforces.'),
-        ('Seal & signature', 'Sealed and signed by the responsible Professional Engineer licensed in the project state. Digital seals are supplied where your permit office accepts them.')],
+        ('Seal & signature', 'Sealed and signed by the responsible Professional Engineer licensed in the project state.')],
       extra=('HOW SEALING WORKS', 'How PE sealing works.', 'The seal is the engineer’s statement of responsibility for the engineering on the sheet. Each state sets its own rules for it, so we confirm the arrangement for your project state before work is accepted.', [
         ('Scope confirmed first', 'We confirm the project state, the permit office’s requirements and the responsible engineer before work begins.'),
         ('One coordinated package', 'Structural, hydraulic and site drawings are prepared as one set, so the engineer works from a complete package.'),
-        ('Responsible charge', 'The Professional Engineer licensed in the project state takes responsible charge of the engineering and applies the seal and signature.'),
-        ('Sealed set delivered', 'You receive the sealed PDF set for submission, plus DWG files of the drawings.')]),
+        ('Responsible charge', 'The Professional Engineer licensed in the project state takes responsible charge of the engineering and applies the seal and signature.')]),
       faq_heading='Questions about PE-stamped plans.',
       faq=[
-        ('Do I need to find my own engineer?', 'No. Where sealing is part of your agreed package, the responsible Professional Engineer is confirmed with your quote. If you already work with an engineer, we can prepare the drawings for that engineer instead.'),
         ('Which states do you cover?', 'We take projects in all 50 states. The engineer must be licensed in the project state, and we confirm that arrangement for your project before work is accepted.'),
         ('Who is responsible for the sealed drawings?', 'The sealing engineer, who takes responsible charge of the engineering under their state license. Your quote names the scope the seal covers.'),
         ('How long does sealing take?', 'Residential drawing preparation takes 2 business days after we receive all project inputs. The engineer’s review and sealing have a separate timeline, which we confirm in your quote.'),
-        ('What if plan review comes back with comments?', 'Send us the comments. Your quote states the revision support included, and we identify the sheets and calculations each comment affects.'),
-        ('Do you provide digital seals?', 'Digital seals are supplied where your permit office accepts them. Tell us if your office asks for wet-sealed prints so we can confirm that before work begins.')]),
+        ('What if plan review comes back with comments?', 'Send us the comments. Your quote states the revision support included, and we identify the sheets and calculations each comment affects.')]),
  dict(path='services/pool-hydraulic-design', title='Pool Hydraulic Design & TDH Calculations',
       h1='Pool hydraulic design.<br><span>TDH calculations and pipe sizing.</span>',
       kicker='USA / POOL HYDRAULIC DESIGN',
@@ -611,7 +656,7 @@ def build_home():
     services = f'''<section class="section local-section" id="services" aria-labelledby="services-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">RESIDENTIAL POOL ENGINEERING SERVICES</span><h2 id="services-heading">Pool engineering and drafting services.</h2></div><div><p>Engineering plans, calculations and permit drawings for homeowners, pool contractors and builders. Choose a complete package or the technical support your team needs.</p><a class="text-link" href="#contact">Get my quote ↗</a></div></div><nav class="state-cards four" aria-label="Services">{cards}</nav></div></section>'''
     state_links = ''.join(f'<a href="/states/{s}/">{name_of(s)}</a>' for s in sorted(STATES))
     state_options = ''.join(f'<option value="/states/{s}/">{name_of(s)}</option>' for s in sorted(STATES))
-    states = f'''<section class="section local-section" id="coverage" aria-labelledby="coverage-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · ALL 50 STATES</span><h2 id="coverage-heading">Pool permit drawings by state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties with links to the official sources, and the quote form.</p><p>Your city or county is not listed? Name the permit office in your request. We draw to the checklist it publishes.</p><a class="text-link" href="/states/">Browse all state pages ↗</a></div></div><div class="state-jump"><label for="state-jump">Go to your state</label><select id="state-jump" data-state-jump><option value="">Choose a state…</option>{state_options}</select></div><noscript><style>.state-jump{{display:none}}</style></noscript><details class="state-fold" data-open-wide><summary>Show all 50 states</summary><nav class="state-grid wide" aria-label="State pages">{state_links}</nav></details></div></section>'''
+    states = f'''<section class="section local-section" id="coverage" aria-labelledby="coverage-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · STATE PAGES</span><h2 id="coverage-heading">Pool permit drawings by state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties with links to the official sources, and the quote form.</p><p>Your city or county is not listed? Name the permit office in your request. We draw to the checklist it publishes.</p><a class="text-link" href="/states/">Browse all state pages ↗</a></div></div><div class="state-jump"><label for="state-jump">Go to your state</label><select id="state-jump" data-state-jump><option value="">Choose a state…</option>{state_options}</select></div><noscript><style>.state-jump{{display:none}}</style></noscript><details class="state-fold" data-open-wide><summary>Show all state pages</summary><nav class="state-grid wide" aria-label="State pages">{state_links}</nav></details></div></section>'''
     line = '''<section class="coverage-line" aria-label="USA coverage"><div class="wrap"><p><strong>JEBN Engineering.</strong> We take residential pool projects in all 50 states.</p><a href="/states/">View state coverage</a></div></section>'''
     body = (hero('USA / ALL 50 STATES / RESIDENTIAL POOLS', 'Pool engineering plans<br><span>for your permit.</span>', lead, form('Residential Pool Engineering')) + nav
             + samples_section() + audience_section() + pool_clients() + services
@@ -691,7 +736,7 @@ def build_privacy():
 
 def build_404():
     links = [('/', 'Home'), ('/services/pool-engineering/', 'Pool engineering plans'), ('/services/pool-permit-drawings/', 'Pool permit drawings'),
-             ('/pool/', 'Pool construction drawings'), ('/states/', 'All 50 state pages'), ('/landscape/', 'Landscape design'),
+             ('/pool/', 'Pool construction drawings'), ('/states/', 'All state pages'), ('/landscape/', 'Landscape design'),
              ('/resources/pool-project-checklist/', 'Project input checklist')]
     lis = ''.join(f'<li><a href="{h}">{t}</a></li>' for h, t in links)
     body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose"><span class="eyebrow">PAGE NOT FOUND</span><h1 id="page-heading">This page could not be found.</h1><p>The address may have changed or the page may have moved. Use one of these links, or send us your project details.</p><ul class="not-found-links">{lis}</ul><div class="actions"><a class="button primary" href="/#contact">Get my quote <span aria-hidden="true">→</span></a></div>{state_directory('Or choose your state')}</div></div></section>'''
@@ -745,7 +790,7 @@ def build_landscape():
     nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What we draw</a><a href="#work">Sample work</a><a href="#faq">Questions</a><a href="#contact">Get my quote ↗</a></div></nav>'
     links = '<p class="package-links"><strong>Pool work:</strong> <a href="/services/pool-engineering/">Pool engineering plans</a> · <a href="/services/pool-permit-drawings/">Permit drawings</a> · <a href="/pool/">Construction drawings</a></p>'
     points = ''.join(f'<li><strong>{k}</strong>{v}</li>' for k, v in LANDSCAPE_POINTS)
-    about = f'''<section class="section inputs-section" id="about" aria-labelledby="about-heading"><div class="wrap input-grid"><div><span class="eyebrow">ABOUT THE LANDSCAPE WORK</span><h2 id="about-heading">Designed for the climate.<br>Drawn to be built.</h2><p>JEBN Engineering prepares landscape design drawings alongside its pool engineering work: hardscape, softscape and planting design, with 3D visuals and build-ready technical drawings.</p><p>Benatic Paul Martin, founder and principal designer, has more than 10 years of experience across private villas, residential developments and commercial projects, for clients in the USA, the UK and the Gulf.</p><a class="text-link" href="#contact">Ask about your project ↗</a></div><ul class="input-list">{points}</ul></div></section>'''
+    about = f'''<section class="section inputs-section" id="about" aria-labelledby="about-heading"><div class="wrap input-grid"><div><span class="eyebrow">ABOUT THE LANDSCAPE WORK</span><h2 id="about-heading">Designed for the climate.<br>Drawn to be built.</h2><p>JEBN Engineering prepares landscape design drawings alongside its pool engineering work: hardscape, softscape and planting design, with 3D visuals and build-ready technical drawings.</p><p>Benatic Paul Martin, founder and principal designer, has worked on private villas, residential developments and commercial projects for clients in the USA, the UK and the Gulf.</p><a class="text-link" href="#contact">Ask about your project ↗</a></div><ul class="input-list">{points}</ul></div></section>'''
     cards = preview_cards(LANDSCAPE_WORK, 'View preview')
     work = f'''<section class="section local-section" id="work" aria-labelledby="work-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">SAMPLE WORK</span><h2 id="work-heading">Landscape, hardscape and planting projects.</h2></div><div><p>A selection of landscape, hardscape and planting projects, from private villas to commercial sites.</p><p class="work-note">Produced in AutoCAD, SketchUp, Lumion, Revit and Photoshop. Deliverables include DWG and PDF drawings, planting schedules, irrigation layouts, BOQs and 3D renders.</p></div></div><div class="work-grid">{cards}</div></div></section>''' + viewer_dialog(LANDSCAPE_WORK[0][0])
     steps = [
@@ -886,13 +931,7 @@ def requirements_section(state, rec):
 
 
 def faq_items(state, rec):
-    items = []
-    for q, a in rec['faq']:
-        if re.match(r'Are your .+ pool plans sealed by an? .+-licensed engineer\?$', q):
-            q = f'Can my {state} pool plans be sealed by an engineer licensed in {state}?'
-            a = (f'Yes. When your permit office requires a seal, a Professional Engineer licensed in {state} reviews the package, takes responsible charge '
-                 'and applies the seal. PE review and sealing is quoted as part of your package, and we confirm the responsible engineer before work begins.')
-        items.append((q, a))
+    items = [(q, a) for q, a in rec['faq']]
     items.append(('What if plan review comes back with comments?', PLAN_REVIEW_ANSWER))
     items.append((f'How fast can you prepare {state} pool drawings?', 'Residential drawing preparation takes 2 business days after we receive all project inputs. PE review and sealing, and the permit office’s own review, have separate timelines.'))
     items.append((f'Do you work to my city or county’s checklist in {state}?', 'Yes. Send the submittal checklist or the review comments from your permit office. Your quote lists the drawings and calculations that respond to it.'))
@@ -936,8 +975,9 @@ def build_state(slug, rec):
     links = '<p class="package-links"><a href="/services/pool-engineering/">Pool engineering plans</a> · <a href="/services/pool-permit-drawings/">Permit drawings</a> · <a href="/pool/">Construction drawings</a></p>'
     faqs = faq_items(state, rec)
     nearby = ''
-    if rec.get('nearby'):
-        nearby = '<p class="nearby-line"><strong>Nearby states:</strong> '+' · '.join(f'<a href="{escape(h)}">{clean(t)}</a>' for h, t in rec['nearby'])+'</p>'
+    near = [(h, t) for h, t in rec.get('nearby', []) if h.strip('/').split('/')[-1] not in OFFLINE]   # no link to a page that is offline
+    if near:
+        nearby = '<p class="nearby-line"><strong>Nearby states:</strong> '+' · '.join(f'<a href="{escape(h)}">{clean(t)}</a>' for h, t in near)+'</p>'
     body = (hero(f'{state.upper()} / RESIDENTIAL POOL ENGINEERING', h1, lead, form(title, state, CITY[slug]), crumbs, facts, strip=HERO_STRIP) + nav + samples_section()
             + local_section(state, local) + audience_section(state) + pool_clients()
             + package_section(pe, links=links)
@@ -977,9 +1017,9 @@ def build_states_index():
     crumbs = '<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">States</span></nav>'
     lead = 'Pool engineering plans, permit drawings and construction details for homeowners, pool contractors and builders in all 50 states. Each state page lists city and county permit notes with links to the official sources.'
     pe = PE_NATIONAL
-    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#all-states">All 50 states</a><a href="#package">Drawing package</a><a href="#delivery">Delivery & PE review</a><a href="#contact">Get my quote ↗</a></div></nav>'
-    grid = f'''<section class="section local-section" id="all-states" aria-labelledby="states-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · ALL 50 STATES</span><h2 id="states-heading">Choose your state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties, and the quote form. Your city or county is not listed? Name the permit office in your request.</p></div></div><nav class="state-cards" aria-label="State pages">{"".join(cards)}</nav></div></section>'''
-    body = (hero('USA / POOL PERMIT DRAWINGS BY STATE', 'Pool permit drawings.<br><span>State by state.</span>', lead, form('Pool Permit Drawings by State'), crumbs, second=('See all 50 states ↓', '#all-states')) + nav
+    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#all-states">All state pages</a><a href="#package">Drawing package</a><a href="#delivery">Delivery & PE review</a><a href="#contact">Get my quote ↗</a></div></nav>'
+    grid = f'''<section class="section local-section" id="all-states" aria-labelledby="states-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · STATE PAGES</span><h2 id="states-heading">Choose your state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties, and the quote form. Your city or county is not listed? Name the permit office in your request.</p></div></div><nav class="state-cards" aria-label="State pages">{"".join(cards)}</nav></div></section>'''
+    body = (hero('USA / POOL PERMIT DRAWINGS BY STATE', 'Pool permit drawings.<br><span>State by state.</span>', lead, form('Pool Permit Drawings by State'), crumbs, second=('See all state pages ↓', '#all-states')) + nav
             + grid + package_section(pe) + delivery_section(pe)
             + '''<section class="coverage-line" id="coverage" aria-label="USA coverage"><div class="wrap"><p><strong>JEBN Engineering.</strong> We take residential pool projects in all 50 states.</p><a href="/services/pool-engineering/">Pool engineering plans</a></div></section>''')
     canonical = f'{SITE}/states/'
@@ -993,17 +1033,39 @@ def build_states_index():
     return shell('states', title, description, body, schema)
 
 
-def update_sitemap(urls):
+def update_sitemap(urls, removed=()):
+    """Adds new pages, gives BUILD_DATE to the pages that differ from their last committed version,
+    gives every other page back the date it has in the committed sitemap, and drops the addresses in `removed`."""
     p = ROOT/'sitemap.xml'
     xml = p.read_text()
+    committed = dict(re.findall(r'<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>', last_committed('sitemap.xml') or ''))
+    entry = lambda u: re.compile(r'  <url>\s*<loc>'+re.escape(u)+r'</loc>.*?</url>\n', re.S)
     for u in urls:
-        block = f'  <url>\n    <loc>{u}</loc>\n    <lastmod>{BUILD_DATE}</lastmod>\n  </url>\n'
-        pat = re.compile(r'  <url>\s*<loc>'+re.escape(u)+r'</loc>.*?</url>\n', re.S)
-        if pat.search(xml):
-            xml = pat.sub(block, xml)
-        else:
+        day = BUILD_DATE if u in CHANGED else committed.get(u)
+        block = f'  <url>\n    <loc>{u}</loc>\n    <lastmod>{day or BUILD_DATE}</lastmod>\n  </url>\n'
+        if not entry(u).search(xml):
             xml = xml.replace('</urlset>', block+'</urlset>')
+        elif day:
+            xml = entry(u).sub(block, xml)
+    for u in removed:
+        xml = entry(u).sub('', xml)
     p.write_text(xml)
+
+
+def remove_offline_pages():
+    """Deletes the built page of each state in OFFLINE and returns the addresses to drop from the sitemap."""
+    gone = []
+    for slug in sorted(OFFLINE):
+        folder = ROOT/'states'/slug
+        (folder/'index.html').unlink(missing_ok=True)
+        if folder.is_dir():
+            (folder/'.DS_Store').unlink(missing_ok=True)   # Finder leaves this file in a folder it has opened
+            if any(folder.iterdir()):
+                print('Not removed, it holds other files:', folder)
+            else:
+                folder.rmdir()
+        gone.append(f'{SITE}/states/{slug}/')
+    return gone
 
 
 if __name__ == '__main__':
@@ -1014,5 +1076,5 @@ if __name__ == '__main__':
     built.append(build_states_index())
     built += [build_privacy(), build_landscape(), build_checklist()]
     build_404()   # served for any missing address; not listed in the sitemap
-    update_sitemap(built)
-    print('Built', len(built), 'pages')
+    update_sitemap(built, remove_offline_pages())
+    print('Built', len(built), 'pages;', len(CHANGED), 'changed')

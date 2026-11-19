@@ -1,0 +1,56 @@
+[
+ {
+  "key": "pool-spa",
+  "tag": "POOL AND SPA SET",
+  "title": "Skimmer pool and spa on a lakeside lot",
+  "text": "Pool and spa plan with pile layout, sections and details, plumbing routing, electrical layout, spa and filtration schematics and fitting details.",
+  "note": "Sample, not for construction.",
+  "sheet_px": [3200, 2260],
+  "skip_pages": [8],
+  "lead": {"sheet": 1, "box": [0.08, 0.03, 0.64], "alt": "Pool and spa plan with dimensions, benches, steps and pile positions"},
+  "details": [
+   {"sheet": 2, "box": [0.10, 0.02, 0.42], "alt": "Longitudinal section through the spa and pool shell"},
+   {"sheet": 3, "box": [0.05, 0.03, 0.60], "alt": "Pool and spa plumbing routing plan with pipe runs in color"},
+   {"sheet": 5, "box": [0.05, 0.38, 0.52], "alt": "Isometric view of the pool equipment and pipework"}
+  ],
+  "sheets": [
+   ["P-01", "Pool and spa plan, pile layout"],
+   ["P-02", "Pool sections and details"],
+   ["P-03", "Pool and spa plumbing routing"],
+   ["P-04", "Pool electrical layout"],
+   ["P-05", "Spa plumbing schematic and isometric"],
+   ["P-06", "Pool plumbing and filtration schematic"],
+   ["P-07", "Pool fitting and fixing details"]
+  ]
+ },
+ {
+  "key": "water-feature",
+  "tag": "WATER FEATURE SET",
+  "title": "Entrance fountain for a Florida community",
+  "text": "Site and demolition plan, layout, sections, elevations and 3D views, details, lighting and electrical, plumbing, equipment pad, hydraulic calculation, general notes and foundation details.",
+  "note": "Preliminary review set, unsigned and unsealed. Sample, not for construction.",
+  "sheet_px": [3200, 2133],
+  "lead": {"sheet": 11, "box": [0.03, 0.03, 0.60], "alt": "Isometric view of the fountain basins with the recirculation pipework"},
+  "details": [
+   {"sheet": 3, "box": [0.10, 0.08, 0.66], "alt": "Layout plan of the two-tier fountain"},
+   {"sheet": 4, "box": [0.03, 0.03, 0.62], "alt": "Section through the fountain basins, walls and foundation"},
+   {"sheet": 5, "box": [0.02, 0.03, 0.44], "alt": "3D view of the fountain on the entrance island"}
+  ],
+  "sheets": [
+   ["WF-000", "Title sheet"],
+   ["WF-100", "Site plan and demolition plan"],
+   ["WF-101", "Water feature layout plan"],
+   ["WF-102", "Water feature sections"],
+   ["WF-103", "Water feature elevations and 3D views"],
+   ["WF-104", "Water feature fitting details"],
+   ["WF-105", "Water feature construction details"],
+   ["WF-106", "Lighting layout and electrical"],
+   ["WF-107", "Recirculation plumbing plan"],
+   ["WF-108", "Equipment pad layout and section"],
+   ["WF-109", "Recirculation plumbing and equipment isometric"],
+   ["WF-110", "Equipment schedules and hydraulic calculation"],
+   ["WF-111", "General notes"],
+   ["S-101", "Foundation plan, sections and details"]
+  ]
+ }
+]
