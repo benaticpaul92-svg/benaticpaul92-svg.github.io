@@ -61,7 +61,7 @@
   download.hidden = false;
   download.addEventListener('click', () => {
     syncBrief();
-    const content = `JEBN ENGINEERING — RESIDENTIAL POOL PROJECT BRIEF\n\n${message.value}\n\nProject location: ${city.value || selection().state}\n\nDrawings: DWG + PDF. Residential drawing preparation: 2 business days after all project inputs. PE review and authority approval have separate timelines.\n\nThis is a project enquiry brief, not an engineering design or agreed quote.\nhttps://www.jebnengineering.com/\n`;
+    const content = `JEBN — POOL PROJECT BRIEF\n\n${message.value}\n\nProject location: ${city.value || selection().state}\n\nDrawings: DWG + PDF. Residential drawing preparation: 2 business days after all project inputs. JEBN prepares the drawings and does not seal them. An engineer's review and the authority's approval take additional time.\n\nThis is a project enquiry brief, not a design or an agreed quote.\nhttps://www.jebnengineering.com/\n`;
     const url = URL.createObjectURL(new Blob([content], {type:'text/plain;charset=utf-8'}));
     const link = document.createElement('a'); link.href=url; link.download='JEBN-residential-pool-brief.txt';
     document.body.append(link); link.click(); link.remove();

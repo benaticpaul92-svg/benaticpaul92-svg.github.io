@@ -12,12 +12,13 @@ INPUTS
 [ ] Equipment preferences and known constraints
 
 SCOPE
-[ ] Engineering plans, calculations, permit or shop drawings
-[ ] PE review/sealing requirements to confirm
+[ ] Permit drawings, construction drawings, structural sheets, plumbing or shop drawings
+[ ] Does the permit office ask for an engineer's seal? Do you already have an engineer?
 [ ] Target date
 
 Residential drawing preparation: 2 business days after all project inputs.
-PE review and permitting authority approval timelines are separate.
+JEBN prepares the drawings and does not seal them. An engineer's review and seal,
+where your permit needs one, and the permitting authority's approval take additional time.
 DWG and PDF supplied for the agreed drawing package.
 
 Start an enquiry: https://www.jebnengineering.com/#contact

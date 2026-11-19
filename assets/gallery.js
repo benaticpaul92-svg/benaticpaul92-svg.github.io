@@ -25,7 +25,7 @@
     // A large sheet takes a moment to decode after it has loaded: keep the notice until it can be painted.
     const reveal = () => { if (picture.src === new URL(href, location.href).href) { picture.hidden = false; notice.hidden = true; } };
     picture.onload = () => { picture.decode ? picture.decode().then(reveal, reveal) : reveal(); };
-    picture.onerror = () => { notice.textContent = "This preview could not load. You can request sample drawings through the enquiry form."; };
+    picture.onerror = () => { notice.textContent = "This preview could not load. You can request sample drawings through the quote form."; };
     // Hidden lazy images may never start loading. A viewer request is explicit.
     picture.loading = "eager";
     picture.src = href;
