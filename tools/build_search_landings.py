@@ -563,7 +563,7 @@ SERVICES = [
         ('Soil & groundwater basis', 'The sheets state the soil basis the engineer gives: your geotechnical report where one exists, or the bearing value the engineer assumes.'),
         ('Raised walls & special edges', 'Raised bond beams, retaining conditions, vanishing edges, perimeter overflow and attached spas.'),
         ('Code references & notes', 'Design loads, concrete and steel notes and code references, as the engineer specifies them for the edition your jurisdiction enforces.'),
-        ('Engineer’s mark-ups', 'Changes from your engineer’s review mark-ups are drawn within the revisions in your quote. The engineer seals the sheets.')],
+        ('Engineer’s mark-ups', 'Changes from your engineer’s mark-ups are drawn within the revisions in your quote. The engineer directs the engineering throughout and seals the sheets.')],
       inputs=('Send the pool and the engineer’s design.', 'A dimensioned layout with depths is enough to start the drafting. The engineer’s sketches, calculations or standard details, a soils report and the survey let us draw the structural sheets without follow-up questions.', [
         ('Pool layout', 'Shape, dimensions, depths, steps, benches and raised features.'),
         ('The design', 'Sketches, calculations, standard details or mark-ups from your engineer, or your builder’s standard steel details.'),
@@ -658,9 +658,9 @@ SERVICES = [
       h1='Pool drawings for your engineer.<br><span>Drafted to the engineer’s design.</span>',
       kicker='USA / DRAFTING FOR THE ENGINEER OF RECORD',
       meta='Pool drawing sets drafted for your engineer of record: plans, sections, steel details and schedules drawn to the engineer’s design. DWG and PDF.',
-      lead='For engineers, and for builders and owners who have one. We draft the pool drawing set to your engineer’s design and mark-ups. The engineer directs the work, reviews every sheet and seals the set. JEBN does not seal drawings.',
+      lead='For engineers, and for builders and owners who have one. We draft the pool drawing set to your engineer’s design and mark-ups. The engineer directs the work throughout and seals the set. JEBN does not seal drawings.',
       facts=[('JEBN', 'Drafts the set'), ('Your engineer', 'Directs and seals'), ('File delivery', 'DWG + PDF')],
-      small='Your quote lists the sheets, the revisions included and the delivery date. The engineer’s review and the permit office’s review take additional time.',
+      small='Your quote lists the sheets, the revisions included and the delivery date. The engineer’s work and the permit office’s review take additional time.',
       package_heading='What we draft<br>for the engineer.',
       package_lead='One coordinated set, so the engineer and the plan reviewer work from the same drawings.',
       rows=[
@@ -668,21 +668,21 @@ SERVICES = [
         ('Plumbing & equipment', 'Piping schematic, pipe sizes, equipment schedule and layout, as given by the engineer or the builder.'),
         ('Site & layout', 'Pool position, setbacks, easements, elevations and drainage as your permit office requires.'),
         ('Barrier & electrical details', 'Barrier, bonding and clearance details drawn to the code edition your jurisdiction enforces.'),
-        ('Mark-ups & revisions', 'Changes from the engineer’s review mark-ups and the permit office’s comments are drawn within the revisions in your quote.')],
+        ('Mark-ups & revisions', 'Changes from the engineer’s mark-ups and the permit office’s comments are drawn within the revisions in your quote.')],
       extra=('HOW IT WORKS', 'How drafting for an engineer works.', 'The seal is the engineer’s statement of responsibility for the engineering on the sheet. So the engineer leads and we draw.', [
         ('The engineer leads', 'Design decisions, calculations and the code basis come from the engineer of record.'),
         ('We draw', 'Plans, sections, details and schedules are drafted to that design, on the title block and CAD standards you choose.'),
-        ('The engineer reviews and seals', 'The engineer checks every sheet, marks the changes and seals the final set. JEBN never places a seal on a sheet.')]),
-      inputs=('Send the design and the mark-ups.', 'The engineer’s sketches, calculations or standard details and a dimensioned pool layout are enough to start. Send the permit office’s checklist too, so the set answers it.', [
+        ('The engineer directs and seals', 'The engineer stays in charge of the engineering while we draw, marks changes as the work goes, and seals the final set. JEBN never places a seal on a sheet.')]),
+      inputs=('Send the design and the mark-ups.', 'The engineer’s sketches, calculations or standard details and a dimensioned pool layout are enough to start. Send the permit office’s checklist too, so we can lay out the sheets to match the drawing items it lists.', [
         ('The engineer’s design', 'Sketches, calculations, standard details and notes from the engineer of record.'),
         ('Pool layout', 'Shape, dimensions, depths and features, as a sketch or an earlier drawing.'),
         ('Site information', 'Survey or site plan and the geotechnical report, if there is one.'),
         ('Standards', 'Title block, sheet size and CAD standards to follow.')]),
       faq_heading='Questions from engineers and builders.',
       faq=[
-        ('Do you work directly with our engineer?', 'Yes. We take the design, sketches and mark-ups from the engineer and send the sheets back for review until the engineer is satisfied.'),
+        ('Do you work directly with our engineer?', 'Yes. We take the design, sketches and mark-ups from the engineer, and we revise the sheets as the engineer directs.'),
         ('Whose title block goes on the drawings?', 'The one you choose: the engineer’s, the builder’s or a project title block. The engineer applies the seal and signature. JEBN never places an engineer’s seal on a sheet.'),
-        ('Can you prepare the structural calculations?', 'No. Calculations are the engineer’s work. We set out the engineer’s results on the sheets, such as schedules, tables and notes.'),
+        ('Can you prepare the structural calculations?', 'No. Structural calculations are the engineer’s work, and the hydraulic design is the engineer’s or your pool builder’s. We set out their results on the sheets, such as schedules, tables and notes.'),
         ('Who is responsible for the sealed drawings?', 'The engineer of record, who directs the engineering and seals the set under their state license.'),
         ('What if plan review comes back with comments?', PLAN_REVIEW_ANSWER),
         ('We do not have an engineer. Can you still help?', 'We can draft the set, and we can ask an engineer licensed in your state to take your project. That engineer decides whether to take it and sets the fee for the engineering. JEBN does not seal drawings.')]),
@@ -737,7 +737,7 @@ def build_service(p):
 
 SEAL_ROLES = [
     ('Your permit office', 'Applies your state’s law and its building code. It tells you whether your pool needs sealed plans, and it reviews the set.'),
-    ('The engineer of record', 'A Professional Engineer licensed in your state. Directs the engineering, checks the drawings and calculations, and seals them.'),
+    ('The engineer of record', 'A Professional Engineer licensed in your state. Directs the engineering while the drawings are prepared, and seals the drawings and calculations.'),
     ('JEBN', 'Drafts the drawing set to the engineer’s design, your builder’s details and the permit office’s checklist. JEBN does not seal drawings.'),
     ('You or your builder', 'Choose the engineer and agree on the fee for the engineering with that engineer.'),
 ]
@@ -751,7 +751,7 @@ SEAL_STEPS = [
     ('The engineer takes the project', 'An engineer licensed in your state agrees to be the engineer of record. Until then nobody can promise you a sealed set.'),
     ('The engineer sets the design', 'Shell thickness, steel, the soil basis and the calculations come from the engineer.'),
     ('JEBN drafts the set', 'We draw the plans, sections and details to that design and to your permit office’s checklist.'),
-    ('The engineer reviews and seals', 'The engineer checks the set, asks for changes, and seals and signs it when satisfied.'),
+    ('The engineer directs and seals', 'The engineer stays in charge of the engineering while we draw, marks changes as the work goes, and seals and signs the set.'),
 ]
 SEAL_FAQ = [
     ('Does JEBN seal or stamp pool drawings?', f'No. {NOT_A_FIRM} JEBN prepares the drawings. Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set.'),
@@ -826,6 +826,25 @@ TOPIC_SOURCES_NOTE = ('The statements on this page were checked against these of
                       'and change, so confirm what applies with your permit office. This page is general information, not legal advice.')
 # On these two the project already has its own engineer or architect, so the page does not offer to ask one.
 TOPIC_NO_OFFER = {'rooftop-elevated', 'commercial-plan-review'}
+# On this page the reviewer is often a health department, so the shared steps say "reviewing agency".
+TOPIC_AGENCY = {'commercial-plan-review'}
+AGENCY_WORDS = [('what your permit office asks for', 'what the reviewing agency asks for'),
+                ('Your permit office decides approval and timing', 'The reviewing agency decides approval and timing'),
+                ('The permit office decides approval', 'The reviewing agency decides approval'),
+                # The state rules this page cites accept an engineer or an architect.
+                ('Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set.',
+                 'Where your permit office or the reviewing agency requires a seal, a Professional Engineer licensed in your state, or an architect where the rule allows one, '
+                 'must direct the engineering and seal the set.')]
+
+
+def topic_delivery(t):
+    markup = delivery_section(offer=t['key'] not in TOPIC_NO_OFFER, steps=TOPIC_STEPS)
+    if t['key'] in TOPIC_AGENCY:
+        for old, new in AGENCY_WORDS:
+            if markup.count(old) != 1:  # not an assert: python -O would skip it and leave the old words in place
+                raise SystemExit(f'topic_delivery: expected one {old!r} in the delivery section, found {markup.count(old)}')
+            markup = markup.replace(old, new)
+    return markup
 
 
 def build_topic(t):
@@ -845,7 +864,7 @@ def build_topic(t):
             + package_section(rows=pairs(t['shows']), heading=clean(t['shows_heading']), lead=clean(t['shows_intro']), links=links, typical=False)
             + info_section('roles', 'WHO DOES WHAT', clean(t['roles_heading']), clean(t['roles_intro']), pairs(t['roles']))
             + inputs_section(clean(t['send_heading']), clean(t['send_intro']), pairs(t['send']))
-            + delivery_section(offer=t['key'] not in TOPIC_NO_OFFER, steps=TOPIC_STEPS)
+            + topic_delivery(t)
             + faq_block('BEFORE YOU ASK', clean(t['faq_heading']), faq)
             + sources_block([(x['title'], x['url']) for x in t['sources']], TOPIC_SOURCES_NOTE)
             + coverage_section())
@@ -1001,7 +1020,7 @@ HOW_STEPS = [
 HOW_ROLES = [
     ('You or your pool builder', 'Send the project information, choose the equipment and finishes, and submit the set to the permit office.'),
     ('JEBN', 'Drafts the drawing set and draws the changes within the revisions in your quote. JEBN does not seal drawings.'),
-    ('The engineer of record', 'Needed where your state’s law or your permit office requires an engineer’s seal. Directs the engineering, reviews the set and seals it.'),
+    ('The engineer of record', 'Needed where your state’s law or your permit office requires an engineer’s seal. Directs the engineering while the drawings are prepared, and seals the set.'),
     ('Your permit office', 'Publishes the checklist, reviews the set and decides approval.'),
 ]
 HOW_RECEIVE = [

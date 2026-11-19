@@ -502,7 +502,7 @@
    "<b>01</b><span>Florida Building Code structural requirements, with HVHZ provisions for Miami-Dade and Broward</span>",
    "<b>02</b><span>Wind loads to 180 mph, with product approval and Notice of Acceptance where required</span>",
    "<b>03</b><span>Site plans with setbacks and easements, to the county or city checklist</span>",
-   "<b>04</b><span>FAC 64E-9 construction plan approval for public pools</span>",
+   "<b>04</b><span>Public pools: an operating permit application to the Department of Health before the building permit application (FS 514.03)</span>",
    "<b>05</b><span>Simplified TDH worksheets where the county requires one as a submittal</span>",
    "<b>06</b><span>Barrier and entrapment compliance to the Residential Swimming Pool Safety Act</span>"
   ],
@@ -536,7 +536,7 @@
     "All state pages"
    ]
   ],
-  "index_blurb": "Florida Building Code including HVHZ for Miami-Dade and Broward, wind loads to 180 mph, and 64E-9 plan approval for public pools."
+  "index_blurb": "Florida Building Code including HVHZ for Miami-Dade and Broward, wind loads to 180 mph, and the Department of Health operating permit for public pools."
  },
  "georgia": {
   "seal_steps": [
@@ -2041,7 +2041,7 @@
    ],
    [
     "Public pools",
-    "New Mexico Environment Department, 7.18.2 NMAC (Public Swimming Pools, Spas and Baths: General Provisions), requiring a construction permit with plans stamped by a New Mexico registered engineer or architect."
+    "New Mexico Environment Department, 7.18.1 NMAC (Public Aquatic Venues: General Provisions). 7.18.1.12 NMAC requires a construction permit before a public aquatic venue is built or substantially altered. The rules adopt the CDC Model Aquatic Health Code, 1st Edition, with state changes."
    ],
    [
     "Engineer licensing",
@@ -2055,7 +2055,7 @@
    ],
    [
     "Do public pool plans in New Mexico need an engineer’s stamp?",
-    "Yes. 7.18.2 NMAC requires a New Mexico Environment Department construction permit before a public pool is built or modified, with plans stamped and signed by a New Mexico registered professional engineer or architect."
+    "The state rule’s own text does not mention a stamp. It requires the New Mexico Environment Department’s construction permit before a public pool is built or substantially altered, with an application that includes plans, specifications and other information the Department requires (7.18.1.12 NMAC). The rule also adopts the CDC Model Aquatic Health Code, 1st Edition, with state changes, so ask the Department what it requires of the person who prepares the plans for your project."
    ],
    [
     "Can my New Mexico pool plans be sealed by an engineer licensed in New Mexico?",
@@ -2300,7 +2300,7 @@
    "<b>02</b><span>Site plans and setbacks prepared for Oklahoma City, Tulsa and Edmond submittals</span>",
    "<b>03</b><span>Expansive high-plasticity clays drive shell and deck heave</span>",
    "<b>04</b><span>Frost depth about 18 in central OK, deeper in the Panhandle; freeze-thaw</span>",
-   "<b>05</b><span>Induced seismicity in central OK, which affects the site’s Seismic Design Category</span>",
+   "<b>05</b><span>The site’s Seismic Design Category under the adopted building code</span>",
    "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
@@ -2784,7 +2784,7 @@
   "faq": [
    [
     "Which Texas cities do you cover?",
-    "Houston, Dallas, Austin and San Antonio come up most often. For any other city or county, name the permit office and we draw to the checklist it publishes."
+    "Name your city or county, for example Houston, Dallas, Austin or San Antonio, and its permit office, and we draw to the pool permit requirements that office publishes."
    ]
   ],
   "nearby": [
