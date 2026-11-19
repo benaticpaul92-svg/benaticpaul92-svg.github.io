@@ -87,6 +87,19 @@ def asset(name):
     return '/assets/'+name+'?v='+hashlib.sha256(p.read_bytes()).hexdigest()[:12]
 
 
+def root_file(name):
+    """Address of a file in the site root with a stamp of its content, so a browser fetches a changed icon again."""
+    return '/'+name+'?v='+hashlib.sha256((ROOT/name).read_bytes()).hexdigest()[:12]
+
+
+def icon_links():
+    # The .ico is for browsers that do not read SVG icons; the touch icon is what phones put on the home screen.
+    return (f'<link rel="icon" href="{root_file("favicon.ico")}" sizes="32x32">'
+            f'<link rel="icon" href="{root_file("favicon.svg")}" type="image/svg+xml">'
+            f'<link rel="apple-touch-icon" href="{root_file("apple-touch-icon.png")}">'
+            '<link rel="manifest" href="/site.webmanifest">')
+
+
 def name_of(slug):
     return slug.replace('-', ' ').title()
 
@@ -411,7 +424,7 @@ def shell(path, title, description, body, schema, head_extra='', home=False, nav
     # A noindex page (the 404 page) is served at any address, so it gets no canonical or og:url.
     index_meta = '<meta name="robots" content="noindex,follow">' if noindex else f'<link rel="canonical" href="{canonical}">'
     og_url = '' if noindex else f'<meta property="og:url" content="{canonical}">'
-    html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(full_title)}</title><meta name="description" content="{escape(description)}">{index_meta}<meta name="theme-color" content="#072338"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><meta property="og:title" content="{escape(full_title)}"><meta property="og:description" content="{escape(description)}"><meta property="og:type" content="website">{og_url}<meta property="og:image" content="{SITE}/images/pool-beachfront-villa.jpg"><meta name="twitter:card" content="summary_large_image">{head_extra}{preload}<link rel="stylesheet" href="{asset('studio.min.css')}"><link rel="stylesheet" href="{asset('search-landings.min.css')}"><script src="{asset('search-landings.min.js')}" defer></script><script src="{asset('studio.min.js')}" defer></script>{ld}</head><body class="search-landing">{header}<main id="main-content" tabindex="-1">{body}</main>{sticky}{footer}</body></html>'''
+    html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(full_title)}</title><meta name="description" content="{escape(description)}">{index_meta}<meta name="theme-color" content="#072338"><meta name="referrer" content="strict-origin-when-cross-origin">{icon_links()}<meta property="og:title" content="{escape(full_title)}"><meta property="og:description" content="{escape(description)}"><meta property="og:type" content="website">{og_url}<meta property="og:image" content="{SITE}/images/pool-beachfront-villa.jpg"><meta name="twitter:card" content="summary_large_image">{head_extra}{preload}<link rel="stylesheet" href="{asset('studio.min.css')}"><link rel="stylesheet" href="{asset('search-landings.min.css')}"><script src="{asset('search-landings.min.js')}" defer></script><script src="{asset('studio.min.js')}" defer></script>{ld}</head><body class="search-landing">{header}<main id="main-content" tabindex="-1">{body}</main>{sticky}{footer}</body></html>'''
     html = html.replace('↗', '→')
     out = ROOT/out if out else ROOT/path/'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
