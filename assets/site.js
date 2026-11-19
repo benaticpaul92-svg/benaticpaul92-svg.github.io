@@ -68,6 +68,7 @@
     const copyButton = form.querySelector("[data-copy-message]");
     const copyText = form.querySelector("[data-copy-text]");
     const restart = form.querySelector("[data-new-enquiry]");
+    const nextSteps = form.querySelector("[data-next-steps]");
     const ready = endpointIsReady(config.formEndpoint);
     let sending = false;
     let completed = false;
@@ -102,6 +103,38 @@
       status.focus({ preventScroll: true });
       status.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "nearest" });
     }
+    function showNextSteps() {
+      // Display only: a short reference and an email draft for sending files.
+      // The request is already stored, so a problem here must never change the result.
+      try {
+        if (!nextSteps) return;
+        const value = name => form.elements.namedItem(name)?.value || "";
+        const short = reference.replace(/[^a-z0-9]/gi, "").slice(-8).toUpperCase();
+        nextSteps.querySelector("[data-enquiry-ref]").textContent = short;
+        nextSteps.querySelector("[data-files-draft]").href = `mailto:${email}?subject=${encodeURIComponent(`JEBN project enquiry - files for reference ${short}`)}&body=${encodeURIComponent([
+          `Reference: ${short} (${reference})`,
+          `Name: ${value("name")}`,
+          `Project location: ${value("location")}`,
+          "",
+          "Files attached:",
+          ""
+        ].join("\n"))}`;
+        nextSteps.hidden = false;
+        // One email link at a time: the files link replaces the first-contact draft link.
+        emailLink.hidden = true;
+        setStatus("Thank you. Your enquiry has been received. Your reference and next steps are below.", "success");
+      } catch { /* Nothing to do. */ }
+    }
+    function hideNextSteps() {
+      emailLink.hidden = false;
+      if (!nextSteps) return;
+      nextSteps.hidden = true;
+      // Nothing from the earlier request stays behind in the page.
+      const shown = nextSteps.querySelector("[data-enquiry-ref]");
+      const files = nextSteps.querySelector("[data-files-draft]");
+      if (shown) shown.textContent = "";
+      if (files) files.href = `mailto:${email}?subject=${encodeURIComponent("JEBN project enquiry")}`;
+    }
     function initialState() {
       setStatus(ready
         ? "Ready to send. Fields marked required are needed."
@@ -134,6 +167,7 @@
       form.reset();
       restart.hidden = true;
       copyText.hidden = true;
+      hideNextSteps();
       initialState();
       form.elements.name.focus();
     });
@@ -215,6 +249,7 @@
         submit.textContent = "Enquiry submitted";
         restart.hidden = false;
         setStatus("Thank you. Your enquiry has been received. We’ll reply by email.", "success");
+        showNextSteps();
         // Only accepted submissions emit this event. The optional Google Ads
         // adapter also requires enabled settings, consent and a conversion label.
         // Field values and email addresses never enter dataLayer.

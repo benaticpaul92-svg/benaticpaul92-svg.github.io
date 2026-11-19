@@ -145,6 +145,23 @@ def ext_link(url, label):
     return f'<a href="{escape(url)}" target="_blank" rel="noopener">{clean(label)}</a>'
 
 
+REPLY_TIME = 'We reply by email within 24 hours.'
+
+
+def next_steps(send):
+    """Shown only after the receiver has accepted a request. It repeats the reply time and makes no other promise."""
+    return ('<div class="next-steps" data-next-steps="" hidden=""><h3>What happens next</h3><ol>'
+            f'<li>Your reference is <strong data-enquiry-ref=""></strong>. {REPLY_TIME}</li>'
+            f'<li>{send}</li>'
+            '<li><a data-files-draft="" href="mailto:benatic@jebnengineering.com?subject=JEBN%20project%20enquiry">Email your files</a>. '
+            'The link opens your email app with your reference filled in.</li>'
+            '</ol></div>')
+
+
+NEXT_STEPS_POOL = next_steps('If you have them, send your survey or site plan, your sketch or existing drawings, and any permit office checklist or review comments.')
+NEXT_STEPS_SITE = next_steps('If you have them, send your survey or site plan, photos of the site, and your sketch or existing drawings.')
+
+
 def form(title, state=None, city=None, notes_placeholder=None, pool=True):
     doc = BeautifulSoup((ROOT/'tools/enquiry-form.html').read_text(), 'html.parser')
     f = doc.form
@@ -170,10 +187,12 @@ def form(title, state=None, city=None, notes_placeholder=None, pool=True):
     privacy = doc.select_one('.form-privacy')
     privacy.clear(); privacy.append('We use your details to reply to this request and quote the work. ')
     a = doc.new_tag('a', href='/privacy/'); a.string = 'Privacy notice'; privacy.append(a)
-    reply = doc.new_tag('p', attrs={'class': 'form-reply'}); reply.string = 'We reply by email within 24 hours.'
+    reply = doc.new_tag('p', attrs={'class': 'form-reply'}); reply.string = REPLY_TIME
     privacy.insert_before(reply)
     doc.select_one('[data-email-draft]').string = 'Prefer email? Open an email draft'
     doc.select_one('[data-new-enquiry]').string = 'Send another request'
+    # Hidden until a request is accepted. The form script then fills in the reference and the link.
+    doc.select_one('[data-form-status]').insert_after(BeautifulSoup(NEXT_STEPS_POOL if pool else NEXT_STEPS_SITE, 'html.parser').div)
     return str(doc)
 
 

@@ -337,3 +337,17 @@ details.local-card[open]>summary::after{content:"\2212"}
 .search-landing .sources a{text-decoration:underline}
 /* Narrowest phones: the company line under the logo is set a little tighter so the menu button stays on one line. */
 @media(max-width:350px){.search-landing .brand{gap:.55rem}.search-landing .brand-sub{letter-spacing:.08em}.search-landing .menu-toggle{white-space:nowrap}}
+/* After a request is accepted: reference, what to send, a link for files */
+.next-steps{margin:.1rem 0 1rem;padding:.85rem 1rem;border:1px solid var(--line);border-left:3px solid var(--aqua);border-radius:var(--radius);background:var(--mist)}
+.search-landing .next-steps h3{font-size:.95rem;line-height:1.3;margin:0 0 .45rem;color:var(--navy)}
+.search-landing .next-steps ol{margin:0;padding-left:1.25rem;list-style:decimal;font-size:.85rem;line-height:1.5;color:var(--ink)}
+.next-steps li+li{margin-top:.35rem}
+.next-steps strong{font-family:var(--mono);letter-spacing:.04em;color:var(--navy)}
+.search-landing .next-steps a{display:inline-block;padding:.3rem 0}
+/* While the block shows, the reply time is not repeated under the button and the first-contact draft link is put away */
+.next-steps:not([hidden])~.form-reply{display:none}
+.search-landing .quote-panel .form-fallback a[hidden]{display:none}
+/* Privacy bar on phones: less padding and tighter lines, same words and button size */
+@media(max-width:760px){.search-landing .consent-panel{padding:.5rem 0}.search-landing .consent-layout{gap:.4rem}.search-landing .consent-panel p{font-size:.75rem;line-height:1.4}}
+/* On the narrowest phones both privacy buttons keep the same width */
+@media(max-width:360px){.search-landing .consent-actions button{min-width:0;padding-inline:.4rem}}
