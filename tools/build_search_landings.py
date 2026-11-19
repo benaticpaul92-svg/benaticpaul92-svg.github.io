@@ -61,6 +61,14 @@ SERVICE_LINKS = [
     ('/services/pool-engineering/', 'How the engineer’s seal works', 'Who directs the engineering, who seals the set, and what JEBN drafts.'),
 ]
 
+# Pages for particular project types. The wording and its sources live in tools/data/topic-pages.json.
+TOPICS = json.loads((ROOT/'tools/data/topic-pages.json').read_text())
+TOPIC_LINKS = [('/'+t['path']+'/', t['nav_label'], t['card_text']) for t in TOPICS]
+RELATED_TOPICS = {}   # address of a main service page -> the project-type pages that belong beside it
+for _t in TOPICS:
+    for _href in _t['related_services']:
+        RELATED_TOPICS.setdefault(_href, []).append(('/'+_t['path']+'/', _t['nav_label']))
+
 # ---------------------------------------------------------------- the company and the seal wording
 
 # The company as registered. The address is a mailing address, not an office, and the pages say so.
@@ -256,8 +264,8 @@ DELIVERY_STEPS = [
 ]
 
 
-def delivery_section(state=None, offer=True):
-    return f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">FROM QUOTE TO DELIVERY</span><h2 id="delivery-heading">Three steps to your drawing set.</h2><ol class="delivery-steps">{step_items(DELIVERY_STEPS)}</ol><div class="review-note"><h3>Who seals the drawings</h3><p>{seal_answer(state, offer)} The permit office decides approval. If it sends comments, send them to us. Your quote states the revisions included.</p><a class="text-link" href="/services/pool-engineering/">How the engineer’s seal works →</a></div><details class="optional-concept"><summary>Optional: 3D pool visualization</summary><p>A 3D view can help you explore the proposed layout and materials. Ask to include it as a separate item alongside the drawing package.</p></details><div class="actions"><a class="button primary" href="#contact">Get my quote <span aria-hidden="true">→</span></a></div></div></section>'''
+def delivery_section(state=None, offer=True, steps=None):
+    return f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">FROM QUOTE TO DELIVERY</span><h2 id="delivery-heading">Three steps to your drawing set.</h2><ol class="delivery-steps">{step_items(steps or DELIVERY_STEPS)}</ol><div class="review-note"><h3>Who seals the drawings</h3><p>{seal_answer(state, offer)} The permit office decides approval. If it sends comments, send them to us. Your quote states the revisions included.</p><a class="text-link" href="/services/pool-engineering/">How the engineer’s seal works →</a></div><details class="optional-concept"><summary>Optional: 3D pool visualization</summary><p>A 3D view can help you explore the proposed layout and materials. Ask to include it as a separate item alongside the drawing package.</p></details><div class="actions"><a class="button primary" href="#contact">Get my quote <span aria-hidden="true">→</span></a></div></div></section>'''
 
 
 def state_directory(summary='Choose your state for local permit notes'):
@@ -272,7 +280,9 @@ def coverage_section(extra=''):
 def service_links(current=''):
     """Text links to the other service pages, for the package column."""
     links = ' · '.join(f'<a href="{href}">{label}</a>' for href, label, _ in SERVICE_LINKS if href != current)
-    return f'<p class="package-links"><strong>Related services:</strong> {links}</p>'
+    more = ' · '.join(f'<a href="{href}">{escape(label)}</a>' for href, label in RELATED_TOPICS.get(current, []))
+    more = f'<p class="package-links"><strong>By project type:</strong> {more}</p>' if more else ''
+    return f'<p class="package-links"><strong>Related services:</strong> {links}</p>{more}'
 
 
 # Client feedback, kept word for word from the earlier landscape page. Do not edit the quotes.
@@ -391,6 +401,12 @@ def samples_section(eyebrow='SAMPLE DRAWINGS', heading='Sample drawing sets.'):
 
 ICON = lambda d: f'<svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{d}</svg>'
 SERVICE_ICONS = {
+    '/services/owner-builder-pool-plans/': '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M9.5 14.5l2 2 3.5-4"/>',
+    '/services/pool-site-plan-barrier-plan/': '<path d="M4 20V9l2-2 2 2v11M10 20V9l2-2 2 2v11M16 20V9l2-2 2 2v11"/><path d="M4 13h16M4 17h16"/>',
+    '/services/spa-addition-pool-remodel-drawings/': '<rect x="3" y="9" width="13" height="10" rx="1"/><circle cx="17.5" cy="7.5" r="3.5"/><path d="M6 14c1.4 1 2.8-1 4.2 0s2.8-1 4.2 0"/>',
+    '/services/vanishing-edge-pool-drawings/': '<path d="M2 8h13v11"/><path d="M2 12c2 1.2 4-1.2 6.5 0s4.5-1.2 6.5 0"/><path d="M18.5 8v11M21.5 11v8"/>',
+    '/services/rooftop-elevated-pool-drawings/': '<path d="M5 21V10h14v11"/><path d="M3 10h18"/><path d="M7 6.5c1.6 1 3.3-1 5 0s3.4-1 5 0"/><path d="M9 14h2M13 14h2M9 18h2M13 18h2"/>',
+    '/services/commercial-pool-plan-review-drawings/': '<path d="M9 3h6v3H9z"/><path d="M9 5H6v16h12V5h-3"/><path d="M9 14l2 2 4-4.5"/>',
     '/services/pool-engineering/': '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><path d="M9.8 12.2l1.6 1.6 3-3.4"/>',
     '/services/pool-permit-drawings/': '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 14.5l2 2 3.5-4"/>',
     '/pool/': '<path d="M2 7h4v10h12V7h4"/><path d="M6 10.5c2 1.2 4-1.2 6 0s4-1.2 6 0"/>',
@@ -422,7 +438,7 @@ def company_block():
 def shell(path, title, description, body, schema, head_extra='', out=None, noindex=False, brand=' | JEBN'):
     header = ''.join(str(BASE.select_one(s)) for s in ['.skip-link', '.utility-bar', '.site-header', '#privacy-choices'])
     footer_links = ''.join(f'<a href="{href}">{label}</a>' for href, label, _ in SERVICE_LINKS)
-    footer_links += '<a href="/landscape/">Landscape design</a>'
+    footer_links += '<a href="/#more-services">Drawing sets by project type</a><a href="/landscape/">Landscape design</a>'
     footer = (str(BASE.select_one('.site-footer')).replace('<!--SERVICE_LINKS-->', footer_links)
               .replace('<!--COMPANY-->', company_block()).replace('<!--COPYRIGHT-->', f'© 2026 {COMPANY}'))
     # A menu or footer link to a section this page does not have points at that section of the home page.
@@ -797,6 +813,45 @@ def build_seal_page():
     return shell('services/pool-engineering', title, meta, body, service_schema(canonical, short, title, meta, SEAL_FAQ), head_extra)
 
 
+# ---------------------------------------------------------------- pages for particular project types
+
+TOPIC_STEPS = [
+    DELIVERY_STEPS[0],
+    ('Draft the set', 'We draw the sheets listed in your quote from the design, details and measurements you send. Your quote states the delivery date.'),
+    DELIVERY_STEPS[2],
+]
+TOPIC_FACTS = [('JEBN', 'Drafts the set'), ('File delivery', 'DWG + PDF'), ('Scope', 'Drafting only, no seal')]
+TOPIC_SMALL = 'JEBN is a drafting business. It is not a licensed engineering firm and does not seal drawings.'
+TOPIC_SOURCES_NOTE = ('The statements on this page were checked against these official pages in November 2026. Codes, editions and local rules differ '
+                      'and change, so confirm what applies with your permit office. This page is general information, not legal advice.')
+# On these two the project already has its own engineer or architect, so the page does not offer to ask one.
+TOPIC_NO_OFFER = {'rooftop-elevated', 'commercial-plan-review'}
+
+
+def build_topic(t):
+    path = '/'+t['path']+'/'
+    canonical = SITE+path
+    by_key = {x['key']: x for x in TOPICS}
+    labels = {href: label for href, label, _ in SERVICE_LINKS}
+    related = [(href, labels[href]) for href in t['related_services']] + [('/'+by_key[k]['path']+'/', escape(by_key[k]['nav_label'])) for k in t['related']]
+    links = '<p class="package-links"><strong>Related:</strong> ' + ' · '.join(f'<a href="{h}">{l}</a>' for h, l in related) + '</p>'
+    pairs = lambda items: [(clean(x['label']), clean(x['text'])) for x in items]
+    faq = [(x['q'], x['a']) for x in t['faq']]
+    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What the set shows</a><a href="#roles">Who does what</a><a href="#inputs">What to send</a><a href="#faq">Questions</a><a href="#contact">Get my quote ↗</a></div></nav>'
+    crumbs = crumbs_html([('/', 'Home'), ('/#more-services', 'Drawing sets'), ('', clean(t['nav_label']))])
+    h1 = f'{clean(t["h1_main"])}<br><span>{clean(t["h1_sub"])}</span>'
+    body = (hero('USA / '+escape(t['nav_label'].upper()), h1, clean(t['lead']), form(t['title']), crumbs, TOPIC_FACTS, TOPIC_SMALL, strip='DWG + PDF · Drafting only, no seal') + nav
+            + samples_section()
+            + package_section(rows=pairs(t['shows']), heading=clean(t['shows_heading']), lead=clean(t['shows_intro']), links=links, typical=False)
+            + info_section('roles', 'WHO DOES WHAT', clean(t['roles_heading']), clean(t['roles_intro']), pairs(t['roles']))
+            + inputs_section(clean(t['send_heading']), clean(t['send_intro']), pairs(t['send']))
+            + delivery_section(offer=t['key'] not in TOPIC_NO_OFFER, steps=TOPIC_STEPS)
+            + faq_block('BEFORE YOU ASK', clean(t['faq_heading']), faq)
+            + sources_block([(x['title'], x['url']) for x in t['sources']], TOPIC_SOURCES_NOTE)
+            + coverage_section())
+    return shell(t['path'], t['title'], t['meta'], body, service_schema(canonical, t['nav_label'], t['title'], t['meta'], faq))
+
+
 def build_moved(old_path, new_path, label):
     """A page left at an old address that sends visitors, with their query string, on to the new address."""
     target = f'/{new_path}/'
@@ -830,12 +885,14 @@ def build_home():
     nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#services">Services</a><a href="#coverage">Find your state</a><a href="#package">Drawing package</a><a href="#contact">Get my quote ↗</a></div></nav>'
     cards = ''.join(f'<a class="state-card service-card" href="{href}">{ICON(SERVICE_ICONS[href])}<strong>{label}</strong><span>{text}</span><span class="card-go" aria-hidden="true">Open →</span></a>' for href, label, text in SERVICE_LINKS)
     services = f'''<section class="section local-section" id="services" aria-labelledby="services-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">POOL DRAWING SERVICES</span><h2 id="services-heading">Pool drawing and drafting services.</h2></div><div><p>Permit drawings, construction drawings and shop drawings for homeowners, pool contractors and builders. Choose a complete drawing package or the drafting support your team needs.</p><a class="text-link" href="#contact">Get my quote ↗</a></div></div><nav class="state-cards four" aria-label="Services">{cards}</nav></div></section>'''
+    topic_cards = ''.join(f'<a class="state-card service-card" href="{href}">{ICON(SERVICE_ICONS[href])}<strong>{escape(label)}</strong><span>{escape(text)}</span><span class="card-go" aria-hidden="true">Open →</span></a>' for href, label, text in TOPIC_LINKS)
+    more = f'''<section class="section local-section more-services" id="more-services" aria-labelledby="more-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">DRAWING SETS BY PROJECT TYPE</span><h2 id="more-heading">Drawing sets for particular projects.</h2></div><div><p>Owner-builder permits, remodels, vanishing edges and pools on structures each need their own sheets.</p><p>Hotel, rooftop and public pools: shop drawings and permit drafting for the project’s engineer of record, quoted per project.</p></div></div><nav class="state-cards" aria-label="Drawing sets by project type">{topic_cards}</nav></div></section>'''
     state_links = ''.join(f'<a href="/states/{s}/">{name_of(s)}</a>' for s in sorted(STATES))
     state_options = ''.join(f'<option value="/states/{s}/">{name_of(s)}</option>' for s in sorted(STATES))
     states = f'''<section class="section local-section" id="coverage" aria-labelledby="coverage-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · STATE PAGES</span><h2 id="coverage-heading">Pool permit drawings by state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties with links to the official sources, and the quote form.</p><p>Your city or county is not listed? Name the permit office in your request. We draw to the checklist it publishes.</p><a class="text-link" href="/states/">Browse all state pages ↗</a></div></div><div class="state-jump"><label for="state-jump">Go to your state</label><select id="state-jump" data-state-jump><option value="">Choose a state…</option>{state_options}</select></div><noscript><style>.state-jump{{display:none}}</style></noscript><details class="state-fold" data-open-wide><summary>Show all state pages</summary><nav class="state-grid wide" aria-label="State pages">{state_links}</nav></details></div></section>'''
     line = f'''<section class="coverage-line" aria-label="USA coverage"><div class="wrap"><p><strong>{COMPANY}.</strong> We draft pool drawings for US permit submissions.</p><a href="/states/">View state pages</a></div></section>'''
     body = (hero('USA / POOL PERMIT AND CONSTRUCTION DRAWINGS', 'Pool permit drawings<br><span>and construction drawings.</span>', lead, form('Pool Plans and Permit Drawings')) + nav
-            + samples_section() + audience_section() + pool_clients() + services
+            + samples_section() + audience_section() + pool_clients() + services + more
             + package_section(sid='package-section') + states
             + inputs_section(*DEFAULT_INPUTS[:2])
             + delivery_section()
@@ -976,7 +1033,8 @@ def build_about():
     crumbs = crumbs_html([('/', 'Home'), ('', 'About')])
     services = ''.join(f'<li><a href="{href}">{label}</a>. {text}</li>' for href, label, text in SERVICE_LINKS[:7])
     services += '<li><a href="/landscape/">Landscape design drawings</a>. Master plans, hardscape layouts and planting drawings.</li>'
-    body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose">{crumbs}<span class="eyebrow">ABOUT</span><h1 id="page-heading">About {COMPANY}.</h1><p class="lead">JEBN prepares swimming pool drawing packages for US permits and construction: permit drawings, construction drawings, shop drawings and drafting support for pool builders, designers and engineers.</p><h2>The company</h2><p>{COMPANY} is {COMPANY_KIND}. It is on file with the Florida Division of Corporations under document number {FLORIDA_DOCUMENT}. Benatic Paul Martin, the founder, is your contact for every project.</p><h2>What JEBN does</h2><ul>{services}</ul><p>Drawings are delivered as DWG and PDF files. Your quote lists the sheets, the revisions included and the delivery date before you commit. <a href="/how-it-works/">How the service works</a> · <a href="/samples/">Sample drawings</a></p><h2>What JEBN does not do</h2><p>{NOT_A_FIRM} Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set. <a href="/services/pool-engineering/">How the engineer’s seal works</a></p><h2>Contact</h2><p>Benatic Paul Martin · <a href="mailto:{EMAIL}">{EMAIL}</a></p><p>Mailing address: {COMPANY}, {MAIL_ADDRESS}. This is a mailing address, not an office. Please send drawings and project files by email.</p>{QUOTE_BUTTON}</div></div></section>'''
+    by_type = ' · '.join(f'<a href="{href}">{escape(label)}</a>' for href, label, _ in TOPIC_LINKS)
+    body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose">{crumbs}<span class="eyebrow">ABOUT</span><h1 id="page-heading">About {COMPANY}.</h1><p class="lead">JEBN prepares swimming pool drawing packages for US permits and construction: permit drawings, construction drawings, shop drawings and drafting support for pool builders, designers and engineers.</p><h2>The company</h2><p>{COMPANY} is {COMPANY_KIND}. It is on file with the Florida Division of Corporations under document number {FLORIDA_DOCUMENT}. Benatic Paul Martin, the founder, is your contact for every project.</p><h2>What JEBN does</h2><ul>{services}</ul><p>Drawing sets by project type: {by_type}</p><p>Drawings are delivered as DWG and PDF files. Your quote lists the sheets, the revisions included and the delivery date before you commit. <a href="/how-it-works/">How the service works</a> · <a href="/samples/">Sample drawings</a></p><h2>What JEBN does not do</h2><p>{NOT_A_FIRM} Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set. <a href="/services/pool-engineering/">How the engineer’s seal works</a></p><h2>Contact</h2><p>Benatic Paul Martin · <a href="mailto:{EMAIL}">{EMAIL}</a></p><p>Mailing address: {COMPANY}, {MAIL_ADDRESS}. This is a mailing address, not an office. Please send drawings and project files by email.</p>{QUOTE_BUTTON}</div></div></section>'''
     canonical = f'{SITE}/about/'
     return shell('about', title, description, body, page_schema(canonical, title, description, 'About', 'AboutPage'), brand='')
 
@@ -1316,6 +1374,7 @@ if __name__ == '__main__':
     built = [build_home()]
     built += [build_service(p) for p in SERVICES]
     built.append(build_seal_page())
+    built += [build_topic(t) for t in TOPICS]
     built += [build_state(slug, rec) for slug, rec in sorted(STATES.items())]
     built.append(build_states_index())
     built += [build_samples(), build_how(), build_about()]

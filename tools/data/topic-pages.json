@@ -1,0 +1,902 @@
+[
+ {
+  "key": "owner-builder",
+  "path": "services/owner-builder-pool-plans",
+  "title": "Owner-Builder Pool Plans and Permit Drawings",
+  "nav_label": "Owner-builder pool plans",
+  "card_text": "Permit drawings for homeowners who pull their own pool permit, drawn from your sketch or plans.",
+  "h1_main": "Owner-builder pool plans.",
+  "h1_sub": "Drawn for the permit in your name.",
+  "meta": "Pool permit drawings for owner-builders: site plan, pool plan, sections, barrier and equipment sheets from your sketch or plans. DWG and PDF. Free quote.",
+  "lead": "You are pulling the pool permit in your own name, and the permit office still wants a clear drawing set. We draw the site plan, pool plan, sections, barrier and equipment sheets from your sketch, survey or kit maker’s plans, drawn to your permit office’s checklist. Files come as DWG and PDF.",
+  "shows_heading": "What an owner-builder pool permit set shows.",
+  "shows_intro": "Each permit office sets its own list, so the sheet list follows yours. An owner-builder set can cover these parts.",
+  "shows": [
+   {
+    "label": "Site plan",
+    "text": "The lot drawn to scale with property lines, setbacks, easements, the house and other structures, the pool, deck and equipment pad. Where your checklist asks for drainage, slopes, trees or septic locations, the site plan shows them too."
+   },
+   {
+    "label": "Pool plan and depths",
+    "text": "The pool shape, length and width, steps and benches, with depths marked around the edge and wherever they change. The deck layout and dimensions in feet and inches sit on the same sheet."
+   },
+   {
+    "label": "Sections through the pool",
+    "text": "Cuts through the walls and floor that show depths, slopes and the build-up of the shell. Steel, concrete or shell details are drawn from your engineer’s design, your builder’s standard details or the shell maker’s data."
+   },
+   {
+    "label": "Barrier plan",
+    "text": "Where the fence, gates, house walls or other barrier sit around the pool, with gate swing and the barrier notes your local code calls for. The heights and gaps come from the rules your permit office enforces."
+   },
+   {
+    "label": "Plumbing and equipment",
+    "text": "Skimmers, drains, returns and the pipe runs back to the pump, filter and heater, with the equipment pad layout. Pipe sizes and equipment models come from your pool builder, your engineer or your own choices. Manufacturer data sheets can go with the set when your permit office asks for them."
+   },
+   {
+    "label": "Electrical and bonding notes",
+    "text": "The locations of pool lights, the pump, heater and equipment pad, with bonding notes taken from your electrician’s details or your permit office’s checklist. Some permit offices issue a separate electrical permit for this work."
+   }
+  ],
+  "roles_heading": "Who does what on an owner-builder pool project.",
+  "roles_intro": "As an owner-builder you stand in the contractor’s place, so it helps to know where each task sits.",
+  "roles": [
+   {
+    "label": "You",
+    "text": "You sign the permit application as the owner-builder and take responsibility for the work. You hire and supervise any trades, book the inspections and get failed work corrected and inspected again."
+   },
+   {
+    "label": "Your engineer",
+    "text": "Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set. You can bring your own engineer to the project."
+   },
+   {
+    "label": "JEBN",
+    "text": "We draw the permit set from what you send and revise the sheets when you, your engineer or the permit office mark changes. JEBN does not seal drawings or act as the engineer of record."
+   },
+   {
+    "label": "Your permit office",
+    "text": "It sets the checklist, asks for the owner-builder paperwork, reviews the set and sends comments. The permit office decides approval and carries out the inspections."
+   }
+  ],
+  "send_heading": "What to send for an owner-builder set.",
+  "send_intro": "Send what you have now, even if it is rough. Your quote lists the sheets, the revisions included and the delivery date before you commit.",
+  "send": [
+   {
+    "label": "Your lot information",
+    "text": "A survey, plot plan or site plan of the property. If you have none yet, a measured sketch with the house, property lines and the pool location is enough to start the quote."
+   },
+   {
+    "label": "The pool you plan to build",
+    "text": "Your sketch, a pool kit maker’s or shell manufacturer’s plans, or your engineer’s design, with the size, depths and where the equipment will go."
+   },
+   {
+    "label": "Your permit office’s checklist",
+    "text": "The name of your permit office and its pool permit checklist or owner-builder handout. If you have already applied, add any review comments."
+   },
+   {
+    "label": "Equipment and barrier choices",
+    "text": "Pump, filter, heater and light models or their data sheets, and the fence, gates, alarms or cover you plan to use as the pool barrier."
+   }
+  ],
+  "faq_heading": "Owner-builder pool permit questions.",
+  "faq": [
+   {
+    "q": "Can I pull my own pool permit as a homeowner?",
+    "a": "In some states, yes. The rules come from your state and your permit office. Florida’s statute has the owner sign the permit application in person and sign a disclosure statement before the permit is issued. Arizona’s exemption covers work for the owner’s own occupancy, not for sale or rent. California’s contractor board says a homeowner improving their main home must, among other conditions, have lived there for the 12 months before the work is completed."
+   },
+   {
+    "q": "What drawings does a pool permit need?",
+    "a": "Each permit office sets its own list. The published checklists listed under Sources ask for items such as a site plan drawn to scale with setbacks, a pool plan with dimensions and depths, sections, barrier details and equipment information. Some also ask for drainage or grading details, flood zone notes and separate electrical or plumbing permits. Send us your permit office’s checklist and the drawing set follows it sheet by sheet."
+   },
+   {
+    "q": "Do owner-builder pool plans need an engineer’s stamp?",
+    "a": "Sometimes. In Florida, Hillsborough County asks for pool plans signed and sealed by a Florida architect or engineer, and Orange County asks for in-ground pool plans from a Florida engineer or architect. Other places differ. Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set. JEBN does not seal drawings. You can use your own engineer."
+   },
+   {
+    "q": "Can you draw from my sketch or a pool kit maker’s plans?",
+    "a": "Yes. We draw from a hand sketch, a survey, existing plans, or a kit maker’s or shell manufacturer’s standard plans and installation data. Some permit offices work with standard pool plans or the maker’s installation instructions, and some still want site-specific plans, so ask yours first. Where your permit office accepts the maker’s plans, we draw the site-specific sheets that go with them: your lot, where the pool sits, the barrier and the equipment."
+   },
+   {
+    "q": "What happens if the permit office sends comments?",
+    "a": "A plan reviewer may hold the permit and send a list of corrections. Send us the list. We revise the sheets and can mark where each item was answered, which some permit offices ask for when you resubmit. Your quote lists the revisions included. Comments about the engineering go to your engineer, and the permit office decides approval once it reviews the corrected set."
+   },
+   {
+    "q": "What else can the permit office ask an owner-builder for?",
+    "a": "Beyond drawings, offices may ask for an owner-builder disclosure or exemption statement, a copy of your ID or a notarized signature, and a form naming who installs the barrier. Some want health department sign-off for a home on a private well and septic system, a recorded notice of commencement or a signed statement on draining pool water. Some also issue separate electrical, plumbing or gas permits. Read your office’s checklist."
+   }
+  ],
+  "sources": [
+   {
+    "title": "Florida Statutes, Section 489.103 Exemptions (2026 Florida Statutes, Online Sunshine)",
+    "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0489/Sections/0489.103.html"
+   },
+   {
+    "title": "Arizona Revised Statutes 32-1121, Persons not required to be licensed (Arizona Legislature)",
+    "url": "https://www.azleg.gov/ars/32/01121.htm"
+   },
+   {
+    "title": "CSLB, Building Officials - Owner-Builder Overview (California Contractors State License Board)",
+    "url": "https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx"
+   },
+   {
+    "title": "CSLB, Owner-Builder Responsibilities",
+    "url": "https://www.cslb.ca.gov/consumers/know_risks_of_owner_-_builder/The_Responsibilities_Of_An_Owner_-_Builder.aspx"
+   },
+   {
+    "title": "CSLB pamphlet 13P-060, Owner-Builders Beware! Know Your Responsibilities as an Owner-Builder (10/25)",
+    "url": "https://www2.cslb.ca.gov/Resources/GuidesAndPublications/OwnerBuildersPamphlet.pdf"
+   },
+   {
+    "title": "Hillsborough County, FL, Residential Pool Requirements",
+    "url": "https://hcfl.gov/businesses/hillsgovhub/residential-and-mobile-home-checklists/residential-pool-requirements"
+   },
+   {
+    "title": "Orange County, FL, Residential Swimming Pool Permit",
+    "url": "https://ocfl.net/PermitsLicenses/Permits/ResidentialSwimmingPoolPermit.aspx"
+   },
+   {
+    "title": "Prince William County, VA, Residential Pools, Spas, and Hot Tubs Plan Review Requirements (Version 2019_0710)",
+    "url": "https://www.pwcva.gov/assets/documents/development/ResPoolPlanReviewReq.pdf"
+   },
+   {
+    "title": "County of Los Angeles Public Works, Swimming Pool and Spa Plan Review List 2026 (dated 2/11/2026)",
+    "url": "https://dpw.lacounty.gov/bsd/lib/fp/Building/Pool%20&%20Spa/Pool%20Correction%20List.pdf"
+   },
+   {
+    "title": "U.S. CPSC Publication 362, Safety Barrier Guidelines for Residential Pools",
+    "url": "https://www.cpsc.gov/s3fs-public/362%20Safety%20Barrier%20Guidelines%20for%20Pools.pdf"
+   }
+  ],
+  "related": [
+   "site-barrier",
+   "spa-remodel"
+  ],
+  "related_services": [
+   "/services/pool-permit-drawings/",
+   "/services/pool-engineering/"
+  ]
+ },
+ {
+  "key": "site-barrier",
+  "path": "services/pool-site-plan-barrier-plan",
+  "title": "Pool Site Plan and Barrier Plan Drawings",
+  "nav_label": "Site plan and barrier plan",
+  "card_text": "Site plans and fence, gate and door barrier plans drawn for your pool permit.",
+  "h1_main": "Pool site and barrier plans.",
+  "h1_sub": "Drawn to your permit office’s list.",
+  "meta": "Pool site plans with lot lines, setbacks, easements and equipment, plus barrier plans for fences, gates and house doors. DWG and PDF. Free quote.",
+  "lead": "The site plan shows your permit office where the pool sits on the lot. The barrier plan shows the fence, gates and other features that keep young children out. We draw both from your survey, pool layout and your permit office’s checklist.",
+  "shows_heading": "What the site plan and barrier plan show.",
+  "shows_intro": "On a small lot both can fit on one sheet. Every item is drawn from information you or your pool builder supply and laid out to match your permit office’s list.",
+  "shows": [
+   {
+    "label": "Lot lines and existing buildings",
+    "text": "Property lines with their dimensions, the house, garage, sheds, decks and existing fences, taken from your survey or plat. Existing items and new work are drawn so a reviewer can tell them apart."
+   },
+   {
+    "label": "Pool position and setbacks",
+    "text": "The pool and deck outline with dimensioned distances to each property line, to the house and to other structures. Your local rules set the minimum setbacks, and each distance is labeled so the reviewer can check it."
+   },
+   {
+    "label": "Easements, utilities and septic",
+    "text": "Recorded easements, overhead and underground power lines, and the well, septic tank, drain field and reserve area where your permit office asks for them. Some counties set minimum distances from wells and septic parts to the pool and deck."
+   },
+   {
+    "label": "Equipment pad location",
+    "text": "Pump, filter and heater positions with distances to lot lines and structures. Where the 2024 ISPSC applies, equipment outside the barrier must be at least 36 inches from the outside of the barrier."
+   },
+   {
+    "label": "Fence line, height and gates",
+    "text": "The barrier drawn around the pool area with its height and type, and each gate marked with its swing direction, self-closing and self-latching hardware and latch height. Notes cite the code section or state law your permit office names."
+   },
+   {
+    "label": "House doors, windows and covers",
+    "text": "Doors and windows in house walls that open to the pool area, each marked with the protection you or your pool builder chose. Options can include alarms, self-closing and self-latching doors, or a safety cover, where your code or state law lists them."
+   }
+  ],
+  "roles_heading": "Who does what on a site and barrier plan.",
+  "roles_intro": "A barrier plan involves several people, and each one has a separate job.",
+  "roles": [
+   {
+    "label": "You",
+    "text": "You choose the fence, gates and safety features within what your state and local rules allow. You also send the survey or plat and any HOA conditions."
+   },
+   {
+    "label": "Your pool builder",
+    "text": "Your pool builder sets the pool position, the equipment pad and the fence product, and tells us the gate and door hardware they plan to install."
+   },
+   {
+    "label": "JEBN",
+    "text": "We draft the site plan and barrier plan from the documents you send, label every distance, gate and opening, and update the sheets for review comments within the revisions in your quote."
+   },
+   {
+    "label": "Your permit office",
+    "text": "Your permit office decides which code edition and local rules apply, reviews the plans, and inspects the barrier and safety features before final approval."
+   }
+  ],
+  "send_heading": "What to send for your site and barrier plan.",
+  "send_intro": "Start with what you have. Your quote lists the sheets, the revisions included and the delivery date before you commit.",
+  "send": [
+   {
+    "label": "Survey or plat",
+    "text": "A boundary survey, recorded plat or existing site plan showing the property lines, easements and the house footprint."
+   },
+   {
+    "label": "Pool layout and equipment pad",
+    "text": "Your builder’s pool drawing or a sketch with the pool size and position, the deck outline and where the equipment will go."
+   },
+   {
+    "label": "Fence, gates and openings",
+    "text": "The fence type and height, gate locations and the latch and closer hardware planned. Mark the house doors and windows that open toward the pool."
+   },
+   {
+    "label": "Your permit office’s checklist",
+    "text": "The pool permit checklist or handout and any review comments. Tell us if the lot has a well, a septic system or overhead lines."
+   }
+  ],
+  "faq_heading": "Site plan and barrier plan questions.",
+  "faq": [
+   {
+    "q": "What does a pool site plan have to show?",
+    "a": "It depends on your permit office’s checklist. The checklists listed under Sources ask for items such as the property lines, the house and other structures, the pool and deck with distances to each lot line, easements and the equipment location. Some also want power lines, wells and septic systems. We draw the items your office lists, to scale and fully dimensioned, so a reviewer can check every distance."
+   },
+   {
+    "q": "How tall must the pool fence be?",
+    "a": "The code and local rules your permit office enforces decide. Where the 2024 ISPSC is adopted, the top of the barrier must be at least 48 inches above grade, measured on the side away from the pool. California’s enclosure option calls for at least 60 inches. Florida’s law calls for at least 4 feet on the outside. Arizona’s statute calls for at least five feet, though some local ordinances apply there instead."
+   },
+   {
+    "q": "Do I need a survey?",
+    "a": "It depends on your permit office. Some ask for a survey of the property showing the pool location, and some want it signed and sealed by a professional surveyor. If your office accepts a plat or an existing site plan, we can draw from that instead. We do not survey the lot, so the distances on our plan come from the documents you send."
+   },
+   {
+    "q": "Can the house wall be part of the barrier?",
+    "a": "It can be, with conditions. Where the 2024 ISPSC applies, doors and operable windows with a sill under 48 inches that open to the pool need protection, such as UL 2017 alarms, an ASTM F1346 safety cover, or another approved means like self-closing, self-latching doors. Florida’s law allows a house wall with no door or window opening to the pool. California’s enclosure option must separate the pool from the home. The barrier plan marks each opening."
+   },
+   {
+    "q": "Can a safety cover or alarm count instead of a fence?",
+    "a": "In some places it can. California asks new or remodeled pools at a single-family home to have two of seven listed features, and some pairs do not count together. Florida asks for at least one of five. Rules differ by state and city, so your permit office decides what counts at your address."
+   },
+   {
+    "q": "Does the site plan need a seal?",
+    "a": "It depends on your state and permit office. The ISPSC says the code official must ask for documents prepared by a registered design professional where state law requires it, and some counties ask for sealed pool plans. Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set. JEBN does not seal drawings. You can use your own engineer."
+   }
+  ],
+  "sources": [
+   {
+    "title": "2024 ISPSC Chapter 3 General Compliance, Section 305 Barrier Requirements",
+    "url": "https://codes.iccsafe.org/content/ISPSC2024P1/chapter-3-general-compliance"
+   },
+   {
+    "title": "2024 ISPSC Errata, Chapter 3 (ICC)",
+    "url": "https://www.iccsafe.org/wp-content/uploads/errata_central/2024-ISPSC-Errata-Chapter-3.pdf"
+   },
+   {
+    "title": "2024 ISPSC Chapter 1 Scope and Administration, Section 107 Construction Documents",
+    "url": "https://codes.iccsafe.org/content/ISPSC2024P1/chapter-1-scope-and-administration"
+   },
+   {
+    "title": "California Health and Safety Code section 115922, Swimming Pool Safety Act",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=115922"
+   },
+   {
+    "title": "California Health and Safety Code section 115923",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=115923"
+   },
+   {
+    "title": "2025 Florida Statutes section 515.29, Residential swimming pool barrier requirements",
+    "url": "https://www.flsenate.gov/Laws/Statutes/2025/515.29"
+   },
+   {
+    "title": "2025 Florida Statutes section 515.27, Residential swimming pool safety feature options",
+    "url": "https://www.flsenate.gov/Laws/Statutes/2025/515.27"
+   },
+   {
+    "title": "Arizona Revised Statutes section 36-1681",
+    "url": "https://www.azleg.gov/ars/36/01681.htm"
+   },
+   {
+    "title": "City of Alexandria, Virginia, Residential Swimming Pool Submittal Requirements",
+    "url": "https://www.AlexandriaVA.gov/sites/default/files/2022-06/Residential%20Swimming%20Pool%20Checklist.pdf"
+   },
+   {
+    "title": "City of Orlando, Residential Swimming Pool and Spa Checklist",
+    "url": "https://www.orlando.gov/Building-Development/Permits-Inspections/Get-a-Permit/Permitting-Checklists/Residential-Swimming-Pool-and-Spa-Checklist"
+   },
+   {
+    "title": "Hillsborough County, Florida, Residential pool requirements",
+    "url": "https://hcfl.gov/businesses/hillsgovhub/residential-and-mobile-home-checklists/residential-pool-requirements"
+   },
+   {
+    "title": "Montgomery County, Maryland, Building Permit Submittal Requirements for Properties on Well and Septic Systems",
+    "url": "https://assets.montgomerycountymd.gov/files/dps/resources/files/land_development/BuildingPermitSubmittal%20RequirementsWellSeptic.pdf"
+   }
+  ],
+  "related": [
+   "owner-builder",
+   "spa-remodel"
+  ],
+  "related_services": [
+   "/services/pool-permit-drawings/",
+   "/pool/"
+  ]
+ },
+ {
+  "key": "spa-remodel",
+  "path": "services/spa-addition-pool-remodel-drawings",
+  "title": "Spa Addition & Pool Remodel Drawings",
+  "nav_label": "Spa addition & remodel drawings",
+  "card_text": "As-built, demolition and tie-in drawings for adding a spa to a pool or remodeling an old one.",
+  "h1_main": "Spa addition and remodel drawings.",
+  "h1_sub": "The pool you have, the work you add.",
+  "meta": "Permit drawings for adding a spa or remodeling a pool: as-built plan, new work, demolition notes, plumbing tie-ins and barrier site plan. DWG and PDF.",
+  "lead": "Adding a spa or reworking an old pool starts with a drawing of what is in the ground. We draw the existing pool from your measurements, then show the new work, what comes out and how it connects to the plumbing and equipment you keep. You get DWG and PDF files for your permit office.",
+  "shows_heading": "What a spa addition or remodel set shows.",
+  "shows_intro": "A remodel set shows two pools on the same sheets: the one there today and the one after the work. Every sheet marks what is existing and what is new, so the plan reviewer and the crew can tell them apart.",
+  "shows": [
+   {
+    "label": "As-built plan of the existing pool",
+    "text": "The pool as it stands, drawn from your field measurements, photos and any old plans. Outline, depths, steps, benches, fittings and the equipment pad are shown, with anything not yet confirmed marked for site verification."
+   },
+   {
+    "label": "New work",
+    "text": "The added spa, new steps or benches, a changed wall or a new finish, dimensioned from fixed points on the existing pool. New work is drawn with its own line weight and hatch so it stands apart from what stays."
+   },
+   {
+    "label": "Demolition notes",
+    "text": "Which parts of the shell, coping, tile, deck and piping are removed, cut back or kept, as your pool builder sets out. Notes flag what is to be protected and what is to be checked once the old surface is open."
+   },
+   {
+    "label": "Plumbing and equipment tie-in",
+    "text": "Where new spa or pool lines join the existing suction, return and equipment piping, with valves and any new equipment your pool builder has chosen shown on the pad. Suction outlets and their covers are shown too, because some permit offices require them to be upgraded when a pool is remodeled."
+   },
+   {
+    "label": "Updated site plan and barrier",
+    "text": "Where the permit office asks, the site plan adds the spa, new deck, equipment and distances to property lines, plus the fences, gates and house doors that form the barrier. Some offices inspect an existing fence or wall for code compliance before they close out the pool permit."
+   },
+   {
+    "label": "Sections of new structure",
+    "text": "Sections and details through the spa shell, raised walls or new steps. We draw the structure as your engineer or pool builder designed it, from their sketches, details and mark-ups."
+   }
+  ],
+  "roles_heading": "Who does what on a spa addition or remodel.",
+  "roles_intro": "Several people work on a remodel, and each one owns a different part of it.",
+  "roles": [
+   {
+    "label": "You",
+    "text": "You decide what changes, gather what you know about the existing pool and choose who builds the work. Old plans, permit records and photos from you save guesswork later."
+   },
+   {
+    "label": "Your pool builder",
+    "text": "Your pool builder measures and checks the existing pool, supplies standard details and equipment choices, and builds the work. The builder reports any conditions found once the old pool is opened."
+   },
+   {
+    "label": "Your engineer",
+    "text": "Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set. JEBN does not seal drawings."
+   },
+   {
+    "label": "JEBN",
+    "text": "We draft the set: as-built plan, new work, demolition notes, tie-ins, site plan and sections, drawn from the measurements, details and design your team supplies. Files come as DWG and PDF."
+   }
+  ],
+  "send_heading": "What to send for a spa addition or remodel.",
+  "send_intro": "Send what you know about the pool today and what you want to change. The quote is free. Your quote lists the sheets, the revisions included and the delivery date before you commit.",
+  "send": [
+   {
+    "label": "Measurements and photos",
+    "text": "Overall size, depths at several points, step and bench positions, and where the skimmer, drains, returns and equipment sit. Photos of each wall, the deck and the equipment pad help us read the numbers."
+   },
+   {
+    "label": "Old plans or permit records",
+    "text": "Original pool plans, an earlier permit set or a survey, even if incomplete. If none exist, tell us and we work from the field measurements alone."
+   },
+   {
+    "label": "The new work",
+    "text": "A sketch or mark-up of the spa or changes, your pool builder’s details, your engineer’s design where one is involved, and manufacturer data for new equipment."
+   },
+   {
+    "label": "Your permit office’s checklist",
+    "text": "The name of your permit office and its checklist or review comments. They tell us whether an updated site plan, barrier sheet or other sheets belong in the set."
+   }
+  ],
+  "faq_heading": "Spa addition and remodel questions.",
+  "faq": [
+   {
+    "q": "Do I need a permit to add a spa to my existing pool?",
+    "a": "It depends on your permit office. Some permit offices count a spa or hot tub as a pool, and some require permits to alter or repair an existing pool, not only to build a new one. Oakland, California, for example, says altering or repairing a pool needs planning review and building permits, and its pool definition includes hot tubs and spas. Ask your permit office what applies at your address."
+   },
+   {
+    "q": "Can you draw my existing pool from photos and measurements?",
+    "a": "Yes. We draw the as-built plan from your field measurements and use the photos to read them correctly. Photos alone cannot give reliable sizes or depths, so we need measured numbers for the outline, depths, steps and fitting locations. Anything that cannot be measured is marked on the drawing for your pool builder to verify on site."
+   },
+   {
+    "q": "What if there are no drawings of the old pool?",
+    "a": "Then the existing pool is drawn only from what can be measured and seen. Hidden items, such as shell thickness, steel and buried pipe routes, are noted on the set as unknown or to be verified when the work opens them up. Your pool builder or engineer decides how to handle what is found, and we revise the drawings to match."
+   },
+   {
+    "q": "Will the remodel make me bring my pool barrier up to current code?",
+    "a": "It can, and your permit office decides. Pleasanton, California says any permit to remodel a pool or spa at a single-family home requires at least two of seven listed drowning prevention features. Oakland has a similar rule for private pools. In Phoenix, altering an existing pool barrier needs a new permit, and remodels that change any part of it must meet the city’s adopted barrier code. Check with your own permit office."
+   },
+   {
+    "q": "Who seals the drawings for a spa addition or remodel?",
+    "a": "Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set. JEBN does not seal drawings. Some offices ask for sealed pool engineering with a pool permit, Boulder County, Colorado among them. You can use your own engineer, and we draw the set from that engineer’s design and mark-ups."
+   },
+   {
+    "q": "Does the federal pool safety law apply to my backyard spa?",
+    "a": "The Virginia Graeme Baker Pool and Spa Safety Act sets a standard for pool and spa drain covers made, distributed or sold in the United States. Its rules for anti-entrapment equipment on pools in use apply to public pools and spas, which include pools at hotels, member clubs and multi-family housing. State and local codes set their own rules for private pools, so ask your permit office what applies to yours."
+   }
+  ],
+  "sources": [
+   {
+    "title": "City of Oakland: Swimming Pools & Hot Tubs",
+    "url": "https://www.oaklandca.gov/My-Household/Building-and-Remodeling/Homeowner-Projects-Permits/Swimming-Pools-Hot-Tubs"
+   },
+   {
+    "title": "City of Pleasanton Building and Safety Division: Pool Enclosures and Drowning Prevention Measures (handout, Revised 01/20)",
+    "url": "https://www.cityofpleasantonca.gov/assets/our-government/community-development/handouts/pool-enclosures-and-drowning-prevention-measures.pdf"
+   },
+   {
+    "title": "City of Phoenix Planning & Development: Pool Barriers Requirements (TRT/DOC/00144, Rev. 01/26)",
+    "url": "https://www.phoenix.gov/content/dam/phoenix/pddsite/documents/trt/external/dsd_trt_pdf_00144.pdf"
+   },
+   {
+    "title": "Palm Beach County Building Division: Pool Barrier Requirements/Process (PPM# PB-O-104)",
+    "url": "https://discover.pbc.gov/pzb/building/Forms/Pool_Barrier_Requirements_and_Process.pdf"
+   },
+   {
+    "title": "Boulder County: Swimming Pools, Spas, and Hot Tubs (B26)",
+    "url": "https://bouldercounty.gov/property-and-land/land-use/building/building-publications/swimming-pools-spas-and-hot-tubs-b26/"
+   },
+   {
+    "title": "U.S. Code, Title 15, Chapter 106 (Pool and Spa Safety), via govinfo.gov",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2018-title15/html/USCODE-2018-title15-chap106.htm"
+   },
+   {
+    "title": "Pool Safely (U.S. Consumer Product Safety Commission): Pool & Spa Safety Act",
+    "url": "https://www.poolsafely.gov/pool-spa-safety-act/"
+   }
+  ],
+  "related": [
+   "site-barrier",
+   "owner-builder"
+  ],
+  "related_services": [
+   "/pool/",
+   "/services/pool-hydraulic-design/"
+  ]
+ },
+ {
+  "key": "negative-edge",
+  "path": "services/vanishing-edge-pool-drawings",
+  "title": "Vanishing-Edge & Infinity-Edge Pool Drawings",
+  "nav_label": "Vanishing-edge pool drawings",
+  "card_text": "Weir wall, catch basin, edge plumbing and tile details drawn for vanishing-edge pools.",
+  "h1_main": "Vanishing-edge pool drawings.",
+  "h1_sub": "Weir wall, catch basin, edge piping.",
+  "meta": "Drawings for vanishing-edge pools: weir wall, catch basin, edge plumbing schematic, sections and tile details, drawn from your engineer’s design.",
+  "lead": "A vanishing-edge pool, also called a negative-edge or infinity-edge pool, needs more drawings than a standard pool. The set shows the weir wall, the catch basin below it, the edge piping and the water levels. We draw it from your engineer’s design or your pool builder’s details, as DWG and PDF files.",
+  "shows_heading": "What a vanishing-edge drawing set shows.",
+  "shows_intro": "Each sheet follows the decisions your engineer or pool builder has already made. The set puts those decisions on paper so the permit office can review them and the crew can build from them.",
+  "shows": [
+   {
+    "label": "Weir wall and spill edge",
+    "text": "The weir wall is drawn in plan and section with its length, its top elevation and the spill face below it. Wall thickness, steel and footing are drawn from your engineer’s design or your pool builder’s standard details."
+   },
+   {
+    "label": "Catch basin",
+    "text": "The lower basin is drawn with its length, width, depth, water levels and access points, at the capacity your engineer or pool builder has set. The plan shows where the basin sits against the slope, the deck and the pool wall."
+   },
+   {
+    "label": "Edge circulation schematic",
+    "text": "The plumbing schematic shows the edge loop on its own: basin suction outlets, edge pump, return lines to the pool, valves and auto-fill, beside the main filtration loop. Where the 2024 ISPSC is adopted, Section 316.2 calls for either a surface skimming system or a perimeter overflow system on a permanent inground residential pool. The schematic shows which one your pool uses."
+   },
+   {
+    "label": "Sections and water levels",
+    "text": "Sections cut through the pool wall, weir and basin show the ground behind them and the water levels at rest and running, all from one datum with the deck and coping."
+   },
+   {
+    "label": "Waterproofing and tile details",
+    "text": "Large-scale details show the waterproofing line across the weir top, down the spill face and inside the basin, with the tile, edge cap and the turn into the coping. They are drawn from the manufacturer’s data and your pool builder’s details."
+   },
+   {
+    "label": "Equipment layout",
+    "text": "The pad plan places the edge pump next to the filtration equipment, with pipe runs, valves and the pipe and pump sizes your engineer or pool builder selected. Each pump is labeled with the loop it serves."
+   }
+  ],
+  "roles_heading": "Who decides what on a vanishing-edge pool.",
+  "roles_intro": "On this kind of pool the design decisions and the drawing work sit with different people. The set should make that plain.",
+  "roles": [
+   {
+    "label": "You and your pool builder",
+    "text": "You choose the edge location, its length and the finishes. Your pool builder brings the standard details, the equipment choices and the way the job will be built."
+   },
+   {
+    "label": "Your engineer",
+    "text": "The weir wall structure, the basin capacity and the edge pump selection are design decisions for your engineer or your pool builder. Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set."
+   },
+   {
+    "label": "JEBN",
+    "text": "We draw the plans, sections, water levels, plumbing schematic and edge details from those decisions and deliver DWG and PDF files. JEBN does not seal drawings."
+   },
+   {
+    "label": "Your permit office",
+    "text": "Your permit office may have its own checklist for pool submittals and may send review comments on the set. The permit office decides approval."
+   }
+  ],
+  "send_heading": "What to send for a vanishing-edge set.",
+  "send_intro": "You can start with a sketch and a site plan, and the quote is free. The more of the edge design you can send, the fewer questions come back.",
+  "send": [
+   {
+    "label": "Layout and site",
+    "text": "Your sketch or existing plans with the pool shape and the edge marked, plus a survey or site plan that shows the grade on the low side."
+   },
+   {
+    "label": "Engineer’s design or mark-ups",
+    "text": "Structural sketches for the weir wall and basin, the basin capacity, pipe and pump selections, or mark-ups on an earlier set."
+   },
+   {
+    "label": "Builder details and product data",
+    "text": "Your standard edge, basin and waterproofing details, and the manufacturer’s data for the edge pump, tile, membrane, edge cap and fittings."
+   },
+   {
+    "label": "Permit office checklist",
+    "text": "The checklist or review comments from your permit office, and the city and state where the pool will be built."
+   }
+  ],
+  "faq_heading": "Questions about vanishing-edge pool drawings.",
+  "faq": [
+   {
+    "q": "What extra drawings does a vanishing-edge pool need?",
+    "a": "A vanishing-edge set adds the weir wall in plan and section, the catch basin with its water levels, sections cut through the edge, and a plumbing schematic that shows the edge circulation as its own loop. A set can also include waterproofing and tile details at the spill face and an equipment layout with the edge pump. Your quote lists the sheets, the revisions included and the delivery date before you commit."
+   },
+   {
+    "q": "Who decides how big the catch basin is?",
+    "a": "Your engineer or your pool builder decides the basin capacity. JEBN does not size the basin. We draw it at the size they give us. Where the 2024 ISPSC is adopted, Section 316.4.1 sets a minimum surge capacity where perimeter surface skimming systems are used. Your engineer and your permit office decide whether and how that applies to your edge."
+   },
+   {
+    "q": "Does a vanishing-edge pool need an engineer?",
+    "a": "It depends on your state and your permit office. Where the 2024 ISPSC is adopted, Section 107.1 has the code official require documents prepared by a registered design professional where state law calls for one. Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set. JEBN does not seal drawings. You can use your own engineer."
+   },
+   {
+    "q": "Can you draw from our structural engineer’s sketches?",
+    "a": "Yes. Send the sketches, calculations or mark-ups and we draw the weir wall, the basin walls and the steel as your engineer shows them. If a dimension or level is missing, or two sketches disagree, we send you the question instead of filling the gap ourselves. Your engineer can then check the drawn sheets against the design before the set goes to the permit office."
+   },
+   {
+    "q": "Do you draw the edge details for the tile and coping trades?",
+    "a": "Yes. We draw the spill face, the weir top, the edge cap or coping, the tile layout at the edge and the waterproofing line, at a scale the trades can work from. The details follow your pool builder’s standard details and the manufacturer’s data for the tile, membrane and edge materials. You get DWG and PDF files, so the trades can take dimensions from the native drawing."
+   },
+   {
+    "q": "Which barrier and drain rules apply to a vanishing-edge pool?",
+    "a": "The 2024 ISPSC defines a vanishing edge, or negative edge, as water flowing over a pool wall into a catch basin. Where that code is adopted, Section 801.2 says a permanent inground pool at a home must meet Chapter 3, including the barrier rules in Section 305 and suction entrapment avoidance in Section 311. Federal rules at 16 CFR part 1450 also cover pool and spa drain covers. Check your state and local code."
+   }
+  ],
+  "sources": [
+   {
+    "title": "2024 ISPSC Chapter 1 Scope and Administration",
+    "url": "https://codes.iccsafe.org/content/ISPSC2024P1/chapter-1-scope-and-administration"
+   },
+   {
+    "title": "2024 ISPSC Chapter 2 Definitions",
+    "url": "https://codes.iccsafe.org/content/ISPSC2024P1/chapter-2-definitions"
+   },
+   {
+    "title": "2024 ISPSC Chapter 3 General Compliance",
+    "url": "https://codes.iccsafe.org/content/ISPSC2024P1/chapter-3-general-compliance"
+   },
+   {
+    "title": "2024 ISPSC Chapter 8 Permanent Inground Residential Swimming Pools",
+    "url": "https://codes.iccsafe.org/content/ISPSC2024P1/chapter-8-permanent-inground-residential-swimming-pools"
+   },
+   {
+    "title": "CPSC: Pool and Spa Drain Cover business guidance",
+    "url": "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Pool-and-Spa-Drain-Covers"
+   }
+  ],
+  "related": [
+   "rooftop-elevated",
+   "spa-remodel"
+  ],
+  "related_services": [
+   "/services/pool-structural-engineering/",
+   "/services/pool-hydraulic-design/"
+  ]
+ },
+ {
+  "key": "rooftop-elevated",
+  "path": "services/rooftop-elevated-pool-drawings",
+  "title": "Elevated, Rooftop & Pile-Supported Pool Drawings",
+  "nav_label": "Rooftop & elevated pool drawings",
+  "card_text": "Pool plans, sections and support details for pools on roofs, podiums, decks and piles.",
+  "h1_main": "Rooftop and elevated pool drawings.",
+  "h1_sub": "Drawn to your engineer’s design.",
+  "meta": "Drawings for rooftop, podium, deck and pile-supported pools: plans, sections, support and waterproofing details drawn to your engineer’s design.",
+  "lead": "A pool on a roof, a podium or piles sits on a structure that your structural engineer and architect design. We draw the pool set to their design: plans and sections coordinated with the structural drawings, support and waterproofing details, equipment rooms and shop drawings. Files come as DWG and PDF.",
+  "shows_heading": "What the set shows for a pool on a structure.",
+  "shows_intro": "Each sheet is drawn over the building’s structural and architectural drawings, so the pool and the structure under it read as one set. When the engineer or architect marks up a sheet, we revise it to match.",
+  "shows": [
+   {
+    "label": "Pool plans and sections",
+    "text": "The pool outline, depths and water level drawn over the building grid, slab edges, beams and columns from the structural set. Sections cut through the pool and the structure below so each layer and its thickness is clear."
+   },
+   {
+    "label": "Shell and support details",
+    "text": "Shell walls, floor and edges, and the slab, beams or frame that carry them, drawn as your structural engineer designed them. The member sizes, reinforcement and design loads on the sheets are copied from the engineer’s design."
+   },
+   {
+    "label": "Pile or pier layout",
+    "text": "Pile or pier locations, grid dimensions, and cap and grade beam outlines, drawn from the engineer’s foundation design. The engineer decides the type, spacing and capacity of each pile."
+   },
+   {
+    "label": "Waterproofing and penetrations",
+    "text": "Membrane layers, terminations and drains, plus every pipe, light and fitting that passes through the shell or slab. These are drawn to the architect’s or waterproofing designer’s specification and the manufacturer’s data."
+   },
+   {
+    "label": "Plumbing and equipment room",
+    "text": "Pipe routes from the pool to the equipment room, including runs through the building, drawn as the design team laid them out. The room layout shows pumps, filters, heaters, tanks and access space where the design team placed them."
+   },
+   {
+    "label": "Shop drawings for trades",
+    "text": "Fabrication and installation sheets for tile, coping, gutters, steel placing, embeds and equipment. Each one follows the coordinated set and the engineer’s details."
+   }
+  ],
+  "roles_heading": "Who is responsible for what on a raised pool.",
+  "roles_intro": "On a pool carried by a structure, the design work and the drawing work sit with different people.",
+  "roles": [
+   {
+    "label": "Your structural engineer",
+    "text": "Designs the structure that carries the pool, the shell and any piles or piers, and sets the design loads. Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set."
+   },
+   {
+    "label": "Your architect",
+    "text": "Sets the building layout and finishes around the pool. The architect, or a waterproofing consultant on the design team, specifies the waterproofing system."
+   },
+   {
+    "label": "JEBN",
+    "text": "Drafts the pool sheets, details and shop drawings from the design team’s drawings and mark-ups, and points out any clash we notice between sheets while drawing. JEBN does not design or check the structure and does not seal drawings."
+   },
+   {
+    "label": "Your permit office",
+    "text": "Reviews the submittal and decides approval. Where the 2024 ISPSC is adopted, pool structure follows the IBC or IRC, and a pool over a space below, which the code calls an elevated pool, follows a standard called PHTA 10. Check which code editions your permit office uses."
+   }
+  ],
+  "send_heading": "What to send for a rooftop or elevated pool.",
+  "send_intro": "Send what the design team has, even at an early stage. A sketch and the structural sheets are enough to start your free quote.",
+  "send": [
+   {
+    "label": "Structural drawings",
+    "text": "The framing, slab and foundation sheets for the area under the pool, with any pile or pier design and the engineer’s mark-ups."
+   },
+   {
+    "label": "Architectural set",
+    "text": "Plans and sections for the roof, podium or deck, the waterproofing specification and the finish selections."
+   },
+   {
+    "label": "Pool design and equipment",
+    "text": "The pool layout or sketch, depths, edge type, and the equipment list with manufacturer data for pumps, filters, heaters and tanks."
+   },
+   {
+    "label": "Checklist and standards",
+    "text": "The permit office’s checklist or review comments, and your title block, sheet size and CAD standards."
+   }
+  ],
+  "faq_heading": "Questions about rooftop and pile-supported pool drawings.",
+  "faq": [
+   {
+    "q": "Can you draw a rooftop pool for our structural engineer?",
+    "a": "Yes. We draw the pool plans, sections, support details and equipment room from your engineer’s design and the building’s structural set. The engineer marks up the sheets and we revise them to match. Your quote lists the sheets, the revisions included and the delivery date before you commit. Files come as DWG and PDF, so the engineer can lay them over their own drawings."
+   },
+   {
+    "q": "Who is responsible for the structure that carries the pool?",
+    "a": "The project’s structural engineer designs the structure that carries the pool, the shell and its supports, and the architect or a waterproofing consultant specifies the waterproofing. Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set. JEBN does not seal drawings. Our part is drafting to the design team’s drawings and mark-ups."
+   },
+   {
+    "q": "Do you draw the pile or pier layout?",
+    "a": "Yes, as your engineer designed it. We draw pile or pier locations, grid dimensions and cap or grade beam outlines from the foundation design. Where the IBC applies, deep foundations are designed on the basis of a geotechnical investigation, so pile type, spacing and capacity come from the engineer and that report. Where the 2024 ISPSC is adopted, pools in coastal high-hazard areas and coastal A zones must be designed and built to ASCE 24."
+   },
+   {
+    "q": "Why does the weight of the water matter on a structure?",
+    "a": "Water weighs about 62.4 pounds per cubic foot, according to the USGS. So each foot of depth adds about 62.4 pounds on every square foot of pool floor, before the shell, finishes and swimmers are counted. Small changes in depth or water level change the load on the structure. That is why the sheets must show depths, water levels and any surge or balance tank exactly as the design team set them."
+   },
+   {
+    "q": "What do you need from the design team?",
+    "a": "Send the structural framing and foundation sheets for the pool area, the architectural plans and waterproofing specification, the pool layout with depths and edge type, and the equipment list with manufacturer data. If your permit office has a checklist or has sent review comments, send those too. We can start from early drawings and update the sheets as the design team issues revisions."
+   },
+   {
+    "q": "Do you deliver shop drawings as well?",
+    "a": "Yes. We draw tile, coping, gutter, steel placing, embed and equipment sheets that follow the coordinated set, delivered as DWG and PDF. Where the IBC applies and the building official allows an item to be a deferred submittal, its documents go to the registered design professional in responsible charge for review before the building official sees them. Ask your design team how they want shop drawings routed."
+   }
+  ],
+  "sources": [
+   {
+    "title": "USGS Circular 1268, Estimated Use of Water in the United States in 2000: Conversion Factors",
+    "url": "https://pubs.usgs.gov/circ/2004/circ1268/htdocs/text-conversion.html"
+   },
+   {
+    "title": "2024 International Building Code, Chapter 1 Scope and Administration",
+    "url": "https://codes.iccsafe.org/content/IBC2024P1/chapter-1-scope-and-administration"
+   },
+   {
+    "title": "2024 International Building Code, Chapter 18 Soils and Foundations",
+    "url": "https://codes.iccsafe.org/content/IBC2024P1/chapter-18-soils-and-foundations"
+   },
+   {
+    "title": "2024 International Swimming Pool and Spa Code, Chapter 3 General Compliance",
+    "url": "https://codes.iccsafe.org/content/ISPSC2024P1/chapter-3-general-compliance"
+   },
+   {
+    "title": "2024 International Swimming Pool and Spa Code, Chapter 2 Definitions",
+    "url": "https://codes.iccsafe.org/content/ISPSC2024P1/chapter-2-definitions"
+   },
+   {
+    "title": "NCEES, Licensure",
+    "url": "https://ncees.org/licensure/"
+   }
+  ],
+  "related": [
+   "commercial-plan-review",
+   "negative-edge"
+  ],
+  "related_services": [
+   "/services/pool-drawings-for-engineer-of-record/",
+   "/services/pool-shop-drawings/"
+  ]
+ },
+ {
+  "key": "commercial-plan-review",
+  "path": "services/commercial-pool-plan-review-drawings",
+  "title": "Public and Commercial Pool Plan-Review Drawings",
+  "nav_label": "Commercial pool plan-review sets",
+  "card_text": "Plan-review sheets for hotel, HOA and public pools, drawn from your engineer’s design.",
+  "h1_main": "Public pool plan-review drawings.",
+  "h1_sub": "Drawn for your engineer of record.",
+  "meta": "Drafting for public and commercial pool plan review: site plans, sections, recirculation schematics and equipment sheets drawn from your engineer’s design.",
+  "lead": "In many states, a hotel, HOA or other public pool needs plan review by a health department or another agency before construction. Your engineer or architect of record sets the design. We draft the sheets the reviewer asks for from that design and the agency’s checklist, and deliver them as DWG and PDF files.",
+  "shows_heading": "What a plan-review set shows.",
+  "shows_intro": "Each agency sets its own list, so the sheet list follows your state’s rule and the reviewer’s checklist. These parts are drawn from the state rules and the CDC model code cited below.",
+  "shows": [
+   {
+    "label": "Site plan",
+    "text": "The pool on the property, with nearby buildings, walkways, utilities and the equipment room. Some rules also ask for water, sewer and drainage locations on this sheet."
+   },
+   {
+    "label": "Pool plan and sections",
+    "text": "A dimensioned plan of each pool and cross sections through it. They show depths, the waterline, inlets, main drains, suction outlets, gutters or skimmers, stairs and ladders."
+   },
+   {
+    "label": "Recirculation schematic",
+    "text": "A flow diagram of pumps, filters, chemical feeders, heaters, surge tank, valves, gauges and flow meters. It also shows make-up water and backwash disposal, with pipe sizes taken from your engineer’s design."
+   },
+   {
+    "label": "Equipment room and schedules",
+    "text": "The equipment room layout with space for installing and servicing each unit. Schedules list the pumps, filters, feeders and drain covers your engineer selected, drawn from the manufacturer’s data."
+   },
+   {
+    "label": "Turnover and bather-load data",
+    "text": "A data sheet with surface area, volume, flow rate, turnover time and bather load or peak occupancy. We enter these figures exactly as your engineer calculated them."
+   },
+   {
+    "label": "Deck, barrier and safety items",
+    "text": "Deck paving, slope and drains, the enclosure, gates and latching hardware. Depth markings, signs, safety equipment and accessible entries appear where the rule lists them and your designer places them."
+   }
+  ],
+  "roles_heading": "Who does what on a public pool submittal.",
+  "roles_intro": "The drawings record decisions made by the people who are responsible for them.",
+  "roles": [
+   {
+    "label": "You, the owner or developer",
+    "text": "You hire the engineer or architect of record and decide which pools, spas and features the project includes. Some states require the owner to sign the permit application."
+   },
+   {
+    "label": "Your engineer or architect",
+    "text": "They set the design, run the hydraulic and structural calculations and choose the equipment. They seal the set where the rule requires it and answer the reviewer on technical points."
+   },
+   {
+    "label": "JEBN",
+    "text": "We draft the plans, sections, schematics, schedules and data sheets from your designer’s work. When review comments come back, we redraw the sheets as your engineer directs."
+   },
+   {
+    "label": "The reviewing agency",
+    "text": "A state or local health department, a building department or another agency named in your state’s law checks the submittal against its rules. The agency decides approval."
+   }
+  ],
+  "send_heading": "What to send for a plan-review drafting quote.",
+  "send_intro": "Send what you have now. Your free quote lists the sheets, the revisions included and the delivery date before you commit.",
+  "send": [
+   {
+    "label": "Your engineer’s design",
+    "text": "Calculations, sketches or marked-up sheets showing the pool layout, depths, pipe sizes, flow rates, turnover, bather-load figures and equipment choices."
+   },
+   {
+    "label": "Survey or site plan",
+    "text": "A survey, civil site plan or architect’s floor plan showing where the pool, deck, enclosure and equipment room sit."
+   },
+   {
+    "label": "Manufacturer data",
+    "text": "Cut sheets for the pumps, filters, chemical feeders, drain covers, lifts and other listed items, so the schedules match what will be installed."
+   },
+   {
+    "label": "The agency’s checklist",
+    "text": "Your state or local agency’s plan-review checklist and application form. If the set was already submitted, send the review comments too."
+   }
+  ],
+  "faq_heading": "Public pool plan review questions.",
+  "faq": [
+   {
+    "q": "Who reviews public pool plans?",
+    "a": "It depends on the state. In Washington, the state Department of Health or the local health officer reviews the permit application under WAC 246-260-021. In Iowa, the Department of Inspections, Appeals, and Licensing issues the construction permit. Florida law lets local governments review public pool plans against the Florida Building Code. Check your state’s rule, and ask your local building department whether a separate permit also applies."
+   },
+   {
+    "q": "Do public pool plans need an engineer’s seal?",
+    "a": "It depends on the state, and several state rules require one. Washington asks for plans prepared, stamped and signed by an engineer or architect. Iowa’s rule 481 IAC 485.5(2) requires plans sealed by an engineer or architect licensed in Iowa. South Carolina law, section 44-55-2340, requires plans prepared and signed by an architect or engineer registered in the state. JEBN does not seal drawings, so the seal comes from your design professional."
+   },
+   {
+    "q": "Can you draft for the project’s engineer of record?",
+    "a": "Yes. We draft the set from your engineer’s design, calculations and mark-ups, and we redraw sheets when review comments come back. Where your permit office or health department requires a seal, a Professional Engineer licensed in your state, or an architect where the rule allows one, must direct the design and seal the set. JEBN does not seal drawings."
+   },
+   {
+    "q": "What does the health department want in the submittal?",
+    "a": "Each agency sets its own list. Washington’s and Iowa’s rules both ask for a site or overall plan, a scaled pool plan with cross sections, a piping schematic with pipe sizes and valves, an equipment layout and equipment specifications. Iowa also lists bathhouse drawings. Use your agency’s current checklist as the sheet list, and send it with your quote request so the drawings follow it."
+   },
+   {
+    "q": "Do you draw to the Model Aquatic Health Code?",
+    "a": "The CDC’s Model Aquatic Health Code is voluntary guidance, not federal law. It becomes law only where a state, local, territorial or tribal jurisdiction adopts it, in whole or in part. New Mexico, for example, adopts the first edition by reference with its own changes. Where your jurisdiction uses it, we arrange the sheets around its plan submittal list, and your engineer applies its design requirements."
+   },
+   {
+    "q": "Do the drawings show drain safety and accessible entry?",
+    "a": "The federal Virginia Graeme Baker Pool and Spa Safety Act requires anti-entrapment drain protection at public pools and spas, including pools open only to hotel guests or to apartment or HOA residents. Where the 2010 ADA Standards apply, a pool needs at least two accessible entries, one a lift or sloped entry. Under 300 linear feet of wall, one lift or sloped entry can be enough. We draw both as your engineer places them."
+   }
+  ],
+  "sources": [
+   {
+    "title": "WAC 246-260-021 Construction permit (Washington State Legislature)",
+    "url": "https://app.leg.wa.gov/WAC/default.aspx?cite=246-260-021"
+   },
+   {
+    "title": "WAC 246-260-010 Definitions (Washington State Legislature)",
+    "url": "https://app.leg.wa.gov/WAC/default.aspx?cite=246-260-010"
+   },
+   {
+    "title": "Iowa Administrative Code 481, Chapter 485 Swimming Pools, Spas, and Spray Pads (Iowa Legislature)",
+    "url": "https://www.legis.iowa.gov/docs/iac/chapter/481.485.pdf"
+   },
+   {
+    "title": "South Carolina Code Title 44 Chapter 55, sections 44-55-2320 and 44-55-2340 (SC Legislature)",
+    "url": "https://www.scstatehouse.gov/code/t44c055.php"
+   },
+   {
+    "title": "Florida Statutes section 514.03 (Florida Legislature)",
+    "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0514/Sections/0514.03.html"
+   },
+   {
+    "title": "7.18.1 NMAC Public Swimming Pools, Spas and Baths (NM State Records Center and Archives)",
+    "url": "https://www.srca.nm.gov/parts/title07/07.018.0001.html"
+   },
+   {
+    "title": "About The Model Aquatic Health Code (CDC)",
+    "url": "https://www.cdc.gov/model-aquatic-health-code/php/about/index.html"
+   },
+   {
+    "title": "2024 Model Aquatic Health Code, Code Language, 5th Edition (CDC)",
+    "url": "https://www.cdc.gov/model-aquatic-health-code/media/pdfs/2024/11/5th-Ed-MAHC-Code-508.pdf"
+   },
+   {
+    "title": "Virginia Graeme Baker Pool and Spa Safety Act, as amended (Pool Safely, CPSC)",
+    "url": "https://www.poolsafely.gov/wp-content/uploads/2016/04/pssa.pdf"
+   },
+   {
+    "title": "Pool and Spa Safety Act (Pool Safely, CPSC campaign)",
+    "url": "https://www.poolsafely.gov/pool-spa-safety-act/"
+   },
+   {
+    "title": "2010 ADA Standards for Accessible Design (ADA.gov, U.S. Department of Justice)",
+    "url": "https://www.ada.gov/law-and-regs/design-standards/2010-stds/"
+   }
+  ],
+  "related": [
+   "rooftop-elevated",
+   "negative-edge"
+  ],
+  "related_services": [
+   "/services/pool-drawings-for-engineer-of-record/",
+   "/services/outsourced-pool-drafting/"
+  ]
+ }
+]
