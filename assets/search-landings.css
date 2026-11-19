@@ -324,8 +324,7 @@ details.local-card[open]>summary::after{content:"\2212"}
 .footer-company .company-name{font-size:.95rem;font-weight:700;margin-bottom:.15rem}
 .footer-company a{text-decoration:underline}
 .footer-company+.footer-bottom{margin-top:1.2rem}
-.review-note .text-link{margin-top:.9rem}
-.prose ul{padding-left:1.2rem;margin-top:1rem}
+.prose ul:not([class]){padding-left:1.2rem;margin-top:1rem}
 .prose li{padding:.25rem 0}
 /* Footer bottom row: the three items sit on one line on wide screens. */
 @media(min-width:701px){.footer-bottom{align-items:center}.footer-bottom p{margin:0}.footer-bottom button{margin-top:0}}
@@ -337,4 +336,4 @@ details.local-card[open]>summary::after{content:"\2212"}
 .search-landing .sources li{padding:.2rem 0}
 .search-landing .sources a{text-decoration:underline}
 /* Narrowest phones: the company line under the logo is set a little tighter so the menu button stays on one line. */
-@media(max-width:350px){.search-landing .brand{gap:.55rem}.search-landing .brand-sub{font-size:.5rem;letter-spacing:.08em}.search-landing .menu-toggle{white-space:nowrap}}
+@media(max-width:350px){.search-landing .brand{gap:.55rem}.search-landing .brand-sub{letter-spacing:.08em}.search-landing .menu-toggle{white-space:nowrap}}

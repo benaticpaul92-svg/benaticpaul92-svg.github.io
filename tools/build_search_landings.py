@@ -86,18 +86,18 @@ def seal_short(state=None):
 def seal_answer(state=None, offer=True):
     where = state or 'your state'
     text = (f'JEBN prepares the drawings. {NOT_A_FIRM} Where your permit office requires an engineer’s seal, a Professional Engineer '
-            f'licensed in {where} must direct the engineering, seal the set and be the engineer of record.')
+            f'licensed in {where} must direct the engineering and seal the set.')
     if offer:
         text += (f' You can use your own engineer, or we can ask one licensed in {where} to take your project. '
                  'That engineer decides whether to take it and sets the fee for the engineering.')
     return text
 
 
-TURNAROUND = ('Residential drawing preparation takes 2 business days after we receive all project inputs. An engineer’s review and seal, '
-              'where your permit needs one, and the permit office’s own review take additional time.')
+TURNAROUND = ('Residential drawing preparation takes 2 business days after we receive all project inputs. Where your permit needs an '
+              'engineer’s seal, the engineer’s work takes additional time, and so does the permit office’s own review.')
 
 # Largest or best-known city, used only as the form placeholder example.
-CITY = {'alabama':'Birmingham','alaska':'Anchorage','arizona':'Phoenix','arkansas':'Little Rock','california':'San Diego','colorado':'Denver','connecticut':'Stamford','delaware':'Wilmington','florida':'Tampa','georgia':'Atlanta','hawaii':'Honolulu','idaho':'Boise','illinois':'Naperville','indiana':'Carmel','iowa':'Des Moines','kansas':'Overland Park','kentucky':'Lexington','louisiana':'New Orleans','maine':'Portland','maryland':'Annapolis','massachusetts':'Boston','michigan':'Grand Rapids','minnesota':'Minneapolis','mississippi':'Jackson','missouri':'St. Louis','montana':'Billings','nebraska':'Omaha','nevada':'Las Vegas','new-hampshire':'Manchester','new-jersey':'Paramus','new-mexico':'Albuquerque','new-york':'Huntington','north-carolina':'Charlotte','north-dakota':'Fargo','ohio':'Columbus','oklahoma':'Oklahoma City','oregon':'Portland','pennsylvania':'Pittsburgh','rhode-island':'Providence','south-carolina':'Charleston','south-dakota':'Sioux Falls','tennessee':'Nashville','texas':'Houston','utah':'Salt Lake City','vermont':'Burlington','virginia':'Virginia Beach','washington':'Seattle','west-virginia':'Charleston','wisconsin':'Madison','wyoming':'Cheyenne'}
+CITY = {'alabama':'Birmingham','alaska':'Anchorage','arizona':'Phoenix','arkansas':'Little Rock','california':'San Diego','colorado':'Denver','connecticut':'Stamford','delaware':'Wilmington','florida':'Tampa','georgia':'Atlanta','hawaii':'Honolulu','idaho':'Boise','illinois':'Naperville','indiana':'Carmel','iowa':'Des Moines','kansas':'Overland Park','kentucky':'Lexington','louisiana':'New Orleans','maine':'Portland','maryland':'Annapolis','massachusetts':'Boston','michigan':'Grand Rapids','minnesota':'Minneapolis','mississippi':'Jackson','missouri':'St. Louis','montana':'Billings','nebraska':'Omaha','nevada':'Las Vegas','new-hampshire':'Manchester','new-jersey':'Paramus','new-mexico':'Albuquerque','new-york':'Huntington','north-dakota':'Fargo','ohio':'Columbus','oklahoma':'Oklahoma City','oregon':'Portland','pennsylvania':'Pittsburgh','rhode-island':'Providence','south-carolina':'Charleston','south-dakota':'Sioux Falls','tennessee':'Nashville','texas':'Houston','utah':'Salt Lake City','vermont':'Burlington','virginia':'Virginia Beach','washington':'Seattle','west-virginia':'Charleston','wisconsin':'Madison','wyoming':'Cheyenne'}
 
 def asset(name):
     p = ROOT/'assets'/name
@@ -175,14 +175,14 @@ def package_rows(state=None):
         ('Site & pool layout', 'Pool position, dimensions, depths and sections, coordinated with the site information you supply.'),
         ('Construction details', 'Pool shell and reinforcement details drawn from your engineer’s design or your builder’s standard details, with drawing references for your contractor.'),
         ('Plumbing & equipment', 'Circulation layout, pipe sizes, equipment schedules and a TDH calculation sheet where included in your quote.'),
-        ('Permit coordination', f'The set is drawn to the checklist {office} publishes, and review comments are drawn up within the revisions in your quote. {seal_short(state)}'),
+        ('Permit coordination', f'The set is drawn to the checklist {office} publishes, and changes that answer plan review comments are drawn within the revisions in your quote.'),
     ]
     return ''.join(f'<li><span class="sheet-number" aria-hidden="true">{i:02d}</span><div><h3>{label}</h3><p>{text}</p></div></li>' for i, (label, text) in enumerate(rows, 1))
 
 
 HERO_FACTS = [('Drawing preparation', '2 business days'), ('File delivery', 'DWG + PDF'), ('Scope', 'Drafting only, no seal')]
 HERO_STRIP = '2 business days · DWG + PDF · Drafting only, no seal'
-HERO_SMALL = 'The 2 business days start when we have all project inputs for residential pool drawings. JEBN does not seal drawings. An engineer’s review and seal, where your permit needs one, and permit approval take additional time.'
+HERO_SMALL = 'The 2 business days start when we have all project inputs for residential pool drawings. JEBN does not seal drawings. Where your permit needs an engineer’s seal, the engineer’s work takes additional time, and so does permit approval.'
 
 
 def panel_quote_html():
@@ -217,7 +217,7 @@ SET_SHEETS = [
 ]
 
 
-def package_section(state=None, links='', rows=None, heading=None, lead=None, sid='services', typical=None):
+def package_section(state=None, links='', rows=None, heading=None, lead=None, sid='package-section', typical=None):
     """The drawing package. Without `rows` it shows the general rows and the list of typical sheets; `typical` forces that list on or off."""
     heading = (heading or 'What a pool permit<br>drawing set includes.').replace('<br>', ' <br>')   # the space keeps words apart where the break is hidden on phones
     lead = lead or 'Your quote lists every sheet, the revisions included and the delivery date before you commit.'
@@ -251,7 +251,7 @@ def step_items(steps):
 
 DELIVERY_STEPS = [
     ('Confirm the scope', 'We review your request and reply by email within 24 hours with questions or a scoped quote. We identify missing inputs and what your permit office asks for.'),
-    ('Prepare the drawings', 'Residential drawing preparation takes 2 business days after all project inputs are received. An engineer’s review and seal, where your permit needs one, take additional time.'),
+    ('Prepare the drawings', 'Residential drawing preparation takes 2 business days after all project inputs are received. Where your permit needs an engineer’s seal, the engineer’s work takes additional time.'),
     ('Deliver', 'You receive the PDF set for your permit submission and the DWG files. Your quote states the revisions included. Your permit office decides approval and timing.'),
 ]
 
@@ -266,7 +266,7 @@ def state_directory(summary='Choose your state for local permit notes'):
 
 
 def coverage_section(extra=''):
-    return f'''<section class="coverage-line" id="coverage" aria-label="USA coverage"><div class="wrap"><p><strong>{COMPANY}.</strong> We draft pool projects for US permit offices.</p><a href="/states/">View state pages</a></div><div class="wrap coverage-more">{extra}{state_directory()}</div></section>'''
+    return f'''<section class="coverage-line" id="coverage" aria-label="USA coverage"><div class="wrap"><p><strong>{COMPANY}.</strong> We draft pool drawings for US permit submissions.</p><a href="/states/">View state pages</a></div><div class="wrap coverage-more">{extra}{state_directory()}</div></section>'''
 
 
 def service_links(current=''):
@@ -277,6 +277,7 @@ def service_links(current=''):
 
 # Client feedback, kept word for word from the earlier landscape page. Do not edit the quotes.
 # The labels under the quotes are ours and name the client and the place only.
+# One comment and one rated-project chip from the earlier page are not shown at present (held on 20 November 2026).
 CLIENT_QUOTES = [
     ("JEBN did a great job on my pool and landscape project. As a main contractor in Dubai, they're now my go-to for all our pool and landscape solutions.", 'Abdellaziz · Main contractor · Dubai, UAE', False),
     ("We build hotels and chose JEBN for our pool and outdoor-space design. The pool area had tough constraints — pump-room placement and a tricky overflow — but their experience brought practical solutions and we finished successfully. They're our go-to for pool and landscape technical work.", 'Judy Lee · Hotel developer · Taiwan', False),
@@ -418,7 +419,7 @@ def company_block():
             f'<p>Mailing address: {MAIL_ADDRESS} · <a href="mailto:{EMAIL}">{EMAIL}</a></p></div>')
 
 
-def shell(path, title, description, body, schema, head_extra='', home=False, nav_home=False, out=None, noindex=False, brand=' | JEBN'):
+def shell(path, title, description, body, schema, head_extra='', out=None, noindex=False, brand=' | JEBN'):
     header = ''.join(str(BASE.select_one(s)) for s in ['.skip-link', '.utility-bar', '.site-header', '#privacy-choices'])
     footer_links = ''.join(f'<a href="{href}">{label}</a>' for href, label, _ in SERVICE_LINKS)
     footer_links += '<a href="/landscape/">Landscape design</a>'
@@ -486,7 +487,7 @@ SERVICES = [
         ('Barrier & safety items', 'Fence, gates and the other barrier items your permit office lists.'),
         ('Plumbing & equipment', 'Piping schematic, equipment schedule and the TDH worksheet where the office asks for one.'),
         ('Structural sheets', 'Shell and steel details drawn from your engineer’s design or your builder’s standard details.'),
-        ('Review comments', 'Comments from plan review are drawn up within the revisions in your quote.')],
+        ('Review comments', 'Changes that answer plan review comments are drawn within the revisions in your quote.')],
       extra=('BEFORE YOU ASK FOR A QUOTE', 'Three things to ask your permit office.', 'Permit offices differ, even inside one state. These three answers decide what goes into your drawing set.', [
         ('Its checklist', 'Ask whether your office publishes a pool submittal checklist. Send it with your request and we draw to it.'),
         ('The code edition', 'Which edition of the residential code and the pool code it enforces, with any local amendments.'),
@@ -499,7 +500,7 @@ SERVICES = [
       faq_heading='Questions about pool permit drawings.',
       faq=[
         ('What does a pool permit drawing set include?', 'Usually a site plan with setbacks and the barrier, a pool plan with dimensions and depths, sections, structural details, a plumbing schematic and an equipment schedule. Your permit office’s checklist decides the exact list, and your quote names every sheet.'),
-        ('Do pool permit drawings need an engineer’s stamp?', 'Your permit office decides. Some ask for plans sealed by a Professional Engineer licensed in the state, often for the structural sheets. JEBN prepares the drawings and does not seal them. Where a seal is required, a Professional Engineer licensed in your state must direct the engineering and seal the set.'),
+        ('Do pool permit drawings need an engineer’s stamp?', 'Your state’s law and your permit office’s rules decide. Some offices ask for plans sealed by a Professional Engineer licensed in the state. JEBN prepares the drawings and does not seal them. Where an engineer’s seal is required, a Professional Engineer licensed in your state must direct the engineering and seal the set.'),
         ('Can you work from my builder’s sketch?', 'Yes. Send the sketch with dimensions and depths, the survey or site plan if you have one, and your permit office’s checklist. We tell you what is missing before drawing work starts.'),
         ('What if plan review comes back with comments?', PLAN_REVIEW_ANSWER),
         ('Do you know my city or county’s permit rules?', 'Each state page lists permit notes for named cities and counties, with links to the official sources. Send your permit office’s checklist with your request and we draw to it.'),
@@ -512,18 +513,18 @@ SERVICES = [
       package_heading='What a pool construction<br>set includes.',
       package_lead='The drawings your builder and trades work from, kept in step with the permit set. Your quote lists the sheets for your project.',
       rows=[
-        ('Setting-out plan', 'Pool outline, dimensions, levels and reference points for excavation and forming.'),
+        ('Layout plan', 'Pool outline, dimensions, elevations and reference points for excavation and forming.'),
         ('Sections & depths', 'Long and cross sections with floor slopes, steps, benches, ledges and the waterline.'),
         ('Shell & steel details', 'Wall, floor and beam details, with reinforcement drawn from your engineer’s design or your builder’s standard details.'),
         ('Plumbing & equipment', 'Pipe runs, pipe sizes, valves and fittings, and the equipment pad layout.'),
         ('Finishes & edges', 'Tile, coping, waterline and edge details for the finishing trades.')],
       extra=('PERMIT SET OR CONSTRUCTION SET', 'Permit set or construction set?', 'A permit set shows the permit office what will be built. A construction set gives the crew the dimensions and details to build from. Many projects start with the permit set and add construction sheets once the permit is issued.', [
         ('Permit set', 'Site plan, pool plan, sections and the details the permit office’s checklist asks for.'),
-        ('Construction set', 'Setting-out dimensions, steel, plumbing runs and finish details for the trades.'),
+        ('Construction set', 'Layout dimensions, steel, plumbing runs and finish details for the trades.'),
         ('Shop drawings', 'Fabrication details for tile, coping, gutters, steel and equipment.')]),
       inputs=('Start with the plans you have.', 'A sketch is enough to begin. If a permit set already exists, send it so the construction sheets follow it. We identify the missing inputs before drawing work starts.', [
         ('Pool layout', 'Sketch or permit set, with dimensions, depths and features.'),
-        ('Site information', 'Survey or site plan, levels and known site constraints.'),
+        ('Site information', 'Survey or site plan, elevations and known site constraints.'),
         ('Structure', 'Your engineer’s design or your builder’s standard steel details.'),
         ('Equipment & finishes', 'Equipment models, tile and coping selections, if chosen.')]),
       faq_heading='Questions about pool construction drawings.',
@@ -546,7 +547,7 @@ SERVICES = [
         ('Soil & groundwater basis', 'The sheets state the soil basis the engineer gives: your geotechnical report where one exists, or the bearing value the engineer assumes.'),
         ('Raised walls & special edges', 'Raised bond beams, retaining conditions, vanishing edges, perimeter overflow and attached spas.'),
         ('Code references & notes', 'Design loads, concrete and steel notes and code references, as the engineer specifies them for the edition your jurisdiction enforces.'),
-        ('Engineer’s mark-ups', 'Review mark-ups from your engineer are drawn up within the revisions in your quote. The engineer seals the sheets.')],
+        ('Engineer’s mark-ups', 'Changes from your engineer’s review mark-ups are drawn within the revisions in your quote. The engineer seals the sheets.')],
       inputs=('Send the pool and the engineer’s design.', 'A dimensioned layout with depths is enough to start the drafting. The engineer’s sketches, calculations or standard details, a soils report and the survey let us draw the structural sheets without follow-up questions.', [
         ('Pool layout', 'Shape, dimensions, depths, steps, benches and raised features.'),
         ('The design', 'Sketches, calculations, standard details or mark-ups from your engineer, or your builder’s standard steel details.'),
@@ -555,7 +556,7 @@ SERVICES = [
       faq_heading='Questions about pool structural drawings.',
       faq=[
         ('Does my pool need structural engineering?', 'Your state’s law and your permit office’s rules decide. Some permit offices ask for sealed structural plans with every pool permit. Others may ask when the pool is close to a house footing, a retaining wall or a slope, when the ground is difficult, or when the shell has raised walls or a vanishing edge. Send the checklist and we tell you which sheets it asks for.'),
-        ('Who designs the shell and the steel?', 'Where your permit office requires sealed plans, a Professional Engineer licensed in your state. JEBN drafts the sheets from that design. Where no seal is required, the sheets follow your builder’s standard details.'),
+        ('Who designs the shell and the steel?', 'Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state. JEBN drafts the sheets from that design. Where no seal is required, the sheets follow your builder’s standard details.'),
         ('What if there is no soils report?', 'The engineer decides what bearing value to assume and whether a report is needed. The sheets state that basis, so the plan reviewer can see what the design relies on.'),
         ('Can you detail vanishing-edge and perimeter-overflow pools?', 'Yes. We draft the weir wall, the catch basin and the edge details from the design your engineer or builder provides.'),
         ('Who seals the structural sheets?', seal_answer()),
@@ -580,7 +581,7 @@ SERVICES = [
         ('Permit forms', 'Any hydraulic or TDH worksheet your permit office requires.')]),
       faq_heading='Questions about pool plumbing drawings.',
       faq=[
-        ('Do you complete the TDH worksheet my permit office requires?', 'Yes. Some permit offices publish their own hydraulic or TDH worksheet. Send it with your request and we fill it in from your pipe runs and equipment, for your builder or engineer to check and sign.'),
+        ('Do you complete the TDH worksheet my permit office requires?', 'Yes. Some permit offices publish their own hydraulic or TDH worksheet. Send it with your request and we fill it in from the pipe sizes and equipment your builder or engineer gives us, for your builder to check and sign. Where the office asks for sealed calculations, a Professional Engineer licensed in your state must direct that work and seal it.'),
         ('Who is responsible for the hydraulic design?', 'Your pool builder, or your engineer where the permit office requires sealed calculations. JEBN drafts the drawings and the calculation sheet from the pipe sizes and equipment they choose, and does not seal them.'),
         ('What velocity limits do the sheets show?', 'A common basis is 6 feet per second on suction piping and 8 feet per second on return piping. The sheet states the limit in the code your jurisdiction enforces, any tighter limit from the equipment maker, and the calculated velocity for each pipe size.'),
         ('Can you draw the plumbing for an existing pool?', 'Yes. Send the pipe sizes and runs, the equipment on the pad and what you want to change. We draw the system as it stands and the change your builder plans.'),
@@ -601,7 +602,7 @@ SERVICES = [
         ('Steel, embeds & penetrations', 'Reinforcement placing details, embedded items and pipe penetrations through the shell.'),
         ('Equipment & plumbing', 'Equipment pad layout and plumbing schematics for the installation crew.'),
         ('Coordination with the permit set', 'Details checked against your approved plans to reduce conflicts on site.')],
-      inputs=('Send the design and the details you need.', 'Send the design or permit drawings and tell us which details your installation team is missing. We agree the sheet list and your drawing standards before preparing the package.', [
+      inputs=('Send the design and the details you need.', 'Send the design or permit drawings and tell us which details your installation team is missing. We agree on the sheet list and your drawing standards before preparing the package.', [
         ('Design drawings', 'The permit or design set the shop drawings must follow.'),
         ('Details needed', 'The edges, finishes, steel or equipment your crew needs drawn.'),
         ('Products & finishes', 'Tile, coping, grating and equipment selections, with maker data if you have it.'),
@@ -609,7 +610,7 @@ SERVICES = [
       faq_heading='Questions about pool shop drawings.',
       faq=[
         ('Do you deliver DWG as well as PDF?', 'Yes. You receive DWG and PDF files for the agreed sheets, so fabricators and your crew can work from the native files.'),
-        ('Do shop drawings need a PE seal?', 'Usually not. They are fabrication and installation documents, not permit documents. If your jurisdiction or client asks for a seal, the project’s engineer has to review and seal them. JEBN does not seal drawings.'),
+        ('Do shop drawings need a PE seal?', 'Shop drawings are fabrication and installation documents. Ask your permit office or your client whether they need a seal. If they do, a Professional Engineer licensed in your state must direct the engineering and seal them. JEBN does not seal drawings.'),
         ('Can you work from another designer’s plans?', 'Yes. Send the design or permit set and we draw the fabrication details that follow it. We tell you if something in the set conflicts with the detail being drawn.'),
         ('How is a shop drawing package priced?', 'By the agreed sheet list. Your quote names the sheets, file formats, revision allowance and delivery date before work starts.')]),
  dict(path='services/outsourced-pool-drafting', title='Outsourced Pool Drafting for Builders & Designers', audience=False,
@@ -622,7 +623,7 @@ SERVICES = [
       rows=[
         ('Your title block & standards', 'We adopt your title block, layer naming, sheet numbering and detail conventions from a sample set.'),
         ('Permit & construction sheets', 'Site layout, pool plans, sections, details and equipment layouts for each project you send.'),
-        ('Revisions & review comments', 'Mark-ups and permit review comments drawn up within the revision allowance in your quote.'),
+        ('Revisions & review comments', 'Changes from mark-ups and permit review comments, drawn within the revision allowance in your quote.'),
         ('Sets for your engineer', 'Where a permit office asks for a seal, we draft to your engineer’s design and mark-ups. Your engineer seals the set.'),
         ('Agreed price per set', 'A fixed price per set or per sheet, agreed before work starts.')],
       inputs=('Send a sample set and the next project.', 'A sample set shows us your standards. Then send each project’s sketch, survey and notes, and tell us the delivery date you need.', [
@@ -634,9 +635,9 @@ SERVICES = [
       faq=[
         ('Whose name is on the drawings?', 'Yours. Drawings are delivered on your title block and standards, and your client relationship stays with you.'),
         ('Can you match our drawing standards?', 'Yes. Send a sample set and we adopt your layer naming, title block, sheet numbering and detail conventions.'),
-        ('How fast do you return a set?', 'Residential drawing preparation takes 2 business days after we receive all project inputs. For regular work we agree a delivery schedule with you.'),
+        ('How fast do you return a set?', 'Residential drawing preparation takes 2 business days after we receive all project inputs. For regular work we agree on a delivery schedule with you.'),
         ('How is the work priced?', 'Per set or per sheet, agreed before work starts. Your quote lists the sheets, file formats and revision allowance.'),
-        ('Can a set be sealed by an engineer?', 'By your engineer, yes. We draft to the engineer’s design and mark-ups, and the engineer reviews and seals the set. JEBN does not seal drawings.')]),
+        ('Can a set be sealed by an engineer?', 'By your engineer, yes. We draft to the engineer’s design and mark-ups, and the engineer directs the engineering and seals the set. JEBN does not seal drawings.')]),
  dict(path='services/pool-drawings-for-engineer-of-record', title='Pool Drawings for Your Engineer of Record', audience=False,
       h1='Pool drawings for your engineer.<br><span>Drafted to the engineer’s design.</span>',
       kicker='USA / DRAFTING FOR THE ENGINEER OF RECORD',
@@ -651,7 +652,7 @@ SERVICES = [
         ('Plumbing & equipment', 'Piping schematic, pipe sizes, equipment schedule and layout, as given by the engineer or the builder.'),
         ('Site & layout', 'Pool position, setbacks, easements, elevations and drainage as your permit office requires.'),
         ('Barrier & electrical details', 'Barrier, bonding and clearance details drawn to the code edition your jurisdiction enforces.'),
-        ('Mark-ups & revisions', 'The engineer’s review mark-ups and the permit office’s comments are drawn up within the revisions in your quote.')],
+        ('Mark-ups & revisions', 'Changes from the engineer’s review mark-ups and the permit office’s comments are drawn within the revisions in your quote.')],
       extra=('HOW IT WORKS', 'How drafting for an engineer works.', 'The seal is the engineer’s statement of responsibility for the engineering on the sheet. So the engineer leads and we draw.', [
         ('The engineer leads', 'Design decisions, calculations and the code basis come from the engineer of record.'),
         ('We draw', 'Plans, sections, details and schedules are drafted to that design, on the title block and CAD standards you choose.'),
@@ -722,7 +723,7 @@ SEAL_ROLES = [
     ('Your permit office', 'Applies your state’s law and its building code. It tells you whether your pool needs sealed plans, and it reviews the set.'),
     ('The engineer of record', 'A Professional Engineer licensed in your state. Directs the engineering, checks the drawings and calculations, and seals them.'),
     ('JEBN', 'Drafts the drawing set to the engineer’s design, your builder’s details and the permit office’s checklist. JEBN does not seal drawings.'),
-    ('You or your builder', 'Choose the engineer and agree the fee for the engineering with that engineer.'),
+    ('You or your builder', 'Choose the engineer and agree on the fee for the engineering with that engineer.'),
 ]
 SEAL_WHEN = [
     ('The checklist lists sealed plans', 'The pool submittal checklist asks for plans or structural calculations signed and sealed by an engineer licensed in your state.'),
@@ -747,15 +748,20 @@ SEAL_FAQ = [
 
 
 SEAL_SOURCES = [
+    ('NCEES Model Law, August 2025, section 110.10', 'https://ncees.org/wp-content/uploads/2025/09/Model-Law_August-2025_web.pdf'),
     ('NCEES Model Rules, August 2025, sections 240.15 and 240.20', 'https://ncees.org/wp-content/uploads/2025/09/Model_Rules_August-2025_web.pdf'),
+    ('California Professional Engineers Act, Business and Professions Code section 6735', 'https://www.bpelsg.ca.gov/laws/pe_act.pdf'),
     ('California Board Rules, 16 CCR 404.1', 'https://www.bpelsg.ca.gov/laws/boardrules.pdf'),
+    ('Florida Statutes, section 471.033(1)(j)', 'https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0471/Sections/0471.033.html'),
     ('Florida Administrative Code, rule 61G15-18.011', 'https://www.flrules.org/gateway/ruleNo.asp?id=61G15-18.011'),
     ('Florida Administrative Code, rule 61G15-27.001', 'https://www.flrules.org/gateway/ruleNo.asp?id=61G15-27.001'),
     ('Texas Board of Professional Engineers and Land Surveyors, Acts and Rules, 22 TAC 137.33', 'https://pels.texas.gov/downloads/lawrules.pdf'),
+    ('Revised Code of Washington, RCW 18.43.070', 'https://app.leg.wa.gov/RCW/default.aspx?cite=18.43.070'),
     ('Washington Administrative Code, WAC 196-25-070', 'https://app.leg.wa.gov/WAC/default.aspx?cite=196-25-070'),
     ('2024 International Swimming Pool and Spa Code, Section 107.1', 'https://codes.iccsafe.org/content/ISPSC2024P1/chapter-1-scope-and-administration'),
     ('2024 International Residential Code, Section R106.1', 'https://codes.iccsafe.org/content/IRC2024P1/chapter-1-scope-and-administration'),
     ('2024 International Building Code, Section 107.1', 'https://codes.iccsafe.org/content/IBC2024P1/chapter-1-scope-and-administration'),
+    ('2024 International Building Code, Section 202, definition of registered design professional', 'https://codes.iccsafe.org/content/IBC2024P1/chapter-2-definitions'),
 ]
 
 
@@ -779,8 +785,8 @@ def build_seal_page():
     crumbs = crumbs_html([('/', 'Home'), ('/#services', 'Services'), ('', short)])
     roles = info_section('roles', 'WHO DOES WHAT', 'Four parties, four jobs.', 'A sealed pool set has more than one author. Knowing who does what saves time and avoids paying twice.', SEAL_ROLES)
     when = info_section('when', 'WHEN A PERMIT CALLS FOR AN ENGINEER', 'When a pool permit calls for an engineer.', 'Your state’s law and your permit office’s rules decide whether a pool needs sealed plans. Some permit offices list sealed plans among the documents for a pool permit. Where the ICC building or residential code is adopted, the building official may also ask for documents from a registered design professional when special conditions exist. These are situations to raise with your permit office before drawings start.', SEAL_WHEN)
-    steps = f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">WITH AN ENGINEER OF RECORD</span><h2 id="delivery-heading">How the work runs when a seal is needed.</h2><ol class="delivery-steps four">{step_items(SEAL_STEPS)}</ol><div class="review-note"><h3>Already have plans?</h3><p>A seal certifies the work shown on the documents it is placed on. Plans sealed by an engineer licensed only in another state are generally not enough where your state requires a seal. If a different engineer adapts an earlier sealed design to your site, the NCEES model rules and the rules of states such as California and Florida treat that as engineering the new engineer must take charge of and seal as their own work. Ask your permit office how it handles standard or repeat designs.</p></div><div class="actions"><a class="button primary" href="#contact">Get my quote <span aria-hidden="true">→</span></a></div></div></section>'''
-    body = (hero('USA / THE ENGINEER’S SEAL', 'Who seals pool drawings.<br><span>And what JEBN drafts.</span>', lead, form('How the Engineer’s Seal Works'), crumbs, facts, small,
+    steps = f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">WITH AN ENGINEER OF RECORD</span><h2 id="delivery-heading">How the work runs when a seal is needed.</h2><ol class="delivery-steps four">{step_items(SEAL_STEPS)}</ol><div class="review-note"><h3>Already have plans?</h3><p>A seal certifies the work shown on the documents it is placed on. Plans sealed by an engineer licensed only in another state are generally not enough where your state requires a seal. If a different engineer adapts a sealed design to a new site, the NCEES model rules and California’s rules treat that as engineering the new engineer must take responsible charge of. Florida’s rules set similar steps for reusing another engineer’s sealed plans. Ask your permit office how it handles standard or repeat designs.</p></div><div class="actions"><a class="button primary" href="#contact">Get my quote <span aria-hidden="true">→</span></a></div></div></section>'''
+    body = (hero('USA / THE ENGINEER’S SEAL', 'Who seals pool drawings.<br><span>And what JEBN drafts.</span>', lead, form('Pool Drawings and the Engineer’s Seal'), crumbs, facts, small,
                  second=('See who does what ↓', '#roles'), panel_quote=False) + nav
             + roles + when + steps
             + faq_block('BEFORE YOU ASK', 'Questions about seals and stamps.', SEAL_FAQ)
@@ -796,7 +802,7 @@ def build_moved(old_path, new_path, label):
     target = f'/{new_path}/'
     html = (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>This page has moved | JEBN</title>'
             f'<link rel="canonical" href="{SITE}{target}"><script>location.replace({json.dumps(target)}+location.search+location.hash)</script>'
-            f'<meta http-equiv="refresh" content="0; url={target}"></head><body><p>This page has moved: <a href="{target}">{escape(label)}</a>.</p></body></html>')
+            f'<meta http-equiv="refresh" content="0; url={target}"></head><body><h1>This page has moved</h1><p><a href="{target}">{escape(label)}</a></p></body></html>')
     out = ROOT/old_path/'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)
@@ -805,7 +811,7 @@ def build_moved(old_path, new_path, label):
 # ---------------------------------------------------------------- home page
 
 HOME_FAQ = [
-    ('When does the two-business-day turnaround start?', 'Once we have received all project inputs. It covers preparation of residential pool drawings. An engineer’s review and seal, where your permit needs one, and the permit office’s review take additional time.'),
+    ('When does the two-business-day turnaround start?', 'Once we have received all project inputs. It covers preparation of residential pool drawings. Where your permit needs an engineer’s seal, the engineer’s work takes additional time, and so does the permit office’s review.'),
     ('What should I send to get started?', 'Your project city and state, a site plan or sketch, pool dimensions if known, and the drawings you need. Include existing plans and any permit review comments if you have them.'),
     ('Will I receive editable files?', 'Yes. You receive both DWG and PDF files for the agreed drawing package.'),
     ('Do you work with pool contractors and builders?', 'Yes. We work with homeowners, pool contractors and builders on permit drawings, construction drawings and drawing updates within an agreed scope.'),
@@ -827,8 +833,8 @@ def build_home():
     state_links = ''.join(f'<a href="/states/{s}/">{name_of(s)}</a>' for s in sorted(STATES))
     state_options = ''.join(f'<option value="/states/{s}/">{name_of(s)}</option>' for s in sorted(STATES))
     states = f'''<section class="section local-section" id="coverage" aria-labelledby="coverage-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · STATE PAGES</span><h2 id="coverage-heading">Pool permit drawings by state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties with links to the official sources, and the quote form.</p><p>Your city or county is not listed? Name the permit office in your request. We draw to the checklist it publishes.</p><a class="text-link" href="/states/">Browse all state pages ↗</a></div></div><div class="state-jump"><label for="state-jump">Go to your state</label><select id="state-jump" data-state-jump><option value="">Choose a state…</option>{state_options}</select></div><noscript><style>.state-jump{{display:none}}</style></noscript><details class="state-fold" data-open-wide><summary>Show all state pages</summary><nav class="state-grid wide" aria-label="State pages">{state_links}</nav></details></div></section>'''
-    line = f'''<section class="coverage-line" aria-label="USA coverage"><div class="wrap"><p><strong>{COMPANY}.</strong> We draft pool projects for US permit offices.</p><a href="/states/">View state pages</a></div></section>'''
-    body = (hero('USA / POOL PERMIT AND CONSTRUCTION DRAWINGS', 'Pool plans and construction drawings<br><span>for your permit.</span>', lead, form('Pool Plans and Permit Drawings')) + nav
+    line = f'''<section class="coverage-line" aria-label="USA coverage"><div class="wrap"><p><strong>{COMPANY}.</strong> We draft pool drawings for US permit submissions.</p><a href="/states/">View state pages</a></div></section>'''
+    body = (hero('USA / POOL PERMIT AND CONSTRUCTION DRAWINGS', 'Pool permit drawings<br><span>and construction drawings.</span>', lead, form('Pool Plans and Permit Drawings')) + nav
             + samples_section() + audience_section() + pool_clients() + services
             + package_section(sid='package-section') + states
             + inputs_section(*DEFAULT_INPUTS[:2])
@@ -845,7 +851,7 @@ def build_home():
     ]}
     # Routes a paid visit to the visitor's state page when the ad click carries a location id.
     head_extra = f'<script src="{asset("geo-route.min.js")}"></script>'
-    return shell('', title, description, body, schema, head_extra, home=True, brand=f' | {COMPANY}')
+    return shell('', title, description, body, schema, head_extra, brand=f' | {COMPANY}')
 
 
 # ---------------------------------------------------------------- privacy notice
@@ -878,7 +884,7 @@ def build_checklist():
             {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE+'/'},
             {'@type': 'ListItem', 'position': 2, 'name': 'Project checklist', 'item': canonical}]},
     ]}
-    return shell('resources/pool-project-checklist', title, description, body, schema, nav_home=True)
+    return shell('resources/pool-project-checklist', title, description, body, schema)
 
 
 def build_privacy():
@@ -899,7 +905,7 @@ def build_privacy():
             {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE+'/'},
             {'@type': 'ListItem', 'position': 2, 'name': 'Privacy notice', 'item': canonical}]},
     ]}
-    return shell('privacy', title, description, body, schema, nav_home=True, brand=f' | {COMPANY}')
+    return shell('privacy', title, description, body, schema, brand=f' | {COMPANY}')
 
 
 # ---------------------------------------------------------------- sample drawings, how it works, about
@@ -926,7 +932,7 @@ def build_samples():
     canonical = f'{SITE}/samples/'
     total = sum(len(s['sheets']) for s in SAMPLE_SETS)
     sets = samples_section('THE SHEETS', f'{len(SAMPLE_SETS)} sets, {total} sheets.')
-    return shell('samples', title, description, head + sets + tail, page_schema(canonical, title, description, 'Sample drawings'), nav_home=True)
+    return shell('samples', title, description, head + sets + tail, page_schema(canonical, title, description, 'Sample drawings'))
 
 
 HOW_STEPS = [
@@ -937,8 +943,8 @@ HOW_STEPS = [
 ]
 HOW_ROLES = [
     ('You or your pool builder', 'Send the project information, choose the equipment and finishes, and submit the set to the permit office.'),
-    ('JEBN', 'Drafts the drawing set and draws up changes within the revisions in your quote. JEBN does not seal drawings.'),
-    ('The engineer of record', 'Needed only where your permit office requires an engineer’s seal. Directs the engineering, reviews the set and seals it.'),
+    ('JEBN', 'Drafts the drawing set and draws the changes within the revisions in your quote. JEBN does not seal drawings.'),
+    ('The engineer of record', 'Needed where your state’s law or your permit office requires an engineer’s seal. Directs the engineering, reviews the set and seals it.'),
     ('Your permit office', 'Publishes the checklist, reviews the set and decides approval.'),
 ]
 HOW_RECEIVE = [
@@ -961,7 +967,7 @@ def build_how():
             + inputs_section('What to send.', 'A sketch is enough to begin the conversation. If you already have a survey, drawings or permit comments, tell us what is ready. We identify the missing inputs before drawing work starts.')
             + info_section('receive', 'WHAT YOU RECEIVE', 'What you receive.', 'Files you can submit and files your builder can work from.', HOW_RECEIVE, ('See sample drawings →', '/samples/')))
     canonical = f'{SITE}/how-it-works/'
-    return shell('how-it-works', title, description, body, page_schema(canonical, title, description, 'How it works'), nav_home=True)
+    return shell('how-it-works', title, description, body, page_schema(canonical, title, description, 'How it works'))
 
 
 def build_about():
@@ -970,9 +976,9 @@ def build_about():
     crumbs = crumbs_html([('/', 'Home'), ('', 'About')])
     services = ''.join(f'<li><a href="{href}">{label}</a>. {text}</li>' for href, label, text in SERVICE_LINKS[:7])
     services += '<li><a href="/landscape/">Landscape design drawings</a>. Master plans, hardscape layouts and planting drawings.</li>'
-    body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose">{crumbs}<span class="eyebrow">ABOUT</span><h1 id="page-heading">About {COMPANY}.</h1><p class="lead">JEBN prepares swimming pool drawing packages for US permits and construction: permit drawings, construction drawings, shop drawings and drafting support for pool builders, designers and engineers.</p><h2>The company</h2><p>{COMPANY} is {COMPANY_KIND}. It is on file with the Florida Division of Corporations under document number {FLORIDA_DOCUMENT}. Benatic Paul Martin, the founder, is your contact for every project.</p><h2>What JEBN does</h2><ul>{services}</ul><p>Drawings are delivered as DWG and PDF files. Your quote lists the sheets, the revisions included and the delivery date before you commit. <a href="/how-it-works/">How the service works</a> · <a href="/samples/">Sample drawings</a></p><h2>What JEBN does not do</h2><p>{NOT_A_FIRM} Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering, seal the set and be the engineer of record. <a href="/services/pool-engineering/">How the engineer’s seal works</a></p><h2>Contact</h2><p>Benatic Paul Martin · <a href="mailto:{EMAIL}">{EMAIL}</a></p><p>Mailing address: {COMPANY}, {MAIL_ADDRESS}. This is a mailing address, not an office. Please send drawings and project files by email.</p>{QUOTE_BUTTON}</div></div></section>'''
+    body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose">{crumbs}<span class="eyebrow">ABOUT</span><h1 id="page-heading">About {COMPANY}.</h1><p class="lead">JEBN prepares swimming pool drawing packages for US permits and construction: permit drawings, construction drawings, shop drawings and drafting support for pool builders, designers and engineers.</p><h2>The company</h2><p>{COMPANY} is {COMPANY_KIND}. It is on file with the Florida Division of Corporations under document number {FLORIDA_DOCUMENT}. Benatic Paul Martin, the founder, is your contact for every project.</p><h2>What JEBN does</h2><ul>{services}</ul><p>Drawings are delivered as DWG and PDF files. Your quote lists the sheets, the revisions included and the delivery date before you commit. <a href="/how-it-works/">How the service works</a> · <a href="/samples/">Sample drawings</a></p><h2>What JEBN does not do</h2><p>{NOT_A_FIRM} Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set. <a href="/services/pool-engineering/">How the engineer’s seal works</a></p><h2>Contact</h2><p>Benatic Paul Martin · <a href="mailto:{EMAIL}">{EMAIL}</a></p><p>Mailing address: {COMPANY}, {MAIL_ADDRESS}. This is a mailing address, not an office. Please send drawings and project files by email.</p>{QUOTE_BUTTON}</div></div></section>'''
     canonical = f'{SITE}/about/'
-    return shell('about', title, description, body, page_schema(canonical, title, description, 'About', 'AboutPage'), nav_home=True, brand='')
+    return shell('about', title, description, body, page_schema(canonical, title, description, 'About', 'AboutPage'), brand='')
 
 
 # ---------------------------------------------------------------- 404 page
@@ -983,14 +989,14 @@ def build_404():
              ('/resources/pool-project-checklist/', 'Project input checklist'), ('/about/', 'About JEBN')]
     lis = ''.join(f'<li><a href="{h}">{t}</a></li>' for h, t in links)
     body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose"><span class="eyebrow">PAGE NOT FOUND</span><h1 id="page-heading">This page could not be found.</h1><p>The address may have changed or the page may have moved. Use one of these links, or send us your project details.</p><ul class="not-found-links">{lis}</ul><div class="actions"><a class="button primary" href="/#contact">Get my quote <span aria-hidden="true">→</span></a></div>{state_directory('Or choose your state')}</div></div></section>'''
-    shell('', 'Page Not Found', 'Find JEBN pool drawing services, state pages and the quote request form.', body, None, nav_home=True, out='404.html', noindex=True)
+    shell('', 'Page Not Found', 'Find JEBN pool drawing services, state pages and the quote request form.', body, None, out='404.html', noindex=True)
 
 
 # ---------------------------------------------------------------- landscape page
 
 LANDSCAPE_ROWS = [
-    ('Landscape master plans', 'Full site design that brings softscape, hardscape, levels and drainage into one buildable master plan.'),
-    ('Hardscape design', 'Paving, walls, pergolas, water features and outdoor living areas, detailed to last in the climate they are built in.'),
+    ('Landscape master plans', 'One buildable master plan that brings softscape, hardscape, grades and drainage together. Grading and drainage follow your engineer’s or contractor’s information.'),
+    ('Hardscape layouts', 'Paving, walls, pergolas, water features and outdoor living areas, laid out and detailed for your contractor. Retaining walls and other structures follow your engineer’s or builder’s structural details.'),
     ('Softscape & planting design', 'Climate-adaptive, water-wise planting plans and schedules. Native and adapted species matched to your site, from US hardiness zones to hot, arid regions.'),
     ('Technical & construction drawings', 'Layout plans, sections, details and specifications for your contractor, and for permit submission where your office asks for landscape drawings.'),
     ('Irrigation & water-wise design', 'Irrigation layouts for hot, dry climates that keep planting healthy and limit water use.'),
@@ -999,7 +1005,7 @@ LANDSCAPE_ROWS = [
 
 LANDSCAPE_POINTS = [
     ('Planting matched to the site', 'US hardiness zones, HOA-friendly layouts, or heat-, drought- and salt-tolerant species where the site calls for them.'),
-    ('Soft and hard landscape together', 'Planting, paving and structures are designed as one layout, so the drawings agree with each other.'),
+    ('Soft and hard landscape together', 'Planting, paving and hardscape are laid out together, so the drawings agree with each other.'),
     ('Visuals and construction drawings', 'The 3D visuals and the build set are prepared by the same designer, from concept to handoff.'),
     ('Villas to commercial sites', 'Private villas, residential developments and commercial properties, including a planting plan for a 40-acre site.'),
     ('Remote delivery', 'Drawings and visuals are prepared remotely and delivered as DWG and PDF files.'),
@@ -1033,7 +1039,7 @@ def build_landscape():
     nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What we draw</a><a href="#work">Sample work</a><a href="#faq">Questions</a><a href="#contact">Get my quote ↗</a></div></nav>'
     links = '<p class="package-links"><strong>Pool work:</strong> <a href="/services/pool-permit-drawings/">Pool permit drawings</a> · <a href="/pool/">Construction drawings</a> · <a href="/services/pool-shop-drawings/">Shop drawings</a></p>'
     points = ''.join(f'<li><strong>{k}</strong>{v}</li>' for k, v in LANDSCAPE_POINTS)
-    about = f'''<section class="section inputs-section" id="about" aria-labelledby="about-heading"><div class="wrap input-grid"><div><span class="eyebrow">ABOUT THE LANDSCAPE WORK</span><h2 id="about-heading">Designed for the climate.<br>Drawn to be built.</h2><p>{COMPANY} prepares landscape design drawings alongside its pool drawing work: hardscape, softscape and planting design, with 3D visuals and build-ready technical drawings.</p><p>Benatic Paul Martin, founder and principal designer, has worked on private villas, residential developments and commercial projects for clients in the USA, the UK and the Gulf.</p><a class="text-link" href="#contact">Ask about your project ↗</a></div><ul class="input-list">{points}</ul></div></section>'''
+    about = f'''<section class="section inputs-section" id="about" aria-labelledby="about-heading"><div class="wrap input-grid"><div><span class="eyebrow">ABOUT THE LANDSCAPE WORK</span><h2 id="about-heading">Designed for the climate.<br>Drawn to be built.</h2><p>{COMPANY} prepares landscape design drawings alongside its pool drawing work: hardscape, softscape and planting design, with 3D visuals and build-ready technical drawings.</p><p>Benatic Paul Martin, founder and landscape designer, has worked on private villas, residential developments and commercial projects for clients in the USA, the UK and the Gulf.</p><a class="text-link" href="#contact">Ask about your project ↗</a></div><ul class="input-list">{points}</ul></div></section>'''
     cards = preview_cards(LANDSCAPE_WORK, 'View preview')
     work = f'''<section class="section local-section" id="work" aria-labelledby="work-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">SAMPLE WORK</span><h2 id="work-heading">Landscape, hardscape and planting projects.</h2></div><div><p>A selection of landscape, hardscape and planting projects, from private villas to commercial sites.</p><p class="work-note">Produced in AutoCAD, SketchUp, Lumion, Revit and Photoshop. Deliverables include DWG and PDF drawings, planting schedules, irrigation layouts, BOQs and 3D renders.</p></div></div><div class="work-grid">{cards}</div></div></section>''' + viewer_dialog(LANDSCAPE_WORK[0][0])
     steps = [
@@ -1051,7 +1057,7 @@ def build_landscape():
     body = (hero('LANDSCAPE DESIGN DRAWINGS', 'Landscape design drawings.<br><span>Planting, hardscape and master plans.</span>', lead,
                  form(title, notes_placeholder='e.g. backyard with pool, planting plan and paving layout, about 60 x 40 ft', pool=False), crumbs, facts, small,
                  second=('See sample work ↓', '#work'), form_heading='Get your landscape drawing quote.', panel_quote=False, picture='landscape', strip='') + nav
-            + package_section(rows=LANDSCAPE_ROWS, heading='What we draw<br>for your site.', lead='Planting, paving and structures designed together, then drawn as one coordinated set a contractor can build from.', links=links)
+            + package_section(rows=LANDSCAPE_ROWS, heading='What we draw<br>for your site.', lead='Planting, paving and hardscape laid out together, then drawn as one coordinated set a contractor can build from.', links=links)
             + about + work + process + feedback
             + faq_block('BEFORE YOU ASK', 'Questions about landscape drawings.', LANDSCAPE_FAQ)
             + line)
@@ -1160,7 +1166,8 @@ def requirements_section(state, rec):
         num = s.b.get_text(strip=True) if s.b else ''
         text = s.span.get_text(' ', strip=True) if s.span else s.get_text(' ', strip=True)
         steps.append(f'<li><b aria-hidden="true">{clean(num)}</b><span>{clean(text)}</span></li>')
-    intro = '<p>Each city and county reviews pool plans against its own checklist. These are the items we draw to.</p>'
+    intro = (f'<p>Each city and county reviews pool plans against its own checklist. These are requirements and site conditions that can apply in {state}. '
+             'Structural, seismic, wind and uplift design comes from your engineer or your builder’s standard details, and we draw it.</p>')
     seal = f'<p class="small">{seal_short(state)}</p>'
     left = f'<div><span class="eyebrow">{state.upper()} REQUIREMENTS</span><h2 id="req-heading">What {state} permit offices check.</h2>{intro}<ol class="req-list">{"".join(steps)}</ol>{seal}</div>'
     right = ''
@@ -1263,7 +1270,7 @@ def build_states_index():
     grid = f'''<section class="section local-section" id="all-states" aria-labelledby="states-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · STATE PAGES</span><h2 id="states-heading">Choose your state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties, and the quote form. Your city or county is not listed? Name the permit office in your request.</p></div></div><nav class="state-cards" aria-label="State pages">{"".join(cards)}</nav></div></section>'''
     body = (hero('USA / POOL PERMIT DRAWINGS BY STATE', 'Pool permit drawings.<br><span>State by state.</span>', lead, form('Pool Permit Drawings by State'), crumbs, second=('See all state pages ↓', '#all-states')) + nav
             + grid + package_section() + delivery_section()
-            + f'''<section class="coverage-line" id="coverage" aria-label="USA coverage"><div class="wrap"><p><strong>{COMPANY}.</strong> We draft pool projects for US permit offices.</p><a href="/services/pool-permit-drawings/">Pool permit drawings</a></div></section>''')
+            + f'''<section class="coverage-line" id="coverage" aria-label="USA coverage"><div class="wrap"><p><strong>{COMPANY}.</strong> We draft pool drawings for US permit submissions.</p><a href="/services/pool-permit-drawings/">Pool permit drawings</a></div></section>''')
     canonical = f'{SITE}/states/'
     schema = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'CollectionPage', '@id': canonical+'#page', 'name': title, 'description': description, 'url': canonical, 'isPartOf': {'@type': 'WebSite', 'name': 'JEBN Engineering', 'url': SITE+'/'}},
