@@ -5,6 +5,7 @@ Shared header, consent panel and footer come from tools/site-chrome.html.
 Data:
   tools/data/states.json        state-level content for each state page
   tools/data/local/<slug>.json  city and county permit notes with official sources
+  tools/data/stamp-answers.json  short sourced answers on the engineer's stamp, for the state pages that have one
   tools/data/privacy-notice.html  the privacy notice wording
 Run it with tools/build-search-landings.sh. Does not alter Ads settings or submit forms.
 
@@ -27,6 +28,8 @@ ALL_STATES = json.loads((ROOT/'tools/data/states.json').read_text())
 # of this set, put the state back in assets/geo-route.js and rebuild.
 OFFLINE = {'north-carolina'}
 STATES = {slug: rec for slug, rec in ALL_STATES.items() if slug not in OFFLINE}
+# "Do I need an engineer's stamp for a pool in <State>?" Each answer states only what the official pages listed with it say.
+STAMP_ANSWERS = json.loads((ROOT/'tools/data/stamp-answers.json').read_text())
 BUILD_DATE = '2026-11-20'   # sitemap date given to pages whose content changed in this build
 CHANGED = set()             # addresses of the pages that differ from their last committed version; filled by shell()
 _GIT = None
@@ -218,12 +221,14 @@ def panel_quote_html():
     return f'<figure class="panel-quote"><blockquote><p>“{escape(q)}”</p></blockquote><figcaption>{escape(who)}</figcaption></figure>'
 
 
-def hero(kicker, h1, lead, form_html, crumbs='', facts=None, small=None, second=('See sample sheets ↓', '#samples'), form_heading='Get your pool plan quote.', panel_quote=True, picture='', strip=None):
+def hero(kicker, h1, lead, form_html, crumbs='', facts=None, small=None, second=('See sample sheets ↓', '#samples'), form_heading='Get your pool plan quote.', panel_quote=True, picture='', strip=None, jump=None):
     facts_html = ''.join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k, v in (facts or HERO_FACTS))
     quote = panel_quote_html() if panel_quote else ''
     strip = HERO_STRIP if strip is None and not facts else (strip or '')
     strip_html = f'<p class="hero-strip">{strip}</p>' if strip else ''
-    return f'''<section class="search-hero blue{' hero-'+picture if picture else ''}" aria-labelledby="hero-heading"><div class="wrap search-grid"><div class="search-copy">{crumbs}<span class="eyebrow">{kicker}</span><h1 id="hero-heading">{h1}</h1><p class="lead">{lead}</p>{strip_html}<div class="actions"><a class="button primary" href="#contact">Get my quote <span aria-hidden="true">→</span></a><a class="text-link" href="{second[1]}">{second[0]}</a></div></div>
+    # On phones the form sits between the hero text and the first section, so a link jumps past it.
+    jump_html = f'<p class="hero-jump"><a href="{jump[1]}">{jump[0]} <span aria-hidden="true">↓</span></a></p>' if jump else ''
+    return f'''<section class="search-hero blue{' hero-'+picture if picture else ''}" aria-labelledby="hero-heading"><div class="wrap search-grid"><div class="search-copy">{crumbs}<span class="eyebrow">{kicker}</span><h1 id="hero-heading">{h1}</h1><p class="lead">{lead}</p>{jump_html}{strip_html}<div class="actions"><a class="button primary" href="#contact">Get my quote <span aria-hidden="true">→</span></a><a class="text-link" href="{second[1]}">{second[0]}</a></div></div>
 <aside class="quote-panel" id="contact" aria-labelledby="contact-heading"><span class="eyebrow">FREE QUOTE · NO PAYMENT REQUIRED</span><h2 id="contact-heading" tabindex="-1">{form_heading}</h2>{form_html}{quote}</aside>
 <div class="search-facts"><dl class="delivery-facts">{facts_html}</dl><p class="small">{small or HERO_SMALL}</p><p class="search-contact">Your contact: <strong>Benatic Paul Martin</strong><br>{COMPANY} · <a href="mailto:{EMAIL}">{EMAIL}</a></p></div></div></section>'''
 
@@ -1254,6 +1259,45 @@ def local_section(state, local):
     return f'''<section class="section local-section" id="local" aria-labelledby="local-heading"><div class="wrap"><div class="local-head"><div>{head}</div><div><p>Each city and county runs its own pool permit review. These notes come from the pages each office publishes, checked on {checked}{later}. Rules change, so open the linked source or send us the current checklist with your request.{copy_note}</p>{other}</div></div><p class="local-jump"><span>Jump to:</span> {' '.join(jumps)}</p><div class="local-grid">{''.join(cards)}</div>{state_level}</div></section>'''
 
 
+STAMP_REMINDER = 'Rules change, so check the current requirements before you submit.'
+
+
+def stamp_question(state):
+    return f'Do I need an engineer’s stamp for a pool in {state}?'
+
+
+def stamp_entry(slug):
+    """The state's short answer, or None. Stops the build if an entry is incomplete, so a half-written answer cannot go out."""
+    entry = STAMP_ANSWERS['states'].get(slug)
+    if entry is None:
+        return None
+    sources = entry.get('sources') or []
+    parts = entry.get('answer') or []
+    parts = [re.sub(r'\s+', ' ', str(p)).strip() for p in ([parts] if isinstance(parts, str) else parts)]
+    if not parts or not all(parts) or not sources or not all(safe_url(s.get('url')) and s.get('title') for s in sources):
+        raise SystemExit(f'tools/data/stamp-answers.json: the entry for {slug} needs an answer and at least one source with a title and an address')
+    # The reminder is part of the answer itself, so it travels with the copy that search engines read.
+    parts[-1] = f'{parts[-1]} {STAMP_REMINDER}'
+    return {'answer': parts, 'sources': sources}
+
+
+def stamp_text(entry):
+    """The whole answer as one string, for the question-and-answer data that search engines read."""
+    return ' '.join(entry['answer'])
+
+
+def stamp_section(state, entry):
+    """A short answer under the hero of a state page, with the official pages it was read from.
+    The first part is the answer in one sentence; the rest says where it comes from."""
+    srcs = ' · '.join(ext_link(s['url'], s['title'] + (' (PDF)' if '.pdf' in s['url'].lower() else '')) for s in entry['sources'])
+    text = ''.join(f'<p class="stamp-text{" stamp-lead" if i == 0 else ""}">{clean(p)}</p>' for i, p in enumerate(entry['answer']))
+    return (f'<section class="section stamp-section" id="stamp" aria-labelledby="stamp-heading"><div class="wrap"><div class="stamp-answer">'
+            f'<span class="eyebrow">{state.upper()} · SHORT ANSWER</span><h2 id="stamp-heading">{clean(stamp_question(state))}</h2>'
+            f'{text}'
+            f'<p class="stamp-role">{seal_short(state)} <a href="/services/pool-engineering/">How the engineer’s seal works</a></p>'
+            f'<p class="local-src">Sources: {srcs} · Checked {date_words(STAMP_ANSWERS["checked"])}. General information, not legal advice.</p></div></div></section>')
+
+
 def requirements_section(state, rec):
     article = 'an' if state[0] in 'AEIOU' else 'a'
     steps = []
@@ -1317,14 +1361,18 @@ def build_state(slug, rec):
     lead = f'Permit and construction drawings for {where}, drawn to your permit office’s checklist. {seal_short(state)}'
     crumbs = f'<nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/states/">States</a> <span aria-hidden="true">/</span> <span aria-current="page">{state}</span></nav>'
     h1 = f'{state} pool permit drawings<br><span>and construction drawings.</span>'
-    nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#local">Local permit notes</a><a href="#requirements">State requirements</a><a href="#package">Drawing package</a><a href="#contact">Get my quote ↗</a></div></nav>'
+    stamp = stamp_entry(slug)
+    stamp_link = '<a href="#stamp">Engineer’s stamp</a>' if stamp else ''
+    nav = f'<nav class="landing-nav" aria-label="Page sections"><div class="wrap">{stamp_link}<a href="#local">Local permit notes</a><a href="#requirements">State requirements</a><a href="#package">Drawing package</a><a href="#contact">Get my quote ↗</a></div></nav>'
     links = '<p class="package-links"><a href="/services/pool-permit-drawings/">Pool permit drawings</a> · <a href="/pool/">Construction drawings</a> · <a href="/services/pool-engineering/">How the engineer’s seal works</a></p>'
     faqs = faq_items(state, rec, offer)
     nearby = ''
     near = [(h, t) for h, t in rec.get('nearby', []) if h.strip('/').split('/')[-1] not in OFFLINE]   # no link to a page that is offline
     if near:
         nearby = '<p class="nearby-line"><strong>Nearby states:</strong> '+' · '.join(f'<a href="{escape(h)}">{clean(t)}</a>' for h, t in near)+'</p>'
-    body = (hero(f'{state.upper()} / POOL PERMIT DRAWINGS', h1, lead, form(title, state, CITY[slug]), crumbs, strip=HERO_STRIP) + nav + samples_section()
+    jump = (clean(stamp_question(state)), '#stamp') if stamp else None
+    body = (hero(f'{state.upper()} / POOL PERMIT DRAWINGS', h1, lead, form(title, state, CITY[slug]), crumbs, strip=HERO_STRIP, jump=jump) + nav
+            + (stamp_section(state, stamp) if stamp else '') + samples_section()
             + local_section(state, local) + audience_section(state) + pool_clients()
             + package_section(state, links=links)
             + requirements_section(state, rec)
@@ -1333,9 +1381,11 @@ def build_state(slug, rec):
             + faq_section(state, faqs)
             + coverage_section(nearby))
     canonical = f'{SITE}/states/{slug}/'
+    # The short answer is shown under the hero, not in the questions list, so it is added to the page's question data here.
+    asked = ([(stamp_question(state), stamp_text(stamp))] if stamp else []) + faqs
     schema = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'Service', '@id': canonical+'#service', 'name': title, 'serviceType': 'Swimming pool permit and construction drawings', 'description': description, 'url': canonical, 'provider': organization(), 'areaServed': {'@type': 'State', 'name': state, 'containedInPlace': {'@type': 'Country', 'name': 'United States'}}},
-        {'@type': 'FAQPage', '@id': canonical+'#faq', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in faqs]},
+        {'@type': 'FAQPage', '@id': canonical+'#faq', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in asked]},
         {'@type': 'BreadcrumbList', 'itemListElement': [
             {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE+'/'},
             {'@type': 'ListItem', 'position': 2, 'name': 'States', 'item': SITE+'/states/'},

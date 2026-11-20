@@ -351,3 +351,14 @@ details.local-card[open]>summary::after{content:"\2212"}
 @media(max-width:760px){.search-landing .consent-panel{padding:.5rem 0}.search-landing .consent-layout{gap:.4rem}.search-landing .consent-panel p{font-size:.75rem;line-height:1.4}}
 /* On the narrowest phones both privacy buttons keep the same width */
 @media(max-width:360px){.search-landing .consent-actions button{min-width:0;padding-inline:.4rem}}
+/* State pages: a short sourced answer on the engineer's stamp, under the hero */
+.search-landing .stamp-section{padding-block:clamp(1.8rem,3.2vw,2.6rem);border-bottom:1px solid var(--line)}
+.stamp-answer{max-width:58rem;padding:1.2rem 1.4rem 1.1rem;border:1px solid var(--line);border-left:3px solid var(--aqua);border-radius:var(--radius);background:var(--mist)}
+.search-landing .stamp-answer h2{font:700 clamp(1.3rem,2.1vw,1.7rem)/1.2 var(--sans);letter-spacing:-.01em;max-width:none;margin:.35rem 0 .6rem}
+.search-landing .stamp-answer p{max-width:none;margin:0;overflow-wrap:break-word}
+.search-landing .stamp-answer .stamp-lead{font-weight:600;font-size:1.06rem;line-height:1.45;color:var(--ink)}
+.search-landing .stamp-answer p+p{margin-top:.7rem}
+.search-landing .stamp-answer .stamp-role{font-size:.92rem}
+.stamp-answer a{text-decoration:underline}
+.hero-jump{display:none}
+@media(max-width:760px){.hero-jump{display:block;margin:.75rem 0 0;font-size:.92rem;line-height:1.4}.search-landing .hero-jump a{display:inline-block;padding:.35rem 0;color:#8fdcea;font-weight:700;text-decoration:underline}#stamp{scroll-margin-top:4.5rem}}

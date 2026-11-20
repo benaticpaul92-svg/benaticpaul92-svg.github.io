@@ -4,13 +4,13 @@
   "researched": "2026-11-15",
   "jurisdictions": [
     {
-      "name": "Miami-Dade County",
+      "name": "Miami-Dade County (unincorporated)",
       "kind": "county",
       "office": "Miami-Dade County Permitting and Inspection Center",
       "portal_name": "Permit Submission Portal",
       "portal_url": "https://www.miamidade.gov/global/economy/building/permits/swimming-pool.page",
       "notes": [
-        "An in-ground pool permit application is filed under Category 55 and lists the pool's total square footage, along with a contact sheet.",
+        "An in-ground pool permit application is filed under Category 55 and lists the pool’s total square footage, along with a contact sheet.",
         "Design drawings must show the site plan, pool dimensions, electrical and plumbing connections and calculations, and must be signed and sealed by an architect or engineer.",
         "Electrical and plumbing or gas subsidiary permits are required after the pool permit is issued and must cite the pool permit number.",
         "Owner-builder pool permits need an additional form."
@@ -19,6 +19,10 @@
         {
           "title": "Swimming Pool Permits - Miami-Dade County",
           "url": "https://www.miamidade.gov/global/economy/building/permits/swimming-pool.page"
+        },
+        {
+          "title": "How to Apply for a Permit - Miami-Dade County",
+          "url": "https://www.miamidade.gov/global/economy/building/how-to-apply-for-permit.page"
         }
       ]
     },
