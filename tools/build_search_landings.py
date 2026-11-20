@@ -82,13 +82,13 @@ MAIL_ADDRESS = f'{MAIL_STREET}, {MAIL_CITY}, {MAIL_REGION} {MAIL_ZIP}'
 FLORIDA_DOCUMENT = 'L26000581157'   # the company's document number at the Florida Division of Corporations
 EMAIL = 'benatic@jebnengineering.com'
 
-# JEBN drafts. It is not an engineering firm and does not seal drawings. Every page takes its seal
-# wording from here, so the site says the same thing everywhere.
-NOT_A_FIRM = 'JEBN is a drafting business, not a licensed engineering firm, and does not seal drawings.'
 # State pages that say only that a licensed engineer must direct and seal, without the line about asking one.
 NO_ENGINEER_OFFER = {'georgia', 'louisiana', 'nevada', 'south-carolina', 'texas'}
 
 
+# JEBN prepares the drawings and does not seal them. The two functions below supply the standard seal
+# sentences. The header facts, the phone strip, HERO_SMALL and the seal page text are written out where
+# they are used, so change those too when the wording changes.
 def seal_short(state=None):
     return ('JEBN does not seal drawings. If your permit office requires an engineer’s seal, a Professional Engineer licensed in '
             f'{state or "your state"} must direct the engineering and seal the set.')
@@ -96,7 +96,7 @@ def seal_short(state=None):
 
 def seal_answer(state=None, offer=True):
     where = state or 'your state'
-    text = (f'JEBN prepares the drawings. {NOT_A_FIRM} Where your permit office requires an engineer’s seal, a Professional Engineer '
+    text = ('JEBN prepares the drawings and does not seal them. Where your permit office requires an engineer’s seal, a Professional Engineer '
             f'licensed in {where} must direct the engineering and seal the set.')
     if offer:
         text += (f' You can use your own engineer, or we can ask one licensed in {where} to take your project. '
@@ -210,8 +210,8 @@ def package_rows(state=None):
     return ''.join(f'<li><span class="sheet-number" aria-hidden="true">{i:02d}</span><div><h3>{label}</h3><p>{text}</p></div></li>' for i, (label, text) in enumerate(rows, 1))
 
 
-HERO_FACTS = [('Drawing preparation', '2 business days'), ('File delivery', 'DWG + PDF'), ('Scope', 'Drafting only, no seal')]
-HERO_STRIP = '2 business days · DWG + PDF · Drafting only, no seal'
+HERO_FACTS = [('Drawing preparation', '2 business days'), ('File delivery', 'DWG + PDF'), ('Engineer’s seal', 'Not included')]
+HERO_STRIP = '2 business days · DWG + PDF · Seal not included'
 HERO_SMALL = 'The 2 business days start when we have all project inputs for residential pool drawings. JEBN does not seal drawings. Where your permit needs an engineer’s seal, the engineer’s work takes additional time, and so does permit approval.'
 
 
@@ -455,7 +455,7 @@ def faq_schema(canonical, items):
 def company_block():
     """The company's registered name, what it is, and its mailing address, shown in every footer."""
     return (f'<div class="footer-company"><p class="company-name">{COMPANY}</p>'
-            f'<p>{COMPANY_KIND[0].upper()+COMPANY_KIND[1:]}. {NOT_A_FIRM}</p>'
+            f'<p>{COMPANY_KIND[0].upper()+COMPANY_KIND[1:]}.</p>'
             f'<p>Mailing address: {MAIL_ADDRESS} · <a href="mailto:{EMAIL}">{EMAIL}</a></p></div>')
 
 
@@ -778,7 +778,7 @@ SEAL_STEPS = [
     ('The engineer directs and seals', 'The engineer stays in charge of the engineering while we draw, marks changes as the work goes, and seals and signs the set.'),
 ]
 SEAL_FAQ = [
-    ('Does JEBN seal or stamp pool drawings?', f'No. {NOT_A_FIRM} JEBN prepares the drawings. Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set.'),
+    ('Does JEBN seal or stamp pool drawings?', 'No. JEBN prepares the drawings. Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set.'),
     ('Does every pool need an engineer?', 'Not everywhere. Your state’s law and your permit office’s rules decide. Some permit offices ask for sealed plans with every pool permit, and some ask only for certain pools. Ask your permit office for its pool submittal checklist before drawings start.'),
     ('Who is the engineer of record?', 'The term is used for the Professional Engineer who is in charge of a project’s engineering documents and who signs and seals them. Not every state’s rules use the term. Where a seal is required, that engineer generally must hold a license in the state where the pool will be built.'),
     ('Can I send finished drawings to an engineer for a stamp?', 'Not simply for a stamp. Engineering board rules in states such as California, Florida, Texas and Washington let an engineer seal only work the engineer did, or work done under the engineer’s responsible charge, which some states call direct supervision. The engineer has to be in charge of the engineering while the drawings are prepared. Some states let an engineer take over earlier work under set rules, so ask the engineer what applies in your state.'),
@@ -818,9 +818,9 @@ def build_seal_page():
     short = next(label for href, label, _ in SERVICE_LINKS if href == path)
     title = 'How an Engineer’s Seal Works on Pool Drawings'
     meta = 'Who seals pool drawings for a permit: what an engineer’s seal means, who directs the engineering and what JEBN drafts. JEBN does not seal drawings.'
-    lead = 'Some permit offices ask for pool plans sealed by a Professional Engineer licensed in the state. This page explains who directs the engineering, who seals the set and where a drafting business fits. JEBN prepares the drawings and does not seal them.'
+    lead = 'Some permit offices ask for pool plans sealed by a Professional Engineer licensed in the state. This page explains who directs the engineering, who seals the set and what JEBN drafts. JEBN prepares the drawings and does not seal them.'
     facts = [('JEBN', 'Drafts the drawings'), ('Engineer of record', 'Directs and seals'), ('Permit office', 'Decides approval')]
-    small = 'JEBN is a drafting business. It is not a licensed engineering firm and does not seal drawings.'
+    small = 'Rules differ by state. The official texts this page was checked against are listed under Sources.'
     nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#roles">Who does what</a><a href="#when">When a seal is needed</a><a href="#faq">Questions</a><a href="#contact">Get my quote ↗</a></div></nav>'
     crumbs = crumbs_html([('/', 'Home'), ('/#services', 'Services'), ('', short)])
     roles = info_section('roles', 'WHO DOES WHAT', 'Four parties, four jobs.', 'A sealed pool set has more than one author. Knowing who does what saves time and avoids paying twice.', SEAL_ROLES)
@@ -844,8 +844,8 @@ TOPIC_STEPS = [
     ('Draft the set', 'We draw the sheets listed in your quote from the design, details and measurements you send. Your quote states the delivery date.'),
     DELIVERY_STEPS[2],
 ]
-TOPIC_FACTS = [('JEBN', 'Drafts the set'), ('File delivery', 'DWG + PDF'), ('Scope', 'Drafting only, no seal')]
-TOPIC_SMALL = 'JEBN is a drafting business. It is not a licensed engineering firm and does not seal drawings.'
+TOPIC_FACTS = [('JEBN', 'Drafts the set'), ('File delivery', 'DWG + PDF'), ('Engineer’s seal', 'Not included')]
+TOPIC_SMALL = 'Delivery time depends on the scope. Your quote states the delivery date.'
 TOPIC_SOURCES_NOTE = ('The statements on this page were checked against these official pages in November 2026. Codes, editions and local rules differ '
                       'and change, so confirm what applies with your permit office. This page is general information, not legal advice.')
 # On these two the project already has its own engineer or architect, so the page does not offer to ask one.
@@ -883,7 +883,7 @@ def build_topic(t):
     nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What the set shows</a><a href="#roles">Who does what</a><a href="#inputs">What to send</a><a href="#faq">Questions</a><a href="#contact">Get my quote ↗</a></div></nav>'
     crumbs = crumbs_html([('/', 'Home'), ('/#more-services', 'Drawing sets'), ('', clean(t['nav_label']))])
     h1 = f'{clean(t["h1_main"])}<br><span>{clean(t["h1_sub"])}</span>'
-    body = (hero('USA / '+escape(t['nav_label'].upper()), h1, clean(t['lead']), form(t['title']), crumbs, TOPIC_FACTS, TOPIC_SMALL, strip='DWG + PDF · Drafting only, no seal') + nav
+    body = (hero('USA / '+escape(t['nav_label'].upper()), h1, clean(t['lead']), form(t['title']), crumbs, TOPIC_FACTS, TOPIC_SMALL, strip='DWG + PDF · Seal not included') + nav
             + samples_section()
             + package_section(rows=pairs(t['shows']), heading=clean(t['shows_heading']), lead=clean(t['shows_intro']), links=links, typical=False)
             + info_section('roles', 'WHO DOES WHAT', clean(t['roles_heading']), clean(t['roles_intro']), pairs(t['roles']))
@@ -942,7 +942,7 @@ def build_home():
             + faq_block('QUESTIONS', 'Common questions about pool drawings.', HOME_FAQ)
             + line)
     canonical = SITE+'/'
-    org = dict(organization(), **{'@id': canonical+'#organization', 'description': 'Pool permit drawings, construction drawings, plumbing and equipment layouts and shop drawings for US projects. JEBN is a drafting business and does not seal drawings.'})
+    org = dict(organization(), **{'@id': canonical+'#organization', 'description': 'Pool permit drawings, construction drawings, plumbing and equipment layouts and shop drawings for US projects. JEBN prepares the drawings and does not seal them.'})
     schema = {'@context': 'https://schema.org', '@graph': [
         org,
         {'@type': 'WebSite', '@id': canonical+'#website', 'name': 'JEBN Engineering', 'alternateName': [COMPANY, 'JEBN'], 'url': canonical, 'publisher': {'@id': canonical+'#organization'}},
@@ -1072,12 +1072,12 @@ def build_how():
 
 def build_about():
     title = f'About {COMPANY}'
-    description = f'{COMPANY} is {COMPANY_KIND} that prepares pool drawing packages. It is a drafting business and does not seal drawings.'
+    description = f'{COMPANY} is {COMPANY_KIND} that prepares pool drawing packages. It does not seal drawings.'
     crumbs = crumbs_html([('/', 'Home'), ('', 'About')])
     services = ''.join(f'<li><a href="{href}">{label}</a>. {text}</li>' for href, label, text in SERVICE_LINKS[:7])
     services += '<li><a href="/landscape/">Landscape design drawings</a>. Master plans, hardscape layouts and planting drawings.</li>'
     by_type = ' · '.join(f'<a href="{href}">{escape(label)}</a>' for href, label, _ in TOPIC_LINKS)
-    body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose">{crumbs}<span class="eyebrow">ABOUT</span><h1 id="page-heading">About {COMPANY}.</h1><p class="lead">JEBN prepares swimming pool drawing packages for US permits and construction: permit drawings, construction drawings, shop drawings and drafting support for pool builders, designers and engineers.</p><h2>The company</h2><p>{COMPANY} is {COMPANY_KIND}. It is on file with the Florida Division of Corporations under document number {FLORIDA_DOCUMENT}. Benatic Paul Martin, the founder, is your contact for every project.</p><h2>What JEBN does</h2><ul>{services}</ul><p>Drawing sets by project type: {by_type}</p><p>Drawings are delivered as DWG and PDF files. Your quote lists the sheets, the revisions included and the delivery date before you commit. <a href="/how-it-works/">How the service works</a> · <a href="/samples/">Sample drawings</a></p><h2>What JEBN does not do</h2><p>{NOT_A_FIRM} Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state must direct the engineering and seal the set. <a href="/services/pool-engineering/">How the engineer’s seal works</a></p><h2>Contact</h2><p>Benatic Paul Martin · <a href="mailto:{EMAIL}">{EMAIL}</a></p><p>Mailing address: {COMPANY}, {MAIL_ADDRESS}. This is a mailing address, not an office. Please send drawings and project files by email.</p>{QUOTE_BUTTON}</div></div></section>'''
+    body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose">{crumbs}<span class="eyebrow">ABOUT</span><h1 id="page-heading">About {COMPANY}.</h1><p class="lead">JEBN prepares swimming pool drawing packages for US permits and construction: permit drawings, construction drawings, shop drawings and drafting support for pool builders, designers and engineers.</p><h2>The company</h2><p>{COMPANY} is {COMPANY_KIND}. It is on file with the Florida Division of Corporations under document number {FLORIDA_DOCUMENT}. Benatic Paul Martin, the founder, is your contact for every project.</p><h2>What JEBN does</h2><ul>{services}</ul><p>Drawing sets by project type: {by_type}</p><p>Drawings are delivered as DWG and PDF files. Your quote lists the sheets, the revisions included and the delivery date before you commit. <a href="/how-it-works/">How the service works</a> · <a href="/samples/">Sample drawings</a></p><h2>What JEBN does not do</h2><p>{seal_short()} <a href="/services/pool-engineering/">How the engineer’s seal works</a></p><h2>Contact</h2><p>Benatic Paul Martin · <a href="mailto:{EMAIL}">{EMAIL}</a></p><p>Mailing address: {COMPANY}, {MAIL_ADDRESS}. This is a mailing address, not an office. Please send drawings and project files by email.</p>{QUOTE_BUTTON}</div></div></section>'''
     canonical = f'{SITE}/about/'
     return shell('about', title, description, body, page_schema(canonical, title, description, 'About', 'AboutPage'), brand='')
 
