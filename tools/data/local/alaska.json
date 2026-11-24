@@ -101,6 +101,36 @@
           "url": "https://matsu.gov/services/mandatory-land-use-permit"
         }
       ]
+    },
+    {
+      "name": "Ketchikan (Ketchikan Gateway Borough)",
+      "kind": "city",
+      "office": "City of Ketchikan Public Works Department, Building Division",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The city says a prefabricated pool accessory to a Group R-3 residential occupancy needs no building permit when its walls are entirely above the adjacent grade, it holds no more than 5000 gallons and it is less than 24 inches deep, but separate plumbing, electrical and mechanical permits may still be required.",
+        "The city's permit exemption for fences up to seven feet tall does not cover barriers around swimming pools required by Appendix G of the One and Two Family Dwelling Code.",
+        "The city says residential building permit applications go first to the Ketchikan Gateway Borough for zoning approval, and the Borough then forwards the plans to the City.",
+        "The city's residential permit application asks for a fully dimensioned site plan drawn to scale showing the location, size and use of all structures on the lot, plus property lines, easements, rights-of-way and a North arrow."
+      ],
+      "sources": [
+        {
+          "title": "No Permit Is Required For the Following Projects (City of Ketchikan Building Division)",
+          "url": "https://www.ketchikan.gov/media/BuildingPermitApplications%20/No%20Permit%20Required%20Handout.pdf",
+          "as_of": "2025-04-21"
+        },
+        {
+          "title": "How to Apply for a Residential Building Permit (City of Ketchikan)",
+          "url": "https://www.ketchikan.gov/media/BuildingPermitApplications%20/How%20to%20Apply%20for%20a%20COK%20Residential%20Building%20Permit.pdf",
+          "as_of": "2026-08-12"
+        },
+        {
+          "title": "Building Permit Application (City of Ketchikan Building Division)",
+          "url": "https://evogov.s3.us-west-2.amazonaws.com/16/media/411872.pdf"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
@@ -109,6 +139,7 @@
     "Fairbanks: city exemption list PDF returned 404, so pool exemption wording was not verified; city code edition not named on opened page.",
     "Juneau: no official page found that addresses private swimming pools; Title 19 on municode was not opened.",
     "Mat-Su: opened borough pages do not mention residential swimming pools, so whether a private pool needs a building permit is unconfirmed; the Mat-Su portal URL listed is the permitting page that links to it.",
-    "Fairbanks North Star Borough: residential zoning application PDF was unreadable, so setbacks and pool-specific zoning rules were not verified."
+    "Fairbanks North Star Borough: residential zoning application PDF was unreadable, so setbacks and pool-specific zoning rules were not verified.",
+    "2026-11-25: Ketchikan (Ketchikan Gateway Borough) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."
   ]
 }

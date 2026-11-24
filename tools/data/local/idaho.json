@@ -15,8 +15,14 @@
         "The homeowner's guide says some projects, such as taller retaining walls, need an Idaho-licensed engineer."
       ],
       "sources": [
-        {"title": "Homeowner's Guide - City of Boise Planning and Development Services", "url": "https://www.cityofboise.org/departments/planning-and-development-services/building/homeowners-guide/"},
-        {"title": "PDS Residential Construction Brochure 2023 - City of Boise", "url": "https://www.cityofboise.org/media/4932/pds-residentialconstructionbrochure-2023.pdf"}
+        {
+          "title": "Homeowner's Guide - City of Boise Planning and Development Services",
+          "url": "https://www.cityofboise.org/departments/planning-and-development-services/building/homeowners-guide/"
+        },
+        {
+          "title": "PDS Residential Construction Brochure 2023 - City of Boise",
+          "url": "https://www.cityofboise.org/media/4932/pds-residentialconstructionbrochure-2023.pdf"
+        }
       ]
     },
     {
@@ -32,7 +38,10 @@
         "Meridian's handout states that any electrical work needs an electrical permit."
       ],
       "sources": [
-        {"title": "Residential Detached Accessory Structures - City of Meridian Community Development", "url": "https://planning.meridiancity.org/media/5gudvfgq/residentialdetachedaccessorystructureshandout.pdf"}
+        {
+          "title": "Residential Detached Accessory Structures - City of Meridian Community Development",
+          "url": "https://planning.meridiancity.org/media/5gudvfgq/residentialdetachedaccessorystructureshandout.pdf"
+        }
       ]
     },
     {
@@ -46,9 +55,46 @@
         "Residential building permit applications need one set of drawings and specifications in PDF format, and the plan review fee is due at submittal."
       ],
       "sources": [
-        {"title": "Online Permits Access - City of Coeur d'Alene", "url": "https://www.cdaid.org/government/departments/building-services/online-permits-access/"},
-        {"title": "Residential Applications - City of Coeur d'Alene Building Services", "url": "https://www.cdaid.org/government/departments/building-services/residential-applications/"}
+        {
+          "title": "Online Permits Access - City of Coeur d'Alene",
+          "url": "https://www.cdaid.org/government/departments/building-services/online-permits-access/"
+        },
+        {
+          "title": "Residential Applications - City of Coeur d'Alene Building Services",
+          "url": "https://www.cdaid.org/government/departments/building-services/residential-applications/"
+        }
       ]
+    },
+    {
+      "name": "Nampa (Canyon County)",
+      "kind": "city",
+      "office": "Development Services, Building Department",
+      "portal_name": "Citizen Self Service (CSS)",
+      "portal_url": "https://nampaid-energovpub.tylerhost.net/Apps/SelfService#/home",
+      "notes": [
+        "Nampa's Building Permit Process page lists a Residential Pool Permit Application & Checklist and says a building permit application can be submitted through the online portal (CSS) or in person.",
+        "The city says staff first review the application and plans for completeness, then review the plans based on current adopted codes, and the applicant or contractor requests inspections through CSS.",
+        "The Building Department says permits are required before any new construction, building addition, alteration or repair of existing buildings and structures, and for all plumbing, electrical or mechanical work.",
+        "The city's Code Resources page lists the 2018 International Residential Code and the 2017 Idaho State Plumbing Code among its current adopted building codes."
+      ],
+      "sources": [
+        {
+          "title": "Building Permit Process (City of Nampa)",
+          "url": "https://www.cityofnampa.us/1685/Building-Permit-Process",
+          "as_of": "2026-08-14"
+        },
+        {
+          "title": "Building Safety & Code (City of Nampa)",
+          "url": "https://www.cityofnampa.us/163/Building-Safety-Code",
+          "as_of": "2026-02-14"
+        },
+        {
+          "title": "Code Resources (City of Nampa)",
+          "url": "https://www.cityofnampa.us/168/Code-Resources",
+          "as_of": "2026-02-11"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
@@ -56,6 +102,7 @@
     "Only 3 jurisdictions verified. Nampa and Ada County pages (Cloudflare block, 403) could not be opened; Nampa and Ada County have pool-specific applications according to search listings, but nothing was confirmed.",
     "Idaho Falls, Eagle and other cities were not reached because the shared web search limit ran out and the pages tried did not mention pools.",
     "Boise, Meridian and Coeur d'Alene: no official page opened that states a pool barrier rule or the code edition enforced for pools.",
-    "Meridian's separate Residential Pool Barrier Requirements handout (Forms and Handouts page) could not be opened (403)."
+    "Meridian's separate Residential Pool Barrier Requirements handout (Forms and Handouts page) could not be opened (403).",
+    "2026-11-25: Nampa (Canyon County) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."
   ]
 }

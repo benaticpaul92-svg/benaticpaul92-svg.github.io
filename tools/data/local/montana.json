@@ -16,7 +16,10 @@
         "For single-family homes, plumbing and electrical detail may be left off the plans if the mechanical equipment location is shown."
       ],
       "sources": [
-        {"title": "Building Division FAQs - City of Billings", "url": "https://billingsmt.gov/521/FAQs"}
+        {
+          "title": "Building Division FAQs - City of Billings",
+          "url": "https://billingsmt.gov/521/FAQs"
+        }
       ]
     },
     {
@@ -31,7 +34,10 @@
         "The page says an exemption does not authorize work that violates the code or other local ordinances."
       ],
       "sources": [
-        {"title": "Building Permit Types - City of Helena", "url": "https://www.helenamt.gov/Departments/Community-Development/Building/Building-Permitting-Applications/Permit-Types"}
+        {
+          "title": "Building Permit Types - City of Helena",
+          "url": "https://www.helenamt.gov/Departments/Community-Development/Building/Building-Permitting-Applications/Permit-Types"
+        }
       ]
     },
     {
@@ -46,15 +52,53 @@
         "Public Works may also require a Right-of-Way Permit or a Construction Stormwater Permit before a building permit is approved."
       ],
       "sources": [
-        {"title": "Building - City of Kalispell", "url": "https://www.kalispell.com/614/Building"},
-        {"title": "Permits & Electronic Plan Review - City of Kalispell", "url": "https://www.kalispell.com/268/Permits"}
+        {
+          "title": "Building - City of Kalispell",
+          "url": "https://www.kalispell.com/614/Building"
+        },
+        {
+          "title": "Permits & Electronic Plan Review - City of Kalispell",
+          "url": "https://www.kalispell.com/268/Permits"
+        }
       ]
+    },
+    {
+      "name": "Bozeman (Gallatin County)",
+      "kind": "city",
+      "office": "City of Bozeman Building Division",
+      "portal_name": "ProjectDox (electronic plan review)",
+      "portal_url": "https://bozeman-mt-us.avolvecloud.com/Portal/Login/Index/Bozeman-MT",
+      "notes": [
+        "The city lists Pool (New Construction) as one of its stand-alone permit application types.",
+        "The city's 2021 IRC list of work exempt from permit says permits are not required for prefabricated swimming pools less than 24 inches (610 mm) deep.",
+        "The city says Bozeman applications submitted on and after January 1, 2027 must be designed under the 2024 ICC codes as amended by administrative rule, which the Montana Department of Labor & Industry adopted effective September 26, 2026.",
+        "The city uses the ProjectDox portal for electronic plan review, and for single-family and duplex projects a representative must still come to the office in person for permit issuance."
+      ],
+      "sources": [
+        {
+          "title": "Building Permit Checklists, Forms, and Guides (City of Bozeman)",
+          "url": "https://www.bozemanmt.gov/departments/community-development/development-center/building-checklists-forms-and-guides",
+          "as_of": "2026-10-12"
+        },
+        {
+          "title": "Work Exempt from Permit, 2021 IRC (City of Bozeman)",
+          "url": "https://www.bozemanmt.gov/home/showpublisheddocument/12786/638418754827730000",
+          "as_of": "2026-04-27"
+        },
+        {
+          "title": "Building Division (City of Bozeman)",
+          "url": "https://www.bozemanmt.gov/departments/community-development/building",
+          "as_of": "2026-08-14"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
     "Bozeman/Gallatin County, Missoula city and Flathead County official sites refused or timed out from this machine (403 or connection errors), so nothing was verified for them.",
     "Online portal URLs for Billings, Helena and Kalispell could not be opened (blocked or not a real page), so portal_url is left empty.",
-    "No Montana city page describing a pool-specific submittal checklist was found."
+    "No Montana city page describing a pool-specific submittal checklist was found.",
+    "2026-11-25: Bozeman (Gallatin County) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."
   ]
 }

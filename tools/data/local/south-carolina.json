@@ -17,9 +17,18 @@
         "The city's express in-person pool review applies only to in-ground pools outside a flood zone and outside BAR or DRB areas."
       ],
       "sources": [
-        {"title": "General Permitting Guidance: Residential Swimming Pools and Spas, May 2026 (City of Charleston)", "url": "https://www.charleston-sc.gov/DocumentCenter/View/40995"},
-        {"title": "Permit Center (City of Charleston)", "url": "https://www.charleston-sc.gov/856/Permit-Center"},
-        {"title": "Applications & Guidelines (City of Charleston)", "url": "https://www.charleston-sc.gov/2483/Applications-Guidelines"}
+        {
+          "title": "General Permitting Guidance: Residential Swimming Pools and Spas, May 2026 (City of Charleston)",
+          "url": "https://www.charleston-sc.gov/DocumentCenter/View/40995"
+        },
+        {
+          "title": "Permit Center (City of Charleston)",
+          "url": "https://www.charleston-sc.gov/856/Permit-Center"
+        },
+        {
+          "title": "Applications & Guidelines (City of Charleston)",
+          "url": "https://www.charleston-sc.gov/2483/Applications-Guidelines"
+        }
       ]
     },
     {
@@ -35,8 +44,14 @@
         "It asks for base and design flood elevations in NAVD 88 and scour and embedment depths for the pool and equipment stand."
       ],
       "sources": [
-        {"title": "Charleston County V-Zone Design Certificate for Pools and Spas", "url": "https://www.charlestoncounty.gov/departments/building-inspection-services/forms/VZone-Design-Cert-pool-and-spas.pdf?v=631"},
-        {"title": "Forms (Charleston County Building Inspection Services)", "url": "https://www.charlestoncounty.gov/departments/building-inspection-services/forms.php"}
+        {
+          "title": "Charleston County V-Zone Design Certificate for Pools and Spas",
+          "url": "https://www.charlestoncounty.gov/departments/building-inspection-services/forms/VZone-Design-Cert-pool-and-spas.pdf?v=631"
+        },
+        {
+          "title": "Forms (Charleston County Building Inspection Services)",
+          "url": "https://www.charlestoncounty.gov/departments/building-inspection-services/forms.php"
+        }
       ]
     },
     {
@@ -50,8 +65,47 @@
         "Tree removals tied to residential construction, including pools, are reviewed as part of the building permit application rather than a separate tree permit."
       ],
       "sources": [
-        {"title": "Apply for Permits and Boards and Commissions (Town of Mount Pleasant)", "url": "https://www.tompsc.com/1568/Apply-for-Permits-and-Boards-Commissions"}
+        {
+          "title": "Apply for Permits and Boards and Commissions (Town of Mount Pleasant)",
+          "url": "https://www.tompsc.com/1568/Apply-for-Permits-and-Boards-Commissions"
+        }
       ]
+    },
+    {
+      "name": "Horry County (unincorporated)",
+      "kind": "county",
+      "office": "Horry County Code Enforcement Department",
+      "portal_name": "Online Portal for inspection scheduling and invoice payment",
+      "portal_url": "https://egweb.horrycounty.org/EnerGov_prod/selfservice#/home",
+      "notes": [
+        "Horry County's pool fence affidavit says all swimming pools must conform to the 2021 International Swimming Pool and Spa Code and be enclosed by barriers, and the code sections it reprints require the top of the barrier to be at least 48 inches above grade on the side away from the pool, with pedestrian gates that open outward, self-close and self-latch.",
+        "The affidavit says the barrier, gates and alarms must be in place before the final pool inspection is requested, and the pool must not be used until the county has conducted and approved all applicable inspections.",
+        "Under Section 402 of the county zoning ordinance, above-ground and in-ground pools may meet a 6-foot minimum setback in any zoning district if there is a principal use or structure on the land and the pool is not forward of the principal structure or on a street or corner side, but pool enclosures and decks over 12 inches high must meet the district's setbacks.",
+        "Citing Section R105.2 of the 2021 International Residential Building Code, the county says prefabricated swimming pools less than 24 inches deep do not need a building permit, though a Zoning Compliance may still be required."
+      ],
+      "sources": [
+        {
+          "title": "Pool Fence Affidavit, 2021 ISPSC (Horry County Code Enforcement)",
+          "url": "https://www.horrycountysc.gov/media/r2sebvu1/pool-fence-affidavit-2021-ispsc.pdf",
+          "as_of": "2025-04-24"
+        },
+        {
+          "title": "When to get a Building Permit (Horry County)",
+          "url": "https://www.horrycountysc.gov/departments/code-enforcement/permits/building-permit/when-to-get-a-building-permit/",
+          "as_of": "2026-08-12"
+        },
+        {
+          "title": "Zoning Ordinance, Appendix B (Horry County)",
+          "url": "https://www.horrycountysc.gov/media/u1xbawev/appendix-b-zoning-ordinance-172026.pdf",
+          "as_of": "2026-05-19"
+        },
+        {
+          "title": "Code Enforcement (Horry County)",
+          "url": "https://www.horrycountysc.gov/departments/code-enforcement/",
+          "as_of": "2026-08-07"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
@@ -59,6 +113,7 @@
     "Only 3 of 6 jurisdictions: Greenville, Columbia, Myrtle Beach and Horry County pages were blocked (403), unreachable, or rendered by script; North Charleston and Summerville pool pages were blocked or had no pool content.",
     "The web search budget ran out, so no further jurisdictions could be searched for.",
     "Mount Pleasant has no pool-specific page opened, so it has only 2 notes.",
-    "No local page opened states which code edition is enforced, and the state-level contractor license and barrier statements on the existing state page were not re-verified."
+    "No local page opened states which code edition is enforced, and the state-level contractor license and barrier statements on the existing state page were not re-verified.",
+    "2026-11-25: Horry County (unincorporated) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."
   ]
 }

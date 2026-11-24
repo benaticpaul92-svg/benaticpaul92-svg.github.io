@@ -86,6 +86,42 @@
         }
       ],
       "checked": "2026-11-18"
+    },
+    {
+      "name": "Papillion (Sarpy County)",
+      "kind": "city",
+      "office": "City of Papillion Building & Fire Safety",
+      "portal_name": "Online Building Permit Portal (Accela Citizen Access)",
+      "portal_url": "https://aca-prod.accela.com/PAPILLION",
+      "notes": [
+        "The city's Pools (Above and In Ground) page says a site plan is required with your online permit submittal; you choose your lot type and fill in the pool site plan form for a corner lot or an interior lot.",
+        "Papillion's accessory use building permit application covers in-ground and above-ground swimming pools and asks for the pool's length, width, maximum water depth and capacity in gallons.",
+        "The application requires an accurate site plan showing the project location on the lot with dimensions, including set-back distances from the edge of the project to the rear and side property lines and the distance to the existing residence.",
+        "The application says separate permits are required for electrical, mechanical or plumbing work."
+      ],
+      "sources": [
+        {
+          "title": "Pools (Above and In Ground) (City of Papillion)",
+          "url": "https://www.papillion.org/806/Pools",
+          "as_of": "2023-10-30"
+        },
+        {
+          "title": "Accessory Use Building Permit Application (City of Papillion)",
+          "url": "https://www.papillion.org/DocumentCenter/View/327/AccessoryUsePermitApplication-Use-for-Fence-Shed-Deck-Re-roof-Pool-and-Garage-PDF",
+          "as_of": "2022-12-08"
+        },
+        {
+          "title": "Online Permits (City of Papillion)",
+          "url": "https://www.papillion.org/934/Online-Permits",
+          "as_of": "2023-10-30"
+        },
+        {
+          "title": "Building & Fire Safety (City of Papillion)",
+          "url": "https://www.papillion.org/182/Building-Fire-Safety",
+          "as_of": "2025-10-02"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
@@ -94,6 +130,7 @@
     "Papillion, Bellevue and Grand Island pages were blocked or gave no permit content.",
     "No Nebraska city page with a residential pool-specific checklist, barrier rule or sealed-plan requirement was found; only 2 jurisdictions are included.",
     "Neb. Rev. Stat. 71-6403 on nebraskalegislature.gov could not be opened.",
-    "Sarpy County portal URL was not opened, so portal_url is empty."
+    "Sarpy County portal URL was not opened, so portal_url is empty.",
+    "2026-11-25: Papillion (Sarpy County) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."
   ]
 }

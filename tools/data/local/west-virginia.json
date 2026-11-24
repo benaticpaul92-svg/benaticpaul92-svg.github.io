@@ -17,8 +17,14 @@
         "Required in-ground pool inspections include excavation, electrical bonding, the in-ground panel before concrete, final electrical and final."
       ],
       "sources": [
-        {"title": "Swimming Pool Requirements and Checklist (Berkeley County Building Permits and Inspections)", "url": "https://www.berkeleywv.org/DocumentCenter/View/173/Building-Permit---Swimming-Pool-PDF"},
-        {"title": "Building Codes (Berkeley County)", "url": "https://www.berkeleywv.org/582/Building-Codes"}
+        {
+          "title": "Swimming Pool Requirements and Checklist (Berkeley County Building Permits and Inspections)",
+          "url": "https://www.berkeleywv.org/DocumentCenter/View/173/Building-Permit---Swimming-Pool-PDF"
+        },
+        {
+          "title": "Building Codes (Berkeley County)",
+          "url": "https://www.berkeleywv.org/582/Building-Codes"
+        }
       ]
     },
     {
@@ -34,9 +40,18 @@
         "A city pool checklist says pool water may not drain to the storm drain and must connect to the sewer, and asks for a barrier detail and electrical supply detail."
       ],
       "sources": [
-        {"title": "Swimming Pool Permit Guidance (City of Morgantown)", "url": "https://www.morgantownwv.gov/DocumentCenter/View/6784/Swimming-Pool-Permit-Guidance"},
-        {"title": "Pools (City of Morgantown checklist)", "url": "https://morgantownwv.gov/DocumentCenter/View/83/Pools-PDF"},
-        {"title": "Building & Construction (City of Morgantown)", "url": "https://morgantownwv.gov/740/Building-Construction"}
+        {
+          "title": "Swimming Pool Permit Guidance (City of Morgantown)",
+          "url": "https://www.morgantownwv.gov/DocumentCenter/View/6784/Swimming-Pool-Permit-Guidance"
+        },
+        {
+          "title": "Pools (City of Morgantown checklist)",
+          "url": "https://morgantownwv.gov/DocumentCenter/View/83/Pools-PDF"
+        },
+        {
+          "title": "Building & Construction (City of Morgantown)",
+          "url": "https://morgantownwv.gov/740/Building-Construction"
+        }
       ]
     },
     {
@@ -53,16 +68,53 @@
         "Permits are applied for and paid online, and some permit types need plan review, with status handled by permits@huntingtonwv.gov."
       ],
       "sources": [
-        {"title": "Huntington Zoning Ordinance (revised 9/14/2020)", "url": "https://www.cityofhuntington.com/assets/pdf/Huntington_Zoning_Ordinance_1998_REVISED_09-14-2020.pdf"},
-        {"title": "ePermits Contractor Instructions (City of Huntington, 4/29/25)", "url": "https://www.cityofhuntington.com/assets/pdf/ePermits_Contractor_Instructions_City_of_Huntington_WV_4.29.25.pdf"}
+        {
+          "title": "Huntington Zoning Ordinance (revised 9/14/2020)",
+          "url": "https://www.cityofhuntington.com/assets/pdf/Huntington_Zoning_Ordinance_1998_REVISED_09-14-2020.pdf"
+        },
+        {
+          "title": "ePermits Contractor Instructions (City of Huntington, 4/29/25)",
+          "url": "https://www.cityofhuntington.com/assets/pdf/ePermits_Contractor_Instructions_City_of_Huntington_WV_4.29.25.pdf"
+        }
       ]
+    },
+    {
+      "name": "Charleston (Kanawha County)",
+      "kind": "city",
+      "office": "City of Charleston Building Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Section 3-080 of the city's zoning ordinance, on accessory structures and uses in residential districts, says pools are subject to its accessory use provisions and to a building permit.",
+        "The same section says accessory structures may not be placed in the front yard and may not be closer than 3 feet to the rear and side property lines or to the principal structure, unless the ordinance says otherwise.",
+        "The city's adopted-codes notice says the 2018 codes took effect August 1, 2022, and that submitted plans are inspected for compliance with codes including the 2018 International Residential Code, the 2018 International Swimming Pool and Spa Code and the 2020 National Electrical Code. It also says the city uses the latest edition adopted by the West Virginia Legislature.",
+        "The city's Residential Building Permit form (RBP-1) lists items required with applications, including 2 sets of construction plans, 2 site plans showing the location of the proposed structure or excavation on the lot and distances from all lot lines, and a zoning permit from the Municipal Planning Commission."
+      ],
+      "sources": [
+        {
+          "title": "Zoning Ordinance, amended thru April 6, 2024 (City of Charleston)",
+          "url": "https://www.charlestonwv.gov/sites/default/files/documents/2024-10/Zoning%20Ordinance.pdf",
+          "as_of": "2026-09-02"
+        },
+        {
+          "title": "2018 Building Codes Take Effect August 1, 2022 (City of Charleston Adopted Codes)",
+          "url": "https://www.charlestonwv.gov/sites/default/files/documents/2022-08/2018%20BUILDING%20CODES%20TAKE%20EFFECT%20AUGUST%201.docx",
+          "as_of": "2026-02-15"
+        },
+        {
+          "title": "Residential Building Permit RBP-1 (City of Charleston)",
+          "url": "https://www.charlestonwv.gov/sites/default/files/non-departmental-documents/2022-08/RESIDENTIAL%20PERMIT%20-%20NEW.pdf",
+          "as_of": "2026-02-15"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Charleston: charlestonwv.gov timed out on every fetch, so it is not included; only 3 jurisdictions were verified.",
     "The web search budget ran out before a fourth jurisdiction could be located.",
     "Portal names for Berkeley County and Morgantown were not confirmed on an opened page and are left blank.",
-    "Huntington's ordinance version is dated 2020; current edition not checked."
+    "Huntington's ordinance version is dated 2020; current edition not checked.",
+    "2026-11-25: Charleston (Kanawha County) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."
   ]
 }

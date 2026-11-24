@@ -82,6 +82,34 @@
           "url": "https://www.cityofmobile.gov/departments/permitting/"
         }
       ]
+    },
+    {
+      "name": "Hoover (Jefferson and Shelby Counties)",
+      "kind": "city",
+      "office": "City of Hoover Building Inspections Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Section 9.08 of Hoover's zoning ordinance covers permanent private pools, hot tubs and spas that can hold water over 24 inches deep. They may not be placed in front of the principal building in a single-family or two-family zone and must be at least 10 feet from any property line, measured from the water's edge (or the outer wall of any above-grade part).",
+        "The same section requires the pool to be enclosed by a fence at least 4 feet high built to Section 9.04 and the ICC swimming pool and spa code, and any above-grade part of a pool over 6 feet high needs Conditional Use approval.",
+        "The city's residential permits page says a swimming pool permit needs a completed building permit application, a survey showing the proposed location of the pool and pool equipment, and ARC/HOA approval if required.",
+        "The city lists the 2021 International Swimming Pool and Spa Code with amendments, the 2021 International Residential Code and the 2020 National Electrical Code among the codes it adopted effective April 1, 2022."
+      ],
+      "sources": [
+        {
+          "title": "Zoning Ordinance, Section 9.08 Private Swimming Pools (City of Hoover, amended through September 28, 2026)",
+          "url": "https://hooveralabama.gov/1471/Zoning-Ordinance"
+        },
+        {
+          "title": "Residential Permits (City of Hoover)",
+          "url": "https://hooveralabama.gov/341/Residential-Permits"
+        },
+        {
+          "title": "Building Codes (City of Hoover)",
+          "url": "https://hooveralabama.gov/349/Building-Codes"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
@@ -90,6 +118,7 @@
     "Montgomery city inspections page also returned 403, so a fourth jurisdiction could not be verified.",
     "Birmingham, Huntsville and Mobile pages opened did not describe residential pool submittal requirements (barrier, engineer seal, site plan) specifically; none are stated.",
     "Huntsville code list is on a page titled for commercial inspection requirements; whether it applies identically to residential pools is not stated on that page.",
-    "Mobile: which pool code edition applies was not found; only general IBC/IRC/NEC editions are listed."
+    "Mobile: which pool code edition applies was not found; only general IBC/IRC/NEC editions are listed.",
+    "2026-11-25: Hoover (Jefferson and Shelby Counties) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."
   ]
 }

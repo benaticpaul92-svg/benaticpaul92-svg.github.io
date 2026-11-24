@@ -61,6 +61,34 @@
           "url": "https://www.concordnh.gov/963/Permits-Fees"
         }
       ]
+    },
+    {
+      "name": "Nashua (Hillsborough County)",
+      "kind": "city",
+      "office": "City of Nashua Department of Building Safety",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "Nashua's Required Permits list says swimming pools (above and in-ground), hot tubs and spas need a building permit, and swimming pools also need an electrical permit.",
+        "The city's Swimming Pools handout, based on the 2024 International Swimming Pool and Spa Code and not applicable to pools less than 24 inches deep, says the top of a pool barrier must be at least 48 inches above grade, measured on the side away from the pool, and its openings must not let a 4-inch sphere pass.",
+        "The handout says pool gates must be self-closing and latching and open outward away from the pool, and the gate and barrier must have no openings larger than 1/2 inch within 18 inches of the latch mechanism.",
+        "The Department of Building Safety says that, in addition to a Building and Land Use Application, all permit applications need 1 paper set and 1 electronic plan set, submitted by mail, in the after-hours drop box at the Elm Street entrance to City Hall, or in person at City Hall."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools handout (City of Nashua Department of Building Safety)",
+          "url": "https://www.nashuanh.gov/DocumentCenter/View/37040/2024-Swimming-Pool-2026"
+        },
+        {
+          "title": "Required Permits (City of Nashua)",
+          "url": "https://www.nashuanh.gov/DocumentCenter/View/37301/2024-Required-Permits-"
+        },
+        {
+          "title": "Building Safety Department (City of Nashua)",
+          "url": "https://www.nashuanh.gov/275/Building-Safety-Department"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
@@ -68,6 +96,7 @@
     "Nashua: the building permit page could not be reached from the city site, so Nashua is not included; only 3 of 4 jurisdictions.",
     "Manchester's building FAQ answer 'What do I need to get a pool permit?' is hidden in the page and could not be read, so no Manchester submittal list is given.",
     "Portal URLs for Manchester, Concord were not opened, so portal_url is empty; no New Hampshire city page with a pool-specific checklist or barrier rule was found.",
-    "State-level RSA 155-A and Building Code Review Board facts were not re-verified on a state site."
+    "State-level RSA 155-A and Building Code Review Board facts were not re-verified on a state site.",
+    "2026-11-25: Nashua (Hillsborough County) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."
   ]
 }

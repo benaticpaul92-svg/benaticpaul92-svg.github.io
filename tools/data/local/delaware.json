@@ -16,8 +16,14 @@
         "Fences over 7 feet need a permit except when enclosing a swimming pool area; zoning rules still apply."
       ],
       "sources": [
-        {"title": "What Information Do I Need for a Building Permit - Kent County", "url": "https://www.kentcountyde.gov/Residents/Permits/Building-Permits/What-Information-Do-I-Need-for-a-Building-Permit"},
-        {"title": "Permitting Requirements and Adopted Codes - Kent County", "url": "https://www.kentcountyde.gov/Residents/Permits/Building-Permits/Permitting-Requirements-Adopted-Codes"}
+        {
+          "title": "What Information Do I Need for a Building Permit - Kent County",
+          "url": "https://www.kentcountyde.gov/Residents/Permits/Building-Permits/What-Information-Do-I-Need-for-a-Building-Permit"
+        },
+        {
+          "title": "Permitting Requirements and Adopted Codes - Kent County",
+          "url": "https://www.kentcountyde.gov/Residents/Permits/Building-Permits/Permitting-Requirements-Adopted-Codes"
+        }
       ]
     },
     {
@@ -32,7 +38,10 @@
         "The page references the 2018 International Building Code, International Residential Code and International Swimming Pool and Spa Code."
       ],
       "sources": [
-        {"title": "Building Inspections & Permitting - Milford", "url": "https://www.cityofmilford.com/15/Building-Inspections-Permitting"}
+        {
+          "title": "Building Inspections & Permitting - Milford",
+          "url": "https://www.cityofmilford.com/15/Building-Inspections-Permitting"
+        }
       ]
     },
     {
@@ -46,8 +55,42 @@
         "The page lists a downloadable Building Permit Application under the Code Enforcement Division; it has no pool-specific permit page."
       ],
       "sources": [
-        {"title": "Forms and Applications - Newark, Delaware", "url": "https://www.newarkde.gov/1021/Forms-and-Applications"}
+        {
+          "title": "Forms and Applications - Newark, Delaware",
+          "url": "https://www.newarkde.gov/1021/Forms-and-Applications"
+        }
       ]
+    },
+    {
+      "name": "New Castle County (unincorporated)",
+      "kind": "county",
+      "office": "New Castle County Department of Land Use",
+      "portal_name": "eServices (eApply and ePlans)",
+      "portal_url": "https://www.newcastlede.gov/1161/ePlans",
+      "notes": [
+        "The county says a permit is required for all pools, spas and hot tubs that are 24 inches and above in height or are designed and manufactured to be connected to a circulation system, when they are intended for swimming, bathing or wading.",
+        "The county's pool permit requirements sheet says in-ground pool drawings must meet ISPSC standards, particularly for minimum depths to support diving boards, ladders and stairs. In-ground pools also need a Lines and Grades plan and the latest Residential L&G Checklist, both signed and sealed by a Delaware licensed engineer or surveyor. The plan is to include any pool heater, overhead wires with any relocation shown, a plan for excess material disposal, the pool fence, construction equipment access and all drainage and sewer easements.",
+        "The same sheet says a private swimming pool may be in the rear yard if the pool and all appurtenances, such as decking, the pool filter and pump, are at least six (6) feet from any side or rear property line. All pools must be at least ten (10) feet horizontally from overhead wires, and no pool or hot tub is permitted in any easement or building setback lines.",
+        "The county's code page lists the 2024 International Residential Code and the 2024 International Swimming Pool and Spa Code as effective 1/1/26. It says Chapter 6 of the County Code and its appendices contain amendments to the adopted codes."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools & Hot Tubs (New Castle County)",
+          "url": "https://www.newcastlede.gov/222/Swimming-Pools",
+          "as_of": "2025-03-07"
+        },
+        {
+          "title": "Building Permit Requirements: Swimming Pool & Hot Tub/Spa (New Castle County Department of Land Use, rev. 06/16/2025)",
+          "url": "https://www.newcastlede.gov/DocumentCenter/View/32997/Swimming-Pool-Requirements",
+          "as_of": "2025-10-18"
+        },
+        {
+          "title": "County Laws & Code (New Castle County)",
+          "url": "https://www.newcastlede.gov/229/County-Laws-Code",
+          "as_of": "2026-08-03"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
@@ -57,6 +100,7 @@
     "Kent County's pool permit guide and barrier brochure PDFs were not opened, so no barrier numbers are given.",
     "Newark's page has no pool-specific content; only the portal is verified.",
     "None of the opened pages state whether pool plans must be engineer-sealed.",
-    "Only 3 jurisdictions delivered."
+    "Only 3 jurisdictions delivered.",
+    "2026-11-25: New Castle County (unincorporated) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."
   ]
 }

@@ -65,12 +65,39 @@
           "url": "https://www.clevelandohio.gov/city-hall/departments/building-housing"
         }
       ]
+    },
+    {
+      "name": "Columbus (Franklin County)",
+      "kind": "city",
+      "office": "City of Columbus Building and Zoning Services",
+      "portal_name": "Citizen Access Portal",
+      "portal_url": "https://ca.columbus.gov/ca/",
+      "notes": [
+        "The city's pool sheet says a building permit is required to install, repair, maintain or locate any swimming or wading pool capable of a water depth of more than 24 inches, and that a pool cannot be located in any front yard or required side yard.",
+        "The sheet says a pool must be enclosed by a fence or other permanent barrier at least 48 inches high, measured from the ground, with access gates that open outward from the pool, are self-closing and self-latching, and can take a locking device; it lists some exemptions, such as pools with a power safety cover.",
+        "The sheet asks for two copies of a site plan showing at least the pool's diameter or length and width, its height and material, the fence location and height, the distance from the pool edge to the property lines and to any structure, and the location of all electric outlets within 20 feet of any part of the pool.",
+        "The sheet says all in-ground and indoor pools and all pools more than 42 inches high need two copies of pool structural drawings sealed by an architect or engineer, and a completed electric permit application must accompany the building permit application when electric work is required."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools (City of Columbus Building and Zoning Services)",
+          "url": "https://www.columbus.gov/files/sharedassets/city/v/4/building-and-zoning/swimming-pool-information-2026.pdf",
+          "as_of": "2026-05-15"
+        },
+        {
+          "title": "Get or Track a Building Permit (City of Columbus)",
+          "url": "https://www.columbus.gov/Business-Development/Get-a-Permit/Get-or-Track-a-Building-Permit",
+          "as_of": "2026-11-02"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
     "Only 3 of 4 jurisdictions, and Cleveland's page does not mention pools specifically, so its notes are general residential permit facts only.",
     "Columbus (403), Cincinnati (connection refused), Akron and Westerville (403) could not be opened; Toledo's pages had no pool content; the shared web search budget ran out so no replacements could be searched. Columbus and Cincinnati need a re-run.",
-    "No state-level fact added; none was opened from a state source."
+    "No state-level fact added; none was opened from a state source.",
+    "2026-11-25: Columbus (Franklin County) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."
   ]
 }

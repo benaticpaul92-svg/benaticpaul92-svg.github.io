@@ -30,7 +30,7 @@ OFFLINE = {'north-carolina'}
 STATES = {slug: rec for slug, rec in ALL_STATES.items() if slug not in OFFLINE}
 # "Do I need an engineer's stamp for a pool in <State>?" Each answer states only what the official pages listed with it say.
 STAMP_ANSWERS = json.loads((ROOT/'tools/data/stamp-answers.json').read_text())
-BUILD_DATE = '2026-11-20'   # sitemap date given to pages whose content changed in this build
+BUILD_DATE = '2026-11-25'   # sitemap date given to pages whose content changed in this build
 CHANGED = set()             # addresses of the pages that differ from their last committed version; filled by shell()
 _GIT = None
 
