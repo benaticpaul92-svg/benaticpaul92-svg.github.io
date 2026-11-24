@@ -117,6 +117,11 @@ def asset(name):
     return '/assets/'+name+'?v='+hashlib.sha256(p.read_bytes()).hexdigest()[:12]
 
 
+def geo_route_tag():
+    # Inlined so a paid visit starts the state lookup without first downloading a separate script.
+    return '<script>' + (ROOT/'assets/geo-route.min.js').read_text().strip() + '</script>'
+
+
 def root_file(name):
     """Address of a file in the site root with a stamp of its content, so a browser fetches a changed icon again."""
     return '/'+name+'?v='+hashlib.sha256((ROOT/name).read_bytes()).hexdigest()[:12]
@@ -232,7 +237,7 @@ def hero(kicker, h1, lead, form_html, crumbs='', facts=None, small=None, second=
     jump_html = f'<p class="hero-jump"><a href="{jump[1]}">{jump[0]} <span aria-hidden="true">↓</span></a></p>' if jump else ''
     return f'''<section class="search-hero blue{' hero-'+picture if picture else ''}" aria-labelledby="hero-heading"><div class="wrap search-grid"><div class="search-copy">{crumbs}<span class="eyebrow">{kicker}</span><h1 id="hero-heading">{h1}</h1><p class="lead">{lead}</p>{jump_html}{strip_html}<div class="actions"><a class="button primary" href="#contact">Get my quote <span aria-hidden="true">→</span></a><a class="text-link" href="{second[1]}">{second[0]}</a></div></div>
 <aside class="quote-panel" id="contact" aria-labelledby="contact-heading"><span class="eyebrow">FREE QUOTE · NO PAYMENT REQUIRED</span><h2 id="contact-heading" tabindex="-1">{form_heading}</h2>{form_html}{quote}</aside>
-<div class="search-facts"><dl class="delivery-facts">{facts_html}</dl><p class="small">{small or HERO_SMALL}</p><p class="search-contact">Your contact: <strong>Benatic Paul Martin</strong><br>{COMPANY} · <a href="mailto:{EMAIL}">{EMAIL}</a></p></div></div></section>'''
+<div class="search-facts"><dl class="delivery-facts">{facts_html}</dl><p class="small">{small or HERO_SMALL}</p><p class="search-contact">Your contact: <strong>Benatic Paul Martin</strong><br>{COMPANY} · <a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="/about/">About {COMPANY}</a></p></div></div></section>'''
 
 
 def sheet_rows(rows):
@@ -464,7 +469,7 @@ def company_block():
 def shell(path, title, description, body, schema, head_extra='', out=None, noindex=False, brand=' | JEBN'):
     header = ''.join(str(BASE.select_one(s)) for s in ['.skip-link', '.utility-bar', '.site-header', '#privacy-choices'])
     footer_links = ''.join(f'<a href="{href}">{label}</a>' for href, label, _ in SERVICE_LINKS)
-    footer_links += '<a href="/#more-services">Drawing sets by project type</a><a href="/landscape/">Landscape design</a>'
+    footer_links += ''.join(f'<a href="{h}">{escape(l)}</a>' for h, l, _ in TOPIC_LINKS) + '<a href="/landscape/">Landscape design</a>'
     footer = (str(BASE.select_one('.site-footer')).replace('<!--SERVICE_LINKS-->', footer_links)
               .replace('<!--COMPANY-->', company_block()).replace('<!--COPYRIGHT-->', f'© 2026 {COMPANY}'))
     # A menu or footer link to a section this page does not have points at that section of the home page.
@@ -486,7 +491,8 @@ def shell(path, title, description, body, schema, head_extra='', out=None, noind
     # A noindex page (the 404 page) is served at any address, so it gets no canonical or og:url.
     index_meta = '<meta name="robots" content="noindex,follow">' if noindex else f'<link rel="canonical" href="{canonical}">'
     og_url = '' if noindex else f'<meta property="og:url" content="{canonical}">'
-    html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(full_title)}</title><meta name="description" content="{escape(description)}">{index_meta}<meta name="theme-color" content="#072338"><meta name="referrer" content="strict-origin-when-cross-origin">{icon_links()}<meta property="og:title" content="{escape(full_title)}"><meta property="og:description" content="{escape(description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="{COMPANY}">{og_url}<meta property="og:image" content="{SITE}/images/pool-beachfront-villa.jpg"><meta name="twitter:card" content="summary_large_image">{head_extra}{preload}<link rel="stylesheet" href="{asset('studio.min.css')}"><link rel="stylesheet" href="{asset('search-landings.min.css')}"><script src="{asset('search-landings.min.js')}" defer></script><script src="{asset('studio.min.js')}" defer></script>{ld}</head><body class="search-landing">{header}<main id="main-content" tabindex="-1">{body}</main>{sticky}{footer}</body></html>'''
+    og_pic = 'landscape-hero' if 'hero-landscape' in body else 'pool-villa-hero'
+    html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(full_title)}</title><meta name="description" content="{escape(description)}">{index_meta}<meta name="theme-color" content="#072338"><meta name="referrer" content="strict-origin-when-cross-origin">{icon_links()}<meta property="og:title" content="{escape(full_title)}"><meta property="og:description" content="{escape(description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="{COMPANY}">{og_url}<meta property="og:image" content="{SITE}/images/{og_pic}.jpg"><meta property="og:image:width" content="1000"><meta property="og:image:height" content="628"><meta name="twitter:card" content="summary_large_image">{head_extra}{preload}<link rel="stylesheet" href="{asset('studio.min.css')}"><link rel="stylesheet" href="{asset('search-landings.min.css')}"><script src="{asset('search-landings.min.js')}" defer></script><script src="{asset('studio.min.js')}" defer></script>{ld}</head><body class="search-landing">{header}<main id="main-content" tabindex="-1">{body}</main>{sticky}{footer}</body></html>'''
     html = html.replace('↗', '→')
     out = ROOT/out if out else ROOT/path/'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -755,7 +761,7 @@ def build_service(p):
             + faq_block('BEFORE YOU ASK', p['faq_heading'], p['faq'])
             + coverage_section())
     # Routes a paid visit to the visitor's state page when the ad click carries a location id.
-    head_extra = f'<script src="{asset("geo-route.min.js")}"></script>' if p.get('geo') else ''
+    head_extra = geo_route_tag() if p.get('geo') else ''
     return shell(p['path'], p['title'], p['meta'], body, service_schema(canonical, short, p['title'], p['meta'], p['faq']), head_extra)
 
 
@@ -835,8 +841,10 @@ def build_seal_page():
             + sources_block(SEAL_SOURCES, 'The statements on this page were checked against these official texts in November 2026. Rules differ by state and change over time, so confirm them with your permit office and your state’s engineering board. This page is general information, not legal advice.')
             + coverage_section())
     # Routes a paid visit to the visitor's state page when the ad click carries a location id.
-    head_extra = f'<script src="{asset("geo-route.min.js")}"></script>'
-    return shell('services/pool-engineering', title, meta, body, service_schema(canonical, short, title, meta, SEAL_FAQ), head_extra)
+    head_extra = geo_route_tag()
+    schema = page_schema(canonical, title, meta, short)
+    schema['@graph'].insert(1, faq_schema(canonical, SEAL_FAQ))
+    return shell('services/pool-engineering', title, meta, body, schema, head_extra)
 
 
 # ---------------------------------------------------------------- pages for particular project types
@@ -952,7 +960,7 @@ def build_home():
         {'@type': 'ItemList', 'name': 'Pool drawing services', 'itemListElement': [{'@type': 'ListItem', 'position': i, 'name': label, 'url': SITE+href} for i, (href, label, _) in enumerate(SERVICE_LINKS, 1)]},
     ]}
     # Routes a paid visit to the visitor's state page when the ad click carries a location id.
-    head_extra = f'<script src="{asset("geo-route.min.js")}"></script>'
+    head_extra = geo_route_tag()
     return shell('', title, description, body, schema, head_extra, brand=f' | {COMPANY}')
 
 
@@ -1306,6 +1314,11 @@ def fact_sources(fact):
     return f' <span class="local-src">Source: {" · ".join(srcs)}</span>' if srcs else ''
 
 
+def join_places(names):
+    names = list(names)
+    return names[0] if len(names) == 1 else ', '.join(names[:-1]) + ' and ' + names[-1]
+
+
 def requirements_section(state, rec):
     article = 'an' if state[0] in 'AEIOU' else 'a'
     steps = []
@@ -1374,12 +1387,18 @@ def build_state(slug, rec):
     stamp_link = '<a href="#stamp">Engineer’s stamp</a>' if stamp else ''
     nav = f'<nav class="landing-nav" aria-label="Page sections"><div class="wrap">{stamp_link}<a href="#local">Local permit notes</a><a href="#requirements">State requirements</a><a href="#package">Drawing package</a><a href="#contact">Get my quote ↗</a></div></nav>'
     links = '<p class="package-links"><a href="/services/pool-permit-drawings/">Pool permit drawings</a> · <a href="/pool/">Construction drawings</a> · <a href="/services/pool-engineering/">How the engineer’s seal works</a></p>'
+    links += '<p class="package-links"><strong>By project type:</strong> ' + ' · '.join(f'<a href="{href}">{escape(label)}</a>' for href, label, _ in TOPIC_LINKS) + '</p>'
     faqs = faq_items(state, rec, offer)
     nearby = ''
     near = [(h, t) for h, t in rec.get('nearby', []) if h.strip('/').split('/')[-1] not in OFFLINE]   # no link to a page that is offline
     if near:
         nearby = '<p class="nearby-line"><strong>Nearby states:</strong> '+' · '.join(f'<a href="{escape(h)}">{clean(t)}</a>' for h, t in near)+'</p>'
-    jump = (clean(stamp_question(state)), '#stamp') if stamp else None
+    if stamp:
+        jump = (clean(stamp_question(state)), '#stamp')
+    elif places:
+        jump = (clean(f'Permit notes for {join_places(places[:3])}'), '#local')
+    else:
+        jump = None
     body = (hero(f'{state.upper()} / POOL PERMIT DRAWINGS', h1, lead, form(title, state, CITY[slug]), crumbs, strip=HERO_STRIP, jump=jump) + nav
             + (stamp_section(state, stamp) if stamp else '') + samples_section()
             + local_section(state, local) + audience_section(state) + pool_clients()
