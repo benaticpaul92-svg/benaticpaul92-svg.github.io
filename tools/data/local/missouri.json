@@ -16,9 +16,18 @@
         "The county separately licenses pool installers through the Citizenserve portal, with a bond and liability insurance certificate."
       ],
       "sources": [
-        {"title": "Residential Building Permit (St. Charles County)", "url": "https://www.sccmo.org/1826/Residential-Building-Permit"},
-        {"title": "Pool Installers License Application/Renewal (St. Charles County)", "url": "https://www.sccmo.org/1551/Pool-Installers-License-ApplicationRenew"},
-        {"title": "Community Development (St. Charles County)", "url": "https://www.sccmo.org/203/Community-Development"}
+        {
+          "title": "Residential Building Permit (St. Charles County)",
+          "url": "https://www.sccmo.org/1826/Residential-Building-Permit"
+        },
+        {
+          "title": "Pool Installers License Application/Renewal (St. Charles County)",
+          "url": "https://www.sccmo.org/1551/Pool-Installers-License-ApplicationRenew"
+        },
+        {
+          "title": "Community Development (St. Charles County)",
+          "url": "https://www.sccmo.org/203/Community-Development"
+        }
       ]
     },
     {
@@ -34,8 +43,14 @@
         "Springfield requires an approved building permit before any new one- or two-family house or accessory building is built, and the plans must include a site plan drawn to scale."
       ],
       "sources": [
-        {"title": "Swimming Pools (City of Springfield)", "url": "https://www.springfieldmo.gov/243/Swimming-Pools"},
-        {"title": "1 & 2 Family Permits (City of Springfield)", "url": "https://www.springfieldmo.gov/183/1-2-Family-Permits"}
+        {
+          "title": "Swimming Pools (City of Springfield)",
+          "url": "https://www.springfieldmo.gov/243/Swimming-Pools"
+        },
+        {
+          "title": "1 & 2 Family Permits (City of Springfield)",
+          "url": "https://www.springfieldmo.gov/183/1-2-Family-Permits"
+        }
       ]
     },
     {
@@ -51,9 +66,18 @@
         "Contractors, general and sub, must hold a city-issued contractor's license."
       ],
       "sources": [
-        {"title": "Building Permits (City of Wentzville)", "url": "https://www.wentzvillemo.gov/departments/community-development/building-division/building-permits/"},
-        {"title": "SmartGov Permit Portal (City of Wentzville)", "url": "https://www.wentzvillemo.gov/permit-center/"},
-        {"title": "Building Codes (City of Wentzville)", "url": "https://www.wentzvillemo.gov/departments/community-development/building-codes/"}
+        {
+          "title": "Building Permits (City of Wentzville)",
+          "url": "https://www.wentzvillemo.gov/departments/community-development/building-division/building-permits/"
+        },
+        {
+          "title": "SmartGov Permit Portal (City of Wentzville)",
+          "url": "https://www.wentzvillemo.gov/permit-center/"
+        },
+        {
+          "title": "Building Codes (City of Wentzville)",
+          "url": "https://www.wentzvillemo.gov/departments/community-development/building-codes/"
+        }
       ]
     },
     {
@@ -69,15 +93,52 @@
         "Contractors must hold a City Business License before doing construction work in the city."
       ],
       "sources": [
-        {"title": "Building Permits (City of Lake Saint Louis)", "url": "https://www.lakesaintlouis.com/1318/Building-Permits"},
-        {"title": "Swimming Pool Requirement Checklist (City of Lake Saint Louis)", "url": "https://www.lakesaintlouis.com/DocumentCenter/View/96/Pool-Requirement-Checklist-PDF"}
+        {
+          "title": "Building Permits (City of Lake Saint Louis)",
+          "url": "https://www.lakesaintlouis.com/1318/Building-Permits"
+        },
+        {
+          "title": "Swimming Pool Requirement Checklist (City of Lake Saint Louis)",
+          "url": "https://www.lakesaintlouis.com/DocumentCenter/View/96/Pool-Requirement-Checklist-PDF"
+        }
       ]
+    },
+    {
+      "name": "Kansas City (Jackson, Clay, Platte and Cass Counties)",
+      "kind": "city",
+      "office": "City Planning & Development Department",
+      "portal_name": "CompassKC",
+      "portal_url": "https://compasskc.kcmo.org/",
+      "notes": [
+        "Kansas City's Information Bulletin No. 119 says a permit is required to build any above-ground or in-ground residential swimming pool, hot tub or spa, except a temporary inflatable pool or a prefabricated above-ground pool at a one- or two-family home with walls entirely above grade, a fill level less than 24 inches and a capacity of 5,000 gallons or less, though all code requirements still apply without a permit.",
+        "The bulletin says pool permits for one- and two-family homes must be submitted online through CompassKC, and the site plan, drawn to scale or on the mortgage survey or recorded subdivision plat, must show the property line dimensions, the existing home, the pool's dimensions and its distances to the home, other structures and the side and rear property lines, the required 4 ft tall fencing, a note on the notification alarms and the overhead or underground electrical service-drop conductors running to the house.",
+        "In residential zoning districts, the bulletin says pools may go only in the side or rear yard, at least 10 ft from the side yard property lines and not within a dedicated easement, and a pool 10 ft or closer to any building may be subject to a structural plan review.",
+        "The bulletin says its pool requirements are found in the Kansas City Zoning and Development Code, Chapter 18 (the Kansas City Building & Rehabilitation Code) and the 2018 International Swimming Pool and Spa Code as amended. It says pools, spas and hot tubs with a fill level greater than 2 ft must be enclosed by a protective fence at least 4 ft high with self-closing, self-latching gates, though a lockable cover is accepted instead of the fence on a spa or hot tub and above-ground pool walls 4 ft or higher may serve as the enclosure. Electrical and plumbing work need separate supplemental permits."
+      ],
+      "sources": [
+        {
+          "title": "Zoning and Permit Requirements for Residential Swimming Pool, Information Bulletin No. 119 (City of Kansas City, Missouri)",
+          "url": "https://www.kcmo.gov/home/showpublisheddocument/15890/638989714768770000",
+          "as_of": "2026-04-10"
+        },
+        {
+          "title": "Information Bulletins (IBs) (City of Kansas City, Missouri)",
+          "url": "https://www.kcmo.gov/city-hall/departments/city-planning-development/information-bulletin-ib-index",
+          "as_of": "2026-10-27"
+        },
+        {
+          "title": "Compass KC - Online Plan and Permitting Services (City of Kansas City, Missouri)",
+          "url": "https://www.kcmo.gov/city-hall/departments/city-planning-development/compass-kc-the-new-permitting-system",
+          "as_of": "2026-11-16"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Kansas City (kcmo.gov) and St. Louis County (stlouiscountymo.gov) returned 403 to automated fetches, and the search budget ran out, so neither is covered.",
-    "Three of four entries are in St. Charles County because those sites were reachable; no St. Louis County or Kansas City metro entry beyond that.",
+    "St. Louis County (stlouiscountymo.gov) returned 403 to automated fetches, so it is not covered. Kansas City was added on 25 Nov 2026.",
+    "Three of four entries are in St. Charles County because those sites were reachable; no St. Louis County entry.",
     "Springfield: no online permit portal name or URL confirmed.",
     "Lake Saint Louis: the pool checklist PDF is marked 06132017, so confirm it is current.",
     "St. Charles County: the pool installer license page names a Citizenserve portal; plan requirements on the residential permit page are general, not pool-specific beyond naming pools."

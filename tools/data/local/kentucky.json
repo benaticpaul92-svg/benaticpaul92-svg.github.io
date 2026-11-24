@@ -85,12 +85,45 @@
         }
       ],
       "checked": "2026-11-18"
+    },
+    {
+      "name": "Bowling Green (Warren County)",
+      "kind": "city",
+      "office": "City of Bowling Green Neighborhood and Community Services, Building Division",
+      "portal_name": "E-Permits Portal",
+      "portal_url": "https://esuites.bgky.org/eSuite.permits/WelcomePage.aspx",
+      "notes": [
+        "The city says new in-ground swimming pools, additions to existing pools and alterations to a pool need a Swimming Pool Permit and an erosion prevention and sediment control (EPSC) plan, and additions such as a deck or pool house need a separate building permit.",
+        "Under Section 4.4.5.F.6 of the Warren County/Joint Zoning Ordinance, which covers Bowling Green, a pool with a water depth of 3 feet or more needs a building permit, and a pool at a home in a single-family district must sit at least 10 feet from the rear and side property lines, measured from the pool wall.",
+        "The same section says the pool area must be enclosed by a fence or other suitable barrier at least 4 feet high, with openings small enough to keep a child from entering except through the gate.",
+        "The city's pool permit application says a drawing is required with the application, a professional plot plan with a completed Standard Erosion Prevention and Sediment Control Plan form is required, and it is the contractor's responsibility to call for inspections."
+      ],
+      "sources": [
+        {
+          "title": "Permit Applications: Swimming Pool Permit (City of Bowling Green)",
+          "url": "https://www.bgky.org/ncs/building/permits",
+          "as_of": "2026-07-18"
+        },
+        {
+          "title": "Regulations/Documents: Zoning Ordinance (City-County Planning Commission of Warren County)",
+          "url": "https://www.warrenpc.org/regulations-documents/"
+        },
+        {
+          "title": "Warren County/Joint Zoning Ordinance, Article 4, June 2026 (City-County Planning Commission of Warren County)",
+          "url": "https://drive.google.com/file/d/1fUvY2KdM0e0XKSdGI3-qx1BZNfg2QChA/view?usp=sharing"
+        },
+        {
+          "title": "Swimming Pool Permit Application (City of Bowling Green, December 2025)",
+          "url": "https://www.bgky.org/files/xWvKIOEK.pdf",
+          "as_of": "2026-08-14"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
     "Louisville Metro: louisvilleky.gov blocked WebFetch and curl (403/Cloudflare); nothing verified.",
-    "Bowling Green: bgky.org pages did not respond to WebFetch or curl; nothing verified.",
     "A fourth Kentucky jurisdiction (for example Boone or Kenton County) was not researched because the web search quota ran out.",
     "Only one Kentucky jurisdiction is verified."
   ]

@@ -88,6 +88,42 @@
           "url": "https://www.minneapolismn.gov/business-services/licenses-permits-inspections/construction-permits/permits-overview/"
         }
       ]
+    },
+    {
+      "name": "Edina / Hennepin County",
+      "kind": "city",
+      "office": "Building Inspections Division, City of Edina",
+      "portal_name": "Edina E-Permits",
+      "portal_url": "https://epermits.logis.org/home.aspx?city=ed",
+      "notes": [
+        "The city's swimming pool plan checklist asks for complete to-scale plans and specs showing the plumbing diagram, skimmer locations, inlets, main drain and a cross section of the pool, plus a site survey showing a 14 foot setback from the water's edge to the rear and side yard property lines.",
+        "The same checklist says electrical work needs an additional permit and inspections from the State, a pool heater and its gas lines need an additional mechanical permit and inspections, and the pool may not be filled without fencing in place.",
+        "The city's fencing handout says swimming pools must be entirely fenced with a non-climbable fence at least four feet high with a self-closing, self-latching gate, and that building permits are not required for fences.",
+        "The city's above-ground pool handout allows a temporary above-ground pool, stored indoors between October 15 and April 15, no larger than 255 square feet and no deeper than 48 inches, placed in the rear yard no closer than 5 feet to the side property line and 10 feet to the rear property line and enclosed by a non-climbable fence at least 4 feet high. It says a building permit is not required."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool Plan Requirements (Edina Inspections Department, revised 07/03/2020)",
+          "url": "https://www.edinamn.gov/DocumentCenter/View/3372/Residential-Swimming-Pool-PDF",
+          "as_of": "2025-08-04"
+        },
+        {
+          "title": "Residential Fencing Regulations (City of Edina)",
+          "url": "https://www.edinamn.gov/DocumentCenter/View/11389/Fencing-Regulations-Handout",
+          "as_of": "2026-08-01"
+        },
+        {
+          "title": "Above-Ground Pool Regulations (City of Edina Health Department)",
+          "url": "https://www.edinamn.gov/DocumentCenter/View/431/Above-Ground-Pool-Regulations-PDF",
+          "as_of": "2025-08-31"
+        },
+        {
+          "title": "Building Inspections (City of Edina)",
+          "url": "https://www.edinamn.gov/204/Building-Inspections",
+          "as_of": "2026-07-19"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

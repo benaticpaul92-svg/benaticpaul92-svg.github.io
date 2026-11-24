@@ -85,6 +85,35 @@
         }
       ],
       "checked": "2026-11-18"
+    },
+    {
+      "name": "St. Tammany Parish (unincorporated)",
+      "kind": "county",
+      "office": "St. Tammany Parish Department of Permits and Inspections",
+      "portal_name": "MyPermitNow",
+      "portal_url": "https://www.mypermitnow.org/",
+      "notes": [
+        "The parish's residential pool plan review checklist asks for a property survey showing the flood zone, a pool cross section, and a plot plan with existing and proposed structures, setback lines, the fence location, height and materials, window and door alarm locations, pool equipment and any pool heater.",
+        "Under Section 400-8.PP of the parish's Unified Development Code, a pool must be completely enclosed by a permanent, solidly built fence or wall at least 4 feet high, and every gate or door in it needs a self-closing, self-latching device. Portable or accessory pools with less than 18 inches of water depth are exempt.",
+        "The same section allows pools only in a side or rear yard. In-ground pools (less than 12 inches above grade), including decking and coping, must be set back at least 5 feet from the side and rear property lines. Above-ground pools must be set back at least 5 feet from the side line and 10 feet from the rear line.",
+        "The parish's pool packet says all pools will be inspected for compliance with the 2021 International Swimming Pool and Spa Code (ISPSC). From January 1, 2026, once excavation begins, a pool under construction must be protected by a rigid barrier."
+      ],
+      "sources": [
+        {
+          "title": "Residential Swimming Pool Packet, effective 10.08.2026 (St. Tammany Parish)",
+          "url": "https://cms3.revize.com/revize/sttammanyparish/Residential%20Swimming%20Pool%20EFF%2010.08.2026.pdf"
+        },
+        {
+          "title": "Unified Development Code, Section 400-8.PP Swimming Pools (St. Tammany Parish)",
+          "url": "https://www3.stpgov.org/planning/Unified_Development_Code_Last_Amended_Per_Council_Ord_26_5921.pdf"
+        },
+        {
+          "title": "Permits and Inspections (St. Tammany Parish)",
+          "url": "https://www.stpgov.org/departments/permits_and_inspections/index.php",
+          "as_of": "2026-10-17"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

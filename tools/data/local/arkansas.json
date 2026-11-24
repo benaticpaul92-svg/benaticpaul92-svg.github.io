@@ -124,6 +124,34 @@
           "url": "https://www.rogersar.gov/1494/Online-Permitting-Portal"
         }
       ]
+    },
+    {
+      "name": "Jonesboro (Craighead County)",
+      "kind": "city",
+      "office": "City of Jonesboro Planning & Zoning Department and Inspections Department",
+      "portal_name": "Online Application Portal (ProjectDox)",
+      "portal_url": "https://jonesboro-ar-us.avolvecloud.com/",
+      "notes": [
+        "The city's Planning and Zoning FAQ lists a swimming pool as an accessory structure and says the city has minimum zoning standards for accessory structures (size restrictions, height, location and setback requirements). For more information on these standards and to obtain a Building Permit, it says to contact the Planning and Zoning Department.",
+        "The city's 2017 fee schedule lists swimming pools (above or below ground) under Single Family Residential Approvals - Planning Review, and lists Swimming Pool Elec Bond and Residential Swimming Pool under Inspections.",
+        "The city's Inspections page says residential review takes approximately 3 to 5 days from the date submitted to Planning: the application goes to the Planning & Zoning Department, Planning distributes it to Engineering for all floodplain issues, and Inspections does final approvals before issuing permits.",
+        "The Inspections page's list of codes used within the city limits, updated January 1, 2023, includes the 2021 Arkansas Fire Prevention Code Vol. III: Residential, the 2018 Arkansas Plumbing Code and the 2020 National Electrical Code."
+      ],
+      "sources": [
+        {
+          "title": "Planning and Zoning FAQs (City of Jonesboro)",
+          "url": "https://www.jonesboroar.gov/Faq.aspx?QID=268"
+        },
+        {
+          "title": "2017 Fee Schedule (City of Jonesboro)",
+          "url": "https://www.jonesboroar.gov/DocumentCenter/View/235/2017-Fee-Schedule-PDF"
+        },
+        {
+          "title": "Inspections (City of Jonesboro)",
+          "url": "https://www.jonesboroar.gov/133/Inspections"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

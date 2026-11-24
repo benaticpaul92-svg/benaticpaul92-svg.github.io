@@ -95,6 +95,38 @@
           "url": "https://www.wallnj.gov/422/Township-Forms-Applications"
         }
       ]
+    },
+    {
+      "name": "Cherry Hill (Camden County)",
+      "kind": "township",
+      "office": "Cherry Hill Township Department of Community Development (Zoning) and Department of Code Enforcement and Inspections",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The township's pool guidance says a pool needs a zoning permit before installation, and the application must include a survey or aerial photo showing where the pool will go and its distance from the property lines and the house, the pool's length, width and depth, and the lot coverage in square feet and as a percentage of the total lot size.",
+        "Section 431.G of the Zoning Ordinance allows pools in rear or side yards only, at least 10 ft from rear and side lot lines (measured from the pool apron or deck, whichever is closer to the lot line) and 12 ft from the foundation of any principal structure, with no minimum setback for pools less than 24 in. deep or with less than 250 sq ft of surface area.",
+        "Section 431.G requires a private residential pool to be enclosed by a fence at least 4 ft high with self-locking gates that open out or are located at the top of the pool, in accordance with the Uniform Construction Code; the pool guidance says that if there is no fence, one must be applied for as part of the pool application.",
+        "The pool guidance says that if the pool and other improvements cause a net increase in impervious surface of 500 sq ft or more, a grading plan must be submitted with the construction permit."
+      ],
+      "sources": [
+        {
+          "title": "Pool Permit Guidance (Township of Cherry Hill)",
+          "url": "https://www.chnj.gov/DocumentCenter/View/10652/Pool-Permit-Guidance"
+        },
+        {
+          "title": "Zoning Ordinance Article IV: Zoning Regulations, Section 431.G (Township of Cherry Hill)",
+          "url": "https://www.chnj.gov/DocumentCenter/View/927/ARTICLE-IV-Zoning-Regulations"
+        },
+        {
+          "title": "Zoning (Township of Cherry Hill)",
+          "url": "https://www.chnj.gov/203/Zoning"
+        },
+        {
+          "title": "Building Inspection & Code (Township of Cherry Hill)",
+          "url": "https://www.chnj.gov/286/Building-Inspection-Code"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [

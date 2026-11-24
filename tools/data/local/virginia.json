@@ -16,9 +16,18 @@
         "Permit applications are made in PLUS, the county's online Planning and Land Use System."
       ],
       "sources": [
-        {"title": "Swimming Pool Codes and Permits (Fairfax County Health Department)", "url": "https://www.fairfaxcounty.gov/health/permits/pools"},
-        {"title": "Permit Library: Residential Building", "url": "https://www.fairfaxcounty.gov/landdevelopment/permit-library/residential"},
-        {"title": "When a Permit is Required", "url": "https://www.fairfaxcounty.gov/landdevelopment/when-permit-required"}
+        {
+          "title": "Swimming Pool Codes and Permits (Fairfax County Health Department)",
+          "url": "https://www.fairfaxcounty.gov/health/permits/pools"
+        },
+        {
+          "title": "Permit Library: Residential Building",
+          "url": "https://www.fairfaxcounty.gov/landdevelopment/permit-library/residential"
+        },
+        {
+          "title": "When a Permit is Required",
+          "url": "https://www.fairfaxcounty.gov/landdevelopment/when-permit-required"
+        }
       ]
     },
     {
@@ -35,7 +44,10 @@
         "Required building inspections are steel, perimeter bonding and final; applications and inspection scheduling are in LandMARC."
       ],
       "sources": [
-        {"title": "Pool Permits (Loudoun County)", "url": "https://www.loudoun.gov/5382/Pools"}
+        {
+          "title": "Pool Permits (Loudoun County)",
+          "url": "https://www.loudoun.gov/5382/Pools"
+        }
       ]
     },
     {
@@ -51,8 +63,14 @@
         "The city enforces the Virginia Construction, Residential and Property Maintenance Codes for new pools and barriers."
       ],
       "sources": [
-        {"title": "Residential Building Permits (Virginia Beach)", "url": "https://planning.virginiabeach.gov/permits/building/residential-building-permits"},
-        {"title": "Swimming Pool Safety (Virginia Beach Housing and Neighborhood Preservation)", "url": "https://housing.virginiabeach.gov/code-enforcement/swimming-pool-safety"}
+        {
+          "title": "Residential Building Permits (Virginia Beach)",
+          "url": "https://planning.virginiabeach.gov/permits/building/residential-building-permits"
+        },
+        {
+          "title": "Swimming Pool Safety (Virginia Beach Housing and Neighborhood Preservation)",
+          "url": "https://housing.virginiabeach.gov/code-enforcement/swimming-pool-safety"
+        }
       ]
     },
     {
@@ -68,8 +86,39 @@
         "The pool, barrier, electrical and (if gas-heated) gas work are permitted separately, and the guide tells applicants to check setbacks and easements with the Planning Department."
       ],
       "sources": [
-        {"title": "Requirements for Outdoor Residential Swimming Pools (Chesterfield County, Dec 2021)", "url": "https://www.chesterfield.gov/DocumentCenter/View/1532/Requirements-for-Outdoor-Residential-Swimming-Pools-PDF"}
+        {
+          "title": "Requirements for Outdoor Residential Swimming Pools (Chesterfield County, Dec 2021)",
+          "url": "https://www.chesterfield.gov/DocumentCenter/View/1532/Requirements-for-Outdoor-Residential-Swimming-Pools-PDF"
+        }
       ]
+    },
+    {
+      "name": "Prince William County",
+      "kind": "county",
+      "office": "Prince William County Department of Development Services, Building Development Division",
+      "portal_name": "ePortal",
+      "portal_url": "https://egcss.pwcgov.org/SelfService#/home",
+      "notes": [
+        "The county says a building permit is required for all pools, spas and hot tubs with a surface area of more than 150 square feet or a depth of 24 inches or greater, and all pools that incorporate lighting, circulation equipment or receptacle outlets require an electrical permit.",
+        "The county says plans or plats must be approved by its Zoning Division before applying for a building permit. On a lot of three acres or less, the pool and pool equipment can be located in the rear or side yard only, and at the rear of the lot they must be at least five feet from the rear and side property lines.",
+        "The county requires a full plan review for in-ground pools, permanent spas and hot tubs, with a copy of the plans designed by a Registered Design Professional or licensed contractor per the Virginia Uniform Statewide Building Code, and says all building plans must be submitted through its ePortal system.",
+        "The county's barrier guide says the top of the pool barrier must be at least 48 inches above grade, measured on the side facing away from the pool, and pedestrian access gates must open outward away from the pool, be self-closing and have a self-latching device."
+      ],
+      "sources": [
+        {
+          "title": "Residential Pools, Spas & Hot Tubs (Prince William County Building Development Division)",
+          "url": "https://www.pwcva.gov/department/building-development-division/residential-pools-spas-hot-tubs"
+        },
+        {
+          "title": "Swimming Pools and Hot Tubs Zoning Approval (Prince William County)",
+          "url": "https://www.pwcva.gov/department/zoning-administration/swimming-pools-hot-tubs"
+        },
+        {
+          "title": "Residential Pools, Spas, and Hot Tubs Barrier and Safety Requirements (Prince William County, Version 2022_0623)",
+          "url": "https://www.pwcva.gov/assets/2021-04/005525_0.pdf"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

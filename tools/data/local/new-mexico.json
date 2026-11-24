@@ -17,10 +17,22 @@
         "The same guide (dated 2018) asks for a current architect or engineer seal on gunite pools, or an ICC-ES report for fiberglass pools."
       ],
       "sources": [
-        {"title": "Building Safety & Permits FAQs - City of Albuquerque", "url": "https://www.cabq.gov/planning/planning-faqs/building-safety-faqs"},
-        {"title": "Permits - City of Albuquerque", "url": "https://www.cabq.gov/planning/building-safety-division/permits"},
-        {"title": "ABQ-PLAN - City of Albuquerque", "url": "https://www.cabq.gov/planning/abq-plan"},
-        {"title": "Home Owner's Building Permit Guide - City of Albuquerque", "url": "https://documents.cabq.gov/planning/BuildingSafety/HOBfinal%209-5-18.pdf"}
+        {
+          "title": "Building Safety & Permits FAQs - City of Albuquerque",
+          "url": "https://www.cabq.gov/planning/planning-faqs/building-safety-faqs"
+        },
+        {
+          "title": "Permits - City of Albuquerque",
+          "url": "https://www.cabq.gov/planning/building-safety-division/permits"
+        },
+        {
+          "title": "ABQ-PLAN - City of Albuquerque",
+          "url": "https://www.cabq.gov/planning/abq-plan"
+        },
+        {
+          "title": "Home Owner's Building Permit Guide - City of Albuquerque",
+          "url": "https://documents.cabq.gov/planning/BuildingSafety/HOBfinal%209-5-18.pdf"
+        }
       ]
     },
     {
@@ -36,8 +48,14 @@
         "The packet reproduces the city fence rule: a pool deeper than 3 ft or over 5,000 gallons needs a barrier of at least 6 ft, with self-closing gates."
       ],
       "sources": [
-        {"title": "Swimming Pool Permit Packet - City of Rio Rancho", "url": "https://rrnm.gov/DocumentCenter/View/82051/Swimming-Pool-Permit"},
-        {"title": "Get a Permit - City of Rio Rancho", "url": "https://rrnm.gov/4344/Get-a-Permit"}
+        {
+          "title": "Swimming Pool Permit Packet - City of Rio Rancho",
+          "url": "https://rrnm.gov/DocumentCenter/View/82051/Swimming-Pool-Permit"
+        },
+        {
+          "title": "Get a Permit - City of Rio Rancho",
+          "url": "https://rrnm.gov/4344/Get-a-Permit"
+        }
       ]
     },
     {
@@ -52,8 +70,14 @@
         "The city lists the 2021 NM Residential Building Code and the 2012 NM Swimming Pool, Spa, and Hot Tub Code among its adopted codes."
       ],
       "sources": [
-        {"title": "Building Permits - City of Santa Fe", "url": "https://santafenm.gov/land-use/building-permits"},
-        {"title": "Adopted Construction Codes - City of Santa Fe", "url": "https://santafenm.gov/land-use/building-permits/adopted-construction-codes"}
+        {
+          "title": "Building Permits - City of Santa Fe",
+          "url": "https://santafenm.gov/land-use/building-permits"
+        },
+        {
+          "title": "Adopted Construction Codes - City of Santa Fe",
+          "url": "https://santafenm.gov/land-use/building-permits/adopted-construction-codes"
+        }
       ]
     },
     {
@@ -68,14 +92,50 @@
         "That ordinance also requires an automatic cover on each outdoor pool and a fire-marshal-approved draft hydrant for each new pool."
       ],
       "sources": [
-        {"title": "Residential Development - Santa Fe County", "url": "https://www.santafecountynm.gov/growth-management/building-development/residential-development"},
-        {"title": "Ordinance 2007-1 - Santa Fe County", "url": "https://www.santafecountynm.gov/documents/ordinances/Ordinance2007-1.pdf"}
+        {
+          "title": "Residential Development - Santa Fe County",
+          "url": "https://www.santafecountynm.gov/growth-management/building-development/residential-development"
+        },
+        {
+          "title": "Ordinance 2007-1 - Santa Fe County",
+          "url": "https://www.santafecountynm.gov/documents/ordinances/Ordinance2007-1.pdf"
+        }
       ]
+    },
+    {
+      "name": "Las Cruces (Doña Ana County)",
+      "kind": "city",
+      "office": "City of Las Cruces Community Development Department",
+      "portal_name": "City of Las Cruces Accela Citizen Portal",
+      "portal_url": "https://aca-prod.accela.com/lascruces/Default.aspx",
+      "notes": [
+        "The city's Residential Construction Process sheet lists El Paso Electric Company stamps for swimming pools and spas among the required documents, along with a site plan (for all project types) and construction plans with a work description.",
+        "The city's electrical inspection list says a swimming pool inspection will include clearances of other electrical systems, bonding of the pool shell perimeter, pool-related underground conduits and ground fault protection.",
+        "The same Residential Construction Process sheet also asks for a Wind Erosion Control Plan and, for all project types, a signed contract between the permittee and the property owner with some form of identification of ownership.",
+        "The city says building permit applications, status checks, inspection requests and payments are available online through the City of Las Cruces Accela Citizen Portal, and residential permits are processed within 0 to 3 business days."
+      ],
+      "sources": [
+        {
+          "title": "Residential Construction Process (City of Las Cruces)",
+          "url": "https://lascruces.gov/wp-content/uploads/2024/04/RESIDENTIAL-CONSTRUCTION-PROCESS-PDF_202401221247539177.pdf",
+          "as_of": "2026-08-13"
+        },
+        {
+          "title": "Electrical Inspections (City of Las Cruces)",
+          "url": "https://lascruces.gov/wp-content/uploads/2024/05/Electrical-Inspections-PDF_202003131131443704.pdf",
+          "as_of": "2026-08-13"
+        },
+        {
+          "title": "Permits, Licenses, and Registrations (City of Las Cruces)",
+          "url": "https://lascruces.gov/directories-resources/permits-licenses-and-registrations/",
+          "as_of": "2026-08-13"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Las Cruces: official site returned 403 to automated fetch, so no verified facts.",
     "Santa Fe County: could not confirm Ordinance 2007-1 has not been superseded by the later land development code, and the county's online permit system name was not stated on the page opened.",
     "Rio Rancho Click2Gov direct URL and Albuquerque current (post-2018) pool submittal checklist not confirmed; Albuquerque 2018 guide items are dated."
   ]

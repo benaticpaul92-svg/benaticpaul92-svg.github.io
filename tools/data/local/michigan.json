@@ -16,9 +16,18 @@
         "The city points applicants to its Residential Pool Guide and its zoning rules for placement."
       ],
       "sources": [
-        {"title": "Pool Permit (City of Grand Rapids)", "url": "https://www.grandrapidsmi.gov/grow-and-thrive/development-center/permits/residential-building-permits/pool-permit/"},
-        {"title": "Overview on Zoning and Permits for Home Renovation Projects", "url": "https://www.grandrapidsmi.gov/grow-and-thrive/development-center/permits/overview-on-zoning-and-permits-for-home-renovation-projects/"},
-        {"title": "Residential Building Permits (City of Grand Rapids)", "url": "https://www.grandrapidsmi.gov/grow-and-thrive/development-center/permits/residential-building-permits/"}
+        {
+          "title": "Pool Permit (City of Grand Rapids)",
+          "url": "https://www.grandrapidsmi.gov/grow-and-thrive/development-center/permits/residential-building-permits/pool-permit/"
+        },
+        {
+          "title": "Overview on Zoning and Permits for Home Renovation Projects",
+          "url": "https://www.grandrapidsmi.gov/grow-and-thrive/development-center/permits/overview-on-zoning-and-permits-for-home-renovation-projects/"
+        },
+        {
+          "title": "Residential Building Permits (City of Grand Rapids)",
+          "url": "https://www.grandrapidsmi.gov/grow-and-thrive/development-center/permits/residential-building-permits/"
+        }
       ]
     },
     {
@@ -34,8 +43,14 @@
         "Inspections listed for an in-ground pool include a building open hole inspection and a final building inspection, with electrical inspections if electric is installed."
       ],
       "sources": [
-        {"title": "Pool Permit Packet and Pool & Hot Tub Guide (Sterling Heights)", "url": "https://www.sterlingheights.gov/DocumentCenter/View/11118/Pool-Packet"},
-        {"title": "Online Permits (Sterling Heights)", "url": "https://www.sterlingheights.gov/1922/Online-Permits"}
+        {
+          "title": "Pool Permit Packet and Pool & Hot Tub Guide (Sterling Heights)",
+          "url": "https://www.sterlingheights.gov/DocumentCenter/View/11118/Pool-Packet"
+        },
+        {
+          "title": "Online Permits (Sterling Heights)",
+          "url": "https://www.sterlingheights.gov/1922/Online-Permits"
+        }
       ]
     },
     {
@@ -51,8 +66,14 @@
         "The same section says pools must be installed consistent with the Michigan Construction Codes and have a working water filtration device."
       ],
       "sources": [
-        {"title": "BSEED Frequently Asked Questions", "url": "https://detroitmi.gov/departments/buildings-safety-engineering-and-environmental-department-bseed/buildings-safety-engineering-and-environmental-department-frequently-asked-questions"},
-        {"title": "Detroit Property Maintenance Code, Chapter 9 (Sec. 9-1-109 Swimming pools)", "url": "https://detroitmi.gov/Portals/0/docs/BSEE/PropMaintenanceChapter9.pdf"}
+        {
+          "title": "BSEED Frequently Asked Questions",
+          "url": "https://detroitmi.gov/departments/buildings-safety-engineering-and-environmental-department-bseed/buildings-safety-engineering-and-environmental-department-frequently-asked-questions"
+        },
+        {
+          "title": "Detroit Property Maintenance Code, Chapter 9 (Sec. 9-1-109 Swimming pools)",
+          "url": "https://detroitmi.gov/Portals/0/docs/BSEE/PropMaintenanceChapter9.pdf"
+        }
       ]
     },
     {
@@ -67,16 +88,57 @@
         "The city's accessory building handout lists pools among accessory structures. Zoning compliance permits for such structures must be submitted online in STREAM."
       ],
       "sources": [
-        {"title": "Applications (Ann Arbor Building, Rental and Inspection Services)", "url": "https://www.a2gov.org/building-rental-and-inspection-services/construction-and-building/permits/applications/"},
-        {"title": "Permits (Ann Arbor Building, Rental and Inspection Services)", "url": "https://www.a2gov.org/building-rental-and-inspection-services/construction-and-building/permits/"},
-        {"title": "Zoning Compliance Permits (Ann Arbor)", "url": "https://www.a2gov.org/planning/general-zoning-information/zoning-compliance-permits/"},
-        {"title": "Accessory Buildings handout (Ann Arbor Planning)", "url": "https://www.a2gov.org/media/zk3jhggm/accessory-buildings-handout-41817.pdf"}
+        {
+          "title": "Applications (Ann Arbor Building, Rental and Inspection Services)",
+          "url": "https://www.a2gov.org/building-rental-and-inspection-services/construction-and-building/permits/applications/"
+        },
+        {
+          "title": "Permits (Ann Arbor Building, Rental and Inspection Services)",
+          "url": "https://www.a2gov.org/building-rental-and-inspection-services/construction-and-building/permits/"
+        },
+        {
+          "title": "Zoning Compliance Permits (Ann Arbor)",
+          "url": "https://www.a2gov.org/planning/general-zoning-information/zoning-compliance-permits/"
+        },
+        {
+          "title": "Accessory Buildings handout (Ann Arbor Planning)",
+          "url": "https://www.a2gov.org/media/zk3jhggm/accessory-buildings-handout-41817.pdf"
+        }
       ]
+    },
+    {
+      "name": "Rochester Hills / Oakland County",
+      "kind": "city",
+      "office": "City of Rochester Hills Building Department",
+      "portal_name": "BS&A Online",
+      "portal_url": "https://bsaonline.com/?uid=385",
+      "notes": [
+        "The city's pool guidebook says a building permit is required for a residential pool, hot tub or spa that has any one of these: a depth intended for swimming or bathing of more than 24 inches, a permanent water-recirculation system, or construction that involves structural materials. The construction documents are reviewed against the Michigan Residential Code and the International Swimming Pool and Spa Code.",
+        "The guidebook says pools, hot tubs and spas must be at least 5 feet from the side and rear property lines and 10 feet from the home, measured from the water's edge, and must not be located in any front yard.",
+        "The guidebook says the pool fence or barrier must be 48 inches above grade, measured on the side facing away from the pool, and pedestrian gates must open outward away from the pool and be self-closing with a self-latching device. A pool, hot tub or spa must not be filled with water until the Michigan Residential Code barrier requirements are completed.",
+        "The city's pool permit application guide lists the construction drawings for the pool, a site plan signed and sealed by a State of Michigan licensed design professional, and the completed City of Rochester Hills Pool Information Form as required attachments, and says mechanical, electrical and plumbing permits can be applied for online after the building permit is issued."
+      ],
+      "sources": [
+        {
+          "title": "A Guide to Residential Swimming Pool, Hot Tub and Spa Construction (City of Rochester Hills, September 15, 2026)",
+          "url": "https://cms9files.revize.com/rochesterhillsmi/Building/Guidebooks/PrivatePool.pdf"
+        },
+        {
+          "title": "Residential Swimming Pool, Hot Tub and Spa Permit Application Guide (City of Rochester Hills)",
+          "url": "https://cms9files.revize.com/rochesterhillsmi/Building/ResidentialForms/SwimmingPool.pdf"
+        },
+        {
+          "title": "Apply for a Permit Online (City of Rochester Hills)",
+          "url": "https://www.rochesterhills.org/departments/building/apply_for_permit_online.php",
+          "as_of": "2026-08-14"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Troy and Rochester Hills (Oakland County) pool pages and guidebook returned 403 to automated fetches; skipped, so Oakland County has no entry.",
+    "Troy pool pages returned 403 to automated fetches; skipped. Rochester Hills (Oakland County) was added on 25 Nov 2026.",
     "Ann Arbor: no pool-specific residential checklist, setback or barrier rules found.",
     "Detroit: no residential pool permit checklist found on the pages opened.",
     "Grand Rapids: the city's Residential Pool Guide PDF excerpts an older Michigan Residential Code edition, so no code edition was recorded."

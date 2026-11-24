@@ -16,7 +16,10 @@
         "The residential checklist asks the plans to show the fence enclosure's location, type and height, with a 4 ft minimum height and self-closing, self-latching gates."
       ],
       "sources": [
-        {"title": "Swimming Pool Submittal Requirements (City of Oklahoma City)", "url": "https://www.okc.gov/files/assets/city/v/1/development-services/documents/swimming-pool-1.pdf"}
+        {
+          "title": "Swimming Pool Submittal Requirements (City of Oklahoma City)",
+          "url": "https://www.okc.gov/files/assets/city/v/1/development-services/documents/swimming-pool-1.pdf"
+        }
       ]
     },
     {
@@ -32,8 +35,14 @@
         "The guidebook exempts prefabricated pools less than two feet deep from permit requirements, and its site plan affidavit is meant to keep new structures such as pools off easements and rights-of-way."
       ],
       "sources": [
-        {"title": "Residential Building Guidelines / Site Plan Guidebook, January 2025 (City of Tulsa)", "url": "https://www.cityoftulsa.org/media/26898/residential-site-plan-guidebook-january-2025.pdf"},
-        {"title": "Citizen Self Service Portal FAQ (City of Tulsa)", "url": "https://www.cityoftulsa.org/government/departments/development-services/permit-center/self-service-portal-faq/"}
+        {
+          "title": "Residential Building Guidelines / Site Plan Guidebook, January 2025 (City of Tulsa)",
+          "url": "https://www.cityoftulsa.org/media/26898/residential-site-plan-guidebook-january-2025.pdf"
+        },
+        {
+          "title": "Citizen Self Service Portal FAQ (City of Tulsa)",
+          "url": "https://www.cityoftulsa.org/government/departments/development-services/permit-center/self-service-portal-faq/"
+        }
       ]
     },
     {
@@ -49,8 +58,14 @@
         "The homeowner acknowledgment says a residential pool cannot be occupied until final inspections are done and a Certificate of Occupancy is issued."
       ],
       "sources": [
-        {"title": "Miscellaneous Permits (City of Edmond)", "url": "https://www.edmondok.gov/2065/Miscellaneous-Permits"},
-        {"title": "Swimming Pool Barrier (City of Edmond)", "url": "https://edmondok.gov/DocumentCenter/View/150/swimming_pool_barrier"}
+        {
+          "title": "Miscellaneous Permits (City of Edmond)",
+          "url": "https://www.edmondok.gov/2065/Miscellaneous-Permits"
+        },
+        {
+          "title": "Swimming Pool Barrier (City of Edmond)",
+          "url": "https://edmondok.gov/DocumentCenter/View/150/swimming_pool_barrier"
+        }
       ]
     },
     {
@@ -67,14 +82,48 @@
         "Decks that support spas or hot tubs must be designed by an engineer, and a bonding inspection is required before concrete is poured."
       ],
       "sources": [
-        {"title": "Informational Guide: Residential Swimming Pools, Hot Tubs and Spas (City of Stillwater)", "url": "https://stillwaterok.gov/DocumentCenter/View/526/Residential-Swimming-Pools-Hot-Tub-and-Spa-Informational-Guide-PDF"},
-        {"title": "Residential FAQs for Development Services (City of Stillwater)", "url": "https://stillwaterok.gov/FAQ.aspx?QID=202"}
+        {
+          "title": "Informational Guide: Residential Swimming Pools, Hot Tubs and Spas (City of Stillwater)",
+          "url": "https://stillwaterok.gov/DocumentCenter/View/526/Residential-Swimming-Pools-Hot-Tub-and-Spa-Informational-Guide-PDF"
+        },
+        {
+          "title": "Residential FAQs for Development Services (City of Stillwater)",
+          "url": "https://stillwaterok.gov/FAQ.aspx?QID=202"
+        }
       ]
+    },
+    {
+      "name": "Norman (Cleveland County)",
+      "kind": "city",
+      "office": "City of Norman Development Services Division, Building Permits and Inspections",
+      "portal_name": "Self-Service Portal",
+      "portal_url": "https://devnorman.normanok.gov/Portal/",
+      "notes": [
+        "The city's Swimming Pool FAQ says to create a portal account on the city website to apply, and lists a site plan as a required submittal; the site plan should show the pool style (in-ground or aboveground), the square footage of the pool and of any paving or impervious surface in the project, the pool depth and distance to the exterior wall of the house, and the distance of any new concrete to each property line.",
+        "The FAQ says a pool on a lot less than 2 acres must be completely enclosed by a fence or barrier not less than 4 feet in height or by a screen enclosure, with openings that do not permit the passage of a 4 inch diameter sphere and a self-latching gate; lots of more than 2 acres are exempt, and a pool with a power safety cover complying with ASTM F 1346 does not need an enclosure.",
+        "The FAQ says that if electricity or heat is installed with the pool, an electrical and/or mechanical permit will also be required, which a licensed contractor can obtain after the pool permit is approved; most pools need at least four inspections to close out the permit with a Certificate of Completion: pool shell bond, pool deck bond and electrical final (scheduled by the electrical contractor) and pool final (scheduled by the pool contractor).",
+        "The city's Building Codes page says the codes adopted effective June 22, 2023 include the 2018 International Residential Code and the 2020 National Electrical Code (NFPA 70), each including state and local amendments."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool FAQs (City of Norman)",
+          "url": "https://www.normanok.gov/sites/default/files/documents/2026-04/260420_SPOL%20FAQ%20B_G%28002%29_0.pdf"
+        },
+        {
+          "title": "Building Codes (City of Norman)",
+          "url": "https://www.normanok.gov/your-government/departments/planning-and-community-development/development-services/building-codes"
+        },
+        {
+          "title": "Supporting Documents & FAQ's (City of Norman)",
+          "url": "https://www.normanok.gov/your-government/departments/planning-and-community-development/development-services/supporting"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Norman, Broken Arrow, Moore and Oklahoma County official pool pages returned 403 or bot checks to curl/WebFetch, so none were used; Stillwater was used as the fourth jurisdiction.",
+    "Broken Arrow, Moore and Oklahoma County official pool pages returned 403 or bot checks to curl/WebFetch, so none were used; Stillwater was used as the fourth jurisdiction.",
     "Edmond's online portal name and the code edition for Oklahoma City and Tulsa were not confirmed from an opened official page.",
     "OKC's checklist names www.okc.gov/access for online submittal, but that page was not opened, so no portal name or URL is given.",
     "The statewide OAC 748:20-6 barrier rule on the existing state page was not re-verified here."

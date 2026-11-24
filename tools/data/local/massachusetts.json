@@ -16,9 +16,18 @@
         "The affidavit states the pool must be at least 4 feet from every lot line and fenced at least 6 feet high with a gate locked from the outside."
       ],
       "sources": [
-        {"title": "How to get a use of premises permit (boston.gov)", "url": "https://www.boston.gov/departments/inspectional-services/how-get-use-premises-permit"},
-        {"title": "Swimming Pool Affidavit (ISD)", "url": "https://www.boston.gov/sites/default/files/file/2020/07/Swimming%20Pool%20Affidavit.pdf"},
-        {"title": "Construction and Development (boston.gov)", "url": "https://www.boston.gov/boston-permitting/construction-and-development"}
+        {
+          "title": "How to get a use of premises permit (boston.gov)",
+          "url": "https://www.boston.gov/departments/inspectional-services/how-get-use-premises-permit"
+        },
+        {
+          "title": "Swimming Pool Affidavit (ISD)",
+          "url": "https://www.boston.gov/sites/default/files/file/2020/07/Swimming%20Pool%20Affidavit.pdf"
+        },
+        {
+          "title": "Construction and Development (boston.gov)",
+          "url": "https://www.boston.gov/boston-permitting/construction-and-development"
+        }
       ]
     },
     {
@@ -34,8 +43,14 @@
         "Pools may not be used until the Building Department issues an occupancy permit; the guidelines cite 780 CMR and the 2009 IRC Appendix G, which is older than the 2021 ISPSC that 780 CMR now adopts, so the edition should be confirmed with the department."
       ],
       "sources": [
-        {"title": "Application for Permit to Install a Swimming Pool (with Swimming Pool Guidelines)", "url": "https://www.framinghamma.gov/DocumentCenter/View/12083/Pool-Permit-Application"},
-        {"title": "Swimming Pools (Inspectional Services Division)", "url": "https://framinghamma.gov/DocumentCenter/View/4201/Swimming-pools-press-release"}
+        {
+          "title": "Application for Permit to Install a Swimming Pool (with Swimming Pool Guidelines)",
+          "url": "https://www.framinghamma.gov/DocumentCenter/View/12083/Pool-Permit-Application"
+        },
+        {
+          "title": "Swimming Pools (Inspectional Services Division)",
+          "url": "https://framinghamma.gov/DocumentCenter/View/4201/Swimming-pools-press-release"
+        }
       ]
     },
     {
@@ -51,8 +66,14 @@
         "The wiring application must be filled out by a licensed electrician, and the building application must describe the pool type, size and fence."
       ],
       "sources": [
-        {"title": "Procedures to Apply for Permits to Erect a Residential Swimming Pool", "url": "https://plymouth-ma.gov/DocumentCenter/View/1042/Residential-Pool-Packet-PDF"},
-        {"title": "Permit & License Applications (Plymouth)", "url": "https://www.plymouth-ma.gov/525/Permit-License-Applications"}
+        {
+          "title": "Procedures to Apply for Permits to Erect a Residential Swimming Pool",
+          "url": "https://plymouth-ma.gov/DocumentCenter/View/1042/Residential-Pool-Packet-PDF"
+        },
+        {
+          "title": "Permit & License Applications (Plymouth)",
+          "url": "https://www.plymouth-ma.gov/525/Permit-License-Applications"
+        }
       ]
     },
     {
@@ -67,15 +88,54 @@
         "Worcester's property owner page lists pools among the projects homeowners may need permits for."
       ],
       "sources": [
-        {"title": "Inspectional Services (Worcester)", "url": "https://www.worcesterma.gov/inspections"},
-        {"title": "Information for Property Owners (Worcester)", "url": "https://www.worcesterma.gov/inspections/property-owners"},
-        {"title": "Department of Inspectional Services Schedule of Fees", "url": "https://www.worcesterma.gov/inspections/document-center/schedule-of-fees.pdf"}
+        {
+          "title": "Inspectional Services (Worcester)",
+          "url": "https://www.worcesterma.gov/inspections"
+        },
+        {
+          "title": "Information for Property Owners (Worcester)",
+          "url": "https://www.worcesterma.gov/inspections/property-owners"
+        },
+        {
+          "title": "Department of Inspectional Services Schedule of Fees",
+          "url": "https://www.worcesterma.gov/inspections/document-center/schedule-of-fees.pdf"
+        }
       ]
+    },
+    {
+      "name": "Newton / Middlesex County",
+      "kind": "city",
+      "office": "City of Newton Inspectional Services Department",
+      "portal_name": "OpenGov/Viewpoint Cloud online portal",
+      "portal_url": "https://newtonma.viewpointcloud.com/",
+      "notes": [
+        "Under Section 5-19 of the Newton Ordinances, work to build, install or enlarge a private swimming pool (one used with a single-family residence) may not start until the Commissioner of Inspectional Services has issued a building permit, and the application must include whatever plans and specifications the commissioner may require.",
+        "Section 5-19, which does not apply to pools less than 24 inches deep or with a surface area of less than 250 square feet unless they are permanently equipped with a water recirculating system or involve structural materials, says every outdoor private swimming pool must be enclosed at all times, whether or not filled with water, by a fence or wall not less than five feet in height, with no openings, holes or gaps larger than four inches in any dimension except for doors and gates.",
+        "The same section says gates and doors through the pool enclosure must be at least as high as the fence or wall, have a self-closing and self-catching device not more than one foot below the top of the fence or wall, and be kept locked when the pool enclosure is not in use, though a house door that forms part of the enclosure does not need the device.",
+        "Section 5-19 exempts spas and hot tubs no more than 48 inches deep, with no exterior dimension greater than 8 feet and a water circulating system, from the fence and self-closing gate rules if they have a locking safety cover meeting the ASTM F-1346-91 standard that is kept attached and locked when the spa is not in use or is unattended."
+      ],
+      "sources": [
+        {
+          "title": "Chapter 5: Public Buildings and Inspectional Services, Sec. 5-19 (Newton Ordinances, updated July 1, 2024)",
+          "url": "https://www.newtonma.gov/home/showpublisheddocument/29771/638617521702600000",
+          "as_of": "2026-07-11"
+        },
+        {
+          "title": "Forms & Resources (Newton Inspectional Services Department)",
+          "url": "https://www.newtonma.gov/government/inspectional-services/applications-forms-instructions",
+          "as_of": "2026-10-06"
+        },
+        {
+          "title": "Codes/Ordinances (Newton Inspectional Services Department)",
+          "url": "https://www.newtonma.gov/government/inspectional-services/code-ordinances",
+          "as_of": "2026-08-12"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Newton (Middlesex) pages returned 403 to automated fetches; skipped.",
     "Worcester: no pool-specific residential requirements page found and the building permit portal name/URL was not confirmed.",
     "Plymouth and Framingham: no online building permit portal confirmed on the pages opened.",
     "Boston: no residential pool plan checklist found beyond the Use of Premises page and the pool affidavit; ISD's pool plan review form is for public and semi-public pools."

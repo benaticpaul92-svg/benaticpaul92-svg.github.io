@@ -15,8 +15,14 @@
         "Depending on the project, approval may also be needed from Planning/Zoning, Engineering, Health or the Fire Marshal."
       ],
       "sources": [
-        {"title": "Building Permits - West Hartford", "url": "https://www.westhartfordct.gov/town-departments/building/permits"},
-        {"title": "Building FAQs - West Hartford", "url": "https://www.westhartfordct.gov/town-departments/building/faqs"}
+        {
+          "title": "Building Permits - West Hartford",
+          "url": "https://www.westhartfordct.gov/town-departments/building/permits"
+        },
+        {
+          "title": "Building FAQs - West Hartford",
+          "url": "https://www.westhartfordct.gov/town-departments/building/faqs"
+        }
       ]
     },
     {
@@ -32,7 +38,10 @@
         "The page asks for three paper copies of plans, delivered in person or by mail; no online portal is named."
       ],
       "sources": [
-        {"title": "Apply for a Zoning Permit - Norwalk", "url": "https://norwalkct.gov/2638/Apply-for-a-Zoning-Permit"}
+        {
+          "title": "Apply for a Zoning Permit - Norwalk",
+          "url": "https://norwalkct.gov/2638/Apply-for-a-Zoning-Permit"
+        }
       ]
     },
     {
@@ -47,9 +56,18 @@
         "Its online-permitting document list includes a Pool Water Alarm Affidavit and a Swimming Pool Fence Agreement."
       ],
       "sources": [
-        {"title": "Building Department - Darien", "url": "https://www.darienct.gov/157/Building-Department"},
-        {"title": "Work Requiring a Permit - Darien", "url": "https://www.darienct.gov/1501/Work-Requiring-a-Permit"},
-        {"title": "Frequently Used Documents for Online Permitting - Darien", "url": "https://www.darienct.gov/1506/Frequently-Used-Documents-for-Online-Per"}
+        {
+          "title": "Building Department - Darien",
+          "url": "https://www.darienct.gov/157/Building-Department"
+        },
+        {
+          "title": "Work Requiring a Permit - Darien",
+          "url": "https://www.darienct.gov/1501/Work-Requiring-a-Permit"
+        },
+        {
+          "title": "Frequently Used Documents for Online Permitting - Darien",
+          "url": "https://www.darienct.gov/1506/Frequently-Used-Documents-for-Online-Per"
+        }
       ]
     },
     {
@@ -63,13 +81,48 @@
         "Listed steps include site plan approval through Planning and Zoning and Inland Wetlands where applicable, a zoning compliance application, and a copy of the contractor's license and insurance certificate."
       ],
       "sources": [
-        {"title": "Building Department - Shelton", "url": "https://www.shelton-ct.gov/p/building-department"}
+        {
+          "title": "Building Department - Shelton",
+          "url": "https://www.shelton-ct.gov/p/building-department"
+        }
       ]
+    },
+    {
+      "name": "Greenwich (Fairfield County)",
+      "kind": "town",
+      "office": "Greenwich Department of Public Works, Building Inspection Division",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The town says a new in-ground, above-ground or on-ground swimming pool, spa, hot tub or plunge pool on a 1-2 family home or townhouse needs a Building Permit for Swimming Pool, Spa, or Hot Tub before work begins, and the required safety barrier is included in that permit.",
+        "The town's submittal list asks for two sets of construction plans; for in-ground swimming pools or spas, these include structural plans certified by a CT P.E. and a pool piping diagram.",
+        "The town's pool permit application cites the 2021 ISPSC and the 2022 CT State Building Code, and asks whether the pool barrier will be a fence or an automatic pool safety cover meeting ASTM F1346 (cover specs go with the application). In its affidavit, the permit holder and owner accept responsibility for a temporary safety barrier under Section 305.1.1 of the 2021 ISPSC before excavation.",
+        "The town says the pool permit process starts at the Building Inspection Division counter at Town Hall, where applicants get a Permit Application Sign-off Sheet and Group Number. Depending on the work, sign-offs may be needed from the Health Department, Zoning Enforcement, Wetlands Agency, Sewer Division and Tax Collector's Office.",
+        "The town's permit process page says only re-roofing, re-siding and replacement windows for 1-2 family dwellings can be filed by email; all other building permits must be filed in person."
+      ],
+      "sources": [
+        {
+          "title": "Residential Private Pools (Town of Greenwich)",
+          "url": "https://www.greenwichct.gov/2912/Residential-Private-Pools",
+          "as_of": "2025-06-22"
+        },
+        {
+          "title": "Building Permit Application: Swimming Pool, Spa or Hot Tub and Required Safety Barrier (Town of Greenwich)",
+          "url": "https://www.greenwichct.gov/DocumentCenter/View/7487/Swimming_Pool_Spa_or_Hot_Tub_Application_Form-Rev2023-PDF",
+          "as_of": "2026-02-08"
+        },
+        {
+          "title": "Permit Application Process (Town of Greenwich)",
+          "url": "https://www.greenwichct.gov/1339/Permit-Application-Process",
+          "as_of": "2026-10-06"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Greenwich, Stamford, Westport, Fairfield, New Haven and Hartford sites returned 403 to automated fetches; nothing verified for them.",
+    "Stamford, Westport, Fairfield, New Haven and Hartford sites returned 403 to automated fetches; nothing verified for them.",
     "None of the opened pages state whether residential pool plans must be engineer-sealed or give pool barrier dimensions.",
     "Web search budget ran out, so Danbury and Trumbull pool pages could not be located.",
     "Shelton's online permitting page was not opened, so no portal is listed."

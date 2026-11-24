@@ -80,11 +80,42 @@
           "url": "https://www.auroragov.org/business_services/building_division/permits"
         }
       ]
+    },
+    {
+      "name": "Colorado Springs (El Paso County)",
+      "kind": "city",
+      "office": "Pikes Peak Regional Building Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The Pikes Peak Regional Building Department's pool plan review handout says both onground portable (temporary) and permanent inground pools at a home require permits, but its Work Exempt From Permits page, citing Section 105.2 of the Pikes Peak Regional Building Code, lists above-ground swimming pools accessory to one- and two-family dwellings and R-3 occupancies that are less than 24 inches deep and not more than 5,000 gallons.",
+        "For a residential pool, the handout asks for a site plan showing the pool's location on the lot, dimensions to lot lines and adjacent structures, and all pool barrier requirements (the fence location or an automatic cover statement).",
+        "The same handout asks for a structural plan stamped by a Colorado licensed design professional, or an Evaluation Report from a nationally recognized testing laboratory for a prefabricated pool, and says onground portable pools do not need the structural plan.",
+        "The department says that, effective June 30, 2026, its code is the 2023 Pikes Peak Regional Building Code, 2nd Printing, which adopts by reference the 2021 ISPSC for swimming pools, the 2021 IRC for residential buildings and the 2023 NEC for electrical work."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool Plan Review (Pikes Peak Regional Building Department)",
+          "url": "https://www.pprbd.org/File/ByAlias/ResPool",
+          "as_of": "2026-05-10"
+        },
+        {
+          "title": "Work Exempt From Permits (Pikes Peak Regional Building Department)",
+          "url": "https://www.pprbd.org/Permit/PermitNotRequired",
+          "as_of": "2026-05-10"
+        },
+        {
+          "title": "Code Information (Pikes Peak Regional Building Department)",
+          "url": "https://www.pprbd.org/Information/CodeChanges",
+          "as_of": "2026-07-19"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Pikes Peak Regional Building Department (pprbd.org) refused connections; no pool facts verified.",
+    "Pikes Peak Regional Building Department (pprbd.org) refused direct connections; the Colorado Springs entry was checked on Internet Archive copies on 25 Nov 2026. Whether section 105.2 is unchanged in the 2023 PPRBC 2nd Printing (effective June 30, 2026) is not confirmed.",
     "Aurora's own pool permit checklist was not found on auroragov.org; only code editions and the online-permit note are verified, and the portal page was not opened.",
     "Denver's page does not say whether residential pool plans must be engineer-sealed, nor the barrier rules or code edition.",
     "Adams County, Douglas County, Arapahoe County and Boulder not verified (Adams PDFs returned 403/404)."

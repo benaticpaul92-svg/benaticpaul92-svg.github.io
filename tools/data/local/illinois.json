@@ -16,8 +16,14 @@
         "Projects with several features, such as a pool, patio and fence, need a permit for each feature; applicants file for the main feature and staff enter the others."
       ],
       "sources": [
-        {"title": "Swimming Pool Permit - City of Naperville", "url": "https://www.naperville.il.us/482/Swimming-Pool-Permit"},
-        {"title": "Building Permits - City of Naperville", "url": "https://www.naperville.il.us/181/Building-Permits"}
+        {
+          "title": "Swimming Pool Permit - City of Naperville",
+          "url": "https://www.naperville.il.us/482/Swimming-Pool-Permit"
+        },
+        {
+          "title": "Building Permits - City of Naperville",
+          "url": "https://www.naperville.il.us/181/Building-Permits"
+        }
       ]
     },
     {
@@ -33,8 +39,14 @@
         "The page gives minimum placement distances: 3 ft. from the property line, 6 ft. from the house, 5 ft. from underground power lines and 10 ft. from overhead lines, and no pools in front yards or required corner side yards."
       ],
       "sources": [
-        {"title": "Pool Permit - City of Joliet", "url": "https://www.joliet.gov/Government/Departments/Community-Development/Planning-Zoning/Residential-Building-Permit-Information/Pool-Permit"},
-        {"title": "Residential Building Permit Information - City of Joliet", "url": "https://www.joliet.gov/Government/Departments/Community-Development/Building-Inspections/Residential-Building-Permit-Information"}
+        {
+          "title": "Pool Permit - City of Joliet",
+          "url": "https://www.joliet.gov/Government/Departments/Community-Development/Planning-Zoning/Residential-Building-Permit-Information/Pool-Permit"
+        },
+        {
+          "title": "Residential Building Permit Information - City of Joliet",
+          "url": "https://www.joliet.gov/Government/Departments/Community-Development/Building-Inspections/Residential-Building-Permit-Information"
+        }
       ]
     },
     {
@@ -50,8 +62,14 @@
         "The owner's safety affidavit states the pool must be set outside all easements and 5 feet from property lines or fences, or 10 feet from alleys and exterior side lines on corner lots."
       ],
       "sources": [
-        {"title": "Permit List - City of Aurora", "url": "https://www.aurora.il.us/Property-Business/Permits/Permit-List"},
-        {"title": "Pools application (commercial or residential) - City of Aurora Division of Building and Permits", "url": "https://www.aurora.il.us/files/sharedassets/mainsite/v/1/development-services/documents/permits/residentialcommercial/2026-app-updates/pools.pdf"}
+        {
+          "title": "Permit List - City of Aurora",
+          "url": "https://www.aurora.il.us/Property-Business/Permits/Permit-List"
+        },
+        {
+          "title": "Pools application (commercial or residential) - City of Aurora Division of Building and Permits",
+          "url": "https://www.aurora.il.us/files/sharedassets/mainsite/v/1/development-services/documents/permits/residentialcommercial/2026-app-updates/pools.pdf"
+        }
       ]
     },
     {
@@ -66,9 +84,46 @@
         "The city's pool permit application says an electrical permit is required before or with the pool permit, and the applicant is responsible for barrier requirements."
       ],
       "sources": [
-        {"title": "Building Safety - City of Peoria", "url": "https://www.peoriagov.org/168/Building-Safety"},
-        {"title": "Application for Pool Permit - City of Peoria", "url": "https://www.peoriagov.org/DocumentCenter/View/261/Pool-Permit-PDF"}
+        {
+          "title": "Building Safety - City of Peoria",
+          "url": "https://www.peoriagov.org/168/Building-Safety"
+        },
+        {
+          "title": "Application for Pool Permit - City of Peoria",
+          "url": "https://www.peoriagov.org/DocumentCenter/View/261/Pool-Permit-PDF"
+        }
       ]
+    },
+    {
+      "name": "Orland Park (Cook County)",
+      "kind": "village",
+      "office": "Village of Orland Park Development Services",
+      "portal_name": "Civic Access portal",
+      "portal_url": "https://tylerss.orlandpark.org/energov_prod/selfservice#/home",
+      "notes": [
+        "The village's In-Ground Pools page says a permit is required for installation of all in-ground swimming pools, a fence around the pool or yard is required with a minimum height of 5 feet, and three feet of hardscape area is required around each side of the pool.",
+        "To apply, the village's In-Ground Pools page lists building, zoning, electric, plumbing and fence permit applications, a signed copy of the In-Ground Pool Rules and Requirements, lot coverage calculations showing lot size and impervious surface, and a grading plan showing existing and proposed grading changes, which must be signed by a registered land surveyor or professional engineer.",
+        "Under Section 6-310 (H), Swimming Pool Barrier/Fences, of the village's Land Development Code, gates to pool fences must be self-closing and self-latching, with latches placed 4 feet above grade or otherwise made inaccessible from the outside to small children, and a permanent fence must be installed within 21 days after the pool is filled with water.",
+        "The village's In-Ground Pools page lists the required inspections as concrete pre-pour/bonding, rough (framing, electrical, plumbing) and final (framing, electrical, plumbing), and says inspection requests are not taken over the phone."
+      ],
+      "sources": [
+        {
+          "title": "In-Ground Pools (Village of Orland Park)",
+          "url": "https://www.orlandpark.org/departments/development-services/permits-licenses-inspections/permits/in-ground-pools",
+          "as_of": "2026-01-23"
+        },
+        {
+          "title": "Section 6-310 Fences, Land Development Code (Village of Orland Park)",
+          "url": "https://codelibrary.amlegal.com/codes/orlandpark/latest/orlandpark_il_ldc/0-0-0-16936",
+          "as_of": "2025-02-09"
+        },
+        {
+          "title": "Permits (Village of Orland Park)",
+          "url": "https://www.orlandpark.org/departments/development-services/permits-licenses-inspections/permits",
+          "as_of": "2026-02-06"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
