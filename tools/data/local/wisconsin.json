@@ -83,11 +83,41 @@
           "url": "https://www.ci.brookfield.wi.us/290/Permit-Applications"
         }
       ]
+    },
+    {
+      "name": "Milwaukee (Milwaukee County)",
+      "kind": "city",
+      "office": "City of Milwaukee Department of Neighborhood Services, Environmental Section",
+      "portal_name": "Land Management System (LMS)",
+      "portal_url": "https://aca-prod.accela.com/Milwaukee/Default.aspx",
+      "notes": [
+        "The city's Department of Neighborhood Services lists backyard pools under Chapter 75-20 and says any pool that is at least 15 ft x 3 ft in size or contains 3,965 gallons requires a private pool construction permit.",
+        "The city's pool permit packet asks for an application sheet and an information sheet with a sketch of the pool location and pool deck, including distances from overhead and underground electrical wires, the lot line, house, garage, fences, trees and other readily climbable objects.",
+        "The city's pool guidelines say an in-ground pool must be enclosed by an approved barrier at least 48 inches high, gates to the pool area must be self-closing and self-latching, and the pool must be located at least 6 feet from the lot line.",
+        "The city's pool instruction sheet says to hire a licensed electrical contractor to obtain the required electrical permits, that new pool permits will not be issued until an electrical permit has been obtained, and that pool deck construction requires a separate permit from the Permit Center."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool Information (City of Milwaukee Department of Neighborhood Services, 03/18/25)",
+          "url": "https://city.milwaukee.gov/poolinfowithapp.pdf",
+          "as_of": "2025-11-15"
+        },
+        {
+          "title": "Environmental Inspection Section (City of Milwaukee Department of Neighborhood Services)",
+          "url": "https://city.milwaukee.gov/DNS/Inspections_Sections/Env",
+          "as_of": "2025-11-01"
+        },
+        {
+          "title": "Permits (City of Milwaukee Department of Neighborhood Services)",
+          "url": "https://city.milwaukee.gov/dns/permits",
+          "as_of": "2026-10-13"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Milwaukee: city.milwaukee.gov returned 403 to automated fetch, so Milwaukee is not included.",
     "Green Bay: greenbaywi.gov returned 404/429/522 errors, so Green Bay is not included.",
     "Madison portal name not confirmed on an opened page.",
     "Racine's older Swimming Pool Information sheet (rev. 2009) was not used because it may be out of date.",

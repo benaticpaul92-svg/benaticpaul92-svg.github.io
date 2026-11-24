@@ -115,6 +115,34 @@
         }
       ],
       "checked": "2026-11-18"
+    },
+    {
+      "name": "Lehi (Utah County)",
+      "kind": "city",
+      "office": "Lehi City Building and Inspections Department",
+      "portal_name": "Building Permit Submittal Portal",
+      "portal_url": "https://lehibuilding.portal.iworq.net/portalhome/lehibuilding",
+      "notes": [
+        "Under Section 26.100 of the Lehi City Development Code, swimming pools must be set back at least four feet from side and rear property lines and must not be located within any required utility easements.",
+        "Section 12.020(E)(2) of the code lets underground structures such as swimming pools sit in a required rear or side yard if they are no more than two feet above adjacent grade and no closer than four feet to any property line.",
+        "The city says its Building and Inspection Department handles and issues all building permits for Lehi City, and all permit applications must be submitted through the Building Permit Submittal Portal.",
+        "The city says all plans, including permit applications, compliance checks, and structural and geotech reports, are submitted electronically and reviewed digitally, and contractors are responsible for printing a hard copy of the approved plans showing the city's stamp and having it on the job site for every inspection."
+      ],
+      "sources": [
+        {
+          "title": "Chapter 26 Accessory Uses, Buildings and Structures (Lehi City Development Code)",
+          "url": "https://www.lehi-ut.gov/media/2sdn1koc/ch26accessoryuses-91526.pdf"
+        },
+        {
+          "title": "Chapter 12 Property Development Standards (Lehi City Development Code)",
+          "url": "https://www.lehi-ut.gov/media/qfvps314/ch12-development-standards-92926.pdf"
+        },
+        {
+          "title": "Building and Inspections (Lehi City)",
+          "url": "https://www.lehi-ut.gov/departments/building-and-inspections/"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

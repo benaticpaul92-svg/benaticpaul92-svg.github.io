@@ -83,6 +83,34 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "South Kingstown (Washington County)",
+      "kind": "town",
+      "office": "Town of South Kingstown Building & Zoning Department",
+      "portal_name": "Online Permitting System",
+      "portal_url": "https://southkingstownri.portal.opengov.com/categories/1072",
+      "notes": [
+        "The town's FAQ says a building permit, a site plan and structural detail, along with an electrical permit, are required for any pool that can hold 24 inches or more of water, and all pools must be at least 10 feet from any property line.",
+        "The town's pool requirements sheet says the barrier must be at least 48 inches above grade, measured on the side facing away from the pool, and at least 20 inches from the water's edge, and pedestrian gates must open outward away from the pool, be self-closing and have a self-latching device.",
+        "The sheet says the building permit does not cover electrical, plumbing or mechanical work, which all need separate permits obtained online. The department's page says all inspections must be called in to the Building Official's office, cannot be scheduled through the Online Permitting System, and at least 24 hours' notice is preferred.",
+        "For an in-ground pool, the sheet lists inspections from rebar and rebar bonding, before concrete is poured or gunite is sprayed, through a final inspection for use and occupancy before the pool is used, and says the pool cannot be used until all necessary inspections and safety measures are permanently in place."
+      ],
+      "sources": [
+        {
+          "title": "Requirements - Pools and Hot Tubs (Town of South Kingstown)",
+          "url": "https://www.southkingstownri.gov/DocumentCenter/View/8480/Requirements---Pools-and-Hot-Tubs"
+        },
+        {
+          "title": "Building & Zoning FAQs (Town of South Kingstown)",
+          "url": "https://www.southkingstownri.gov/Faq.aspx?QID=311"
+        },
+        {
+          "title": "Building & Zoning Department (Town of South Kingstown)",
+          "url": "https://www.southkingstownri.gov/417/Building-Inspection-Zoning"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [

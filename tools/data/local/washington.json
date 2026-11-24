@@ -17,8 +17,14 @@
         "Single-family residence pools for the family's own use are exempt from Public Health plan review and permits."
       ],
       "sources": [
-        {"title": "Private Swimming Pools or Spas (King County Permitting, Aug 2023)", "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/local-services/permits/building-land-use-permits/r/private-swimming-pool-or-spa.pdf?rev=bcf7be83b94846c192826b0d1f74a19d&hash=0E4FD61F5A0DEBFF5E9A240875F9C74C"},
-        {"title": "Plan review and operating permits for water recreation facilities (King County)", "url": "https://kingcounty.gov/depts/health/environmental-health/healthy-communities/water-recreation/forms.aspx"}
+        {
+          "title": "Private Swimming Pools or Spas (King County Permitting, Aug 2023)",
+          "url": "https://cdn.kingcounty.gov/-/media/king-county/depts/local-services/permits/building-land-use-permits/r/private-swimming-pool-or-spa.pdf?rev=bcf7be83b94846c192826b0d1f74a19d&hash=0E4FD61F5A0DEBFF5E9A240875F9C74C"
+        },
+        {
+          "title": "Plan review and operating permits for water recreation facilities (King County)",
+          "url": "https://kingcounty.gov/depts/health/environmental-health/healthy-communities/water-recreation/forms.aspx"
+        }
       ]
     },
     {
@@ -34,9 +40,18 @@
         "The Seattle Residential Code lists Appendix G, Swimming Pools, Spas and Hot Tubs, among its appendices."
       ],
       "sources": [
-        {"title": "Residential Code (Seattle SDCI)", "url": "https://www.seattle.gov/construction-and-inspections/codes/codes-we-enforce-(a-z)/residential-code"},
-        {"title": "2021 Seattle Residential Code, Chapter 1 Administration", "url": "https://seattle.gov/documents/Departments/SDCI/Codes/SeattleResidentialCode/2021SRCChapter1.pdf"},
-        {"title": "SDCI Tip 310 Standard Plans", "url": "https://seattle.gov/DPD/Publications/CAM/cam310.pdf"}
+        {
+          "title": "Residential Code (Seattle SDCI)",
+          "url": "https://www.seattle.gov/construction-and-inspections/codes/codes-we-enforce-(a-z)/residential-code"
+        },
+        {
+          "title": "2021 Seattle Residential Code, Chapter 1 Administration",
+          "url": "https://seattle.gov/documents/Departments/SDCI/Codes/SeattleResidentialCode/2021SRCChapter1.pdf"
+        },
+        {
+          "title": "SDCI Tip 310 Standard Plans",
+          "url": "https://seattle.gov/DPD/Publications/CAM/cam310.pdf"
+        }
       ]
     },
     {
@@ -53,8 +68,14 @@
         "The city's pool requirements sheet cites the 2015 ISPSC for barrier rules, so the edition should be confirmed with the city."
       ],
       "sources": [
-        {"title": "Residential Swimming Pool Requirements (Kennewick Building Safety Division)", "url": "https://www.go2kennewick.com/DocumentCenter/View/9509/Residential-Swimming-Pool-Requirements"},
-        {"title": "EXPRESS Residential Permit Submittal Checklist, Swimming Pools and Spas (Kennewick)", "url": "https://www.go2kennewick.com/DocumentCenter/View/10997/Express-Permit---Swimming--Pool"}
+        {
+          "title": "Residential Swimming Pool Requirements (Kennewick Building Safety Division)",
+          "url": "https://www.go2kennewick.com/DocumentCenter/View/9509/Residential-Swimming-Pool-Requirements"
+        },
+        {
+          "title": "EXPRESS Residential Permit Submittal Checklist, Swimming Pools and Spas (Kennewick)",
+          "url": "https://www.go2kennewick.com/DocumentCenter/View/10997/Express-Permit---Swimming--Pool"
+        }
       ]
     },
     {
@@ -69,13 +90,47 @@
         "The city publishes a Swimming Pool Enclosures and Safety Devices Requirements document among its residential permit forms."
       ],
       "sources": [
-        {"title": "Residential Building Permits (City of Vancouver, WA)", "url": "https://www.cityofvancouver.us/business/building-construction/residential-building-permits/"}
+        {
+          "title": "Residential Building Permits (City of Vancouver, WA)",
+          "url": "https://www.cityofvancouver.us/business/building-construction/residential-building-permits/"
+        }
       ]
+    },
+    {
+      "name": "Spokane (Spokane County)",
+      "kind": "city",
+      "office": "City of Spokane Development Services Center (Planning & Development)",
+      "portal_name": "Online Permitting",
+      "portal_url": "https://aca.spokanepermits.org/CitizenAccess/default.aspx",
+      "notes": [
+        "The city's Swimming Pool Permit Application says a pool permit is not required for pools less than 24 inches deep, and all pools, hot tubs and ponds more than 18 inches deep must be enclosed and inaccessible to small children.",
+        "For residential pool fences, the application lists a 4 foot minimum fence height, a 54 inch minimum gate latch height and self-closing, self-latching gates, and its barrier details call for a fence panel elevation detail with no fence openings greater than 4 inches.",
+        "The application's submittal guidelines say a complete submittal includes a site plan showing the pool, pool heater, and fence and gate locations, distances from the pool to property lines, structures and equipment, and utility and electrical lines with clearances to the pool; for in-ground pools the minimum details, as applicable, include a whole pool cross section, a footing/foundation/pool wall detail with the location of reinforcement, and electrical and mechanical plans with a 1-line electrical diagram.",
+        "The application says separate applications and permits are required for any electrical, mechanical, fence and/or deck work being proposed, and its pool drainage section notes that drainage to sewer is not authorized."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool Permit Application (City of Spokane, Version 2025.03.14)",
+          "url": "https://static.spokanecity.org/documents/business/resources/applications/building/swimming-pool-permit-application-2025-03-19.pdf",
+          "as_of": "2025-08-02"
+        },
+        {
+          "title": "Residential Permit Process (City of Spokane)",
+          "url": "https://my.spokanecity.org/business/residential/permit-process/",
+          "as_of": "2026-08-28"
+        },
+        {
+          "title": "Residential Building Review (City of Spokane)",
+          "url": "https://my.spokanecity.org/business/residential/",
+          "as_of": "2026-09-24"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Spokane (city and county) pages returned 403 or bot-check to automated fetch; Spokane not included.",
+    "Spokane County (unincorporated) is not covered. The City of Spokane entry was checked on Internet Archive copies on 25 Nov 2026 because the city's pages return 403 to automated fetches.",
     "Seattle: no SDCI page specific to residential in-ground pool permits and no portal name was confirmed on an opened page.",
     "King County: portal name not confirmed on an opened page.",
     "Kennewick requirements sheet cites the 2015 ISPSC and may be outdated; current edition not confirmed."

@@ -16,9 +16,18 @@
         "The Trades Division, at 802-863-9094, is the contact for what construction permits a project needs."
       ],
       "sources": [
-        {"title": "Burlington Department of Permitting & Inspections", "url": "https://www.burlingtonvt.gov/DPI"},
-        {"title": "When Do I Need to Apply for a Zoning Permit?", "url": "https://www.burlingtonvt.gov/691/When-Do-I-Need-to-Apply-for-a-Zoning-Per"},
-        {"title": "Construction Permits", "url": "https://www.burlingtonvt.gov/701/Construction-Permits"}
+        {
+          "title": "Burlington Department of Permitting & Inspections",
+          "url": "https://www.burlingtonvt.gov/DPI"
+        },
+        {
+          "title": "When Do I Need to Apply for a Zoning Permit?",
+          "url": "https://www.burlingtonvt.gov/691/When-Do-I-Need-to-Apply-for-a-Zoning-Per"
+        },
+        {
+          "title": "Construction Permits",
+          "url": "https://www.burlingtonvt.gov/701/Construction-Permits"
+        }
       ]
     },
     {
@@ -34,7 +43,10 @@
         "Issued decisions, site plans and permits from earlier projects are archived online and can be searched by address."
       ],
       "sources": [
-        {"title": "City Permits, Licenses, and Registrations", "url": "https://www.southburlingtonvt.gov/502/City-Permits-Licenses-and-Registrations"}
+        {
+          "title": "City Permits, Licenses, and Registrations",
+          "url": "https://www.southburlingtonvt.gov/502/City-Permits-Licenses-and-Registrations"
+        }
       ]
     },
     {
@@ -50,10 +62,22 @@
         "The Building Department says both State and City building permits are required for most renovation projects in the city."
       ],
       "sources": [
-        {"title": "Rutland City home page", "url": "https://www.rutlandcity.org/"},
-        {"title": "Planning & Zoning Permit Applications", "url": "https://www.rutlandcity.org/departments/planning-zoning-department/permit-applications/"},
-        {"title": "Building Department", "url": "https://www.rutlandcity.org/departments/building-department/"},
-        {"title": "Land Development Regulations (adopted 9-21-26)", "url": "https://www.rutlandcity.org/wp-content/uploads/2026/10/Land-Development-Regulations-Adopted-9-21-26.pdf"}
+        {
+          "title": "Rutland City home page",
+          "url": "https://www.rutlandcity.org/"
+        },
+        {
+          "title": "Planning & Zoning Permit Applications",
+          "url": "https://www.rutlandcity.org/departments/planning-zoning-department/permit-applications/"
+        },
+        {
+          "title": "Building Department",
+          "url": "https://www.rutlandcity.org/departments/building-department/"
+        },
+        {
+          "title": "Land Development Regulations (adopted 9-21-26)",
+          "url": "https://www.rutlandcity.org/wp-content/uploads/2026/10/Land-Development-Regulations-Adopted-9-21-26.pdf"
+        }
       ]
     },
     {
@@ -69,10 +93,51 @@
         "In the Ridgelines/Hillsides Overlay District, Section 9.4(2) exempts ponds and swimming pools that require no site clearing from the overlay review."
       ],
       "sources": [
-        {"title": "Stowe Planning & Zoning", "url": "https://www.stowevt.gov/departments/planning-zoning"},
-        {"title": "Apply for a Zoning Permit", "url": "https://www.stowevt.gov/Departments/Planning-Zoning/Apply-for-a-Zoning-Permit"},
-        {"title": "Stowe Zoning Regulations 2024", "url": "https://www.stowevt.gov/files/assets/town/v/1/planningzoning/documents/stowe_zoning_2024_with_clerks_certificate.pdf"}
+        {
+          "title": "Stowe Planning & Zoning",
+          "url": "https://www.stowevt.gov/departments/planning-zoning"
+        },
+        {
+          "title": "Apply for a Zoning Permit",
+          "url": "https://www.stowevt.gov/Departments/Planning-Zoning/Apply-for-a-Zoning-Permit"
+        },
+        {
+          "title": "Stowe Zoning Regulations 2024",
+          "url": "https://www.stowevt.gov/files/assets/town/v/1/planningzoning/documents/stowe_zoning_2024_with_clerks_certificate.pdf"
+        }
       ]
+    },
+    {
+      "name": "Essex Junction (Chittenden County)",
+      "kind": "city",
+      "office": "City of Essex Junction Community Development Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The city's development fee schedule lists swimming pools as an accessory structure for single-family detached homes under Zoning/Building Permit fees, and Section 706.B.6 of the Land Development Code says all accessory uses or structures must obtain permits as specified in the Code unless specifically exempted.",
+        "Section 706.L says all in-ground pools must be completely enclosed by a wall, fence or other structure not less than four (4) feet in height, with entry through a self-latching and self-closing gate, although a house door that forms part of the enclosure does not need to be so equipped. Hedges or natural barriers may be allowed if they are dense enough to bar entry to the pool.",
+        "Section 706.L says no overhead electrical wires may cross the pool area or be installed within fifteen (15) feet of the pool surface. It also says above-ground pools need not meet the Section L.2 fencing requirement if evidence is submitted that the pool can be entered only by portable steps or stairs that are removed when the pool is not in use.",
+        "The city's Zoning Permit Application asks for an attached site plan that clearly shows the location of the structure or use and its distance to all property lines."
+      ],
+      "sources": [
+        {
+          "title": "Land Development Code, adopted February 26, 2025 (City of Essex Junction)",
+          "url": "https://www.essexjunction.gov/fileadmin/files/Ordinances_Codes/Land_Development_Code/LDC_Adopted_20250228_Online.pdf"
+        },
+        {
+          "title": "Development Fee Schedule, effective February 12, 2026 (City of Essex Junction)",
+          "url": "https://www.essexjunction.gov/fileadmin/files/General/departments/community-development/Fee_Schedule/Fee_Schedule_EFFECTIVE_20260212.pdf"
+        },
+        {
+          "title": "Zoning Permit Application (City of Essex Junction)",
+          "url": "https://www.essexjunction.gov/fileadmin/files/Rec/codes/forms-applications/Zoning_Permit_Application.pdf"
+        },
+        {
+          "title": "Community Development (City of Essex Junction)",
+          "url": "https://www.essexjunction.gov/departments/community-development"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

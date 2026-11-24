@@ -136,11 +136,37 @@
         }
       ],
       "checked": "2026-11-18"
+    },
+    {
+      "name": "Grand Forks (Grand Forks County)",
+      "kind": "city",
+      "office": "City of Grand Forks Department of Building Safety",
+      "portal_name": "Permit Applications (Camino)",
+      "portal_url": "https://app.oncamino.com/grandforksnd/login",
+      "notes": [
+        "The city's Residential Project Guide lists the steps required to receive a permit for a private swimming pool: the pool needs to be in the rear yard, and no part of it should be less than eight feet from the property line.",
+        "The guide says pools over two feet in height are required to have a fence enclosure at least five feet tall, with the opening into the pool area accessible only through a self-enclosing and self-locking gate.",
+        "The guide says no cross-connection is allowed between a private swimming pool and the public water supply, and pool lights must be arranged and shaded to reflect light away from adjacent properties.",
+        "The guide's pool steps say that when the building permit is ready to be issued, a reasonable value including materials, labor and subcontractor's work must be attached to the project, and the names of the general contractor and the mechanical, electrical and plumbing subcontractors must be provided."
+      ],
+      "sources": [
+        {
+          "title": "Residential Project Guide (City of Grand Forks)",
+          "url": "https://www.grandforksgov.com/government/city-departments/building-safety/residential-projects",
+          "as_of": "2026-04-12"
+        },
+        {
+          "title": "Building Safety (City of Grand Forks)",
+          "url": "https://www.grandforksgov.com/government/city-departments/building-safety",
+          "as_of": "2026-05-14"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Only 2 of the 4 requested jurisdictions delivered: Bismarck (Cloudflare challenge/429) and Grand Forks (403) blocked automated access; Minot's pages gave no pool-specific content; web search budget was exhausted. Bismarck, Grand Forks need a re-run.",
+    "Only 2 of the 4 requested jurisdictions delivered: Bismarck (Cloudflare challenge/429) and Grand Forks (403) blocked automated access; Minot's pages gave no pool-specific content; web search budget was exhausted. Grand Forks was added on 25 Nov 2026.",
     "Fargo pages opened do not state a pool-specific permit or plan submittal list, only the general permit portal and the pool fence FAQ.",
     "No state-level fact added; none was opened from a state source."
   ]

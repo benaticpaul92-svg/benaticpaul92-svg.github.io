@@ -105,6 +105,34 @@
         }
       ],
       "checked": "2026-11-18"
+    },
+    {
+      "name": "Frederick County (outside the City of Frederick and Mt. Airy)",
+      "kind": "county",
+      "office": "Frederick County Department of Permits and Inspections",
+      "portal_name": "Citizen portal",
+      "portal_url": "https://planningandpermitting.frederickcountymd.gov/",
+      "notes": [
+        "The county's swimming pool and hot tub permit packet defines a swimming pool as any structure intended for swimming or recreational bathing that contains water over 24 inches deep, including in-ground, aboveground and on-ground pools, hot tubs and spas. It lists the applicable codes as the 2021 IRC, 2021 ISPSC and 2023 NEC.",
+        "The packet's Required Enclosure/Barrier for Residential Pools handout quotes Section 305 of the 2021 International Swimming Pool and Spa Code. The top of the barrier must be not less than 48 inches above grade, measured on the side facing away from the pool or spa. Openings must not allow passage of a 4 inch diameter sphere. Pedestrian access doors and gates must open outward away from the pool or spa, be self-closing and have a self-latching device.",
+        "For lots under 2 acres, the county's pool permit zoning submittal sheet asks for a plot plan or survey drawn to a scale of 1 inch = 20 feet. It must show all property lines, drainage and utility easements, well and septic locations, building restriction lines and accessory structure setbacks of 6 feet from all property lines, and the pool filter and utility locations with setbacks. The sheet says an applicant whose drawing is insufficient may be required to contract with a licensed design professional.",
+        "The packet says a Minor Grading Permit is required for in-ground pools, and that electrical and plumbing permits (if applicable) must be applied for before the building permit will issue."
+      ],
+      "sources": [
+        {
+          "title": "Building Permit Information: Swimming Pools/Hot Tubs (Frederick County Department of Permits and Inspections, 7/2026)",
+          "url": "https://www.frederickcountymd.gov/DocumentCenter/View/4830/Building-Swimming-Pool-Hot-Tub-Packet"
+        },
+        {
+          "title": "Pool Permit - Zoning Submittal Requirements for lots under 2 acres (Frederick County Division of Planning & Permitting)",
+          "url": "https://www.frederickcountymd.gov/DocumentCenter/View/325632/Pool-Permit-Zoning-Requirements-FINAL"
+        },
+        {
+          "title": "Building Permits and Zoning Certificates (Frederick County)",
+          "url": "https://www.frederickcountymd.gov/8000/Building-Permits-Zoning-Certificates"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
