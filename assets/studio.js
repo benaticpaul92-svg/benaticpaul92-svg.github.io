@@ -22,7 +22,8 @@
         field.setAttribute('aria-invalid', String(Boolean(message)));
         return !message;
       }
-      field.addEventListener('blur', () => { field.dataset.touched = 'true'; validate(); });
+      field.addEventListener('input', () => { field.dataset.edited = 'true'; });
+      field.addEventListener('blur', () => { if (!field.dataset.edited) return; field.dataset.touched = 'true'; validate(); });
       field.addEventListener('input', () => {
         field.setCustomValidity('');
         if (field.dataset.touched || field.getAttribute('aria-invalid') === 'true') validate();
