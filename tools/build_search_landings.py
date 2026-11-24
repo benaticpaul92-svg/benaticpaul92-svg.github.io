@@ -1298,6 +1298,12 @@ def stamp_section(state, entry):
             f'<p class="local-src">Sources: {srcs} · Checked {date_words(STAMP_ANSWERS["checked"])}. General information, not legal advice.</p></div></div></section>')
 
 
+def fact_sources(fact):
+    """An optional third element of a state fact: the official pages it was read from."""
+    srcs = [ext_link(x.get('url'), x.get('title') or 'Official page') for x in (fact[2] if len(fact) > 2 else []) if safe_url(x.get('url'))]
+    return f' <span class="local-src">Source: {" · ".join(srcs)}</span>' if srcs else ''
+
+
 def requirements_section(state, rec):
     article = 'an' if state[0] in 'AEIOU' else 'a'
     steps = []
@@ -1307,12 +1313,13 @@ def requirements_section(state, rec):
         text = s.span.get_text(' ', strip=True) if s.span else s.get_text(' ', strip=True)
         steps.append(f'<li><b aria-hidden="true">{clean(num)}</b><span>{clean(text)}</span></li>')
     intro = (f'<p>Each city and county reviews pool plans against its own checklist. These are requirements and site conditions that can apply in {state}. '
-             'Structural, seismic, wind and uplift design comes from your engineer or your builder’s standard details, and we draw it.</p>')
+             'Structural design, including any wind, flood, seismic or uplift loads at your site, comes from your engineer or your builder’s standard details. We draw it.</p>')
     seal = f'<p class="small">{seal_short(state)}</p>'
     left = f'<div><span class="eyebrow">{state.upper()} REQUIREMENTS</span><h2 id="req-heading">What {state} permit offices check.</h2>{intro}<ol class="req-list">{"".join(steps)}</ol>{seal}</div>'
     right = ''
     if rec['facts']:
-        facts = ''.join(f'<dt>{clean(k)}</dt><dd>{clean(v)}</dd>' for k, v in rec['facts'])
+        split = lambda v: re.sub(r'\.?;\s+(\S)', lambda m: '. ' + m.group(1).upper(), str(v))
+        facts = ''.join(f'<dt>{clean(f[0])}</dt><dd>{clean(split(f[1]))}{fact_sources(f)}</dd>' for f in rec['facts'])
         fi = clean(rec['facts_intro'][0]) if rec['facts_intro'] else 'The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request.'
         right = f'<div><h3 class="facts-title">{state} state-level rules</h3><p class="small">{fi}</p><dl class="state-facts">{facts}</dl></div>'
     cls = 'req-grid' if right else 'req-grid single'

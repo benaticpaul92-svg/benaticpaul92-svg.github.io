@@ -8,19 +8,20 @@
       "kind": "city-county",
       "office": "Denver Community Planning and Development",
       "portal_name": "Denver e-permits",
-      "portal_url": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Single-Family-and-Duplex-Projects/Swimming-Pools-Spas-and-Water-Features",
+      "portal_url": "",
       "notes": [
-        "A permanent pool needs zoning, building and sewer use and drainage (SUDP) permits, applied for through the city's online e-permits system.",
-        "The site plan must be to scale with a north arrow and show lot lines, structures, pool dimensions, distances to lot lines, and fences or barriers.",
+        "A zoning permit is required for all outdoor pools, barriers and fences. Building permits are not issued without sewer use and drainage (SUDP) approval, and single-family and duplex applications are submitted through ePermits.",
+        "The site plan must be drawn to scale and show the zoning setback lines, existing structures, pool dimensions, fences or barriers, how the pool meets the Energy Code (for example with a pool cover) and all related equipment.",
         "A boundary survey is required if the pool or any equipment is within 3 feet of the property line.",
-        "Electrical, plumbing or mechanical permits are separate quick permits when the pool adds lighting, a heater or piping."
+        "Separate permits cover electrical work, plumbing for a pool heater or boiler, gas piping and recirculation piping, and mechanical work for indoor pool heaters."
       ],
       "sources": [
         {
-          "title": "Swimming Pools, Spas, and Water Features - Denver",
-          "url": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Single-Family-and-Duplex-Projects/Swimming-Pools-Spas-and-Water-Features"
+          "title": "Permitting Guide for Residential & Commercial Pools, Spas, and Water Features (Denver Development Services)",
+          "url": "https://denvergov.org/files/assets/public/v/3/public-health-and-environment/documents/phi/final_sudp_health_poolapp.pdf"
         }
-      ]
+      ],
+      "checked": "2026-11-25"
     },
     {
       "name": "Lakewood",

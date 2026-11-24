@@ -11,7 +11,7 @@
       "portal_url": "",
       "notes": [
         "Providence publishes a Rhode Island Pool Barrier Checklist and says a permit is required for a pool or spa that can hold 24 inches or more of water.",
-        "The checklist says it incorporates the 2018 edition of the International Swimming Pool and Spa Code.",
+        "The checklist (October 21, 2025) says it incorporates the 2018 edition of the International Swimming Pool and Spa Code, while the state code adopts the 2021 edition, so the edition should be confirmed with the city.",
         "It lists a barrier at least 48 inches tall, no openings that pass a 4 inch sphere, a 36 inch clear zone around pumps and filters, and self-closing, self-latching gates that open away from the pool.",
         "Under the zoning section it cites, no private pool or hot tub, including aprons and walks, may be in a front yard or a required corner or interior side setback.",
         "The pool and its impervious apron count toward the rear yard and total impervious maximums."
@@ -74,16 +74,15 @@
       "notes": [
         "Middletown's Building & Zoning Department says in-ground and above-ground pools need a building permit, and its pool page links to separate electrical and plumbing permit applications.",
         "A 48-inch-high pool barrier is required if the pool can hold 24 inches of water.",
-        "The page links to the 2019 Rhode Island Swimming Pool & Spa Code and to the town's permit, inspection and barrier requirements."
+        "The page links to the 2021 Rhode Island Swimming Pool & Spa Code and to the town's permit, inspection and barrier requirements."
       ],
       "sources": [
         {
           "title": "Residential Pools & Hot Tubs (Town of Middletown)",
-          "url": "https://www.middletownri.gov/876/Residential-Pools-Hot-Tubs",
-          "as_of": "2026-01-06"
+          "url": "https://www.middletownri.gov/876/Residential-Pools-Hot-Tubs"
         }
       ],
-      "checked": "2026-11-18"
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [

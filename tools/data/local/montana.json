@@ -12,7 +12,7 @@
       "notes": [
         "The Building Division is on the 5th floor of City Hall at 316 N. 26th Street.",
         "Permit applications are submitted and tracked online through the City View portal; plans go in electronically, so only one set is required.",
-        "The city lists the 2021 International Residential Code and the 2021 International Swimming Pool & Spa Code, last adopted September 1, 2022 under Administrative Order #150.",
+        "The city lists the 2021 International Residential Code and the 2021 International Swimming Pool & Spa Code, last adopted September 1, 2022 under Administrative Order #150. Montana’s state-adopted 2024 editions took effect September 26, 2026, so the edition should be confirmed with the city.",
         "For single-family homes, plumbing and electrical detail may be left off the plans if the mechanical equipment location is shown."
       ],
       "sources": [
@@ -20,7 +20,8 @@
           "title": "Building Division FAQs - City of Billings",
           "url": "https://billingsmt.gov/521/FAQs"
         }
-      ]
+      ],
+      "checked": "2026-11-25"
     },
     {
       "name": "Helena",
@@ -48,7 +49,7 @@
       "portal_url": "",
       "notes": [
         "The Building Department lists permits for building, electrical, plumbing, mechanical, tenant improvements and fire suppression.",
-        "The city lists the 2021 International Residential Code and the 2021 International Swimming Pool and Spa Code as adopted codes.",
+        "The city lists the 2021 International Residential Code and the 2021 International Swimming Pool and Spa Code as its current codes, and says permit applications received on or after January 1, 2027 will be reviewed under the 2024 editions.",
         "Public Works may also require a Right-of-Way Permit or a Construction Stormwater Permit before a building permit is approved."
       ],
       "sources": [
@@ -60,7 +61,8 @@
           "title": "Permits & Electronic Plan Review - City of Kalispell",
           "url": "https://www.kalispell.com/268/Permits"
         }
-      ]
+      ],
+      "checked": "2026-11-25"
     },
     {
       "name": "Bozeman (Gallatin County)",

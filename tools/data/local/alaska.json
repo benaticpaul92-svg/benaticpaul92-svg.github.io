@@ -8,21 +8,18 @@
       "kind": "city-borough",
       "office": "Municipality of Anchorage Development Services, Permit Management",
       "portal_name": "Dynamic Portal",
-      "portal_url": "https://permitcenter.muni.org",
+      "portal_url": "https://permitcenter.muni.org/PermitCenter",
       "notes": [
         "Development Services handles permits and inspections, and applicants use the Dynamic Portal at permitcenter.muni.org.",
         "Permit status and inspections can be tracked through a separate Check Permit Status page at bsd.muni.org."
       ],
       "sources": [
         {
-          "title": "Municipality of Anchorage Development Services - Policies",
-          "url": "https://www.muni.org/Departments/OCPD/development/BSD/Pages/Policies.aspx"
-        },
-        {
-          "title": "Municipality of Anchorage Development Services - Permits",
-          "url": "https://www.muni.org/Departments/OCPD/development/BSD/Pages/Permits.aspx"
+          "title": "Development Services (Municipality of Anchorage)",
+          "url": "https://www.muni.org/departments/public_works_infrastructure/development_services/index.php"
         }
-      ]
+      ],
+      "checked": "2026-11-25"
     },
     {
       "name": "Fairbanks / Fairbanks North Star Borough",

@@ -2,11 +2,11 @@
  "alabama": {
   "seal_steps": [
    "<b>01</b><span>Pool barrier, gate and alarm details to the Alabama requirements that apply to your site</span>",
-   "<b>02</b><span>Site plans and setbacks prepared for Birmingham, Huntsville and Mobile and Baldwin County submittals</span>",
+   "<b>02</b><span>Site plans and setbacks prepared for Birmingham, Huntsville, Mobile and Baldwin County submittals</span>",
    "<b>03</b><span>Gulf Coast hurricane wind and FEMA coastal flood zones in Mobile and Baldwin</span>",
    "<b>04</b><span>Karst limestone and sinkhole risk in north Alabama valleys</span>",
    "<b>05</b><span>Expansive Black Belt clays and high coastal groundwater causing uplift</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -65,7 +65,7 @@
     "All state pages"
    ]
   ],
-  "index_blurb": "Pool permit drawing sets for Birmingham, Huntsville and Mobile and Baldwin County."
+  "index_blurb": "Pool permit drawing sets for Birmingham, Huntsville, Mobile and Baldwin County."
  },
  "alaska": {
   "seal_steps": [
@@ -74,7 +74,7 @@
    "<b>03</b><span>Deep seasonal frost and freeze-thaw on shells, decks and buried piping</span>",
    "<b>04</b><span>Discontinuous permafrost and frost-susceptible silts in the Interior</span>",
    "<b>05</b><span>High seismic design categories in Southcentral Alaska including Anchorage</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -136,12 +136,33 @@
    "<b>01</b><span>ARS §36-1681 pool enclosure and barrier compliance</span>",
    "<b>02</b><span>Phoenix and Tucson site-plan and setback standards</span>",
    "<b>03</b><span>Caliche and expansive desert soils under the shell</span>",
-   "<b>04</b><span>ROC license classification requirements reflected on the drawings</span>",
+   "<b>04</b><span>Registrar of Contractors (ROC) license class shown on the drawings</span>",
    "<b>05</b><span>Equipment pad, bonding and clearance detail</span>",
    "<b>06</b><span>High evaporation and summer heat in the desert climate</span>"
   ],
   "facts_intro": [],
-  "facts": [],
+  "facts": [
+   [
+    "Pool barriers",
+    "Arizona Revised Statutes section 36-1681 calls for a barrier at least five feet high, though some local ordinances apply instead.",
+    [
+     {
+      "title": "Arizona Revised Statutes section 36-1681",
+      "url": "https://www.azleg.gov/ars/36/01681.htm"
+     }
+    ]
+   ],
+   [
+    "Owner-builders",
+    "The contractor-licensing exemption in Arizona Revised Statutes section 32-1121 covers work for the owner’s own occupancy, not for sale or rent.",
+    [
+     {
+      "title": "Arizona Revised Statutes 32-1121, Persons not required to be licensed (Arizona Legislature)",
+      "url": "https://www.azleg.gov/ars/32/01121.htm"
+     }
+    ]
+   ]
+  ],
   "faq": [
    [
     "What trips up Arizona pool permits most often?",
@@ -174,7 +195,7 @@
     "All state pages"
    ]
   ],
-  "index_blurb": "ARS §36-1681 barrier and enclosure compliance, ROC classification requirements, and Phoenix and Tucson site-plan standards."
+  "index_blurb": "The state pool barrier law (ARS §36-1681), Registrar of Contractors license classes, and Phoenix and Tucson site-plan standards."
  },
  "arkansas": {
   "seal_steps": [
@@ -183,7 +204,7 @@
    "<b>03</b><span>New Madrid seismic zone in northeast Arkansas, high seismic design category</span>",
    "<b>04</b><span>Expansive clays in central and southern Arkansas causing shell and deck heave</span>",
    "<b>05</b><span>Karst limestone, shallow rock and sinkholes in the Ozarks of northwest Arkansas</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -252,17 +273,48 @@
   "seal_steps": [
    "<b>01</b><span>Swimming Pool Safety Act drowning-prevention compliance</span>",
    "<b>02</b><span>California Residential Code Appendix V for residential pools</span>",
-   "<b>03</b><span>CBC Chapter 31B and Title 22 for public and commercial pools</span>",
-   "<b>04</b><span>VGB suction-outlet and entrapment-avoidance compliance</span>",
+   "<b>03</b><span>California Building Code (CBC) Chapter 31B and Title 22 for public and commercial pools</span>",
+   "<b>04</b><span>Virginia Graeme Baker (VGB) suction-outlet and entrapment-avoidance compliance</span>",
    "<b>05</b><span>Seismic requirements of the governing code</span>",
    "<b>06</b><span>Title 24 energy provisions affecting pump and heater selection</span>"
   ],
   "facts_intro": [],
-  "facts": [],
+  "facts": [
+   [
+    "Drowning prevention",
+    "A new or remodeled pool at a single-family home needs at least two of the seven drowning-prevention features listed in the Swimming Pool Safety Act (Health and Safety Code section 115922).",
+    [
+     {
+      "title": "California Health and Safety Code section 115922, Swimming Pool Safety Act",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=115922"
+     }
+    ]
+   ],
+   [
+    "Enclosure option",
+    "An enclosure used as one of the features must be at least 60 inches high and separate the pool from the home (Health and Safety Code section 115923).",
+    [
+     {
+      "title": "California Health and Safety Code section 115923",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=115923"
+     }
+    ]
+   ],
+   [
+    "Owner-builders",
+    "The Contractors State License Board lists more than one owner-builder exemption, each with its own conditions.",
+    [
+     {
+      "title": "CSLB, Building Officials - Owner-Builder Overview (California Contractors State License Board)",
+      "url": "https://www.cslb.ca.gov/consumers/building_officials/owner_builder_overview.aspx"
+     }
+    ]
+   ]
+  ],
   "faq": [
    [
     "How many safety features does California require?",
-    "The Swimming Pool Safety Act requires drowning-prevention features from a defined list, and the count has changed with subsequent amendments. The drawings follow the requirement in force in your jurisdiction at the time of submittal."
+    "At least two of seven. The Swimming Pool Safety Act (Health and Safety Code section 115922) asks a new or remodeled pool at a single-family home to have at least two of the seven listed drowning-prevention features. A safety cover and an in-pool alarm together do not count as the two. Your permit office decides what counts at your address."
    ],
    [
     "Do commercial pools follow a different path?",
@@ -287,7 +339,7 @@
     "All state pages"
    ]
   ],
-  "index_blurb": "Swimming Pool Safety Act and Residential Code Appendix V, Title 22 and CBC Chapter 31B, and VGB suction-outlet compliance."
+  "index_blurb": "The Swimming Pool Safety Act, Residential Code Appendix V, public pool rules (Title 22 and Building Code Chapter 31B) and drain-cover safety (VGB)."
  },
  "colorado": {
   "seal_steps": [
@@ -296,7 +348,7 @@
    "<b>03</b><span>Highly expansive bentonitic clays and claystone along the Front Range</span>",
    "<b>04</b><span>Frost depth and freeze-thaw cycling on shells, coping and decks</span>",
    "<b>05</b><span>Heavy ground snow loads and steep sites in mountain communities</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -368,7 +420,7 @@
    "<b>03</b><span>Frost depth near 42 in and severe freeze-thaw on shells, coping and decks</span>",
    "<b>04</b><span>Shallow ledge rock, boulders and glacial till with perched groundwater</span>",
    "<b>05</b><span>Coastal flood zones and hurricane wind along Long Island Sound</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -436,7 +488,7 @@
    "<b>03</b><span>High groundwater in coastal plain sands causing hydrostatic uplift on shells</span>",
    "<b>04</b><span>FEMA coastal flood zones along the Atlantic beaches and inland bays</span>",
    "<b>05</b><span>Seasonal frost and freeze-thaw on decks, coping and shallow piping</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -499,7 +551,7 @@
  },
  "florida": {
   "seal_steps": [
-   "<b>01</b><span>Florida Building Code structural requirements, with HVHZ provisions for Miami-Dade and Broward</span>",
+   "<b>01</b><span>Florida Building Code structural requirements, with High-Velocity Hurricane Zone (HVHZ) provisions for Miami-Dade and Broward</span>",
    "<b>02</b><span>Wind loads to 180 mph, with product approval and Notice of Acceptance where required</span>",
    "<b>03</b><span>Site plans with setbacks and easements, to the county or city checklist</span>",
    "<b>04</b><span>Public pools: an operating permit application to the Department of Health before the building permit application (FS 514.03)</span>",
@@ -507,7 +559,32 @@
    "<b>06</b><span>Barrier and entrapment compliance to the Residential Swimming Pool Safety Act</span>"
   ],
   "facts_intro": [],
-  "facts": [],
+  "facts": [
+   [
+    "Pool barriers",
+    "A residential pool barrier must be at least 4 feet high on the outside (Florida Statutes section 515.29). Section 515.27 asks for at least one of five listed safety features.",
+    [
+     {
+      "title": "2026 Florida Statutes section 515.29, Residential swimming pool barrier requirements",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2026/515.29"
+     },
+     {
+      "title": "2026 Florida Statutes section 515.27, Residential swimming pool safety feature options",
+      "url": "https://www.flsenate.gov/Laws/Statutes/2026/515.27"
+     }
+    ]
+   ],
+   [
+    "Owner-builders",
+    "The owner signs the permit application in person and signs a disclosure statement before the permit is issued (Florida Statutes section 489.103).",
+    [
+     {
+      "title": "Florida Statutes, Section 489.103 Exemptions (2026 Florida Statutes, Online Sunshine)",
+      "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0489/Sections/0489.103.html"
+     }
+    ]
+   ]
+  ],
   "faq": [
    [
     "Do you handle High-Velocity Hurricane Zone projects?",
@@ -536,7 +613,7 @@
     "All state pages"
    ]
   ],
-  "index_blurb": "Florida Building Code including HVHZ for Miami-Dade and Broward, wind loads to 180 mph, and the Department of Health operating permit for public pools."
+  "index_blurb": "Florida Building Code, including the High-Velocity Hurricane Zone (HVHZ) in Miami-Dade and Broward, wind loads to 180 mph, and the Department of Health operating permit for public pools."
  },
  "georgia": {
   "seal_steps": [
@@ -545,7 +622,7 @@
    "<b>03</b><span>Piedmont residual soils over partially weathered rock in metro Atlanta</span>",
    "<b>04</b><span>Coastal hurricane wind, flood zones and high groundwater near Savannah</span>",
    "<b>05</b><span>Karst limestone and sinkhole risk in southwest Georgia (Albany area)</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -617,7 +694,7 @@
    "<b>03</b><span>Basalt rock excavation, lava tubes and voids in volcanic ground</span>",
    "<b>04</b><span>High seismic design categories on Hawaii Island, moderate on other islands</span>",
    "<b>05</b><span>Hurricane wind with topographic speed-up, tsunami zones and salt-air corrosion</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -681,7 +758,7 @@
    "<b>03</b><span>Frost depth and freeze-thaw cycling, with deeper frost lines in mountain towns</span>",
    "<b>04</b><span>Seismic Design Category D zones on the Intermountain Seismic Belt, east Idaho</span>",
    "<b>05</b><span>Shallow basalt and collapsible loess soils across the Snake River Plain</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -753,7 +830,7 @@
    "<b>03</b><span>About 42 in. frost depth in the Chicago area; severe freeze-thaw on decks</span>",
    "<b>04</b><span>Glacial clay tills and high water tables, with hydrostatic uplift on shells</span>",
    "<b>05</b><span>New Madrid seismic exposure in southern Illinois and the Metro East</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -825,7 +902,7 @@
    "<b>03</b><span>About 36 in. frost depth; freeze-thaw cycling on decks and coping</span>",
    "<b>04</b><span>Karst sinkhole terrain in the south-central Indiana limestone belt</span>",
    "<b>05</b><span>Wabash Valley and New Madrid seismic exposure in southwest Indiana</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -897,7 +974,7 @@
    "<b>03</b><span>Frost depths of about 42 to 60 in.; severe freeze-thaw and frost heave</span>",
    "<b>04</b><span>Loess soils in western Iowa prone to collapse when wetted</span>",
    "<b>05</b><span>Karst sinkholes in northeast Iowa; high water tables in river valleys</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -969,7 +1046,7 @@
    "<b>03</b><span>Expansive shrink-swell clays in eastern Kansas; deck and shell movement</span>",
    "<b>04</b><span>Frost depths of about 24 to 36 in.; freeze-thaw cycling</span>",
    "<b>05</b><span>Salt and gypsum dissolution sinkholes in parts of central Kansas</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1037,7 +1114,7 @@
    "<b>03</b><span>Extensive karst limestone; sinkhole risk around Bowling Green and Lexington</span>",
    "<b>04</b><span>New Madrid seismic zone; higher Seismic Design Categories in west Kentucky</span>",
    "<b>05</b><span>Frost depth around 24 in. with frequent freeze-thaw cycles</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1109,7 +1186,7 @@
    "<b>03</b><span>High water tables and hydrostatic uplift on shells</span>",
    "<b>04</b><span>Soft compressible and expansive clays; piles common in the New Orleans area</span>",
    "<b>05</b><span>Hurricane design wind speeds and FEMA coastal flood zones near the Gulf</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1177,7 +1254,7 @@
    "<b>03</b><span>Frost depths of 48 in. or more; severe freeze-thaw and frost heave</span>",
    "<b>04</b><span>Heavy ground snow loads, highest in northern and mountain areas</span>",
    "<b>05</b><span>Shallow ledge and glacial till with perched groundwater and uplift</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1241,7 +1318,7 @@
    "<b>03</b><span>About 30 in frost depth in central MD, deeper in Garrett County; freeze-thaw</span>",
    "<b>04</b><span>Marlboro and Potomac Group clays in Prince George’s: swell and slope movement</span>",
    "<b>05</b><span>Coastal Plain high groundwater and Chesapeake/Atlantic flood zones: uplift</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1313,7 +1390,7 @@
    "<b>03</b><span>48 in typical frost depth; freeze-thaw durable concrete, coping and decks</span>",
    "<b>04</b><span>Glacial till, ledge and boulders; perched groundwater causing shell uplift</span>",
    "<b>05</b><span>Coastal AE/VE flood zones and hurricane wind on Cape Cod and the islands</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1385,7 +1462,7 @@
    "<b>03</b><span>42 in typical frost depth; severe freeze-thaw on decks and coping</span>",
    "<b>04</b><span>High groundwater in Great Lakes sands, with hydrostatic uplift on shells</span>",
    "<b>05</b><span>Clay till in southeast Michigan; heavy lake-effect snow on enclosures</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1453,7 +1530,7 @@
    "<b>03</b><span>Frost depth 42 in (southern zone) to 60 in (northern zone); frost heave</span>",
    "<b>04</b><span>Glacial clay till and peat pockets; differential settlement under decks</span>",
    "<b>05</b><span>High groundwater near lakes, with hydrostatic uplift on shells</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1525,7 +1602,7 @@
    "<b>03</b><span>Yazoo clay in the Jackson metro: extreme shrink-swell, heave and cracking</span>",
    "<b>04</b><span>Gulf Coast hurricane wind and AE/VE flood zones; high groundwater uplift</span>",
    "<b>05</b><span>Shallow frost; New Madrid seismic exposure in DeSoto County (north MS)</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1597,7 +1674,7 @@
    "<b>03</b><span>Karst and sinkholes in the Ozarks around Springfield</span>",
    "<b>04</b><span>Expansive clays in the Kansas City area: heave under shells and decks</span>",
    "<b>05</b><span>New Madrid seismic zone in the Bootheel; 30 to 36 in frost depth</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1669,7 +1746,7 @@
    "<b>03</b><span>Deep frost, locally set and often 48 in or more; severe freeze-thaw</span>",
    "<b>04</b><span>Intermountain Seismic Belt: SDC D around Helena, Bozeman and Missoula</span>",
    "<b>05</b><span>Expansive shale clays in eastern MT; high ground snow loads on enclosures</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1741,7 +1818,7 @@
    "<b>03</b><span>36 to 42 in frost depth; frost heave and freeze-thaw on decks and coping</span>",
    "<b>04</b><span>Collapsible loess and expansive clays in eastern NE; settle when wetted</span>",
    "<b>05</b><span>High groundwater in the Platte River valley; hydrostatic uplift on shells</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1813,7 +1890,7 @@
    "<b>03</b><span>Caliche, expansive clay and collapsible soils in the Las Vegas Valley</span>",
    "<b>04</b><span>High seismic design categories in Reno and western Nevada</span>",
    "<b>05</b><span>Freeze-thaw cycles and frost depth in Reno and high desert areas</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1885,7 +1962,7 @@
    "<b>03</b><span>Deep frost penetration and severe freeze-thaw on decks and coping</span>",
    "<b>04</b><span>Heavy ground snow loads, highest in northern and mountain towns</span>",
    "<b>05</b><span>Shallow granite ledge and high groundwater, with uplift on shells</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -1953,7 +2030,7 @@
    "<b>03</b><span>Hurricane wind and FEMA VE/AE coastal flood zones along the Shore</span>",
    "<b>04</b><span>High groundwater in Coastal Plain sands, with hydrostatic uplift on shells</span>",
    "<b>05</b><span>Frost depth and freeze-thaw cycling on decks and coping in the north</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2021,7 +2098,7 @@
    "<b>03</b><span>Collapsible and expansive soils common in Albuquerque and Las Cruces</span>",
    "<b>04</b><span>Moderate seismic demand along the Rio Grande rift corridor</span>",
    "<b>05</b><span>Frost depth varies with elevation, deeper in Santa Fe and the north</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2093,7 +2170,7 @@
    "<b>03</b><span>Deep frost depths upstate with severe freeze-thaw on decks and coping</span>",
    "<b>04</b><span>Heavy lake-effect snow loads in western and central New York</span>",
    "<b>05</b><span>Coastal flood zones and high groundwater on Long Island</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2165,7 +2242,7 @@
    "<b>03</b><span>Deep frost penetration and severe frost heave across the state</span>",
    "<b>04</b><span>Highly expansive Lake Agassiz clays in the Red River Valley</span>",
    "<b>05</b><span>High groundwater and heavy snow loads on decks and enclosures</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2229,7 +2306,7 @@
    "<b>03</b><span>Frost depth and repeated freeze-thaw cycles on decks and coping</span>",
    "<b>04</b><span>Lake-effect snow belt loads in northeast Ohio</span>",
    "<b>05</b><span>Glacial clay soils with perched groundwater; karst in parts of NW Ohio</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2301,7 +2378,7 @@
    "<b>03</b><span>Expansive high-plasticity clays drive shell and deck heave</span>",
    "<b>04</b><span>Frost depth about 18 in central OK, deeper in the Panhandle; freeze-thaw</span>",
    "<b>05</b><span>The site’s Seismic Design Category under the adopted building code</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2373,7 +2450,7 @@
    "<b>03</b><span>Cascadia subduction seismic hazard; western OR sites often SDC D</span>",
    "<b>04</b><span>Wet-season high groundwater in the Willamette Valley, with hydrostatic uplift</span>",
    "<b>05</b><span>High ground snow loads in Cascades and Bend high desert; freeze-thaw</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2445,7 +2522,7 @@
    "<b>03</b><span>Frost depths about 30 to 48 in by municipality; severe freeze-thaw</span>",
    "<b>04</b><span>Carbonate karst and sinkholes in Lehigh Valley, Lancaster, central valleys</span>",
    "<b>05</b><span>Mine subsidence over coal fields in western and northeastern PA</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2517,7 +2594,7 @@
    "<b>03</b><span>Hurricane-prone coast with high ASCE 7 design wind speeds</span>",
    "<b>04</b><span>Coastal AE/VE flood zones near shore, with flood and uplift loads</span>",
    "<b>05</b><span>Frost depth commonly 36 in or more; shallow ledge and perched groundwater</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2581,7 +2658,7 @@
    "<b>03</b><span>Hurricane coast: high design winds and FEMA VE/AE flood zones</span>",
    "<b>04</b><span>High groundwater in Lowcountry sands, with hydrostatic uplift on shells</span>",
    "<b>05</b><span>Charleston seismic zone with liquefiable sands; higher SDC near coast</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2641,7 +2718,7 @@
    "<b>03</b><span>Deep frost penetration, typically 4 to 5 ft; severe freeze-thaw</span>",
    "<b>04</b><span>Expansive Pierre Shale and bentonitic clays in central and western SD</span>",
    "<b>05</b><span>Heavy ground snow loads on enclosures, covers and shade structures</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2709,7 +2786,7 @@
    "<b>03</b><span>Karst limestone with sinkhole risk across Middle and East Tennessee</span>",
    "<b>04</b><span>New Madrid seismic zone; West Tennessee sites often SDC C to D</span>",
    "<b>05</b><span>Moisture-sensitive loess and clays near Memphis; frost about 12 to 18 in</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2721,7 +2798,7 @@
    ],
    [
     "Pool barriers",
-    "No state pool barrier statute; barriers follow the locally adopted residential or pool code and local ordinance."
+    "No state pool barrier statute; barriers follow the locally adopted residential or pool code and local ordinance. Rutherford County’s barrier and alarm form says state law requires a pool alarm on residential pools that hold 36 inches or more of water."
    ],
    [
     "Contractor licensing",
@@ -2772,10 +2849,10 @@
  },
  "texas": {
   "seal_steps": [
-   "<b>01</b><span>IRC-adopted municipal codes and each city’s plan-review checklist</span>",
-   "<b>02</b><span>TDLR and DSHS review paths for public and commercial pools</span>",
+   "<b>01</b><span>Each city’s adopted residential code (IRC) and plan-review checklist</span>",
+   "<b>02</b><span>State review for public and commercial pools by TDLR (Texas Department of Licensing and Regulation) and DSHS (Department of State Health Services)</span>",
    "<b>03</b><span>Site plans with setbacks and easements, to the city’s checklist</span>",
-   "<b>04</b><span>Engineered plan requirements in cities that now mandate them</span>",
+   "<b>04</b><span>Engineer-sealed plans where a city asks for them, such as Sugar Land for a pool or spa 5 feet or closer to a structure</span>",
    "<b>05</b><span>Electrical clearance and bonding detail to NEC Article 680</span>",
    "<b>06</b><span>Barrier and enclosure compliance to the adopted city code</span>"
   ],
@@ -2785,6 +2862,10 @@
    [
     "Which Texas cities do you cover?",
     "Name your city or county, for example Houston, Dallas, Austin or San Antonio, and its permit office, and we draw to the pool permit requirements that office publishes."
+   ],
+   [
+    "Which pool code does my Texas city enforce?",
+    "It depends on the city. Dallas adopts the 2021 International Swimming Pool and Spa Code. Fort Worth uses the 2018 edition with city amendments, and Frisco’s enclosure rules follow the 2018 edition with amendments. San Antonio and Round Rock require the 2024 edition, and Sugar Land asks plans to note it. We confirm the edition in force for your jurisdiction before drawings are issued."
    ]
   ],
   "nearby": [
@@ -2809,7 +2890,7 @@
     "All state pages"
    ]
   ],
-  "index_blurb": "IRC-adopted municipal codes, TDLR and DSHS review for public pools, and city plan-review checklists."
+  "index_blurb": "City residential codes (IRC), state review of public pools (TDLR and DSHS), and city plan-review checklists."
  },
  "utah": {
   "seal_steps": [
@@ -2818,7 +2899,7 @@
    "<b>03</b><span>Wasatch Fault seismic hazard; Wasatch Front sites typically SDC D</span>",
    "<b>04</b><span>Lake Bonneville clays and silts: shallow groundwater, liquefaction risk</span>",
    "<b>05</b><span>Frost depth about 30 in on the Wasatch Front; heavy snow at elevation</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2890,7 +2971,7 @@
    "<b>03</b><span>Deep frost penetration (about 5 ft) and severe freeze-thaw cycling</span>",
    "<b>04</b><span>High town-specific ground snow loads on enclosures and decks</span>",
    "<b>05</b><span>Shallow ledge and glacial till with perched groundwater and uplift</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -2950,7 +3031,7 @@
    "<b>03</b><span>Hampton Roads high groundwater and coastal flood zones, with uplift on shells</span>",
    "<b>04</b><span>Shrink-swell marine clays (Potomac Formation) in Northern Virginia</span>",
    "<b>05</b><span>Karst limestone and sinkhole risk in the Shenandoah Valley</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -3018,7 +3099,7 @@
    "<b>03</b><span>High seismic demand (SDC D) and liquefiable soils around Puget Sound</span>",
    "<b>04</b><span>Wet-season high groundwater in western Washington, with hydrostatic uplift</span>",
    "<b>05</b><span>Deeper frost and freeze-thaw in Spokane and the eastern interior</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -3082,7 +3163,7 @@
    "<b>03</b><span>Steep slopes and landslide-prone colluvium, where slope stability matters</span>",
    "<b>04</b><span>Coal mine subsidence risk over undermined ground in many counties</span>",
    "<b>05</b><span>Karst limestone in the Greenbrier Valley and Eastern Panhandle</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -3154,7 +3235,7 @@
    "<b>03</b><span>Frost depth of 4 to 5 ft and severe freeze-thaw on decks and coping</span>",
    "<b>04</b><span>High groundwater and lake clays in southeast Wisconsin, with uplift on shells</span>",
    "<b>05</b><span>Shallow fractured dolomite (karst) in Door County and the northeast</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."
@@ -3226,7 +3307,7 @@
    "<b>03</b><span>Deep frost (often 3 to 5 ft) and freeze-thaw on decks and coping</span>",
    "<b>04</b><span>Expansive bentonite clays and collapsible soils, with heave and settlement</span>",
    "<b>05</b><span>Higher seismic demand in western Wyoming (Teton County, Star Valley)</span>",
-   "<b>06</b><span>TDH calculation sheet where the office asks for one, equipment pad and bonding details</span>"
+   "<b>06</b><span>Pump head (TDH) calculation sheet where the office asks for one, equipment pad and bonding details</span>"
   ],
   "facts_intro": [
    "The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request."

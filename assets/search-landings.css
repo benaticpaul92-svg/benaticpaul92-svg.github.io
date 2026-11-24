@@ -16,7 +16,7 @@
 .local-card ul,.state-level ul{padding-left:1.1rem;margin:.9rem 0 0}
 .local-card li,.state-level li{font-size:.95rem;padding:.3rem 0}
 .local-src{font-size:.78rem;margin-top:.9rem;overflow-wrap:anywhere}
-.local-card a,.state-level a,.nearby-line a,.package-links a{text-decoration:underline}
+.local-card a,.state-level a,.nearby-line a,.package-links a,.state-facts a{text-decoration:underline}
 .state-level{margin-top:2rem;border-top:1px solid var(--line);padding-top:1.5rem}.state-level h3{font-size:1.2rem;margin:0}
 .req-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}.req-grid.single{grid-template-columns:1fr;max-width:48rem}
 .req-grid p{margin-top:1.2rem;max-width:36rem}
@@ -27,6 +27,7 @@
 .state-facts{margin:1.2rem 0 0}
 .state-facts dt{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding-top:1rem;border-top:1px solid var(--line)}
 .state-facts dd{margin:.4rem 0 1rem;font-size:.95rem}
+.state-facts .local-src{display:block;margin-top:.25rem}
 .search-landing .faq-list details{border-top:1px solid var(--line)}.search-landing .faq-list details:last-child{border-bottom:1px solid var(--line)}
 .package-links{font-size:.85rem;margin-top:1rem}
 .coverage-line .coverage-more{display:block;margin-top:.5rem}.nearby-line{font-size:.85rem;margin:0 0 .5rem}.nearby-line a{display:inline-block;padding:.5rem 0}
