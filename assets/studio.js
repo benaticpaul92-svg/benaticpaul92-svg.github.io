@@ -14,7 +14,7 @@
       function validate() {
         field.setCustomValidity('');
         if (!field.value.trim()) field.setCustomValidity('Please complete this field.');
-        const message = field.validity.typeMismatch
+        const message = (field.validity.typeMismatch || field.validity.patternMismatch)
           ? 'Enter an email address such as name@example.com.'
           : field.validationMessage;
         error.textContent = message;

@@ -111,6 +111,7 @@
         const value = name => form.elements.namedItem(name)?.value || "";
         const short = reference.replace(/[^a-z0-9]/gi, "").slice(-8).toUpperCase();
         nextSteps.querySelector("[data-enquiry-ref]").textContent = short;
+        const shownEmail = nextSteps.querySelector("[data-enquiry-email]"); if (shownEmail) shownEmail.textContent = value("email");
         nextSteps.querySelector("[data-files-draft]").href = `mailto:${email}?subject=${encodeURIComponent(`JEBN project enquiry - files for reference ${short}`)}&body=${encodeURIComponent([
           `Reference: ${short} (${reference})`,
           `Name: ${value("name")}`,
@@ -133,6 +134,7 @@
       const shown = nextSteps.querySelector("[data-enquiry-ref]");
       const files = nextSteps.querySelector("[data-files-draft]");
       if (shown) shown.textContent = "";
+      const shownEmail = nextSteps.querySelector("[data-enquiry-email]"); if (shownEmail) shownEmail.textContent = "";
       if (files) files.href = `mailto:${email}?subject=${encodeURIComponent("JEBN project enquiry")}`;
     }
     function initialState() {
@@ -240,6 +242,7 @@
         if (!response.ok || !trustedResponse || !accepted) {
           const error = new Error("Form was not accepted");
           error.status = ["BUSY", "RATE_LIMITED"].includes(result?.code) ? 429 : response.status;
+          error.invalid = result?.code === "INVALID_INPUT";
           throw error;
         }
         completed = true;
@@ -267,6 +270,7 @@
         let message = "We could not confirm your submission. Your details are still here. You can try again or use the email option below.";
         if (error.name === "AbortError") message = "The connection timed out, so we cannot confirm whether your enquiry arrived. Your details are still here. Please use the email option if you need to follow up.";
         if (error.status === 429) message = "Online enquiries are temporarily busy. Your details are still here. Please try later or use the email option below.";
+        if (error.invalid) message = "We could not accept these details. Please check your email address and remove any unusual characters, then try again or use the email option below.";
         setStatus(message, "error");
       } finally {
         clearTimeout(timeout);

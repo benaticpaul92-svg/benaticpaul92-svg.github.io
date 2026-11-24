@@ -8,6 +8,14 @@
       form.elements.message.value = `${form.dataset.searchEnquiry} quote request.\nProject details: ${form.elements.project_notes.value.trim() || 'Please help me confirm the drawing scope.'}`;
     };
     form.addEventListener('input', sync, true);
+    // The enquiry receiver refuses control characters (and tabs in one-line fields); send spaces instead.
+    const clean = () => {
+      form.querySelectorAll('input[type="text"]').forEach((el) => { const v = el.value.replace(/[\u0000-\u001f\u007f]/g, ' '); if (v !== el.value) el.value = v; });
+      const notes = form.elements.project_notes;
+      const v = notes.value.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, ' ');
+      if (v !== notes.value) notes.value = v;
+    };
+    form.addEventListener('submit', clean, true);
     form.addEventListener('submit', sync, true);
     form.addEventListener('reset', () => queueMicrotask(sync));
     sync();
@@ -49,9 +57,13 @@
   // Phone quote bar: show it only while the quote form is off screen.
   const bar = document.querySelector('[data-sticky-cta]');
   const panel = document.getElementById('contact');
+  const consent = document.getElementById('privacy-choices');
+  if (bar && consent && 'ResizeObserver' in window) {
+    new ResizeObserver(() => document.documentElement.style.setProperty('--consent-h', consent.offsetHeight + 'px')).observe(consent);
+  }
   if (bar && panel && 'IntersectionObserver' in window) {
     new IntersectionObserver((entries) => {
-      bar.hidden = entries[0].isIntersecting;
+      bar.hidden = entries[0].isIntersecting || Boolean(panel.querySelector('[data-next-steps]:not([hidden])'));
     }, { rootMargin: '0px 0px -10% 0px' }).observe(panel);
   }
 })();

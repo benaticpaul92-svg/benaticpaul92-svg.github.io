@@ -144,6 +144,7 @@ body.search-landing{--ink:#16242f;--navy:#0a2f4a;--deep:#072338;--muted:#566b7a;
 .search-landing .quote-panel .btn-primary{min-height:3.4rem;font-size:1.05rem;width:100%}
 .form-reply{font-size:.82rem;font-weight:700;color:var(--navy);margin-top:.7rem}
 .search-landing .quote-panel .form-privacy{margin-top:.2rem;color:var(--muted)}
+.search-landing .quote-panel noscript .form-privacy{margin-bottom:.75rem}
 .search-landing .quote-panel .form-fallback{color:var(--muted)}
 .panel-quote{margin:1rem 0 0;padding-top:.9rem;border-top:1px solid var(--line)}
 .panel-quote blockquote{margin:0;font-size:.88rem;line-height:1.5}
@@ -255,8 +256,10 @@ body.search-landing{--ink:#16242f;--navy:#0a2f4a;--deep:#072338;--muted:#566b7a;
 .search-landing .consent-actions button{flex:1 1 0}
 .search-landing .consent-panel h2{display:none}
 .sticky-cta:not([hidden]){display:flex;position:fixed;left:0;right:0;bottom:0;z-index:50;align-items:center;justify-content:center;gap:.6rem;min-height:3.4rem;background:var(--accent);color:#fff;font-weight:800;text-decoration:none;box-shadow:0 -6px 18px rgba(7,35,56,.25)}
-#privacy-choices:not([hidden])~.sticky-cta{display:none}
+#privacy-choices:not([hidden])~.sticky-cta{bottom:var(--consent-h,6.4rem)}
 .search-landing .site-footer{padding-bottom:5rem}
+/* While the privacy bar is unanswered the quote bar sits on top of it, so the footer's last lines need room for both */
+#privacy-choices:not([hidden])~.site-footer{padding-bottom:calc(var(--consent-h,6.4rem) + 5rem)}
 }
 .search-landing main p+.text-link,.search-landing main ul+.text-link{margin-top:1.1rem}
 @media(min-width:1001px){.search-landing .package-editorial>div:first-child{position:sticky;top:7.5rem;align-self:start}}
@@ -343,7 +346,7 @@ details.local-card[open]>summary::after{content:"\2212"}
 .search-landing .next-steps h3{font-size:.95rem;line-height:1.3;margin:0 0 .45rem;color:var(--navy)}
 .search-landing .next-steps ol{margin:0;padding-left:1.25rem;list-style:decimal;font-size:.85rem;line-height:1.5;color:var(--ink)}
 .next-steps li+li{margin-top:.35rem}
-.next-steps strong{font-family:var(--mono);letter-spacing:.04em;color:var(--navy)}
+.next-steps strong{font-family:var(--mono);letter-spacing:.04em;color:var(--navy);overflow-wrap:anywhere}
 .search-landing .next-steps a{display:inline-block;padding:.3rem 0}
 /* While the block shows, the reply time is not repeated under the button and the first-contact draft link is put away */
 .next-steps:not([hidden])~.form-reply{display:none}

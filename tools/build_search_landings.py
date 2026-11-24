@@ -161,10 +161,10 @@ REPLY_TIME = 'We reply by email within 24 hours.'
 def next_steps(send):
     """Shown only after the receiver has accepted a request. It repeats the reply time and makes no other promise."""
     return ('<div class="next-steps" data-next-steps="" hidden=""><h3>What happens next</h3><ol>'
-            f'<li>Your reference is <strong data-enquiry-ref=""></strong>. {REPLY_TIME}</li>'
+            f'<li>Your reference is <strong data-enquiry-ref=""></strong>. {REPLY_TIME} Our reply goes to <strong data-enquiry-email=""></strong>.</li>'
             f'<li>{send}</li>'
-            '<li><a data-files-draft="" href="mailto:benatic@jebnengineering.com?subject=JEBN%20project%20enquiry">Email your files</a>. '
-            'The link opens your email app with your reference filled in.</li>'
+            '<li><a data-files-draft="" href="mailto:benatic@jebnengineering.com?subject=JEBN%20project%20enquiry">Email your files</a> to benatic@jebnengineering.com with your reference in the subject. '
+            'If your address above is wrong, send that email from your correct address.</li>'
             '</ol></div>')
 
 
@@ -172,7 +172,7 @@ NEXT_STEPS_POOL = next_steps('If you have them, send your survey or site plan, y
 NEXT_STEPS_SITE = next_steps('If you have them, send your survey or site plan, photos of the site, and your sketch or existing drawings.')
 
 
-def form(title, state=None, city=None, notes_placeholder=None, pool=True):
+def form(title, state=None, city=None, notes_placeholder=None, pool=True, extra_label=None, send=None):
     doc = BeautifulSoup((ROOT/'tools/enquiry-form.html').read_text(), 'html.parser')
     f = doc.form
     f['data-search-enquiry'] = title
@@ -184,6 +184,7 @@ def form(title, state=None, city=None, notes_placeholder=None, pool=True):
     doc.select_one('button[type="submit"]').string = 'Get my quote'
     notes = doc.select_one('[name="message"]')
     notes['name'] = 'project_notes'; notes['id'] = 'enquiry-notes'; notes['rows'] = '2'; notes.attrs.pop('required', None)
+    notes['maxlength'] = '5800'   # message = title + ' quote request.\nProject details: ' + notes must stay <= 6000 for the receiver
     notes['placeholder'] = notes_placeholder or 'e.g. 15 x 30 ft pool with spa, builder’s sketch, permit office checklist'
     label = doc.select_one('label[for="enquiry-message"]'); label['for'] = 'enquiry-notes'; label.string = 'What do you need? (optional)'
     hidden = doc.new_tag('input', attrs={'type': 'hidden', 'name': 'message', 'value': title+' quote request.'})
@@ -194,7 +195,8 @@ def form(title, state=None, city=None, notes_placeholder=None, pool=True):
     if state:
         loc['value'] = state
     doc.select_one('.optional-fields summary').string = ('Pool builder? ' if pool else '')+'Add company and timeline (optional)'
-    privacy = doc.select_one('.form-privacy')
+    if extra_label: doc.select_one('.optional-fields summary').string = extra_label
+    privacy = doc.select_one('#form-privacy')
     privacy.clear(); privacy.append('We use your details to reply to this request and quote the work. ')
     a = doc.new_tag('a', href='/privacy/'); a.string = 'Privacy notice'; privacy.append(a)
     reply = doc.new_tag('p', attrs={'class': 'form-reply'}); reply.string = REPLY_TIME
@@ -203,6 +205,7 @@ def form(title, state=None, city=None, notes_placeholder=None, pool=True):
     doc.select_one('[data-new-enquiry]').string = 'Send another request'
     # Hidden until a request is accepted. The form script then fills in the reference and the link.
     doc.select_one('[data-form-status]').insert_after(BeautifulSoup(NEXT_STEPS_POOL if pool else NEXT_STEPS_SITE, 'html.parser').div)
+    if send: doc.select_one('[data-next-steps]').replace_with(BeautifulSoup(next_steps(send), 'html.parser').div)
     return str(doc)
 
 
@@ -662,6 +665,9 @@ SERVICES = [
         ('Can you work from another designer’s plans?', 'Yes. Send the design or permit set and we draw the fabrication details that follow it. We tell you if something in the set conflicts with the detail being drawn.'),
         ('How is a shop drawing package priced?', 'By the agreed sheet list. Your quote names the sheets, file formats, revisions included and delivery date before work starts.')]),
  dict(path='services/outsourced-pool-drafting', title='Outsourced Pool Drafting for Builders & Designers', audience=False,
+      form_heading='Get your drafting quote.', notes_placeholder='e.g. 3 permit sets a month on our title block, sketches and surveys ready',
+      extra_label='Add your company and timeline (optional)', builder_quotes=True,
+      next_send='If you have them, send a recent set that shows your title block and standards, and the next project’s sketch, survey and notes.',
       h1='Outsourced pool drafting.<br><span>Drawn on your standards.</span>',
       kicker='USA / OUTSOURCED POOL DRAFTING',
       meta='Outsourced pool drafting for builders and designers whose drafting is backed up. Plans, sections and details drawn on your title block and CAD standards.',
@@ -687,6 +693,9 @@ SERVICES = [
         ('How is the work priced?', 'Per set or per sheet, agreed before work starts. Your quote lists the sheets, file formats and the revisions included.'),
         ('Can a set be sealed by an engineer?', 'By your engineer, yes. We draft to the engineer’s design and mark-ups, and the engineer directs the engineering and seals the set. JEBN does not seal drawings.')]),
  dict(path='services/pool-drawings-for-engineer-of-record', title='Pool Drawings for Your Engineer of Record', audience=False,
+      form_heading='Get your drafting quote.', notes_placeholder='e.g. sketches, calculations and mark-ups ready, permit office checklist attached',
+      extra_label='Add your company and timeline (optional)', builder_quotes=True,
+      next_send='If you have them, send the design sketches, calculations or standard details, the pool layout and the permit office’s checklist.',
       h1='Pool drawings for your engineer.<br><span>Drafted to the engineer’s design.</span>',
       kicker='USA / DRAFTING FOR THE ENGINEER OF RECORD',
       meta='Pool drawing sets drafted for your engineer of record: plans, sections, steel details and schedules drawn to the engineer’s design. DWG and PDF.',
@@ -753,8 +762,8 @@ def build_service(p):
     heading, para, items = p.get('inputs') or DEFAULT_INPUTS
     nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What it covers</a><a href="#inputs">What to send</a><a href="#faq">Questions</a><a href="#contact">Get my quote ↗</a></div></nav>'
     crumbs = crumbs_html([('/', 'Home'), ('/#services', 'Services'), ('', short)])
-    body = (hero(p['kicker'], p['h1'], p['lead'], form(p['title']), crumbs, p.get('facts'), p.get('small')) + nav + samples_section()
-            + (audience_section() if p.get('audience', True) else '') + pool_clients()
+    body = (hero(p['kicker'], p['h1'], p['lead'], form(p['title'], notes_placeholder=p.get('notes_placeholder'), extra_label=p.get('extra_label'), send=p.get('next_send')), crumbs, p.get('facts'), p.get('small'), form_heading=p.get('form_heading', 'Get your pool plan quote.')) + nav + samples_section()
+            + (audience_section() if p.get('audience', True) else '') + (clients_section('Feedback from clients on pool and water feature drawing work.', [0, 3, 5, 1, 2], visible=2, rated=False) if p.get('builder_quotes') else pool_clients())
             + package_section(rows=p['rows'], heading=p['package_heading'], lead=p['package_lead'], links=service_links(path), typical=p.get('typical', False)) + extra
             + inputs_section(heading, para, items)
             + delivery_section()
@@ -893,7 +902,7 @@ def build_topic(t):
     nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What the set shows</a><a href="#roles">Who does what</a><a href="#inputs">What to send</a><a href="#faq">Questions</a><a href="#contact">Get my quote ↗</a></div></nav>'
     crumbs = crumbs_html([('/', 'Home'), ('/#more-services', 'Drawing sets'), ('', clean(t['nav_label']))])
     h1 = f'{clean(t["h1_main"])}<br><span>{clean(t["h1_sub"])}</span>'
-    body = (hero('USA / '+escape(t['nav_label'].upper()), h1, clean(t['lead']), form(t['title']), crumbs, TOPIC_FACTS, TOPIC_SMALL, strip='DWG + PDF · Seal not included') + nav
+    body = (hero('USA / '+escape(t['nav_label'].upper()), h1, clean(t['lead']), form(t['title'], notes_placeholder=t.get('notes_placeholder'), extra_label=t.get('extra_label'), send=t.get('next_send')), crumbs, TOPIC_FACTS, TOPIC_SMALL, strip='DWG + PDF · Seal not included', form_heading=t.get('form_heading', 'Get your pool plan quote.')) + nav
             + samples_section()
             + package_section(rows=pairs(t['shows']), heading=clean(t['shows_heading']), lead=clean(t['shows_intro']), links=links, typical=False)
             + info_section('roles', 'WHO DOES WHAT', clean(t['roles_heading']), clean(t['roles_intro']), pairs(t['roles']))
