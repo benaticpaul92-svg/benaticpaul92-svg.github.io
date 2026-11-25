@@ -30,6 +30,15 @@
       });
       field.addEventListener('invalid', validate);
     });
+    // 'Send another request' resets the form: start again with no errors until a field is edited.
+    form.addEventListener('reset', () => required.forEach(field => {
+      delete field.dataset.edited;
+      delete field.dataset.touched;
+      field.removeAttribute('aria-invalid');
+      field.setCustomValidity('');
+      const error = document.getElementById(`${field.id}-error`);
+      if (error) { error.hidden = true; error.textContent = ''; }
+    }));
     if (localPreview) {
       const note = document.createElement('p');
       note.className = 'small';

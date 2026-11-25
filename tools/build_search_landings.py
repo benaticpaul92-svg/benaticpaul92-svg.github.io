@@ -185,7 +185,7 @@ def form(title, state=None, city=None, notes_placeholder=None, pool=True, extra_
     doc.select_one('button[type="submit"]').string = 'Get my quote'
     notes = doc.select_one('[name="message"]')
     notes['name'] = 'project_notes'; notes['id'] = 'enquiry-notes'; notes['rows'] = '2'; notes.attrs.pop('required', None)
-    notes['maxlength'] = '5800'   # message = title + ' quote request.\nProject details: ' + notes must stay <= 6000 for the receiver
+    notes['maxlength'] = str(6000 - len(title + ' quote request.\nProject details: '))   # message = title + ' quote request.\nProject details: ' + notes must stay <= 6000 for the receiver
     notes['placeholder'] = notes_placeholder or 'e.g. 15 x 30 ft pool with spa, builder’s sketch, permit office checklist'
     label = doc.select_one('label[for="enquiry-message"]'); label['for'] = 'enquiry-notes'; label.string = 'What do you need? (optional)'
     hidden = doc.new_tag('input', attrs={'type': 'hidden', 'name': 'message', 'value': title+' quote request.'})
@@ -196,7 +196,7 @@ def form(title, state=None, city=None, notes_placeholder=None, pool=True, extra_
     if state:
         loc['value'] = state
     doc.select_one('.optional-fields summary').string = ('Pool builder? ' if pool else '')+'Add company and timeline (optional)'
-    if extra_label: doc.select_one('.optional-fields summary').string = extra_label
+    if extra_label and doc.select_one('.optional-fields summary').string.endswith('Add company and timeline (optional)'): doc.select_one('.optional-fields summary').string = extra_label
     privacy = doc.select_one('#form-privacy')
     privacy.clear(); privacy.append('We use your details to reply to this request and quote the work. ')
     a = doc.new_tag('a', href='/privacy/'); a.string = 'Privacy notice'; privacy.append(a)
@@ -314,8 +314,8 @@ def coverage_section(extra=''):
 
 def service_links(current=''):
     """Text links to the other service pages, for the package column."""
-    links = ' · '.join(f'<a href="{href}">{label}</a>' for href, label, _ in SERVICE_LINKS if href != current)
-    more = ' · '.join(f'<a href="{href}">{escape(label)}</a>' for href, label in RELATED_TOPICS.get(current, []))
+    links = '\u00a0· '.join(f'<a href="{href}">{label}</a>' for href, label, _ in SERVICE_LINKS if href != current)
+    more = '\u00a0· '.join(f'<a href="{href}">{escape(label)}</a>' for href, label in RELATED_TOPICS.get(current, []))
     more = f'<p class="package-links"><strong>By project type:</strong> {more}</p>' if more else ''
     return f'<p class="package-links"><strong>Related services:</strong> {links}</p>{more}'
 
@@ -848,7 +848,7 @@ def seal_next():
     cards = {href: (label, text) for href, label, text in SERVICE_LINKS + TOPIC_LINKS}
     items = [(f'<a href="{h}">{escape(cards[h][0])}</a>', escape(cards[h][1])) for h in
              ('/services/pool-drawings-for-engineer-of-record/', '/services/pool-permit-drawings/', '/services/owner-builder-pool-plans/')]
-    states = ' · '.join(f'<a href="/states/{s}/#stamp">{name_of(s)}</a>' for s in sorted(STAMP_ANSWERS['states']) if s in STATES)
+    states = '\u00a0· '.join(f'<a href="/states/{s}/#stamp">{name_of(s)}</a>' for s in sorted(STAMP_ANSWERS['states']) if s in STATES)
     items.append(('Short answers by state', f'Do I need an engineer’s stamp? {states}.'))
     return info_section('next', 'NEXT STEPS', 'Where to go from here.', 'Pick the page that fits your project, or send your details for a quote.', items, ('Get my quote ↗', '#contact'))
 
@@ -920,7 +920,7 @@ def build_topic(t):
     by_key = {x['key']: x for x in TOPICS}
     labels = {href: label for href, label, _ in SERVICE_LINKS + [SEAL_LINK]}
     related = [(href, labels[href]) for href in t['related_services']] + [('/'+by_key[k]['path']+'/', escape(by_key[k]['nav_label'])) for k in t['related']]
-    links = '<p class="package-links"><strong>Related:</strong> ' + ' · '.join(f'<a href="{h}">{l}</a>' for h, l in related) + '</p>'
+    links = '<p class="package-links"><strong>Related:</strong> ' + '\u00a0· '.join(f'<a href="{h}">{l}</a>' for h, l in related) + '</p>'
     pairs = lambda items: [(clean(x['label']), clean(x['text'])) for x in items]
     faq = [(x['q'], x['a']) for x in t['faq']]
     nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What the set shows</a><a href="#roles">Who does what</a><a href="#inputs">What to send</a><a href="#faq">Questions</a><a href="#contact">Get my quote ↗</a></div></nav>'
@@ -975,7 +975,7 @@ def build_home():
     more = f'''<section class="section local-section more-services" id="more-services" aria-labelledby="more-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">DRAWING SETS BY PROJECT TYPE</span><h2 id="more-heading">Drawing sets for particular projects.</h2></div><div><p>Owner-builder permits, remodels, vanishing edges and pools on structures each need their own sheets.</p><p>Hotel, rooftop and public pools: shop drawings and permit drafting for the project’s engineer of record, quoted per project.</p></div></div><nav class="state-cards" aria-label="Drawing sets for particular projects">{topic_cards}</nav></div></section>'''
     state_links = ''.join(f'<a href="/states/{s}/">{name_of(s)}</a>' for s in sorted(STATES))
     state_options = ''.join(f'<option value="/states/{s}/">{name_of(s)}</option>' for s in sorted(STATES))
-    states = f'''<section class="section local-section" id="coverage" aria-labelledby="coverage-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · STATE PAGES</span><h2 id="coverage-heading">Pool permit drawings by state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties with links to the official sources, and the quote form.</p><p>Your city or county is not listed? Name the permit office in your request. We draw to the checklist it publishes.</p><a class="text-link" href="/states/">Browse all state pages ↗</a></div></div><div class="state-jump"><label for="state-jump">Go to your state</label><select id="state-jump" data-state-jump><option value="">Choose a state…</option>{state_options}</select></div><noscript><style>.state-jump{{display:none}}</style></noscript><details class="state-fold" data-open-wide><summary>Show all state pages</summary><nav class="state-grid wide" aria-label="State pages">{state_links}</nav></details></div></section>'''
+    states = f'''<section class="section local-section" id="coverage" aria-labelledby="coverage-heading"><div class="wrap"><div class="local-head"><div><span class="eyebrow">USA · STATE PAGES</span><h2 id="coverage-heading">Pool permit drawings by state.</h2></div><div><p>Every state page has the state-level pool rules, permit notes for named cities and counties with links to the official sources, and the quote form.</p><p>Your city or county is not listed? Name the permit office in your request. We draw to the checklist it publishes.</p><a class="text-link" href="/states/">Browse all state pages ↗</a></div></div><div class="state-jump"><label for="state-jump">Go to your state</label><select id="state-jump" data-state-jump><option value="">Choose a state…</option>{state_options}</select></div><details class="state-fold" data-open-wide><summary>Show all state pages</summary><nav class="state-grid wide" aria-label="State pages">{state_links}</nav></details></div></section>'''
     line = f'''<section class="coverage-line" aria-label="USA coverage"><div class="wrap"><p><strong>{COMPANY}.</strong> We draft pool drawings for US permit submissions.</p><a href="/states/">View state pages</a></div></section>'''
     body = (hero('USA / POOL PERMIT AND CONSTRUCTION DRAWINGS', 'Pool permit drawings<br><span>and construction drawings.</span>', lead, form('Pool Plans and Permit Drawings')) + nav
             + samples_section() + audience_section() + pool_clients() + services + more
@@ -994,6 +994,7 @@ def build_home():
     ]}
     # Routes a paid visit to the visitor's state page when the ad click carries a location id.
     head_extra = geo_route_tag()
+    head_extra += '<noscript><style>#coverage .state-jump{display:none}</style></noscript>'   # the state picker needs JS; in the head, so the page stays valid HTML
     return shell('', title, description, body, schema, head_extra, brand=f' | {COMPANY}')
 
 
@@ -1119,7 +1120,7 @@ def build_about():
     crumbs = crumbs_html([('/', 'Home'), ('', 'About')])
     services = ''.join(f'<li><a href="{href}">{label}</a>. {text}</li>' for href, label, text in SERVICE_LINKS)
     services += '<li><a href="/landscape/">Landscape design drawings</a>. Master plans, hardscape layouts and planting drawings.</li>'
-    by_type = ' · '.join(f'<a href="{href}">{escape(label)}</a>' for href, label, _ in TOPIC_LINKS)
+    by_type = '\u00a0· '.join(f'<a href="{href}">{escape(label)}</a>' for href, label, _ in TOPIC_LINKS)
     body = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose">{crumbs}<span class="eyebrow">ABOUT</span><h1 id="page-heading">About {COMPANY}.</h1><p class="lead">JEBN prepares swimming pool drawing packages for US permits and construction: permit drawings, construction drawings, shop drawings and drafting support for pool builders, designers and engineers.</p><h2>The company</h2><p>{COMPANY} is {COMPANY_KIND}. It is on file with the Florida Division of Corporations under document number {FLORIDA_DOCUMENT}. Benatic Paul Martin, the founder, is your contact for every project.</p><h2>What JEBN does</h2><ul>{services}</ul><p>Drawing sets by project type: {by_type}</p><p>Drawings are delivered as DWG and PDF files. Your quote lists the sheets, the revisions included and the delivery date before you commit. <a href="/how-it-works/">How the service works</a> · <a href="/samples/">Sample drawings</a></p><h2>What JEBN does not do</h2><p>{seal_short()} <a href="/services/pool-engineering/">How the engineer’s seal works</a></p><h2>Contact</h2><p>Benatic Paul Martin · <a href="mailto:{EMAIL}">{EMAIL}</a></p><p>Mailing address: {COMPANY}, {MAIL_ADDRESS}. This is a mailing address, not an office. Please send drawings and project files by email.</p>{QUOTE_BUTTON}</div></div></section>'''
     canonical = f'{SITE}/about/'
     return shell('about', title, description, body, page_schema(canonical, title, description, 'About', 'AboutPage'), brand='')
@@ -1181,7 +1182,7 @@ def build_landscape():
     lead = 'Landscape master plans, hardscape layouts and planting drawings for homeowners, pool contractors and builders. Build-ready construction drawings and 3D visuals, with planting matched to your climate.'
     crumbs = crumbs_html([('/', 'Home'), ('', 'Landscape design')])
     nav = '<nav class="landing-nav" aria-label="Page sections"><div class="wrap"><a href="#package">What we draw</a><a href="#work">Sample work</a><a href="#faq">Questions</a><a href="#contact">Get my quote ↗</a></div></nav>'
-    links = '<p class="package-links"><strong>Pool work:</strong> <a href="/services/pool-permit-drawings/">Pool permit drawings</a> · <a href="/pool/">Construction drawings</a> · <a href="/services/pool-shop-drawings/">Shop drawings</a></p>'
+    links = '<p class="package-links"><strong>Pool work:</strong> <a href="/services/pool-permit-drawings/">Pool permit drawings</a>\u00a0· <a href="/pool/">Construction drawings</a>\u00a0· <a href="/services/pool-shop-drawings/">Shop drawings</a></p>'
     points = ''.join(f'<li><strong>{k}</strong>{v}</li>' for k, v in LANDSCAPE_POINTS)
     about = f'''<section class="section inputs-section" id="about" aria-labelledby="about-heading"><div class="wrap input-grid"><div><span class="eyebrow">ABOUT THE LANDSCAPE WORK</span><h2 id="about-heading">Landscape drawings for your site and climate.</h2><p>{COMPANY} prepares landscape design drawings alongside its pool drawing work: hardscape, softscape and planting design, with 3D visuals and build-ready technical drawings.</p><p>Benatic Paul Martin, founder and landscape designer, has worked on private villas, residential developments and commercial projects for clients in the USA, the UK and the Gulf.</p><a class="text-link" href="#contact">Ask about your project ↗</a></div><ul class="input-list">{points}</ul></div></section>'''
     cards = preview_cards(LANDSCAPE_WORK, 'View preview')
@@ -1239,6 +1240,11 @@ def date_words(iso):
     return f'{months[m-1]} {d}, {y}'
 
 
+def curly(text):
+    """Apostrophes inside words (city's) in the typographic form the rest of the site uses (city’s). For state and local data only."""
+    return re.sub(r"(?<=[A-Za-z])'(?=[A-Za-z])", '’', str(text or ''))
+
+
 def local_section(state, local):
     names = []
     for j in (local or {}).get('jurisdictions', []):
@@ -1266,15 +1272,16 @@ def local_section(state, local):
         used.add(jid)
         office = clean(j.get('office'))
         portal = ''
+        portal_label = '' if re.match(r'online\b', str(j.get('portal_name') or ''), re.I) or re.search(r'\bportal\b', str(j.get('portal_name') or ''), re.I) else 'Online portal: '   # a name that already says it stands alone
         if j.get('portal_name') and safe_url(j.get('portal_url')):
-            portal = f'<span class="local-portal">Online portal: {ext_link(j["portal_url"], j["portal_name"])}</span>'
+            portal = f'<span class="local-portal">{portal_label}{ext_link(j["portal_url"], j["portal_name"])}</span>'
         elif j.get('portal_name'):
-            portal = f'<span class="local-portal">Online portal: {clean(j["portal_name"])}</span>'
+            portal = f'<span class="local-portal">{portal_label}{clean(j["portal_name"])}</span>'
         rest = j['notes'][2:]
         more = ''
         if rest:
-            more = f'<details class="more-notes"><summary>{len(rest)} more permit note{"s" if len(rest) != 1 else ""}</summary><ul>{"".join(f"<li>{clean(n)}</li>" for n in rest)}</ul></details>'
-        notes = '<ul>'+''.join(f'<li>{clean(n)}</li>' for n in j['notes'][:2])+'</ul>'+more
+            more = f'<details class="more-notes"><summary>{len(rest)} more permit note{"s" if len(rest) != 1 else ""}</summary><ul>{"".join(f"<li>{clean(curly(n))}</li>" for n in rest)}</ul></details>'
+        notes = '<ul>'+''.join(f'<li>{clean(curly(n))}</li>' for n in j['notes'][:2])+'</ul>'+more
         srcs = []
         for s in j.get('sources', []):
             if not safe_url(s.get('url')):
@@ -1285,8 +1292,8 @@ def local_section(state, local):
                 link += f' (copy saved {date_words(s["as_of"])})'
                 saved_copy = True
             srcs.append(link)
-        checked_on = f' · Checked {date_words(j["checked"])}' if j.get('checked') and j['checked'] != state_date else ''
-        src = f'<p class="local-src">Source: {" · ".join(srcs)}{checked_on}</p>' if srcs else ''
+        checked_on = f'\u00a0· Checked {date_words(j["checked"])}' if j.get('checked') and j['checked'] != state_date else ''
+        src = f'<p class="local-src">Source: {"&nbsp;· ".join(srcs)}{checked_on}</p>' if srcs else ''
         place, _, county = j['name'].partition(' / ')
         h3 = f'{clean(place)} pool permit notes ({clean(county)})' if county else f'{clean(j["name"])} pool permit notes'
         portal_line = f'<p class="local-office">{portal}</p>' if portal else ''
@@ -1298,7 +1305,7 @@ def local_section(state, local):
         cards.append(f'<details class="local-card" id="{jid}" data-open-wide><summary><h3>{h3}</h3><span class="local-office">{office}</span></summary>{portal_line}{notes}{src}</details>')
     state_level = ''
     if local.get('state_level'):
-        items = ''.join(f'<li>{clean(s.get("note"))} <span class="local-src">Source: {ext_link((s.get("source") or {}).get("url"), (s.get("source") or {}).get("title") or "Official page")}</span></li>' for s in local['state_level'] if s.get('note'))
+        items = ''.join(f'<li>{clean(curly(s.get("note")))} <span class="local-src">Source: {ext_link((s.get("source") or {}).get("url"), (s.get("source") or {}).get("title") or "Official page")}</span></li>' for s in local['state_level'] if s.get('note'))
         if items:
             state_level = f'<div class="state-level"><h3>Statewide</h3><ul>{items}</ul></div>'
     checked = date_words(state_date)
@@ -1337,19 +1344,19 @@ def stamp_text(entry):
 def stamp_section(state, entry):
     """A short answer under the hero of a state page, with the official pages it was read from.
     The first part is the answer in one sentence; the rest says where it comes from."""
-    srcs = ' · '.join(ext_link(s['url'], s['title'] + (' (PDF)' if '.pdf' in s['url'].lower() else '')) for s in entry['sources'])
+    srcs = '\u00a0· '.join(ext_link(s['url'], s['title'] + (' (PDF)' if '.pdf' in s['url'].lower() else '')) for s in entry['sources'])
     text = ''.join(f'<p class="stamp-text{" stamp-lead" if i == 0 else ""}">{clean(p)}</p>' for i, p in enumerate(entry['answer']))
     return (f'<section class="section stamp-section" id="stamp" aria-labelledby="stamp-heading"><div class="wrap"><div class="stamp-answer">'
             f'<span class="eyebrow">{state.upper()} · SHORT ANSWER</span><h2 id="stamp-heading">{clean(stamp_question(state))}</h2>'
             f'{text}'
             f'<p class="stamp-role">{seal_short(state)} <a href="/services/pool-engineering/">How the engineer’s seal works</a></p>'
-            f'<p class="local-src">Sources: {srcs} · Checked {date_words(STAMP_ANSWERS["checked"])}. General information, not legal advice.</p></div></div></section>')
+            f'<p class="local-src">Sources: {srcs}\u00a0· Checked {date_words(STAMP_ANSWERS["checked"])}. General information, not legal advice.</p></div></div></section>')
 
 
 def fact_sources(fact):
     """An optional third element of a state fact: the official pages it was read from."""
     srcs = [ext_link(x.get('url'), x.get('title') or 'Official page') for x in (fact[2] if len(fact) > 2 else []) if safe_url(x.get('url'))]
-    return f' <span class="local-src">Source: {" · ".join(srcs)}</span>' if srcs else ''
+    return f' <span class="local-src">Source: {"&nbsp;· ".join(srcs)}</span>' if srcs else ''
 
 
 def join_places(names):
@@ -1372,7 +1379,7 @@ def requirements_section(state, rec):
     right = ''
     if rec['facts']:
         split = lambda v: re.sub(r'\.?;\s+(\S)', lambda m: '. ' + m.group(1).upper(), str(v))
-        facts = ''.join(f'<dt>{clean(f[0])}</dt><dd>{clean(split(f[1]))}{fact_sources(f)}</dd>' for f in rec['facts'])
+        facts = ''.join(f'<dt>{clean(f[0])}</dt><dd>{clean(curly(split(f[1])))}{fact_sources(f)}</dd>' for f in rec['facts'])
         fi = clean(rec['facts_intro'][0]) if rec['facts_intro'] else 'The state-level rules your drawings are checked against. Cities and counties can add local amendments, so name your permit office in your request.'
         right = f'<div><h3 class="facts-title">{state} state-level rules</h3><p class="small">{fi}</p><dl class="state-facts">{facts}</dl></div>'
     cls = 'req-grid' if right else 'req-grid single'
@@ -1380,7 +1387,7 @@ def requirements_section(state, rec):
 
 
 def faq_items(state, rec, offer=True):
-    items = [(q, a) for q, a in rec['faq']]
+    items = [(q, curly(a)) for q, a in rec['faq']]
     if not any('sealed by an engineer' in q for q, _ in items):
         # Every state page answers the seal question. Most records carry their own answer; these do not.
         items.append((f'Who seals pool drawings in {state}?', seal_answer(state, offer)))
@@ -1424,13 +1431,14 @@ def build_state(slug, rec):
     stamp = stamp_entry(slug)
     stamp_link = '<a href="#stamp">Is a stamp needed?</a>' if stamp else ''
     nav = f'<nav class="landing-nav" aria-label="Page sections"><div class="wrap">{stamp_link}<a href="#local">Local permit notes</a><a href="#requirements">State requirements</a><a href="#package">Drawing package</a><a href="#contact">Get my quote ↗</a></div></nav>'
-    links = '<p class="package-links"><a href="/services/pool-permit-drawings/">Pool permit drawings</a> · <a href="/pool/">Construction drawings</a> · <a href="/services/pool-engineering/">How the engineer’s seal works</a></p>'
-    links += '<p class="package-links"><strong>By project type:</strong> ' + ' · '.join(f'<a href="{href}">{escape(label)}</a>' for href, label, _ in TOPIC_LINKS) + '</p>'
+    links = '<p class="package-links"><a href="/services/pool-permit-drawings/">Pool permit drawings</a>\u00a0· <a href="/pool/">Construction drawings</a>\u00a0· <a href="/services/pool-engineering/">How the engineer’s seal works</a></p>'
+    links += '<p class="package-links"><strong>By project type:</strong> ' + '\u00a0· '.join(f'<a href="{href}">{escape(label)}</a>' for href, label, _ in TOPIC_LINKS) + '</p>'
     faqs = faq_items(state, rec, offer)
     nearby = ''
     near = [(h, t) for h, t in rec.get('nearby', []) if h.strip('/').split('/')[-1] not in OFFLINE]   # no link to a page that is offline
     if near:
-        nearby = '<p class="nearby-line"><strong>Nearby states:</strong> '+' · '.join(f'<a href="{escape(h)}">{clean(t)}</a>' for h, t in near)+'</p>'
+        # Each link keeps its dot in a no-wrap span: these links are inline-block, so a no-break space alone does not hold the dot on the line.
+        nearby = '<p class="nearby-line"><strong>Nearby states:</strong> <span class="nb">'+'\u00a0·</span> <span class="nb">'.join(f'<a href="{escape(h)}">{clean(t)}</a>' for h, t in near)+'</span></p>'
     if stamp:
         jump = (clean(stamp_question(state)), '#stamp')
     elif places:
