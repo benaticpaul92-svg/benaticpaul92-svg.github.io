@@ -87,6 +87,37 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Bend (Deschutes County)",
+      "kind": "city",
+      "office": "City of Bend Building Safety Division",
+      "portal_name": "Online Permit Center Portal",
+      "portal_url": "https://cityview.ci.bend.or.us/Portal/",
+      "notes": [
+        "Bend's Portable Spa Worksheet is completed as part of the application with the city and uploaded through the Online Permit Center.",
+        "The worksheet says a portable spa cover must have a locking mechanism, and the applicant lists the type of mechanism.",
+        "The worksheet says plan review is required if the spa is on a deck. It is also required if the spa is within 60 inches of any window.",
+        "Bend's Commercial Submittal Checklist says a pool or spa for public use needs plan review, licensing and inspection by the Deschutes County Environmental Health Division."
+      ],
+      "sources": [
+        {
+          "title": "Portable Spa Worksheet (City of Bend)",
+          "url": "https://bendoregon.gov/wp-content/uploads/2025/12/Portable-Spa-Worksheet.pdf",
+          "as_of": "2026-01-26"
+        },
+        {
+          "title": "Commercial Submittal Checklist (City of Bend)",
+          "url": "https://bendoregon.gov/wp-content/uploads/2025/12/Commercial-Submittal-Checklist_6_17_25.pdf",
+          "as_of": "2026-01-26"
+        },
+        {
+          "title": "Property Owners Permitting Guide (City of Bend)",
+          "url": "https://bendoregon.gov/services/permits-licenses/property-owners/",
+          "as_of": "2026-04-16"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [

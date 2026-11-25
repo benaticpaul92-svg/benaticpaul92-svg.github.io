@@ -118,6 +118,37 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Glastonbury (Hartford County)",
+      "kind": "town",
+      "office": "Town of Glastonbury Building Inspection/Zoning Enforcement Division",
+      "portal_name": "OpenGov ViewPoint Online Permitting System",
+      "portal_url": "https://glastonburyct.portal.opengov.com/",
+      "notes": [
+        "The town's Building Permits page lists pools and hot tubs among the items that require a permit, and says pools may be located in the rear yard. It says pool and hot tub applications must be submitted online through the OpenGov ViewPoint permitting system.",
+        "The town's Building Permits page says in-ground pools need an improvement location survey plan, and sketches drawn on GIS printed maps or on an existing survey are not accepted. Above-ground pools may provide either that survey or a letter stamped and sealed by a licensed surveyor, verifying that the surveyor staked the nearest property line and certifying that the work meets the zone's bulk requirements, with a diagram locating the pool.",
+        "The town's Swimming Pool Instruction Sheet lists a plot plan with pool and fence location, sign-offs from the Health Department and Environmental Planner, and an electrical permit. It also lists an inspection of electrical wiring and bonding before backfilling, a fence at least 4 feet high with self-closing and self-latching gates, and a final inspection. For in-ground and above-ground pools alike, these must be completed before the Building Department can issue a Certificate of Use.",
+        "The town's Building Permits page says separate permit applications are also required for associated plumbing, electrical and heating, ventilation or air conditioning work. It says the 2022 State Building Code applies to permit applications made on or after October 1, 2022."
+      ],
+      "sources": [
+        {
+          "title": "Building Permits (Town of Glastonbury)",
+          "url": "https://www.glastonburyct.gov/departments/department-directory-a-h/building-inspection-zoning/applying-for-a-building-permit",
+          "as_of": "2026-08-14"
+        },
+        {
+          "title": "Swimming Pool Instruction Sheet (Town of Glastonbury)",
+          "url": "https://www.glastonburyct.gov/home/showpublisheddocument/90/635495271344870000",
+          "as_of": "2026-02-18"
+        },
+        {
+          "title": "Online Forms - Building Inspection (Town of Glastonbury)",
+          "url": "https://www.glastonburyct.gov/departments/department-directory-a-h/building-inspection-zoning/forms-on-line-building-inspection",
+          "as_of": "2026-09-18"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

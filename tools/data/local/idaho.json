@@ -95,12 +95,43 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Idaho Falls (Bonneville County)",
+      "kind": "city",
+      "office": "Community Development Services, Building Division",
+      "portal_name": "Cityworks Online Permitting System",
+      "portal_url": "https://app04.cityworksonline.com/CLIENT_IdahoFallsID-Public/login",
+      "notes": [
+        "Section 7-6-2 of the city code amends the International Residential Code (Section R105.2) so that prefabricated swimming pools not greater than 4 feet deep are listed as work exempt from a building permit.",
+        "The zoning code (Section 11-4-8(D)) says swimming pools must be completely surrounded by a fence at least 5 feet high, with no openings wider than 36 square inches. It says gates with self-closing and self-latching devices are exempted from this provision.",
+        "The zoning code says swimming pools not completely enclosed within a solid-walled building must be set back at least 5 feet from all property lines.",
+        "The city's Building page lists the 2018 International Residential Code, the 2018 Swimming Pool and Spa Code and the 2023 National Electrical Code among its adopted codes."
+      ],
+      "sources": [
+        {
+          "title": "Building (City of Idaho Falls)",
+          "url": "https://www.idahofallsidaho.gov/269/Building",
+          "as_of": "2026-02-08"
+        },
+        {
+          "title": "Title 7 Building Regulations (City of Idaho Falls)",
+          "url": "https://www.idahofallsidaho.gov/DocumentCenter/View/139/Title-7---Building-Regulations-PDF",
+          "as_of": "2026-02-08"
+        },
+        {
+          "title": "Title 11 Comprehensive Zoning (City of Idaho Falls)",
+          "url": "https://www.idahofallsidaho.gov/DocumentCenter/View/13726/Zoning-Ordinance_Current-update-7-7-21-AP",
+          "as_of": "2025-02-07"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
     "Only 3 jurisdictions verified. Nampa and Ada County pages (Cloudflare block, 403) could not be opened; Nampa and Ada County have pool-specific applications according to search listings, but nothing was confirmed.",
-    "Idaho Falls, Eagle and other cities were not reached because the shared web search limit ran out and the pages tried did not mention pools.",
+    "Eagle and other cities were not reached because the shared web search limit ran out and the pages tried did not mention pools.",
     "Boise, Meridian and Coeur d'Alene: no official page opened that states a pool barrier rule or the code edition enforced for pools.",
     "Meridian's separate Residential Pool Barrier Requirements handout (Forms and Handouts page) could not be opened (403).",
     "2026-11-25: Nampa (Canyon County) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."

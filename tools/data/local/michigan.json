@@ -134,6 +134,34 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Novi / Oakland County",
+      "kind": "city",
+      "office": "City of Novi Community Development Department",
+      "portal_name": "BS&A Online",
+      "portal_url": "https://bsaonline.com/?uid=362",
+      "notes": [
+        "The city's residential pool and spa sheet says a building permit is required for a pool or spa, and that all residential pools and spas must conform to the City of Novi Ordinance and comply with the 2015 International Swimming Pool and Spa Code. In-ground pools also need a Minor Land Improvement Permit. The sheet also requires a Woodland/Wetland Affidavit and asks for Homeowner Association or Architectural Control Committee approval, which can be the submitted plans with a signature and date.",
+        "Under its zoning requirements, the sheet says all pools must be at least 10 feet from the principal structure, but spas on decks or patios may be located anywhere within the approved deck requirements. Pools and spas cannot be within 10 feet of any overhead wires, and pools or spas must be no closer than 6 feet to any side or rear property line.",
+        "The sheet calls for an enclosure at least 4 feet high around the pool, with a gate that opens outward from the pool and is self-closing with a self-latching device. The same item lists an approved safety cover compliant with ASTM F-1346 as the other option. Spas or hot tubs may be equipped with a safety cover that complies with ASTM F 1346 instead of a barrier. In-ground pools need a construction safety fence during construction.",
+        "The sheet says the plan submittal shall include two sets of a site plan and pool plans. The site plan must show the pool's location in reference to property lines, the principal building and accessory structures, plus overhead power lines, fences and fence openings, the electrical and pump filter location, easements, and the well and septic location if applicable. In-ground pool plans must show the shape and size, materials, steel layout, electrical grounding, a sectional view showing depth and the location of the diving board, steps and ladder, the composition and width of the walking surface around the pool, and plumbing and heating."
+      ],
+      "sources": [
+        {
+          "title": "Residential Swimming Pool & Spa Requirements (City of Novi, July 19, 2024)",
+          "url": "https://www.cityofnovi.org/media/0qbnbi4p/bldg-poolandspareq.pdf"
+        },
+        {
+          "title": "Information Requirements Sheets, Checklists, Manuals (City of Novi)",
+          "url": "https://cityofnovi.org/designmanual/"
+        },
+        {
+          "title": "Inspections Online Portal (City of Novi)",
+          "url": "https://cityofnovi.org/services/community-development/inspections-online-portal/"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

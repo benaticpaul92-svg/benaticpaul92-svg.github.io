@@ -119,11 +119,41 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Louisville Metro (Jefferson County)",
+      "kind": "city-county",
+      "office": "Louisville Metro Codes and Regulations, Office of Construction Review",
+      "portal_name": "Online Permitting Portal",
+      "portal_url": "https://aca-prod.accela.com/ljcmg/Default.aspx",
+      "notes": [
+        "Louisville Metro's 2014 Homeowner's Permit Toolbox for in-ground swimming pools says an in-ground pool requires a building permit and a surrounding barrier. The barrier must be at least 48 inches tall, with openings that do not allow passage of a 4-inch diameter sphere.",
+        "The toolbox says a submittal should include a completed application form and drawings to explain the project, and it refers to the residential checklist. That checklist asks for a site plan drawn to scale on a sheet at least 8.5 by 11 inches, showing the size and location of new construction and existing structures.",
+        "The residential checklist says Health Department approval for in-ground swimming pools must be obtained before a building permit is issued. The toolbox says in-ground pool projects often have electric items, such as motors, filtration equipment, lighting and heaters, that require an electrical permit.",
+        "The toolbox says plumbing permits come from the State Department of Housing, Buildings and Construction, Division of Plumbing. Construction Review says projects with permits pulled on or after January 1, 2025, must comply with the 2023 National Electrical Code, with some articles delayed under the Kentucky Residential Code."
+      ],
+      "sources": [
+        {
+          "title": "Homeowner's Permit Toolbox: In-Ground Swimming Pools (Louisville Metro Construction Review, 2014)",
+          "url": "https://louisvilleky.gov/construction-review/document/homeownerstoolboxforpools2014pdf",
+          "as_of": "2025-03-23"
+        },
+        {
+          "title": "1 & 2 Family Residential Buildings, Decks & Accessory Structure Checklist (Louisville Metro Construction Review)",
+          "url": "https://louisvilleky.gov/construction-review/document/residentialchecklistpdf",
+          "as_of": "2025-03-23"
+        },
+        {
+          "title": "2023 National Electrical Code Update (Louisville Metro Construction Review)",
+          "url": "https://louisvilleky.gov/government/construction-review/2023-national-electrical-code-update",
+          "as_of": "2025-03-07"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Louisville Metro: louisvilleky.gov blocked WebFetch and curl (403/Cloudflare); nothing verified.",
     "A fourth Kentucky jurisdiction (for example Boone or Kenton County) was not researched because the web search quota ran out.",
     "Only one Kentucky jurisdiction is verified."
   ]

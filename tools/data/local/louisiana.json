@@ -114,12 +114,39 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Shreveport (Caddo Parish)",
+      "kind": "city",
+      "office": "City of Shreveport Permits & Inspections",
+      "portal_name": "MGO Connect (My Government Online)",
+      "portal_url": "https://www.mgoconnect.org/",
+      "notes": [
+        "The city's Permits & Inspections page lists swimming pools among the projects that need a permit. It says a plumbing permit is required before the pool's building permit can be issued.",
+        "The city's permit guide says prefabricated swimming pools that are less than 24 inches deep do not need to be permitted. For the full list of work exempt from permit, it points to Section R105.2 of the 2021 International Residential Code.",
+        "Depending on the type of building permit application, the guide says at least a site plan, construction plans, a statement of work and, if a contractor submits it, a copy of the contract should be attached. The city's Permits and Inspections Division issues construction permits for all of Caddo Parish except inside the Town of Greenwood and Oil City limits.",
+        "The city's Building Codes page says construction must conform to the 2021 International Residential Code and the 2020 National Electric Code, among other codes and local ordinances."
+      ],
+      "sources": [
+        {
+          "title": "Permits & Inspections (City of Shreveport)",
+          "url": "https://www.shreveportla.gov/473/Permits-Inspections"
+        },
+        {
+          "title": "Your Guide to Building Permits & Inspections and the Metropolitan Planning Commission (City of Shreveport)",
+          "url": "https://www.shreveportla.gov/DocumentCenter/View/30216/Your-Guide-to-Permits-And-Inspections-MPC-2026"
+        },
+        {
+          "title": "Building Codes (City of Shreveport)",
+          "url": "https://www.shreveportla.gov/475/Building-Codes"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
     "Baton Rouge / East Baton Rouge Parish: brla.gov permit pages could not be located without search (the permit page URLs I tried returned 403) and nothing was verified.",
-    "Shreveport / Caddo Parish: shreveportla.gov home page exposed no permit links; nothing verified.",
     "Jefferson Parish: jpla.org and jeffparish.gov returned 403.",
     "Lafayette: the MGO Connect application itself is script-driven and was not read, so no submittal list is given.",
     "New Orleans: the checklists and the Residential Swimming Pool Acknowledgment PDFs were not opened; notes come from the service page only.",

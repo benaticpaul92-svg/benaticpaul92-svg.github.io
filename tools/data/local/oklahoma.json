@@ -119,11 +119,35 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Broken Arrow (Tulsa and Wagoner Counties)",
+      "kind": "city",
+      "office": "City of Broken Arrow Permitting & Licensing (Community Permitting and Licensing Division)",
+      "portal_name": "Citizen Self Service Portal",
+      "portal_url": "https://selfservice.brokenarrowok.gov/EnerGov_Prod/SelfService#/home",
+      "notes": [
+        "Section 2-4-2 of the city's Zoning Ordinance says swimming pools and hot tubs may be placed in rear yards and rear building line areas in any agricultural or residential district, upon approval and issuance of a building permit.",
+        "The same section says no part of a pool or hot tub, including decks and equipment, may be placed in a utility easement or drainage easement. No part of a pool may be closer than five feet to any property line.",
+        "The city's Permitting & Licensing page says permits are required for any type of structure being built within the city. Its link to apply for residential and commercial building permits goes to the Citizen Self Service Portal."
+      ],
+      "sources": [
+        {
+          "title": "Zoning Ordinance Sec. 2-4-2, Accessory Uses and Structures Standards (City of Broken Arrow)",
+          "url": "https://online.encodeplus.com/regs/brokenarrow-ok-update/doc-viewer.aspx#secid-34"
+        },
+        {
+          "title": "Permitting & Licensing (City of Broken Arrow)",
+          "url": "https://www.brokenarrowok.gov/government/community-development/permitting-and-licensing",
+          "as_of": "2026-10-03"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Broken Arrow, Moore and Oklahoma County official pool pages returned 403 or bot checks to curl/WebFetch, so none were used; Stillwater was used as the fourth jurisdiction.",
+    "Moore and Oklahoma County official pool pages returned 403 or bot checks to curl/WebFetch, so none were used; Stillwater was used as the fourth jurisdiction.",
     "Edmond's online portal name and the code edition for Oklahoma City and Tulsa were not confirmed from an opened official page.",
     "OKC's checklist names www.okc.gov/access for online submittal, but that page was not opened, so no portal name or URL is given.",
     "The statewide OAC 748:20-6 barrier rule on the existing state page was not re-verified here."

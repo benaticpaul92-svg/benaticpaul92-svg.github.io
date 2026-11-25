@@ -101,11 +101,37 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "West Des Moines (Polk, Dallas, Warren and Madison Counties)",
+      "kind": "city",
+      "office": "Development Services Department, Building Inspection Division",
+      "portal_name": "City Access Portal (CAP)",
+      "portal_url": "https://cityofwestdesmoinesia-energovweb.tylerhost.net/apps/selfservice",
+      "notes": [
+        "The city's pool, spa and hot tub permit application covers in-ground pools, on-ground pools or spas, and the required barrier fence. It needs a completed building permit form and a signed barrier criteria form. It also needs a site plan or aerial photo showing all buildings, lot lines, new and existing fence locations and the new pool location.",
+        "Under the city's barrier criteria, in-ground residential pools and spas holding water more than 24 inches deep must be surrounded by a fence at least 48 inches high. This applies even if the pool has a powered safety cover. Spas with a lockable safety cover complying with ASTM F1346 are exempt. Gates must open outward away from the pool, be self-closing and self-latching, and be equipped to take a locking device. The latch release must be on the pool side of the gate.",
+        "For on-ground or above-ground residential pools, spas and hot tubs holding water more than 24 inches deep, the city's criteria require a barrier at least 4 feet high. Spas and hot tubs with a lockable safety cover complying with ASTM F1346 are exempt. The pool itself may serve as the barrier if its side is at least 48 inches high, the pool manufacturer allows the wall to serve as a barrier, and the ladder or steps used to reach the pool can be locked or removed.",
+        "The application lists typical in-ground pool inspections, starting with electrical bonding and grounding before backfill. The barrier is inspected after all required fences and gates are installed and the property owner has completed the barrier sign-off form. A final inspection follows complete installation of the pool, pumps, lights and barrier. The city's building permit form says separate electrical, mechanical and plumbing permits are required."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool, Spa & Hot Tub and Required Barrier Fence Permit Application (City of West Des Moines)",
+          "url": "https://www.wdm.iowa.gov/home/showpublisheddocument/20815/638894018761800000",
+          "as_of": "2026-05-17"
+        },
+        {
+          "title": "Single Family Residential (City of West Des Moines)",
+          "url": "https://www.wdm.iowa.gov/government/development-services/building-inspection/permit-applications/single-family-residential",
+          "as_of": "2026-04-12"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Only 3 jurisdictions verified. Des Moines (dsm.city, dmgov.org), West Des Moines, Cedar Rapids, Iowa City and Polk County sites returned 403 or Access Denied to automated access.",
+    "Only 3 jurisdictions verified. Des Moines (dsm.city, dmgov.org), Cedar Rapids, Iowa City and Polk County sites returned 403 or Access Denied to automated access.",
     "Urbandale: no pool-specific page was found on the opened pages; only the portal and code editions are recorded.",
     "Davenport: the Building Codes page naming the adopted editions was not opened, so no code edition is recorded.",
     "Ankeny's handout cites zoning section 191.09 for the 4 ft setback and fence height; the handout is not dated, so confirm against the current municipal code.",

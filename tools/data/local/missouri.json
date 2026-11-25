@@ -133,6 +133,34 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Lee's Summit (Jackson and Cass Counties)",
+      "kind": "city",
+      "office": "Development Services",
+      "portal_name": "CityView Online Portal",
+      "portal_url": "https://cityview2.iharriscomputer.com/leessummitmoportal/",
+      "notes": [
+        "Lee's Summit says permits are required for swimming pools, whether above ground or in-ground. The city's pool handout defines a pool as holding more than 5,000 gallons of water or being more than 24 inches deep at its deepest level.",
+        "The city says to email devtech@cityofls.net a Scope of Work Statement, a fencing acknowledgment signed by the homeowner and a surveyed plot plan. The plot plan must show the proposed pool's location and dimensions. It must also show the distances from the closest part of the pool to the rear and side property lines, and the deck around the pool, whether concrete or wood.",
+        "The city's pool handout says the pool area must be entirely enclosed by a fence or other permanent structure at least 4 feet high, measured from grade. A 4-inch sphere must not pass through it, and gates need self-closing and self-latching devices at the top. An above-grade structure 4 feet or taller with a ladder that can be lifted and locked does not need the enclosure, but the ladder must be locked when the pool is not attended. A hot tub may have a latching protective cover instead, but a pool in the same area must still be fenced.",
+        "The city says Development Services staff will have the plot plan reviewed for property line setbacks. For in-ground pools only, Public Works must also check utility easement setbacks. The handout says the pool cannot be located within any easements, and every inspection needs one day of advance notice. The city says it has adopted the 2024 International Residential Code and the 2023 National Electrical Code, which are now in effect."
+      ],
+      "sources": [
+        {
+          "title": "Building Permits - Residential (City of Lee's Summit)",
+          "url": "https://cityofls.net/development-services/construction/permits/building-permits/building-permits-residential"
+        },
+        {
+          "title": "Residential Swimming Pools and Hot Tubs, November 16, 2022 (City of Lee's Summit)",
+          "url": "https://cityofls.net/Portals/0/Files/Development/Forms%20and%20Handouts/Residential%20Swimming%20Pools%20and%20Hot%20Tubs%202022.pdf"
+        },
+        {
+          "title": "Building Codes & Amendments (City of Lee's Summit)",
+          "url": "https://cityofls.net/development-services/planning-development/design/building-codes-and-amendments"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

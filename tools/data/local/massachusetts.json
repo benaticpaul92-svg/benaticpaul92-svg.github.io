@@ -132,6 +132,37 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Barnstable / Barnstable County",
+      "kind": "town",
+      "office": "Town of Barnstable Building Division",
+      "portal_name": "Online Permit Center (PLC by Open Gov)",
+      "portal_url": "https://barnstablema.viewpointcloud.com",
+      "notes": [
+        "Under Section 210-1 of the Town of Barnstable's General Ordinances, private swimming pools must be suitably fenced to a minimum height of four feet. The fence must be built to prohibit unauthorized access.",
+        "The town's building permit application form (last updated December 1, 2020) lists Pool as a permit type. It asks for the required and proposed front, side and rear yard setbacks. It also asks for the flood zone designation and whether the project is within or adjacent to a wetland or coastal bank.",
+        "The Building Division's fee schedule lists separate building permit fees for in-ground and above-ground swimming pools. Its residential electrical permit fees include a line for accessory structures such as a pool.",
+        "The application's department sign-off section lists the Health Department, Historic District, Fire Department and Conservation. It also lists the Zoning Board and Site Plan Review, if required."
+      ],
+      "sources": [
+        {
+          "title": "Chapter 210, Swimming Pools (Town of Barnstable General Ordinances)",
+          "url": "https://ecode360.com/6557884",
+          "as_of": "2026-01-15"
+        },
+        {
+          "title": "Building Permit Application (Town of Barnstable, last updated December 1, 2020)",
+          "url": "https://www.townofbarnstable.us/Departments/Building/Permit_Applications_and_Forms/Building-Permit-With-Permit-Number.pdf",
+          "as_of": "2024-07-12"
+        },
+        {
+          "title": "Building Permit Fees (Town of Barnstable Building Division, effective July 1, 2010)",
+          "url": "https://barnstable.gov/Departments/Building/Office_Resources/Building-Permit-Fees.pdf",
+          "as_of": "2026-01-18"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
