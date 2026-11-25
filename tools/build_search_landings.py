@@ -495,7 +495,9 @@ def shell(path, title, description, body, schema, head_extra='', out=None, noind
     header += ('<script>(function(){var t=document.getElementById("menuToggle"),m=document.getElementById("navMenu"),'
                's=document.querySelector(\'script[src^="/assets/studio.min.js"]\');'
                'if(!t||!m||!s||!window.matchMedia("(max-width: 1000px)").matches)return;'
-               't.hidden=false;m.hidden=true;s.addEventListener("error",function(){t.hidden=true;m.hidden=false})})()</script>')
+               't.hidden=false;m.hidden=true;s.addEventListener("error",function(){t.hidden=true;m.hidden=false});'
+               # The bundle sets window.JEBN_CONFIG first and deferred scripts run before DOMContentLoaded: if it loaded but could not run (old browser), show the plain menu.
+               'document.addEventListener("DOMContentLoaded",function(){if(!window.JEBN_CONFIG){t.hidden=true;m.hidden=false}})})()</script>')
     preload = ''
     if 'search-hero' in body:
         pic = 'landscape-hero' if 'hero-landscape' in body else 'pool-villa-hero'
