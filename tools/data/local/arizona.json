@@ -17,9 +17,18 @@
         "A land survey is required when a pool is built less than two feet from, or into, a required setback; an owner or contractor survey waiver can be submitted instead."
       ],
       "sources": [
-        {"title": "Pool Spa Permit Guidelines, Residential Submittals", "url": "https://www.phoenix.gov/content/dam/phoenix/pddsite/documents/trt/external/dsd_trt_pdf_00914.pdf"},
-        {"title": "Pool, Property Survey Requirements", "url": "https://www.phoenix.gov/content/dam/phoenix/pddsite/documents/trt/external/dsd_trt_pdf_00278.pdf"},
-        {"title": "Electronic Plan Review (Phoenix Planning & Development)", "url": "https://www.phoenix.gov/pdd/onlineservices/electronic-plan-review"}
+        {
+          "title": "Pool Spa Permit Guidelines, Residential Submittals",
+          "url": "https://www.phoenix.gov/content/dam/phoenix/pddsite/documents/trt/external/dsd_trt_pdf_00914.pdf"
+        },
+        {
+          "title": "Pool, Property Survey Requirements",
+          "url": "https://www.phoenix.gov/content/dam/phoenix/pddsite/documents/trt/external/dsd_trt_pdf_00278.pdf"
+        },
+        {
+          "title": "Electronic Plan Review (Phoenix Planning & Development)",
+          "url": "https://www.phoenix.gov/pdd/onlineservices/electronic-plan-review"
+        }
       ]
     },
     {
@@ -36,8 +45,14 @@
         "Owners who act as their own builder must sign an Owner/Builder Affidavit and be listed as the owner on the permit."
       ],
       "sources": [
-        {"title": "Do I Need a Permit? (Exemptions), City of Tucson", "url": "https://www.tucsonaz.gov/Departments/Planning-Development-Services/Permits/Tucson-Permit-Exemptions"},
-        {"title": "Residential Permits, City of Tucson", "url": "https://www.tucsonaz.gov/Departments/Planning-Development-Services/Permits/Residential-Permits"}
+        {
+          "title": "Do I Need a Permit? (Exemptions), City of Tucson",
+          "url": "https://www.tucsonaz.gov/Departments/Planning-Development-Services/Permits/Tucson-Permit-Exemptions"
+        },
+        {
+          "title": "Residential Permits, City of Tucson",
+          "url": "https://www.tucsonaz.gov/Departments/Planning-Development-Services/Permits/Residential-Permits"
+        }
       ]
     },
     {
@@ -54,8 +69,14 @@
         "If the property is in a flood zone, approval from the Maricopa County Flood Control District is needed before applying for the Mesa permit."
       ],
       "sources": [
-        {"title": "Residential Construction, City of Mesa", "url": "https://www.mesaaz.gov/Business-Development/Development-Services/Building-Permit-Plan-Review/Residential-Construction"},
-        {"title": "Swimming Pool and Spa Plan Submittal Checklist", "url": "https://www.mesaaz.gov/files/assets/public/v/3/business-development/devsvcs/checklists/residential-poolspa.pdf"}
+        {
+          "title": "Residential Construction, City of Mesa",
+          "url": "https://www.mesaaz.gov/Business-Development/Development-Services/Building-Permit-Plan-Review/Residential-Construction"
+        },
+        {
+          "title": "Swimming Pool and Spa Plan Submittal Checklist",
+          "url": "https://www.mesaaz.gov/files/assets/public/v/3/business-development/devsvcs/checklists/residential-poolspa.pdf"
+        }
       ]
     },
     {
@@ -72,8 +93,14 @@
         "The city's page cites the 2021 pool codes, Section 305, with local amendments for barriers."
       ],
       "sources": [
-        {"title": "Swimming Pools, Hot Tubs and Spas, City of Scottsdale", "url": "https://www.scottsdaleaz.gov/codes-and-ordinances/swimming-pools"},
-        {"title": "Swimming Pools and Spa Requirements (site plan, rev. 8/1/2025)", "url": "https://www.scottsdaleaz.gov/docs/default-source/scottsdaleaz/building/pool-site-plan-requirements.pdf?sfvrsn=c66b8c85_3"}
+        {
+          "title": "Swimming Pools, Hot Tubs and Spas, City of Scottsdale",
+          "url": "https://www.scottsdaleaz.gov/codes-and-ordinances/swimming-pools"
+        },
+        {
+          "title": "Swimming Pools and Spa Requirements (site plan, rev. 8/1/2025)",
+          "url": "https://www.scottsdaleaz.gov/docs/default-source/scottsdaleaz/building/pool-site-plan-requirements.pdf?sfvrsn=c66b8c85_3"
+        }
       ]
     },
     {
@@ -90,8 +117,14 @@
         "The pool barrier top must be at least 6 feet above grade on the outside, or at least 6 and no more than 7 feet for the perimeter fence per the fencing page, and wood fencing is not allowed for new pool fences."
       ],
       "sources": [
-        {"title": "Homeowner Building Permit Manual (Swimming Pools and Spas)", "url": "https://www.chandleraz.gov/sites/default/files/departments/development-services/City-of-Chandler-Home-Owners-Building-Permit-Manual.pdf"},
-        {"title": "Chandler Pool Fencing Requirements", "url": "https://www.chandleraz.gov/government/departments/development-services/building-safety-plan-review-permits-and-inspections/pool-fencing-requirements"}
+        {
+          "title": "Homeowner Building Permit Manual (Swimming Pools and Spas)",
+          "url": "https://www.chandleraz.gov/sites/default/files/departments/development-services/City-of-Chandler-Home-Owners-Building-Permit-Manual.pdf"
+        },
+        {
+          "title": "Chandler Pool Fencing Requirements",
+          "url": "https://www.chandleraz.gov/government/departments/development-services/building-safety-plan-review-permits-and-inspections/pool-fencing-requirements"
+        }
       ]
     },
     {
@@ -108,14 +141,50 @@
         "Pedestrian gates in a Pima County pool barrier must open outward, away from the pool, and be self-closing and self-latching."
       ],
       "sources": [
-        {"title": "Custom Pools, Pima County", "url": "https://www.pima.gov/custom-pools"},
-        {"title": "Barriers for Residential Pools / Spas, Pima County", "url": "https://www.pima.gov/1022/Barriers-for-Residential-Pools-Spas"}
+        {
+          "title": "Custom Pools, Pima County",
+          "url": "https://www.pima.gov/custom-pools"
+        },
+        {
+          "title": "Barriers for Residential Pools / Spas, Pima County",
+          "url": "https://www.pima.gov/1022/Barriers-for-Residential-Pools-Spas"
+        }
       ]
+    },
+    {
+      "name": "Gilbert (Maricopa County)",
+      "kind": "town",
+      "office": "Town of Gilbert Development Services Department",
+      "portal_name": "One Stop Shop online self-service portal",
+      "portal_url": "https://onestopshop.gilbertaz.gov/",
+      "notes": [
+        "The town's Miscellaneous Residential Checklist says a pool or spa application needs a site plan showing pool and equipment locations, plus electrical and gas diagrams. It also needs structural plans and details, or a letter authorizing use of a standard plan on file with the town. The checklist, revised January 2020, says the town enforces the 2018 International Residential Code with town amendments.",
+        "Under Section 5.2.7 of the Land Development Code, pools must be enclosed by the walls of the house, a solid wall, or a chain-link or wrought-iron fence. The wall or fence must be at least 5 feet and no more than 6 feet high. Any openings in the fence or gate must be small enough to stop a 4-inch sphere from passing through or under it. Gates must be substantially the same height as the wall or fence, and self-closing and self-latching. Double-width gates that are not the only way in or out need not be self-closing and self-latching, but must be padlocked whenever they are not in use.",
+        "Section 5.2.7 of the Land Development Code puts private pools in residential districts in side or rear yards. They must be at least 3 feet from any property line. On a corner lot, a pool may not be closer than 5 feet to the street-side property line. Next to an alley, an alley easement, a street or an existing building, the yard may not be narrower than the depth of the pool beside it unless the Building Inspections Department approves in writing, and never less than 3 feet. A pool may not sit in a recorded easement without written approval from the easement holder.",
+        "The town's pool barrier policy statement, dated April 22, 2003, says pool fences are measured on the side away from the pool. Easily climbable raised planters, decks, water features or other amenities may not be closer than 3 feet to a pool fence. Fences inside the property fence that are over 3 feet high need building permits and inspections, but they need not meet the pool fence rules as long as the property fence does."
+      ],
+      "sources": [
+        {
+          "title": "Pool Fence, from Land Development Code Section 5.2.7 (Town of Gilbert)",
+          "url": "https://www.gilbertaz.gov/home/showpublisheddocument/35215/637775971989000000",
+          "as_of": "2026-07-13"
+        },
+        {
+          "title": "Miscellaneous Residential Checklist (Town of Gilbert)",
+          "url": "https://www.gilbertaz.gov/home/showpublisheddocument/1570/638212305002530000",
+          "as_of": "2026-01-15"
+        },
+        {
+          "title": "One Stop Shop - Customer Service (Town of Gilbert)",
+          "url": "https://www.gilbertaz.gov/departments/development-services/one-stop-shop",
+          "as_of": "2026-05-09"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Gilbert's pool permit pages returned HTTP 403 and could not be opened, so Gilbert was dropped.",
     "Maricopa County unincorporated pool page was opened but mixes older guidance (2018 code addenda) with a notice about a new permitting system; not used pending confirmation of the current process and portal.",
     "No online portal name could be confirmed from the opened pages for Scottsdale, Chandler or Pima County pool permits, so portal fields are blank.",
     "Chandler's own documents disagree on barrier height (manual: 6 ft exterior barrier; fencing page: 6 to 7 ft perimeter fence); older barrier guideline cites a 5 ft barrier and was not used.",

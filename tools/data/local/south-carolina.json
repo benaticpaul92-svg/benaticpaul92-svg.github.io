@@ -106,6 +106,37 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Greenville County (unincorporated)",
+      "kind": "county",
+      "office": "Greenville County Building Safety and Code Enforcement",
+      "portal_name": "eTrakit",
+      "portal_url": "https://grvlc-trk.aspgov.com/eTRAKiT/",
+      "notes": [
+        "Greenville County Building Safety and Code Enforcement lists swimming pools among the work that requires a permit, and says all permits must be submitted through eTrakit. The county says the Permit Technician reviews the application for floodplain, road frontage and setbacks, as well as accuracy and completeness.",
+        "The county's Pool Fence Affidavit says all swimming pools must be enclosed by barriers and gates. The code sections it reprints require the top of the barrier to be at least 48 inches above grade, measured on the side away from the pool. Openings must not pass a 4-inch-diameter sphere, and pedestrian access gates must open outward away from the pool, self-close and have a self-latching device.",
+        "The affidavit says barriers, gates and alarms are inspected at the final pool inspection and must be in place before that inspection is requested. It also says doors with direct access to the pool must have an alarm where the wall acts as a barrier. The pool must not be used until the county has conducted and approved all applicable inspections.",
+        "The county's current adopted codes list, effective January 1, 2023, includes the 2021 International Swimming Pool and Spa Code. It also lists the 2021 South Carolina Residential Code and the 2020 National Electrical Code."
+      ],
+      "sources": [
+        {
+          "title": "Building Safety Permits (Greenville County)",
+          "url": "https://www.greenvillecounty.org/buildingsafety/Permits.aspx",
+          "as_of": "2026-10-22"
+        },
+        {
+          "title": "Pool Fence Affidavit (Greenville County)",
+          "url": "https://www.greenvillecounty.org/BuildingSafety/forms/Pool%20Fence%20Affidavit.pdf",
+          "as_of": "2025-07-14"
+        },
+        {
+          "title": "Current Adopted Codes (Greenville County Building Safety)",
+          "url": "https://www.greenvillecounty.org/BuildingSafety/forms/CurrentCodeListICC.pdf",
+          "as_of": "2025-11-08"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

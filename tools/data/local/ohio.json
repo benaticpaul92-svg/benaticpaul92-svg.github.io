@@ -91,12 +91,43 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Cincinnati (Hamilton County)",
+      "kind": "city",
+      "office": "City of Cincinnati Department of Buildings & Inspections",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The city's swimming pool handout says a building permit is required for all private and public swimming pools. It defines a private pool as any constructed pool 24 inches or more in depth that is used, or intended to be used, with a one-, two- or three-family dwelling. The city's Applications & Forms page lists a building application and a site plan as the required forms for in-ground and above-ground pools.",
+        "The handout says the plans must include a plot plan drawn to scale showing property lines and dimensions, all existing structures and the proposed pool, and dimensions from the pool to property lines and to any other nearby structure. It says pools must be located in the rear yard only. The city's pool agreement says private residential pool walls must be at least 3 feet from property lines, as regulated by the Cincinnati Zoning Code.",
+        "The handout says any pool containing 24 inches or more of water must have an enclosure around the pool area that extends at least 4 feet above the ground. All gates must be self-closing and self-latching, with the latches at least 4 feet above the ground.",
+        "The handout says electrical permits are required for all swimming pools and a plumbing permit may be required. The city's pool agreement says certain in-process inspections and a final inspection must be done before the pool is filled."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pools Informational Handout (City of Cincinnati, revised May 2017)",
+          "url": "https://www.cincinnati-oh.gov/buildings/building-permit-forms-applications/application-forms/all-forms-handouts-checklists-alphabetical-list/swimming-pools-informational-handout/",
+          "as_of": "2025-03-23"
+        },
+        {
+          "title": "Private Residential Swimming Pool Agreement (City of Cincinnati)",
+          "url": "https://www.cincinnati-oh.gov/buildings/building-permit-forms-applications/application-forms/all-forms-handouts-checklists-alphabetical-list/swimming-pool-private-residential-agreement/",
+          "as_of": "2025-03-23"
+        },
+        {
+          "title": "Applications & Forms (City of Cincinnati Department of Buildings & Inspections)",
+          "url": "https://www.cincinnati-oh.gov/buildings/building-permit-forms-applications/application-forms/",
+          "as_of": "2026-06-02"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
     "Only 3 of 4 jurisdictions, and Cleveland's page does not mention pools specifically, so its notes are general residential permit facts only.",
-    "Columbus (403), Cincinnati (connection refused), Akron and Westerville (403) could not be opened; Toledo's pages had no pool content; the shared web search budget ran out so no replacements could be searched. Columbus and Cincinnati need a re-run.",
+    "Columbus (403), Cincinnati (connection refused), Akron and Westerville (403) could not be opened; Toledo's pages had no pool content; the shared web search budget ran out so no replacements could be searched. Columbus and Cincinnati were added on 25 Nov 2026.",
     "No state-level fact added; none was opened from a state source.",
     "2026-11-25: Columbus (Franklin County) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."
   ]

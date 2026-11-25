@@ -17,8 +17,14 @@
         "From January 1, 2026, the pool builder must hold a Georgia general contractor license or a recognized pool-builder certification."
       ],
       "sources": [
-        {"title": "Pool and Spa Inspections - Cobb County", "url": "https://www.cobbcounty.gov/community-development/building-development/pool-spa-inspections"},
-        {"title": "Pool Permits - Residential Required Documents Checklist (01/2026)", "url": "https://assets.cobbcounty.gov/files/2026-01/POOL_PERMITS_CHECKLIST_RESIDENTIAL_01-2026.pdf"}
+        {
+          "title": "Pool and Spa Inspections - Cobb County",
+          "url": "https://www.cobbcounty.gov/community-development/building-development/pool-spa-inspections"
+        },
+        {
+          "title": "Pool Permits - Residential Required Documents Checklist (01/2026)",
+          "url": "https://assets.cobbcounty.gov/files/2026-01/POOL_PERMITS_CHECKLIST_RESIDENTIAL_01-2026.pdf"
+        }
       ]
     },
     {
@@ -35,9 +41,18 @@
         "The guidance requires a barrier at least 4 feet high with self-closing, self-latching, lockable gates and no openings that pass a 4 inch sphere."
       ],
       "sources": [
-        {"title": "Swimming Pool (Residential) Building Permit Requirements (BPS-15)", "url": "https://www.gwinnettcounty.com/static/departments/planning/pdf/BPS-15_swimming_pool_building_permit_requirements.pdf"},
-        {"title": "Swimming Pool Location Plan (SPLP)", "url": "https://www.gwinnettcounty.com/static/departments/planning/pdf/swimming_pool_location_plan.pdf"},
-        {"title": "Gwinnett County ZIP Portal", "url": "https://aca-prod.accela.com/GWINNETT/Welcome.aspx"}
+        {
+          "title": "Swimming Pool (Residential) Building Permit Requirements (BPS-15)",
+          "url": "https://www.gwinnettcounty.com/static/departments/planning/pdf/BPS-15_swimming_pool_building_permit_requirements.pdf"
+        },
+        {
+          "title": "Swimming Pool Location Plan (SPLP)",
+          "url": "https://www.gwinnettcounty.com/static/departments/planning/pdf/swimming_pool_location_plan.pdf"
+        },
+        {
+          "title": "Gwinnett County ZIP Portal",
+          "url": "https://aca-prod.accela.com/GWINNETT/Welcome.aspx"
+        }
       ]
     },
     {
@@ -54,8 +69,14 @@
         "Properties inside one of DeKalb's incorporated cities are not covered by the county; the guide applies to unincorporated DeKalb."
       ],
       "sources": [
-        {"title": "Permits, Plan Review & Inspections - DeKalb County", "url": "https://dekalbcountyga.gov/departments/planning-and-sustainability/permits-plan-review-and-inspections"},
-        {"title": "Residential Additions Permit Guide (revised 03/2025)", "url": "https://dekalbcountyga.gov/sites/default/files/2026-01/Residential%20Additions%20Guide%20-%202025.pdf"}
+        {
+          "title": "Permits, Plan Review & Inspections - DeKalb County",
+          "url": "https://dekalbcountyga.gov/departments/planning-and-sustainability/permits-plan-review-and-inspections"
+        },
+        {
+          "title": "Residential Additions Permit Guide (revised 03/2025)",
+          "url": "https://dekalbcountyga.gov/sites/default/files/2026-01/Residential%20Additions%20Guide%20-%202025.pdf"
+        }
       ]
     },
     {
@@ -71,7 +92,10 @@
         "Pools in or next to a Special Flood Hazard Area need an as-built lowest floor elevation certificate from a Georgia professional engineer or surveyor."
       ],
       "sources": [
-        {"title": "Fulton County Swimming Pool Permit Application", "url": "https://www.fultoncountyga.gov/-/media/Departments/Public-Works/Planning-Zoning-and-Permits/Permits-and-plan-review/MiscSwimming-Pool-Permit-App-Final.ashx"}
+        {
+          "title": "Fulton County Swimming Pool Permit Application",
+          "url": "https://www.fultoncountyga.gov/-/media/Departments/Public-Works/Planning-Zoning-and-Permits/Permits-and-plan-review/MiscSwimming-Pool-Permit-App-Final.ashx"
+        }
       ]
     },
     {
@@ -86,9 +110,18 @@
         "Chatham County's permit application guidance excludes pools from the homeowner-performed-work option."
       ],
       "sources": [
-        {"title": "When are Building Permits Required - Chatham County", "url": "https://buildingsafety.chathamcountyga.gov/PermitsInspections/WhenPermitsRequired"},
-        {"title": "Building Permit Applications - Chatham County", "url": "https://buildingsafety.chathamcountyga.gov/PermitsInspections/ApplyForPermit"},
-        {"title": "Applying for a permit - Chatham County", "url": "https://cms.chathamcountyga.gov/api/assets/buildingsafety/b19ee12e-0505-43c6-aea3-5bc8cbcfc7a0?download=0"}
+        {
+          "title": "When are Building Permits Required - Chatham County",
+          "url": "https://buildingsafety.chathamcountyga.gov/PermitsInspections/WhenPermitsRequired"
+        },
+        {
+          "title": "Building Permit Applications - Chatham County",
+          "url": "https://buildingsafety.chathamcountyga.gov/PermitsInspections/ApplyForPermit"
+        },
+        {
+          "title": "Applying for a permit - Chatham County",
+          "url": "https://cms.chathamcountyga.gov/api/assets/buildingsafety/b19ee12e-0505-43c6-aea3-5bc8cbcfc7a0?download=0"
+        }
       ]
     },
     {
@@ -104,9 +137,43 @@
         "Inspections can be requested through the city's online Inspection Request form."
       ],
       "sources": [
-        {"title": "Swimming Pools - Augusta, GA", "url": "https://www.augustaga.gov/1164/Swimming-Pools"},
-        {"title": "Residential Building Permit Requirements - Augusta, GA", "url": "https://www.augustaga.gov/DocumentCenter/View/19426/RESIDENTIAL-BUILDING-PERMIT-REQUIREMENTS"}
+        {
+          "title": "Swimming Pools - Augusta, GA",
+          "url": "https://www.augustaga.gov/1164/Swimming-Pools"
+        },
+        {
+          "title": "Residential Building Permit Requirements - Augusta, GA",
+          "url": "https://www.augustaga.gov/DocumentCenter/View/19426/RESIDENTIAL-BUILDING-PERMIT-REQUIREMENTS"
+        }
       ]
+    },
+    {
+      "name": "Forsyth County (unincorporated)",
+      "kind": "county",
+      "office": "Forsyth County Department of Building and Licensing",
+      "portal_name": "Customer Self-Service (CSS) Portal",
+      "portal_url": "https://css.forsythco.com/EnerGov_Prod/SelfService/",
+      "notes": [
+        "The county's Building Permitting page lists a Residential Pool Permit for an in-ground, above-ground or on-ground swimming pool, hot tub or spa for residential use.",
+        "Under Section 10-1.19 of the county's Unified Development Code, accessory structures, including pools, on property in residential, agricultural and mixed-use zoning districts may encroach into the minimum required front or rear setback. The encroachment may not exceed 50 percent of that setback or reduce the effective setback to less than 20 feet. Encroachments beyond that need a variance application and approval.",
+        "The county's residential swimming pool permit packet, revised January 1, 2025, asks for a scaled site plan (one 8 1/2 x 11 copy) and a copy of the approved, recorded plat. The site plan must show the property lines with dimensions, the minimum front, side and rear building setback lines, the pool fence, the pool equipment, and the location and dimensions of all floodplain limits, buffer requirements and drainage or other easements.",
+        "The packet also requires a pool drain discharge location affidavit, signed by the homeowner, stating that the pool or spa is not connected in any way to the county's sanitary sewer system and will have no connection to its separate storm sewer system. Properties on septic need Environmental Health approval and must provide the septic permit. The packet says applications may be submitted electronically through the CSS portal or in person at the department's office."
+      ],
+      "sources": [
+        {
+          "title": "Building Permitting (Forsyth County)",
+          "url": "https://www.forsythco.com/government/departments/building-licensing/building-permitting/"
+        },
+        {
+          "title": "Residential Swimming Pool Permit Packet, revised 1/1/2025 (Forsyth County Department of Building and Licensing)",
+          "url": "https://www.forsythco.com/app/uploads/2026/03/RESIDENTIAL-POOL-PERMIT-1-2025.pdf"
+        },
+        {
+          "title": "Unified Development Code, Section 10-1.19 Setback Encroachments for Accessory Structures and Accessory Buildings (Forsyth County, amended October 1, 2026)",
+          "url": "https://www.forsythco.com/app/uploads/2026/10/UDC-Complete.pdf"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

@@ -180,6 +180,32 @@
           "url": "https://www.roundrocktexas.gov/city-departments/planning-and-development-services/building-inspection/miscellaneous-building-permits/"
         }
       ]
+    },
+    {
+      "name": "The Woodlands / Montgomery and Harris Counties",
+      "kind": "township",
+      "office": "The Woodlands Township Covenant Administration Department",
+      "portal_name": "Civic Access Portal",
+      "portal_url": "https://woodlandstownshiptx-energovweb.tylerhost.net/apps/selfservice#/home",
+      "notes": [
+        "Section 1.5 of The Woodlands Residential Development Standards says building, placing, altering or repairing any structure or improvement on a lot with an existing single-family home needs prior written approval from the Residential Design Review Committee or its designated staff. Swimming pools and spas are among the covered projects.",
+        "Standard 2.13 says pools, hot tubs, spas and ponds more than two feet deep need a security barrier that complies with the International Residential Code. Security barrier fences also require inspections.",
+        "Standard 2.13 says pools and spas must be in the rear or side yard. Pools and spas, and their walls, decking or other landscape elements, may not be within a covenant easement or beyond a platted building line.",
+        "Standard 2.13 says all pools need a comprehensive drainage plan. The Township's Permitting Process page says plans must show distances from the pool, pool decking and pool equipment to the property lines."
+      ],
+      "sources": [
+        {
+          "title": "The Woodlands Residential Development Standards, 2024 (The Woodlands Township)",
+          "url": "https://www.thewoodlandstownship-tx.gov/files/sharedassets/main/v/2/covenant-administration/documents/2024-residential-standards-recorded-12-10-2024.pdf",
+          "as_of": "2026-08-23"
+        },
+        {
+          "title": "Permitting Process (The Woodlands Township)",
+          "url": "https://www.thewoodlandstownship-tx.gov/Departments/Covenant-Administration/Permitting-Process",
+          "as_of": "2026-02-06"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

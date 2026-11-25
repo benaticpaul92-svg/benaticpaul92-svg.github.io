@@ -149,6 +149,38 @@
           "url": "https://pinellas.gov/permitting-guide/"
         }
       ]
+    },
+    {
+      "name": "Fort Lauderdale (Broward County)",
+      "kind": "city",
+      "office": "City of Fort Lauderdale Development Services Department, Building Services Division",
+      "portal_name": "LauderBuild",
+      "portal_url": "https://aca3.accela.com/FTL",
+      "notes": [
+        "The city's Pool and Spa Permit Checklist quotes the Florida Building Code definition (Section 454.2.2). A private swimming pool is any structure in a residential area intended for swimming or recreational bathing that contains water over 24 inches deep. That includes in-ground, above-ground and on-ground pools, hot tubs and nonportable spas. It lists the required permit applications as building, plumbing, electrical, engineering mitigation and mechanical.",
+        "The checklist asks for plans showing the pool location with all required setbacks, a certified property survey with elevations, and signed and sealed structural calculations. The survey must also indicate compliance with NEC Article 680.8 for overhead conductor clearances.",
+        "The plans must include child protection barrier requirements, for example door alarms or a perimeter fence with self-latching gates. The Pool Barrier Affidavit that the checklist requires says the pool must not be filled with water until the final electrical and zoning (pool barrier) inspections have passed.",
+        "The city's Building Permit Application Checklist says the plot plan and survey for a pool must show proposed elevations on site and on adjacent properties. They must be detailed enough to verify there will be no adverse drainage impacts."
+      ],
+      "sources": [
+        {
+          "title": "Pool and Spa Permit Checklist (City of Fort Lauderdale)",
+          "url": "https://www.fortlauderdale.gov/files/assets/public/v/1/development-services/documents/docs-forms/pool_permit_cover.pdf"
+        },
+        {
+          "title": "Pool Barrier Affidavit (City of Fort Lauderdale)",
+          "url": "https://www.fortlauderdale.gov/files/assets/public/v/1/development-services/documents/docs-forms/residential-swimming-pool-requirements.pdf"
+        },
+        {
+          "title": "Building Permit Application Checklist (City of Fort Lauderdale)",
+          "url": "https://www.fortlauderdale.gov/files/assets/public/v/2/development-services/documents/docs-forms/checklists/building_permit_checklist_v11.pdf"
+        },
+        {
+          "title": "Permitting Services (City of Fort Lauderdale)",
+          "url": "https://www.fortlauderdale.gov/Government/Departments/Development-Services/Permitting-Services"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [

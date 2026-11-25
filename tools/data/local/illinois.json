@@ -124,6 +124,37 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Schaumburg (Cook County)",
+      "kind": "village",
+      "office": "Village of Schaumburg Community Development Department, Permitting Division",
+      "portal_name": "OpenGov Portal",
+      "portal_url": "https://schaumburgil.portal.opengov.com",
+      "notes": [
+        "The village's pool guide says a permit is required to install a swimming pool or hot tub capable of holding 24 inches of water. Its submittal list asks for a plat of survey with the proposed work drawn on it to scale, pool heights above grade, pool diagrams and filter system diagrams. An electrical layout is required for electrical work.",
+        "The village's pool guide says a pool and its appurtenances, such as diving boards, must be at least 8 feet from all property lines. Pools, spas and hot tubs are not allowed in side yards. Pools must be at least 5 feet from underground electrical service and 10 feet from air conditioners or electrical outlets, except the receptacle installed for the pool equipment.",
+        "The village's pool guide says in-ground and above-ground pools must be completely enclosed by an open or semi-open fence at least 4 feet but no more than 5 feet high. The fence goes at the property line or inside the lot at least 5 feet from it. An above-ground pool does not need that fence if it has a deck fence or a fence extending from the top of the pool side wall to 7 feet above the ground. All fence openings to the pool need gates or doors with automatic latching devices placed at the top or otherwise made inaccessible to small children.",
+        "The village's pool permit and barrier checklist, which the applicant signs, says pool projects are reviewed under the 2021 International Swimming Pool and Spa Code and the 2021 International Residential Code, each with local amendments. It also says the pool must not be filled with water above 24 inches until all pool and pool barrier inspections are passed. The pool guide lists a plat verification inspection, which requires J.U.L.I.E markings before work starts, then rough and final inspections for framing, electrical and plumbing."
+      ],
+      "sources": [
+        {
+          "title": "Swimming Pool/Hot Tub Resource Guide (Village of Schaumburg)",
+          "url": "https://www.villageofschaumburg.com/government/community-development/permit-services/residential-permits/swimming-pool-hot-tub-resource-guide",
+          "as_of": "2026-07-17"
+        },
+        {
+          "title": "Swimming Pool Permit and Barrier Checklist (Village of Schaumburg Permitting Division)",
+          "url": "https://www.villageofschaumburg.com/home/showpublisheddocument/5096/638328040074600000",
+          "as_of": "2026-01-22"
+        },
+        {
+          "title": "Permit Services (Village of Schaumburg)",
+          "url": "https://www.villageofschaumburg.com/government/community-development/permit-services",
+          "as_of": "2026-07-19"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],

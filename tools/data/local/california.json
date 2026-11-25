@@ -139,12 +139,40 @@
           "url": "https://www.fresno.gov/wp-content/uploads/2023/03/Single-Family-Residential-Project-Checklist.pdf"
         }
       ]
+    },
+    {
+      "name": "Irvine (Orange County)",
+      "kind": "city",
+      "office": "City of Irvine Community Development Department, Building & Safety",
+      "portal_name": "IrvineReady! Online Plan Submission Portal",
+      "portal_url": "https://gopost-irvine.eplansoftreview.com/#/login?portal=irvine",
+      "notes": [
+        "The city's pool page lists construction plans among the required documents: plans, details and notes on pool or spa construction, stamped and signed by a California licensed civil or structural engineer. The permit application and plans must be submitted electronically through the IrvineReady! Online Plan Submission Portal.",
+        "The city says pool and spa mechanical equipment must be at least two feet from the nearest property line and no taller than 48 inches above finished grade. It adds that there are no setback requirements for the pool or spa itself, but on a zero-lot-line property the pool, spa or equipment may not be built within the easement area.",
+        "Informational Bulletin No. 182 (revised February 23, 2021) says all swimming pool plans must contain the piping location, material and sizing, and structural calculations for the pool or spa structure prepared by a qualified licensed professional. Plans must also carry a statement requiring a special inspector certified for concrete placement by the City of Irvine to be present during all concrete and gunite placement.",
+        "The city's Permits Not Required page lists as an exception prefabricated swimming pools accessory to a Group R, Division 3 occupancy, with pool walls entirely above the adjacent grade and a capacity not over 5,000 gallons. It notes a 2-foot minimum setback between any associated pool equipment and any property line, and says separate plumbing, electrical and mechanical permits are required unless otherwise exempted."
+      ],
+      "sources": [
+        {
+          "title": "Adding or Modifying a Residential Swimming Pool/Spa (City of Irvine)",
+          "url": "https://cityofirvine.gov/building-permits-and-inspections/adding-or-modifying-residential-swimming-poolspa"
+        },
+        {
+          "title": "Informational Bulletin No. 182: Swimming Pool and Spa Plan Submittals (City of Irvine, revised February 23, 2021)",
+          "url": "https://cityofirvine.gov/sites/default/files/legacy-documents/civica-13870-bulletin-182-rev.-2-23-21.-swimming-pool-and-spa-submittals.pdf"
+        },
+        {
+          "title": "Permits Not Required (City of Irvine)",
+          "url": "https://cityofirvine.gov/community-development/permits-not-required"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
     "City of Los Angeles (LADBS): dbs.lacity.gov blocked access (HTTP 403), so no LADBS page could be opened. Not included.",
-    "San Bernardino County, Irvine / Orange County, Bakersfield, Long Beach and Sacramento County: official pages unreachable or not opened (connection refused or 403) and the web search budget ran out. Not included. Only 6 of 8 jurisdictions delivered.",
+    "San Bernardino County, Bakersfield, Long Beach and Sacramento County: official pages unreachable or not opened (connection refused or 403) and the web search budget ran out. Not included. Only 6 of 8 jurisdictions delivered.",
     "San Diego city and San Jose online portal names/URLs not verified from an opened page; left blank. San Jose page names SJPermits.org but the site did not load.",
     "Fresno: the checklist PDF does not clearly show which items apply to pools, and the fresno.gov pool page returned 403; Accela URL not opened.",
     "Engineer-seal requirements for residential pools were confirmed only for San Diego city; other sources did not state them."

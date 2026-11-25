@@ -127,6 +127,42 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Toms River (Ocean County)",
+      "kind": "township",
+      "office": "Toms River Township Zoning Office (Planning & Zoning) and Building Department",
+      "portal_name": "",
+      "portal_url": "",
+      "notes": [
+        "The Zoning Office's pool handout says that, as a general rule, two permits (zoning and construction) are required to install in-ground or above-ground pools and spas or hot tubs. The Zoning Office's fence handout says a zoning permit is required for all fences and that, except for pool enclosures, no UCC construction permit is required for fence construction.",
+        "The pool handout says swimming pools must be behind the front building setback line and at least 8 feet from any building, shed or deck that requires a railing under the Uniform Construction Code. Pool equipment must be at least 10 feet from any side or rear property line. Fences must be at least 6 feet from the pool water. Hot tubs or spas holding less than 501 gallons may be located not less than 3 feet from any building, property line, handrail, unenclosed porch and deck edge.",
+        "For pools, the township's zoning permit instructions list a signed and sealed survey plan prepared by a Professional Land Surveyor and two copies of a plot plan based on that survey. The plot plan must show proposed setback distances from all property lines, the location and dimensions of the pool, and the proposed distance between the pool water and other structures such as buildings and fences. It must also show the location of the fence, pool filter and heater (if proposed). The instructions also ask for a detailed drawing of the fence, with dimensions.",
+        "Under the same instructions, applications for in-ground pools and above-ground pools 14 feet or more in diameter must include a plot and grading plan prepared by a Professional Engineer. It must show detailed existing and proposed spot elevations to determine overland drainage patterns and the impact on adjacent properties. Plot plans for above-ground pools less than 14 feet in diameter may be prepared by the homeowner. The pool handout adds that zoning permit applications for spas or hot tubs must indicate the volume of water."
+      ],
+      "sources": [
+        {
+          "title": "Pools: Zoning Information Handout (Township of Toms River Zoning Office, revised March 24, 2021)",
+          "url": "https://www.tomsrivertownship.com/DocumentCenter/View/169/Pool-Handout-Zoning-Information-PDF"
+        },
+        {
+          "title": "Zoning Permit Application with Instructions, revised August 27, 2026 (Township of Toms River)",
+          "url": "https://www.tomsrivertownship.com/DocumentCenter/View/12549/ZONING-PERMIT-APPLICATION-W-INSTRUCTIONS-revised-8-27-26"
+        },
+        {
+          "title": "Fences Handout (Township of Toms River Zoning Office, revised October 31, 2018)",
+          "url": "https://www.tomsrivertownship.com/DocumentCenter/View/154/Fences-Handout-PDF"
+        },
+        {
+          "title": "Planning & Zoning (Toms River Township)",
+          "url": "https://www.tomsrivertownship.com/185/Planning-Zoning"
+        },
+        {
+          "title": "Building Department (Toms River Township)",
+          "url": "https://www.tomsrivertownship.com/161/Building-Department"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [
@@ -139,7 +175,7 @@
     }
   ],
   "gaps": [
-    "Only 4 of 6 requested jurisdictions. Newark, Morris County towns, Brick, Toms River and Middletown pages were blocked, unreachable or showed no pool permit content.",
+    "Only 4 of 6 requested jurisdictions. Newark, Morris County towns, Brick and Middletown pages were blocked, unreachable or showed no pool permit content.",
     "New Jersey issues pool permits at municipal level, so county offices were not used.",
     "Wall Township has no pool-specific form or checklist on the page reviewed; its entry is thin.",
     "Edison and Wall have no verified online permit portal; Jersey City portal URL was not opened directly, so portal_url is empty.",

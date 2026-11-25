@@ -110,11 +110,42 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "Baldwin County (unincorporated)",
+      "kind": "county",
+      "office": "Baldwin County Building Department",
+      "portal_name": "CitizenServe Portal",
+      "portal_url": "https://www.baldwincountyal.gov/csp",
+      "notes": [
+        "The Baldwin County Building Department lists swimming pools among the projects that need a permit. Its permit area covers most unincorporated parts of the county and properties inside the town limits of Elberta, Magnolia Springs and Perdido Beach. The county says Silverhill and Summerdale currently issue permits in their police jurisdiction areas, which extend outside their city limits into the unincorporated area.",
+        "The county's inspection page says a building permit authorizes construction only for the single structure listed in its work description and shown on the approved plans, and it lists swimming pools among the work that needs a separate permit from the Building Department. It says an electrical swimming pool bonding inspection is required for pool walls and decks, and all equipment and devices must be GFCI protected. For commercial pools, a copy of the Health Department approval must be provided before the final inspection can be approved.",
+        "The county's building codes page says the Baldwin County Commission approved its latest code adoption with Resolution 2025-067 on March 5, 2025. For applications received on or after that date, the county enforces the 2024 International Residential Code and the 2023 National Electrical Code, each with amendments.",
+        "The county says contractors who construct any swimming pool with a job valuation of $5,000.00 or more must be licensed by the Alabama Licensing Board for General Contractors. Applicants can upload construction plans and required documents, pay fees and schedule inspections through the CitizenServe Portal."
+      ],
+      "sources": [
+        {
+          "title": "Permit Information (Baldwin County Building Department)",
+          "url": "https://www.baldwincountyal.gov/departments/building-inspection/permit-information",
+          "as_of": "2026-07-20"
+        },
+        {
+          "title": "Inspection Information (Baldwin County Building Department)",
+          "url": "https://www.baldwincountyal.gov/departments/building-inspection/inspection-information",
+          "as_of": "2026-08-10"
+        },
+        {
+          "title": "Building Codes (Baldwin County Building Department)",
+          "url": "https://www.baldwincountyal.gov/departments/building-inspection/building-codes",
+          "as_of": "2026-04-13"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Baldwin County Building Department and Madison County Inspection pages returned HTTP 403 (Cloudflare) to automated fetches, so none of their pool pages could be opened and they are not included.",
+    "Madison County Inspection pages returned HTTP 403 (Cloudflare) to automated fetches, so none of their pool pages could be opened and they are not included.",
     "Montgomery city inspections page also returned 403, so a fourth jurisdiction could not be verified.",
     "Birmingham, Huntsville and Mobile pages opened did not describe residential pool submittal requirements (barrier, engineer seal, site plan) specifically; none are stated.",
     "Huntsville code list is on a page titled for commercial inspection requirements; whether it applies identically to residential pools is not stated on that page.",

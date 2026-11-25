@@ -109,11 +109,42 @@
         }
       ],
       "checked": "2026-11-25"
+    },
+    {
+      "name": "North Las Vegas (Clark County)",
+      "kind": "city",
+      "office": "City of North Las Vegas Building Safety Division",
+      "portal_name": "Citizen Self-Service (CSS) Portal",
+      "portal_url": "https://eg.cityofnorthlasvegas.com/EnerGov_Prod/SelfService#/home",
+      "notes": [
+        "The city's Application for Pool Permit asks for the square feet, gallons and average depth of the pool and the spa, and the square feet of decking. It also asks for the existing electrical service size, the feet of underground electrical and the conduit diameter, and the gas line type, heater BTUs and the length and diameter of the gas pipe. If access to the construction area involves an adjacent property, the adjacent property owner must complete a Property Line Authorization Form.",
+        "The city posts the Southern Nevada Amendments to the 2024 International Swimming Pool and Spa Code (ISPSC). For one- and two-family dwellings, the top of the barrier must be at least 60 inches above grade, measured on the side of the barrier that faces away from the pool or spa. At a residential pool or spa, a door or gate latch release that is reached from outside the barrier and is not self-locking must be at least 54 inches above the finished floor or ground.",
+        "Under Section 327.2 of those amendments, a pool or spa may not be placed closer than 60 inches to a building or structure and may not encroach within public utility easements. An exception may be permitted when a Nevada licensed structural or civil engineer provides substantiation that no damage will occur to buildings, structures or adjacent properties and that no unsafe structural conditions will exist.",
+        "The city's Current Adopted Codes and Ordinances page lists the 2024 ISPSC, 2024 International Residential Code, 2024 Uniform Plumbing Code and 2023 National Electrical Code. Each is listed with Southern Nevada amendments."
+      ],
+      "sources": [
+        {
+          "title": "Application for Pool Permit (City of North Las Vegas)",
+          "url": "https://www.cityofnorthlasvegas.com/home/showpublisheddocument/4923/639075278691800000",
+          "as_of": "2026-05-20"
+        },
+        {
+          "title": "Southern Nevada Amendments to the 2024 International Swimming Pool and Spa Code (posted by the City of North Las Vegas)",
+          "url": "https://www.cityofnorthlasvegas.com/home/showpublisheddocument/5371/639107381380970000",
+          "as_of": "2026-08-11"
+        },
+        {
+          "title": "Current Adopted Codes and Ordinances (City of North Las Vegas)",
+          "url": "https://www.cityofnorthlasvegas.com/business/development-services/current-adopted-codes-and-ordinances",
+          "as_of": "2026-08-13"
+        }
+      ],
+      "checked": "2026-11-25"
     }
   ],
   "state_level": [],
   "gaps": [
-    "Henderson and North Las Vegas official sites returned 403 to automated fetches, so nothing was verified for them. Washoe County and Sparks pages gave no pool content; only 3 of the 6 requested jurisdictions are included.",
+    "Henderson and North Las Vegas were added on 25 Nov 2026. Washoe County and Sparks pages gave no pool content; only 3 of the 6 requested jurisdictions are included.",
     "The Clark County 2024 ISPSC adoption date (January 11, 2026) from the existing state page was not re-verified here.",
     "Las Vegas dashboard portal URL returned 403, so portal_url is empty; no Las Vegas or Clark County pool-specific checklist was found.",
     "2026-11-25: Henderson (Clark County) added from official sources, read directly or from dated Internet Archive copies (as_of), each note checked against its source by a second reader."
