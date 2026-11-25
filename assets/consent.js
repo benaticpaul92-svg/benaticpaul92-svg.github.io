@@ -39,6 +39,10 @@
           (domain ? "; Domain=" + domain : "");
       }
     }
+    // gtag.js also keeps click data in localStorage (_gcl_ls); remove it with the cookies.
+    try {
+      for (const k of Object.keys(localStorage)) if (/^_g(?:cl|ac)_/.test(k)) localStorage.removeItem(k);
+    } catch { /* storage blocked */ }
   }
   function applyChoice(choice) {
     const granted = !gpc && choice === "allow";

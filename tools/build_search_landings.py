@@ -299,7 +299,7 @@ DELIVERY_STEPS = [
 ]
 
 
-def delivery_section(state=None, offer=True, steps=None):
+def delivery_section(state=None, offer=False, steps=None):
     return f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">FROM QUOTE TO DELIVERY</span><h2 id="delivery-heading">Three steps to your drawing set.</h2><ol class="delivery-steps">{step_items(steps or DELIVERY_STEPS)}</ol><div class="review-note"><h3>Who seals the drawings</h3><p>{seal_answer(state, offer)} The permit office decides approval. If it sends comments, send them to us. Your quote states the revisions included.</p><a class="text-link" href="/services/pool-engineering/">How the engineer’s seal works →</a></div><details class="optional-concept"><summary>Optional: 3D pool visualization</summary><p>A 3D view can help you explore the proposed layout and materials. Ask to include it as a separate item alongside the drawing package.</p></details><div class="actions"><a class="button primary" href="#contact">Get my quote <span aria-hidden="true">→</span></a><a class="text-link" href="/how-it-works/">How the service works →</a></div></div></section>'''
 
 
@@ -511,7 +511,7 @@ def shell(path, title, description, body, schema, head_extra='', out=None, noind
     index_meta = '<meta name="robots" content="noindex,follow">' if noindex else f'<link rel="canonical" href="{canonical}">'
     og_url = '' if noindex else f'<meta property="og:url" content="{canonical}">'
     og_pic = 'landscape-hero' if 'hero-landscape' in body else 'pool-villa-hero'
-    html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(full_title)}</title><meta name="description" content="{escape(description)}">{index_meta}<meta name="theme-color" content="#072338"><meta name="referrer" content="strict-origin-when-cross-origin">{icon_links()}<meta property="og:title" content="{escape(full_title)}"><meta property="og:description" content="{escape(description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="{COMPANY}">{og_url}<meta property="og:image" content="{SITE}/images/{og_pic}.jpg"><meta property="og:image:width" content="1000"><meta property="og:image:height" content="628"><meta name="twitter:card" content="summary_large_image">{head_extra}{preload}<link rel="stylesheet" href="{asset('studio.min.css')}"><link rel="stylesheet" href="{asset('search-landings.min.css')}"><script src="{asset('search-landings.min.js')}" defer></script><script src="{asset('studio.min.js')}" defer></script>{ld}</head><body class="search-landing">{header}<main id="main-content" tabindex="-1">{body}</main>{sticky}{footer}</body></html>'''
+    html = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'self'; form-action 'self' https://script.google.com; upgrade-insecure-requests"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{escape(full_title)}</title><meta name="description" content="{escape(description)}">{index_meta}<meta name="theme-color" content="#072338"><meta name="referrer" content="strict-origin-when-cross-origin">{icon_links()}<meta property="og:title" content="{escape(full_title)}"><meta property="og:description" content="{escape(description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="{COMPANY}">{og_url}<meta property="og:image" content="{SITE}/images/{og_pic}.jpg"><meta property="og:image:width" content="1000"><meta property="og:image:height" content="628"><meta name="twitter:card" content="summary_large_image">{head_extra}{preload}<link rel="stylesheet" href="{asset('studio.min.css')}"><link rel="stylesheet" href="{asset('search-landings.min.css')}"><script src="{asset('search-landings.min.js')}" defer></script><script src="{asset('studio.min.js')}" defer></script>{ld}</head><body class="search-landing">{header}<main id="main-content" tabindex="-1">{body}</main>{sticky}{footer}</body></html>'''
     html = html.replace('↗', '→')
     out = ROOT/out if out else ROOT/path/'index.html'
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -600,7 +600,7 @@ SERVICES = [
         ('Can you draw from my builder’s sketch?', 'Yes. Send the sketch with dimensions and depths, the survey or site plan if you have one, and the equipment you plan to use. We tell you what is missing before drawing work starts.'),
         ('Do construction drawings include the steel?', 'Yes, where it is part of your quote. Reinforcement is drawn from your engineer’s design or your builder’s standard details. JEBN drafts the steel details and does not design them.'),
         ('Will I receive editable files?', 'Yes. You receive DWG and PDF files for the agreed drawing package.'),
-        ('Who seals the drawings?', seal_answer()),
+        ('Who seals the drawings?', seal_answer(offer=False)),
         ('How fast can you prepare the construction drawings?', TURNAROUND)]),
  dict(path='services/pool-structural-engineering', title='Pool Structural Drawings & Steel Details',
       h1='Pool structural drawings.<br><span>Shell, steel and details.</span>',
@@ -626,7 +626,7 @@ SERVICES = [
         ('Who designs the shell and the steel?', 'Where your permit office requires an engineer’s seal, a Professional Engineer licensed in your state. JEBN drafts the sheets from that design. Where no seal is required, the sheets follow your builder’s standard details.'),
         ('What if there is no soils report?', 'The engineer decides what bearing value to assume and whether a report is needed. The sheets state that basis, so the plan reviewer can see what the design relies on.'),
         ('Can you detail vanishing-edge and perimeter-overflow pools?', 'Yes. We draft the weir wall, the catch basin and the edge details from the design your engineer or builder provides.'),
-        ('Who seals the structural sheets?', seal_answer()),
+        ('Who seals the structural sheets?', seal_answer(offer=False)),
         ('How fast can you prepare the structural drawings?', TURNAROUND)]),
  dict(path='services/pool-hydraulic-design', title='Pool Plumbing & Hydraulic Drawings',
       h1='Pool plumbing and hydraulic drawings.<br><span>With TDH calculation sheets.</span>',
@@ -742,7 +742,7 @@ SERVICES = [
         ('Can you prepare the structural calculations?', 'No. Structural calculations are the engineer’s work, and the hydraulic design is the engineer’s or your pool builder’s. We set out their results on the sheets, such as schedules, tables and notes.'),
         ('Who is responsible for the sealed drawings?', 'The engineer of record, who directs the engineering and seals the set under their state license.'),
         ('What if plan review comes back with comments?', PLAN_REVIEW_ANSWER),
-        ('We do not have an engineer. Can you still help?', 'We can draft the set, and we can ask an engineer licensed in your state to take your project. That engineer decides whether to take it and sets the fee for the engineering. JEBN does not seal drawings.')]),
+        ('We do not have an engineer. Can you still help?', 'Yes. We can draft the set for an engineer you choose. Your state’s engineering board can confirm that an engineer holds a license. JEBN does not seal drawings.')]),
 ]
 
 
@@ -815,7 +815,7 @@ SEAL_FAQ = [
     ('Does every pool need an engineer?', 'Not everywhere. Your state’s law and your permit office’s rules decide. Some permit offices ask for sealed plans with every pool permit, and some ask only for certain pools. Ask your permit office for its pool submittal checklist before drawings start.'),
     ('Who is the engineer of record?', 'The term is used for the Professional Engineer who is in charge of a project’s engineering documents and who signs and seals them. Not every state’s rules use the term. Where a seal is required, that engineer generally must hold a license in the state where the pool will be built.'),
     ('Can I send finished drawings to an engineer for a stamp?', 'Not simply for a stamp. Engineering board rules in states such as California, Florida, Texas and Washington let an engineer seal only work the engineer did, or work done under the engineer’s responsible charge, which some states call direct supervision. The engineer has to be in charge of the engineering while the drawings are prepared. Some states let an engineer take over earlier work under set rules, so ask the engineer what applies in your state.'),
-    ('How do I find an engineer?', 'You can use an engineer you or your builder already work with. Your state’s engineering board can confirm that an engineer holds a license. You can also ask us: we can ask an engineer licensed in your state to take your project. That engineer decides whether to take it and sets the fee for the engineering.'),
+    ('How do I find an engineer?', 'You can use an engineer you or your builder already work with. Your state’s engineering board can confirm that an engineer holds a license.'),
     ('Who pays the engineer?', 'You or your builder, by agreement with the engineer. The engineer sets the fee for the engineering. Ask for it in writing before you commit.'),
 ]
 
@@ -893,8 +893,6 @@ TOPIC_FACTS = [('JEBN', 'Drafts the set'), ('File delivery', 'DWG + PDF'), ('Eng
 TOPIC_SMALL = 'Delivery time depends on the scope. Your quote states the delivery date.'
 TOPIC_SOURCES_NOTE = ('The statements on this page were checked against these official pages in November 2026. Codes, editions and local rules differ '
                       'and change, so confirm what applies with your permit office. This page is general information, not legal advice.')
-# On these two the project already has its own engineer or architect, so the page does not offer to ask one.
-TOPIC_NO_OFFER = {'rooftop-elevated', 'commercial-plan-review'}
 # On this page the reviewer is often a health department, so the shared steps say "reviewing agency".
 TOPIC_AGENCY = {'commercial-plan-review'}
 AGENCY_WORDS = [('what your permit office asks for', 'what the reviewing agency asks for'),
@@ -907,7 +905,7 @@ AGENCY_WORDS = [('what your permit office asks for', 'what the reviewing agency 
 
 
 def topic_delivery(t):
-    markup = delivery_section(offer=t['key'] not in TOPIC_NO_OFFER, steps=TOPIC_STEPS)
+    markup = delivery_section(steps=TOPIC_STEPS)
     if t['key'] in TOPIC_AGENCY:
         for old, new in AGENCY_WORDS:
             if markup.count(old) != 1:  # not an assert: python -O would skip it and leave the old words in place
@@ -958,7 +956,7 @@ HOME_FAQ = [
     ('What should I send to get started?', 'Your project city and state, a site plan or sketch, pool dimensions if known, and the drawings you need. Include existing plans and any permit review comments if you have them.'),
     ('Will I receive editable files?', 'Yes. You receive PDF files and the DWG (CAD) files for the agreed drawing package.'),
     ('Do you work with pool contractors and builders?', 'Yes. We work with homeowners, pool contractors and builders on permit drawings, construction drawings and drawing updates within an agreed scope.'),
-    ('Who seals the drawings?', seal_answer()+' The permit office decides approval.'),
+    ('Who seals the drawings?', seal_answer(offer=False)+' The permit office decides approval.'),
     ('What if plan review comes back with comments?', PLAN_REVIEW_ANSWER),
     ('Do you know my city or county’s permit rules?', 'Each state page lists permit notes for named cities and counties, with links to the official sources. Send your permit office’s checklist with your request and we draw to it.'),
     ('How is drafting for pool builders priced?', 'Per set or per sheet, agreed before work starts. Your quote lists the sheets, file formats and the revisions included.'),
@@ -1058,7 +1056,7 @@ def build_privacy():
 
 def page_schema(canonical, title, description, crumb, kind='WebPage'):
     return {'@context': 'https://schema.org', '@graph': [
-        {'@type': kind, '@id': canonical+'#page', 'name': title, 'description': description, 'url': canonical, 'isPartOf': {'@type': 'WebSite', 'name': 'JEBN Engineering', 'url': SITE+'/'}, 'about': organization()},
+        {'@type': kind, '@id': canonical+'#page', 'name': title, 'description': description, 'url': canonical, 'isPartOf': {'@id': SITE+'/#website'}, 'about': organization()},
         {'@type': 'BreadcrumbList', 'itemListElement': [
             {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE+'/'},
             {'@type': 'ListItem', 'position': 2, 'name': crumb, 'item': canonical}]},
@@ -1107,7 +1105,7 @@ def build_how():
     crumbs = crumbs_html([('/', 'Home'), ('', 'How it works')])
     quote = ('Get my quote →', '/#contact')
     head = f'''<section class="section prose-page" aria-labelledby="page-heading"><div class="wrap"><div class="prose">{crumbs}<span class="eyebrow">HOW IT WORKS</span><h1 id="page-heading">How the service works.</h1><p class="lead">Who does what, what you send and what you get.</p>{QUOTE_BUTTON}</div></div></section>'''
-    steps = f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">FROM FIRST EMAIL TO DRAWING SET</span><h2 id="delivery-heading">Four steps to your drawing set.</h2><ol class="delivery-steps four">{step_items(HOW_STEPS)}</ol><div class="review-note"><h3>Who seals the drawings</h3><p>{seal_answer()}</p><a class="text-link" href="/services/pool-engineering/">How the engineer’s seal works →</a></div><div class="actions"><a class="button primary" href="/#contact">Get my quote <span aria-hidden="true">→</span></a></div></div></section>'''
+    steps = f'''<section class="section blue" id="delivery" aria-labelledby="delivery-heading"><div class="wrap"><span class="eyebrow">FROM FIRST EMAIL TO DRAWING SET</span><h2 id="delivery-heading">Four steps to your drawing set.</h2><ol class="delivery-steps four">{step_items(HOW_STEPS)}</ol><div class="review-note"><h3>Who seals the drawings</h3><p>{seal_answer(offer=False)}</p><a class="text-link" href="/services/pool-engineering/">How the engineer’s seal works →</a></div><div class="actions"><a class="button primary" href="/#contact">Get my quote <span aria-hidden="true">→</span></a></div></div></section>'''
     body = (head + steps
             + info_section('roles', 'WHO DOES WHAT', 'Four parties, four jobs.', 'A pool permit set passes through several hands. This is who does what on a JEBN project.', HOW_ROLES, quote)
             + inputs_section('What to send.', 'A sketch is enough to begin the conversation. If you already have a survey, drawings or permit comments, tell us what is ready. We identify the missing inputs before drawing work starts.')
@@ -1497,7 +1495,7 @@ def build_states_index():
             + f'''<section class="coverage-line" id="coverage" aria-label="USA coverage"><div class="wrap"><p><strong>{COMPANY}.</strong> We draft pool drawings for US permit submissions.</p><a href="/services/pool-permit-drawings/">Pool permit drawings</a></div></section>''')
     canonical = f'{SITE}/states/'
     schema = {'@context': 'https://schema.org', '@graph': [
-        {'@type': 'CollectionPage', '@id': canonical+'#page', 'name': title, 'description': description, 'url': canonical, 'isPartOf': {'@type': 'WebSite', 'name': 'JEBN Engineering', 'url': SITE+'/'}},
+        {'@type': 'CollectionPage', '@id': canonical+'#page', 'name': title, 'description': description, 'url': canonical, 'isPartOf': {'@id': SITE+'/#website'}},
         {'@type': 'ItemList', 'itemListElement': [{'@type': 'ListItem', 'position': i, 'name': name_of(s), 'url': f'{SITE}/states/{s}/'} for i, s in enumerate(sorted(STATES), 1)]},
         {'@type': 'BreadcrumbList', 'itemListElement': [
             {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': SITE+'/'},

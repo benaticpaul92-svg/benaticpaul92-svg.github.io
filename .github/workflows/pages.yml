@@ -1,5 +1,7 @@
 # Publishes the site to GitHub Pages on every push to main.
 # The build tools in tools/ stay in the repository but are not published.
+# assets/signature.jpg stays in the repository (an old email signature loads it from
+# raw.githubusercontent.com) but is not published on the website.
 name: Publish site
 
 on:
@@ -27,14 +29,15 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Copy the site without tools/
+      - name: Copy the site without tools/ and the old signature image
         run: |
           site="$RUNNER_TEMP/site"
           mkdir -p "$site"
-          rsync -a --exclude='/.git' --exclude='/.github' --exclude='/tools' ./ "$site/"
+          rsync -a --exclude='/.git' --exclude='/.github' --exclude='/tools' --exclude='/assets/signature.jpg' ./ "$site/"
           test -f "$site/index.html"
           test -f "$site/404.html"
           test ! -e "$site/tools"
+          test ! -e "$site/assets/signature.jpg"
           echo "Files published: $(find "$site" -type f | wc -l)"
 
       - uses: actions/configure-pages@v6
