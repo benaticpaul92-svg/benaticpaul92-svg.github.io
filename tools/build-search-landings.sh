@@ -2,6 +2,7 @@
 # Run from the repository root. Builds the style and script bundles, then every page.
 set -eu
 npm exec --yes --package=esbuild@0.27.4 -- esbuild assets/search-landings.css --minify --outfile=assets/search-landings.min.css
+npm exec --yes --package=esbuild@0.27.4 -- esbuild assets/studio.css --minify --outfile=assets/studio.min.css
 npm exec --yes --package=esbuild@0.27.4 -- esbuild assets/search-landings.js --minify --outfile=assets/search-landings.min.js
 npm exec --yes --package=esbuild@0.27.4 -- esbuild assets/geo-route.js --minify --outfile=assets/geo-route.min.js
 # The shared script bundle (form, consent, picture viewer). Needed when one of these files changes.

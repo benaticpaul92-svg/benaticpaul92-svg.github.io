@@ -14,7 +14,7 @@
   let sheets = [];
   let current = 0;
 
-  const show = (href, title, text, alt) => {
+  const show = (href, title, text, alt, preview) => {
     heading.textContent = title;
     description.textContent = text;
     picture.alt = alt;
@@ -26,9 +26,12 @@
     const reveal = () => { if (picture.src === new URL(href, location.href).href) { picture.hidden = false; notice.hidden = true; } };
     picture.onload = () => { picture.decode ? picture.decode().then(reveal, reveal) : reveal(); };
     picture.onerror = () => { notice.textContent = "This preview could not load. You can request sample drawings through the quote form."; };
-    // Hidden lazy images may never start loading. A viewer request is explicit.
-    picture.loading = "eager";
+    // Phones, tablets and 1x screens get the 1600 px copy of a sheet; 2x desktops still get the full 3200 px file.
+    if (preview) { picture.sizes = "(max-width: 1150px) calc(100vw - 4rem), 1072px"; picture.srcset = preview + " 1600w, " + href + " 3200w"; } else { picture.removeAttribute("srcset"); picture.removeAttribute("sizes"); }
     picture.src = href;
+    // Hidden lazy images may never start loading. A viewer request is explicit.
+    // Set after the new address: switching to eager first would also download the picture the viewer was built with.
+    picture.loading = "eager";
   };
 
   // A drawing set is the ordered list of links in its sheet list: [data-sheet-list="<set>"] a
@@ -36,7 +39,7 @@
     current = (index + sheets.length) % sheets.length;
     const sheet = sheets[current];
     const list = sheet.closest("[data-sheet-list]");
-    show(sheet.href, sheet.dataset.title, list.dataset.setText || "", sheet.dataset.title);
+    show(sheet.href, sheet.dataset.title, list.dataset.setText || "", sheet.dataset.title, sheet.dataset.preview);
     if (position) position.textContent = "Sheet " + (current + 1) + " of " + sheets.length;
   };
 
@@ -55,7 +58,7 @@
         showSheet(Math.max(0, sheets.findIndex(sheet => sheet.href === link.href)));
       } else if (list.length) {
         const sheet = list.find(item => item.href === link.href) || list[0];
-        show(link.href, sheet.dataset.title, "", sheet.dataset.title);
+        show(link.href, sheet.dataset.title, "", sheet.dataset.title, sheet.dataset.preview);
       } else {
         show(link.href, card.querySelector("h3").textContent, card.querySelector("p").textContent, card.querySelector("img").alt);
       }

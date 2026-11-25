@@ -389,7 +389,7 @@ def viewer_dialog(first, size=(1000, 750), steps=False):
 
 
 def preview_cards(items, tag='View larger'):
-    return ''.join(f'''<div class="portfolio-card"><a class="project-preview-link" href="/images/{img}" data-project-preview aria-label="{tag}: {escape(name)}"><div class="portfolio-image"><img src="/images/{img}" alt="{escape(alt)}" width="1000" height="750" loading="lazy" decoding="async"><span class="view-tag">{tag}</span></div></a><div class="portfolio-content"><h3>{name}</h3><p>{text}</p></div></div>''' for img, alt, name, text in items)
+    return ''.join(f'''<div class="portfolio-card"><a class="project-preview-link" href="/images/{img}" data-project-preview aria-label="{tag}: {escape(name)}"><div class="portfolio-image"><img src="/images/{img.rsplit('.', 1)[0]}-800.webp" srcset="/images/{img.rsplit('.', 1)[0]}-560.webp 560w, /images/{img.rsplit('.', 1)[0]}-800.webp 800w, /images/{img.rsplit('.', 1)[0]}-1000.webp 1000w" sizes="(max-width:600px) calc(100vw - 2.5rem), (max-width:1000px) calc(50vw - 2.25rem), 400px" alt="{escape(alt)}" width="1000" height="750" loading="lazy" decoding="async"><span class="view-tag">{tag}</span></div></a><div class="portfolio-content"><h3>{name}</h3><p>{text}</p></div></div>''' for img, alt, name, text in items)
 
 
 def sample_set_card(s, first=False):
@@ -397,6 +397,8 @@ def sample_set_card(s, first=False):
     key, sheets = s['key'], s['sheets']
     src = lambda n: f'/images/samples/{key}-{n:02d}.webp'
     title = lambda n: f'{sheets[n-1][0]} · {sheets[n-1][1]}'
+    # A 1600 px copy of each sheet for phones, tablets and 1x screens (assets/gallery.js adds it to the viewer's srcset), only when the file exists.
+    pv = lambda n: f' data-preview="/images/samples/{key}-{n:02d}-1600.webp"' if (ROOT/'images/samples'/f'{key}-{n:02d}-1600.webp').exists() else ''
 
     def opener(n, inner):
         return (f'<a class="project-preview-link" href="{src(n)}" data-project-preview data-set="{key}" '
@@ -408,7 +410,7 @@ def sample_set_card(s, first=False):
                 f'sizes="(max-width:760px) 92vw, 580px" alt="{escape(lead["alt"])}" width="1200" height="750"{lazy} decoding="async">')
     details = ''.join('<li>' + opener(d['sheet'], f'<img src="/images/samples/{key}-detail-{i}.webp" alt="{escape(d["alt"])}" width="440" height="275" loading="lazy" decoding="async">') + '</li>'
                       for i, d in enumerate(s['details'], 1))
-    rows = ''.join(f'<li><a href="{src(n)}" data-project-preview data-set="{key}" data-title="{escape(title(n))}"><b>{escape(no)}</b> {escape(name)}</a></li>'
+    rows = ''.join(f'<li><a href="{src(n)}" data-project-preview data-set="{key}" data-title="{escape(title(n))}"{pv(n)}><b>{escape(no)}</b> {escape(name)}</a></li>'
                    for n, (no, name) in enumerate(sheets, 1))
     count = len(sheets)
     set_text = f'{s["tag"].capitalize()}. {s["note"]}'
@@ -428,8 +430,9 @@ def audience_section(state=None):
     return f'''<section class="section audience-section" id="who" aria-labelledby="who-heading"><div class="wrap"><h2 class="sr-only" id="who-heading">Who we work with</h2><div class="audience-grid"><div class="audience-card">{ICON(AUDIENCE_ICONS[0])}<span class="eyebrow">HOMEOWNERS{where.upper()}</span><h3>Your permit office asked for pool plans.</h3><p>Send your layout or your builder’s sketch and the name of {office}. We prepare the drawings its checklist asks for. {seal_short(state)}</p><a class="text-link" href="#contact">Get my quote →</a></div><div class="audience-card">{ICON(AUDIENCE_ICONS[1])}<span class="eyebrow">POOL BUILDERS AND CONTRACTORS{where.upper()}</span><h3>Send us the jobs your drafting team cannot fit in.</h3><p>Plans, sections and details drawn on your title block and CAD standards, delivered as DWG and PDF files, job by job. Priced per set or per sheet, agreed before work starts.</p><a class="text-link" href="/services/outsourced-pool-drafting/">Drafting for pool builders →</a></div></div></div></section>'''
 
 
-def samples_section(eyebrow='SAMPLE DRAWINGS', heading='Sample drawing sets.'):
-    cards = ''.join(sample_set_card(s, first=(i == 0)) for i, s in enumerate(SAMPLE_SETS))
+def samples_section(eyebrow='SAMPLE DRAWINGS', heading='Sample drawing sets.', eager=False):
+    # Below a hero the sets are far down the page: every picture loads lazily, so the hero picture loads first.
+    cards = ''.join(sample_set_card(s, first=(eager and i == 0)) for i, s in enumerate(SAMPLE_SETS))
     first = SAMPLE_SETS[0]
     return f'''<section class="section samples-section" id="samples" aria-labelledby="samples-heading"><div class="wrap"><div class="samples-head"><div><span class="eyebrow">{eyebrow}</span><h2 id="samples-heading">{heading}</h2><p>Sheets from two drawing sets. Client and site names are removed and each sheet is marked VOID. Select a picture to see the sheet larger, then step through the set.</p></div>{pool_section_art()}</div><div class="set-grid">{cards}</div></div></section>{viewer_dialog(f"samples/{first['key']}-01.webp", first['sheet_px'], steps=True)}'''
 
@@ -487,6 +490,12 @@ def shell(path, title, description, body, schema, head_extra='', out=None, noind
     has_form = 'id="contact"' in body
     # Phones: a quote bar that appears once the form is out of view (assets/search-landings.js shows and hides it).
     sticky = '<a class="sticky-cta" href="#contact" data-sticky-cta hidden>Get my quote <span aria-hidden="true">→</span></a>' if has_form else ''
+    # Phones and tablets: hide the menu before the first paint, as assets/site.js does when the script bundle runs (same media query).
+    # Without this the full menu shows first and the page jumps up about 370 px when the bundle arrives. If the bundle fails to load, the plain menu comes back.
+    header += ('<script>(function(){var t=document.getElementById("menuToggle"),m=document.getElementById("navMenu"),'
+               's=document.querySelector(\'script[src^="/assets/studio.min.js"]\');'
+               'if(!t||!m||!s||!window.matchMedia("(max-width: 1000px)").matches)return;'
+               't.hidden=false;m.hidden=true;s.addEventListener("error",function(){t.hidden=true;m.hidden=false})})()</script>')
     preload = ''
     if 'search-hero' in body:
         pic = 'landscape-hero' if 'hero-landscape' in body else 'pool-villa-hero'
@@ -1065,7 +1074,7 @@ def build_samples():
     tail = f'''<section class="section prose-page" aria-labelledby="receive-heading"><div class="wrap"><div class="prose"><h2 id="receive-heading">What you receive</h2><p>A PDF set for your permit submission and the DWG files. Your quote lists the sheets, the revisions included and the delivery date before you commit.</p><p>{seal_short()} <a href="/services/pool-engineering/">How the engineer’s seal works</a></p><p><a href="/how-it-works/">How the service works</a> · <a href="/services/pool-permit-drawings/">Pool permit drawings</a> · <a href="/pool/">Pool construction drawings</a></p>{QUOTE_BUTTON}</div></div></section>'''
     canonical = f'{SITE}/samples/'
     total = sum(len(s['sheets']) for s in SAMPLE_SETS)
-    sets = samples_section('THE SHEETS', f'{len(SAMPLE_SETS)} sets, {total} sheets.')
+    sets = samples_section('THE SHEETS', f'{len(SAMPLE_SETS)} sets, {total} sheets.', eager=True)
     return shell('samples', title, description, head + sets + tail, page_schema(canonical, title, description, 'Sample drawings'))
 
 

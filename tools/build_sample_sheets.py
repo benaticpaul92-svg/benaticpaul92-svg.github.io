@@ -11,6 +11,7 @@ are its sheets, in order. Pictures of a set that are no longer made are deleted.
 The sets, their sheet names and the close-up crops are listed in tools/data/sample-sets.json,
 which tools/build_search_landings.py also reads. For each set this writes:
   <key>-<nn>.webp          every sheet, SHEET_W pixels wide (opened by the viewer)
+  <key>-<nn>-1600.webp     a 1600 px copy of every sheet (the viewer's choice on phones, tablets and 1x screens)
   <key>-lead-720.webp      close-up shown on the set's card, with a 1200 px version
   <key>-detail-<n>.webp    three smaller close-ups under it
 A crop box is [left, top, width] as fractions of the sheet; the height follows from CROP_RATIO.
@@ -61,7 +62,7 @@ def main():
             if len(files) != len(s['sheets']):
                 raise SystemExit(f'{key}: {len(files)} page images to publish, {len(s["sheets"])} sheets listed')
             for old in OUT.iterdir():
-                if re.fullmatch(re.escape(key)+r'-(\d\d|lead-\d+|detail-\d+)\.webp', old.name):
+                if re.fullmatch(re.escape(key)+r'-(\d\d|\d\d-1600|lead-\d+|detail-\d+)\.webp', old.name):
                     old.unlink()
             pages = [Image.open(f).convert('RGB') for f in files]
             for n, page in enumerate(pages, 1):
@@ -69,6 +70,7 @@ def main():
                 if [SHEET_W, h] != s['sheet_px'] and abs(h-s['sheet_px'][1]) > 1:
                     raise SystemExit(f'{key} sheet {n}: {SHEET_W}x{h}, sample-sets.json says {s["sheet_px"]}')
                 total += webp(page.resize((SHEET_W, s['sheet_px'][1]), Image.LANCZOS), OUT/f'{key}-{n:02d}.webp', 72)
+                total += webp(page.resize((1600, int(s['sheet_px'][1]*1600/SHEET_W + 0.5)), Image.LANCZOS), OUT/f'{key}-{n:02d}-1600.webp', 82)   # half a pixel rounds up, as in the published files
             lead = pages[s['lead']['sheet']-1]
             total += webp(crop(lead, s['lead']['box'], 1200), OUT/f'{key}-lead-1200.webp', 76)
             total += webp(crop(lead, s['lead']['box'], 720), OUT/f'{key}-lead-720.webp', 78)
