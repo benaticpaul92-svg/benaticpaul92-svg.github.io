@@ -687,11 +687,11 @@ SERVICES = [
       meta='Outsourced pool drafting for builders and designers whose drafting is backed up. Plans, sections and details drawn on your title block and CAD standards.',
       lead='Drafting capacity for pool builders and designers when the in-house team is full. Plans, sections and details are drawn on your title block and CAD standards and delivered to you as DWG and PDF files.',
       package_heading='What outsourced<br>drafting covers.',
-      package_lead='Your projects, drawn the way your office draws them, with the sheets and the revisions included agreed in advance.',
+      package_lead='Your projects, drawn the way your office draws them, with the sheets and the included revisions agreed in advance.',
       rows=[
         ('Your title block & standards', 'We adopt your title block, layer naming, sheet numbering and detail conventions from a sample set.'),
         ('Permit & construction sheets', 'Site layout, pool plans, sections, details and equipment layouts for each project you send.'),
-        ('Revisions & review comments', 'Changes from mark-ups and permit review comments, drawn within the revisions in your quote.'),
+        ('Revisions & review comments', 'Changes from mark-ups and permit review comments, drawn within the revisions your quote includes.'),
         ('Sets for your engineer', 'Where a permit office asks for a seal, we draft to your engineer’s design and mark-ups. Your engineer seals the set.'),
         ('Agreed price per set', 'A fixed price per set or per sheet, agreed before work starts.')],
       inputs=('Send a sample set and the next project.', 'A sample set shows us your standards. Then send each project’s sketch, survey and notes, and tell us the delivery date you need.', [
@@ -952,7 +952,7 @@ def build_moved(old_path, new_path, label):
 # ---------------------------------------------------------------- home page
 
 HOME_FAQ = [
-    ('When do the 2 business days start?', 'Once we have received all project inputs. It covers preparation of residential pool drawings. Where your permit needs an engineer’s seal, the engineer’s work takes additional time, and so does the permit office’s review.'),
+    ('When do the 2 business days start?', 'Once we have received all project inputs. The 2 business days cover preparation of residential pool drawings. Where your permit needs an engineer’s seal, the engineer’s work takes additional time, and so does the permit office’s review.'),
     ('What should I send to get started?', 'Your project city and state, a site plan or sketch, pool dimensions if known, and the drawings you need. Include existing plans and any permit review comments if you have them.'),
     ('Will I receive editable files?', 'Yes. You receive PDF files and the DWG (CAD) files for the agreed drawing package.'),
     ('Do you work with pool contractors and builders?', 'Yes. We work with homeowners, pool contractors and builders on permit drawings, construction drawings and drawing updates within an agreed scope.'),
